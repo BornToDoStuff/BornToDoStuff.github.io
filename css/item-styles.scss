@@ -58,7 +58,8 @@ magic-item {
 	overflow-y: hidden;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 	transition: max-height 0.5s;
-  
+}
+magic-item {
 	:before {
 		content: "";
 		width: 100%;
