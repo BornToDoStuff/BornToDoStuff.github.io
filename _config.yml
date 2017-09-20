@@ -58,6 +58,7 @@ defaults:
       layout: "post"
       permalink: /item/:title/
       title: "Magic Items"
+      item_rejected: false
 
 #
 # !! You don't need to change any of the configuration flags below !!
