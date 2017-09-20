@@ -32,7 +32,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $roboto;
-  color: $headerGray;
+  color: $bluakDark;
   font-weight: 500;
 
   line-height: 1.7;
@@ -273,7 +273,7 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid $borderDark;
+  border-top: 1px solid $bluakMedium;
   border-bottom: 1px solid $borderLight;
   background-color: $lightGray;
 }
