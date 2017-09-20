@@ -18,8 +18,8 @@ html {
 }
 
 body {
-	background: $white;
-  font: 18px/1.4 $helvetica;
+  background: $backgroundLight;
+  font: 16px/1.45 $roboto;
   color: $darkGray;
 }
 
@@ -31,9 +31,9 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $helveticaNeue;
-  color: $darkerGray;
-  font-weight: bold;
+  font-family: $roboto;
+  color: $headerGray;
+  font-weight: 500;
 
   line-height: 1.7;
   margin: 1em 0 15px;
@@ -65,7 +65,7 @@ h4 {
 }
 
 p {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 a {
@@ -273,8 +273,8 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid $borderDark;
+  border-bottom: 1px solid $borderLight;
   background-color: $lightGray;
 }
 
