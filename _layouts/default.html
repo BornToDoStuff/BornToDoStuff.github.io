@@ -22,25 +22,9 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <a id="TippyTop"></a>
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">Blog</a>
-            <a href="{{ site.baseurl }}/about">About</a>
-          </nav>
-        </header>
-      </div>
-    </div>
-
+    <a id="TippyTop"></a>
+    {% include navigation.html %}
+    
     <div id="main" role="main" class="main-container">
       <div class="col-sm-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-1">
         {% include search.html %}
@@ -48,13 +32,5 @@
         {{ content }}
       </div>
     </div>
-
-    <!--<div class="wrapper-footer">
-      <div class="container">
-        <footer class="footer">
-          {% include svg-icons.html %}
-        </footer>
-      </div>
-    </div>-->
   </body>
 </html>
