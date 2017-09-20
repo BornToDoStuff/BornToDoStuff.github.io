@@ -1,7 +1,6 @@
 ---
 title: Gauntlets of the Glacier
 item_id: 1
-redirect_from: /1/
 item_type: Wondrous
 item_rarity: Rare
 item_attunement: true
