@@ -1,0 +1,119 @@
+body {
+	background-color: #f8f8f8;
+}
+
+*:after {
+	font: normal normal normal 14px/1 FontAwesome;
+}
+
+.main-container {
+	padding: 20px;
+	float: left;
+}
+
+.search a {
+	color: #777;
+	cursor: pointer;
+}
+
+.form-group:nth-child(n+2) {
+	position: relative;
+	/*border-top: 3px solid #eee;*/
+}
+
+item-name {
+	display: block;
+	/* margin-top: 0px; */
+	margin-bottom: 10px;
+	font-size: 30px;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: 1.1;
+	color: $bluakDark;
+	max-width: 80%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+}
+
+magic-spell {
+	font-weight: 600;
+	font-style: italic;
+	text-transform: capitalize;
+	cursor: pointer;
+}
+
+magic-item {
+	/* position: relative; */
+	display: block;
+	padding: 20px 15px;
+	text-align: justify;
+	/* margin-top: -50px; */
+	background-color: white;
+	border: 1px solid $borderLight;
+	border-bottom: 2px solid $bluakMedium;
+	border-top: 2px solid $bluakMedium;
+	background-color: white;
+	overflow-y: hidden;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+	transition: max-height 0.5s;
+  
+	:before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 10;
+	}
+
+	item-description {
+		display: block;
+		line-height: 1.5em;
+	}
+}
+
+item-rarity {
+	position: absolute;
+	top: 20px;
+	right: 15px;
+	color: #ababab;
+}
+
+item-attunement {
+	display: none;
+}
+
+#navigator {
+	position: fixed;
+	display: block;
+	bottom: 13px;
+	right: 0;
+	min-width: 40px;
+	padding: 10px;
+	text-align: center;
+	background-color: #ffffff;
+	z-index: 100;
+	border: 1px solid $borderLight;
+	border-right-color: transparent;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.navbar-fixed-side{
+  @include desktop {
+    background: white;
+		border: 0;
+		border-bottom: 2px solid #$bluakMedium;
+  }
+  @include mobile {
+    background: white;
+		border-right: 2px solid $bluakMedium;
+  }
+}
+
+@import "scrollbar";
