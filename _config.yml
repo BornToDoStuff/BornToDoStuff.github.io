@@ -57,6 +57,7 @@ defaults:
     values:
       layout: "post"
       permalink: /item/:title/
+      title: "Magic Items"
 
 #
 # !! You don't need to change any of the configuration flags below !!
