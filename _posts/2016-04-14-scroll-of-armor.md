@@ -23,5 +23,3 @@ When unrolled this rough scroll grows in size and thickness until it is a finger
 If they choose to they can resist with a DC 14 strength check, or dodge it with a DC 18 acrobatics check.
 
 If they fail or are willing it cinches around their abdomen and the glyphs begin circling their body. While wearing the scroll they have advantage on saves against all spells that target them, but not AoE spells. They also suffer -10 to their movement speed. The scroll crumbles to dust after 1 hour, as the glyphs fade away, or if you take lightning damage.
-
-<a href="google.com">tag test</a>
