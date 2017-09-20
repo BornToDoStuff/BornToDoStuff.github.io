@@ -23,6 +23,7 @@
 
   <body>
     <div class="wrapper-masthead">
+      <a id="TippyTop"></a>
       <div class="container">
         <header class="masthead clearfix">
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
@@ -40,16 +41,20 @@
       </div>
     </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
+    <div id="main" role="main" class="main-container">
+      <div class="col-sm-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-1">
+        {% include search.html %}
+        <div class="clearfix"></div>
+        {{ content }}
+      </div>
     </div>
 
-    <div class="wrapper-footer">
+    <!--<div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
           {% include svg-icons.html %}
         </footer>
       </div>
-    </div>
+    </div>-->
   </body>
 </html>
