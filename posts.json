@@ -5,6 +5,12 @@
     {
       "title"    : "{{ post.title | escape }}",
       "id" : "{{ post.item_id }}",
+      "type" : "{{ post.item_type }}",
+      "rarity" : "{{ post.item_rarity }}",
+      "attunement" : {{ post.item_attunement }},
+      "requirement" : "{{ post.item_requirement }}",
+      "curse" : {{ post.item_type }},
+      "classes" : "{{ post.item_classes }}",
       "content"	 : "{{ post.content | smartify | jsonify}}",
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
