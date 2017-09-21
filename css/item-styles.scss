@@ -7,12 +7,12 @@
 // Syntax highlighting @import is at the bottom of this file
 
 html{
-	font-size: 10px; //sets font-size to 10px unless user changed their text-size
+	font-size: 62.5%; //sets font-size to 10px unless user changed their text-size
 }
 body {
 	background: #fbfbfb url("{{ site.baseurl }}/images/tiling-hatching_light.png");
 	background-size: 400px;
-	font: 1.6rem/$normal $roboto;
+	font: 16px/1.45em $roboto;
 	color: $darkGray;
 }
 
