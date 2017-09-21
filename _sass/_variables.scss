@@ -27,7 +27,7 @@ $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
 @mixin linkSetAll {
-  :hover, :visited, :active, :focus {
+  &:hover, &:visited, &:active, &:focus {
     @content;
   }
 }
