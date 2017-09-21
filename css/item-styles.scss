@@ -77,16 +77,19 @@ magic-item {
 		line-height: 1.5em;
 	}
 }
-
-item-rarity {
-	position: absolute;
-	top: 20px;
-	right: 15px;
+item-tags{
 	color: $mediumGray;
-}
+	
+	item-rarity {
+		position: absolute;
+		top: 20px;
+		right: 15px;
+	}
 
-item-attunement {
-	display: none;
+	item-attunement {
+		position: relative;
+		top: -12px;
+	}
 }
 
 #navigator {
