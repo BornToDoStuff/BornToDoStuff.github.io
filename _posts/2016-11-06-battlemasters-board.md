@@ -1,6 +1,5 @@
-
 ---
-title: Battlemaster''s Board
+title: Battlemaster's Board
 item_id: 0
 item_type: Wondrous
 item_rarity: Legendary
