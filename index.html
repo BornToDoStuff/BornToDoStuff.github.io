@@ -3,8 +3,6 @@ layout: default
 search:  true
 ---
 {% for post in site.posts %}
-<div class="form-group">
-  <div class="clearfix"></div>
   <magic-item>
     <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
     <item-tags>
@@ -16,5 +14,4 @@ search:  true
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more pull-right">›››</a>
     </item-description>
   </magic-item>
-</div>
 {% endfor %}
