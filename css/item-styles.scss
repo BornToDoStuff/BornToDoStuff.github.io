@@ -21,9 +21,13 @@ body {
 	float: left;
 }
 
-.search a {
-	color: #777;
-	cursor: pointer;
+.search {
+  margin-bottom: 30px;
+  
+  a {
+    color: #777;
+    cursor: pointer;
+  }
 }
 
 .form-group:nth-child(n+2) {
