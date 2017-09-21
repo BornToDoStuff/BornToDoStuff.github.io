@@ -7,7 +7,9 @@
 // Syntax highlighting @import is at the bottom of this file
 
 body {
-	background-color: #f8f8f8;
+  background: $backgroundLight;
+  font: 16px/1.45 $roboto;
+  color: $darkGray;
 }
 
 *:after {
