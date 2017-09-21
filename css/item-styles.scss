@@ -12,7 +12,7 @@ html{
 body {
 	background: #fbfbfb url("{{ site.baseurl }}/images/tiling-hatching_light.png");
 	background-size: 400px;
-	font: 16px/1.45em $roboto;
+	font: 16px/$normal $roboto;
 	color: $darkGray;
 }
 
