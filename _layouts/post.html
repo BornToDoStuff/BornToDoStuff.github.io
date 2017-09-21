@@ -1,17 +1,13 @@
 ---
 layout: default
 ---
-
-<div class="form-group">
-  <div class="clearfix"></div>
-  <magic-item>
-    <a href="{{ site.baseurl }}{{ page.url }}"><item-name>{{ page.title }}</item-name></a>
-    <item-tags>
-      <item-rarity>{{ page.item_rarity }}</item-rarity>
-      <item-attunement>{% if page.item_attunement %} requires attunement {% endif %}</item-attunement>
-    </item-tags>
-    <item-description>
-      {{ content }}
-    </item-description>
-  </magic-item>
-</div>
+<magic-item>
+  <a href="{{ site.baseurl }}{{ page.url }}"><item-name>{{ page.title }}</item-name></a>
+  <item-tags>
+    <item-rarity>{{ page.item_rarity }}</item-rarity>
+    <item-attunement>{% if page.item_attunement %} requires attunement {% endif %}</item-attunement>
+  </item-tags>
+  <item-description>
+    {{ content }}
+  </item-description>
+</magic-item>
