@@ -13,7 +13,7 @@ body {
 }
 
 a {
-  @mixin linkSetAll {
+  @mixin linksSetAll {
     color: $blue;
     text-decoration: none;
   }
