@@ -7,7 +7,7 @@
 // Syntax highlighting @import is at the bottom of this file
 
 body {
-  background: $backgroundLight;
+  background: #fbfbfb url("{{ site.baseurl }}/images/tiling-hatching_light.png");
   font: 16px/1.45 $roboto;
   color: $darkGray;
 }
