@@ -1,22 +1,25 @@
-﻿class SpellElement extends HTMLElement {
+class SpellElement extends HTMLElement {
 	constructor() {
 		// Always call super first in constructor
 		super();
 	}
 }
-customElements.define('magic-spell', SpellElement);
+customElements.define("magic-spell", SpellElement);
 if (customElements.get("magic-spell"))
 	console.log("magic-spell tag added");
+//HTMLAnchorElement
 
-class ItemNameElement extends HTMLElement { //HTMLAnchorElement
-	constructor() {
-		// Always call super first in constructor
-		super();
-	}
-}
-customElements.define('item-name', ItemNameElement);
-if (customElements.get("item-name"))
-	console.log("item-name tag added");
+class ItemNameElement extends HTMLElement { constructor() { super(); } }
+customElements.define("item-name", ItemNameElement);
+if (customElements.get("item-name")) { console.log("item-name tag added"); }
+
+class MagicItemElement extends HTMLElement { constructor() { super(); } }
+customElements.define("magic-item", MagicItemElement);
+if (customElements.get("magic-item")) { console.log("magic-item tag added"); }
+
+class ItemTagsElement extends HTMLElement { constructor() { super(); } }
+customElements.define("item-tags", ItemNameElement);
+if (customElements.get("item-tags")) { console.log("item-tags tag added"); }
 
 var QuillIsDeclared = true;
 try{ Quill; }
