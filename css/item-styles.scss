@@ -117,12 +117,12 @@ item-attunement {
 .navbar-fixed-side{
   @include desktop {
     background: white;
-	  border: 0;
-    border-bottom: 2px solid $bluakMedium;
+    border-right: 2px solid $bluakMedium;
   }
   @include mobile {
     background: white;
-    border-right: 2px solid $bluakMedium;
+    border: 0;
+    border-bottom: 2px solid $bluakMedium;
   }
 }
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
