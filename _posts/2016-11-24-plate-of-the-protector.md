@@ -2,9 +2,10 @@
 title: Plate of the Protector
 item_id: 59
 item_type: Armor
-  - subtype: Breastplate
-  - subtype: Half Plate
-  - subtype: Plate
+item_subtype:
+      - type: Breastplate
+      - type: Half Plate
+      - type: Plate
 item_rarity: Rare
 item_attunement: true
 item_requirement: by a Cleric or Paladin
