@@ -4,9 +4,9 @@ item_id: 0
 item_type: Wondrous
 item_rarity: Legendary
 item_attunement: false
-item_requirement: ""
+item_requirement: 
 item_curse: false
-item_classes: 
+item_classes:
   - class: Cleric
     weight: 1
   - class: Wizard
