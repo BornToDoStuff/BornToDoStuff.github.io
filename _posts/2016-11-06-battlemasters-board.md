@@ -7,22 +7,20 @@ item_attunement: false
 item_requirement: ""
 item_curse: false
 item_classes: 
-  - class: Bard
   - class: Cleric
-  - class: Druid
-  - class: Ranger
-  - class: Rogue
+    weight: 1
   - class: Wizard
+    weight: 2
 item_school: Necromancy
-item_role: 
-  - role: Attack 
+item_role:
+  - role: Attack
   - role: Utility
-item_damage: ""
-item_tags: 
-  - tag: ""
-item_idea: ""
-item_co_creator: ""
-item_updated: ""
+item_damage:
+item_tags:
+  - tag: Control
+item_idea:
+item_co_creator:
+item_updated:
 ---
 
 
