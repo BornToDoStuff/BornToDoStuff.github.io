@@ -26,10 +26,13 @@ $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
-@mixin linkSetAll {
-  &:hover, &:visited, &:active, &:focus {
-    @content;
-  }
+@mixin linksSetAll {
+    & {
+        @content;
+        &:visited, &:hover, &:active, &:focus {
+            @content;
+        }
+    }
 }
 
 @mixin desktop {
