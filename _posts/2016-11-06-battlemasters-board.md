@@ -18,9 +18,9 @@ item_school: Necromancy
 item_role: 
   - role: Attack 
   - role: Utility
-item_damage: 
+item_damage: ""
 item_tags: 
-  - tag:
+  - tag: ""
 item_idea: ""
 item_co_creator: ""
 item_updated: ""
