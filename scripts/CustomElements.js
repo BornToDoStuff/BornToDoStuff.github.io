@@ -18,7 +18,7 @@ customElements.define("magic-item", MagicItemElement);
 if (customElements.get("magic-item")) { console.log("magic-item tag added"); }
 
 class ItemTagsElement extends HTMLElement { constructor() { super(); } }
-customElements.define("item-tags", ItemNameElement);
+customElements.define("item-tags", ItemTagsElement);
 if (customElements.get("item-tags")) { console.log("item-tags tag added"); }
 
 var QuillIsDeclared = true;
