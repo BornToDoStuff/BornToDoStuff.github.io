@@ -1,51 +1,26 @@
 
 ---
-title: "BattleMaster's Board"
+title: "Battlemaster's Board"
 item_id: 0
-item_type: Armor Potion Ring Rod Scroll Shield Staff Tattoo Wand Weapon Wondrous
-item_rarity: Mediocre Common Uncommon Rare Very Rare Legendary
+item_type: Wondrous
+item_rarity: Legendary
 item_attunement: false
 item_requirement: ""
 item_curse: false
 item_classes: 
-  - class: Barbarian
   - class: Bard
   - class: Cleric
   - class: Druid
-  - class: Fighter
-  - class: Monk
-  - class: Paladin
   - class: Ranger
   - class: Rogue
-  - class: Sorcerer
-  - class: Warlock
   - class: Wizard
-  - class: All
-item_school: Abjuration Conjuration Divination Enchantment Evocation Illusion Necromancy Transmutation Unidentifiable Ancient
+item_school: Necromancy
 item_role: 
   - role: Attack 
-  - role: Auxiliary 
-  - role: Defense 
-  - role: Healing 
   - role: Utility
 item_damage: 
-  - type: Acid
-  - type: Bludgeoning
-  - type: Cold
-  - type: Fire
-  - type: Force
-  - type: Lightning
-  - type: Necrotic
-  - type: Piercing
-  - type: Poison
-  - type: Psychic
-  - type: Radiant
-  - type: Slashing
-  - type: Thunder
-  - type: Mixed
 item_tags: 
-  - tag: ""
-  - tag: ""
+  - tag:
 item_idea: ""
 item_co_creator: ""
 item_updated: ""
@@ -64,14 +39,4 @@ While the board is set up you can move up to three pieces as an action, choosing
 Move. The creature must move up to 15 feet in any direction you choose, this movement does not count towards their movement next turn and is made as if disengaging. A creature will not move if it would certainly lead to it’s death.
 Help. You help the creature with your overview of the battlefield as if using the Help action. This can include aiding them in attacking another creature.
 Attack. Using the creature’s reaction they must make a melee attack against another creature within reach that you consider an enemy.
-Reveal. If you are proficient with Dragonchess you can reveal the position of another creature you have bound. Until the end of your next turn this creature is aware of the revealed creature’s location even if they cannot see them or are blinded, and can ignore up to 3/4 cover against the revealed creature.^
-Bones of a Wandering Soul
-Wondrous item, rare (requires attunement)
-This simple leather pouch has several charred humanoid bones in it and a small dusting of ashes. There is no smell of smoke though, so you know these must be quite old.
-When attuned to this bag of bones no matter how far you are from them if you are incapacitated a ghostly figure rises from your body. This is not your soul, and you do not know whose it is. 
-While you are incapacitated once per turn you can mentally command the wandering soul to deal 1d8 necrotic damage to the closest creature you do not recognize as an ally within 30 feet. You do not know what or who that creature is, only if it is a creature you already know and if you consider them an ally or not.
-If a creature makes a melee attack against you while you are incapacitated they must make a DC 10 Wisdom saving throw or become Frightened of you for the next minute or until they are farther than 30 feet from you as their mind is bombarded by the wandering soul.
-Additionally, while incapacitated you can telepathically reach out to a humanoid corpse that still has its mind and is within 30 feet and determine the answer to a single yes or no question if the creature knew the answer to your question in life. You can do this once per turn and can ask up to three questions of a single corpse before the information in its mind dulls.
-Curse. While the wandering soul remains in the bones you can not un-attune from this item unless you are within the area of a Hallow spell. If Remove Curse is cast on this item or the attuned creature the caster must make a DC 16 Intelligence(Arcana) check as the wanderer resists. On a failure the spell does nothing.
-If all of the bones are removed from the bag the bones begin to clatter and an Avatar of Death (DMG 164) is summoned within 10 feet of the creature holding the most bones. It screeches at the creature for disturbing its slumber and begins attacking it. It is resistant to any damage from all other creatures, even if the creature holding the most bones changes.
-If the Avatar of Death is defeated a putrid black smog wafts out from the bones and they become mundane. If the avatar defeats the creature they were attacking it places the bones back within the pouch and vanishes.
+Reveal. If you are proficient with Dragonchess you can reveal the position of another creature you have bound. Until the end of your next turn this creature is aware of the revealed creature’s location even if they cannot see them or are blinded, and can ignore up to 3/4 cover against the revealed creature.
