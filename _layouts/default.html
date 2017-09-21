@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
-    
+
     {% include analytics.html %}
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/item-styles.css" />
     <!--<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css" />-->
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
-    
+
     <script src="{{ site.baseurl }}/scripts/jquery-3.1.1.min.js"></script>
     <script src="{{ site.baseurl }}/scripts/bootstrap.min.js"></script>
     <script src="{{ site.baseurl }}/scripts/CustomElements.js"></script>
@@ -24,10 +24,10 @@
   <body>
     <a id="TippyTop"></a>
     {% include navigation.html %}
-    
+
     <div id="main" role="main" class="col-sm-9 col-md-10 main-container">
       <div class="col-sm-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-1">
-        {% if page.search == true %}
+        {% if page.search %}
           {% include search.html %}
         {% endif %}
         <div class="clearfix"></div>
