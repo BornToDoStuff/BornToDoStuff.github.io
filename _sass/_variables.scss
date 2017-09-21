@@ -26,13 +26,17 @@ $helvetica: Helvetica, Arial, sans-serif;
 $helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
-// Desktop breakpoints
+@mixin linkSetAll {
+  :hover, :visited, :active, :focus {
+    @content;
+  }
+}
+
 @mixin desktop {
   @media screen and (min-width: 768px) {
     @content;
   }
 }
-// Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 768px) {
     @content;
