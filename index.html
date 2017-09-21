@@ -5,13 +5,14 @@ layout: default
 <div class="form-group">
   <div class="clearfix"></div>
   <magic-item>
-    <item-name href="#">{{ post.title }}</item-name>
+    <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
     <item-tags>
       <item-rarity>{{ post.item_rarity }}</item-rarity>
       <item-attunement>{% if post.item_attunement %} requires attunement {% endif %}</item-attunement>
     </item-tags>
     <item-description>
       {{ post.excerpt }}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
     </item-description>
   </magic-item>
 </div>
