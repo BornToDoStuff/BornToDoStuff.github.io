@@ -69,7 +69,7 @@ magic-item {
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 	transition: max-height 0.5s;
   
-	:before {
+	/*:before {
 		content: "";
 		width: 100%;
 		height: 100%;
@@ -78,7 +78,7 @@ magic-item {
 		top: 0px;
 		left: 0px;
 		z-index: 10;
-	}
+	}*/
 
 	item-description {
 		display: block;
