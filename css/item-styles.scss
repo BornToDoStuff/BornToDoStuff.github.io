@@ -13,8 +13,8 @@ body {
 }
 
 #{$a-tags} {
-    color: $blue;
-    text-decoration: none;
+  color: $blue;
+  text-decoration: none;
 }
 
 *:after {
@@ -35,15 +35,9 @@ body {
   }
 }
 
-.form-group:nth-child(n+2) {
-	position: relative;
-	/*border-top: 3px solid #eee;*/
-}
-
 item-name {
 	display: block;
 	/* margin-top: 0px; */
-	margin-bottom: 10px;
 	font-size: 30px;
 	font-family: inherit;
 	font-weight: 500;
@@ -64,11 +58,11 @@ magic-spell {
 }
 
 magic-item {
-	/* position: relative; */
+  position: relative;
 	display: block;
 	padding: 20px 15px;
 	text-align: justify;
-	/* margin-top: -50px; */
+	margin-bottom: 15px;
 	background-color: white;
 	border: 1px solid $borderLight;
 	border-bottom: 2px solid $bluakMedium;
@@ -77,17 +71,6 @@ magic-item {
 	overflow-y: hidden;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 	transition: max-height 0.5s;
-  
-	/*:before {
-		content: "";
-		width: 100%;
-		height: 100%;
-		cursor: pointer;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		z-index: 10;
-	}*/
 
 	item-description {
 		display: block;
