@@ -33,7 +33,7 @@ defaults:
     values:
       layout: "post"
       permalink: /item/:title/
-      title: "Magic Items"
+      title: "New Magic Item"
       item_rejected: false
 
 #
