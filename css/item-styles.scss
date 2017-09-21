@@ -6,15 +6,19 @@
 @import "scrollbar";
 // Syntax highlighting @import is at the bottom of this file
 
+html{
+	font-size: 62.5% //sets font-size to 10px unless user changed their text-size
+}
 body {
-  background: #fbfbfb url("{{ site.baseurl }}/images/tiling-hatching_light.png");
-  font: 16px/1.45 $roboto;
-  color: $darkGray;
+	background: #fbfbfb url("{{ site.baseurl }}/images/tiling-hatching_light.png");
+	background-size: 400px;
+	font: 1.6rem/$normal $roboto;
+	color: $darkGray;
 }
 
 #{$a-tags} {
-  color: $blue;
-  text-decoration: none;
+	color: $blue;
+	text-decoration: none;
 }
 
 *:after {
@@ -27,27 +31,39 @@ body {
 }
 
 .search {
-  margin-bottom: 30px;
+	margin-bottom: 30px;
   
-  a {
-    color: #777;
-    cursor: pointer;
-  }
+	a {
+	color: #777;
+	cursor: pointer;
+	}
 }
 
 item-name {
 	display: block;
-	font-size: 30px;
+	font-size: 3.2rem;
 	margin-bottom: 10px;
 	font-family: inherit;
 	font-weight: 500;
-	line-height: 1.1;
+	line-height: $compressed;
 	color: $bluakDark;
 	max-width: 80%;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	text-align: left;
+}
+h1, h2, h3, h4 {
+	color: $bluakDark;
+	line-height: $normal;
+	padding-top: 5px;
+}
+h1 { font-size: 3rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2.2rem; }
+h4 { 
+	font-size: 1.8rem;
+	color: $gray;
 }
 
 magic-spell {
@@ -58,7 +74,7 @@ magic-spell {
 }
 
 magic-item {
-  position: relative;
+	position: relative;
 	display: block;
 	padding: 20px 15px;
 	text-align: justify;
@@ -74,7 +90,7 @@ magic-item {
 
 	item-description {
 		display: block;
-		line-height: 1.5em;
+		line-height: $normal;
 	}
 }
 item-tags{
@@ -109,7 +125,7 @@ item-tags{
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 .read-more {
-	font-size: 1.5em;
+	font-size: 2.5rem;
 }
 
 body {
@@ -126,17 +142,17 @@ magic-item {
 
 
 .navbar-fixed-side {
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   
-  @include desktop {
-    background: white;
-    border-right: 2px solid $bluakMedium;
-  }
-  @include mobile {
-    background: white;
-    border: 0;
-    border-bottom: 2px solid $bluakMedium;
-  }
+	@include desktop {
+		background: white;
+		border-right: 2px solid $bluakMedium;
+	}
+	@include mobile {
+    		background: white;
+    		border: 0;
+    		border-bottom: 2px solid $bluakMedium;
+	}
 }
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
