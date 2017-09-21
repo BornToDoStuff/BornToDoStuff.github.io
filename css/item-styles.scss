@@ -12,11 +12,9 @@ body {
   color: $darkGray;
 }
 
-a {
-  @mixin linksSetAll {
+#{$a-tags} {
     color: $blue;
     text-decoration: none;
-  }
 }
 
 *:after {
