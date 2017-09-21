@@ -12,9 +12,11 @@ body {
   color: $darkGray;
 }
 
-a, a:hover {
-  color: $blue;
-  text-decoration: none;
+a {
+  @mixin linkSetAll {
+    color: $blue;
+    text-decoration: none;
+	}
 }
 
 *:after {
