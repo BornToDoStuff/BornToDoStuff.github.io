@@ -12,6 +12,11 @@ body {
   color: $darkGray;
 }
 
+a, a:hover {
+  color: $blue;
+  text-decoration: none;
+}
+
 *:after {
 	font: normal normal normal 14px/1 FontAwesome;
 }
@@ -117,8 +122,11 @@ item-attunement {
 	border-bottom-left-radius: 5px;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
+.read-more {
+	font-size: 1.5em;
+}
 
-.navbar-fixed-side{
+.navbar-fixed-side {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   
   @include desktop {
