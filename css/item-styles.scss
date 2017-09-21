@@ -112,6 +112,19 @@ item-tags{
 	font-size: 1.5em;
 }
 
+body {
+	background: #ccc url(/images/tiling-hatching_light.png)
+}
+.form-control {
+	border:1px solid #ababab;
+}
+magic-item {
+	border-left: 0px;
+    	border-right: 0px;
+}
+
+
+
 .navbar-fixed-side {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
   
