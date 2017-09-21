@@ -34,7 +34,7 @@ body {
 
 .search {
 	margin-bottom: 30px;
-  
+
 	a {
 	color: #777;
 	cursor: pointer;
@@ -63,16 +63,17 @@ h1, h2, h3, h4 {
 h1 { font-size: 3rem; }
 h2 { font-size: 2.6rem; }
 h3 { font-size: 2.2rem; }
-h4 { 
+h4 {
 	font-size: 1.8rem;
 	color: $gray;
 }
 
 magic-spell {
-	font-weight: 600;
+	//font-weight: 600;
 	font-style: italic;
 	text-transform: capitalize;
-	cursor: pointer;
+	//cursor: pointer;
+	$gray;
 }
 
 magic-item {
@@ -97,7 +98,7 @@ magic-item {
 }
 item-tags{
 	color: $mediumGray;
-	
+
 	item-rarity {
 		position: absolute;
 		top: 20px;
@@ -145,7 +146,7 @@ magic-item {
 
 .navbar-fixed-side {
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  
+
 	@include desktop {
 		background: white;
 		border-right: 2px solid $bluakMedium;
