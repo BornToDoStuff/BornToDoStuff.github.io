@@ -5,11 +5,10 @@ layout: default
 <div class="form-group lg6">
   <div class="clearfix"></div>
   <magic-item>
-    <!--<div class="bookmark"></div>-->
     <item-name href="#">{{ post.title }}</item-name>
     <item-tags>
       <item-rarity>{{ post.item_rarity }}</item-rarity>
-      <item-attunement>{% if post.item_attunement %} requires attunement {% endif %)</item-attunement>
+      <item-attunement>{% if post.item_attunement %} requires attunement {% endif %}</item-attunement>
     </item-tags>
     <item-description>
       {{ content }}
