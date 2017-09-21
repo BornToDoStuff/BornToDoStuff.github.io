@@ -2,14 +2,17 @@
 layout: default
 ---
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-</article>
+<div class="form-group lg6">
+  <div class="clearfix"></div>
+  <magic-item>
+    <!--<div class="bookmark"></div>-->
+    <item-name href="#">{{ post.title }}</item-name>
+    <item-tags>
+      <item-rarity>{{ post.item_rarity }}</item-rarity>
+      <item-attunement>{% if post.item_attunement %} requires attunement {% endif %)</item-attunement>
+    </item-tags>
+    <item-description>
+      {{ content }}
+    </item-description>
+  </magic-item>
+</div>
