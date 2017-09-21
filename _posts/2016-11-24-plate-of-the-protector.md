@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: Plate of the Protector
+=======
+title: "Plate of the Protector"
+>>>>>>> origin/master
 item_id: 59
 item_type: Armor
   - subtype: Breastplate
