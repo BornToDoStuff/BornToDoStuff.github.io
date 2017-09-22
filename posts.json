@@ -3,8 +3,8 @@
 [
   {% for post in site.posts %}
     {
-      "title"    : "{{ post.title | escape }}",
       "id" : "{{ post.item_id }}",
+      "title" : "{{ post.title | escape }}",
       "type" : "{{ post.item_type }}",
       "subtypes" : [
         {% for item in post.item_subtype %} {"type" : "{{ item.type }}"}{% unless forloop.last %}, {% endunless %}{% endfor %}
@@ -29,7 +29,7 @@
       "idea" : "{{ post.item_idea }}",
       "co_creator" : "{{ post.item_co_creator }}",
       "updated" : "{{ post.item_updated }}",
-      "content"	 : {{ post.content | smartify | jsonify}},
+      "content" : {{ post.content | smartify | jsonify}},
       "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify}}
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
