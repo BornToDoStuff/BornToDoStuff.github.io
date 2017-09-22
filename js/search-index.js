@@ -3,9 +3,10 @@
 
 //search index at the bottom
 
+//assign id to forloop.index0 to reference it against the item at the same index in the item_cache.
 var search_cache = [
   {% for post in site.posts %} {
-      "id" : "{{ post.item_id }}",
+      "id" : "{{ forloop.index0 }}",
       "title" : "{{ post.title | escape }}",
       "type" : "{{ post.item_type }}",
       "subtypes" : "{% for item in post.item_subtype %}{{ item.type }} {% endfor %}",
