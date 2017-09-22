@@ -49,8 +49,8 @@ var search_index = lunr(function () {
   this.field('category');
   this.field("tags");
   this.field("searchtext");
-});
-
-search_cache.forEach(function(item){
-  search_index.add(item);
+  
+  search_cache.forEach(function (item) {
+    this.add(item)
+  }, this)
 });
