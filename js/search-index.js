@@ -1,7 +1,21 @@
 ---
 ---
 
+<<<<<<< HEAD
 //search index at the bottom
+=======
+var search_index = lunr(function () {
+  this.ref("id");
+  this.field("title", {boost: 10});
+  this.field('category');
+  this.field("tags");
+  this.field("searchtext");
+});
+
+search_cache.forEach(function(item){
+  search_index.add(item);
+});
+>>>>>>> 68d26bd910e7cd294da8071e0a5ba4f646d52f25
 
 var search_cache = [
   {% for post in site.posts %} {
@@ -20,7 +34,11 @@ var search_cache = [
       "tags" : "{% for item in post.item_tags %}{{ item.tag }} {% endfor %}",
       "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify }}
     }{% unless forloop.last %},{% endunless %} {% endfor %}
+<<<<<<< HEAD
 ];
+=======
+]
+>>>>>>> 68d26bd910e7cd294da8071e0a5ba4f646d52f25
 var item_cache = [
   {% for post in site.posts %} {
       "id" : "{{ post.item_id }}",
@@ -41,6 +59,7 @@ var item_cache = [
       "updated" : "{{ post.item_updated }}",
       "content" : {{ post.content | smartify | jsonify }}
     }{% unless forloop.last %},{% endunless %} {% endfor %}
+<<<<<<< HEAD
 ];
 
 var search_index = lunr(function () {
@@ -54,3 +73,6 @@ var search_index = lunr(function () {
 search_cache.forEach(function(item){
   search_index.add(item);
 });
+=======
+]
+>>>>>>> 68d26bd910e7cd294da8071e0a5ba4f646d52f25
