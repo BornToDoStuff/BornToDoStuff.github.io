@@ -1,24 +1,18 @@
-<div class="form-group search">
-  <div class="input-group">
-    <input id="search" type="search" class="form-control" />
-    <span class="input-group-btn">
-      <button id="search-btn" class="btn btn-default" type="button">Search</button>
-    </span>
-  </div>
-  <!-- <a class="pull-right">Advanced Search</a> -->
-  <script id="result-template" type="x-tmpl-mustache">
-    <magic-item>
-      <item-name>{{title}}</item-name>
-      <item-tags>
-        <item-rarity>{{rarity}}</item-rarity>
-        <item-attunement>{{#attunement}} requires attunement {{requirement}}{{/attunement}}</item-attunement>
-      </item-tags>
-      <item-description>
-        {{content}}
-      </item-description>
-    </magic-item>
-  </script>
-  <script>
+
+<script src="{{ site.baseurl }}/js/search-index.js"></script>
+<script id="result-template" type="x-tmpl-mustache">
+  <magic-item>
+    <item-name>{{title}}</item-name>
+    <item-tags>
+      <item-rarity>{{rarity}}</item-rarity>
+      <item-attunement>{{#attunement}} requires attunement {{requirement}}{{/attunement}}</item-attunement>
+    </item-tags>
+    <item-description>
+      {{content}}
+    </item-description>
+  </magic-item>
+</script>
+<script>
   $(document).ready(function() {
     var searchbox = $('input#search');
     var searchResults = $('#searchResults');
@@ -41,6 +35,4 @@
       searchResults.append(Mustache.render(template, result));
     };
   });
-  </script>
-</div>
-<div id=searchResults></div>
+</script>
