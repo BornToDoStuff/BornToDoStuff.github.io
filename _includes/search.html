@@ -1,4 +1,48 @@
 <div class="form-group search">
-  <input type="search" placeholder="Search" class="form-control" />
-  <a class="pull-right">Advanced Search</a>
+  <div class="input-group">
+    <input id="search" type="search" class="form-control" />
+    <span class="input-group-btn">
+      <button id="search-btn" class="btn btn-default" type="button">Search</button>
+    </span>
+  </div>
+  <!-- <a class="pull-right">Advanced Search</a> -->
+  <script id="result-template" type="x-tmpl-mustache">
+    <magic-item>
+      <item-name>{{title}}</item-name>
+      <item-tags>
+        <item-rarity>{{rarity}}</item-rarity>
+        <item-attunement>{{#attunement}} requires attunement {{requirement}}{{/attunement}}</item-attunement>
+      </item-tags>
+      <item-description>
+        {{content}}
+      </item-description>
+    </magic-item>
+  </script>
+  <script src="{{ site.baseurl }}/js/lunr.min.js"></script>
+  <script src="{{ site.baseurl }}/js/search-index.js"></script> <!-- contains search_index and search_cache -->
+  <script>
+  $(document).ready(function() {
+    var searchbox = $('input#search');
+    var searchResults = $('#searchResults');
+    var template = $('#result-template').html();
+    Mustache.parse(template);
+
+    $("#search-btn").on("click", function(){
+      var query = searchbox.val();
+      var results = search_index.search(query);
+      searchResults.empty();
+
+      for (var item in results){
+        var ref = results[result].ref;
+        var result = search_cache[ref];
+        loadResult(result);
+      }
+    });
+
+    function loadResult(result) {
+      searchResults.append(Mustache.render(template, result));
+    };
+  }
+  </script>
 </div>
+<div id=searchResults></div>

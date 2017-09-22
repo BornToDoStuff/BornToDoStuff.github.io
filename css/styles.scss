@@ -23,13 +23,13 @@ body {
 	text-decoration: none;
 }
 
-*:after {
-	font: normal normal normal 1.8rem/1em FontAwesome;
-}
+// *:after {
+// 	font: normal normal normal 1.8rem/1em FontAwesome;
+// }
 
-.main-container {
+#main {
 	padding: 20px;
-	// float: left;
+
 	@include mobile {
 		padding: 0px;
 		margin-top: 75px;
@@ -115,22 +115,6 @@ item-tags{
 	}
 }
 
-#navigator {
-	position: fixed;
-	display: block;
-	bottom: 13px;
-	right: 0;
-	min-width: 40px;
-	padding: 10px;
-	text-align: center;
-	background-color: #ffffff;
-	z-index: 100;
-	border: 1px solid $borderLight;
-	border-right-color: transparent;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
 .read-more {
 	font-size: 2.5rem;
 }
