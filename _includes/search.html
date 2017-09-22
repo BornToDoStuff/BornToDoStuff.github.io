@@ -2,17 +2,19 @@
 <script src="{{ site.baseurl }}/js/search-index.js"></script>
 <script id="result-template" type="x-tmpl-mustache">
   {% raw %}
-    <div>{{content}}</div>
+    <div>
+      {{content}}
+    </div>
   {% endraw %}
 </script>
 <script>
   $(document).ready(function() {
     var searchbox = $('input#search');
     var searchResults = $('#searchResults');
-    var template = $('#result-template').html().trim();
+    var template = $('#result-template').html();
     // Mustache.parse(template);
 
-    $("#search-btn").on("click", function(){
+    $(document).on("click","#search-btn", function(){
       var query = searchbox.val();
       var results = search_index.search(query);
       searchResults.empty();
