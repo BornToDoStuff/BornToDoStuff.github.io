@@ -39,7 +39,7 @@ var item_cache = [
       "idea" : "{{ post.item_idea }}",
       "co_creator" : "{{ post.item_co_creator }}",
       "updated" : "{{ post.item_updated }}",
-      "content" : {{ post.content | smartify | jsonify }}
+      "text" : {{ post.content | smartify | jsonify }}
     }{% unless forloop.last %},{% endunless %} {% endfor %}
 ];
 
@@ -49,7 +49,7 @@ var search_index = lunr(function () {
   this.field('category');
   this.field("tags");
   this.field("searchtext");
-  
+
   search_cache.forEach(function (item) {
     this.add(item)
   }, this)
