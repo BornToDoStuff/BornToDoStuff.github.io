@@ -1,10 +1,17 @@
 
 <script src="{{ site.baseurl }}/js/search-index.js"></script>
 <script id="result-template" type="x-tmpl-mustache">
-  {% raw %}
-    <div>
-      {{content}}
-    </div>
+{% raw %}
+  <magic-item>
+    <item-name>{{title}}</item-name>
+    <item-tags>
+      <item-rarity>{{rarity}}</item-rarity>
+      <item-attunement>{{#attunement}} requires attunement {{requirement}}{{/attunement}}</item-attunement>
+    </item-tags>
+    <item-description>
+      {{{content}}}
+    </item-description>
+  </magic-item>
   {% endraw %}
 </script>
 <script>
@@ -14,13 +21,13 @@
     var template = $('#result-template').html();
     // Mustache.parse(template);
 
-    $(document).on("click","#search-btn", function(){
+    $("#search-btn").on("click", function(){
       var query = searchbox.val();
       var results = search_index.search(query);
       searchResults.empty();
 
       for (var item in results){
-        var ref = results[result].ref;
+        var ref = results[item].ref;
         var result = item_cache[ref];
         loadResult(result);
       }
