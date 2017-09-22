@@ -9,17 +9,14 @@ if (customElements.get("magic-spell"))
 	console.log("magic-spell tag added");
 //HTMLAnchorElement
 
-class ItemNameElement extends HTMLElement { constructor() { super(); } }
-customElements.define("item-name", ItemNameElement);
-if (customElements.get("item-name")) { console.log("item-name tag added"); }
-
 class MagicItemElement extends HTMLElement { constructor() { super(); } }
 customElements.define("magic-item", MagicItemElement);
-if (customElements.get("magic-item")) { console.log("magic-item tag added"); }
-
+class ItemNameElement extends HTMLElement { constructor() { super(); } }
+customElements.define("item-name", ItemNameElement);
 class ItemTagsElement extends HTMLElement { constructor() { super(); } }
 customElements.define("item-tags", ItemTagsElement);
-if (customElements.get("item-tags")) { console.log("item-tags tag added"); }
+class ItemDescriptionElement extends HTMLElement { constructor() { super(); } }
+customElements.define("item-description", ItemDescriptionElement);
 
 var QuillIsDeclared = true;
 try{ Quill; }
