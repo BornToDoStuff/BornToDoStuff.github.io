@@ -29,7 +29,11 @@ body {
 
 .main-container {
 	padding: 20px;
-	float: left;
+	// float: left;
+	@include mobile {
+		padding: 0px;
+		margin-top: 75px;
+	}
 }
 
 .search {
@@ -146,15 +150,19 @@ magic-item {
 
 .navbar-fixed-side {
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+	background: white;
 
 	@include desktop {
-		background: white;
 		border-right: 2px solid $bluakMedium;
 	}
 	@include mobile {
-    		background: white;
-    		border: 0;
-    		border-bottom: 2px solid $bluakMedium;
+		border-bottom: 2px solid $bluakMedium;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 0px 15px;
+		z-index: 100;
 	}
 }
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
