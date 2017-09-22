@@ -1,7 +1,7 @@
 
 <script src="{{ site.baseurl }}/js/search-index.js"></script>
 <script id="result-template" type="x-tmpl-mustache">
-  {% raw %}
+  {{ "{% raw "}}%}
     <magic-item>
       <item-name>{{title}}</item-name>
       <item-tags>
@@ -12,7 +12,7 @@
         {{{content}}}
       </item-description>
     </magic-item>
-  {% endraw %}
+  {{ "{% endraw "}}%}
 </script>
 <script>
   $(document).ready(function() {
