@@ -4,33 +4,36 @@
 var search_index = lunr(function () {
   this.ref("id");
   this.field("title", {boost: 10});
-
   this.field('category');
   this.field("tags");
   this.field("searchtext");
 
+  search_cache.forEach(function(item){
+    this.add(item);
+  }, this);
 });
-
-{% for post in site.posts %}
-search_index.add({
-  "id" : "{{ post.item_id }}",
-  "title" : "{{ post.title | escape }}",
-  "type" : "{{ post.item_type }}",
-  "subtypes" : "{% for item in post.item_subtype %}{{ item.type }}{% unless forloop.last %} {% endunless %}{% endfor %}",
-  "rarity" : "{{ post.item_rarity }}",
-  "attunement" : {{ post.item_attunement }},
-  "requirement" : "{{ post.item_requirement }}",
-  "curse" : {{ post.item_curse }},
-  "classes" : "{% for item in post.item_classes %}{{ item.class }}{% unless forloop.last %} {% endunless %}{% endfor %}",
-  "school" : "{{ post.item_school }}",
-  "role" : "{% for item in post.item_role %}{{ item.role }}{% unless forloop.last %} {% endunless %}{% endfor %}",
-  "damage" : "{% for item in post.item_damage %}{{ item.type }}{% unless forloop.last %} {% endunless %}{% endfor %}",
-  "tags" : "{% for item in post.item_tags %}{{ item.tag }}{% unless forloop.last %} {% endunless %}{% endfor %}",
-  "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify }}
-});
-{% endfor %}
 
 var search_cache = [
+  {% for post in site.posts %}
+    {
+      "id" : "{{ post.item_id }}",
+      "title" : "{{ post.title | escape }}",
+      "type" : "{{ post.item_type }}",
+      "subtypes" : "{% for item in post.item_subtype %}{{ item.type }} {% endfor %}",
+      "rarity" : "{{ post.item_rarity }}",
+      "attunement" : {{ post.item_attunement }},
+      "requirement" : "{{ post.item_requirement }}",
+      "curse" : {{ post.item_curse }},
+      "classes" : "{% for item in post.item_classes %}{{ item.class }} {% endfor %}",
+      "school" : "{{ post.item_school }}",
+      "role" : "{% for item in post.item_role %}{{ item.role }} {% endfor %}",
+      "damage" : "{% for item in post.item_damage %}{{ item.type }} {% endfor %}",
+      "tags" : "{% for item in post.item_tags %}{{ item.tag }} {% endfor %}",
+      "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]
+var item_cache = [
   {% for post in site.posts %}
     {
       "id" : "{{ post.item_id }}",

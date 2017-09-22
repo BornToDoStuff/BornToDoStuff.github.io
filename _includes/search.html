@@ -19,7 +19,7 @@
     </magic-item>
   </script>
   <script src="{{ site.baseurl }}/js/lunr.min.js"></script>
-  <script src="{{ site.baseurl }}/js/search-index.js"></script> <!-- contains search_index and search_cache -->
+  <script src="{{ site.baseurl }}/js/search-index.js"></script> <!-- contains search cache variables -->
   <script>
   $(document).ready(function() {
     var searchbox = $('input#search');
@@ -34,7 +34,7 @@
 
       for (var item in results){
         var ref = results[result].ref;
-        var result = search_cache[ref];
+        var result = item_cache[ref];
         loadResult(result);
       }
     });
