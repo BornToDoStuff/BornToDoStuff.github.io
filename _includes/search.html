@@ -1,17 +1,11 @@
 
 <script src="{{ site.baseurl }}/js/search-index.js"></script>
 <script id="result-template" type="x-tmpl-mustache">
-  {{page.mustacheSetDelimiter}}
-  <magic-item>
-    <item-name>{m{title}m}</item-name>
-    <item-tags>
-      <item-rarity>{m{rarity}m}</item-rarity>
-      <item-attunement>{m{#attunement}m} requires attunement {m{requirement}m}{m{/attunement}m}</item-attunement>
-    </item-tags>
-    <item-description>
-      {m{content}m}
-    </item-description>
-  </magic-item>
+  {% raw %}
+    <div>
+      {{content}}
+    </div>
+  {% endraw %}
 </script>
 <script>
   $(document).ready(function() {
