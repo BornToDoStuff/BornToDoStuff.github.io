@@ -7,7 +7,11 @@
 /* ==================== */
 /* custom-bootstrap.js */
 /* ==================== */
-{% include /js/custom-bootstrap.min.js %}
+
+/* ==================== */
+/* bootstrap.min.js */
+/* ==================== */
+{% include /js/bootstrap.min.js %}
 /* ==================== */
 /* lunr.min.js */
 /* ==================== */
