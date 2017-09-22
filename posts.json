@@ -3,6 +3,10 @@
 [
   {% for post in site.posts %}
     {
+<<<<<<< HEAD
+=======
+      "title" : "{{ post.title | escape }}",
+>>>>>>> 87974ff627eee4f1ae3b719965efac87846ae4b2
       "id" : "{{ post.item_id }}",
       "title" : "{{ post.title | escape }}",
       "type" : "{{ post.item_type }}",
