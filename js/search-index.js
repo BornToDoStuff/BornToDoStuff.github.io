@@ -7,15 +7,14 @@ var search_index = lunr(function () {
   this.field('category');
   this.field("tags");
   this.field("searchtext");
+});
 
-  search_cache.forEach(function(item){
-    this.add(item);
-  }, this);
+search_cache.forEach(function(item){
+  search_index.add(item);
 });
 
 var search_cache = [
-  {% for post in site.posts %}
-    {
+  {% for post in site.posts %} {
       "id" : "{{ post.item_id }}",
       "title" : "{{ post.title | escape }}",
       "type" : "{{ post.item_type }}",
@@ -30,12 +29,10 @@ var search_cache = [
       "damage" : "{% for item in post.item_damage %}{{ item.type }} {% endfor %}",
       "tags" : "{% for item in post.item_tags %}{{ item.tag }} {% endfor %}",
       "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
+    }{% unless forloop.last %},{% endunless %} {% endfor %}
 ]
 var item_cache = [
-  {% for post in site.posts %}
-    {
+  {% for post in site.posts %} {
       "id" : "{{ post.item_id }}",
       "title" : "{{ post.title | escape }}",
       "type" : "{{ post.item_type }}",
@@ -53,6 +50,5 @@ var item_cache = [
       "co_creator" : "{{ post.item_co_creator }}",
       "updated" : "{{ post.item_updated }}",
       "content" : {{ post.content | smartify | jsonify }}
-    }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
+    }{% unless forloop.last %},{% endunless %} {% endfor %}
 ]
