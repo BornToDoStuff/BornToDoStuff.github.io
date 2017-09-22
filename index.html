@@ -3,7 +3,7 @@ layout: default
 search:  true
 ---
 {% for post in site.posts %}
-  <magic-item>
+  <magic-item id="{{post.item_id}}">
     <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
     <item-tags>
       <item-rarity>{{ post.item_rarity }}</item-rarity>
