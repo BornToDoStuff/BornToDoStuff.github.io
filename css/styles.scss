@@ -18,6 +18,8 @@ body {
 	line-height: $normal;
 	font-family: $roboto;
 	color: $darkGray;
+	min-width: 100vw;
+  overflow-x: hidden;
 }
 
 #{$a-tags} {

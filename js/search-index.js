@@ -40,7 +40,7 @@ var item_cache = [
       "idea" : "{{ post.item_idea }}",
       "co_creator" : "{{ post.item_co_creator }}",
       "updated" : "{{ post.item_updated }}",
-      "content" : {{ post.exerpt | smartify | jsonify }}
+      "content" : {{ post.excerpt | jsonify }}
     }{% unless forloop.last %},{% endunless %} {% endfor %}
 ];
 
