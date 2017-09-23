@@ -48,8 +48,12 @@ var item_cache = [
 var search_index = lunr(function () {
   this.ref("id");
   this.field("title", {boost: 10});
-  this.field('category');
-  this.field("tags");
+  this.field("type");
+  this.field("subtypes");
+  this.field("rarity", {boost: 5});
+  this.field("classes");
+  this.field("damage");
+  this.field("tags", {boost: 5});
   this.field("searchtext");
 
   search_cache.forEach(function (item) {
