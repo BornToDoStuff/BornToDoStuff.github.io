@@ -19,13 +19,14 @@ search:  true
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
-<nav aria-label="Page navigation" class="text-center">
+  <nav aria-label="Page navigation" class="text-center">
     <ul class="pagination">
       {% if paginator.previous_page %}
         <li><a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">&laquo; Prev</a></li>
       {% else %}
         <li class="disabled"><a>&laquo; Prev</a></li>
       {% endif %}
+
       {% for page in ((paginator.page - 2)..paginator.page) %}
         {% if page > 0 %}
           {% if page == paginator.page %}
@@ -37,22 +38,17 @@ search:  true
           {% endif %}
         {% endif %}
       {% endfor %}
-      {% for page in (paginator.page..(paginator.page + 2)) %}
-        {% if page > paginator.total_pages %}
-          {% if page == paginator.page %}
-            <li class="active"><a>{{ page }}</a></li>
-          {% elsif page == 1 %}
-            <li><a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ page }}</a></li>
-          {% else %}
+      {% for page in ((paginator.page + 1)..(paginator.page + 3)) %}
+        {% if page < paginator.total_pages %}
             <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
-          {% endif %}
         {% endif %}
       {% endfor %}
+
       {% if paginator.next_page %}
         <li><a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Next &raquo;</a><li>
       {% else %}
-        <li class="disabled"><span>Next &raquo;</span></li>
+        <li class="disabled"><a>Next &raquo;</a></li>
       {% endif %}
-  </ul>
-</nav>
+    </ul>
+  </nav>
 {% endif %}
