@@ -24,6 +24,7 @@ var search_cache = [
 ];
 var item_cache = [
   {% for post in site.posts %} {
+      "url" : "{{ post.url }}"
       "id" : "{{ post.item_id }}",
       "title" : {{ post.title | jsonify }},
       "type" : "{{ post.item_type }}",
