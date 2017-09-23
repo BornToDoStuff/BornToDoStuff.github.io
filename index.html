@@ -18,11 +18,12 @@ search:  true
   </magic-item>
 {% endfor %}
 
-{{ paginator.page }}
-{% for page in (paginator.page - 2..paginator.page + 2) %}
+{% for page in (0..paginator.page + 2) %}
   {{ forloop.index }}
-  {{ forloop.length }}
-  {{ forloop.rindex }}
+{% endfor %}
+<{{ paginator.page }}>
+{% for page in (paginator.page..paginator.total_pages) %}
+  {{ forloop.index }}
 {% endfor %}
 {% if paginator.total_pages > 1 %}
   <nav aria-label="Page navigation" class="text-center">
