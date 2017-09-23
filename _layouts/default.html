@@ -20,17 +20,7 @@
     <div id="main" role="main" class="col-sm-9 col-md-10">
       <div class="col-sm-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-1">
         {% if page.search %}
-          <div class="form-group search">
-            <div class="input-group">
-              <input id="search" type="search" class="form-control" />
-              <div class="input-group-btn">
-                <button id="search-clear" class="btn btn-default" type="button">Clear</button>
-                <button id="search-btn" class="btn btn-default" type="button">Search</button>
-              </div>
-            </div>
-            <!-- <a class="pull-right">Advanced Search</a> -->
-          </div>
-          <div id="searchResults"></div>
+          {% include search-form.html %}
         {% endif %}
         {{ content }}
       </div>
@@ -43,7 +33,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 
       {% if page.search %}
-        {% include search.html %}
+        {% include search-logic.html %}
       {% endif %}
     </div>
   </body>

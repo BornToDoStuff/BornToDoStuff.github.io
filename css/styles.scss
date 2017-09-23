@@ -51,7 +51,7 @@ body {
 
 item-name {
 	display: block;
-	font-size: 3.2rem;
+	font-size: 3.0rem;
 	margin-bottom: 10px;
 	font-family: inherit;
 	font-weight: 500;
@@ -68,7 +68,7 @@ h1, h2, h3, h4 {
 	line-height: $normal;
 	padding-top: 5px;
 }
-h1 { font-size: 3rem; }
+h1 { font-size: 3.0rem; }
 h2 { font-size: 2.6rem; }
 h3 { font-size: 2.2rem; }
 h4 {
@@ -79,12 +79,13 @@ h4 {
 magic-spell {
 	//font-weight: 600;
 	font-style: italic;
-	text-transform: capitalize;
+	// text-transform: capitalize;
 	//cursor: pointer;
 	color: $gray;
 }
 
-magic-item {
+magic-item, .page {
+	min-height: 35vh;
 	position: relative;
 	display: block;
 	padding: 20px 15px;
@@ -105,6 +106,10 @@ magic-item {
 		line-height: $normal;
 	}
 }
+.page {
+	min-height: 95vh;
+}
+
 item-tags{
 	color: $mediumGray;
 
@@ -128,7 +133,10 @@ item-tags{
 	border: 1px solid $mediumGray;
 }
 
-
+input, button{
+	font-size: 1.6rem;
+	line-height: $normal;
+}
 
 .navbar-fixed-side {
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
