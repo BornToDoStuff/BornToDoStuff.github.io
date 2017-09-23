@@ -18,6 +18,12 @@ search:  true
   </magic-item>
 {% endfor %}
 
+{{ paginator.page }}
+{% for page in (paginator.page - 2..paginator.page + 2) %}
+  {{ forloop.index }}
+  {{ forloop.length }}
+  {{ forloop.rindex }}
+{% endfor %}
 {% if paginator.total_pages > 1 %}
   <nav aria-label="Page navigation" class="text-center">
     <ul class="pagination">
@@ -27,10 +33,7 @@ search:  true
         <li class="disabled"><a>&laquo; Prev</a></li>
       {% endif %}
 
-      {% for page in ((paginator.page - 2)..(paginator.page + 2)) %}
-        {{ forloop.index }}
-        {{ forloop.length }}
-        {{ forloop.rindex }}
+      {% for page in (paginator.page - 2..paginator.page + 2) %}
         {% if page > 0 and page <= paginator.total_pages %}
           {% if page == paginator.page %}
             <li class="active"><a>{{ page }}</a></li>
