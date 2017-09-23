@@ -161,6 +161,10 @@ input, button{
 	line-height: $normal;
 }
 
+.text-center { text-align: center; }
+.pull-right { float: right; }
+.pull-left { float: left;  }
+
 .pager {
 	padding-left: 0px;
 	list-style: none;
