@@ -12,7 +12,7 @@ html{
 	font-size: 62.5%; //sets font-size to 10px (if the browser still has its default font-size)
 }
 body {
-	background: $backgroundMedium url(/images/tiling-hatching_light.png);
+	background: $backgroundMedium;
 	background-size: 400px;
 	font-size: 1.6rem;
 	font-family: $roboto;
@@ -87,12 +87,11 @@ magic-item, .page {
 	padding: 20px 15px;
 	text-align: justify;
 	margin-bottom: 15px;
-	background-color: white;
+	background: $backgroundLight
 	// border: 1px solid $borderLight;
 	border: 0px;
 	border-bottom: 2px solid $bluakMedium;
 	border-top: 2px solid $bluakMedium;
-	background-color: white;
 	overflow-y: hidden;
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 	transition: max-height 0.5s;
@@ -169,7 +168,7 @@ input, button{
 
 .navbar-fixed-side {
 	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-	background: white;
+	background: $backgroundLight
 
 	@include desktop {
 		border-right: 2px solid $bluakMedium;
