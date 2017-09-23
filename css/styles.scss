@@ -213,10 +213,6 @@ input, button{
 		color: $gray;
 		padding: 15px;
 		display: block;
-		&:hover {
-			color: $darkGray;
-			background-color: $transp_lightGray;
-		}
 	}
 
 	.navbar-header{
@@ -240,9 +236,15 @@ input, button{
 		list-style: none;
 
 		a {
-			padding-top: 10px;
-			padding-bottom: 10px;
-			border-bottom: 1px solid $transp_lightGray;
+			@include desktop{
+				padding-top: 10px;
+				padding-bottom: 10px;
+				border-bottom: 1px solid $transp_lightGray;
+			}
+			&:hover {
+				color: $darkGray;
+				background-color: $transp_lightGray;
+			}
 		}
 	}
 }
