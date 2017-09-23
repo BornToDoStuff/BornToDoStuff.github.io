@@ -54,6 +54,10 @@ body {
 		border: 1px solid #ababab;
 		border-radius: 4px;
 		box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+		&:hover {
+
+		}
 	}
 }
 
@@ -205,6 +209,15 @@ input, button{
 		padding: 0px 15px;
 		z-index: 100;
 	}
+	a {
+		color: $gray;
+		padding: 15px;
+		display: block;
+		&:hover {
+			color: $darkGray;
+			background-color: $transp_lightGray;
+		}
+	}
 
 	.navbar-header{
   	float: none;
@@ -217,29 +230,32 @@ input, button{
 	.navbar-collapse {
 		border-top: 1px solid $transp_lightGray;
 		clear: both;
+		display: block;
+		overflow: hidden;
 	}
 	.navbar-nav {
-		color: $gray;
 		float: none;
 		margin: 0 -15px;
-		padding-left: 0px;
-	}
-	a {
-		padding: 15px;
-		display: block;
-		&:hover {
-			color: $darkGray;
-			background-color: $transp_lightGray;
+		padding-left: 15px;
+		list-style: none;
+
+		a {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			border-bottom: 1px solid $transp_lightGray;
 		}
 	}
 }
 .navbar-toggle {
 	float: right;
-  padding: 10px;
+  padding: 10px 10px 6px 10px;
   margin: 8px 15px 8px 0px;
   background: transparent;
   border: 1px solid $transp_lightGray;
   border-radius: 4px;
+	@include desktop{
+		display:none;
+	}
 
 	.icon-bar {
 		display: block;
@@ -247,6 +263,7 @@ input, button{
     height: 2px;
     border-radius: 1px;
     background-color: $gray;
+		margin-bottom: 4px;
 	}
 }
 
