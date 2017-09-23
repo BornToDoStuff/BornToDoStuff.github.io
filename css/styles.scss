@@ -49,20 +49,6 @@ body {
 	}
 }
 
-item-name {
-	display: block;
-	font-size: 3.0rem;
-	margin-bottom: 10px;
-	font-family: inherit;
-	font-weight: 500;
-	line-height: $compressed;
-	color: $bluakDark;
-	max-width: 80%;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	text-align: left;
-}
 h1, h2, h3, h4 {
 	color: $bluakDark;
 	line-height: $normal;
@@ -109,6 +95,26 @@ magic-item, .page {
 	min-height: 95vh;
 }
 
+item-name {
+	display: block;
+	font-size: 3.0rem;
+	margin-bottom: 10px;
+	font-family: inherit;
+	font-weight: 500;
+	line-height: $compressed;
+	color: $bluakDark;
+	max-width: 80%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+
+	@include mobile {
+		font-size: 2.5rem;
+		max-width: 100%;
+	}
+}
+
 item-tags{
 	color: $mediumGray;
 
@@ -116,6 +122,10 @@ item-tags{
 		position: absolute;
 		top: 20px;
 		right: 15px;
+
+		@include mobile {
+			display: none;
+		}
 	}
 
 	item-attunement {
