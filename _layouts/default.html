@@ -18,13 +18,11 @@
   <body>
     {% include navigation.html %}
     <a id="TippyTop"></a>
-    <div id="main" role="main" class="col-sm-9 col-md-10">
-      <div class="col-sm-12 col-md-10 col-md-push-1 col-lg-8 col-lg-push-1">
+    <div id="main" role="main">
         {% if page.search %}
           {% include search-form.html %}
         {% endif %}
         {{ content }}
-      </div>
     </div>
     <div>
       <script src="{{ site.baseurl }}/js/scripts.js"></script>

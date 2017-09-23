@@ -5,7 +5,6 @@
 @import "variables";
 @import "scrollbar";
 // @import "custom-bootstrap";
-// @import "navbar-fixed-side";
 // Syntax highlighting @import is at the bottom of this file
 
 html{
@@ -37,60 +36,6 @@ body {
   cursor: default !important;
 }
 
-.pager {
-	padding-left: 0px;
-	list-style: none;
-
-	.next {
-		float: right;
-	}
-	.previous {
-		float: left;
-	}
-	li > a{
-		display:inline-block;
-		background: $backgroundLight;
-		padding: 5px 15px;
-		border: 1px solid #ababab;
-		border-radius: 4px;
-		box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-
-		&:hover {
-
-		}
-	}
-}
-.pagination {
-	display: inline-block;
-	padding-left: 0px;
-	margin-bottom: 20px;
-
-	& > li {
-		display: inline;
-		a {
-			float: left;
-			padding: 6px 12px;
-			background: $backgroundLight;
-			border: 1px solid $mediumGray;
-	    margin-left: -1px;
-		}
-		&:first-child a {
-			margin-left: 0;
-			border-bottom-left-radius: 4px;
-    	border-top-left-radius: 4px;
-		}
-		&:last-child a {
-			margin-right: 0;
-			border-bottom-right-radius: 4px;
-    	border-top-right-radius: 4px;
-		}
-	}
-	.active a {
-		background: #337ab7;
-    border-color: #337ab7;
-		color: $white;
-	}
-}
 
 // *:after {
 // 	font: normal normal normal 1.8rem/1em FontAwesome;
@@ -98,10 +43,12 @@ body {
 
 #main {
 	padding: 20px;
+	max-width: 1000px;
+	margin-left: 200px;
 
 	@include mobile {
-		padding: 0px;
 		margin-top: 75px;
+		margin-left: 0px;
 	}
 }
 
@@ -139,7 +86,6 @@ magic-item, .page {
 	text-align: justify;
 	margin-bottom: 15px;
 	background: $backgroundLight;
-	// border: 1px solid $borderLight;
 	border: 0px;
 	border-bottom: 2px solid $bluakMedium;
 	border-top: 2px solid $bluakMedium;
@@ -207,14 +153,67 @@ item-tags{
 .read-more {
 	font-size: 2.5rem;
 }
-
 .form-control, .btn-default {
 	border: 1px solid $mediumGray;
 }
-
 input, button{
 	font-size: 1.6rem;
 	line-height: $normal;
+}
+
+.pager {
+	padding-left: 0px;
+	list-style: none;
+
+	.next {
+		float: right;
+	}
+	.previous {
+		float: left;
+	}
+	li > a{
+		display:inline-block;
+		background: $backgroundLight;
+		padding: 5px 15px;
+		border: 1px solid #ababab;
+		border-radius: 4px;
+		box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+		&:hover {
+
+		}
+	}
+}
+.pagination {
+	display: inline-block;
+	padding-left: 0px;
+	margin-bottom: 20px;
+
+	& > li {
+		display: inline;
+		a {
+			float: left;
+			padding: 6px 12px;
+			background: $backgroundLight;
+			border: 1px solid $mediumGray;
+	    margin-left: -1px;
+		}
+		&:first-child a {
+			margin-left: 0;
+			border-bottom-left-radius: 4px;
+    	border-top-left-radius: 4px;
+		}
+		&:last-child a {
+			margin-right: 0;
+			border-bottom-right-radius: 4px;
+    	border-top-right-radius: 4px;
+		}
+	}
+	.active a {
+		background: #337ab7;
+    border-color: #337ab7;
+		color: $white;
+	}
 }
 
 .navbar-fixed-side {
@@ -223,12 +222,10 @@ input, button{
 	position: fixed;
 	border-radius: 0;
 	border: 0;
-	margin: 0px -15px;
 
 	@include desktop {
     height: 100vh;
-    width: inherit;
-    overflow: auto;
+    width: 200px;
 		border-right: 2px solid $bluakMedium;
 	}
 	@include mobile {
@@ -257,8 +254,10 @@ input, button{
 		border-top: 1px solid $transp_lightGray;
 		clear: both;
 		overflow: hidden;
+
 		@include desktop {
 			display: block;
+			height: auto !important;
 		}
 	}
 	.navbar-nav {
