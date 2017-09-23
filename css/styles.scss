@@ -32,13 +32,29 @@ body {
 	color: $blue;
 	text-decoration: none;
 }
-.disabled > a {
+.disabled, .disabled > a, {
+	color: $gray;
   cursor: default !important;
 }
-.pager li>a {
-	border: 1px solid #ababab;
-	border-radius: 5px;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+.pager {
+	padding-left: 0px;
+	list-style: none;
+
+	.next {
+		float: right;
+	}
+	.previous {
+		float: left;
+	}
+	li > a{
+		display:inline-block;
+		background: $backgroundLight;
+		padding: 5px 15px;
+		border: 1px solid #ababab;
+		border-radius: 4px;
+		box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+	}
 }
 
 // *:after {
@@ -171,7 +187,14 @@ input, button{
 	background: $backgroundLight;
 
 	@include desktop {
+		position: fixed;
+    margin: 0 -15px;
+    height: 100vh;
+    width: inherit;
+    overflow: auto;
+    border: 0;
 		border-right: 2px solid $bluakMedium;
+		border-radius: 0;
 	}
 	@include mobile {
 		border-bottom: 2px solid $bluakMedium;
@@ -182,7 +205,51 @@ input, button{
 		padding: 0px 15px;
 		z-index: 100;
 	}
+
+	.navbar-header{
+  	float: none;
+	}
+	.navbar-brand{
+		float: left;
+		color: $gray;
+		font-size: 1.8rem;
+	}
+	.navbar-collapse {
+		border-top: 1px solid $transp_lightGray;
+		clear: both;
+	}
+	.navbar-nav {
+		color: $gray;
+		float: none;
+		margin: 0 -15px;
+		padding-left: 0px;
+	}
+	a {
+		padding: 15px;
+		display: block;
+		&:hover {
+			color: $darkGray;
+			background-color: $transp_lightGray;
+		}
+	}
 }
+.navbar-toggle {
+	float: right;
+  padding: 10px;
+  margin: 8px 15px 8px 0px;
+  background: transparent;
+  border: 1px solid $transp_lightGray;
+  border-radius: 4px;
+
+	.icon-bar {
+		display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: $gray;
+	}
+}
+
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
