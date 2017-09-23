@@ -40,6 +40,8 @@ search:  true
       {% for page in (min-page..max-page) %}
           {% if page == paginator.page %}
             <li class="active"><a>{{ page }}</a></li>
+          {% elseif page == 1 %}
+            <li><a href="/">{{ page }}</a></li>
           {% else %}
             <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
           {% endif %}
