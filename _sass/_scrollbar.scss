@@ -23,8 +23,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
+	background-color: #5c5f6d;
 	@include desktop{
-		background-color: #5c5f6d;
 	  border-radius: 10px;
 	}
 }
