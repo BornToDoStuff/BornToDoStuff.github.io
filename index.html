@@ -19,14 +19,14 @@ search:  true
 {% endfor %}
 
 {% if paginator.page - 2 < 1 %}
-  {% assign min-page = 1 %}
+  {% assign min_page = 1 %}
 {% else %}
-  {% assign min-page = paginator.page - 2 %}
+  {% assign min_page = paginator.page - 2 %}
 {% endif %}
 {% if paginator.page + 2 > paginator.total_pages %}
-  {% assign max-page = paginator.total_pages %}
+  {% assign max_page = paginator.total_pages %}
 {% else %}
-  {% assign max-page = paginator.page + 2 %}
+  {% assign max_page = paginator.page + 2 %}
 {% endif %}
 {% if paginator.total_pages > 1 %}
   <nav aria-label="Page navigation" class="text-center">
@@ -37,10 +37,10 @@ search:  true
         <li class="disabled"><a>&laquo; Prev</a></li>
       {% endif %}
 
-      {% for page in (min-page..max-page) %}
+      {% for page in (min_page..max_page) %}
           {% if page == paginator.page %}
             <li class="active"><a>{{ page }}</a></li>
-          {% ifelse page == 1 %}
+          {% elseif page == 1 %}
             <li><a href="/">{{ page }}</a></li>
           {% else %}
             <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
