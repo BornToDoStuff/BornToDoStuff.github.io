@@ -27,8 +27,11 @@ search:  true
         <li class="disabled"><a>&laquo; Prev</a></li>
       {% endif %}
 
-      {% for page in (paginator.page - 2..paginator.page + 2) %}
-        {% if page >= 0 and page <= paginator.total_pages %}
+      {% for page in ((paginator.page - 2)..(paginator.page + 2)) %}
+        {{ forloop.index }}
+        {{ forloop.length }}
+        {{ forloop.rindex }}
+        {% if page > 0 and page <= paginator.total_pages %}
           {% if page == paginator.page %}
             <li class="active"><a>{{ page }}</a></li>
           {% else %}
