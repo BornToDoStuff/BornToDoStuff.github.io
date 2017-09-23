@@ -1,56 +1,29 @@
 ---
-title:
-item_id: 0
-item_type: Armor Potion Ring Rod Scroll Shield Staff Tattoo Wand Weapon Wondrous
+title: Permafrost Plate
+item_id: 5
+item_type: Armor
 item_subtype:
-      - type: Breastplate
-item_rarity: Mediocre Common Uncommon Rare Very Rare Legendary
-item_attunement: false
+  - type: Half Plate
+  - type: Plate
+item_rarity: Very Rare
+item_attunement: true
 item_requirement:
 item_curse: false
 item_classes:
-  - class: Barbarian
-    weight: 1
-  - class: Bard
-  - class: Cleric
-  - class: Druid
   - class: Fighter
-  - class: Monk
+    weight: 2
   - class: Paladin
-  - class: Ranger
-  - class: Rogue
-  - class: Sorcerer
-  - class: Warlock
-  - class: Wizard
-  - class: All
-item_school: Abjuration Conjuration Divination Enchantment Evocation Illusion Necromancy Transmutation Unidentifiable Ancient
+    weight: 1
+item_school: Evocation
 item_role:
-  - role: Attack
-  - role: Auxiliary
   - role: Defense
-  - role: Healing
-  - role: Utility
 item_damage:
-  - type: Acid
-  - type: Bludgeoning
   - type: Cold
-  - type: Fire
-  - type: Force
-  - type: Lightning
-  - type: Necrotic
-  - type: Piercing
-  - type: Poison
-  - type: Psychic
-  - type: Radiant
-  - type: Slashing
-  - type: Thunder
-  - type: Mixed
 item_tags:
-  - tag:
-  - tag:
+  - tag: Ice
 item_idea:
 item_co_creator:
 item_updated:
 ---
 
-content goes here
+This pale armor is frigid to the touch, and even in the warmest weather has a thin layer of frost over it. The wearer must endure wearing the cold plate for an entire hour to attune to it. While wearing this armor you gain +1 to AC, you are resistant to cold damage, and are unaffected by temperatures as low as -50. A chilly draft follows you wherever you go. While you are conscious any creature hostile towards you that ends their turn within a 5-foot radius of you takes 1d10 cold damage.
