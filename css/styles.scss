@@ -63,6 +63,7 @@ body {
 .pagination {
 	display: inline-block;
 	padding-left: 0px;
+	margin-bottom: 20px;
 
 	& > li {
 		display: inline;
@@ -84,8 +85,8 @@ body {
     	border-top-right-radius: 4px;
 		}
 	}
-	.active {
-		background-color: #337ab7;
+	.active a {
+		background: #337ab7;
     border-color: #337ab7;
 		color: $white;
 	}
@@ -222,6 +223,7 @@ input, button{
 	position: fixed;
 	border-radius: 0;
 	border: 0;
+	margin: 0px -15px;
 
 	@include desktop {
     height: 100vh;
