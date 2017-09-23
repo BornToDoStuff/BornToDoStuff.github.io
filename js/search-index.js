@@ -7,7 +7,7 @@
 var search_cache = [
   {% for post in site.posts %} {
       "id" : "{{ forloop.index0 }}",
-      "title" : "{{ post.title | jsonify }}",
+      "title" : {{ post.title | jsonify }},
       "type" : "{{ post.item_type }}",
       "subtypes" : "{% for item in post.item_subtype %}{{ item.type }} {% endfor %}",
       "rarity" : "{{ post.item_rarity }}",
@@ -25,7 +25,7 @@ var search_cache = [
 var item_cache = [
   {% for post in site.posts %} {
       "id" : "{{ post.item_id }}",
-      "title" : "{{ post.title | jsonify }}",
+      "title" : {{ post.title | jsonify }},
       "type" : "{{ post.item_type }}",
       "subtypes" : [ {% for item in post.item_subtype %} {"type" : "{{ item.type }}"}{% unless forloop.last %}, {% endunless %}{% endfor %} ],
       "rarity" : "{{ post.item_rarity }}",

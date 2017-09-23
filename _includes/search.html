@@ -19,9 +19,18 @@
     var searchbox = $('input#search');
     var searchResults = $('#searchResults');
     var template = $('#result-template').html();
-    // Mustache.parse(template);
+    Mustache.parse(template);
 
     $("#search-btn").on("click", function(){
+       search();
+    });
+    $("#search").on('keyup', function (e) {
+        if (e.keyCode == 13) {
+             search();
+        }
+    });
+
+    function search(){
       var query = searchbox.val();
       var results = search_index.search(query);
       searchResults.empty();
@@ -31,7 +40,14 @@
         var result = item_cache[ref];
         loadResult(result);
       }
-    });
+
+      $("<style id='search-style' type='text/css'> magic-item{display:none} #searchResults magic-item{display:block}</style>").appendTo("head")
+    }
+
+    function unsearch(){
+      searchResults.empty();
+      $("#search-style").remove();
+    }
 
     function loadResult(result) {
       searchResults.append(Mustache.render(template, result));

@@ -12,7 +12,7 @@ html{
 	font-size: 62.5%; //sets font-size to 10px (if the browser still has its default font-size)
 }
 body {
-	background: #fbfbfb url("{{ site.baseurl }}/images/tiling-hatching_light.png");
+	background: $backgroundMedium url(/images/tiling-hatching_light.png);
 	background-size: 400px;
 	font-size: 1.6rem;
 	line-height: $normal;
@@ -89,7 +89,8 @@ magic-item {
 	text-align: justify;
 	margin-bottom: 15px;
 	background-color: white;
-	border: 1px solid $borderLight;
+	// border: 1px solid $borderLight;
+	border: 0px;
 	border-bottom: 2px solid $bluakMedium;
 	border-top: 2px solid $bluakMedium;
 	background-color: white;
@@ -121,15 +122,8 @@ item-tags{
 	font-size: 2.5rem;
 }
 
-body {
-	background: #ccc url(/images/tiling-hatching_light.png)
-}
 .form-control, .btn-default {
-	border: 1px solid #ababab;
-}
-magic-item {
-	border-left: 0px;
-    	border-right: 0px;
+	border: 1px solid $mediumGray;
 }
 
 
