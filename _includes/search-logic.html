@@ -49,7 +49,7 @@
       searchResults.html("<magic-item><item-name>There's nothing here</item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
     }
 
-      $("<style id='search-style' type='text/css'> magic-item{display:none} #searchResults magic-item{display:block}</style>").appendTo("head")
+      $("<style id='search-style' type='text/css'> magic-item, .pagination{display:none} #searchResults magic-item{display:block}</style>").appendTo("head")
     }
 
     function unsearch(){

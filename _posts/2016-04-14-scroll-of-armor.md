@@ -1,6 +1,6 @@
 ---
 title: Scroll of Armor
-item_id: 0
+item_id: 8
 item_type: Scroll
 item_rarity: Mediocre
 item_attunement: false
@@ -18,7 +18,7 @@ item_tags:
   - tag: Lightning
 item_idea:
 item_co_creator:
-item_updated: 
+item_updated:
 ---
 
 When unrolled this rough scroll grows in size and thickness until it is a fingers width thick and big enough around to encircle the creature that activated it. It floats in place where it was unrolled as purple glyphs fly from thin air as if magnetized to it. As it becomes saturated with glyphs it flies towards the creature that activated it and attempts to attach itself around their midsection.

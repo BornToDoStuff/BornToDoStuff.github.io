@@ -123,6 +123,12 @@ item-tags{
 		top: 20px;
 		right: 15px;
 
+		:after{
+			content: "";
+			display: none;
+			background: url("{{ site.baseurl }}/images/rarities.svg");
+		}
+
 		@include mobile {
 			display: none;
 		}
