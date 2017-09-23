@@ -1,20 +1,35 @@
 ::-webkit-scrollbar {
-	width: 10px;
+	width: 11px;
+	@include mobile{
+		width: 7px;
+	}
 }
 
 ::-webkit-scrollbar-track {
-	border-radius: 10px;
-	background-color: white;
-	border-left: 1px solid #cccccc;
-	border-top: 1px solid #cccccc;
-	border-bottom: 1px solid #cccccc;
+	background-color: rgba(255, 255, 255, 0.5);
+	@include desktop{
+		border-radius: 10px;
+	  border: 1px solid $mediumGray;
+	}
 }
 
 ::-webkit-scrollbar-button {
-	max-height: 10px;
+	@include desktop{
+		height: 20px;
+	}
+	@include mobile{
+		height:0px;
+	}
 }
 
 ::-webkit-scrollbar-thumb {
-	background-color: rgba(92, 95, 109, 0.9);
-	border-radius: 10px;
+	@include desktop{
+		background-color: #5c5f6d;
+	  border-radius: 10px;
+	}
+}
+::-webkit-scrollbar-button:vertical:decrement{
+	@include mobile{
+		height:53px;
+	}
 }
