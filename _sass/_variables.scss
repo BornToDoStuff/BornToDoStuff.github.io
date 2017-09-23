@@ -1,8 +1,4 @@
 
-//
-// VARIABLES
-//
-
 //line height
 $compressed: 1.1em;
 $normal: 1.45em;
@@ -31,20 +27,6 @@ $backgroundLight: $white url(/images/subtle_grunge_white.png);
 // @import url('https://fonts.googleapis.com/css?family=Roboto');
 $roboto: 'Roboto', Helvetica, sans-serif;
 
-$a-tags: 'a, a:active, a:hover, a:focus, a:visited';
-
-@mixin desktop {
-  @media screen and (min-width: 768px) {
-    @content;
-  }
-}
-@mixin mobile {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
-
-
 /* latin-ext */
 @font-face {
   font-family: 'Roboto';
@@ -60,4 +42,18 @@ $a-tags: 'a, a:active, a:hover, a:focus, a:visited';
   font-weight: 400;
   src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+$a-tags: 'a, a:active, a:hover, a:focus, a:visited';
+
+@mixin desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
 }
