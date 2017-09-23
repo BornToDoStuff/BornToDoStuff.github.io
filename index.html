@@ -27,18 +27,16 @@ search:  true
         <li class="disabled"><a>&laquo; Prev</a></li>
       {% endif %}
 
-      {% for page in ((paginator.page - 2)..paginator.page) %}
+      {% for page in (paginator.page - 2..paginator.page) %}
         {% if page >= 0 %}
           {% if page == paginator.page %}
-            <li class="active"><a>{{ page }} ---</a></li>
-          {% elsif page == 1 %}
-            <li><a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ page }}</a></li>
+            <li class="active"><a>{{ page }}</a></li>
           {% else %}
             <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
           {% endif %}
         {% endif %}
       {% endfor %}
-      {% for page in ((paginator.page + 1)..(paginator.page + 2)) %}
+      {% for page in (paginator.page + 1..paginator.page + 2) %}
         {% if page <= paginator.total_pages %}
             <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
         {% endif %}
