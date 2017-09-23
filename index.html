@@ -11,7 +11,9 @@ search:  true
     </item-tags>
     <item-description>
       {{ post.excerpt }}
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more pull-right">›››</a>
+      {% if post.excerpt != post.content %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more pull-right">›››</a>
+      {% endif %}
     </item-description>
   </magic-item>
 {% endfor %}
