@@ -1,45 +1,10 @@
----
-layout: default
-search:  true
----
-{% for post in paginator.posts %}
-  <magic-item id="{{post.item_id}}">
-    <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
-    <item-tags>
-      <item-rarity>{{ post.item_rarity }}</item-rarity>
-      <item-attunement>{% if post.item_attunement %} requires attunement {{ post.item_requirement }}{% endif %}</item-attunement>
-    </item-tags>
-    <item-description>
-      {{ post.excerpt }}
-      {% if post.excerpt != post.content %}
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more pull-right">›››</a>
-      {% endif %}
-    </item-description>
-  </magic-item>
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="refresh" content="0; url=/">
+    <link rel="canonical" href="/" />
+  </head>
+  <body>
 
-{% if paginator.total_pages > 1 %}
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">&laquo; Prev</a>
-  {% else %}
-    <span>&laquo; Prev</span>
-  {% endif %}
-
-  {% for page in (1..paginator.total_pages) %}
-    {% if page == paginator.page %}
-      <em>{{ page }}</em>
-    {% elsif page == 1 %}
-      <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">{{ page }}</a>
-    {% else %}
-      <a href="{{ site.baseurl }}{{ paginator.next_page_path | replace: ':num', page }}">{{ page }}</a>
-    {% endif %}
-  {% endfor %}
-
-  {% if paginator.next_page %}
-    <a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Next &raquo;</a>
-  {% else %}
-    <span>Next &raquo;</span>
-  {% endif %}
-</div>
-{% endif %}
+  </body>
+</html>

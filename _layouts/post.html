@@ -11,3 +11,18 @@ layout: default
     {{ content }}
   </item-description>
 </magic-item>
+
+<nav aria-label="...">
+  <ul class="pager">
+    {% if page.previous.url %}
+      <li class="previous"><a href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a></li>
+    {% else %}
+      <li class="previous disabled"><a>&laquo; No more older posts</a></li>
+    {% endif %}
+    {% if page.next.url %}
+      <li class="next"><a href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a></li>
+    {% else %}
+      <li class="next disabled"><a>No more older posts &raquo;</a></li>
+    {% endif %}
+  </ul>
+</nav>
