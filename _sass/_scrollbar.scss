@@ -14,9 +14,7 @@
 }
 
 ::-webkit-scrollbar-button {
-	@include desktop{
 		height: 20px;
-	}
 	@include mobile{
 		height:0px;
 	}
@@ -26,10 +24,5 @@
 	background-color: #5c5f6d;
 	@include desktop{
 	  border-radius: 10px;
-	}
-}
-::-webkit-scrollbar-button:vertical:decrement{
-	@include mobile{
-		height:53px;
 	}
 }

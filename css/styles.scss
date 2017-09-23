@@ -15,11 +15,17 @@ body {
 	background: $backgroundMedium url(/images/tiling-hatching_light.png);
 	background-size: 400px;
 	font-size: 1.6rem;
-	line-height: $normal;
 	font-family: $roboto;
 	color: $darkGray;
-	min-width: 100vw;
-  overflow-x: hidden;
+
+	@include desktop {
+		line-height: $normal;
+		min-width: 100vw;
+	  overflow-x: hidden;
+	}
+	@include mobile {
+		line-height: $compressed;
+	}
 }
 
 #{$a-tags} {
@@ -87,8 +93,11 @@ magic-item, .page {
 	transition: max-height 0.5s;
 
 	item-description {
-		display: block;
 		line-height: $normal;
+
+		@include mobile {
+			line-height: $compressed;
+		}
 	}
 }
 .page {
