@@ -1,10 +1,10 @@
 ---
-title:
-item_id: 0
-item_type: Armor Potion Ring Rod Scroll Shield Staff Tattoo Wand Weapon Wondrous
+title: Spear of the Snow
+item_id: 3
+item_type: Weapon
 item_subtype:
-      - type: Breastplate
-item_rarity: Mediocre Common Uncommon Rare Very Rare Legendary
+      - type: Spear
+item_rarity: Rare
 item_attunement: false
 item_requirement:
 item_curse: false
@@ -52,3 +52,5 @@ item_idea:
 item_co_creator:
 item_updated:
 ---
+
+content goes here
