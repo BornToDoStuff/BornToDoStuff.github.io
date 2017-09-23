@@ -1,0 +1,44 @@
+{% if paginator.page - 2 < 1 %}
+  {% assign min_page = 1 %} {% assign first_page = false %}
+{% else %}
+  {% assign min_page = paginator.page - 2 %} {% assign first_page = true %} {% endif %}
+{% if paginator.page + 2 > paginator.total_pages %}
+  {% assign max_page = paginator.total_pages %}  {% assign last_page = false %}
+{% else %}
+  {% assign max_page = paginator.page + 2 %} {% assign last_page = true %} {% endif %}
+
+{% if paginator.total_pages > 1 %}
+  <nav aria-label="Page navigation" class="text-center">
+    <ul class="pagination">
+      {% if paginator.previous_page %}
+        <li><a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">&laquo; Prev</a></li>
+      {% else %}
+        <li class="disabled"><a>&laquo; Prev</a></li>
+      {% endif %}
+      {% if first_page %}
+        <li><a href="/">1</a></li>
+        <li class="disabled"><a>...</a></li>
+      {% endif %}
+      {% for page in (min_page..max_page) %}
+          {% if page == paginator.page %}
+            <li class="active"><a>{{ page }}</a></li>
+          {% else %}
+            {% if page == 1 %}
+              <li><a href="/">{{ page }}</a></li>
+            {% else %}
+              <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
+            {% endif %}
+          {% endif %}
+      {% endfor %}
+      {% if last_page %}
+        <li class="disabled"><a>...</a></li>
+        <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a></li>
+      {% endif %}
+      {% if paginator.next_page %}
+        <li><a href="{{ site.baseurl }}{{ paginator.next_page_path }}">Next &raquo;</a></li>
+      {% else %}
+        <li class="disabled"><a>Next &raquo;</a></li>
+      {% endif %}
+    </ul>
+  </nav>
+{% endif %}
