@@ -3,7 +3,7 @@ name: BornToBrewStuff
 # Short bio or description
 description: Homebrewed magic items by BornToDoStuff
 
-paginate: 1
+paginate: 10
 paginate_path: "/page/:num/"
 
 # Enter your Disqus shortname (not your username) to enable commenting on posts

@@ -15,7 +15,7 @@
         {% if page == paginator.page %} <li class="active"><a>{{ page }}</a></li>
         {% else %}
           {% if page == 1 %} <li><a href="/">1</a></li>
-            {% else %} <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li> {% endif %}
+          {% else %} <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li> {% endif %}
         {% endif %}
       {% endfor %}
       {% if last_page %} <li class="disabled"><a>...</a></li> <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a></li> {% endif %}
