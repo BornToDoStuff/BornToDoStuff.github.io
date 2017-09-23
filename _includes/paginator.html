@@ -1,12 +1,13 @@
 <div id="paginator results">
-  {% if paginator.page - 2 <= 1 %}
+
+  {% assign min_page = paginator.page - 2 %} {% assign first_page = true %}
+  {% if min_page <= 1 %}
     {% assign min_page = 1 %} {% assign first_page = false %}
-  {% else %}
-    {% assign min_page = paginator.page - 2 %} {% assign first_page = true %} {% endif %}
-  {% if paginator.page + 2 >= paginator.total_pages %}
+  {% endif %}
+  {% assign max_page = paginator.page + 2 %} {% assign last_page = true %}
+  {% if max_page >= paginator.total_pages %}
     {% assign max_page = paginator.total_pages %}  {% assign last_page = false %}
-  {% else %}
-    {% assign max_page = paginator.page + 2 %} {% assign last_page = true %} {% endif %}
+  {% endif %}
 
     {{min_page}} < {{max_page}}
     {{first_page}} | {{last_page}}
