@@ -18,13 +18,16 @@ search:  true
   </magic-item>
 {% endfor %}
 
-{% for page in (paginator.page - 2..paginator.page) %}
-  {{ forloop.index }}
-{% endfor %}
-<{{ paginator.page }}>
-{% for page in (paginator.page + 1..paginator.page + 3) %}
-  {{ forloop.index }}
-{% endfor %}
+{% if paginator.page - 2 < 1 %}
+  {% assign min-page = 1 %}
+{% else %}
+  {% assign min-page = paginator.page - 2 %}
+{% endif %}
+{% if paginator.page + 2 > paginator.total_pages %}
+  {% assign max-page = paginator.total_pages %}
+{% else %}
+  {% assign max-page = paginator.page + 2 %}
+{% endif %}
 {% if paginator.total_pages > 1 %}
   <nav aria-label="Page navigation" class="text-center">
     <ul class="pagination">
@@ -34,14 +37,12 @@ search:  true
         <li class="disabled"><a>&laquo; Prev</a></li>
       {% endif %}
 
-      {% for page in (paginator.page - 2..paginator.page + 2) %}
-        {% if page > 0 and page <= paginator.total_pages %}
+      {% for page in (min-page..max-page) %}
           {% if page == paginator.page %}
             <li class="active"><a>{{ page }}</a></li>
           {% else %}
             <li><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', page }}">{{ page }}</a></li>
           {% endif %}
-        {% endif %}
       {% endfor %}
 
       {% if paginator.next_page %}
