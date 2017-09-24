@@ -33,8 +33,10 @@ body {
 #{$a-tags} {
 	color: $blue;
 	text-decoration: none;
-	transition-delay: 0.5s;
+	transition-delay: 0.05s;
 }
+.active:hover, .disabled:hover { background: 0; }
+
 .disabled, .disabled > a, {
 	color: $gray;
   cursor: default !important;
@@ -193,7 +195,6 @@ input, button{
 	margin-bottom: 20px;
 	margin-top: 10px;
 
-	.active:hover, .disabled:hover { background: 0; }
 	.active {
 		background: $blue;
     border-color: $blue;
