@@ -35,7 +35,7 @@ body {
 	text-decoration: none;
 	transition-delay: 0.05s;
 }
-.active:hover, .disabled:hover { background: 0; }
+.active:hover a, .disabled:hover a { background: 0 !important; }
 
 .disabled, .disabled > a, {
 	color: $gray;
