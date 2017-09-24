@@ -48,13 +48,39 @@ $roboto: 'Roboto', Helvetica, sans-serif;
 
 $a-tags: 'a, a:active, a:hover, a:focus, a:visited';
 
+$col-xsmall: 480px;
+$col-small: 768px;
+$col-med: 992px;
+$col-lg: 1200px;
+
 @mixin desktop {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $col-small) {
     @content;
   }
 }
 @mixin mobile {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $col-small - 1) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media screen and (max-width: $col-small - 1){
+    @content;
+  }
+}
+@mixin medium {
+  @media screen and (min-width: $col-small) and (max-width: $col-med - 1) {
+    @content;
+  }
+}
+@mixin large {
+  @media screen and (min-width: $col-med) and (max-width: $col-lg - 1) {
+    @content;
+  }
+}
+@mixin xlarge {
+  @media screen and (min-width: $col-lg) {
     @content;
   }
 }

@@ -44,12 +44,22 @@ body {
 
 #main {
 	padding: 20px;
-	max-width: 1000px;
-	margin-left: 200px;
+	max-width: 900px;
 
-	@include mobile {
+	@include small {
 		margin-top: 75px;
 		margin-left: 0px;
+	}
+	@include medium {
+		margin-left: 200px;
+	}
+	@include large {
+		margin-left: 25%;
+    margin-right: 5%;
+	}
+	@include xlarge {
+		margin-left: 300px;
+		margin-right: 5%;
 	}
 }
 
@@ -241,7 +251,6 @@ input, button{
 		top: 0;
 		left: 0;
 		right: 0;
-		padding: 0px 15px;
 		z-index: 100;
 	}
 }
