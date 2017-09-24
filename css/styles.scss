@@ -26,6 +26,10 @@ body {
 	}
 }
 
+::selection {
+    background: rgba(97, 130, 179, 0.25);
+}
+
 #{$a-tags} {
 	color: $blue;
 	text-decoration: none;
