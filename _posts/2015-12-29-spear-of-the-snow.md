@@ -10,9 +10,7 @@ item_requirement:
 item_curse: false
 item_classes:
   - class: Fighter
-    weight: 2
   - class: Sorcerer
-    weight: 1
 item_school: Conjuration
 item_role:
   - role: Attack

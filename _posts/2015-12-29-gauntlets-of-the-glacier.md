@@ -8,9 +8,7 @@ item_requirement:
 item_curse: false
 item_classes:
   - class: Barbarian
-    weight: 2
   - class: Fighter
-    weight: 1
 item_school: Evocation
 item_role:
   - role: Attack

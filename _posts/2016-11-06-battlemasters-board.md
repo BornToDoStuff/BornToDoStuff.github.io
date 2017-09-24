@@ -7,10 +7,8 @@ item_attunement: true
 item_requirement:
 item_curse: false
 item_classes:
-  - class: Cleric
-    weight: 1
   - class: Wizard
-    weight: 2
+  - class: Cleric
 item_school: Necromancy
 item_role:
   - role: Attack

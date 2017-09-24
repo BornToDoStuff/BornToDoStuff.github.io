@@ -10,7 +10,6 @@ item_requirement:
 item_curse: false
 item_classes:
   - class: Barbarian
-    weight: 1
   - class: Bard
   - class: Cleric
   - class: Druid

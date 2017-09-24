@@ -8,7 +8,6 @@ item_requirement:
 item_curse: false
 item_classes:
   - class: All
-    weight: 1
 item_school: Abjuration
 item_role:
   - role: Defense

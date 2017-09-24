@@ -9,9 +9,7 @@ item_requirement:
 item_curse: false
 item_classes:
   - class: Fighter
-    weight: 2
   - class: Paladin
-    weight: 1
 item_school: Evocation
 item_role:
   - role: Defense

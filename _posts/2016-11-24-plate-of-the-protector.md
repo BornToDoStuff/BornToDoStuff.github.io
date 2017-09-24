@@ -12,9 +12,7 @@ item_requirement: by a Cleric or Paladin
 item_curse: false
 item_classes:
   - class: Cleric
-    weight: 2
   - class: Paladin
-    weight: 1
 item_school: Abjuration
 item_role:
   - role: Utility

@@ -9,12 +9,9 @@ item_attunement: false
 item_requirement:
 item_curse: false
 item_classes:
-  - class: Bard
-    weight: 1
   - class: Rogue
-    weight: 3
   - class: Sorcerer
-    weight: 2
+  - class: Bard
 item_school: Conjuration
 item_role:
   - role: Attack

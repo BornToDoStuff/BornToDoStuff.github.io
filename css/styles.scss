@@ -178,7 +178,7 @@ input, button{
 		display:inline-block;
 		background: $backgroundLight;
 		padding: 5px 15px;
-		border: 1px solid #ababab;
+		border: 1px solid $mediumGray;
 		border-radius: 4px;
 		box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 
@@ -191,12 +191,13 @@ input, button{
 	display: inline-block;
 	padding-left: 0px;
 	margin-bottom: 20px;
+	margin-top: 10px;
 
 	& > li {
 		display: inline;
 		a {
 			float: left;
-			padding: 6px 12px;
+			padding: 8px 12px;
 			background: $backgroundLight;
 			border: 1px solid $mediumGray;
 	    margin-left: -1px;
@@ -213,8 +214,8 @@ input, button{
 		}
 	}
 	.active a {
-		background: #337ab7;
-    border-color: #337ab7;
+		background: $blue;
+    border-color: $blue;
 		color: $white;
 	}
 }
