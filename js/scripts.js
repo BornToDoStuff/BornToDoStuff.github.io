@@ -1,13 +1,13 @@
 ---
 ---
 /* ==================== */
-/* JQuery-3.1.1.min.js */
+/* JQuery-3.1.1.slim.min.js */
 /* ==================== */
-{% include /js/jquery-3.1.1.min.js %}
+{% include /js/jquery-3.1.1.slim.min.js %}
 /* ==================== */
-/* bootstrap.min.js */
+/* custom-bootstrap.min.js */
 /* ==================== */
-{% include /js/bootstrap.min.js %}
+{% include /js/custom-bootstrap.min.js %}
 /* ==================== */
 /* lunr.min.js */
 /* ==================== */
