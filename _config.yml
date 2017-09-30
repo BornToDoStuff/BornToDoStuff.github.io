@@ -36,15 +36,6 @@ defaults:
       permalink: /item/:title/
       title: New Magic Item
       item_rejected: false
-  -
-    scope:
-      path: ""
-      type: posts
-    values:
-      layout: "post"
-      permalink: /item/:title/
-      title: "New Magic Item"
-      item_rejected: false
 
 #
 # !! You don't need to change any of the configuration flags below !!
