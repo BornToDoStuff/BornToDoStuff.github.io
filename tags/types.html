@@ -4,7 +4,7 @@ title: Types
 ---
 {% assign rawtags = "" %}
 {% for post in site.posts %}
-	{% assign tags = post.item_types | join:'|' | append:'|' %}
+	{% assign tags = post.item_types | append:'|' %}
 	{% assign rawtags = rawtags | append:tags %}
 {% endfor %}
 {% assign rawtags = rawtags | split:'|' | sort %}
