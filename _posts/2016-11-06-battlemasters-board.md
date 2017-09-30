@@ -7,9 +7,9 @@ item_rarity: Legendary
 item_attunement: true
 item_requirement:
 item_curse: false
-item_classes: Wizard Cleric
+item_classes: Wizard, Cleric
 item_school: Necromancy
-item_role: Attack Utility
+item_role: Attack, Utility
 item_damage:
 item_tags: Control
 item_idea:

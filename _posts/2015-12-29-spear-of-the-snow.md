@@ -7,7 +7,7 @@ item_rarity: Rare
 item_attunement: false
 item_requirement:
 item_curse: false
-item_classes: Fighter Sorcerer
+item_classes: Fighter, Sorcerer
 item_school: Conjuration
 item_role: Attack
 item_damage: Cold

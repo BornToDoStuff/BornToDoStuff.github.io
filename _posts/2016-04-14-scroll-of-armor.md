@@ -11,7 +11,7 @@ item_classes: All
 item_school: Abjuration
 item_role: Defense
 item_damage:
-item_tags: Scroll Lightning
+item_tags: Scroll, Lightning
 item_idea:
 item_co_creator:
 item_updated:

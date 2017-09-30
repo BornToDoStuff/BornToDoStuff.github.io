@@ -7,7 +7,7 @@ item_rarity: Uncommon
 item_attunement: false
 item_requirement:
 item_curse: false
-item_classes: Rogue Sorcerer Bard
+item_classes: Rogue, Sorcerer, Bard
 item_school: Conjuration
 item_role: Attack
 item_damage: Cold

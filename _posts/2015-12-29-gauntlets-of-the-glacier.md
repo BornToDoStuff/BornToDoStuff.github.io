@@ -7,9 +7,9 @@ item_rarity: Rare
 item_attunement: true
 item_requirement:
 item_curse: false
-item_classes: Barbarian Fighter
+item_classes: Barbarian, Fighter
 item_school: Evocation
-item_role: Attack Auxiliary
+item_role: Attack, Auxiliary
 item_damage: Cold
 item_tags: Ice
 item_idea:

@@ -7,7 +7,7 @@ item_rarity: Mediocre
 item_attunement: true
 item_requirement:
 item_curse: false
-item_classes: Fighter Paladin
+item_classes: Fighter, Paladin
 item_school: Evocation
 item_role: Defense
 item_damage: Cold
