@@ -22,11 +22,24 @@ url: http://items.borntodostuff.com
 # then add in the baseurl here, like this: "/repository-name"
 baseurl: ""
 
+collections:
+  type:
+    output: true
+
 defaults:
   -
     scope:
       path: "" # an empty string here means all files in the project
-      type: "posts"
+      type: posts
+    values:
+      layout: post
+      permalink: /item/:title/
+      title: New Magic Item
+      item_rejected: false
+  -
+    scope:
+      path: ""
+      type: posts
     values:
       layout: "post"
       permalink: /item/:title/
