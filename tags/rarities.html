@@ -3,7 +3,7 @@ layout: page
 title: Rarities
 ---
 {% assign tags = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split:', ' %}
-<h1>Tags</h1>
+<h1>Rarities</h1>
 <div id="tags-wrapper">
 	<ul id="tags">
 		{% for tag in tags %}<li class="tag"><a href="#{{ tag | slugify }}">{{ tag }}</a></li>{% endfor %}
@@ -13,7 +13,7 @@ title: Rarities
 {% for tag in tags %}
 	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
 	<ul>
-    {% for post in site.posts | sort: 'title' %}
+    {% for post in site.posts | sort 'title' %}
       {%- if post.item_rarity contains tag -%}
         <li>
 					<a href="{{ post.url }}">

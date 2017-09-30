@@ -1,17 +1,25 @@
 ---
 title: Plate of the Protector
 item_id: 59
-item_type: Armor
-item_subtypes: Breastplate, Half Plate, Plate
+category: Armor
+item_subtypes:
+  - Breastplate
+  - Half Plate
+  - Plate
 item_rarity: Rare
 item_attunement: true
 item_requirement: by a Cleric or Paladin
 item_curse: false
-item_classes: Cleric, Paladin
+item_classes:
+  - Cleric
+  - Paladin
 item_school: Abjuration
-item_role: Utility, Auxiliary
+item_role:
+  - Utility
+  - Auxiliary
 item_damage:
-item_tags: Divine
+tags:
+  - Divine
 item_idea:
 item_co_creator:
 item_updated:

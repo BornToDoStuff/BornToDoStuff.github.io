@@ -2,38 +2,28 @@
 layout: page
 title: Types
 ---
-{%- assign rawtags = "" -%}
-{% for post in site.posts %}
-	{%- assign tags = post.item_type | split:', ' | join:'|' | append:'|' -%}
-	{%- assign rawtags = rawtags | append:tags -%}
+{% assign cat_names = "" | split: "|"  %}
+{% for posts_by_cat in site.categories %}
+  {%- assign cat_names = cat_names | push: posts_by_cat.first -%}
 {% endfor %}
-{%- assign rawtags = rawtags | split:'|' | sort -%}
-{%- assign tags = "" -%}
-{% for tag in rawtags %}
-	{%- if tag != "" -%}
-		{% if tags == "" %}{% assign tags = tag | split:'|' %}{% endif %}
-		{% unless tags contains tag %}{% assign tags = tags | join:'|' | append:'|' | append:tag | split:'|' %}{% endunless %}
-	{%- endif -%}
-{% endfor %}
-<h1>Tags</h1>
+{% assign cat_names = cat_names | sort %}
+<h1>Types</h1>
 <div id="tags-wrapper">
 	<ul id="tags">
-		{% for tag in tags %}<li class="tag"><a href="#{{ tag | slugify }}">{{ tag }}</a></li>{% endfor %}
+		{% for cat in cat_names %}<li class="tag"><a href="#{{ cat | slugify }}">{{ cat }}</a></li>{% endfor %}
 	</ul>
 </div>
 <div id="tags-list">
-{% for tag in tags %}
-	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+{% for cat in cat_names %}
+	<h2 id="{{ cat | slugify }}">{{ cat }}</h2>
 	<ul>
-		{% for post in site.posts | sort: 'title' %}
-      {%- if post.item_type contains tag -%}
+		{% for post in site.categories[cat] | sort: 'title' %}
         <li>
 					<a href="{{ post.url }}">
 						<h4>{{ post.title }}</h4>
 						<p>{{ post.item_type }}, {{ post.item_rarity }} {% if post.item_attunement -%} (requires attunement {{ post.item_requirement }}){%- endif %}</p>
 					</a>
 				</li>
-      {%- endif -%}
     {% endfor %}
 	</ul>
 {% endfor %}

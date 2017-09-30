@@ -29,7 +29,7 @@
           //if a link starts with "#" make it animate to that position and prevent adding it to the url
           $('a[href^="#"]').on('click', function (e) {
               e.preventDefault();
-              if (this.hash != "#"){ //watch for "empty hashes"
+              if (this.hash != ""){ //watch for empty hashes
                 var $target = $(this.hash);
 
                 $('html, body').stop().animate({

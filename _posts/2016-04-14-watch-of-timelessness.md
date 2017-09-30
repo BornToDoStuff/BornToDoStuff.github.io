@@ -1,17 +1,20 @@
 ---
 title: Watch of Timelessness
 item_id: 9
-item_type: Wondrous
+category: Wondrous
 item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:
 item_curse: false
-item_classes: All
+item_classes:
+  - All
 item_school: Enchantment
-item_role: Auxiliary
+item_role:
+  - Auxiliary
 item_damage:
-item_tags: Movement
+tags:
+  - Movement
 item_idea:
 item_co_creator:
 item_updated:

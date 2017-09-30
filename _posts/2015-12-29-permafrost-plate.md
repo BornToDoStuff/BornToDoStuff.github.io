@@ -1,17 +1,24 @@
 ---
 title: Permafrost Plate
 item_id: 5
-item_type: Armor
-item_subtypes: Half Plate, Plate
+category: Armor
+item_subtypes:
+  - Half Plate
+  - Plate
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:
 item_curse: false
-item_classes: Fighter, Paladin
+item_classes:
+  - Fighter
+  - Paladin
 item_school: Evocation
-item_role: Defense
-item_damage: Cold
-item_tags: Ice
+item_role:
+  - Defense
+item_damage:
+  - Cold
+tags:
+  - Ice
 item_idea:
 item_co_creator:
 item_updated:

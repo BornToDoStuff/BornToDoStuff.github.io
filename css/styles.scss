@@ -346,6 +346,7 @@ input, button{
 		}
 		.collapse a:before, .collapsing a:before {
 			content: "-";
+			font-weight: bold;
 			padding-right: 10px;
 		}
 	}

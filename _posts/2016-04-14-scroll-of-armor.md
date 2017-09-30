@@ -1,17 +1,21 @@
 ---
 title: Scroll of Armor
 item_id: 8
-item_type: Scroll
+category: Scroll
 item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:
 item_curse: false
-item_classes: All
+item_classes:
+  - All
 item_school: Abjuration
-item_role: Defense
+item_role:
+  - Defense
 item_damage:
-item_tags: Scroll, Lightning
+tags:
+  - Scroll
+  - Lightning
 item_idea:
 item_co_creator:
 item_updated:
