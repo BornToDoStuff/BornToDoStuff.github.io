@@ -180,18 +180,19 @@ input, button{
 	ul { list-style-type: none; }
 }
 #tags {
-	padding: 10px 10px 20px 10px;
+	padding: 10px;
   border-bottom: 1px solid $transp_lightGray;
 
 	.tag {
-		display: inline;
+		display: inline-block;
 
 		a {
-			display: inline;
+			display: block;
 			padding: 3px 6px;
-			border: 1px solid $mediumGray;
+			border: 1px solid #ababab;
 			border-radius: 4px;
 			margin-right: 5px;
+			margin-bottom: 5px;
 
 			&:hover {
 				background: rgba(0,0,0,0.1);
