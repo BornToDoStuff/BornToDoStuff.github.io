@@ -21,3 +21,20 @@ title: Types
 		{% endunless %}
 	{% endif %}
 {% endfor %}
+
+{% for type in item_types %}
+	<a href="#{{ type | slugify }}"> {{ type }} </a>
+{% endfor %}
+
+{% for type in item_types %}
+	<h2 id="{{ type | slugify }}">{{ type }}</h2>
+	<ul>
+	 {% for post in site.posts %}
+		 {% if post.item_type contains type %}
+		 <li>
+		   <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+		 </li>
+		 {% endif %}
+	 {% endfor %}
+	</ul>
+{% endfor %}
