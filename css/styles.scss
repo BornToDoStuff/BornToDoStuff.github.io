@@ -173,6 +173,38 @@ input, button{
 .pull-right { float: right; }
 .pull-left { float: left;  }
 
+
+#tags-wrapper {
+	margin-bottom: 20px;
+
+	ul { list-style-type: none; }
+}
+#tags {
+	padding: 0px 10px 20px 10px;
+  border-bottom: 1px solid $transp_lightGray;
+
+	.tag {
+		display: inline;
+
+		a {
+			display: inline;
+			padding: 3px 6px;
+			border: 1px solid $mediumGray;
+			border-radius: 4px;
+			margin-right: 5px;
+
+			&:hover {
+				background: rgba(0,0,0,0.1);
+			}
+		}
+	}
+}
+#tags-list li {
+	margin-bottom: 5px;
+    padding: 5px 0px;
+    border-bottom: 1px solid $transp_lightGray;
+}
+
 .pager {
 	padding-left: 0px;
 	list-style: none;

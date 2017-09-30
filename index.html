@@ -7,11 +7,13 @@ search:  true
     <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
     <item-tags>
       <item-rarity>{{ post.item_rarity }}</item-rarity>
-      <item-attunement>{% if post.item_attunement %} requires attunement {{ post.item_requirement }}{% endif %}</item-attunement>
+      <item-attunement>{% if post.item_attunement -%} requires attunement {{ post.item_requirement }}{%- endif %}</item-attunement>
     </item-tags>
     <item-description>
       {{ post.excerpt }}
-      {% if post.excerpt != post.content %} <a href="{{ site.baseurl }}{{ post.url }}" class="read-more pull-right">&rsaquo;&rsaquo;&rsaquo;</a> {% endif %}
+      {%- if post.excerpt != post.content -%}
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more pull-right">&rsaquo;&rsaquo;&rsaquo;</a>
+      {%- endif -%}
     </item-description>
   </magic-item>
 {% endfor %}
