@@ -2,23 +2,16 @@
 title: Frozen Fang
 item_id: 2
 item_type: Weapon
-item_subtype:
-      - type: Dagger
+item_subtypes: Dagger
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:
 item_curse: false
-item_classes:
-  - class: Rogue
-  - class: Sorcerer
-  - class: Bard
+item_classes: Rogue Sorcerer Bard
 item_school: Conjuration
-item_role:
-  - role: Attack
-item_damage:
-  - type: Cold
-item_tags:
-  - tag: Ice
+item_role: Attack
+item_damage: Cold
+item_tags: Ice
 item_idea:
 item_co_creator:
 item_updated:

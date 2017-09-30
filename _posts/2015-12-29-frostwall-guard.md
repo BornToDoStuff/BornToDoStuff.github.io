@@ -2,21 +2,16 @@
 title: Frostwall Guard
 item_id: 4
 item_type: Shield
-item_subtype:
+item_subtypes:
 item_rarity: Mediocre
 item_attunement: true
 item_requirement:
 item_curse: false
-item_classes:
-  - class: Fighter
-  - class: Paladin
+item_classes: Fighter Paladin
 item_school: Evocation
-item_role:
-  - role: Defense
-item_damage:
-  - type: Cold
-item_tags:
-  - tag: Ice
+item_role: Defense
+item_damage: Cold
+item_tags: Ice
 item_idea:
 item_co_creator:
 item_updated:

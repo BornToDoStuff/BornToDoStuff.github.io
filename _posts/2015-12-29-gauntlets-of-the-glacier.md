@@ -2,21 +2,16 @@
 title: Gauntlets of the Glacier
 item_id: 1
 item_type: Wondrous
+item_subtypes:
 item_rarity: Rare
 item_attunement: true
 item_requirement:
 item_curse: false
-item_classes:
-  - class: Barbarian
-  - class: Fighter
+item_classes: Barbarian Fighter
 item_school: Evocation
-item_role:
-  - role: Attack
-  - role: Auxiliary
-item_damage:
-  - type: Cold
-item_tags:
-  - tag: Ice
+item_role: Attack Auxiliary
+item_damage: Cold
+item_tags: Ice
 item_idea:
 item_co_creator:
 item_updated:

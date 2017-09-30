@@ -2,16 +2,14 @@
 title: Scroll of Spawn Light
 item_id: 7
 item_type: Scroll
-item_subtype:
+item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:
 item_curse: false
-item_classes:
-  - class: All
+item_classes: All
 item_school: Transmutation
-item_role:
-  - role: Utility
+item_role: Utility
 item_damage:
 item_tags:
 item_idea:

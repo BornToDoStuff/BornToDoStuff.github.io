@@ -2,22 +2,16 @@
 title: Spear of the Snow
 item_id: 3
 item_type: Weapon
-item_subtype:
-      - type: Spear
+item_subtypes: Spear
 item_rarity: Rare
 item_attunement: false
 item_requirement:
 item_curse: false
-item_classes:
-  - class: Fighter
-  - class: Sorcerer
+item_classes: Fighter Sorcerer
 item_school: Conjuration
-item_role:
-  - role: Attack
-item_damage:
-  - type: Cold
-item_tags:
-  - tag: Ice
+item_role: Attack
+item_damage: Cold
+item_tags: Ice
 item_idea:
 item_co_creator:
 item_updated:
