@@ -296,6 +296,17 @@ input, button{
 			}
 		}
 	}
+	.navbar-fixed-side {
+		.bottom {
+			@include desktop{
+				display: inline-block;
+		    width: 100%;
+		    position: absolute;
+		    bottom: 15px;
+		    border-top: 1px solid gray;
+			}
+		}
+	}
 
 .navbar-toggle {
 	float: right;
