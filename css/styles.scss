@@ -320,6 +320,7 @@ input, button{
 	}
 	.navbar-fixed-side .navbar-nav {
 		float: none;
+		padding: 0px;
 		// margin: 0;
 		// margin-left: -15px;
 		// padding-left: 15px;
@@ -342,6 +343,10 @@ input, button{
 		}
 		.collapse a, .collapsing a {
 			padding-left: 20px;
+		}
+		.collapse a:before, .collapsing a:before {
+			content: "-";
+			padding-right: 10px;
 		}
 	}
 	 .navbar-nav .collapse.in {
