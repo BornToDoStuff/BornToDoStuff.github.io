@@ -180,7 +180,7 @@ input, button{
 	ul { list-style-type: none; }
 }
 #tags {
-	padding: 0px 10px 20px 10px;
+	padding: 10px 10px 20px 10px;
   border-bottom: 1px solid $transp_lightGray;
 
 	.tag {
@@ -199,10 +199,17 @@ input, button{
 		}
 	}
 }
-#tags-list li {
-	margin-bottom: 5px;
-    padding: 5px 0px;
-    border-bottom: 1px solid $transp_lightGray;
+
+#tags-list {
+	ul {
+		list-style-type: none;
+		padding-left: 0px;
+	}
+	li{
+		margin-bottom: 5px;
+	  padding: 5px 0px;
+	  border-bottom: 1px solid $transp_lightGray;
+	}
 }
 
 .pager {
