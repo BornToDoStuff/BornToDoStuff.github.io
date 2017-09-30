@@ -10,12 +10,12 @@ title: Types
 <h1>Types</h1>
 <div id="tags-wrapper">
 	<ul id="tags">
-		{% for cat in cat_names %}<li class="tag"><a href="#{{ cat | slugify }}">{{ cat }}</a></li>{% endfor %}
+		{% for cat in cat_names %}<li class="tag"><a href="#{{ cat | slugify }}">{{ cat }} ({{ site.categories[cat].size }})</a></li>{% endfor %}
 	</ul>
 </div>
 <div id="tags-list">
 {% for cat in cat_names %}
-	<h2 id="{{ cat | slugify }}">{{ cat }}</h2>
+	<h2 id="{{ cat | slugify }}">{{ cat }} ({{ site.categories[cat].size }})</h2>
 	<ul>
 		{% for post in site.categories[cat] | sort: 'title' %}
         <li>

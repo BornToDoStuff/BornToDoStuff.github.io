@@ -3,25 +3,25 @@ layout: page
 title: Rarities
 ---
 {% assign tags = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split:', ' %}
+{% assign rarities = site.posts | group_by: 'item_rarity' %}
 <h1>Rarities</h1>
 <div id="tags-wrapper">
 	<ul id="tags">
-		{% for tag in tags %}<li class="tag"><a href="#{{ tag | slugify }}">{{ tag }}</a></li>{% endfor %}
+		{% for rarity in rarities %}<li class="tag"><a href="#{{ rarity.name | slugify }}">{{ rarity.name }} ({{rarity.items.size}})</a></li>{% endfor %}
 	</ul>
 </div>
 <div id="tags-list">
-{% for tag in tags %}
-	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+{% for rarity in rarities %}
+	<h2 id="{{ rarity.name | slugify }}">{{ rarity.name }} ({{rarity.items.size}})</h2>
 	<ul>
-    {% for post in site.posts | sort 'title' %}
-      {%- if post.item_rarity contains tag -%}
+    {%- assign items = rarity.items | sort 'title' -%}
+    {% for post in items %}
         <li>
 					<a href="{{ post.url }}">
 						<h4>{{ post.title }}</h4>
 						<p>{{ post.category }}, {{ post.item_rarity }} {% if post.item_attunement -%} (requires attunement {{ post.item_requirement }}){%- endif %}</p>
 					</a>
 				</li>
-      {%- endif -%}
     {% endfor %}
 	</ul>
 {% endfor %}

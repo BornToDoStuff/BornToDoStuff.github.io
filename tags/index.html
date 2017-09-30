@@ -11,12 +11,12 @@ title: Tags
 <h1>Tags</h1>
 <div id="tags-wrapper">
 	<ul id="tags">
-		{% for tag in tag_names %}<li class="tag"><a href="#{{ tag | slugify }}">{{ tag }}</a></li>{% endfor %}
+		{% for tag in tag_names %}<li class="tag"><a href="#{{ tag | slugify }}">{{ tag }} ({{ site.tags[tag].size }})</a></li>{% endfor %}
 	</ul>
 </div>
 <div id="tags-list">
 {% for tag in tag_names %}
-	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+	<h2 id="{{ tag | slugify }}">{{ tag }} ({{ site.tags[tag].size }})</h2>
 	<ul>
     {% for post in site.tags[tag] | sort: 'title' %}
       <li>
