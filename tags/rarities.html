@@ -1,0 +1,30 @@
+---
+layout: page
+title: Rarities
+---
+{% assign rawtags = "" %}
+{% for post in site.posts %}
+	{% assign item_rarities = post.item_rarity | join:'|' | append:'|' %}
+	{% assign rawtags = rawtags | append:item_rarities %}
+{% endfor %}
+{% assign rawtags = rawtags | split:'|' | sort %}
+{% assign item_rarities = "" %}
+{% for rarity in rawtags %}
+	{% if rarity != "" %}
+		{% if item_rarities == "" %}{% assign item_rarities = rarity | split:'|' %}{% endif %}
+		{% unless item_rarities contains rarity %}{% assign item_rarities = item_rarities | join:'|' | append:'|' | append:type | split:'|' %}{% endunless %}
+	{% endif %}
+{% endfor %}
+<div id="tags_wrapper">
+	<ul id="tags">
+		{% for rarity in item_rarities %}<li class="tag"><a href="#{{ rarity | slugify }}"> {{ rarity }} </a></li>{% endfor %}
+	</ul>
+</div>
+{% for rarity in item_rarities %}
+	<h2 id="{{ type | slugify }}">{{ rarity }}</h2>
+	<ul>
+	 {% for post in site.posts %}
+		 {% if post.item_rarity contains rarity %}<li><a href="{{ post.url }}">{{ post.title }}</a></li>{% endif %}
+	 {% endfor %}
+	</ul>
+{% endfor %}
