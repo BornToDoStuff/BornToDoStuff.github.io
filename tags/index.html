@@ -8,7 +8,7 @@ title: Tags
 {% endfor %}
 {% assign tag_names = tag_names | sort %}
 
-<h1>Tags</h1>
+<h1>{{ page.title }}</h1>
 <div id="tags-wrapper">
 	<ul id="tags">
 		{% for tag in tag_names %}<li class="tag"><a href="#{{ tag | slugify }}">{{ tag }} ({{ site.tags[tag].size }})</a></li>{% endfor %}
@@ -16,7 +16,7 @@ title: Tags
 </div>
 <div id="tags-list">
 {% for tag in tag_names %}
-	<h2 id="{{ tag | slugify }}">{{ tag }} ({{ site.tags[tag].size }})</h2>
+	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
 	<ul>
     {% for post in site.tags[tag] | sort: 'title' %}
       <li>
