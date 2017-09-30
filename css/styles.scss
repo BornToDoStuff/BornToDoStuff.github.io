@@ -33,7 +33,7 @@ body {
 #{$a-tags} {
 	color: $blue;
 	text-decoration: none;
-	transition-delay: 0.05s;
+	// transition-delay: 0.05s;
 }
 .active:hover a, .disabled:hover a { background: 0 !important; }
 
@@ -320,8 +320,9 @@ input, button{
 	}
 	.navbar-fixed-side .navbar-nav {
 		float: none;
-		margin: 0 -15px;
-		padding-left: 15px;
+		// margin: 0;
+		// margin-left: -15px;
+		// padding-left: 15px;
 		list-style: none;
 
 		a {
@@ -335,7 +336,19 @@ input, button{
 				background-color: $transp_lightGray;
 			}
 		}
+		.collapse.in, .collapsing {
+		 border-top: 1px solid $transp_lightGray;
+		 border-bottom: 1px solid $transp_lightGray;
+		}
+		.collapse a, .collapsing a {
+			padding-left: 20px;
+		}
 	}
+	 .navbar-nav .collapse.in {
+		border-top: 1px solid $transp_lightGray;
+		border-bottom: 1px solid $transp_lightGray;
+	}
+
 	.navbar-fixed-side {
 		.bottom {
 			@include desktop{
@@ -347,6 +360,13 @@ input, button{
 			}
 		}
 	}
+
+.dropdown-toggle {
+	background-color: rgba(0,0,0,0.1);
+}
+.dropdown-toggle.collapsed{
+	background-color: transparent;
+}
 
 .navbar-toggle {
 	float: right;
