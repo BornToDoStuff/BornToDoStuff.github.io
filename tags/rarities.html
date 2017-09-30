@@ -12,7 +12,7 @@ title: Rarities
 {% for rarity in rawtags %}
 	{% if rarity != "" %}
 		{% if item_rarities == "" %}{% assign item_rarities = rarity | split:'|' %}{% endif %}
-		{% unless item_rarities contains rarity %}{% assign item_rarities = item_rarities | join:'|' | append:'|' | append:type | split:'|' %}{% endunless %}
+		{% unless item_rarities contains rarity %}{% assign item_rarities = item_rarities | join:'|' | append:'|' | append:rarity | split:'|' %}{% endunless %}
 	{% endif %}
 {% endfor %}
 <div id="tags_wrapper">

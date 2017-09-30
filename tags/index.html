@@ -4,7 +4,7 @@ title: Tags
 ---
 {% assign rawtags = "" %}
 {% for post in site.posts %}
-	{% assign tags = post.item_type | join:'|' | append:'|' %}
+	{% assign tags = post.item_tags | join:'|' | append:'|' %}
 	{% assign rawtags = rawtags | append:tags %}
 {% endfor %}
 {% assign rawtags = rawtags | split:'|' | sort %}
