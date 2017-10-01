@@ -11,7 +11,7 @@ title: Tags
 
 <h1>{{ page.title }}</h1>
 <item-tags>
-  {%- for tag in page.tags -%}
+  {%- for tag in tag_names -%}
   <item-tag><a href="#{{ tag | slugify }}"><img src="{{site.baseurl}}/images/icons/tag-solid.svg" />{{tag}} | {{ site.tags[tag].size }}</a></item-tag>
   {%- endfor -%}
 </item-tags>
