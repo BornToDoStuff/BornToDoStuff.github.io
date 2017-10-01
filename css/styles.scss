@@ -90,7 +90,7 @@ magic-spell {
 	color: $gray;
 }
 
-magic-item, .page {
+magic-item, item-details, .page {
 	position: relative;
 	display: block;
 	padding: 20px 15px;
@@ -140,9 +140,6 @@ item-tagline {
 	color: $mediumGray;
 	position: relative;
 	top: -12px;
-}
-item-details {
-	display: none;
 }
 
 // item-rarity {

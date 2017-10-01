@@ -3,28 +3,30 @@ layout: default
 ---
 <magic-item>
   <item-name>{{ page.title }}</item-name>
-  <item-tagline>{{ page.category }}, {{ page.item_rarity }} {% if page.item_attunement -%}(requires attunement {%- if page.item_requirement != "" %}{{ page.item_requirement }}{% endif %}){%- endif %}</item-tagline>
-  <item-details>
-    <item-type><a href="/tags/types/#{{ post.category | slugify }}">{{ page.category }}</a></item-type>
-    {%- if post.subtypes.size > 0 -%}
-    <item-subtypes>
-      {%- for subtype in post.subtypes -%}
-      <item-subtype>{{subtype}}</item-subtype>
-      {%- endfor -%}
-    </item-subtypes>
-    {%- endif -%}
-    <item-rarity><a href="/tags/rarities/#{{ post.item_rarity | slugify }}">{{ page.item_rarity }}</a></item-rarity>
-    <item-attunement>{% if page.item_attunement -%} requires attunement {{ page.item_requirement }}{%- endif %}</item-attunement>
-    <item-tags>
-      {%- for tag in page.tags -%}
-      <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
-      {%- endfor -%}
-    </item-tags>
-  </item-details>
+  <item-tagline>{{ page.category | downcase }}, {{ page.item_rarity | downcase }} {% if page.item_attunement %}(requires attunement {% if page.item_requirement != "" %}{{ page.item_requirement }}{% endif %}){% endif %}</item-tagline>
   <item-description>
     {{ content }}
   </item-description>
 </magic-item>
+
+<item-details>
+  <item-type><a href="/tags/types/#{{ post.category | slugify }}">{{ post.category }}</a></item-type>
+  {% assign subtypes_count = post.subtypes | size %}
+  {%- if subtypes_count > 0 -%}
+  <item-subtypes>
+    {%- for subtype in post.subtypes -%}
+    <item-subtype>{{subtype}}</item-subtype>
+    {%- endfor -%}
+  </item-subtypes>
+  {%- endif -%}
+  <item-rarity><a href="/tags/rarities/#{{ post.item_rarity | slugify }}">{{ post.item_rarity }}</a></item-rarity>
+  <item-attunement>{% if post.item_attunement -%} requires attunement {{ post.item_requirement }}{%- endif %}</item-attunement>
+  <item-tags>
+    {%- for tag in post.tags -%}
+    <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
+    {%- endfor -%}
+  </item-tags>
+</item-details>
 
 <nav aria-label="...">
   <ul class="pager">
