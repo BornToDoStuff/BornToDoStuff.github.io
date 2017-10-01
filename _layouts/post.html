@@ -10,19 +10,27 @@ layout: default
 </magic-item>
 
 <item-details>
-  <item-type><a href="/tags/types/#{{ post.category | slugify }}">{{ post.category }}</a></item-type>
-  {% assign subtypes_count = post.subtypes | size %}
+  <item-type>Type: <a href="/tags/types/#{{ page.category | slugify }}">{{ page.category }}</a></item-type>
+  {% assign subtypes_count = page.subtypes | size %}
   {%- if subtypes_count > 0 -%}
   <item-subtypes>
-    {%- for subtype in post.subtypes -%}
+    Subtypes:
+    {%- for subtype in page.subtypes -%}
     <item-subtype>{{subtype}}</item-subtype>
     {%- endfor -%}
   </item-subtypes>
   {%- endif -%}
-  <item-rarity><a href="/tags/rarities/#{{ post.item_rarity | slugify }}">{{ post.item_rarity }}</a></item-rarity>
-  <item-attunement>{% if post.item_attunement -%} requires attunement {{ post.item_requirement }}{%- endif %}</item-attunement>
+  <item-rarity>Rarity: <a href="/tags/rarities/#{{ page.item_rarity | slugify }}">{{ page.item_rarity }}</a></item-rarity>
+  <item-attunement>Attunement: {% if page.item_attunement -%}{% if page.item_requirement %}requires attunement {{ page.item_requirement }}{% else %}True{%- endif %}{% else %}False{%- endif %}</item-attunement>
+  <item-classes>
+    Suggested Classes:
+    {%- for tag in page.tags -%}
+    <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
+    {%- endfor -%}
+  </item-classes>
   <item-tags>
-    {%- for tag in post.tags -%}
+    Item Tags:
+    {%- for tag in page.tags -%}
     <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
     {%- endfor -%}
   </item-tags>
