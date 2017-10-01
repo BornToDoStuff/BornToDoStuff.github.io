@@ -10,12 +10,12 @@ layout: default
 </magic-item>
 
 <item-details>
-  <item-type<b>>Type:</b> <a href="/tags/types/#{{ page.category | slugify }}">{{ page.category }}</a></item-type>
-  {% assign subtypes_count = page.subtypes | size %}
+  <item-type><b>Type:</b> <a href="/tags/types/#{{ page.category | slugify }}">{{ page.category }}</a></item-type>
+  {% assign subtypes_count = page.item_subtypes | size %}
   {%- if subtypes_count > 0 -%}
   <item-subtypes>
     <b>Subtypes:</b>
-    {%- for subtype in page.subtypes -%}
+    {%- for subtype in page.item_subtypes -%}
     <item-subtype>{{subtype}}</item-subtype>
     {%- endfor -%}
   </item-subtypes>
@@ -24,7 +24,7 @@ layout: default
   <item-attunement><b>Attunement:</b> {% if page.item_attunement -%}{% if page.item_requirement %}requires attunement {{ page.item_requirement }}{% else %}True{%- endif %}{% else %}False{%- endif %}</item-attunement>
   <item-classes>
     <b>Suggested Classes:</b>
-    {%- for class in page.classes -%}
+    {%- for class in page.item_classes -%}
     <item-class> {{class}}</item-class>
     {%- endfor -%}
   </item-classes>
