@@ -8,41 +8,43 @@ var search_cache = [
   {% for post in site.posts %} {
       "id" : "{{ forloop.index0 }}",
       "title" : {{ post.title | jsonify }},
-      "type" : "{{ post.item_type }}",
-      "subtypes" : "{% for item in post.item_subtype %}{{ item.type }} {% endfor %}",
+      "type" : "{{ post.category }}",
+      "subtypes" : "{% for item in post.item_subtype %}{{ item }} {% endfor %}",
       "rarity" : "{{ post.item_rarity }}",
       "attunement" : {{ post.item_attunement }},
       "requirement" : "{{ post.item_requirement }}",
       "curse" : {{ post.item_curse }},
-      "classes" : "{% for item in post.item_classes %}{{ item.class }} {% endfor %}",
+      "classes" : "{% for item in post.item_classes %}{{ item }} {% endfor %}",
       "school" : "{{ post.item_school }}",
-      "role" : "{% for item in post.item_role %}{{ item.role }} {% endfor %}",
-      "damage" : "{% for item in post.item_damage %}{{ item.type }} {% endfor %}",
-      "tags" : "{% for item in post.item_tags %}{{ item.tag }} {% endfor %}",
+      "role" : "{% for item in post.item_role %}{{ item }} {% endfor %}",
+      "damage" : "{% for item in post.item_damage %}{{ item }} {% endfor %}",
+      "tags" : "{% for item in post.tags %}{{ item }} {% endfor %}",
       "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify }}
     }{% unless forloop.last %},{% endunless %} {% endfor %}
 ];
 var item_cache = [
-  {% for post in site.posts %} {
-      "url" : "{{ post.url }}",
-      "id" : "{{ post.item_id }}",
+  {% for post in site.posts %}
+    {
+      "id" : {{ post.item_id }},
       "title" : {{ post.title | jsonify }},
       "type" : "{{ post.item_type }}",
-      "subtypes" : [ {% for item in post.item_subtype %} {"type" : "{{ item.type }}"}{% unless forloop.last %}, {% endunless %}{% endfor %} ],
+      "subtypes" : {{ post.item_subtypes | replace '\"\"', '\", \"'}},
       "rarity" : "{{ post.item_rarity }}",
       "attunement" : {{ post.item_attunement }},
       "requirement" : "{{ post.item_requirement }}",
       "curse" : {{ post.item_curse }},
-      "classes" : [ {% for item in post.item_classes %} {"class" : "{{ item.class }}", "weight" : "{{ item.weight }}"}{% unless forloop.last %}, {% endunless %}{% endfor %} ],
+      "classes" : {{ post.item_classes | replace '\"\"', '\", \"'}},
       "school" : "{{ post.item_school }}",
-      "role" : [ {% for item in post.item_role %} {"role" : "{{ item.role }}"}{% unless forloop.last %}, {% endunless %}{% endfor %} ],
-      "damage" : [ {% for item in post.item_damage %} {"type" : "{{ item.type }}"}{% unless forloop.last %}, {% endunless %}{% endfor %} ],
-      "tags" : [ {% for item in post.item_tags %} {"tag" : "{{ item.tag }}"}{% unless forloop.last %}, {% endunless %}{% endfor %} ],
+      "role" : {{ post.item_role | replace '\"\"', '\", \"'}},
+      "damage" : {{ post.item_damage | replace '\"\"', '\", \"'}},
+      "tags" : {{ post.item_tags | replace '\"\"', '\", \"'}},
       "idea" : "{{ post.item_idea }}",
       "co_creator" : "{{ post.item_co_creator }}",
       "updated" : "{{ post.item_updated }}",
-      "content" : {{ post.excerpt | jsonify }}
-    }{% unless forloop.last %},{% endunless %} {% endfor %}
+      "content" : {{ post.excerpt | jsonify}},
+      "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify}}
+    }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
 ];
 
 var search_index = lunr(function () {

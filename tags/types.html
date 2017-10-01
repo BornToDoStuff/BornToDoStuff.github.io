@@ -9,11 +9,12 @@ title: Types
 {% assign cat_names = cat_names | sort %}
 
 <h1>{{ page.title }}</h1>
-<div id="tags-wrapper">
-	<ul id="tags">
-		{% for cat in cat_names %}<li class="tag"><a href="#{{ cat | slugify }}">{{ cat }} ({{ site.categories[cat].size }})</a></li>{% endfor %}
-	</ul>
-</div>
+<item-tags>
+  {%- for cat in cat_names -%}
+  <item-tag><a href="#{{ cat | slugify }}"><img src="{{site.baseurl}}/images/icons/tag-solid.svg" />{{cat}} | {{ site.categories[cat].size }}</a></item-tag>
+  {%- endfor -%}
+</item-tags>
+<hr />
 <div id="tags-list">
 {% for cat in cat_names %}
 	<h2 id="{{ cat | slugify }}">{{ cat }}</h2>
@@ -22,7 +23,7 @@ title: Types
         <li>
 					<a href="{{ post.url }}">
 						<h4>{{ post.title }}</h4>
-						<p>{{ post.category }}, {{ post.item_rarity }} {% if post.item_attunement -%} (requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){%- endif %}</p>
+						<p>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement -%} (requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){%- endif %}</p>
 					</a>
 				</li>
     {% endfor %}

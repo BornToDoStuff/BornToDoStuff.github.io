@@ -16,6 +16,9 @@ body {
 	font-family: $roboto;
 	color: $darkGray;
 
+	@include xsmall {
+
+	}
 	@include desktop {
 		line-height: $normal;
 		min-width: 100vw;
@@ -28,6 +31,24 @@ body {
 
 ::selection {
     background: rgba(97, 130, 179, 0.25);
+}
+
+hr{
+	border: 0;
+  border-top: 1px solid $transp_lightGray;
+}
+
+h1, h2, h3, h4 {
+	color: $bluakDark;
+	line-height: $normal;
+	margin: 0px;
+}
+h1 { font-size: 3.0rem; }
+h2 { font-size: 2.6rem; }
+h3 { font-size: 2.2rem; }
+h4 {
+	font-size: 1.8rem;
+	color: $gray;
 }
 
 #{$a-tags} {
@@ -72,19 +93,6 @@ body {
 	}
 }
 
-h1, h2, h3, h4 {
-	color: $bluakDark;
-	line-height: $normal;
-	margin: 0px;
-}
-h1 { font-size: 3.0rem; }
-h2 { font-size: 2.6rem; }
-h3 { font-size: 2.2rem; }
-h4 {
-	font-size: 1.8rem;
-	color: $gray;
-}
-
 magic-spell {
 	font-style: italic;
 	color: $gray;
@@ -106,9 +114,9 @@ magic-item, item-details, .page {
 
 	item-description {
 		line-height: $normal;
-
 		@include mobile {
 			line-height: $compressed;
+			text-align: left;
 		}
 	}
 }
@@ -116,12 +124,17 @@ magic-item, item-details, .page {
 	min-height: 95vh;
 }
 
-item-type, item-rarity, item-attunement, item-classes, item-tags {
+item-details { text-align: left; }
+item-details > * {
 	display: inline-block;
 	width: 49%;
 	padding-bottom: 5px;
 	text-align: left;
 	vertical-align: top;
+
+	@include mobile {
+		width: 100%;
+	}
 }
 
 item-name {
@@ -163,49 +176,6 @@ input, button{
 .pull-right { float: right; }
 .pull-left { float: left;  }
 
-
-#tags-wrapper {
-	margin-bottom: 20px;
-
-	ul { list-style-type: none; }
-}
-#tags {
-	padding: 10px;
-  border-bottom: 1px solid $transp_lightGray;
-
-	.tag {
-		display: inline-block;
-
-		a {
-			display: block;
-			padding: 3px 6px;
-			border: 1px solid #ababab;
-			border-radius: 4px;
-			margin-right: 5px;
-			margin-bottom: 5px;
-
-			&:hover {
-				background: rgba(0,0,0,0.1);
-			}
-		}
-	}
-}
-
-#tags-list {
-	ul {
-		list-style-type: none;
-		padding-left: 0px;
-	}
-	li{
-		margin-bottom: 5px;
-	  padding: 5px 0px;
-	  border-bottom: 1px solid $transp_lightGray;
-	}
-	p {
-		color: $gray;
-	}
-}
-
 .pager {
 	padding-left: 0px;
 	list-style: none;
@@ -232,6 +202,46 @@ input, button{
 		}
 	}
 }
+
+item-tags {
+	padding: 10px;
+}
+item-tag {
+	display: inline-block;
+	padding: 3px 6px;
+	color: $white;
+	background: $blue;
+	border-radius: 4px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+
+	&:hover {
+		background: $blueDark;
+	}
+
+	.fa-tag { fill: $white; }
+}
+
+#tags-list {
+	ul {
+		list-style-type: none;
+		padding-left: 0px;
+	}
+	li{
+    padding: 5px 10px;
+    border-radius: 4px;
+
+    &:hover {
+      background-color: $transp_lightBlue;
+    }
+	}
+	p {
+		color: $gray;
+    padding-bottom: 2px;
+    border-bottom: 1px solid $transp_lightGray;
+	}
+}
+
 .pagination {
 	display: inline-block;
 	padding-left: 0px;
@@ -298,7 +308,7 @@ input, button{
 	}
 	.navbar-fixed-side .navbar-brand{
 		float: left;
-		color: $gray;
+		color: $bluakDark;
 		font-size: 1.8rem;
 	}
 	.navbar-fixed-side .navbar-collapse {
@@ -324,7 +334,7 @@ input, button{
 			}
 			&:hover {
 				color: $darkGray;
-				background-color: $transp_lightGray;
+				background-color: $transp_lightBlue;
 			}
 		}
 		.collapse.in, .collapsing {

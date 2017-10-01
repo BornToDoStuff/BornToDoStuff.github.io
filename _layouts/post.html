@@ -7,6 +7,15 @@ layout: default
   <item-description>
     {{content}}
   </item-description>
+  <hr />
+  {% assign tags_count = page.tags | size %}
+  {%- if tags_count > 0 -%}
+  <item-tags>
+    {%- for tag in page.tags -%}
+    <item-tag><a href="/tags/#{{ tag | slugify }}"><img src="{{site.baseurl}}/images/icons/tag-solid.svg" />{{tag}}</a></item-tag>
+    {%- endfor -%}
+  </item-tags>
+  {%- endfor -%}
 </magic-item>
 
 <item-details>
@@ -29,12 +38,6 @@ layout: default
     <item-class>{{class}}</item-class>{% unless forloop.last %}, {% endunless %}
     {%- endfor -%}
   </item-classes>
-  <item-tags>
-    <b>Item Tags:&nbsp;</b>
-    {%- for tag in page.tags -%}
-    <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>{% unless forloop.last %}, {% endunless %}
-    {%- endfor -%}
-  </item-tags>
 </item-details>
 
 <nav aria-label="...">

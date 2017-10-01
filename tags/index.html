@@ -2,6 +2,7 @@
 layout: page
 title: Tags
 ---
+
 {% assign tag_names = "" | split: "|"  %}
 {% for posts_by_tag in site.tags %}
   {%- assign tag_names = tag_names | push: posts_by_tag.first -%}
@@ -9,11 +10,12 @@ title: Tags
 {% assign tag_names = tag_names | sort %}
 
 <h1>{{ page.title }}</h1>
-<div id="tags-wrapper">
-	<ul id="tags">
-		{% for tag in tag_names %}<li class="tag"><a href="#{{ tag | slugify }}">{{ tag }} ({{ site.tags[tag].size }})</a></li>{% endfor %}
-	</ul>
-</div>
+<item-tags>
+  {%- for tag in page.tags -%}
+  <item-tag><a href="#{{ tag | slugify }}"><img src="{{site.baseurl}}/images/icons/tag-solid.svg" />{{tag}} | {{ site.tags[tag].size }}</a></item-tag>
+  {%- endfor -%}
+</item-tags>
+<hr />
 <div id="tags-list">
 {% for tag in tag_names %}
 	<h2 id="{{ tag | slugify }}">{{ tag }}</h2>
@@ -22,7 +24,7 @@ title: Tags
       <li>
 				<a href="{{ post.url }}">
 					<h4>{{ post.title }}</h4>
-					<p>{{ post.category }}, {{ post.item_rarity }} {% if post.item_attunement -%} (requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){%- endif %}</p>
+					<p>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement -%} (requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){%- endif %}</p>
 				</a>
 			</li>
     {% endfor %}
