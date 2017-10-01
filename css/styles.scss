@@ -136,27 +136,34 @@ item-name {
 	}
 }
 
-item-tags{ color: $mediumGray; }
-
-item-rarity {
-	position: absolute;
-	top: 20px;
-	right: 15px;
-
-	:after{
-		content: "";
-		display: none;
-		background: url("{{ site.baseurl }}/images/rarities.svg");
-	}
-
-	@include mobile {
-		display: none;
-	}
-}
-item-attunement {
+item-tagline {
+	color: $mediumGray;
 	position: relative;
 	top: -12px;
 }
+item-details {
+	display: none;
+}
+
+// item-rarity {
+// 	position: absolute;
+// 	top: 20px;
+// 	right: 15px;
+//
+// 	:after{
+// 		content: "";
+// 		display: none;
+// 		background: url("{{ site.baseurl }}/images/rarities.svg");
+// 	}
+//
+// 	@include mobile {
+// 		display: none;
+// 	}
+// }
+// item-attunement {
+// 	position: relative;
+// 	top: -12px;
+// }
 
 .read-more {
 	font-size: 2.5rem;

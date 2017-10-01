@@ -5,13 +5,27 @@ search:  true
 {% for post in paginator.posts %}
   <magic-item id="{{post.item_id}}">
     <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
-    <item-tags>
-      <item-rarity>{{ post.item_rarity }}</item-rarity>
+    <item-tagline>{{ post.category }}, {{ post.item_rarity }} {% if post.item_attunement -%}(requires attunement {%- if post.item_requirement != "" %}{{ post.item_requirement }}{% endif %}){%- endif %}</item-tagline>
+    <item-details>
+      <item-type><a href="/tags/types/#{{ post.category | slugify }}">{{ post.category }}</a></item-type>
+      {%- if post.subtypes.size > 0 -%}
+      <item-subtypes>
+        {%- for subtype in post.subtypes -%}
+        <item-subtype>{{subtype}}</item-subtype>
+        {%- endfor -%}
+      </item-subtypes>
+      {%- endif -%}
+      <item-rarity><a href="/tags/rarities/#{{ post.item_rarity | slugify }}">{{ post.item_rarity }}</a></item-rarity>
       <item-attunement>{% if post.item_attunement -%} requires attunement {{ post.item_requirement }}{%- endif %}</item-attunement>
-    </item-tags>
+      <item-tags>
+        {%- for tag in post.tags -%}
+        <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
+        {%- endfor -%}
+      </item-tags>
+    </item-details>
     <item-description>
       {{ post.excerpt }}
-      {%- if post.excerpt != post.content -%}
+      {% if post.excerpt != post.content -%}
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more pull-right">&rsaquo;&rsaquo;&rsaquo;</a>
       {%- endif -%}
     </item-description>

@@ -2,7 +2,6 @@
 layout: page
 title: Rarities
 ---
-{% assign tags = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split:', ' %}
 {% assign rarities = site.posts | group_by: 'item_rarity' %}
 
 <h1>{{ page.title }}</h1>
@@ -20,7 +19,7 @@ title: Rarities
         <li>
 					<a href="{{ post.url }}">
 						<h4>{{ post.title }}</h4>
-						<p>{{ post.category }}, {{ post.item_rarity }} {% if post.item_attunement -%} (requires attunement {{ post.item_requirement }}){%- endif %}</p>
+						<p>{{ post.category }}, {{ post.item_rarity }} {% if post.item_attunement -%} (requires attunement{% if page.item_requirement != "" %} {{ page.item_requirement }}{% endif %}){%- endif %}</p>
 					</a>
 				</li>
     {% endfor %}
