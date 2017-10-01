@@ -16,9 +16,6 @@ body {
 	font-family: $roboto;
 	color: $darkGray;
 
-	@include xsmall {
-
-	}
 	@include desktop {
 		line-height: $normal;
 		min-width: 100vw;
