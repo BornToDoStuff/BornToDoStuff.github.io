@@ -15,7 +15,7 @@ layout: default
     <item-tag><a href="/tags/#{{ tag | slugify }}"><img src="{{site.baseurl}}/images/icons/tag-solid.svg" />{{tag}}</a></item-tag>
     {%- endfor -%}
   </item-tags>
-  {%- endfor -%}
+  {%- endif -%}
 </magic-item>
 
 <item-details>
