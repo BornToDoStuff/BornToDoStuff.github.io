@@ -202,16 +202,19 @@ input, button{
 
 item-tags {
 	padding: 10px;
+	padding-bottom: 0px;
+  display: block;
 }
 item-tag {
 	display: inline-block;
-	padding: 3px 6px;
-	border-radius: 4px;
-	border: 1px solid $mediumGray;
 	margin-right: 5px;
 	margin-bottom: 5px;
-
-	a { color: $white; }
+	a {
+		display: block;
+		padding: 3px 6px;
+		border-radius: 4px;
+		border: 1px solid $mediumGray;
+	}
 	img {
 		height: 12px;
 		padding-right: 5px;
@@ -318,6 +321,7 @@ item-tag {
 		@include desktop {
 			display: block;
 			height: auto !important;
+			position: static;
 		}
 	}
 	.navbar-fixed-side .navbar-nav {
