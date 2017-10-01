@@ -18,6 +18,8 @@ item_damage:
   - Cold
 tags:
   - Ice
+  - Blinding
+  - Constitution
 item_idea:
 item_co_creator:
 item_updated:

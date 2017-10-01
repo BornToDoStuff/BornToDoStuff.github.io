@@ -17,6 +17,8 @@ item_damage:
   - Cold
 tags:
   - Ice
+  - Spellcasting
+  - Long Rest
 item_idea:
 item_co_creator:
 item_updated:

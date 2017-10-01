@@ -21,6 +21,7 @@ layout: default
   </item-subtypes>
   {%- endif -%}
   <item-rarity><b>Rarity:&nbsp;</b><a href="/tags/rarities/#{{ page.item_rarity | slugify }}">{{ page.item_rarity }}</a></item-rarity>
+  <item-school><b>School:&nbsp;</b>{{ page.item_school }}</item-school>
   <item-attunement><b>Attunement:&nbsp;</b>{% if page.item_attunement -%}{% if page.item_requirement %}requires attunement {{ page.item_requirement }}{% else %}True{%- endif %}{% else %}False{%- endif %}</item-attunement>
   <item-classes>
     <b>Suggested Classes:&nbsp;</b>
