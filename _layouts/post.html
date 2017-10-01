@@ -2,36 +2,36 @@
 layout: default
 ---
 <magic-item>
-  <item-name>{{ page.title }}</item-name>
+  <item-name>{{page.title}}</item-name>
   <item-tagline>{{ page.category | downcase }}, {{ page.item_rarity | downcase }} {% if page.item_attunement %}(requires attunement {% if page.item_requirement != "" %}{{ page.item_requirement }}{% endif %}){% endif %}</item-tagline>
   <item-description>
-    {{ content }}
+    {{content}}
   </item-description>
 </magic-item>
 
 <item-details>
-  <item-type>Type: <a href="/tags/types/#{{ page.category | slugify }}">{{ page.category }}</a></item-type>
+  <item-type<b>>Type:</b> <a href="/tags/types/#{{ page.category | slugify }}">{{ page.category }}</a></item-type>
   {% assign subtypes_count = page.subtypes | size %}
   {%- if subtypes_count > 0 -%}
   <item-subtypes>
-    Subtypes:
+    <b>Subtypes:</b>
     {%- for subtype in page.subtypes -%}
     <item-subtype>{{subtype}}</item-subtype>
     {%- endfor -%}
   </item-subtypes>
   {%- endif -%}
-  <item-rarity>Rarity: <a href="/tags/rarities/#{{ page.item_rarity | slugify }}">{{ page.item_rarity }}</a></item-rarity>
-  <item-attunement>Attunement: {% if page.item_attunement -%}{% if page.item_requirement %}requires attunement {{ page.item_requirement }}{% else %}True{%- endif %}{% else %}False{%- endif %}</item-attunement>
+  <item-rarity><b>Rarity:</b> <a href="/tags/rarities/#{{ page.item_rarity | slugify }}">{{ page.item_rarity }}</a></item-rarity>
+  <item-attunement><b>Attunement:</b> {% if page.item_attunement -%}{% if page.item_requirement %}requires attunement {{ page.item_requirement }}{% else %}True{%- endif %}{% else %}False{%- endif %}</item-attunement>
   <item-classes>
-    Suggested Classes:
-    {%- for tag in page.tags -%}
-    <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
+    <b>Suggested Classes:</b>
+    {%- for class in page.classes -%}
+    <item-class> {{class}}</item-class>
     {%- endfor -%}
   </item-classes>
   <item-tags>
-    Item Tags:
+    <b>Item Tags:</b>
     {%- for tag in page.tags -%}
-    <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
+    <item-tag> <a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
     {%- endfor -%}
   </item-tags>
 </item-details>
@@ -39,12 +39,12 @@ layout: default
 <nav aria-label="...">
   <ul class="pager">
     {% if page.previous.url %}
-      <li class="previous"><a href="{{page.previous.url}}">&laquo; {{page.previous.title}}</a></li>
+      <li class="previous"><a href="{{ page.previous.url }}">&laquo; {{page.previous.title}}</a></li>
     {% else %}
       <li class="previous disabled"><a>&laquo; No older posts</a></li>
     {% endif %}
     {% if page.next.url %}
-      <li class="next"><a href="{{page.next.url}}">{{page.next.title}} &raquo;</a></li>
+      <li class="next"><a href="{{ page.next.url }}">{{page.next.title}} &raquo;</a></li>
     {% else %}
       <li class="next disabled"><a>No newer posts &raquo;</a></li>
     {% endif %}

@@ -116,6 +116,10 @@ magic-item, item-details, .page {
 	min-height: 95vh;
 }
 
+item-type, item-rarity, item-attunement, item-classes, item-tags {
+	display: block;
+}
+
 item-name {
 	display: block;
 	font-size: 3.0rem;
