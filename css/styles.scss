@@ -117,18 +117,20 @@ magic-item, item-details, .page {
 }
 
 item-type, item-rarity, item-attunement, item-classes, item-tags {
-	display: block;
+	display: inline-block;
+	width: 49%;
+	padding-bottom: 5px;
+	text-align: left;
+	vertical-align: top;
 }
 
 item-name {
 	display: block;
 	font-size: 3.0rem;
-	margin-bottom: 10px;
 	font-family: inherit;
 	font-weight: 500;
 	line-height: $compressed;
 	color: $bluakDark;
-	max-width: 80%;
 	overflow: hidden;
 	white-space: nowrap;
 	text-overflow: ellipsis;
@@ -143,28 +145,8 @@ item-name {
 item-tagline {
 	color: $mediumGray;
 	position: relative;
-	top: -12px;
+	top: -4px;
 }
-
-// item-rarity {
-// 	position: absolute;
-// 	top: 20px;
-// 	right: 15px;
-//
-// 	:after{
-// 		content: "";
-// 		display: none;
-// 		background: url("{{ site.baseurl }}/images/rarities.svg");
-// 	}
-//
-// 	@include mobile {
-// 		display: none;
-// 	}
-// }
-// item-attunement {
-// 	position: relative;
-// 	top: -12px;
-// }
 
 .read-more {
 	font-size: 2.5rem;
@@ -332,9 +314,6 @@ input, button{
 	.navbar-fixed-side .navbar-nav {
 		float: none;
 		padding: 0px;
-		// margin: 0;
-		// margin-left: -15px;
-		// padding-left: 15px;
 		list-style: none;
 
 		a {

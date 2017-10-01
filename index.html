@@ -5,7 +5,7 @@ search:  true
 {% for post in paginator.posts %}
   <magic-item id="{{post.item_id}}">
     <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
-    <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement {% if post.item_requirement != "" %}{{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
+    <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != "" %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
     <item-description>
       {{ post.excerpt }}
       {% if post.excerpt != post.content -%}
