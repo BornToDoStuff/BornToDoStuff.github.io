@@ -27,7 +27,7 @@ var item_cache = [
     {
       "id" : {{ post.item_id }},
       "title" : {{ post.title | jsonify }},
-      "type" : "{{ post.item_type }}",
+      "type" : "{{ post.category }}",
       "subtypes" : {% if post.item_subtypes %}{{ post.item_subtypes | replace '\"\"', '\", \"'}}{% else %}""{% endif %},
       "rarity" : "{{ post.item_rarity }}",
       "attunement" : {{ post.item_attunement }},
@@ -37,7 +37,7 @@ var item_cache = [
       "school" : "{{ post.item_school }}",
       "role" : {{ post.item_role | replace '\"\"', '\", \"'}},
       "damage" : {% if post.item_damage %}{{ post.item_damage | replace '\"\"', '\", \"'}}{% else %}""{% endif %},
-      "tags" : {% if post.tags %}{{ post.tags | replace '\"\"', '\", \"'}}{% else %}""{% endif %},
+      "tags" : {% if post.tags.size > 0 %}{{ post.tags | replace '\"\"', '\", \"'}}{% else %}""{% endif %},
       "idea" : "{{ post.item_idea }}",
       "co_creator" : "{{ post.item_co_creator }}",
       "updated" : "{{ post.item_updated }}",
