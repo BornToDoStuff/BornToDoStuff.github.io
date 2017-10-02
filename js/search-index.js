@@ -27,7 +27,7 @@ var item_cache = [
     {
       "id" : {{ post.item_id }},
       "title" : {{ post.title | jsonify }},
-      "type" : "{{ post.item_type }}",
+      "type" : "{{ post.category }}",
       "subtypes" : {% if post.item_subtypes %}{{ post.item_subtypes | replace '\"\"', '\", \"'}}{% else %}""{% endif %},
       "rarity" : "{{ post.item_rarity }}",
       "attunement" : {{ post.item_attunement }},
