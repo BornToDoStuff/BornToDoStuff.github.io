@@ -109,11 +109,14 @@ magic-item, item-details, .page {
 	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 	transition: max-height 0.5s;
 
+	@include mobile {
+		text-align: left;
+	}
+
 	item-description {
 		line-height: $normal;
 		@include mobile {
 			line-height: $compressed;
-			text-align: left;
 		}
 	}
 }
@@ -158,6 +161,32 @@ item-tagline {
 	top: -4px;
 }
 
+item-tags {
+	padding: 10px;
+	padding-bottom: 0px;
+  display: block;
+}
+item-tag {
+	display: inline-block;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	a {
+		display: block;
+		padding: 3px 6px;
+		border-radius: 4px;
+		border: 1px solid $mediumGray;
+	}
+	img {
+		height: 12px;
+		padding-right: 5px;
+		@include mobile {
+			display: none;
+		}
+	}
+	span { color: rgba(0,0,0,0.3); }
+}
+item-tag:hover { background: rgba(0,0,0,0.1); }
+
 .read-more {
 	font-size: 2.5rem;
 }
@@ -180,49 +209,45 @@ input, button{
 
 	.next {
 		float: right;
+		text-align: right;
 	}
 	.previous {
 		float: left;
+		text-align: left;
 	}
-	li {
+}
+	.pager li {
 		background: $backgroundLight;
 		border-radius: 4px;
 		border: 1px solid $mediumGray;
 		box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+
+		@include mobile {
+			width: 100%;
+			margin-bottom: 10px;
+		}
 	}
-	li > a{
+	.pager li > a{
 		display:inline-block;
 		padding: 5px 15px;
 
 		&:hover {
 			background: rgba(0,0,0,0.1);
 		}
-	}
-}
 
-item-tags {
-	padding: 10px;
-	padding-bottom: 0px;
-  display: block;
-}
-item-tag {
-	display: inline-block;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	a {
-		display: block;
-		padding: 3px 6px;
-		border-radius: 4px;
-		border: 1px solid $mediumGray;
+		.alt { display: none; }
 	}
-	img {
-		height: 12px;
-		padding-right: 5px;
+
+	.pager li > a {
+		@include mobile {
+			display: none;
+		}
 	}
-	&:hover {
-		background: rgba(0,0,0,0.1);
+	.pager li > a.alt {
+		@include mobile {
+			display: inline-block;
+		}
 	}
-}
 
 #tags-list {
 	ul {

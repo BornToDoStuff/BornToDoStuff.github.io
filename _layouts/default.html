@@ -31,9 +31,12 @@
               e.preventDefault();
               if (this.hash != ""){ //watch for empty hashes
                 var $target = $(this.hash);
+                var top = $target.offset().top - 50
+                if (top < 0)
+                  top += 50;
 
                 $('html, body').stop().animate({
-                    'scrollTop': $target.offset().top
+                    'scrollTop': top
                 }, 500, 'swing');
               }
             });

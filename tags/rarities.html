@@ -7,7 +7,7 @@ title: Rarities
 <h1>{{ page.title }}</h1>
 <item-tags>
   {%- for rarity in rarities -%}
-  <item-tag><a href="#{{ rarity.name | slugify }}"><img src="{{site.baseurl}}/images/icons/tag-solid.svg" />{{rarity.name}} | {{rarity.items.size}}</a></item-tag>
+  <item-tag><a href="#{{ rarity.name | slugify }}"><img src="{{site.baseurl}}/images/icons/tag-solid.svg" />{{rarity.name}} <span>|</span> {{rarity.items.size}}</a></item-tag>
   {%- endfor -%}
 </item-tags>
 <hr />
@@ -16,14 +16,14 @@ title: Rarities
 	<h2 id="{{ rarity.name | slugify }}">{{ rarity.name }}</h2>
 	<ul>
     {%- assign items = rarity.items | sort 'title' -%}
-    {% for post in items %}
+    {% for post in items -%}
         <li>
 					<a href="{{ post.url }}">
 						<h4>{{ post.title }}</h4>
 						<p>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement -%} (requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){%- endif %}</p>
 					</a>
 				</li>
-    {% endfor %}
+    {%- endfor %}
 	</ul>
 {% endfor %}
 </div>
