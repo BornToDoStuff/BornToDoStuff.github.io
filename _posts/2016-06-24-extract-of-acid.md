@@ -1,4 +1,4 @@
-﻿---
+---
 title: Extract of Acid
 item_id: 14
 category: Potion
