@@ -57,7 +57,7 @@
               if ($(window).scrollTop() >= 50) {
                 if ($(window).scrollTop() + $(window).height() > $(document).height() - 150) { //if its close to the bottom
                   $('#return-to-top').stop(true, true).fadeOut(200); }
-                else { $('#return-to-top').stop(true, true).faceTo()
+                else { $('#return-to-top').stop(true, true).fadeIn(500);
               }
               } else { $('#return-to-top').stop(true, true).fadeOut(200); }
             }
@@ -67,7 +67,13 @@
               if ($(window).scrollTop() >= 100) {
                 $('nav.navbar').stop(true, true).slideUp(500);
                 lastHeight = $(window).scrollTop();
-              } else if(lastHeight > $(window).scrollTop() + 100) {
+              }
+              else {
+                $('nav.navbar').stop(true, true).slideDown(200);
+                return;
+              }
+
+              if(lastHeight > $(window).scrollTop() + 50) {
                 $('nav.navbar').stop(true, true).slideDown(200);
                 lastHeight = $(window).scrollTop();
               }
