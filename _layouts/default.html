@@ -49,12 +49,12 @@
             var timer;
             $(window).on("scroll resize", function () {
               clearInterval(timer);
-              timer = setInterval(checkContextButton, 350);
+              timer = setInterval(checkContextButton, 150);
             });
 
             function checkContextButton(){
-              if ($(window).scrollTop() >= 0) {
-                if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) { //if its close to the bottom
+              if ($(window).scrollTop() >= 50) {
+                if ($(window).scrollTop() + $(window).height() > $(document).height() - 200) { //if its close to the bottom
                   $('#return-to-top').stop(true, true).fadeOut(200);
                 }
                 else {
