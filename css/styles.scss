@@ -11,7 +11,6 @@ html{
 }
 body {
 	background: $backgroundMedium;
-	background-size: 400px;
 	font-size: 1.6rem;
 	font-family: $roboto;
 	color: $darkGray;
@@ -411,18 +410,6 @@ input, button{
 		border-bottom: 1px solid $transp_lightGray;
 	}
 
-	.navbar-fixed-side {
-		.bottom {
-			@include desktop{
-				display: inline-block;
-		    width: 100%;
-		    position: absolute;
-		    bottom: 15px;
-		    border-top: 1px solid $transp_lightGray;
-			}
-		}
-	}
-
 .dropdown-toggle {
 	background-color: rgba(0,0,0,0.1);
 }
@@ -463,17 +450,16 @@ a.navbar-toggle {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   width: 50px;
   height: 50px;
 	border-radius: 50px;
 	padding: 7px 10px;
-  display: block;
+  display: none;
   text-decoration: none;
-	transition: all 0.2s ease;
 	z-index: 100;
 
 	&:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(0, 0, 0, 0.7);
 	}
 }
