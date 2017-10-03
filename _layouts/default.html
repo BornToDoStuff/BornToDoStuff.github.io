@@ -20,9 +20,13 @@
         {% if page.search %}
           {% include search-form.html %}
         {% endif %}
-        
         {{ content }}
     </div>
+    <a href="#TippyTop">
+      <div id="return-to-top">
+        <img src="{{site.baseurl}}/images/icons/chevron-up.svg" />
+      </div>
+    </a>
     <div>
       <script src="{{ site.baseurl }}/js/scripts.js"></script>
       <script>
@@ -39,6 +43,14 @@
                 $('html, body').stop().animate({
                     'scrollTop': top
                 }, 500, 'swing');
+              }
+            });
+
+            $(window).scroll(function() {
+              if ($(this).scrollTop() >= 150) {
+                $('#return-to-top').fadeIn(200); // Fade in the arrow
+              } else {
+                $('#return-to-top').fadeOut(200); // Else fade out the arrow
               }
             });
           });

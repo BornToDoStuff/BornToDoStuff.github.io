@@ -106,7 +106,7 @@ magic-item, item-details, .page {
 	border-bottom: 2px solid $bluakMedium;
 	border-top: 2px solid $bluakMedium;
 	overflow-y: hidden;
-	box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+	box-shadow: $boxshadow;
 	transition: max-height 0.5s;
 
 	@include mobile {
@@ -215,33 +215,51 @@ input, button{
 		float: left;
 		text-align: left;
 	}
-}
-	.pager li {
-		background: $backgroundLight;
-		border-radius: 4px;
-		border: 1px solid $mediumGray;
-		box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-	}
-	.pager li > a{
-		display:inline-block;
-		padding: 5px 15px;
+
+	.circle {
+		position: relative;
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+		border: 2px solid #5c5f6d;
+    border-radius: 45px;
+    text-align: center;
+		vertical-align: middle;
+    background: $backgroundLight;
+    padding-top: 6px;
+    font-size: 40px;
+    z-index: 10;
+    margin-bottom: 5px;
+		box-shadow: $boxshadow;
 
 		&:hover {
 			background: rgba(0,0,0,0.1);
 		}
 	}
-	.pager li > a {
-		@include mobile {
-			display: none;
-		}
+}
+	.pager span{
+		position: relative;
+		display: inline-block;
+		background: $backgroundLight;
+		padding: 6px;
+		border-radius: 4px;
+		border-bottom: 2px solid $bluakMedium;
+		box-shadow: $boxshadow;
 	}
-	.pager li > a.alt {
-		@include mobile {
-			display: inline-block;
-		}
-		@include desktop {
-			display: none;
-		}
+	.pager .next span {
+		padding-right: 30px;
+		margin-right: -25px;
+	}
+	.pager .previous span {
+		padding-left: 30px;
+		margin-left: -25px;
+	}
+
+	.pager li {
+		background: $backgroundLight;
+		border-radius: 4px;
+		border: 1px solid $mediumGray;
+		box-shadow: $boxshadow;
 	}
 
 #tags-list {
@@ -397,23 +415,51 @@ input, button{
 	background-color: transparent;
 }
 
-.navbar-toggle {
+a.navbar-toggle {
 	float: right;
-  padding: 10px 10px 6px 10px;
+  padding: 12px 10px;
   margin: 8px 15px 8px 0px;
   background: transparent;
   border: 1px solid $transp_lightGray;
-  border-radius: 4px;
+  border-radius: 40px;
+	cursor: pointer;
 	@include desktop{
 		display:none;
+	}
+	&:hover {
+		color: $darkGray;
+		background-color: $transp_lightBlue;
 	}
 
 	.icon-bar {
 		display: block;
-    width: 22px;
+    width: 18px;
     height: 2px;
     border-radius: 1px;
     background-color: $gray;
 		margin-bottom: 4px;
 	}
+	.icon-bar:last-child{
+		margin-bottom: 0px;
+	}
+}
+
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+	transition: all 0.3s ease;
+
+	&:hover {
+    background: rgba(0, 0, 0, 0.9);
+	}
+}
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
 }
