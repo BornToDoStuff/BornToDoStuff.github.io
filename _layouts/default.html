@@ -49,13 +49,13 @@
             $(window).scroll(function() {
               if ($(this).scrollTop() >= 150) { //if its scrolled down at least 150 pixels
                 if ($(window).scrollTop() + $(window).height() > $(document).height() - 100) { //if its close to the bottom
-                  $('#return-to-top').fadeOut(500);
+                  $('#return-to-top').stop().fadeOut(200);
                 }
                 else {
-                  $('#return-to-top').fadeIn(500);
+                  $('#return-to-top').stop().fadeIn(500);
                 }
               } else {
-                $('#return-to-top').fadeOut(500);
+                $('#return-to-top').stop().fadeOut(200);
               }
             });
           });
