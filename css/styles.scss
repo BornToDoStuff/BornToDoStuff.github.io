@@ -231,11 +231,18 @@ input, button{
     text-align: center;
 		vertical-align: middle;
     background: $backgroundLight;
-    padding-top: 6px;
+    padding: 6px;
     font-size: 40px;
     z-index: 10;
     margin-bottom: 5px;
 		box-shadow: $boxshadow;
+
+		@include mobile {
+			padding-top: 8px;
+		}
+	}
+	.top .circle {
+		padding-top: 3px;
 	}
 }
 	.pager span{
