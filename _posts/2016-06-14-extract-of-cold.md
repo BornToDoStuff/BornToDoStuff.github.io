@@ -1,4 +1,4 @@
-﻿---
+---
 title: Extract of Cold
 item_id: 11
 category: Potion
