@@ -246,6 +246,10 @@ input, button{
 		border-radius: 4px;
 		border-bottom: 2px solid $bluakMedium;
 		box-shadow: $boxshadow;
+
+		@include mobile {
+			display: none;
+		}
 	}
 	.pager .next span {
 		padding-right: 30px;
@@ -255,9 +259,16 @@ input, button{
 		padding-left: 30px;
 		margin-left: -25px;
 	}
-	.pager a:hover .circle, .pager a:hover span {
-		border-color: $blue;
-	}
+	.pager a:hover .circle:after {
+    content: "";
+    height: 45px;
+    width: 45px;
+    background: $transp_lightBlue;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    border-radius: 45px;
+}
 
 #tags-list {
 	ul {
