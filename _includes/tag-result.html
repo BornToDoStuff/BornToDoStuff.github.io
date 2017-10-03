@@ -1,0 +1,7 @@
+
+<li>
+  <a href="{{ post.url }}">
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement -%} (requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){%- endif %}</p>
+  </a>
+</li>
