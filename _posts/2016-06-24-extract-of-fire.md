@@ -1,4 +1,4 @@
-﻿---
+---
 title: Extract of Fire
 item_id: 12
 category: Potion
