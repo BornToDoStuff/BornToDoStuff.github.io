@@ -1,4 +1,4 @@
-﻿---
+---
 title: Extract of Lightning
 item_id: 13
 category: Potion
