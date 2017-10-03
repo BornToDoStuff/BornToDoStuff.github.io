@@ -1,4 +1,4 @@
-﻿---
+---
 title: Extract of Poison
 item_id: 15
 category: Potion
