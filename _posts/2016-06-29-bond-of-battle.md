@@ -14,7 +14,7 @@ item_classes:
   - Monk
 item_school: Enchantment
 item_role:
-  - Auxiliary
+  - Defense
 item_damage:
 tags:
   - Tradeoff
