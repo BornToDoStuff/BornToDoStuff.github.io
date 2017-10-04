@@ -21,12 +21,13 @@
           {% include search-form.html %}
         {% endif %}
         {{ content }}
+
+        <a href="#TippyTop">
+          <div id="return-to-top">
+            <img src="{{site.baseurl}}/images/icons/chevron-up-white.svg" />
+          </div>
+        </a>
     </div>
-    <a href="#TippyTop">
-      <div id="return-to-top">
-        <img src="{{site.baseurl}}/images/icons/chevron-up-white.svg" />
-      </div>
-    </a>
     <div>
       <script src="{{ site.baseurl }}/js/scripts.js"></script>
       <script>
