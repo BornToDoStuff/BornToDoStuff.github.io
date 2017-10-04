@@ -84,17 +84,20 @@ h4 {
 	max-width: 900px;
 	display: block;
 	position: fixed;
-	bottom: 10px;
+	bottom: 0px;
+	z-index: 100;
 
 	@include small {
 		left: 0px;
+		right: 0px;
 	}
 	@include medium {
 		left: 200px;
+		right: -10px; /* because of scrollbar??? */
 	}
 	@include large {
 		left: 25%;
-    right: 5%;
+    right: 4%; /* because of scrollbar??? */
 	}
 	@include xlarge {
 		left: 300px;
@@ -104,6 +107,7 @@ h4 {
 	#return-to-top {
 	  position: absolute;
 	  left: 50%;
+		bottom: 10px;
 		margin-left: -25px;
 	  background: rgba(0, 0, 0, 0.5);
 	  width: 50px;
@@ -112,7 +116,7 @@ h4 {
 		padding: 7px 10px;
 	  display: block;
 	  text-decoration: none;
-		z-index: 100;
+
 
 		&:hover {
 	    background: rgba(0, 0, 0, 0.7);
