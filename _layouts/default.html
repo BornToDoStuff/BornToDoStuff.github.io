@@ -47,6 +47,24 @@
               }
             });
 
+            var mobileblock = "mobile-menu-block";
+            $("#navbar-toggle").on("click", function() {
+              if ($(window).width() < 768){ /* mobile size */
+                if ($("#" + mobileblock).length > 0){
+                  $("#" + mobileblock).remove();
+                  $("#navbar-collapse").collapse("hide");
+                }
+                else {
+                  $("#main").prepend("<div id='"+ mobileblock +"'></div>");
+                  $("#navbar-collapse").collapse("show");
+                }
+              }
+            });
+            $("#" + mobileblock).on("click", function() {
+              $("#" + mobileblock).remove();
+              $("#navbar-collapse").collapse("hide");
+            });
+
             var timer;
             $(window).on("scroll resize", function () {
               clearInterval(timer);
