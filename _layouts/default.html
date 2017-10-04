@@ -73,13 +73,10 @@
               checkMobileMenu();
             });
           
-             if ($(window).scrollTop() < 150) { /* check once when page loads. If it should be hidden hide it immediately */
-                  $('#return-to-top').stop(true, true).fadeOut(1); 
-             }
             function checkContextButton(){
               if ($(window).scrollTop() >= 150) {
-                  $('#return-to-top').stop(true, false).fadeIn(250);
-              } else { $('#return-to-top').stop(true, false).fadeOut(250); }
+                  $('#return-to-top').stop(true, false).animate({ opacity: 1}, 250);
+              } else { $('#return-to-top').stop(true, false).animate({ opacity: 0}, 250); }
             }
 
             var scrollPosition = 0;
