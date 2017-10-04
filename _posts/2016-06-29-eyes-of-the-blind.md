@@ -1,4 +1,4 @@
-﻿---
+---
 title: Eyes of the Blind
 item_id: 24
 category: Tattoo
