@@ -73,6 +73,7 @@
               checkMobileMenu();
             });
           
+            checkContextButton(); /* check once on load */
             function checkContextButton(){
               if ($(window).scrollTop() >= 150) {
                   $('#return-to-top').stop(true, false).animate({ opacity: 1}, 250);
