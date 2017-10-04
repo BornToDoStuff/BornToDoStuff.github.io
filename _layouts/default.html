@@ -71,10 +71,12 @@
               currentPosition = $(window).scrollTop();
               if ($(window).width() < 768){ /* mobile size */
                 if ($(window).scrollTop() >= 150) {
-                  if (currentPosition > scrollPosition && down){ /*scrolling down*/
-                    $('nav.navbar').stop(true, false).slideUp(500);
-                    difference = 0;
-                    down = false;
+                  if (currentPosition > scrollPosition){ /*scrolling down*/
+                    if (down){
+                      $('nav.navbar').stop(true, false).slideUp(500);
+                      difference = 0;
+                      down = false;
+                    }
                   }
                   else { /*scrolling up*/
                     difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
