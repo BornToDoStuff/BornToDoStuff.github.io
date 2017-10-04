@@ -69,8 +69,7 @@
             /*if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu*/
             function checkMobileMenu(){
               currentPosition = $(window).scrollTop();
-              if $(window).width() < 768)
-              { /* mobile size */
+              if ($(window).width() < 768){ /* mobile size */
                 if ($(window).scrollTop() >= 150) {
                   if (currentPosition > scrollPosition && down){ /*scrolling down*/
                     $('nav.navbar').stop(true, false).slideUp(500);
