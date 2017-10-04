@@ -462,7 +462,7 @@ input, button{
 	background-color: transparent;
 }
 
-a.navbar-toggle {
+a#navbar-toggle {
 	float: right;
   padding: 12px 10px;
   margin: 5px 15px;
@@ -489,4 +489,13 @@ a.navbar-toggle {
 	.icon-bar:last-child{
 		margin-bottom: 0px;
 	}
+}
+
+#mobile-menu-block {
+	position: fixed;
+	height: 100vh;
+	width:100vw;
+	top: 0px;
+	left: 0px;
+	background: transparent;
 }

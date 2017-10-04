@@ -47,20 +47,34 @@
               }
             });
 
+            var mobileblock = "mobile-menu-block";
+            $("#navbar-toggle").on("click", function() {
+              if ($(window).width() < 768){ /* mobile size */
+                if ($("#" + mobileblock).length > 0){
+                  $("#" + mobileblock).remove();
+                  $("#navbar-collapse").collapse("hide");
+                }
+                else {
+                  $("#main").prepend("<div id='"+ mobileblock +"'></div>");
+                  $("#navbar-collapse").collapse("show");
+                }
+              }
+            });
+            $("#" + mobileblock).on("click", function() {
+              $("#" + mobileblock).remove();
+              $("#navbar-collapse").collapse("hide");
+            });
+
             var timer;
             $(window).on("scroll resize", function () {
               clearInterval(timer);
               timer = setInterval(checkContextButton, 150);
               checkMobileMenu();
             });
-
+            checkContextButton(); /* check once when page loads */
             function checkContextButton(){
-              if ($(window).scrollTop() >= 100) {
-                // if ($(window).scrollTop() + $(window).height() > $(document).height() - 150) { //if its close to the bottom
-                //   $('#return-to-top').stop(true, false).fadeOut(200); }
-                // else {
-                  $('#return-to-top').stop(true, false).fadeIn(350);
-                // }
+              if ($(window).scrollTop() >= 150) {
+                  $('#return-to-top').stop(true, false).fadeIn(250);
               } else { $('#return-to-top').stop(true, false).fadeOut(250); }
             }
 
@@ -75,7 +89,7 @@
                 if ($(window).scrollTop() >= 150) {
                   if (currentPosition > scrollPosition){ /*scrolling down*/
                     if (down){
-                      $('nav.navbar').stop(true, false).slideUp(200);
+                      $('nav.navbar').stop(true, false).slideUp(250);
                       difference = 0;
                       down = false;
                     }
@@ -83,13 +97,13 @@
                   else { /*scrolling up*/
                     difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
                     if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
-                      $('nav.navbar').stop(true, false).slideDown(200);
+                      $('nav.navbar').stop(true, false).slideDown(250);
                       down = true;
                     }
                   }
                 }
                 else if (!down) {
-                  $('nav.navbar').slideDown(500);
+                  $('nav.navbar').slideDown(250);
                   down = true;
                 }
               }
@@ -97,8 +111,6 @@
                 $('nav.navbar').removeAttr("style");
                 down = true;
               }
-
-
               scrollPosition = currentPosition;
             }
           });
