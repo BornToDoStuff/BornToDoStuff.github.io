@@ -63,11 +63,20 @@
             }
 
             var lowestPoint = 0;
+            var up = false;
             function checkMobileMenu(){ //if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu
-              if ($(window).scrollTop() >= 100 && $(window).width() < 768) {
+              if ($(window).width() < 768 && $(window).scrollTop() >= 100) {
                 $('nav.navbar').stop(true, false).slideUp(500);
-                if (lowestPoint < $(window).scrollTop())
+                if (up)
+                {
                   lowestPoint = $(window).scrollTop();
+                  return;
+                }
+                if (lowestPoint < $(window).scrollTop())
+                {
+                  lowestPoint = $(window).scrollTop();
+                  up = false;
+                }
               }
               else {
                 $('nav.navbar').stop(true, false).slideDown(200);
@@ -76,7 +85,7 @@
 
               if(lowestPoint > $(window).scrollTop() + 50) {
                 $('nav.navbar').stop(true, false).slideDown(200);
-                lowestPoint = $(window).scrollTop();
+                up = true;
               }
             }
           });
