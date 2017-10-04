@@ -22,7 +22,7 @@
         {% endif %}
         {{ content }}
 
-        <a href="#TippyTop">
+        <a id="navigation-wrapper" href="#TippyTop">
           <div id="return-to-top">
             <img src="{{site.baseurl}}/images/icons/chevron-up-white.svg" />
           </div>
@@ -59,9 +59,9 @@
                 // if ($(window).scrollTop() + $(window).height() > $(document).height() - 150) { //if its close to the bottom
                 //   $('#return-to-top').stop(true, false).fadeOut(200); }
                 // else {
-                  $('#return-to-top').stop(true, false).fadeIn(500);
+                  $('#return-to-top').stop(true, false).fadeIn(350);
                 // }
-              } else { $('#return-to-top').stop(true, false).fadeOut(200); }
+              } else { $('#return-to-top').stop(true, false).fadeOut(250); }
             }
 
             var scrollPosition = 0;

@@ -79,6 +79,47 @@ h4 {
 		margin-right: 5%;
 	}
 }
+#navigation-wrapper {
+	padding: 0px 20px;
+	max-width: 900px;
+	display: block;
+	position: fixed;
+	bottom: 10px;
+
+	@include small {
+		left: 0px;
+	}
+	@include medium {
+		left: 200px;
+	}
+	@include large {
+		left: 25%;
+    right: 5%;
+	}
+	@include xlarge {
+		left: 300px;
+		right: 5%;
+	}
+
+	#return-to-top {
+	  position: absolute;
+	  left: 50%;
+		margin-left: -25px;
+	  background: rgba(0, 0, 0, 0.5);
+	  width: 50px;
+	  height: 50px;
+		border-radius: 50px;
+		padding: 7px 10px;
+	  display: block;
+	  text-decoration: none;
+		z-index: 100;
+
+		&:hover {
+	    background: rgba(0, 0, 0, 0.7);
+		}
+	}
+}
+
 
 .search {
 	margin-bottom: 30px;
@@ -443,24 +484,5 @@ a.navbar-toggle {
 	}
 	.icon-bar:last-child{
 		margin-bottom: 0px;
-	}
-}
-
-#return-to-top {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-	margin-left: -25px;
-  background: rgba(0, 0, 0, 0.5);
-  width: 50px;
-  height: 50px;
-	border-radius: 50px;
-	padding: 7px 10px;
-  display: block;
-  text-decoration: none;
-	z-index: 100;
-
-	&:hover {
-    background: rgba(0, 0, 0, 0.7);
 	}
 }
