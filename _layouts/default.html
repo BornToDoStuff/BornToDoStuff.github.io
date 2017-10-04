@@ -62,9 +62,9 @@
               } else { $('#return-to-top').stop(true, false).fadeOut(200); }
             }
 
-            var lowestPoint;
+            var lowestPoint = 0;
             function checkMobileMenu(){ //if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu
-              if ($(window).scrollTop() >= 100) {
+              if ($(window).scrollTop() >= 100 && $(window).width() < 768) {
                 $('nav.navbar').stop(true, false).slideUp(500);
                 if (lowestPoint < $(window).scrollTop())
                   lowestPoint = $(window).scrollTop();
