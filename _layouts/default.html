@@ -90,7 +90,7 @@
                   if (currentPosition > scrollPosition){ /*scrolling down*/
                     if (down){
                       $("#navbar-collapse").collapse("hide");
-                      ("#" + mobileblock).remove();
+                      $("#" + mobileblock).remove();
                       $('nav.navbar').stop(true, false).slideUp(250);
                       difference = 0;
                       down = false;
@@ -111,6 +111,7 @@
               }
               else { /* desktop size */
                 $("#navbar-collapse").collapse("hide");
+                $("#" + mobileblock).remove();
                 $('nav.navbar').removeAttr("style");
                 down = true;
               }
