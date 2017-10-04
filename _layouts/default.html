@@ -62,30 +62,29 @@
               } else { $('#return-to-top').stop(true, false).fadeOut(200); }
             }
 
-            var lowestPoint = 0;
-            var up = false;
+            var scrollPosition = 0;
+            var currentPosition = 0;
+            var difference = 0;
             function checkMobileMenu(){ //if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu
-              if ($(window).width() < 768 && $(window).scrollTop() >= 100) {
-                $('nav.navbar').stop(true, false).slideUp(500);
-                if (up)
-                {
-                  lowestPoint = $(window).scrollTop();
+              currentPosition = $(window).scrollTop();
+              difference += scrollPosition - currentPosition;
+              if ($(window).width() < 768 && $(window).scrollTop() >= 150) {
+                if (currentPosition > scrollPosition){ //scrolling down
+                  $('nav.navbar').stop(true, false).slideUp(500);
                 }
-                if (lowestPoint < $(window).scrollTop())
-                {
-                  lowestPoint = $(window).scrollTop();
-                  up = false;
+                else { //scrolling up
+                  if (difference < 0)
+                    difference = 0;
+
+                  if (difference > 50){
+                    $('nav.navbar').stop(true, false).slideDown(500);
+                  }
                 }
               }
               else {
-                $('nav.navbar').stop(true, false).slideDown(200);
-                return;
+                $('nav.navbar').stop(true, false).slideDown(500);
               }
-
-              if(lowestPoint > $(window).scrollTop() + 50) {
-                $('nav.navbar').stop(true, false).slideDown(200);
-                up = true;
-              }
+              scrollPosition = currentPosition;
             }
           });
       </script>
