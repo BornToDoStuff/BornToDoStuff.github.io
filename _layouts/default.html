@@ -55,12 +55,12 @@
                   $("#navbar-collapse").collapse("hide");
                 }
                 else {
-                  $(body).prepend("<div id='"+ mobileblock +"'></div>");
+                  $("body").prepend("<div id='"+ mobileblock +"'></div>");
                   $("#navbar-collapse").collapse("show");
                 }
               }
             });
-            $(body).on("click","#" + mobileblock, function() {
+            $("body").on("click","#" + mobileblock, function() {
               $("#" + mobileblock).remove();
               $("#navbar-collapse").collapse("hide");
             });
