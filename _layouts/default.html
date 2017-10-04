@@ -60,7 +60,7 @@
                 }
               }
             });
-            $("body").on("click","#" + mobileblock, function() {
+            $("body").on("click touchstart","#" + mobileblock, function() {
               $("#" + mobileblock).remove();
               $("#navbar-collapse").collapse("hide");
             });
@@ -89,6 +89,7 @@
                 if ($(window).scrollTop() >= 150) {
                   if (currentPosition > scrollPosition){ /*scrolling down*/
                     if (down){
+                      $("#navbar-collapse").collapse("hide");
                       $('nav.navbar').stop(true, false).slideUp(250);
                       difference = 0;
                       down = false;
@@ -108,6 +109,7 @@
                 }
               }
               else { /* desktop size */
+                $("#navbar-collapse").collapse("hide");
                 $('nav.navbar').removeAttr("style");
                 down = true;
               }
