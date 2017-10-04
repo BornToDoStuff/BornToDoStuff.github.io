@@ -54,11 +54,12 @@
             });
 
             function checkContextButton(){
-              if ($(window).scrollTop() >= 50) {
-                if ($(window).scrollTop() + $(window).height() > $(document).height() - 150) { //if its close to the bottom
-                  $('#return-to-top').stop(true, false).fadeOut(200); }
-                else { $('#return-to-top').stop(true, false).fadeIn(500);
-              }
+              if ($(window).scrollTop() >= 100) {
+                // if ($(window).scrollTop() + $(window).height() > $(document).height() - 150) { //if its close to the bottom
+                //   $('#return-to-top').stop(true, false).fadeOut(200); }
+                // else {
+                  $('#return-to-top').stop(true, false).fadeIn(500);
+                // }
               } else { $('#return-to-top').stop(true, false).fadeOut(200); }
             }
 
@@ -73,7 +74,7 @@
                 if ($(window).scrollTop() >= 150) {
                   if (currentPosition > scrollPosition){ /*scrolling down*/
                     if (down){
-                      $('nav.navbar').stop(true, false).slideUp(500);
+                      $('nav.navbar').stop(true, false).slideUp(200);
                       difference = 0;
                       down = false;
                     }
@@ -81,7 +82,7 @@
                   else { /*scrolling up*/
                     difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
                     if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
-                      $('nav.navbar').stop(true, false).slideDown(500);
+                      $('nav.navbar').stop(true, false).slideDown(200);
                       down = true;
                     }
                   }

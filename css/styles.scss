@@ -208,6 +208,9 @@ input, button{
 	padding-bottom: 20px;
 	text-align: center;
 
+	@include mobile {
+		padding-bottom: 50px;
+	}
 	li {
 		display: inline-block;
 	}
@@ -223,21 +226,21 @@ input, button{
 	.circle {
 		position: relative;
     display: inline-block;
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
 		border: 2px solid #5c5f6d;
-    border-radius: 45px;
+    border-radius: 50px;
     text-align: center;
 		vertical-align: middle;
     background: $backgroundLight;
-    padding: 6px;
+    padding: 8px;
     font-size: 40px;
     z-index: 10;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 		box-shadow: $boxshadow;
 
 		@include mobile {
-			padding-top: 8px;
+			padding-top: 10px;
 		}
 	}
 	.top .circle {
@@ -267,13 +270,13 @@ input, button{
 	}
 	.pager a:hover .circle:after {
     content: "";
-    height: 45px;
-    width: 45px;
+    height: 50px;
+    width: 50px;
     background: $transp_lightBlue;
     position: absolute;
     top: -2px;
     left: -2px;
-    border-radius: 45px;
+    border-radius: 50px;
 }
 
 #tags-list {
