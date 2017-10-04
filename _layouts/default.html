@@ -69,25 +69,32 @@
             /*if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu*/
             function checkMobileMenu(){
               currentPosition = $(window).scrollTop();
-              difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
-              if ($(window).width() < 768 && $(window).scrollTop() >= 150) {
-                if (currentPosition > scrollPosition && down){ /*scrolling down*/
-                  $('nav.navbar').stop(true, false).slideUp(500);
-                  down = false;
-                }
-                else { /*scrolling up*/
-                  if (difference < 0) difference = 0; /*reset once the screen starts going up*/
-                  if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
-                    $('nav.navbar').stop(true, false).slideDown(500);
-                    down = true;
+              if $(window).width() < 768)
+              { /* mobile size */
+                if ($(window).scrollTop() >= 150) {
+                  if (currentPosition > scrollPosition && down){ /*scrolling down*/
+                    $('nav.navbar').stop(true, false).slideUp(500);
+                    difference = 0;
+                    down = false;
+                  }
+                  else { /*scrolling up*/
+                    difference += currentPosition - scrollPosition; /*difference is the change between the last positions*/
+                    if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
+                      $('nav.navbar').stop(true, false).slideDown(500);
+                      down = true;
+                    }
                   }
                 }
+                else if (!down) {
+                  $('nav.navbar').slideDown(500);
+                  down = true;
+                }
               }
-              else if (!down) {
-                $('nav.navbar').slideDown(500);
-                $('nav.navbar').removeAttr("style"); //reset styles
+              else { /* desktop size */
+                $('nav.navbar').removeAttr("style");
                 down = true;
               }
+
 
               scrollPosition = currentPosition;
             }
