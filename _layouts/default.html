@@ -60,7 +60,7 @@
                 }
               }
             });
-            $("body").on("click touchstart","#" + mobileblock, function() {
+            $("body").on("click touchend","#" + mobileblock, function() {
               $("#" + mobileblock).remove();
               $("#navbar-collapse").collapse("hide");
             });
@@ -90,6 +90,7 @@
                   if (currentPosition > scrollPosition){ /*scrolling down*/
                     if (down){
                       $("#navbar-collapse").collapse("hide");
+                      ("#" + mobileblock).remove();
                       $('nav.navbar').stop(true, false).slideUp(250);
                       difference = 0;
                       down = false;
