@@ -55,6 +55,7 @@
                   $("#navbar-collapse").collapse("hide");
                 }
                 else {
+                  $('nav.navbar').removeAttr("style");
                   $("body").prepend("<div id='"+ mobileblock +"'></div>");
                   $("#navbar-collapse").collapse("show");
                 }
