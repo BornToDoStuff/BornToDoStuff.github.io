@@ -56,26 +56,27 @@
             function checkContextButton(){
               if ($(window).scrollTop() >= 50) {
                 if ($(window).scrollTop() + $(window).height() > $(document).height() - 150) { //if its close to the bottom
-                  $('#return-to-top').stop(true, true).fadeOut(200); }
-                else { $('#return-to-top').stop(true, true).fadeIn(500);
+                  $('#return-to-top').stop(true, false).fadeOut(200); }
+                else { $('#return-to-top').stop(true, false).fadeIn(500);
               }
-              } else { $('#return-to-top').stop(true, true).fadeOut(200); }
+              } else { $('#return-to-top').stop(true, false).fadeOut(200); }
             }
 
-            var lastHeight;
+            var lowestPoint;
             function checkMobileMenu(){ //if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu
               if ($(window).scrollTop() >= 100) {
-                $('nav.navbar').stop(true, true).slideUp(500);
-                lastHeight = $(window).scrollTop();
+                $('nav.navbar').stop(true, false).slideUp(500);
+                if (lowestPoint < $(window).scrollTop())
+                  lowestPoint = $(window).scrollTop();
               }
               else {
-                $('nav.navbar').stop(true, true).slideDown(200);
+                $('nav.navbar').stop(true, false).slideDown(200);
                 return;
               }
 
-              if(lastHeight > $(window).scrollTop() + 50) {
-                $('nav.navbar').stop(true, true).slideDown(200);
-                lastHeight = $(window).scrollTop();
+              if(lowestPoint > $(window).scrollTop() + 50) {
+                $('nav.navbar').stop(true, false).slideDown(200);
+                lowestPoint = $(window).scrollTop();
               }
             }
           });
