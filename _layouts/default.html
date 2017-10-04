@@ -77,7 +77,7 @@
                     down = false;
                   }
                   else { /*scrolling up*/
-                    difference += currentPosition - scrollPosition; /*difference is the change between the last positions*/
+                    difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
                     if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
                       $('nav.navbar').stop(true, false).slideDown(500);
                       down = true;
