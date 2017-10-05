@@ -374,17 +374,20 @@ input, button{
 	.pagination > li {
 		display: inline-block;
 		background: $backgroundLight;
-		border: 1px solid $bluakMedium;
+		border: 2px solid $bluakMedium;
 		border-radius: 50px;
 		height: 50px;
     width: 50px;
 		font-size: 2rem;
     vertical-align: middle;
 
+		@include mobile {
+			.extra { display: none; }
+		}
 
 		a {
 			display: block;
-			padding: 12px 5px;
+			padding: 15px 5px;
 			border-radius: 50px;
 
 			&:hover {
