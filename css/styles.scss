@@ -375,27 +375,30 @@ input, button{
 		display: inline-block;
 		background: $backgroundLight;
 		border: 1px solid $bluakMedium;
-		border-radius: 40px;
-    width: 40px;
-    height: 40px;
+		border-radius: 50px;
+		height: 50px;
+    width: 50px;
+		font-size: 2rem;
     vertical-align: middle;
+
 
 		a {
 			display: block;
-			padding: 8px 5px;
-	    height: 100%;
-			border-radius: 40px;
+			padding: 12px 5px;
+			border-radius: 50px;
+
 			&:hover {
 				background: $transp_lightBlue
 			}
 		}
-		&:first-child, &:last-child {
+		&:first-child a, &:last-child a {
+			padding: 8px 5px;
 			height: 50px;
 	    width: 50px;
 	    font-size: 4rem;
 	    line-height: 26px;
-			border-width: 2px;
 		}
+		&:first-child a { margin-left: -3px }
 	}
 
 .navbar-fixed-side {
