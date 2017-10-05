@@ -51,6 +51,7 @@ tags:
 item_idea:
 item_co_creator:
 item_updated:
+last_modified_at:
 ---
 
 content goes here

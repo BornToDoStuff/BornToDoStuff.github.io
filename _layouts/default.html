@@ -55,6 +55,7 @@
                   $("#navbar-collapse").collapse("hide");
                 }
                 else {
+                  $('nav.navbar').removeAttr("style");
                   $("body").prepend("<div id='"+ mobileblock +"'></div>");
                   $("#navbar-collapse").collapse("show");
                 }
@@ -71,11 +72,12 @@
               timer = setInterval(checkContextButton, 150);
               checkMobileMenu();
             });
-            checkContextButton(); /* check once when page loads */
+          
+            checkContextButton(); /* check once on load */
             function checkContextButton(){
               if ($(window).scrollTop() >= 150) {
-                  $('#return-to-top').stop(true, false).fadeIn(250);
-              } else { $('#return-to-top').stop(true, false).fadeOut(250); }
+                  $('#return-to-top').stop(true, false).animate({ opacity: 1}, 250);
+              } else { $('#return-to-top').stop(true, false).animate({ opacity: 0}, 250); }
             }
 
             var scrollPosition = 0;
