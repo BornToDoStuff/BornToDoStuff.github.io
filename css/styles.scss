@@ -3,7 +3,7 @@
 
 @import "reset";
 @import "variables";
-@import "scrollbar";
+// @import "scrollbar";
 @import "custom-bootstrap";
 
 html{
@@ -234,7 +234,19 @@ item-tag {
 item-tag:hover { background: rgba(0,0,0,0.1); }
 
 .read-more {
+	display: inline-block;
+	text-align: center;
+	padding: 5px;
+	height: 30px;
+	width: 30px;
+	line-height: 17px;
+	border-radius: 30px;
+	background: $transp_lightBlue;
 	font-size: 2.5rem;
+
+	&:hover {
+		background: $transp_lightGray;
+	}
 }
 .form-control, .btn-default {
 	border: 1px solid $mediumGray;
@@ -351,7 +363,7 @@ input, button{
 
 	.active {
 		background: $blue;
-    border-color: $blue;
+    border-color: $mediumGray;
 		a { color: $white;}
 	}
 }
@@ -359,22 +371,23 @@ input, button{
 		display: inline-block;
 		background: $backgroundLight;
 		border: 1px solid $mediumGray;
-		margin-left: -5px;
+		border-radius: 40px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
 
 		a {
 			display: block;
-			padding: 8px 12px;
-			&:hover { background: rgba(0,0,0,0.1); }
+			padding: 8px 5px;
+	    height: 100%;
+			&:hover { background: $transp_lightGray }
 		}
-		&:first-child {
-			margin-left: 0;
-			border-bottom-left-radius: 4px;
-    	border-top-left-radius: 4px;
-		}
-		&:last-child {
-			margin-right: 0;
-			border-bottom-right-radius: 4px;
-    	border-top-right-radius: 4px;
+		&:first-child, &:last-child {
+			height: 50px;
+	    width: 50px;
+	    margin-bottom: 0px;
+	    font-size: 4rem;
+	    line-height: 28px;
 		}
 	}
 
