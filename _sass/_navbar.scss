@@ -98,15 +98,16 @@
 }
 #navbar-header {
   width: 100%;
+
   @include desktop{
-    width: 25%;
+    width: initial;
     float: left;
+    padding-right: 15px;
   }
 }
 #navbar-brand {
   display: block;
   height: 100%;
-  width: 100%;
 }
 
 #navbar-content {
@@ -135,7 +136,7 @@
     display: block;
     height: 100%;
     width: 100%;
-    padding: 0px 10px;
+    padding: 0px 20px;
   }
 
   @include mobile {
@@ -190,11 +191,12 @@
 #navbar-toggle {
 	float: right;
   padding: 12px 10px;
-  margin: 5px 15px;
+  margin: 5px 20px;
   background: transparent;
   border: 1px solid $transp_lightGray;
   border-radius: 40px;
 	cursor: pointer;
+  z-index: 10;
 
 	@include desktop{
 		display:none;
