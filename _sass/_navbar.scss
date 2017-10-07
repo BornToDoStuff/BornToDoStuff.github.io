@@ -87,17 +87,37 @@
 #navbar {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  background: $backgroundLight;
+  z-index: 1000;
+}
+#navbar-header {
+  width: 100%;
+  @include desktop{
+    width: 25%;
+    float: left;
+  }
+}
+#navbar-content {
+  width: 100%;
+  @include desktop{
+    width: 75%;
+    float: left;
+  }
 }
 
-#navbar li { position: relative; }
+#navbar li {
+  position: relative;
+  background: $backgroundLight;
+}
 
 #navbar #navbar-content > ul {
   height: 50px;
-
-  & > li {
+  & > li { float: left; }
+  & > li a {
     width: 25%;
     height: 100%;
-    float: left;
   }
 }
 

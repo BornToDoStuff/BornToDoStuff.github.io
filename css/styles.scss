@@ -18,7 +18,6 @@ body {
 
 	@include desktop {
 		line-height: $normal;
-		min-width: 100vw;
 	  overflow-x: hidden;
 	}
 	@include mobile {
@@ -75,59 +74,46 @@ h4 {
   border-bottom: none;
 }
 
-#content {
+.width-wrapper {
+	margin-top: 75px;
   display: block;
   position: relative;
   max-width: 1200px;
-  margin: 0px 20px;
-
-	@include large {
-		margin: 0px 8%;
+  margin: 0px auto;
+	padding: 0px 20px;
+	@include medium {
+		padding: 0px 12%;
 	}
-	@include xlarge {
-		margin: 0px auto;
+	@include large-up {
+		padding: 0px 8%;
 	}
 }
 
-#main {
+#main-wrapper {
 	display: block;
-	position: absolute;
-	max-width: 100%;
+	position: relative;
+	float: left;
+	width: 100%;
 
-	@include small {
-		position: relative;
+	@include large-up {
+		width: 75%;
 	}
-	@include medium {
-		left: 5%;
-		right: 270px;
-	}
-	@include large {
-	  left: 5%;
-		right: 320px;
-	}
-	@include xlarge {
-		left: 0;
-		right: 320px;
+}
+#main {
+	@include large-up {
+		margin-left: 20px;
 	}
 }
 
 #sidebar {
 	display: block;
+	position: relative;
+	float: right;
 	min-height: 500px;
-	position: absolute;
-	right: 0;
+	width: 100%;
 
-	@include small {
-		position: relative;
-	}
-  @include medium {
-  	width: 250px;
-	}
-	@include large {
-		width: 300px;
-	}
-	@include xlarge {
-		width: 300px;
+	@include large-up {
+		width: 25%;
 	}
 }
 
@@ -135,11 +121,14 @@ h4 {
 	max-width: 1200px;
 	display: block;
 	position: fixed;
-	max-width: 1200px;
-  margin: 0px 20px;
-
-	@include xlarge {
-		margin: 0px 8%;
+	bottom: 0px;
+	
+	@include mobile {
+		left: 20px;
+		right: 20px;
+	}
+	@include desktop {
+		width: 100%;
 	}
 
 	#return-to-top {
