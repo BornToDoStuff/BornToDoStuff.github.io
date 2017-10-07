@@ -16,26 +16,30 @@
   <body>
     {% include navigation.html %}
     <a id="TippyTop"></a>
-    <div id="main" role="main">
-        {% if page.search %}
-          {% include search-form.html %}
-        {% endif %}
-        {{ content }}
+    <section id="content">
+      <div id="main" role="main">
+          {% if page.search %}
+            {% include search-form.html %}
+          {% endif %}
+          {{ content }}
 
-        <div id="navigation-wrapper">
-          <a id="return-to-top" href="#TippyTop">
-            <img alt="white chevron" src="{{site.baseurl}}/images/icons/chevron-up-white.svg" />
-          </a>
-        </div>
-    </div>
+          <div id="navigation-wrapper">
+            <a id="return-to-top" href="#TippyTop">
+              <img alt="white chevron" src="{{site.baseurl}}/images/icons/chevron-up-white.svg" />
+            </a>
+          </div>
+      </div>
+      <div id="sidebar">
+      </div>
+    </section>
     <div>
       <script src="{{ site.baseurl }}/js/scripts.js"></script>
       <script>
         $(document).ready(function(){
           //if a link starts with "#" make it animate to that position and prevent adding it to the url
           $('a[href^="#"]').on("click touchend", function (e) {
-              e.preventDefault();
               if (this.hash != ""){ //watch for empty hashes
+                e.preventDefault();
                 var $target = $(this.hash);
                 var top = $target.offset().top - 50
                 if (top < 0)
@@ -52,18 +56,18 @@
               if ($(window).width() < 768){ /* mobile size */
                 if ($("#" + mobileblock).length > 0){
                   $("#" + mobileblock).remove();
-                  $("#navbar-collapse").collapse("hide");
+                  $("#navbar-content").slideUp(150);
                 }
                 else {
                   $('nav.navbar').removeAttr("style");
                   $("body").prepend("<div id='"+ mobileblock +"'></div>");
-                  $("#navbar-collapse").collapse("show");
+                  $("#navbar-content").slideDown(150);
                 }
               }
             });
             $("body").on("click touchend","#" + mobileblock, function() {
               $("#" + mobileblock).remove();
-              $("#navbar-collapse").collapse("hide");
+              $("#navbar-content").slideUp(150);
             });
 
             var timer;

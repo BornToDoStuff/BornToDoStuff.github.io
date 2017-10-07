@@ -63,56 +63,84 @@ h4 {
   cursor: default !important;
 }
 
-#main {
-	padding: 20px;
-	max-width: 900px;
+.caret {
+	display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+	border: 4px solid transparent;
+  border-top-color: $gray;
+  border-bottom: none;
+}
 
-	@include small {
-		margin-top: 75px;
-		margin-left: 0px;
-	}
-	@include medium {
-		margin-left: 200px;
-	}
-	@include large {
-		margin-left: 25%;
-    margin-right: 5%;
-	}
+#content {
+  display: block;
+  position: relative;
+  max-width: 1200px;
+  margin: 0px 20px;
+
 	@include xlarge {
-		margin-left: 300px;
-		margin-right: 5%;
+		margin: 0px 8%;
 	}
 }
-#navigation-wrapper {
-	padding: 0px 20px;
-	max-width: 900px;
+
+#main {
 	display: block;
-	position: fixed;
-	bottom: 0px;
-	z-index: 100;
+	position: absolute;
+	max-width: 100%;
 
 	@include small {
-		left: 0px;
-		right: 0px;
+		position: relative;
 	}
 	@include medium {
-		left: 200px;
-		right: -10px; /* because of scrollbar??? */
+		left: 5%;
+		right: 270px;
 	}
 	@include large {
-		left: 25%;
-    right: 4%; /* because of scrollbar??? */
+	  left: 5%;
+		right: 320px;
 	}
 	@include xlarge {
-		left: 300px;
-		right: 5%;
+		left: 0;
+		right: 320px;
+	}
+}
+
+#sidebar {
+	display: block;
+	min-height: 500px;
+	position: absolute;
+	right: 0;
+
+	@include small {
+		position: relative;
+	}
+  @include medium {
+  	width: 250px;
+	}
+	@include large {
+		width: 300px;
+	}
+	@include xlarge {
+		width: 300px;
+	}
+}
+
+#navigation-wrapper {
+	max-width: 1200px;
+	display: block;
+	position: fixed;
+	max-width: 1200px;
+  margin: 0px 20px;
+
+	@include xlarge {
+		margin: 0px 8%;
 	}
 
 	#return-to-top {
-	  position: absolute;
-	  left: 50%;
+		position: absolute;
 		bottom: 10px;
-		margin-left: -25px;
 	  background: rgba(0, 0, 0, 0.5);
 	  width: 50px;
 	  height: 50px;
@@ -122,13 +150,19 @@ h4 {
     opacity: 0;
 	  text-decoration: none;
 
+		@include mobile {
+		  left: 50%;
+			margin-left: -25px;
+		}
+		@include desktop {
+			left: 10px;
+		}
 
 		&:hover {
 	    background: rgba(0, 0, 0, 0.7);
 		}
 	}
 }
-
 
 .search {
 	margin-bottom: 30px;
@@ -144,7 +178,7 @@ magic-spell {
 	color: $gray;
 }
 
-magic-item, item-details, .page {
+magic-item, item-details, .page, #sidebar {
 	position: relative;
 	display: block;
 	padding: 20px 15px;
@@ -385,7 +419,7 @@ input, button{
 
 		a {
 			display: block;
-			padding: 15px 5px;
+			padding: 12px 5px;
 			border-radius: 50px;
 
 			&:hover {
@@ -406,121 +440,6 @@ input, button{
 			display: none;
 		}
 	}
-
-.navbar-fixed-side {
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-	background: $backgroundLight;
-	position: fixed;
-	border-radius: 0;
-	border: 0;
-
-	@include desktop {
-    height: 100vh;
-    width: 200px;
-		border-right: 2px solid $bluakMedium;
-	}
-	@include mobile {
-		border-bottom: 2px solid $bluakMedium;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 100;
-	}
-}
-	.navbar-fixed-side a {
-		color: $gray;
-		padding: 15px;
-		display: block;
-	}
-
-	.navbar-fixed-side .navbar-header{
-		float: none;
-	}
-	.navbar-fixed-side .navbar-brand{
-		float: left;
-		color: $bluakDark;
-		font-size: 1.8rem;
-	}
-	.navbar-fixed-side #navbar-collapse {
-		border-top: 1px solid $transp_lightGray;
-		clear: both;
-		overflow: hidden;
-
-		@include desktop {
-			display: block;
-			height: auto !important;
-			position: static;
-		}
-	}
-	.navbar-fixed-side .navbar-nav {
-		float: none;
-		padding: 0px;
-		list-style: none;
-
-		a {
-			@include desktop{
-				padding-top: 10px;
-				padding-bottom: 10px;
-				border-bottom: 1px solid $transp_lightGray;
-			}
-			&:hover {
-				color: $darkGray;
-				background-color: $transp_lightBlue;
-			}
-		}
-		.collapse.in, .collapsing {
-		 border-top: 1px solid $transp_lightGray;
-		 border-bottom: 1px solid $transp_lightGray;
-		}
-		.collapse a, .collapsing a {
-			padding-left: 20px;
-		}
-		.collapse a:before, .collapsing a:before {
-			content: "-";
-			font-weight: bold;
-			padding-right: 10px;
-		}
-	}
-	 .navbar-nav .collapse.in {
-		border-top: 1px solid $transp_lightGray;
-		border-bottom: 1px solid $transp_lightGray;
-	}
-
-.dropdown-toggle {
-	background-color: rgba(0,0,0,0.1);
-}
-.dropdown-toggle.collapsed{
-	background-color: transparent;
-}
-
-a#navbar-toggle {
-	float: right;
-  padding: 12px 10px;
-  margin: 5px 15px;
-  background: transparent;
-  border: 1px solid $transp_lightGray;
-  border-radius: 40px;
-	cursor: pointer;
-	@include desktop{
-		display:none;
-	}
-	&:hover {
-		color: $darkGray;
-		background-color: $transp_lightBlue;
-	}
-
-	.icon-bar {
-		display: block;
-    width: 18px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: $gray;
-		margin-bottom: 4px;
-	}
-	.icon-bar:last-child{
-		margin-bottom: 0px;
-	}
-}
 
 #mobile-menu-block {
 	position: fixed;
