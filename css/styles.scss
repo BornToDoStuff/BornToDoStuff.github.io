@@ -4,6 +4,7 @@
 @import "reset";
 @import "variables";
 // @import "scrollbar";
+@import "navbar";
 @import "custom-bootstrap";
 
 html{
@@ -80,8 +81,11 @@ h4 {
   max-width: 1200px;
   margin: 0px 20px;
 
-	@include xlarge {
+	@include large {
 		margin: 0px 8%;
+	}
+	@include xlarge {
+		margin: 0px auto;
 	}
 }
 
@@ -179,22 +183,25 @@ magic-spell {
 }
 
 magic-item, item-details, .page, #sidebar {
-	position: relative;
 	display: block;
 	padding: 20px 15px;
 	text-align: justify;
-	margin-bottom: 15px;
 	background: $backgroundLight;
 	border: 0px;
 	border-bottom: 2px solid $bluakMedium;
 	border-top: 2px solid $bluakMedium;
-	overflow-y: hidden;
 	box-shadow: $boxshadow;
-	transition: max-height 0.5s;
 
 	@include mobile {
 		text-align: left;
 	}
+}
+
+magic-item, item-details, .page {
+	position: relative;
+	margin-bottom: 15px;
+	overflow-y: hidden;
+	transition: max-height 0.5s;
 
 	item-description {
 		line-height: $normal;
