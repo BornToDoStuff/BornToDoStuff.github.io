@@ -100,14 +100,16 @@
   width: 100%;
 
   @include desktop{
-    width: initial;
+    width: 25%;
+    max-width: 200px;
     float: left;
-    padding-right: 15px;
   }
 }
 #navbar-brand {
   display: block;
   height: 100%;
+	color: $bluakDark;
+	font-size: 1.8rem;
 }
 
 #navbar-content {
@@ -128,20 +130,26 @@
   padding: 0px;
   list-style: none;
 
-  & > li {
-    float: left;
+  @include mobile {
+    border-bottom: 2px solid $bluakMedium;
   }
-  & > li a {
+}
+#navbar #navbar-content > ul > li {
+  float: left;
+
+  @include desktop { border-left: 1px solid $lightGray; }
+  &:last-child {
+    @include desktop { border-right: 1px solid $lightGray; }
+  }
+
+  a {
     display: block;
     height: 100%;
     width: 100%;
     padding: 0px 20px;
   }
-
-  @include mobile {
-    border-bottom: 2px solid $bluakMedium;
-  }
 }
+
 #navbar-content li:hover > a.dropdown-toggle, #navbar-content li > a:hover { background: $transp_lightBlue; }
 
 #navbar li ul {
@@ -160,7 +168,7 @@
   @include mobile {
     border: 0px;
     border-top: 2px solid $transp_lightGray;
-    border-bottom: 2px solid $transp_lightGray;
+    // border-bottom: 2px solid $transp_lightGray;
   }
 }
 
@@ -188,7 +196,9 @@
 }
 
 #navbar-toggle {
-	float: right;
+	position: absolute;
+  top: 0px;
+  right: 0px;
   padding: 12px 10px;
   margin: 5px 20px;
   background: transparent;

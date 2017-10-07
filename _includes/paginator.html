@@ -15,7 +15,7 @@
     {% assign last_page = false %}
   {%- endif -%}
 
-  <nav aria-label="Page navigation" class="text-center">
+  <nav class="page-navigation" aria-label="page navigation">
     <ul class="pagination">
       {% if paginator.previous_page %}
         <li class="extra"><a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">&laquo;</a></li>

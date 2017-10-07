@@ -16,24 +16,24 @@
   <body>
     {% include navigation.html %}
     <a id="TippyTop"></a>
-    <section class="width-wrapper">
+    <div class="width-wrapper">
       <div id="main-wrapper">
-        <div id="main" role="main">
+        <section id="main" role="main">
             {% if page.search %}
               {% include search-form.html %}
             {% endif %}
             {{ content }}
+        </section>
+      </div>
+      <section id="sidebar">
+      </section>
 
-            <div id="navigation-wrapper">
-              <a id="return-to-top" href="#TippyTop">
-                <img alt="white chevron" src="{{site.baseurl}}/images/icons/chevron-up-white.svg" />
-              </a>
-            </div>
-        </div>
+      <div id="navigation-fixed">
+        <a id="return-to-top" href="#TippyTop">
+          <img alt="white chevron" src="{{site.baseurl}}/images/icons/chevron-up-white.svg" />
+        </a>
       </div>
-      <div id="sidebar">
-      </div>
-    </section>
+    </div>
     <div>
       <script src="{{ site.baseurl }}/js/scripts.js"></script>
       <script>

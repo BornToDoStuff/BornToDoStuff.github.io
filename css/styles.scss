@@ -117,43 +117,54 @@ body > .width-wrapper { margin-top: 75px; }
 	}
 }
 
-#navigation-wrapper {
-	max-width: 1200px;
+#navigation-fixed {
+	max-width: 1400px;
 	display: block;
 	position: fixed;
 	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0px auto;
+	z-index: 1000;
 
-	@include mobile {
+	@include small {
 		left: 20px;
 		right: 20px;
 	}
-	@include desktop {
-		width: 100%;
+	@include medium {
+		padding: 0px 12%;
+	}
+	@include large-up {
+		padding: 0px 80px;
+	}
+}
+
+#return-to-top {
+	position: relative;
+	bottom: 10px;
+	background: rgba(0, 0, 0, 0.5);
+	width: 50px;
+	height: 50px;
+	border-radius: 50px;
+	padding: 7px 10px;
+	display: block;
+	opacity: 0;
+	text-decoration: none;
+
+	@include small {
+		left: 50%;
+		margin-left: -25px;
+	}
+	@include medium {
+		float: right;
+		right: -75px;
+	}
+	@include large-up {
+		float: right;
 	}
 
-	#return-to-top {
-		position: absolute;
-		bottom: 10px;
-	  background: rgba(0, 0, 0, 0.5);
-	  width: 50px;
-	  height: 50px;
-		border-radius: 50px;
-		padding: 7px 10px;
-	  display: block;
-    opacity: 0;
-	  text-decoration: none;
-
-		@include mobile {
-		  left: 50%;
-			margin-left: -25px;
-		}
-		@include desktop {
-			right: 10px;
-		}
-
-		&:hover {
-	    background: rgba(0, 0, 0, 0.7);
-		}
+	&:hover {
+		background: rgba(0, 0, 0, 0.7);
 	}
 }
 
@@ -289,16 +300,12 @@ input, button{
 	line-height: $normal;
 }
 
-.text-center { text-align: center; }
 .pull-right { float: right; }
 .pull-left { float: left;  }
 
 .pager {
 	padding-left: 0px;
 	list-style: none;
-	padding-top: 10px;
-	padding-bottom: 45px;
-	text-align: center;
 
 	li {
 		display: inline-block;
@@ -391,8 +398,6 @@ input, button{
 .pagination {
 	display: inline-block;
 	padding-left: 0px;
-	margin-bottom: 60px;
-	margin-top: 10px;
 
 	.active {
 		background: $blue;
@@ -436,6 +441,12 @@ input, button{
 			display: none;
 		}
 	}
+
+.page-navigation {
+	margin-top: 10px;
+	margin-bottom: 20px;
+	text-align: center;
+}
 
 #mobile-menu-block {
 	position: fixed;
