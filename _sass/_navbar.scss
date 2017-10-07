@@ -91,6 +91,10 @@
   right: 0;
   background: $backgroundLight;
   z-index: 1000;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-bottom: 2px solid $bluakMedium;
+  line-height: 50px;
+
 }
 #navbar-header {
   width: 100%;
@@ -99,6 +103,12 @@
     float: left;
   }
 }
+#navbar-brand {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
 #navbar-content {
   width: 100%;
   @include desktop{
@@ -114,17 +124,44 @@
 
 #navbar #navbar-content > ul {
   height: 50px;
-  & > li { float: left; }
-  & > li a {
+  padding: 0px;
+  list-style: none;
+
+  & > li {
+    float: left;
     width: 25%;
+  }
+  & > li a {
+    display: block;
     height: 100%;
+    width: 100%;
+    padding: 0px 10px;
+  }
+
+  @include mobile {
+    border-bottom: 2px solid $bluakMedium;
   }
 }
+#navbar-content li:hover > a.dropdown-toggle, #navbar-content li > a:hover { background: $transp_lightBlue; }
 
 #navbar li ul {
   display: block;
   position: absolute;
-  top: 100%;
+  top: 50px;
+  width: 100%;
+  padding: 0px;
+  list-style: none;
+  box-shadow: $boxshadow;
+  z-index: -1;
+  border-left: 1px solid $lightGray;
+  border-right: 1px solid $lightGray;
+  border-bottom: 2px solid $bluakMedium;
+
+  @include mobile {
+    border: 0px;
+    border-top: 2px solid $transp_lightGray;
+    border-bottom: 2px solid $transp_lightGray;
+  }
 }
 
 @include mobile {
@@ -144,6 +181,10 @@
   #navbar li ul {
     position: static;
   }
+}
+
+.dropdown-toggle {
+  cursor: pointer;
 }
 
 #navbar-toggle {

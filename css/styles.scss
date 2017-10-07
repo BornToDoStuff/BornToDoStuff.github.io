@@ -75,17 +75,16 @@ h4 {
 }
 
 .width-wrapper {
-	margin-top: 75px;
   display: block;
   position: relative;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0px auto;
 	padding: 0px 20px;
 	@include medium {
 		padding: 0px 12%;
 	}
 	@include large-up {
-		padding: 0px 8%;
+		padding: 0px 80px;
 	}
 }
 
@@ -122,7 +121,7 @@ h4 {
 	display: block;
 	position: fixed;
 	bottom: 0px;
-	
+
 	@include mobile {
 		left: 20px;
 		right: 20px;
@@ -148,7 +147,7 @@ h4 {
 			margin-left: -25px;
 		}
 		@include desktop {
-			left: 10px;
+			right: 10px;
 		}
 
 		&:hover {
