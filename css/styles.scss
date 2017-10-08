@@ -80,10 +80,14 @@ h4 {
   max-width: 1400px;
   margin: 0px auto;
 	padding: 0px 20px;
+
 	@include medium {
 		padding: 0px 12%;
 	}
-	@include large-up {
+	@include large {
+		padding-left: 80px;
+	}
+	@include xlarge {
 		padding: 0px 80px;
 	}
 }

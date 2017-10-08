@@ -1,5 +1,6 @@
 
 <!-- search logic -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
 <script src="{{ site.baseurl }}/js/search-index.js"></script>
 <script id="result-template" type="x-tmpl-mustache">
   {% raw %}
@@ -16,7 +17,7 @@
 <script>
   $(document).ready(function() {
     var searchbox = $('#search');
-    var searchResults = $('#searchResults');
+    var searchResults = $('#search-results');
     var template = $('#result-template').html();
     Mustache.parse(template);
 
@@ -38,15 +39,15 @@
       searchResults.empty();
 
       if (results.length) {
-      for (var item in results){
-        var ref = results[item].ref;
-        var result = item_cache[ref];
-        loadResult(result);
+        for (var item in results){
+          var ref = results[item].ref;
+          var result = item_cache[ref];
+          loadResult(result);
+        }
       }
-    }
-    else {
-      searchResults.html("<magic-item><item-name>There's nothing here</item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
-    }
+      else {
+        searchResults.html("<magic-item><item-name>There's nothing here</item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
+      }
       //hide all normal elements and just show searched elements
       $("<style id='search-style' type='text/css'> magic-item, .pagination{display:none} #searchResults magic-item{display:block}</style>").appendTo("head")
     }
@@ -60,6 +61,13 @@
     function loadResult(result) {
       searchResults.append(Mustache.render(template, result));
     };
+
+    var searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get("q") != "")
+    {
+      searchbox.val(searchParams.get("q"));
+      search();
+    }
   });
 </script>
 <!-- end search logic --

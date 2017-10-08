@@ -1,0 +1,92 @@
+<script src="{{ site.baseurl }}/js/scripts.js"></script>
+<script>
+  $(document).ready(function(){
+    //if a link starts with "#" make it animate to that position and prevent adding it to the url
+    $('a[href^="#"]').on("click touchend", function (e) {
+        if (this.hash != ""){ //watch for empty hashes
+          e.preventDefault();
+          var $target = $(this.hash);
+          var top = $target.offset().top - 50
+          if (top < 0)
+            top += 50;
+
+          $('html, body').stop().animate({
+              'scrollTop': top
+          }, 500, 'swing');
+        }
+      });
+
+      var mobileblock = "mobile-menu-block";
+      $("#navbar-toggle").on("click", function() {
+        if ($(window).width() < 768){ /* mobile size */
+          if ($("#" + mobileblock).length > 0){
+            $("#" + mobileblock).remove();
+            $("#navbar-content").slideUp(150);
+          }
+          else {
+            $('nav.navbar').removeAttr("style");
+            $("body").prepend("<div id='"+ mobileblock +"'></div>");
+            $("#navbar-content").slideDown(150);
+          }
+        }
+      });
+      $("body").on("click touchend","#" + mobileblock, function() {
+        $("#" + mobileblock).remove();
+        $("#navbar-content").slideUp(150);
+      });
+
+      var timer;
+      $(window).on("scroll resize", function () {
+        clearInterval(timer);
+        timer = setInterval(checkContextButton, 150);
+        checkMobileMenu();
+      });
+
+      checkContextButton(); /* check once on load */
+      function checkContextButton(){
+        if ($(window).scrollTop() >= 150) {
+            $('#return-to-top').stop(true, false).animate({ opacity: 1}, 250);
+        } else { $('#return-to-top').stop(true, false).animate({ opacity: 0}, 250); }
+      }
+
+      var scrollPosition = 0;
+      var currentPosition = 0;
+      var difference = 0;
+      var down = true;
+      /*if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu*/
+      function checkMobileMenu(){
+        currentPosition = $(window).scrollTop();
+        if ($(window).width() < 768){ /* mobile size */
+          if ($(window).scrollTop() >= 150) {
+            if (currentPosition > scrollPosition){ /*scrolling down*/
+              if (down){
+                $("#navbar-collapse").collapse("hide");
+                $("#" + mobileblock).remove();
+                $('nav.navbar').stop(true, false).slideUp(250);
+                difference = 0;
+                down = false;
+              }
+            }
+            else { /*scrolling up*/
+              difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
+              if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
+                $('nav.navbar').stop(true, false).slideDown(250);
+                down = true;
+              }
+            }
+          }
+          else if (!down) {
+            $('nav.navbar').slideDown(250);
+            down = true;
+          }
+        }
+        else { /* desktop size */
+          $("#navbar-collapse").collapse("hide");
+          $("#" + mobileblock).remove();
+          $('nav.navbar').removeAttr("style");
+          down = true;
+        }
+        scrollPosition = currentPosition;
+      }
+    });
+</script>

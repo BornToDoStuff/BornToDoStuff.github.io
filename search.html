@@ -1,4 +1,27 @@
----
-layout: default
-search: true
----
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+
+    {% include meta.html %}
+    {% include analytics.html %}
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  </head>
+  <body>
+    {% include navigation.html %}
+    <a id="TippyTop"></a>
+    <div class="width-wrapper">
+      {% include search-form.html %}
+      <div id="search-results"></div>
+    </div>
+    <div>
+      {% include inline-scripts.html %}
+      {% include search-logic.html %}
+    </div>
+  </body>
+</html>
