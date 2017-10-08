@@ -8,15 +8,6 @@ title: Subtypes
 {% endfor %}
 {%- assign cat_names = cat_names | sort -%}
 
-{% assign subcat_names = subcat_names | uniq | sort  %}
-{% assign subcat_count = "" | split ',' %}
-{% for subcat in subcat_names %}
-  {% assign subcat_index = forloop.index %}
-  {% assign subcat_count[subcat_index] = 0 %}
-  {% for post in site.categories[cat] | sort: 'title' %}
-    {%- if post.item_subtypes contains subcat -%}
-      {% assign subcat_count[subcat_index] = subcat_count[subcat_index] | plus:1 %}
-
 <h1>{{ page.title }}</h1>
 <item-tags>
   {%- for cat in cat_names -%}
