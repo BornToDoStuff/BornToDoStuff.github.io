@@ -16,10 +16,9 @@ title: Subtypes
 </item-tags>
 <hr />
 <div id="tags-list">
-  {% comment %}
   {%- for cat in cat_names -%}
     {% assign subcats = "" | split: "|"   %}
-    {% for post in site.categories[cat] | sort: 'title' %}
+    {% for post in site.categories[cat] | sort: "title" %}
       {% for subcat in post.item_subtypes %}
         {%- assign subcats = subcats | push: subcat -%}
       {% endfor %}
@@ -33,12 +32,11 @@ title: Subtypes
     <hr />
     {% for subcat in subcat_names %}
       <h3 id="{{ subcat | slugify }}">{{ subcat }}</h3>
-      {% for post in site.categories[cat] | sort: 'title' %}
+      {% for post in site.categories[cat] | sort: "title" %}
         {%- if post.item_subtypes contains subcat -%}
           {% include tag-result.html %}
         {%- endif -%}
       {% endfor %}
     {% endfor %}
   {%- endfor -%}
-  {% endcomment %}
 </div>
