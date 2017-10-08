@@ -26,7 +26,7 @@ var item_cache = [
   {% for post in site.posts %}
     {
       "id" : {{ post.item_id }},
-      "url" : {{ post.url }},
+      "url" : {{ post.url | jsonify }},
       "title" : {{ post.title | jsonify }},
       "type" : "{{ post.category }}",
       "subtypes" : {% if post.item_subtypes %}{{ post.item_subtypes | replace '\"\"', '\", \"'}}{% else %}""{% endif %},
