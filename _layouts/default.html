@@ -40,12 +40,15 @@
             {%- endfor -%}
           {% endcapture %}
           {% assign tag_names = tag_names | split '|' | sort %}
+          {{tag_names}}
+          {% comment %}
           <item-tags>
             {% for tag in tag_names | offset:0 | limit:10 %}
               {% assign tag_split = tag | split '#' %}
               <item-tag><a href="/tags/#{{tag_split[1] | slugify}}"><img alt="tag" src="/images/icons/tag-solid.svg" />{{ tag_split[1] }} <span>|</span> {{ tag_split[0] }}</a></item-tag>
             {% endfor %}
           </item-tags>
+          {% endcomment %}
         </section>
       </section>
 
