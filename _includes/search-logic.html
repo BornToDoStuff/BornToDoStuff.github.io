@@ -53,8 +53,10 @@
       else {
         searchResults.html("<magic-item><item-name>There's nothing here</item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
       }
-      //hide all normal elements and just show searched elements
-      $("<style id='search-style' type='text/css'> magic-item, .pagination{display:none} #search-results magic-item{display:block}</style>").appendTo("head")
+      /* hide all normal elements and just show searched elements */
+      $("<style id='search-style' type='text/css'> magic-item, .pagination{display:none} #search-results magic-item{display:block}</style>").appendTo("head");
+
+      history.replaceState(null, "Search", "/search/?=" + encodeURIComponent(query)); /* replace URL so current search is saved but it does not create a large history stack */
     }
 
     function unsearch(){

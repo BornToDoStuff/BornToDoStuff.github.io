@@ -1,8 +1,9 @@
 ---
 title: Frostwall Guard
 item_id: 4
-category: Shield
+category: Armor
 item_subtypes:
+  - Shield
 item_rarity: Mediocre
 item_attunement: true
 item_requirement:

@@ -2,9 +2,9 @@
 layout: page
 title: Types
 ---
-{% assign cat_names = "" | split: "|"  %}
-{% for posts_by_cat in site.categories %}
-  {%- assign cat_names = cat_names | push: posts_by_cat.first -%}
+{% assign cat_names = "" %}
+{% for cat in site.categories %}
+  {%- assign cat_names = cat_names | push: cat.first -%}
 {% endfor %}
 {% assign cat_names = cat_names | sort %}
 

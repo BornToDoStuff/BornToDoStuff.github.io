@@ -3,6 +3,8 @@ title: Gauntlets of the Glacier
 item_id: 1
 category: Wondrous
 item_subtypes:
+  - Clothes
+  - Armor
 item_rarity: Rare
 item_attunement: true
 item_requirement:

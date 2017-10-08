@@ -3,6 +3,7 @@ title: Battlemaster's Board
 item_id: 76
 category: Wondrous
 item_subtypes:
+  - Item
 item_rarity: Legendary
 item_attunement: true
 item_requirement:
@@ -17,7 +18,6 @@ item_role:
 item_damage:
 tags:
   - Control
-  - Complex
 item_idea:
 item_co_creator:
 item_updated:

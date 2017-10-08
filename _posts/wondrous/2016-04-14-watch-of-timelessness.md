@@ -3,6 +3,7 @@ title: Watch of Timelessness
 item_id: 9
 category: Wondrous
 item_subtypes:
+  - Item
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:

@@ -1,6 +1,7 @@
 ---
 layout: null
 search: true
+title: Search
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,10 @@ search: true
     {% include navigation.html %}
     <a id="TippyTop"></a>
     <div class="width-wrapper">
-      {% include search-form.html %}
+      <div id="search-form">
+        <input id="search" name="q" type="search" placeholder="Search" />
+        <input id="search-btn" type="submit" />
+      </div>
       <div id="search-results"></div>
     </div>
     <div>

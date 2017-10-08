@@ -25,11 +25,33 @@
         {% unless page.search %}
           {% include search-form.html %}
         {% endunless %}
+        <section id="recent-posts">
+          <h3>Recent Posts</h3>
+          {% for post in site.posts | offset:0 | limit:5 %}
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          {% endfor %}
+        </section>
+        <section id="popular-tags">
+          <h3>Popular Tags</h3>
+          {% assign tag_names = "" %}
+          {% capture tag_names %}
+            {%- for tag in site.tags -%}
+              {{site.tags[tag].size}}#{{tag.first | capitalize}}{% unless forloop.last %}|{% endunless %}
+            {%- endfor -%}
+          {% endcapture %}
+          {% assign tag_names = tag_names | split '|' | sort %}
+          <item-tags>
+          {% for tag in tag_names | offset:0 | limit:10 %}
+            {% assign tag_split = tag | split '#' %}
+            <item-tag><a href="/tags/#{{tag_split[1] | slugify}}"><img alt="tag" src="/images/icons/tag-solid.svg" />{{ tag_split[1] }} <span>|</span> {{ tag_split[0] }}</a></item-tag>
+          {% endfor %}
+          <item-tags>
+        </section>
       </section>
 
       <div id="navigation-fixed">
         <a id="return-to-top" href="#TippyTop">
-          <img alt="white chevron" src="{{site.baseurl}}/images/icons/chevron-up-white.svg" />
+          <img alt="white chevron" src="{{ site.baseurl }}/images/icons/chevron-up-white.svg" />
         </a>
       </div>
     </div>
