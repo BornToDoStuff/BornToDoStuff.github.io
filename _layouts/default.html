@@ -36,10 +36,9 @@
           {% assign tag_names = "" %}
           {% capture tag_names %}
             {%- for tag in site.tags -%}
-              {{tag}}|
+              {{tag.first}}|
             {%- endfor -%}
           {% endcapture %}
-          {% assign tag_names = tag_names | split '|' | sort %}
           {{tag_names}}
           {% comment %}
           <item-tags>
