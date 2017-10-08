@@ -36,7 +36,7 @@
           {% assign tag_names = "" %}
           {% capture tag_names %}
             {%- for tag in site.tags -%}
-              {{site.tags[tag.first].size}}#{{tag.first | capitalize}}{% unless forloop.last %}|{% endunless %}
+              {{tag}} | {{tag.first}}
             {%- endfor -%}
           {% endcapture %}
           {% assign tag_names = tag_names | split '|' | sort %}
