@@ -29,7 +29,8 @@ collections:
 defaults:
   -
     scope:
-      path:
+      path: ""
+      type: ""
     values:
       search: true
   -
