@@ -40,8 +40,7 @@
             {%- endfor -%}
           {% endcapture %}
           {% assign tag_names = tag_names | split '|' %}
-          {% assign tag_names = tag_names | sort %}
-          {% for name in tag_names%}
+          {% for name in tag_names | sort%}
             <a>{{name}}</a>
           {% endfor %}
           {% comment %}
