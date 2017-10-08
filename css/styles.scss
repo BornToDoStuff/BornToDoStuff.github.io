@@ -189,7 +189,7 @@ input[type="search"], input[type="text"] {
 #search-form {
 	position: relative;
 	background: $backgroundLight;
-	
+
 	#search {
     width: 100%;
     padding-right: 35px;
@@ -199,8 +199,8 @@ input[type="search"], input[type="text"] {
 	    background-position: center;
 	    background-size: 23px;
 	    position: absolute;
-	    top: 20px;
-	    right: 15px;
+	    top: 0px;
+	    right: 0px;
 	    border: 0;
 	    font-size: 0px;
 	    padding: 0px;
@@ -208,6 +208,9 @@ input[type="search"], input[type="text"] {
 	    height: 35px;
 	    width: 35px;
 	}
+}
+#search-results {
+	margin-top: 20px;
 }
 
 magic-spell {

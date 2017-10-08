@@ -9,7 +9,12 @@
       <item-tagline>{{type}}, {{rarity}} {{#attunement}}(requires attunement{{#requirement}} {{requirement}}{{/requirement}}){{/attunement}}</item-tagline>
       <item-description>
         {{{content}}}
-        <a href="{{url}}" class="read-more pull-right">›››</a>
+        <a href="{{ url }}" class="read-more">
+          <p>Read more &raquo;</p>
+          <div class="expander">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+        </a>
       </item-description>
     </magic-item>
   {% endraw %}
