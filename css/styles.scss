@@ -318,7 +318,7 @@ item-tag {
 	}
 	span { color: rgba(0,0,0,0.3); }
 }
-item-tag:hover { background: $transp_lightBlue; }
+item-tag:hover { background: $transp_medBlue; }
 
 .read-more {
 	display: block;
@@ -427,7 +427,7 @@ input, button{
     content: "";
     height: 50px;
     width: 50px;
-    background: $transp_lightBlue;
+    background: $transp_medBlue;
     position: absolute;
     top: -2px;
     left: -2px;
