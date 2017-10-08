@@ -155,6 +155,7 @@ body > .width-wrapper { margin-top: 75px; }
 	display: block;
 	opacity: 0;
 	text-decoration: none;
+	transition: background 0.2 ease;
 
 	@include small {
 		left: 50%;
@@ -164,9 +165,13 @@ body > .width-wrapper { margin-top: 75px; }
 		float: right;
 		right: 3%;
 	}
-	@include large-up {
+	@include large {
 		float: right;
-		right: 24.5%;
+		right: 20%;
+	}
+	@include xlarge {
+		float: right;
+		right: 25%;
 	}
 
 	&:hover {
@@ -296,6 +301,8 @@ item-tag {
 	display: inline-block;
 	margin-right: 5px;
 	margin-bottom: 5px;
+	transition: background 0.2s ease;
+
 	a {
 		display: block;
 		padding: 3px 6px;
@@ -311,7 +318,7 @@ item-tag {
 	}
 	span { color: rgba(0,0,0,0.3); }
 }
-item-tag:hover { background: rgba(0,0,0,0.1); }
+item-tag:hover { background: $transp_lightBlue; }
 
 .read-more {
 	display: block;
@@ -435,6 +442,7 @@ input, button{
 	li{
     padding: 5px 10px;
     border-radius: 4px;
+		transition: background 0.2s ease;
 
     &:hover {
       background-color: $transp_lightBlue;
@@ -474,6 +482,7 @@ input, button{
 			display: block;
 			padding: 12px 5px;
 			border-radius: 50px;
+			transition: background 0.2s ease;
 
 			&:hover {
 				background: $transp_lightBlue
@@ -495,6 +504,7 @@ input, button{
 	}
 
 .page-navigation {
+	min-height: 50px;
 	margin: 20px 0px;
 	text-align: center;
 }
