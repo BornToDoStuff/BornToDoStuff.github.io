@@ -16,6 +16,7 @@ title: Subtypes
 </item-tags>
 <hr />
 <div id="tags-list">
+  {% comment %}
   {%- for cat in cat_names -%}
     {% assign subcats = "" | split: "|"   %}
     {% for post in site.categories[cat] | sort: 'title' %}
@@ -39,4 +40,5 @@ title: Subtypes
       {% endfor %}
     {% endfor %}
   {%- endfor -%}
+  {% endcomment %}
 </div>

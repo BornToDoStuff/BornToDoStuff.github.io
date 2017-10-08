@@ -2,6 +2,7 @@
 layout: page
 title: Tags
 ---
+{% comment %}
 {%- assign rawtags = "" -%}
 {% for post in site.posts %}
 	{%- assign tags = post.item_tags | split:', ' | join:'|' | append:'|' -%}
@@ -38,3 +39,4 @@ title: Tags
 	</ul>
 {% endfor %}
 </div>
+{% endcomment %}
