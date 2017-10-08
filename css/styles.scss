@@ -120,6 +120,12 @@ body > .width-wrapper { margin-top: 75px; }
 	@include large-up {
 		width: 25%;
 	}
+
+	#recent-posts {
+		a {
+			display: block;
+		}
+	}
 }
 
 #navigation-fixed {
