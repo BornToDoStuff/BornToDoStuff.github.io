@@ -36,10 +36,13 @@
           {% assign tag_names = "" %}
           {% capture tag_names %}
             {%- for tag in site.tags -%}
-              {{site.tags[tag].size}}#{{tag.first | capitalize}}{% unless forloop.last %}|{% endunless %}
+              {{site.tags[tag.first].size}}#{{tag.first | capitalize}}{% unless forloop.last %}|{% endunless %}
             {%- endfor -%}
           {% endcapture %}
-          {{tag_names}}
+          {% assign tag_names = tag_names | split '|' | sort %}
+          {% for name in tag_names%}
+            {{name}}
+          {% endfor %}
           {% comment %}
           <item-tags>
             {% for tag in tag_names | offset:0 | limit:10 %}
