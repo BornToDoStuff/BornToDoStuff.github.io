@@ -26,6 +26,7 @@ var item_cache = [
   {% for post in site.posts %}
     {
       "id" : {{ post.item_id }},
+      "url" : {{ post.url }},
       "title" : {{ post.title | jsonify }},
       "type" : "{{ post.category }}",
       "subtypes" : {% if post.item_subtypes %}{{ post.item_subtypes | replace '\"\"', '\", \"'}}{% else %}""{% endif %},
@@ -42,7 +43,6 @@ var item_cache = [
       "co_creator" : "{{ post.item_co_creator }}",
       "updated" : "{{ post.item_updated }}",
       "content" : {{ post.excerpt | jsonify}},
-      "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify}}
     }{% unless forloop.last %},{% endunless %}
   {% endfor %}
 ];

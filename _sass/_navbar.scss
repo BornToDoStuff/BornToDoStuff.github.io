@@ -61,6 +61,7 @@
     height: 100%;
     width: 100%;
     padding: 0px 20px;
+    transition: background 0.2s ease;
   }
 }
 
@@ -80,6 +81,7 @@
   border: 0;
   border-bottom: 2px solid $bluakMedium;
   transition: max-height 0.3s ease;
+  transition-delay: 0.05s;
 
   @include mobile {
     border: 0px;
