@@ -187,6 +187,9 @@ input[type="search"], input[type="text"] {
 	}
 }
 #search-form {
+	position: relative;
+	background: $backgroundLight;
+	
 	#search {
     width: 100%;
     padding-right: 35px;
