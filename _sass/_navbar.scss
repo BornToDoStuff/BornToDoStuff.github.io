@@ -163,8 +163,7 @@
   list-style: none;
   box-shadow: $boxshadow;
   z-index: -1;
-  border-left: 1px solid $lightGray;
-  border-right: 1px solid $lightGray;
+  border: 0;
   border-bottom: 2px solid $bluakMedium;
   transition: all 0.3s ease;
 
@@ -175,9 +174,9 @@
   }
 }
 li:hover .dropdown ul {
-  max-height: 500%;
-  border-left-color: transparent !important;
-  border-right-color: transparent !important;
+  max-height: 500% !important;
+  border-left: 1px solid $lightGray !important;
+  border-right: 1px solid $lightGray !important;
 }
 
 @include mobile {

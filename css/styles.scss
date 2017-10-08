@@ -306,9 +306,15 @@ item-tag:hover { background: rgba(0,0,0,0.1); }
 .read-more {
 	display: block;
 	text-align: center;
-	margin-bottom: 15px;
+	margin-bottom: -15px;
 	padding: 5px;
 	width: 100%;
+
+	p {
+		position: absolute;
+		right: 15px;
+		color: $mediumGray;
+	}
 
 	.expander {
 		display: inline-block;
@@ -321,10 +327,11 @@ item-tag:hover { background: rgba(0,0,0,0.1); }
     margin-right: 10px;
     border-radius: 15px;
 		background: $transp_lightBlue;
+		transition: background 0.2s ease;
 	}
 }
 .read-more:hover .dot {
-	background: $transp_lightGray;
+	background: $transp_medBlue;
 }
 
 .form-control, .btn-default {
