@@ -26,6 +26,7 @@ title: Subtypes
     {% assign subcat_names = subcat_names | uniq | sort  %}
     <h2 id="{{ cat | slugify }}">{{ cat }}</h2>
     <hr />
+    {% comment %}
     {% for subcat in subcat_names %}
       <h3 id="{{ subcat | slugify }}">{{ subcat }}</h3>
       {% for post in site.categories[cat] | sort: 'title' %}
@@ -34,5 +35,6 @@ title: Subtypes
         {%- endif -%}
       {% endfor %}
     {% endfor %}
+    {% endcomment %}
   {%- endfor -%}
 </div>
