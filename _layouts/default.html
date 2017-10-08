@@ -39,8 +39,10 @@
               {{site.tags[tag.first].size}}#{{tag.first | capitalize}}{% unless forloop.last %}|{% endunless %}
             {%- endfor -%}
           {% endcapture %}
+          {% assign tag_names = tag_names | split '|' %}
+          {% assign tag_names = tag_names | sort %}
           {% for name in tag_names%}
-            {{name}}
+            <a>{{name}}</a>
           {% endfor %}
           {% comment %}
           <item-tags>
