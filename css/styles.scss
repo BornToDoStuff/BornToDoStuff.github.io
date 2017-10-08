@@ -111,6 +111,7 @@ body > .width-wrapper { margin-top: 75px; }
 	float: right;
 	min-height: 500px;
 	width: 100%;
+	margin-bottom: 20px;
 
 	@include large-up {
 		width: 25%;
@@ -140,7 +141,7 @@ body > .width-wrapper { margin-top: 75px; }
 }
 
 #return-to-top {
-	position: relative;
+	position: absolute;
 	bottom: 10px;
 	background: rgba(0, 0, 0, 0.5);
 	width: 50px;
@@ -157,10 +158,11 @@ body > .width-wrapper { margin-top: 75px; }
 	}
 	@include medium {
 		float: right;
-		right: -75px;
+		right: 3%;
 	}
 	@include large-up {
 		float: right;
+		right: 24.5%;
 	}
 
 	&:hover {
@@ -168,13 +170,21 @@ body > .width-wrapper { margin-top: 75px; }
 	}
 }
 
-.search {
-	margin-bottom: 30px;
+input[type="search"], input[type="text"] {
+	border: none;
+	background: $transp_lightBlue;
+	padding: 6px 12px;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.1);
+	transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
 
-	a {
-	color: #777;
-	cursor: pointer;
+	&:focus {
+		outline: 0;
+		box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0px 2px 0px $blue;
 	}
+}
+#search-btn {
+	background: url("/images/icons/search.svg") no-repeat;
+	background-size: 30px;
 }
 
 magic-spell {
@@ -278,20 +288,29 @@ item-tag {
 item-tag:hover { background: rgba(0,0,0,0.1); }
 
 .read-more {
-	display: inline-block;
+	display: block;
 	text-align: center;
+	margin-bottom: 15px;
 	padding: 5px;
-	height: 30px;
-	width: 30px;
-	line-height: 17px;
-	border-radius: 30px;
-	background: $transp_lightBlue;
-	font-size: 2.5rem;
+	width: 100%;
 
-	&:hover {
-		background: $transp_lightGray;
+	.expander {
+		display: inline-block;
+	}
+	.dot {
+		display: block;
+    float: left;
+    height: 15px;
+    width: 15px;
+    margin-right: 10px;
+    border-radius: 15px;
+		background: $transp_lightBlue;
 	}
 }
+.read-more:hover .dot {
+	background: $transp_lightGray;
+}
+
 .form-control, .btn-default {
 	border: 1px solid $mediumGray;
 }
@@ -443,8 +462,7 @@ input, button{
 	}
 
 .page-navigation {
-	margin-top: 10px;
-	margin-bottom: 20px;
+	margin: 20px 0px;
 	text-align: center;
 }
 

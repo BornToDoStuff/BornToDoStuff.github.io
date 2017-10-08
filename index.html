@@ -9,7 +9,11 @@ search:  true
     <item-description>
       {{ post.excerpt }}
       {% if post.excerpt != post.content -%}
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more pull-right">&raquo;</a>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+        <div class="expander">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </a>
       {%- endif -%}
     </item-description>
   </magic-item>

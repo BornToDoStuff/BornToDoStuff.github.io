@@ -1,11 +1,4 @@
-<div class="form-group search">
-  <div class="input-group">
-    <input id="search" type="search" class="form-control" />
-    <div class="input-group-btn">
-      <button id="search-clear" class="btn btn-default" type="button">Clear</button>
-      <button id="search-btn" class="btn btn-default" type="button">Search</button>
-    </div>
-  </div>
-  <!-- <a class="pull-right">Advanced Search</a> -->
-</div>
-<div id="searchResults"></div>
+<form id="search-form" method="get" action="/search/">
+  <input id="search" type="search" placeholder="Search" />
+  <input id="search-btn" type="submit" />
+</form>

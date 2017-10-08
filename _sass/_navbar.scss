@@ -154,6 +154,8 @@
 
 #navbar li ul {
   display: block;
+  max-height: 0px;
+  overflow: hidden;
   position: absolute;
   top: 50px;
   width: 100%;
@@ -164,12 +166,18 @@
   border-left: 1px solid $lightGray;
   border-right: 1px solid $lightGray;
   border-bottom: 2px solid $bluakMedium;
+  transition: all 0.3s ease;
 
   @include mobile {
     border: 0px;
     border-top: 2px solid $transp_lightGray;
     // border-bottom: 2px solid $transp_lightGray;
   }
+}
+li:hover .dropdown ul {
+  max-height: 500%;
+  border-left-color: transparent !important;
+  border-right-color: transparent !important;
 }
 
 @include mobile {

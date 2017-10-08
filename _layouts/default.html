@@ -19,13 +19,13 @@
     <div class="width-wrapper">
       <div id="main-wrapper">
         <section id="main" role="main">
-            {% if page.search %}
-              {% include search-form.html %}
-            {% endif %}
             {{ content }}
         </section>
       </div>
       <section id="sidebar">
+        {% if page.search %}
+          {% include search-form.html %}
+        {% endif %}
       </section>
 
       <div id="navigation-fixed">
@@ -127,10 +127,12 @@
             }
           });
       </script>
+      {% comment %}
       {%- if page.search -%}
         <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
         {% include search-logic.html %}
       {%- endif -%}
+      {% endcomment %}
     </div>
   </body>
 </html>
