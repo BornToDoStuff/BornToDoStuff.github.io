@@ -29,12 +29,6 @@ collections:
 defaults:
   -
     scope:
-      path: ""
-      type: ""
-    values:
-      search: true
-  -
-    scope:
       path: "" # an empty string here means all files in the project
       type: posts
     values:

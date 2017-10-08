@@ -22,7 +22,7 @@
         </section>
       </div>
       <section id="sidebar">
-        {% if page.search %}
+        {% unless page.search %}
           {% include search-form.html %}
         {% endif %}
       </section>
