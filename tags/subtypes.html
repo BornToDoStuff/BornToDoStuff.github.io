@@ -24,15 +24,19 @@ title: Subtypes
       {% endfor %}
     {% endfor %}
     {% assign subcat_names = subcat_names | uniq | sort  %}
-    <h2 id="{{ cat | slugify }}">{{ cat }}</h2>
-    <hr />
-    {% for subcat in subcat_names %}
-      <h3 id="{{ subcat | slugify }}">{{ subcat }}</h3>
-      {% for post in site.categories[cat] | sort: "title" %}
-        {%- if post.item_subtypes contains subcat -%}
-          {% include tag-result.html %}
-        {%- endif -%}
+    {% if subcat_names.size > 0 %}
+      <h2 id="{{ cat | slugify }}">{{ cat }}</h2>
+      <hr />
+      {% for subcat in subcat_names %}
+        <h3 id="{{ subcat | slugify }}">{{ subcat }}</h3>
+        <ul>
+        {% for post in site.categories[cat] | sort: "title" %}
+          {%- if post.item_subtypes contains subcat -%}
+            {% include tag-result.html %}
+          {%- endif -%}
+        {% endfor %}
+        </ul>
       {% endfor %}
-    {% endfor %}
+    {%- endif -%}
   {%- endfor -%}
 </div>

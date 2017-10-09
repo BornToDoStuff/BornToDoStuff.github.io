@@ -2,7 +2,7 @@
 title: Bond of Battle
 item_id: 25
 category: Tattoo
-item_subtype:
+item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:

@@ -2,7 +2,7 @@
 title: Scroll of Waterbreathing
 item_id: 10
 category: Scroll
-item_subtype:
+item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:

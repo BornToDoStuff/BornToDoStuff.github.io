@@ -2,7 +2,7 @@
 title: Satchel of Subpar Sorting
 item_id: 19
 category: Wondrous
-item_subtype:
+item_subtypes:
   - Bag
 item_rarity: Mediocre
 item_attunement: false

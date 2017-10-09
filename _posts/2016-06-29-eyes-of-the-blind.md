@@ -2,7 +2,7 @@
 title: Eyes of the Blind
 item_id: 24
 category: Tattoo
-item_subtype:
+item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:

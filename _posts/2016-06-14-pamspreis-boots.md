@@ -2,7 +2,7 @@
 title: Pamsprei's Boots
 item_id: 17
 category: Wondrous
-item_subtype:
+item_subtypes:
   - Boots
 item_rarity: Mediocre
 item_attunement: false

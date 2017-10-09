@@ -232,23 +232,23 @@ magic-spell {
 magic-item, item-details, .page, #sidebar {
 	display: block;
 	padding: 20px 15px;
-	text-align: justify;
 	background: $backgroundLight;
 	border: 0px;
 	border-bottom: 2px solid $bluakMedium;
 	border-top: 2px solid $bluakMedium;
 	box-shadow: $boxshadow;
-
-	@include mobile {
-		text-align: left;
-	}
 }
 
 magic-item, item-details, .page {
 	position: relative;
+	text-align: justify;
 	margin-bottom: 15px;
 	overflow-y: hidden;
 	transition: max-height 0.5s;
+
+	@include mobile {
+		text-align: left;
+	}
 
 	item-description {
 		line-height: $normal;

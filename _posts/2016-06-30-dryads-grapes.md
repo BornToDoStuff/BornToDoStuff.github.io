@@ -2,7 +2,7 @@
 title: Dryad's Grapes
 item_id: 28
 category: Wondrous
-item_subtype:
+item_subtypes:
   - Item
 item_rarity: Mediocre
 item_attunement: false

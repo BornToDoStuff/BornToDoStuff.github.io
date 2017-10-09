@@ -2,7 +2,7 @@
 title: Hearthstone
 item_id: 20
 category: Wondrous
-item_subtype:
+item_subtypes:
   - Item
 item_rarity: Mediocre
 item_attunement: false

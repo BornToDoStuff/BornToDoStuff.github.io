@@ -2,7 +2,7 @@
 title: Desert Wanderer's Friend
 item_id: 29
 category: Scroll
-item_subtype:
+item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:

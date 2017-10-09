@@ -2,7 +2,7 @@
 title: Lover's Link
 item_id: 23
 category: Tattoo
-item_subtype:
+item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:

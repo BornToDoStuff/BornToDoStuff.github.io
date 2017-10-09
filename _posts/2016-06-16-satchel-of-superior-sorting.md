@@ -2,7 +2,7 @@
 title: Satchel of Superior Sorting
 item_id: 18
 category: Wondrous
-item_subtype:
+item_subtypes:
   - Bag
 item_rarity: Mediocre
 item_attunement: false

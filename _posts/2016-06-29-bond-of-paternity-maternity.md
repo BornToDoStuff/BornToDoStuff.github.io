@@ -2,7 +2,7 @@
 title: Bond of Paternity/Maternity
 item_id: 26
 category: Tattoo
-item_subtype:
+item_subtypes:
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:
