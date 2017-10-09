@@ -2,7 +2,7 @@
 title:
 item_id: 0
 category: Armor Potion Ring Rod Scroll Shield Staff Tattoo Wand Weapon Wondrous
-item_subtype:
+item_subtypes:
   - Breastplate
   - Half Plate
 item_rarity: Mediocre Common Uncommon Rare Very-Rare Legendary
