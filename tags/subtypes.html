@@ -8,13 +8,16 @@ title: Subtypes
 {% endfor %}
 {%- assign cat_names = cat_names | sort -%}
 
-<h1>{{ page.title }}</h1>
-<item-tags>
-  {%- for cat in cat_names -%}
-  <item-tag><a href="#{{ cat | slugify }}"><img alt="tag" src="/images/icons/tag-solid.svg" />{{cat}} <span>|</span> {{ site.categories[cat].size }}</a></item-tag>
-  {%- endfor -%}
-</item-tags>
+<div id="head">
+  <h1>{{ page.title }}</h1>
+  <item-tags>
+    {%- for cat in cat_names -%}
+    <item-tag><a href="#{{ cat | slugify }}"><img alt="tag" src="/images/icons/tag-solid.svg" />{{cat}} <span>|</span> {{ site.categories[cat].size }}</a></item-tag>
+    {%- endfor -%}
+  </item-tags>
 <hr />
+<span id="return">&laquo; Back</span>
+</div>
 <div id="tags-list">
   {%- for cat in cat_names -%}
     {% assign subcat_names = "" | split: "|"   %}
