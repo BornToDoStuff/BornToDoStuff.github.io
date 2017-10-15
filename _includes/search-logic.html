@@ -56,7 +56,7 @@
       /* hide all normal elements and just show searched elements */
       $("<style id='search-style' type='text/css'> magic-item, .pagination{display:none} #search-results magic-item{display:block}</style>").appendTo("head");
 
-      history.replaceState(null, "Search", "/search/?=" + encodeURIComponent(query)); /* replace URL so current search is saved but it does not create a large history stack */
+      history.replaceState(null, "Search", "/search/?q=" + encodeURIComponent(query)); /* replace URL so current search is saved but it does not create a large history stack */
     }
 
     function unsearch(){
