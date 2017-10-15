@@ -18,7 +18,7 @@ subpaging: true
   </item-tags>
   <hr />
 </div>
-<span id="return">&laquo; Back</span>
+<span id="return"><a href="#">Back to Types</a></span>
 <div id="tags-list">
   {%- for cat in cat_names -%}
     {% assign subcat_names = "" | split: "|"   %}
@@ -67,9 +67,11 @@ subpaging: true
         {%- endfor -%}
       {%- else -%}
         <hr />
+        <ul>
         {% for post in site.categories[cat] | sort: "title" %}
           {% include tag-result.html %}
         {%- endfor %}
+        </ul>
       {%- endif -%}
     </div>
   {%- endfor -%}
