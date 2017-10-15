@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Subtypes
+subpaging: true
 ---
 {% assign cat_names = "" | split: "|"   %}
 {% for cat in site.categories %}
@@ -52,4 +53,3 @@ title: Subtypes
     {%- endif -%}
   {%- endfor -%}
 </div>
-{% include tag-script.html %}
