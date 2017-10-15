@@ -9,13 +9,17 @@
         e.stopImmediatePropagation();
         e.preventDefault();
         var tag = $(this).attr("href");
-        
-        if ($(tag).length == 1) { hideAllExcept(tag); }
+
+        if (tag != "#" && $(tag).length == 1) {
+          hideAllExcept(tag);
+        }
         else { showAll(); }
       });
+      
       $('#return').on("click", function () {
         showAll();
       });
+      $('#return').hide();
       if (window.location.hash) { // load the page with only the elements in the hash if there is one
         var tag = window.location.hash;
 
