@@ -17,8 +17,8 @@ subpaging: true
     {%- endfor -%}
   </item-tags>
   <hr />
-  <span id="return">&laquo; Back</span>
 </div>
+<span id="return">&laquo; Back</span>
 <div id="tags-list">
   {%- for cat in cat_names -%}
     {% assign subcat_names = "" | split: "|"   %}
@@ -28,28 +28,45 @@ subpaging: true
       {%- endfor -%}
     {%- endfor -%}
     {% assign subcat_names = subcat_names | uniq | sort  %}
-    {%- if subcat_names.size > 0 %}
-      <div class="tag" id="{{ cat | slugify }}">
-        <h2>{{ cat }}</h2>
-        <item-tags>
-          {% for subcat in subcat_names %}
-            <item-tag><a href="#{{ cat | slugify }}_{{ subcat | slugify }}">{{subcat}}</a></item-tag>
-          {% endfor -%}
-        </item-tags>
-        <hr />
-        {% for subcat in subcat_names %}
-          <div class="subtag" id="{{ cat | slugify }}_{{ subcat | slugify }}">
-            <h3>{{ subcat }}</h3>
-            <ul>
-            {% for post in site.categories[cat] | sort: "title" %}
-              {%- if post.item_subtypes contains subcat %}
-                {% include tag-result.html %}
-              {%- endif -%}
-            {%- endfor %}
-            </ul>
-          </div>
+    <div class="tag" id="{{ cat | slugify }}">
+      <a href="#{{ cat | slugify }}"><h2>{{ cat }}</h2></a>
+
+      {%- capture subtype_none -%}
+        {%- for post in site.categories[cat] | sort: "title" -%}
+          {%- if post.item_subtypes.size == 0 -%}
+            {% include tag-result.html %}
+          {%- endif -%}
         {%- endfor -%}
-      </div>
-    {%- endif -%}
+      {%- endcapture -%}
+
+      {%- if subcat_names.size > 0 -%}
+        <item-tags>
+          {%- for subcat in subcat_names -%}
+            <item-tag><a href="#{{ cat | slugify }}_{{ subcat | slugify }}">{{subcat}}</a></item-tag>
+          {%- endfor -%}
+          {%- if subtype_none.size > 0 -%}<item-tag><a href="#{{ cat | slugify }}_none">No Subtype</a></item-tag{%- endif -%}
+        </item-tags>
+      {%- endif -%}
+      <hr />
+
+      {%- if subtype_none.size > 0 -%}
+        <div class="subtag" id="{{ cat | slugify }}_none">
+          <a href="#{{ cat | slugify }}_{{ subcat | slugify }}"><h3>{{ subcat }}</h3></a>
+          {{subtype_none}}
+        </div>
+      {%- endif -%}
+      {% for subcat in subcat_names %}
+        <div class="subtag" id="{{ cat | slugify }}_{{ subcat | slugify }}">
+          <a href="#{{ cat | slugify }}_{{ subcat | slugify }}"><h3>{{ subcat }}</h3></a>
+          <ul>
+          {% for post in site.categories[cat] | sort: "title" %}
+            {%- if post.item_subtypes contains subcat %}
+              {% include tag-result.html %}
+            {%- endif -%}
+          {%- endfor %}
+          </ul>
+        </div>
+      {%- endfor -%}
+    </div>
   {%- endfor -%}
 </div>

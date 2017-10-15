@@ -2,6 +2,7 @@
 <script>
   $(document).ready(function(){
     {% if page.subpaging %}
+      //if a link starts with "#" pretend that hash is its own page
       $('a[href^="#"]').on("click touchend", function (e) {
         e.stopImmediatePropagation();
         e.preventDefault();
@@ -9,16 +10,18 @@
         hideAllExcept(tag);
       });
 
-      if (window.location.hash) {
+      showAll(); //make sure all elements are in their proper state initially
+      if (window.location.hash) { // load the page with only the elements in the hash if there is one
         var tag = window.location.hash;
         if ($(tag).length == 1) {
           hideAllExcept(tag);
         }
       }
 
+      var styles_id = "tags-style";
+      var current_page = window.location.protocol + "//" + window.location.hostname + window.location.pathname;
       function hideAllExcept(tag) {
         var styles;
-        var styles_id = "tags-style";
 
         if ($(tag).attr("class") == "subtag") { //if its a subtag
           var parent_tag = "#" + $(tag).parent().attr("id");
@@ -29,6 +32,13 @@
         }
         $("#" + styles_id).remove();
         $(styles).appendTo("head");
+        $("#return").show();
+        history.replaceState(null, null, current_page + window.location.hash); /* replace URL so current place is saved but it does not create a large history stack */
+      }
+      function showAll(){
+          $("#" + styles_id).remove();
+          $("#return").hide();
+          history.replaceState(null, null, current_page); /* replace URL so current place is saved but it does not create a large history stack */
       }
     {% else %}
       //if a link starts with "#" make it animate to that position and prevent adding it to the url
