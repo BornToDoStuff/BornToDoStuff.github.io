@@ -316,16 +316,21 @@ item-tag {
 		border-radius: 4px;
 		border: 1px solid $mediumGray;
 	}
-	img {
-		height: 12px;
-		padding-right: 5px;
-		@include mobile {
-			display: none;
+	a:before{
+		@include desktop {
+			content: "";
+	    background-image: url("/images/icons/tag-solid.svg");
+	    background-repeat: no-repeat;
+	    height: 100%;
+	    min-height: 12px;
+	    width: 16px;
+	    display: inline-block;
 		}
 	}
 	span { color: rgba(0,0,0,0.3); }
 }
 item-tag:hover { background: $transp_medBlue; }
+item-tags.compact item-tag a:before{ display: none; }
 
 .read-more {
 	display: block;
@@ -457,7 +462,7 @@ input, button{
 		transition: background 0.2s ease;
 
     &:hover {
-      background-color: $transp_medBlue;
+      background-color: $transp_lightBlue;
     }
 	}
 	p {

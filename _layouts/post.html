@@ -12,7 +12,7 @@ layout: default
   {%- if tags_count > 0 -%}
   <item-tags>
     {%- for tag in page.tags -%}
-    <item-tag><a href="/tags/#{{ tag | slugify }}"><img src="{{site.baseurl}}/images/icons/tag-solid.svg" />{{tag}}</a></item-tag>
+    <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
     {%- endfor -%}
   </item-tags>
   {%- endif -%}

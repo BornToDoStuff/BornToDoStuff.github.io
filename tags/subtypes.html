@@ -11,7 +11,7 @@ title: Subtypes
 <h1>{{ page.title }}</h1>
 <item-tags>
   {%- for cat in cat_names -%}
-  <item-tag><a href="#{{ cat | slugify }}"><img alt="tag" src="/images/icons/tag-solid.svg" />{{cat}} <span>|</span> {{ site.categories[cat].size }}</a></item-tag>
+  <item-tag><a href="#{{ cat | slugify }}">{{cat}} <span>|</span> {{ site.categories[cat].size }}</a></item-tag>
   {%- endfor -%}
 </item-tags>
 <hr />
@@ -34,7 +34,7 @@ title: Subtypes
           {%- if post.item_subtypes contains subcat -%}
             {% include tag-result.html %}
           {%- endif -%}
-        {% endfor %}
+        {%- endfor -%}
         </ul>
       {% endfor %}
     {%- endif -%}
