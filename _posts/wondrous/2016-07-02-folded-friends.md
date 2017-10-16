@@ -25,6 +25,7 @@ last_modified_at:
 These 6 inch squares of paper are beautifully flowered on one side and some even gilded. On the other side they are blank except for an intricately inked magic circle.
 When someone begins to fold them they continue folding themselves until they begin to resemble a creature and become animated, although they don’t increase in size and only stand a few inches tall. These little helpers last until they are damaged or become wet and are loyal to whoever began folding the paper.
 With a little practice anyone can learn how to create one they have before or even something new. There are three common shapes though.
+
 #### Humanoid
 These little guys can only lift up to 5 pounds but are quite dextrous with their hands, and able to follow rather complex orders.
 #### Elephant

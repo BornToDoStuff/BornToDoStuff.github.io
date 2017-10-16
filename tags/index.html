@@ -21,10 +21,11 @@ subpaging: true
   </item-tags>
   <hr />
 </div>
+<span id="return"><a href="#">Back to Types</a></span>
 <div id="tags-list">
 {% for tag in tag_names %}
   {%- if site.tags[tag].size > 1 -%}
-  <div id="{{ tag | slugify }}">
+  <div class="tag" id="{{ tag | slugify }}">
     <a href="{{ tag | slugify }}"><h2>{{ tag }}</h2></a>
     <ul>
       {%- for post in site.tags[tag] | sort: 'title' -%}
