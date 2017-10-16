@@ -4,8 +4,8 @@
     {% if page.subpaging %}
       var current_page = window.location.protocol + "//" + window.location.hostname + window.location.pathname;
 
-      //if a link starts with "#" pretend that hash is its own page
-      $('a[href^="#"]').on("click touchend", function (e) {
+      //if a link in a tags-list starts with "#" pretend that hash is its own page
+      $('#tags-list a[href^="#"]').on("click touchend", function (e) {
         e.stopImmediatePropagation();
         e.preventDefault();
         var tag = $(this).attr("href");
@@ -48,23 +48,23 @@
           $("#return").hide();
           history.replaceState(null, null, current_page); /* replace URL so current place is saved but it does not create a large history stack */
       }
-    {% else %}
-      //if a link starts with "#" make it animate to that position and prevent adding it to the url
-      $('a[href^="#"]').on("click touchend", function (e) {
-          if (this.hash != ""){ //watch for empty hashes
-            e.preventDefault();
-            var $target = $(this.hash);
-            var top = $target.offset().top - 50
-            if (top < 0)
-              top += 50;
+    {% endif %}
+    
+    //if a link starts with "#" make it animate to that position and prevent adding it to the url
+    $('a[href^="#"]').on("click touchend", function (e) {
+        if (this.hash != ""){ //watch for empty hashes
+          e.preventDefault();
+          var $target = $(this.hash);
+          var top = $target.offset().top - 50
+          if (top < 0)
+            top += 50;
 
-            $('html, body').stop().animate({
-                'scrollTop': top
-            }, 500, 'swing');
-          }
-        });
-      {% endif %}
-
+          $('html, body').stop().animate({
+              'scrollTop': top
+          }, 500, 'swing');
+        }
+      }); 
+     
       var mobileblock = "mobile-menu-block";
       $("#navbar-toggle").on("click", function() {
         if ($(window).width() < 768){ /* mobile size */
