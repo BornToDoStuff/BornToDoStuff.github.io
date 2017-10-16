@@ -330,7 +330,11 @@ item-tag {
 	span { color: rgba(0,0,0,0.3); }
 }
 item-tag:hover { background: $transp_medBlue; }
-item-tags.compact item-tag a:before{ display: none; }
+item-tags.compact item-tag a:before{ 
+	display: none; 
+	padding: 0px;
+	padding-top: 10px;
+}
 
 .read-more {
 	display: block;

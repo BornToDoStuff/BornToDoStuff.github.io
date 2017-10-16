@@ -5,7 +5,7 @@
       var current_page = window.location.protocol + "//" + window.location.hostname + window.location.pathname;
 
       //if a link in a tags-list starts with "#" pretend that hash is its own page
-      $('#tags-list a[href^="#"]').on("click touchend", function (e) {
+      $('#main a[href^="#"]').on("click touchend", function (e) {
         e.stopImmediatePropagation();
         e.preventDefault();
         var tag = $(this).attr("href");
