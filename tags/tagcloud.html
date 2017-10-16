@@ -1,4 +1,4 @@
-﻿---
+---
 layout: page
 title: Tag Cloud
 ---
@@ -11,8 +11,7 @@ title: Tag Cloud
 
 <h1>{{ page.title }}</h1>
 <item-tags>
-	{%- for tag in tag_names -%}
-	<item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}} <span>|</span> {{ site.tags[tag].size }}</a></item-tag>
-	{%- endfor -%}
+  {%- for tag in tag_names -%}
+      <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}} <span>|</span> {{ site.tags[tag].size }}</a></item-tag>
+  {%- endfor -%}
 </item-tags>
-<hr />
