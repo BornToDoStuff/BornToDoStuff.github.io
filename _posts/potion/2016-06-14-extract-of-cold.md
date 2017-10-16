@@ -3,6 +3,8 @@ title: Extract of Cold
 item_id: 11
 category: Potion
 item_subtypes:
+  - Thrown
+  - Consumable
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:

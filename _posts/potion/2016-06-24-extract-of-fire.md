@@ -3,6 +3,7 @@ title: Extract of Fire
 item_id: 12
 category: Potion
 item_subtypes:
+  - Thrown
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:

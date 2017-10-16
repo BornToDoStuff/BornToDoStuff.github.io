@@ -20,7 +20,7 @@ item_damage:
 tags:
   - Ice
   - Temperature
-  - 5-Foot
+  - Aura
 item_idea:
 item_co_creator:
 item_updated:
