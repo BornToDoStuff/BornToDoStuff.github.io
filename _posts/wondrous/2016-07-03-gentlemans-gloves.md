@@ -3,7 +3,7 @@ title: Gentleman's Gloves
 item_id: 33
 category: Wondrous
 item_subtypes:
-  - Clothes
+  - Clothing
 item_rarity: Mediocre
 item_attunement: true
 item_requirement:

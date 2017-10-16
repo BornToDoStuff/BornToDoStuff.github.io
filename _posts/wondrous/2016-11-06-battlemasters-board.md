@@ -38,7 +38,7 @@ If the board is moved after it is set up you must spend a turn setting it up aga
 ### Total Control
 While the board is set up you can move up to three pieces as an action, choosing one of the following effects for each piece. Each time you move a piece that is bound to an unwilling creature it may make a Wisdom saving throw against your spellcasting DC. On a success, they are not affected. If you are not a spellcaster you use your Intelligence modifier as your spellcasting modifier.
 
-* **Move.** The creature must move up to 15 feet in any direction you choose, this movement does not count towards their movement next turn and is made as if disengaging. A creature will not move if it would certainly lead to it’s death.
-* **Help.** You help the creature with your overview of the battlefield as if using the Help action. This can include aiding them in attacking another creature.
-* **Attack.** Using the creature’s reaction they must make a melee attack against another creature within reach that you consider an enemy.
-* **Reveal.** If you are proficient with Dragonchess you can reveal the position of another creature you have bound. Until the end of your next turn this creature is aware of the revealed creature’s location even if they cannot see them or are blinded, and can ignore 1/2 cover against the revealed creature.
+- **Move.** The creature must move up to 15 feet in any direction you choose, this movement does not count towards their movement next turn and is made as if disengaging. A creature will not move if it would certainly lead to it’s death.
+- **Help.** You help the creature with your overview of the battlefield as if using the Help action. This can include aiding them in attacking another creature.
+- **Attack.** Using the creature’s reaction they must make a melee attack against another creature within reach that you consider an enemy.
+- **Reveal.** If you are proficient with Dragonchess you can reveal the position of another creature you have bound. Until the end of your next turn this creature is aware of the revealed creature’s location even if they cannot see them or are blinded, and can ignore 1/2 cover against the revealed creature.

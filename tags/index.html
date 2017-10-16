@@ -10,24 +10,28 @@ subpaging: true
 {% endfor %}
 {% assign tag_names = tag_names | sort %}
 
-<h1>{{ page.title }}</h1>
-<item-tags>
-  {%- for tag in tag_names -%}
-    {%- if site.tags[tag].size > 1 -%}
-      <item-tag><a href="#{{ tag | slugify }}">{{tag}} <span>|</span> {{ site.tags[tag].size }}</a></item-tag>
-    {%- endif -%}
-  {%- endfor -%}
-</item-tags>
-<hr />
+<div id="head">
+  <h1>{{ page.title }}</h1>
+  <item-tags>
+    {%- for tag in tag_names -%}
+      {%- if site.tags[tag].size > 1 -%}
+        <item-tag><a href="#{{ tag | slugify }}">{{tag}} <span>|</span> {{ site.tags[tag].size }}</a></item-tag>
+      {%- endif -%}
+    {%- endfor -%}
+  </item-tags>
+  <hr />
+</div>
 <div id="tags-list">
 {% for tag in tag_names %}
   {%- if site.tags[tag].size > 1 -%}
-    <h2 id="{{ tag | slugify }}">{{ tag }}</h2>
+  <div id="{{ tag | slugify }}">
+    <a href="{{ tag | slugify }}"><h2>{{ tag }}</h2></a>
     <ul>
       {%- for post in site.tags[tag] | sort: 'title' -%}
         {% include tag-result.html %}
       {%- endfor -%}
     </ul>
+  </div>
   {%- endif -%}
 {% endfor %}
 </div>
