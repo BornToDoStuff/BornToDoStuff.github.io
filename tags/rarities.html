@@ -25,7 +25,7 @@ subpaging: true
     {%- for rarity in rarities -%}
 		{% if rarity.name == rarity_name %}
 			<div class="tag" id="{{ rarity.name | slugify }}">
-				<a href="{{ rarity.name | slugify }}"></a><h2>{{ rarity.name }}</h2></a>
+				<a href="{{ rarity.name | slugify }}"><h2>{{ rarity.name }}</h2></a>
 				<div class="children">
 					<ul>
 						{%- assign items = rarity.items | sort 'title' -%}
