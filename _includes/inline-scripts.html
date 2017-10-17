@@ -3,7 +3,7 @@
   $(document).ready(function(){
     {% if page.subpaging %}
       var current_page = window.location.protocol + "//" + window.location.hostname + window.location.pathname;
-
+      var styles_id = "tags-style";
       //if a link in a tags-list starts with "#" pretend that hash is its own page
       $('#main a[href^="#"]').on("click touchend", function (e) {
         e.stopImmediatePropagation();
@@ -24,7 +24,6 @@
         else { showAll(); }
       }
 
-      var styles_id = "tags-style";
       function hideAllExcept(tag) {
         var styles;
 

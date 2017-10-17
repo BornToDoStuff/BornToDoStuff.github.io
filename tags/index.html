@@ -25,7 +25,7 @@ subpaging: true
 <section id="tags-list">
 {%- for tag in tag_names -%}
 	<div class="tag{% if site.tags[tag].size <= 1 %} solo{% endif %}" id="{{ tag | slugify }}">
-		<a href="{{ tag | slugify }}"><h2>{{ tag }}</h2></a>
+		<a href="#{{ tag | slugify }}"><h2>{{ tag }}</h2></a>
 		<div class="children">
 			<ul>
 				{%- for post in site.tags[tag] | sort: 'title' -%}
