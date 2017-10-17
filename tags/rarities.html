@@ -24,14 +24,16 @@ subpaging: true
  {%- for rarity_name in rarities_names -%}
     {%- for rarity in rarities -%}
 		{% if rarity.name == rarity_name %}
-			<h2 id="{{ rarity.name | slugify }}">{{ rarity.name }}</h2>
-			<div class="children">
-				<ul>
-					{%- assign items = rarity.items | sort 'title' -%}
-					{% for post in items -%}
-					{% include tag-result.html %}
-					{%- endfor %}
-				</ul>
+			<div class="tag" id="{{ rarity.name | slugify }}">
+				<h2 href="{{ rarity.name | slugify }}">{{ rarity.name }}</h2>
+				<div class="children">
+					<ul>
+						{%- assign items = rarity.items | sort 'title' -%}
+						{% for post in items -%}
+						{% include tag-result.html %}
+						{%- endfor %}
+					</ul>
+				</div>
 			</div>
 		{% endif %}
     {%- endfor -%}

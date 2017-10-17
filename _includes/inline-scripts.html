@@ -29,7 +29,7 @@
         var styles;
 
         if ($(tag).attr("class") == "subtag") { //if its a subtag
-          var parent_tag = "#" + $(tag).parent(".tag").attr("id");
+          var parent_tag = "#" + $(tag).closest(".tag").attr("id");
           styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head, .tag" + parent_tag + ">.subtag{display:none} #return,.tag" + parent_tag + ",.tag" + parent_tag + ">.subtag" + tag + "{display:block}</style>";
         }
         else {
