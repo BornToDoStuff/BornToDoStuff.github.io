@@ -15,10 +15,7 @@
         }
         else { showAll(); }
       });
-      
-      $('#return').on("click", function () {
-        showAll();
-      });
+
       $('#return').hide();
       if (window.location.hash) { // load the page with only the elements in the hash if there is one
         var tag = window.location.hash;
@@ -32,7 +29,7 @@
         var styles;
 
         if ($(tag).attr("class") == "subtag") { //if its a subtag
-          var parent_tag = "#" + $(tag).parent().attr("id");
+          var parent_tag = "#" + $(tag).parent(".tag").attr("id");
           styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head, .tag" + parent_tag + ">.subtag{display:none} #return,.tag" + parent_tag + ",.tag" + parent_tag + ">.subtag" + tag + "{display:block}</style>";
         }
         else {
