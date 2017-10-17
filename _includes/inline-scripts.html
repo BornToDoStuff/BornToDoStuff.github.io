@@ -30,7 +30,7 @@
 
         if ($(tag).attr("class") == "subtag") { //if its a subtag
           var parent_tag = "#" + $(tag).closest(".tag").attr("id");
-          styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head, .tag" + parent_tag + ">.subtag{display:none} #return,.tag" + parent_tag + ",.tag" + parent_tag + ">.subtag" + tag + "{display:block}</style>";
+          styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head, .tag" + parent_tag + " .subtag{display:none} #return,.tag" + parent_tag + ",.tag" + parent_tag + " .subtag" + tag + "{display:block}</style>";
         }
         else {
           styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head{display:none} #return,.tag" + tag + "{display:block}</style>";

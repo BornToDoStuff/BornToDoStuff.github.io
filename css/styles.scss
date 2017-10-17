@@ -551,6 +551,8 @@ input, button {
 		border-left: 1px solid $transp_medBlue;
 		transition: all 0.2s ease;
 	}
+
+	.solo { display: none; }
 }
 
 #return {
