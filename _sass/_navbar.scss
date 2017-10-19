@@ -27,7 +27,12 @@
 }
 
 #navbar-content {
-  width: 100%;
+  @include mobile {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+  }
+
   @include desktop{
     width: 75%;
     float: left;
@@ -78,7 +83,7 @@
   list-style: none;
   box-shadow: $boxshadow;
   z-index: -1;
-  border: 0;
+  border: 1px solid transparent;
   border-bottom: 2px solid $bluakMedium;
   transition: max-height 0.3s ease;
   transition-delay: 0.05s;
@@ -86,13 +91,16 @@
   @include mobile {
     border: 0px;
     border-top: 2px solid $transp_lightGray;
+    max-height: initial;
     // border-bottom: 2px solid $transp_lightGray;
   }
 }
 li:hover .dropdown ul {
-  max-height: 500% !important;
-  border-left: 1px solid $lightGray !important;
-  border-right: 1px solid $lightGray !important;
+  @include desktop {
+    max-height: 500% !important;
+    border-left: 1px solid $lightGray !important;
+    border-right: 1px solid $lightGray !important;
+  }
 }
 
 @include mobile {

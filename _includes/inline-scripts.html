@@ -53,7 +53,7 @@
     // });
     $(".dropdown-toggle").on("click touchend", function (e) {
       e.preventDefault();
-      $(this).next(".dropdown").slideToggle();
+      $(this).next(".dropdown").stop(true, false).slideToggle(250);
     });
 
     //if a link starts with "#" make it animate to that position and prevent adding it to the url
@@ -76,18 +76,18 @@
       if ($(window).width() < 768){ /* mobile size */
         if ($("#" + mobileblock).length > 0){
           $("#" + mobileblock).remove();
-          $("#navbar-content").slideUp(150);
+          $("#navbar-content").slideUp(250);
         }
         else {
           $("#navbar").removeAttr("style");
           $("body").prepend("<div id='"+ mobileblock +"'></div>");
-          $("#navbar-content").slideDown(150);
+          $("#navbar-content").slideDown(250);
         }
       }
     });
     $("body").on("click touchend","#" + mobileblock, function() {
       $("#" + mobileblock).remove();
-      $("#navbar-content").slideUp(150);
+      $("#navbar-content").slideUp(250);
     });
 
     var timer;
@@ -117,6 +117,7 @@
             if (down){
               $("#" + mobileblock).remove();
               $("#navbar").stop(true, false).slideUp(250);
+              $("#navbar-content").stop(true, false).slideUp(250);
               difference = 0;
               down = false;
             }
