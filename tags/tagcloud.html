@@ -10,7 +10,7 @@ title: Tag Cloud
 {% assign tag_names = tag_names | sort %}
 
 <h1>{{ page.title }}</h1>
-<item-tags>
+<item-tags class="compact">
   {%- for tag in tag_names -%}
       <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}} <span>|</span> {{ site.tags[tag].size }}</a></item-tag>
   {%- endfor -%}

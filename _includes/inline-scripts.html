@@ -3,7 +3,7 @@
   $(document).ready(function(){
     {% if page.subpaging %}
       var current_page = window.location.protocol + "//" + window.location.hostname + window.location.pathname;
-
+      var styles_id = "tags-style";
       //if a link in a tags-list starts with "#" pretend that hash is its own page
       $('#main a[href^="#"]').on("click touchend", function (e) {
         e.stopImmediatePropagation();
@@ -15,10 +15,7 @@
         }
         else { showAll(); }
       });
-      
-      $('#return').on("click", function () {
-        showAll();
-      });
+
       $('#return').hide();
       if (window.location.hash) { // load the page with only the elements in the hash if there is one
         var tag = window.location.hash;
@@ -27,13 +24,12 @@
         else { showAll(); }
       }
 
-      var styles_id = "tags-style";
       function hideAllExcept(tag) {
         var styles;
 
         if ($(tag).attr("class") == "subtag") { //if its a subtag
-          var parent_tag = "#" + $(tag).parent().attr("id");
-          styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head, .tag" + parent_tag + ">.subtag{display:none} #return,.tag" + parent_tag + ",.tag" + parent_tag + ">.subtag" + tag + "{display:block}</style>";
+          var parent_tag = "#" + $(tag).closest(".tag").attr("id");
+          styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head, .tag" + parent_tag + " .subtag{display:none} #return,.tag" + parent_tag + ",.tag" + parent_tag + " .subtag" + tag + "{display:block}</style>";
         }
         else {
           styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head{display:none} #return,.tag" + tag + "{display:block}</style>";

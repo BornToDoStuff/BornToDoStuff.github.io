@@ -7,9 +7,10 @@
 @import "navbar";
 @import "custom-bootstrap";
 
-html{
+html {
 	font-size: 62.5%; /*sets font-size to 10px (if the browser still has its default font-size)*/
 }
+
 body {
 	background: $backgroundMedium;
 	font-size: 1.6rem;
@@ -18,20 +19,21 @@ body {
 
 	@include desktop {
 		line-height: $normal;
-	  overflow-x: hidden;
+		overflow-x: hidden;
 	}
+
 	@include mobile {
 		line-height: $compressed;
 	}
 }
 
 ::selection {
-    background: rgba(97, 130, 179, 0.25);
+	background: rgba(97, 130, 179, 0.25);
 }
 
-hr{
+hr {
 	border: 0;
-  border-top: 1px solid $transp_lightGray;
+	border-top: 1px solid $transp_lightGray;
 }
 
 h1, h2, h3, h4 {
@@ -40,9 +42,19 @@ h1, h2, h3, h4 {
 	margin: 0px;
 	margin-top: 10px;
 }
-h1 { font-size: 3.0rem; }
-h2 { font-size: 2.6rem; }
-h3 { font-size: 2.2rem; }
+
+h1 {
+	font-size: 3.0rem;
+}
+
+h2 {
+	font-size: 2.6rem;
+}
+
+h3 {
+	font-size: 2.2rem;
+}
+
 h4 {
 	font-size: 1.8rem;
 	color: $gray;
@@ -53,6 +65,7 @@ h4 {
 	text-decoration: none;
 	// transition-delay: 0.05s;
 }
+
 .active:hover a, .disabled:hover a {
 	background: 0 !important;
 	color: inherit !important;
@@ -60,38 +73,43 @@ h4 {
 
 .disabled, .disabled > a, {
 	color: $gray;
-  cursor: default !important;
+	cursor: default !important;
 }
 
 .caret {
 	display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
+	width: 0;
+	height: 0;
+	margin-left: 2px;
+	vertical-align: middle;
 	border: 4px solid transparent;
-  border-top-color: $gray;
-  border-bottom: none;
+	border-top-color: $gray;
+	border-bottom: none;
 }
 
 .width-wrapper {
-  display: block;
-  position: relative;
-  max-width: 1400px;
-  margin: 0px auto;
+	display: block;
+	position: relative;
+	max-width: 1400px;
+	margin: 0px auto;
 	padding: 0px 20px;
 
 	@include medium {
 		padding: 0px 12%;
 	}
+
 	@include large {
 		padding-left: 80px;
 	}
+
 	@include xlarge {
 		padding: 0px 80px;
 	}
 }
-body > .width-wrapper { margin-top: 75px; }
+
+body > .width-wrapper {
+	margin-top: 75px;
+}
 
 #main-wrapper {
 	display: block;
@@ -103,6 +121,7 @@ body > .width-wrapper { margin-top: 75px; }
 		width: 75%;
 	}
 }
+
 #main {
 	@include large-up {
 		margin-right: 20px;
@@ -142,9 +161,11 @@ body > .width-wrapper { margin-top: 75px; }
 		left: 20px;
 		right: 20px;
 	}
+
 	@include medium {
 		padding: 0px 12%;
 	}
+
 	@include large-up {
 		padding: 0px 80px;
 	}
@@ -167,14 +188,17 @@ body > .width-wrapper { margin-top: 75px; }
 		left: 50%;
 		margin-left: -25px;
 	}
+
 	@include medium {
 		float: right;
 		right: 3%;
 	}
+
 	@include large {
 		float: right;
 		right: 20%;
 	}
+
 	@include xlarge {
 		float: right;
 		right: 25%;
@@ -197,29 +221,32 @@ input[type="search"], input[type="text"] {
 		box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0px 2px 0px $blue;
 	}
 }
+
 #search-form {
 	position: relative;
 	background: $backgroundLight;
 
 	#search {
-    width: 100%;
-    padding-right: 35px;
+		width: 100%;
+		padding-right: 35px;
 	}
+
 	#search-btn {
-	    background: url(/images/icons/search.svg) no-repeat;
-	    background-position: center;
-	    background-size: 23px;
-	    position: absolute;
-	    top: 0px;
-	    right: 0px;
-	    border: 0;
-	    font-size: 0px;
-	    padding: 0px;
-	    display: block;
-	    height: 35px;
-	    width: 35px;
+		background: url(/images/icons/search.svg) no-repeat;
+		background-position: center;
+		background-size: 23px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		border: 0;
+		font-size: 0px;
+		padding: 0px;
+		display: block;
+		height: 35px;
+		width: 35px;
 	}
 }
+
 #search-results {
 	margin-top: 20px;
 }
@@ -252,16 +279,21 @@ magic-item, item-details, .page {
 
 	item-description {
 		line-height: $normal;
+
 		@include mobile {
 			line-height: $compressed;
 		}
 	}
 }
+
 .page {
 	min-height: 95vh;
 }
 
-item-details { text-align: left; }
+item-details {
+	text-align: left;
+}
+
 item-details > * {
 	display: inline-block;
 	width: 49%;
@@ -299,15 +331,20 @@ item-tagline {
 }
 
 item-tags {
-	padding: 10px;
-	padding-bottom: 0px;
-  display: block;
+	padding-top: 10px;
+	display: block;
 }
+item-tags.compact {
+	item-tag a:before {
+		display: none;
+	}
+}
+
 item-tag {
 	display: inline-block;
 	margin-right: 5px;
 	margin-bottom: 5px;
-  border-radius: 4px;
+	border-radius: 4px;
 	transition: background 0.2s ease;
 
 	a {
@@ -316,30 +353,27 @@ item-tag {
 		border-radius: 4px;
 		border: 1px solid $mediumGray;
 	}
-	a:before{
+
+	a:before {
 		@include desktop {
 			content: "";
-	    background-image: url("/images/icons/tag-solid.svg");
-	    background-repeat: no-repeat;
-	    height: 100%;
-	    min-height: 12px;
-	    width: 16px;
-	    display: inline-block;
+			background-image: url("/images/icons/tag-solid.svg");
+			background-repeat: no-repeat;
+			height: 100%;
+			min-height: 12px;
+			width: 16px;
+			display: inline-block;
 		}
 	}
-	span { color: rgba(0,0,0,0.3); }
-}
-item-tag:hover { background: $transp_medBlue; }
 
-item-tags.compact {
-	padding: 0px;
-	padding-top: 10px;
-
-	item-tag a:before{
-		display: none;
+	span {
+		color: rgba(0,0,0,0.3);
 	}
 }
 
+item-tag:hover {
+	background: $transp_medBlue;
+}
 
 .read-more {
 	display: block;
@@ -357,17 +391,19 @@ item-tags.compact {
 	.expander {
 		display: inline-block;
 	}
+
 	.dot {
 		display: block;
-    float: left;
-    height: 15px;
-    width: 15px;
-    margin-right: 10px;
-    border-radius: 15px;
+		float: left;
+		height: 15px;
+		width: 15px;
+		margin-right: 10px;
+		border-radius: 15px;
 		background: $transp_lightBlue;
 		transition: background 0.2s ease;
 	}
 }
+
 .read-more:hover .dot {
 	background: $transp_medBlue;
 }
@@ -375,13 +411,19 @@ item-tags.compact {
 .form-control, .btn-default {
 	border: 1px solid $mediumGray;
 }
-input, button{
+
+input, button {
 	font-size: 1.6rem;
 	line-height: $normal;
 }
 
-.pull-right { float: right; }
-.pull-left { float: left;  }
+.pull-right {
+	float: right;
+}
+
+.pull-left {
+	float: left;
+}
 
 .pager {
 	padding-left: 0px;
@@ -390,10 +432,12 @@ input, button{
 	li {
 		display: inline-block;
 	}
+
 	.next {
 		float: right;
 		text-align: right;
 	}
+
 	.previous {
 		float: left;
 		text-align: left;
@@ -401,63 +445,69 @@ input, button{
 
 	.circle {
 		position: relative;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
+		display: inline-block;
+		height: 50px;
+		width: 50px;
 		border: 2px solid #5c5f6d;
-    border-radius: 50px;
-    text-align: center;
+		border-radius: 50px;
+		text-align: center;
 		vertical-align: middle;
-    background: $backgroundLight;
-    padding: 8px;
-    font-size: 40px;
-    z-index: 10;
-    margin-bottom: 4px;
+		background: $backgroundLight;
+		padding: 8px;
+		font-size: 40px;
+		z-index: 10;
+		margin-bottom: 4px;
 		box-shadow: $boxshadow;
 
 		@include mobile {
 			padding-top: 10px;
 		}
 	}
+
 	.top .circle {
 		padding-top: 3px;
 	}
 }
-	.pager span{
-		position: relative;
-		display: inline-block;
-		background: $backgroundLight;
-		padding: 6px 10px;
-		border-radius: 4px;
-		border-bottom: 2px solid $bluakMedium;
-		box-shadow: $boxshadow;
 
-		@include mobile {
-			display: none;
-		}
+.pager span {
+	position: relative;
+	display: inline-block;
+	background: $backgroundLight;
+	padding: 6px 10px;
+	border-radius: 4px;
+	border-bottom: 2px solid $bluakMedium;
+	box-shadow: $boxshadow;
+
+	@include mobile {
+		display: none;
 	}
-	.pager .next span {
-		padding-right: 30px;
-		margin-right: -25px;
-	}
-	.pager .previous span {
-		padding-left: 30px;
-		margin-left: -25px;
-	}
-	.pager a .circle:after {
-		content: "";
-    height: 50px;
-    width: 50px;
-    background: $transp_medBlue;
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    border-radius: 50px;
-		opacity: 0;
-		transition: opacity 0.2s ease;
-	}
-	.pager a:hover .circle:after {
-    opacity: 1;
+}
+
+.pager .next span {
+	padding-right: 30px;
+	margin-right: -25px;
+}
+
+.pager .previous span {
+	padding-left: 30px;
+	margin-left: -25px;
+}
+
+.pager a .circle:after {
+	content: "";
+	height: 50px;
+	width: 50px;
+	background: $transp_medBlue;
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	border-radius: 50px;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.pager a:hover .circle:after {
+	opacity: 1;
 }
 
 #tags-list {
@@ -465,21 +515,46 @@ input, button{
 		list-style-type: none;
 		padding-left: 0px;
 	}
-	li{
-    padding: 5px 10px;
-    border-radius: 4px;
-		transition: background 0.2s ease;
 
-    &:hover {
-      background-color: $transp_lightBlue;
-    }
+	li {
+		padding: 5px 20px;
+		margin-left: -20px;
+		border: 0px solid transparent;
+		transition: all 0.2s ease;
+
+		&:hover {
+			background-color: $transp_lightBlue;
+			border-left: 5px solid rgba(31, 76, 121, 0.3);
+			padding-left: 15px;
+		}
 	}
+	a:hover ~ .children {
+		background-color: $transp_lightBlue;
+		border-left-width: 6px;
+		padding-left: 15px;
+	}
+
+	h4 {
+		margin-top: 0px;
+	}
+
 	p {
 		color: $gray;
-    padding-bottom: 2px;
-    border-bottom: 1px solid $transp_lightGray;
+		padding-bottom: 2px;
+		border-bottom: 1px solid rgba(0,0,0,0.1);
 	}
+
+	.children {
+		margin-left: 5px;
+		margin-top: 5px;
+		padding-left: 20px;
+		border-left: 1px solid $transp_medBlue;
+		transition: all 0.2s ease;
+	}
+
+	.solo { display: none; }
 }
+
 #return {
 	text-align: center;
 }
@@ -490,47 +565,60 @@ input, button{
 
 	.active {
 		background: $blue;
-	 	color: $white;
-		a { color: $white;}
-	}
-}
-	.pagination > li {
-		display: block;
-		float: left;
-		background: $backgroundLight;
-		border: 2px solid $bluakMedium;
-		border-radius: 50px;
-		height: 50px;
-    width: 50px;
-		margin-left: 3px;
-		margin-right: 3px;
-		font-size: 2rem;
-    vertical-align: middle;
+		color: $white;
 
 		a {
-			display: block;
-			padding: 12px 5px;
-			border-radius: 50px;
-			transition: background 0.2s ease;
+			color: $white;
+		}
+	}
+}
 
-			&:hover {
-				background: $transp_lightBlue
-			}
+.pagination > li {
+	display: block;
+	float: left;
+	background: $backgroundLight;
+	border: 2px solid $bluakMedium;
+	border-radius: 50px;
+	height: 50px;
+	width: 50px;
+	margin-left: 3px;
+	margin-right: 3px;
+	font-size: 2rem;
+	vertical-align: middle;
+
+	a {
+		display: block;
+		padding: 12px 5px;
+		border-radius: 50px;
+		transition: background 0.2s ease;
+
+		&:hover {
+			background: $transp_lightBlue;
 		}
-		&:first-child a, &:last-child a {
-			padding: 8px 5px;
-			height: 50px;
-	    width: 50px;
-	    font-size: 4rem;
-	    line-height: 26px;
-		}
-		&:first-child a { margin-left: -3px }
 	}
 	.pagination > li.extra {
 		@include mobile {
 			display: none;
 		}
 	}
+
+	&:first-child a, &:last-child a {
+		padding: 8px 5px;
+		height: 50px;
+		width: 50px;
+		font-size: 4rem;
+		line-height: 26px;
+	}
+	&:first-child a {
+		margin-left: -3px;
+	}
+}
+
+.pagination > li .extra {
+	@include mobile {
+		display: none;
+	}
+}
 
 .page-navigation {
 	min-height: 50px;
@@ -541,7 +629,7 @@ input, button{
 #mobile-menu-block {
 	position: fixed;
 	height: 100vh;
-	width:100vw;
+	width: 100vw;
 	top: 0px;
 	left: 0px;
 	background: transparent;

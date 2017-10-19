@@ -1,33 +1,41 @@
 ---
 layout: page
 title: Rarities
+subpaging: true
 ---
 {% assign rarities = site.posts | group_by: 'item_rarity' %}
 {% assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " %}
 
-<h1>{{ page.title }}</h1>
-<item-tags>
-  {%- for rarity_name in rarities_names -%}
-    {%- for rarity in rarities -%}
-      {% if rarity.name == rarity_name %}
-        <item-tag><a href="#{{ rarity.name | slugify }}">{{rarity.name}} <span>|</span> {{rarity.items.size}}</a></item-tag>
-      {% endif %}
-    {%- endfor -%}
-  {%- endfor -%}
-</item-tags>
-<hr />
-<div id="tags-list">
+<section id="head">
+	<h1>{{ page.title }}</h1>
+	<item-tags>
+		{%- for rarity_name in rarities_names -%}
+		{%- for rarity in rarities -%}
+		{%- if rarity.name == rarity_name -%}
+		<item-tag><a href="#{{ rarity.name | slugify }}">{{rarity.name}} <span>|</span> {{rarity.items.size}}</a></item-tag>
+		{%- endif -%}
+		{%- endfor -%}
+		{%- endfor -%}
+	</item-tags>
+	<hr />
+</section>
+<span id="return"><a href="#">Back to Rarities</a></span>
+<section id="tags-list">
  {%- for rarity_name in rarities_names -%}
     {%- for rarity in rarities -%}
-      {% if rarity.name == rarity_name %}
-      <h2 id="{{ rarity.name | slugify }}">{{ rarity.name }}</h2>
-      <ul>
-        {%- assign items = rarity.items | sort 'title' -%}
-        {% for post in items -%}
-          {% include tag-result.html %}
-        {%- endfor %}
-      </ul>
-      {% endif %}
+		{% if rarity.name == rarity_name %}
+			<div class="tag" id="{{ rarity.name | slugify }}">
+				<a href="#{{ rarity.name | slugify }}"><h2>{{ rarity.name }}</h2></a>
+				<div class="children">
+					<ul>
+						{%- assign items = rarity.items | sort 'title' -%}
+						{% for post in items -%}
+						{% include tag-result.html %}
+						{%- endfor %}
+					</ul>
+				</div>
+			</div>
+		{% endif %}
     {%- endfor -%}
   {%- endfor -%}
-</div>
+</section>
