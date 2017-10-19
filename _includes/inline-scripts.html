@@ -47,13 +47,13 @@
     {% endif %}
 
 
-    $("#navbar-toggle").on("click touchend", function (e) {
-      e.preventDefault();
-      $("#navbar-content").slideToggle();
-    });
+    // $("#navbar-toggle").on("click touchend", function (e) {
+    //   e.preventDefault();
+    //   $("#navbar-content").slideToggle();
+    // });
     $(".dropdown-toggle").on("click touchend", function (e) {
       e.preventDefault();
-      this.next(".dropdown").slideToggle();
+      $(this).next(".dropdown").slideToggle();
     });
 
     //if a link starts with "#" make it animate to that position and prevent adding it to the url
@@ -79,7 +79,7 @@
           $("#navbar-content").slideUp(150);
         }
         else {
-          $("nav.navbar").removeAttr("style");
+          $("#navbar").removeAttr("style");
           $("body").prepend("<div id='"+ mobileblock +"'></div>");
           $("#navbar-content").slideDown(150);
         }
@@ -115,9 +115,8 @@
         if ($(window).scrollTop() >= 150) {
           if (currentPosition > scrollPosition){ /*scrolling down*/
             if (down){
-              $("#navbar-collapse").collapse("hide");
               $("#" + mobileblock).remove();
-              $("nav.navbar").stop(true, false).slideUp(250);
+              $("#navbar").stop(true, false).slideUp(250);
               difference = 0;
               down = false;
             }
@@ -125,20 +124,19 @@
           else { /*scrolling up*/
             difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
             if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
-              $("nav.navbar").stop(true, false).slideDown(250);
+              $("#navbar").stop(true, false).slideDown(250);
               down = true;
             }
           }
         }
         else if (!down) {
-          $("nav.navbar").slideDown(250);
+          $("#navbar").slideDown(250);
           down = true;
         }
       }
       else { /* desktop size */
-        $("#navbar-collapse").collapse("hide");
         $("#" + mobileblock).remove();
-        $("nav.navbar").removeAttr("style");
+        $("#navbar").removeAttr("style");
         $("#navbar-content").removeAttr("style");
         $(".dropdown").removeAttr("style");
         down = true;
