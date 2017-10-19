@@ -76,18 +76,18 @@
       if ($(window).width() < 768){ /* mobile size */
         if ($("#" + mobileblock).length > 0){
           $("#" + mobileblock).remove();
-          $("#navbar-content").slideUp(250);
+          $("#navbar-content > ul").slideUp(250);
         }
         else {
           $("#navbar").removeAttr("style");
           $("body").prepend("<div id='"+ mobileblock +"'></div>");
-          $("#navbar-content").slideDown(250);
+          $("#navbar-content > ul").slideDown(250);
         }
       }
     });
     $("body").on("click touchend","#" + mobileblock, function() {
       $("#" + mobileblock).remove();
-      $("#navbar-content").slideUp(250);
+      $("#navbar-content > ul").slideUp(250);
     });
 
     var timer;
@@ -117,7 +117,7 @@
             if (down){
               $("#" + mobileblock).remove();
               $("#navbar").stop(true, false).slideUp(250);
-              $("#navbar-content").stop(true, false).slideUp(250);
+              $("#navbar-content > ul").stop(true, false).slideUp(250);
               difference = 0;
               down = false;
             }
@@ -138,7 +138,7 @@
       else { /* desktop size */
         $("#" + mobileblock).remove();
         $("#navbar").removeAttr("style");
-        $("#navbar-content").removeAttr("style");
+        $("#navbar-content > ul").removeAttr("style");
         $(".dropdown").removeAttr("style");
         down = true;
       }
