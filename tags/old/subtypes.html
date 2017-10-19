@@ -2,7 +2,9 @@
 layout: page
 title: Subtypes
 subpaging: true
----
+
+
+
 {% assign cat_names = "" | split: "|"   %}
 {% for cat in site.categories %}
   {%- assign cat_names = cat_names | push: cat.first -%}
