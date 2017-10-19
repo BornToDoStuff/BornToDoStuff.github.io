@@ -106,7 +106,6 @@ li:hover .dropdown ul {
 @include mobile {
   #navbar #navbar-content > ul {
     height: auto;
-    display: block;
     position: absolute;
     left: 0;
     right: 0;
@@ -119,6 +118,10 @@ li:hover .dropdown ul {
 
   #navbar li ul {
     position: static;
+  }
+
+  .dropdown. #navbar-content > ul {
+    display: none;
   }
 }
 
