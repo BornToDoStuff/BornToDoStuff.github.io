@@ -526,7 +526,7 @@ input, button{
 		}
 		&:first-child a { margin-left: -3px }
 	}
-	.pagination > li .extra {
+	.pagination > li.extra {
 		@include mobile {
 			display: none;
 		}

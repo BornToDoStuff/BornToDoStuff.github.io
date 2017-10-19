@@ -1,6 +1,6 @@
 ---
 title: Charm of the Eye
-item_id: 0
+item_id: 36
 category: Wondrous
 item_subtypes:
   - Pendant
