@@ -7,9 +7,9 @@ layout: default
   <item-description>
     {{content}}
   </item-description>
-  <hr />
   {% assign tags_count = page.tags | size %}
   {%- if tags_count > 0 -%}
+  <hr />
   <item-tags>
     {%- for tag in page.tags -%}
     <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
