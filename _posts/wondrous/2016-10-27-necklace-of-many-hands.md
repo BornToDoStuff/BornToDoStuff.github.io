@@ -1,57 +1,27 @@
 ---
-title:
-item_id: 0
-category: Armor Potion Ring Rod Scroll Shield Staff Tattoo Wand Weapon Wondrous
+title: Necklace of Many Hands
+item_id: 65
+category: Wondrous
 item_subtypes:
-  - Breastplate
-  - Half Plate
-item_rarity: Mediocre Common Uncommon Rare Very Rare Legendary
-item_attunement: false
+  - Pendant
+item_rarity: Uncommon
+item_attunement: true
 item_requirement:
 item_curse: false
 item_classes:
-  - Barbarian
-  - Bard
-  - Cleric
-  - Druid
-  - Fighter
-  - Monk
-  - Paladin
-  - Ranger
   - Rogue
-  - Sorcerer
   - Warlock
   - Wizard
-  - All
-item_school: Abjuration Conjuration Divination Enchantment Evocation Illusion Necromancy Transmutation Unidentifiable Ancient
+item_school: Conjuration
 item_role:
-  - Attack
-  - Auxiliary
-  - Defense
-  - Healing
   - Utility
 item_damage:
-  - Acid
-  - Bludgeoning
-  - Cold
-  - Fire
-  - Force
-  - Lightning
-  - Necrotic
-  - Piercing
-  - Poison
-  - Psychic
-  - Radiant
-  - Slashing
-  - Thunder
-  - Mixed
 tags:
-  - tag
-  - tag
+  - Spellcasting
 item_idea:
 item_co_creator:
 item_updated:
 last_modified_at:
 ---
 
-content goes here
+This rawhide necklace has three hands carved from malachite hung between onyx beads. While attuned to this item you are able to cast <magic-spell>Mage Hand</magic-spell> if you were not able to before. When you cast Mage Hand while wearing this necklace you can choose to create up to three hands, these mage hands remain until dismissed, or you cast <magic-spell>Mage Hand</magic-spell> again. You can command any number of the summoned hands with your action and they can work together to lift up to 30 pounds total.
