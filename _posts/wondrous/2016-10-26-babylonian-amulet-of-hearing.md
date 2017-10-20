@@ -1,10 +1,9 @@
 ---
 title:
-item_id: 0
-category: Armor Potion Ring Rod Scroll Shield Staff Tattoo Wand Weapon Wondrous
+item_id: 63
+category: Wondrous
 item_subtypes:
-  - Breastplate
-  - Half Plate
+  - Pendant
 item_rarity: Common
 item_attunement: false
 item_requirement:
