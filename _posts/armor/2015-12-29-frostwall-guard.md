@@ -4,7 +4,7 @@ item_id: 4
 category: Armor
 item_subtypes:
   - Shield
-item_rarity: Mediocre
+item_rarity: Rare
 item_attunement: true
 item_requirement:
 item_curse: false
