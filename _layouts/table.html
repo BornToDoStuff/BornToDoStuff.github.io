@@ -1,8 +1,3 @@
----
-layout: null
-search: true
-title: Search
----
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,11 +16,11 @@ title: Search
     {% include navigation.html %}
     <a id="TippyTop"></a>
     <div class="width-wrapper">
-      <div id="search-form">
-        <input id="search" name="q" type="search" placeholder="Search" />
-        <input id="search-btn" type="submit" />
+      <div id="main-wrapper">
+        <section id="main" role="main">
+            {{ content }}
+        </section>
       </div>
-      <div id="search-results"></div>
     </div>
     <div id="navigation-fixed">
       <a id="return-to-top" href="#TippyTop">
@@ -33,8 +28,15 @@ title: Search
       </a>
     </div>
     <div>
+      <script src="{{ site.baseurl }}/js/scripts.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/widgets/widget-filter.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $("#{{page.table}}").tablesorter();
+        });
+      </script>
       {% include inline-scripts.html %}
-      {% include search-logic.html %}
     </div>
   </body>
 </html>

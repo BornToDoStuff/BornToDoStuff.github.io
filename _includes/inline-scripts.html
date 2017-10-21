@@ -1,3 +1,4 @@
+
 <script src="{{ site.baseurl }}/js/scripts.js"></script>
 <script>
   $(document).ready(function(){
@@ -46,11 +47,6 @@
       }
     {% endif %}
 
-
-    // $("#navbar-toggle").on("click touchend", function (e) {
-    //   e.preventDefault();
-    //   $("#navbar-content").slideToggle();
-    // });
     $(".dropdown-toggle").on("click touchend", function (e) {
       e.preventDefault();
       $(this).next(".dropdown").stop(true, false).slideToggle(250);

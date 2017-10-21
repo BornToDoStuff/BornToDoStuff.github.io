@@ -8,14 +8,13 @@
 /* custom-bootstrap.min.js */
 /* ==================== */
 {% include /js/custom-bootstrap.min.js %}
+{% if page.search %}
 /* ==================== */
 /* lunr.min.js */
 /* ==================== */
 {% include /js/lunr.min.js %}
-
-{% comment %}
+{% endif %}
 /* ==================== */
 /* custom-elements.js */
 /* ==================== */
 {% include /js/custom-elements.js %}
-{% endcomment %}

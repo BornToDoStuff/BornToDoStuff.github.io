@@ -1,0 +1,29 @@
+---
+layout: table
+table: item_table
+title: Items
+---
+
+{% assign sorted_posts = site.posts | sort: 'title' %}
+<table id="item_table" class="tablesorter">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Sub-Types</th>
+      <th>Rarity</th>
+      <th>Attunement</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%- for post in sorted_posts -%}
+      <tr>
+        <td>{{post.title}}</td>
+        <td>{{post.category}}</td>
+        <td>{{post.item_subtypes}}</td>
+        <td>{{post.item_rarity}}</td>
+        <td>{{post.item_attunement}}</td>
+      </tr>
+    {%- endfor -%}
+  </tbody>
+</table>
