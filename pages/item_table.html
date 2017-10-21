@@ -1,30 +1,96 @@
 ---
-layout: table
-table: item_table
+layout: null
 title: Items
 permalink: /items/
 ---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 
-{% assign sorted_posts = site.posts | sort: 'title' %}
-<table id="item_table" class="tablesorter">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Sub-Types</th>
-      <th>Rarity</th>
-      <th>Attunement</th>
-    </tr>
-  </thead>
-  <tbody>
-    {%- for post in sorted_posts -%}
-      <tr>
-        <td>{{post.title}}</td>
-        <td>{{post.category}}</td>
-        <td>{{post.item_subtypes}}</td>
-        <td>{{post.item_rarity}}</td>
-        <td>{{post.item_attunement}}</td>
-      </tr>
-    {%- endfor -%}
-  </tbody>
-</table>
+    {% include meta.html %}
+    {% include analytics.html %}
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  </head>
+  <body>
+    {% include navigation.html %}
+    <a id="TippyTop"></a>
+    <div class="width-wrapper">
+      <div id="main-wrapper">
+        <section id="main" role="main">
+          <div class="page">
+            {% assign sorted_posts = site.posts | sort: 'title' %}
+            <table id="item_table" class="tablesorter">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Sub-Types</th>
+                  <th>Rarity</th>
+                  <th>Attunement</th>
+                </tr>
+              </thead>
+              <tbody>
+                {%- for post in sorted_posts -%}
+                  <tr>
+                    <td>{{post.title}}</td>
+                    <td>{{post.category}}</td>
+                    <td>{{post.item_subtypes}}</td>
+                    <td>{{post.item_rarity}}</td>
+                    <td>{{post.item_attunement}}</td>
+                  </tr>
+                {%- endfor -%}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </div>
+    <div id="navigation-fixed">
+      <a id="return-to-top" href="#TippyTop">
+        <img alt="white chevron" src="{{ site.baseurl }}/images/icons/chevron-up-white.svg" />
+      </a>
+    </div>
+    <div>
+      <script src="{{ site.baseurl }}/js/scripts.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/widgets/widget-filter.min.js"></script>
+      <script>
+        $(document).ready(function(){
+          $.tablesorter.addParser({
+            // set a unique id
+            id: 'rarity',
+            is: function(s) {
+              // return false so this parser is not auto detected
+              return false;
+            },
+            format: function(s) {
+              // format your data for normalization
+              return s.toLowerCase().replace(/artifact/,6).replace(/legendary/,5).replace(/very rare/,4)
+                .replace(/rare/,3).replace(/uncommon/,2).replace(/common/,1).replace(/mediocre/,0);
+            },
+            // set type, either numeric or text
+            type: 'numeric'
+          });
+          $("#item_table").tablesorter({
+            theme: 'default',
+            widthFixed: false,
+            sortReset: true,
+            widgets: ['stickyHeaders', 'filter'],
+            headers: {
+                4: {
+                    sorter:'rarity'
+                }
+            }
+          });
+        });
+      </script>
+      {% include inline-scripts.html %}
+    </div>
+  </body>
+</html>
