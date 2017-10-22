@@ -72,22 +72,21 @@ permalink: /items/
           },
           type: 'numeric'
         });
-        $(document).ready(function(){
-          var $table = $("#item_table").tablesorter({
-            theme: 'default',
-            widthFixed: false,
-            sortReset: true,
-            widgets: ['stickyHeaders', 'filter'],
-            widgetOptions: {
-              filter_external : '.search',
-              filter_reset: '.reset',
-              filter_columnFilters: false,
-              filter_defaultFilter: { 0 : '~{query}' },
-            },
-            headers: { 3: { sorter: 'rarity' } }
-          });
-          $.tablesorter.filter.bindSearch( $table, $('.search') );
+        
+        var $table = $("#item_table").tablesorter({
+          theme: 'default',
+          widthFixed: false,
+          sortReset: true,
+          widgets: ['stickyHeaders', 'filter'],
+          widgetOptions: {
+            filter_external : '.search',
+            filter_reset: '.reset',
+            filter_columnFilters: false,
+            filter_defaultFilter: { 0 : '~{query}' },
+          },
+          headers: { 3: { sorter: 'rarity' } }
         });
+        $.tablesorter.filter.bindSearch( $table, $('.search') );
       </script>
       {% include inline-scripts.html %}
     </div>
