@@ -40,9 +40,9 @@ permalink: /items/
                   <tr>
                     <td>{{post.title}}</td>
                     <td>{{post.category}}</td>
-                    <td>{{post.item_subtypes}}</td>
+                    <td>{% if post.item_subtypes %}{{ post.item_subtypes | replace '\"\"', '\", \"'}}{% endif %}</td>
                     <td>{{post.item_rarity}}</td>
-                    <td>{{post.item_attunement}}</td>
+                    <td>{% if post.item_attunement %}Yes{% endif %}</td>
                   </tr>
                 {%- endfor -%}
               </tbody>
@@ -85,7 +85,7 @@ permalink: /items/
               filter_reset: '.reset',
               filter_columnFilters: true,
               filter_defaultFilter: { 0 : '~{query}' },
-            }
+            },
             headers: { 3: { sorter: 'rarity' } }
           });
         });

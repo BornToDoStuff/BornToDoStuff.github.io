@@ -630,3 +630,12 @@ input, button {
 	z-index: 99;
 	pointer-events: all;
 }
+table {
+	width: 100%;
+}
+tr {
+	border-bottom: 1px solid $transp_lightGray;
+}
+td {
+	padding: 3px 10px;
+}
