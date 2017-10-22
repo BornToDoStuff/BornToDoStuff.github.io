@@ -91,7 +91,7 @@ permalink: /items/
       <script>
         $(document).ready(function(){
           $("#item_table").on("click", "tr", function(e){
-            var win = window.open(e.data("href"));
+            var win = window.open($(this).data("href"));
             if (win) win.focus();
           })
         });
