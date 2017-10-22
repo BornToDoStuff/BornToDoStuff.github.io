@@ -185,7 +185,7 @@
       var items_visited = getCookie("items_visited");
       if (items_visited) { //if there is any useful value in items_visited
         items_visited = items_visited.split(",");
-        while (items_visited.indexOf(r.toString()) > 0){ //find a value of "r" that is not in items_visited
+        while (items_visited.indexOf(r.toString()) >= 0){ //find a value of "r" that is not in items_visited
           r = randomInt();
         }
         if (items_visited.length == 10)
