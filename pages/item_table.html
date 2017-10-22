@@ -40,7 +40,7 @@ permalink: /items/
                   <tr>
                     <td>{{post.title}}</td>
                     <td>{{post.category}}</td>
-                    <td>{% if post.item_subtypes %}{{ post.item_subtypes | replace '\"\"', ', '}}{% endif %}</td>
+                    <td>{% for subcat in post.item_subtypes | sort %}{{subcat}}{% unless forloop.last %}, {% endunless %}{% endfor %}</td>
                     <td>{{post.item_rarity}}</td>
                     <td>{% if post.item_attunement %}Yes{% endif %}</td>
                   </tr>
