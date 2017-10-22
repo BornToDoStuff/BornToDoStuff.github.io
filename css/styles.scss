@@ -643,6 +643,7 @@ table {
     width: 100%;
     box-shadow: none !important;
     background: white;
+		font-weight: normal;
 	}
 }
 .tablesorter-filter-row th {
@@ -665,5 +666,8 @@ thead .tablesorter-headerDesc {
 }
 thead .tablesorter-headerAsc {
   background-image: url(data:image/gif;base64,R0lGODlhFQAEAIAAACMtMP///yH5BAEAAAEALAAAAAAVAAQAAAINjI8Bya2wnINUMopZAQA7);
+}
+.sorter-false {
+	background-image: none !important;
 }
 .filtered { display: none; }

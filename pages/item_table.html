@@ -106,7 +106,7 @@ permalink: /items/
           is: function(s) { return false; },
           format: function(s) {
             // format your data for normalization
-            return s.toLowerCase().replace(/Yes/,1).replace(/ /,0);
+            return s.toLowerCase().replace("Yes",1).replace(" ",0);
           },
           type: 'numeric'
         });
