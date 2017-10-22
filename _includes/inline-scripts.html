@@ -188,14 +188,14 @@
         while (items_visited.indexOf(r) > 0){ //find a value of "r" that is not in items_visited
           r = randomInt();
         }
-        if (items_visited.length = 10)
+        if (items_visited.length == 10)
           items_visited.pop();
         items_visited.unshift(r);
       }
       else {
         items_visited = r;
-        createCookie("items_visited", items_visited);
       }
+      createCookie("items_visited", items_visited);
 
       var url = posts[r].url;
       $("#main").remove();
