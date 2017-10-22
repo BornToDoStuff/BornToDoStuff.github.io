@@ -90,8 +90,9 @@ permalink: /items/
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/widgets/widget-filter.min.js"></script>
       <script>
         $(document).ready(function(){
-          $("#item_table").on("click", "tr", function(e, row, ele){
-            window.open(ele.data("href"));
+          $("#item_table").on("click", "tr", function(e){
+            var win = window.open(e.data("href"));
+            if (win) win.focus();
           })
         });
         $.tablesorter.addParser({
@@ -128,7 +129,7 @@ permalink: /items/
             filter_reset: '.reset',
             filter_columnFilters: false,
             filter_defaultFilter: {
-              0 : '~{query}',
+              // 0 : '~{query}',
               3 : '={query}'
             },
           },

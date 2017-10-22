@@ -675,8 +675,10 @@ table {
 }
 
 tr { border-bottom: 1px solid $transp_lightGray; }
-tr.even { backgrounc-color: $transp_lightBlue; }
+tr.even { background-color: $transp_lightBlue; }
+tbody tr:hover { background-color: $transp_medBlue; }
 thead tr {
+	background-color: none;
 	border-top: 1px solid $transp_lightGray;
 	color: #40434e;
 }
