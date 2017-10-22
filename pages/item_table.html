@@ -26,8 +26,8 @@ permalink: /items/
         {%- assign cat_names = cat_names | sort -%}
         {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
 
-        <input id="search" type="search" class="search" placeholder="Search..." data-column="all" style="width:100%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2)" />
-        <input type="button" class="reset" value="Reset Search" />
+        <input id="search" type="search" class="search" placeholder="Search..." data-column="all" style="width:80%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2)" />
+        <input type="button" class="reset" value="Reset Search" style="width: 20%;border: 1px solid rgba(0,0,0,0.2);min-height: 37px;" />
 
         <table id="item_table" class="tablesorter">
           <thead>
@@ -61,7 +61,7 @@ permalink: /items/
                 <select class="search" data-column="4">
                   <option></option>
                   <option value="Yes">Yes</option>
-                  <option value="">No</option>
+                  <option value="—">No</option>
                 </select>
               </th>
             </tr>
@@ -73,7 +73,7 @@ permalink: /items/
                 <td>{{post.category}}</td>
                 <td>{% for subcat in post.item_subtypes | sort %}{{subcat}}{% unless forloop.last %}, {% endunless %}{% endfor %}</td>
                 <td>{{post.item_rarity}}</td>
-                <td>{% if post.item_attunement %}Yes{% else %} {% endif %}</td>
+                <td>{% if post.item_attunement %}Yes{% else %}—{% endif %}</td>
               </tr>
             {%- endfor -%}
           </tbody>
@@ -97,16 +97,6 @@ permalink: /items/
           format: function(s) {
             // format your data for normalization
             return s.toLowerCase().replace(/artifact/,7).replace(/legendary/,6).replace(/very rare/,5).replace(/rare/,4).replace(/uncommon/,3).replace(/common/,2).replace(/mediocre/,1);
-          },
-          type: 'numeric'
-        });
-        $.tablesorter.addParser({
-          // set a unique id
-          id: 'attunement',
-          is: function(s) { return false; },
-          format: function(s) {
-            // format your data for normalization
-            return s.toLowerCase().replace("Yes",1).replace(" ",0);
           },
           type: 'numeric'
         });
@@ -141,7 +131,7 @@ permalink: /items/
           headers: {
             2: { sorter: false },
             3: { sorter: 'rarity' },
-            4: { sorter: 'attunement', empty: 'zero' }
+            4: { empty: 'zero' }
            }
         });
         $.tablesorter.filter.bindSearch( $table, $('.search') );

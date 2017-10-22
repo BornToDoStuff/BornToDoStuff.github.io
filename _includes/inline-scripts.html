@@ -48,8 +48,10 @@
     {% endif %}
 
     $(".dropdown-toggle").on("click touchend", function (e) {
-      e.preventDefault();
-      $(this).next(".dropdown").stop(true, false).slideToggle(250);
+      if ($(window).width() < 768){
+        e.preventDefault();
+        $(this).next(".dropdown").stop(true, false).slideToggle(250);
+      }
     });
 
     //if a link starts with "#" make it animate to that position and prevent adding it to the url
