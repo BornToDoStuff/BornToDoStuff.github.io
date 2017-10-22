@@ -67,7 +67,7 @@ permalink: /items/
           </thead>
           <tbody>
             {%- for post in sorted_posts -%}
-              <tr>
+              <tr data-href="{{ post.url }}">
                 <td>{{post.title}}</td>
                 <td>{{post.category}}</td>
                 <td>{% if post.item_subtypes %}{% for subcat in post.item_subtypes | sort %}{{subcat}}{% unless forloop.last %}, {% endunless %}{% endfor %}{% else %}—{% endif %}</td>
@@ -89,6 +89,11 @@ permalink: /items/
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js"></script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/widgets/widget-filter.min.js"></script>
       <script>
+        $(document).ready(function(){
+          $("#item_table").on("click", "tr", function(e, row, ele){
+            window.open(ele.data("href"));
+          })
+        });
         $.tablesorter.addParser({
           // set a unique id
           id: 'rarity',

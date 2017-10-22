@@ -1,0 +1,23 @@
+<div class="modal">
+  <div class="modal-overlay modal-toggle"></div>
+  <div class="modal-wrapper modal-transition">
+    <div class="modal-body">
+      <div class="modal-content">
+        <button class="modal-close modal-toggle"><img src="/images/icons/times.svg" /></button>
+        <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
+        <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
+        <item-description>
+          {{ post.excerpt }}
+          {% if post.excerpt != post.content -%}
+          <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+            <p>Read more &raquo;</p>
+            <div class="expander">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </a>
+          {%- endif -%}
+        </item-description>
+      </div>
+    </div>
+  </div>
+</div>
