@@ -28,22 +28,11 @@ permalink: /items/
             {%- assign cat_names = cat_names | sort -%}
             {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
 
-            <input type="search" class="search" placeholder="Search..." data-column="all" />
-            <select class="search" data-column="1">
-              <option></option>
-              {%- for cat in cat_names -%}
-                <option value="{{cat}}">{{cat}}</option>
-              {%- endfor -%}
-            </select>
-            <select class="search" data-column="3">
-              <option></option>
-              {%- for rarity in rarities_names -%}
-                <option value="{{rarity}}">{{rarity}}</option>
-              {%- endfor -%}
-            </select>
+            <div id="search-form">
+              <input id="search" type="search" class="search" placeholder="Search..." data-column="all" />
+              <span id="search-btn"></span>
+            </div>
             <input type="button" class="reset" value="Reset Search" />
-            <hr />
-            
             <table id="item_table" class="tablesorter">
               <thead>
                 <tr>
@@ -52,6 +41,33 @@ permalink: /items/
                   <th>Sub-Types</th>
                   <th>Rarity</th>
                   <th>Attunement</th>
+                </tr>
+                <tr>
+                  <th><input type="search" class="search" placeholder="Search..." data-column="0" /></th>
+                  <th>
+                    <select class="search" data-column="1">
+                      <option></option>
+                      {%- for cat in cat_names -%}
+                        <option value="{{cat}}">{{cat}}</option>
+                      {%- endfor -%}
+                    </select>
+                  </th>
+                  <th><input type="search" class="search" placeholder="Search..." data-column="2" /></th>
+                  <th>
+                    <select class="search" data-column="3">
+                      <option></option>
+                      {%- for rarity in rarities_names -%}
+                        <option value="{{rarity}}">{{rarity}}</option>
+                      {%- endfor -%}
+                    </select>
+                  </th>
+                  <th>
+                    <select class="search" data-column="4">
+                      <option></option>
+                      <option value="Yes">Yes</option>
+                      <option value="">No</option>
+                    </select>
+                  </th>
                 </tr>
               </thead>
               <tbody>
