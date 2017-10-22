@@ -40,7 +40,7 @@ permalink: /items/
                   <tr>
                     <td>{{post.title}}</td>
                     <td>{{post.category}}</td>
-                    <td>{% if post.item_subtypes %}{{ post.item_subtypes | replace '\"\"', '\", \"'}}{% endif %}</td>
+                    <td>{% if post.item_subtypes %}{{ post.item_subtypes | replace '\"\"', ', '}}{% endif %}</td>
                     <td>{{post.item_rarity}}</td>
                     <td>{% if post.item_attunement %}Yes{% endif %}</td>
                   </tr>
@@ -75,19 +75,20 @@ permalink: /items/
             // set type, either numeric or text
             type: 'numeric'
           });
-          $("#item_table").tablesorter({
+           var $table = $("#item_table").tablesorter({
             theme: 'default',
-            // widthFixed: false,
+            widthFixed: false,
             sortReset: true,
             widgets: ['stickyHeaders', 'filter'],
             widgetOptions: {
               filter_external : '.search',
               filter_reset: '.reset',
-              filter_columnFilters: true,
+              filter_columnFilters: false,
               filter_defaultFilter: { 0 : '~{query}' },
             },
             headers: { 3: { sorter: 'rarity' } }
           });
+          $.tablesorter.filter.bindSearch( $table, $('.search') );
         });
       </script>
       {% include inline-scripts.html %}

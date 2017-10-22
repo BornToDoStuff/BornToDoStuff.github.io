@@ -14,7 +14,9 @@
 /* ==================== */
 {% include /js/lunr.min.js %}
 {% endif %}
+{% comment %}
 /* ==================== */
 /* custom-elements.js */
 /* ==================== */
 {% include /js/custom-elements.js %}
+{% endcomment %}
