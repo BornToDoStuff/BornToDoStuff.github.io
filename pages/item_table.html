@@ -90,7 +90,7 @@ permalink: /items/
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/widgets/widget-filter.min.js"></script>
       <script>
         $(document).ready(function(){
-          $("#item_table").on("click", "tr", function(e){
+          $("#item_table").on("click", "tbody tr", function(e){
             var win = window.open($(this).data("href"));
             if (win) win.focus();
           })
