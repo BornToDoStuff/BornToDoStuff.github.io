@@ -22,31 +22,14 @@
         </section>
       </div>
       <section id="sidebar">
-        {% unless page.search %}
+        {% unless page.nosearch %}
           {% include search-form.html %}
-        {% endunless %}
-        <section id="recent-posts">
-          <h3>Recent Items</h3>
-          {% for post in site.posts | offset:0 | limit:5 %}
-            <a href="{{ post.url }}">{{ post.title }}</a>
-          {% endfor %}
-        </section>
-        <section id="popular-tags">
-          <h3>Popular Tags</h3>
-          {% assign tag_names = "" %}
-          {% capture tag_names %}
-            {%- for tag in site.tags -%}
-              {{site.tags[tag.first].size}}#{{tag.first | capitalize}}{% unless forloop.last %}|{% endunless %}
-            {%- endfor -%}
-          {% endcapture %}
-          {% assign tag_names = tag_names | split:"|" | sort | reverse %}
-          <item-tags class="compact">
-            {%- for tag in tag_names | offset:0 | limit:10 -%}
-              {%- assign tag_split = tag | split:"#" -%}
-              <item-tag><a href="/tags/#{{tag_split[1] | slugify}}">{{ tag_split[1] }}</a></item-tag>
-            {%- endfor -%}
-          </item-tags>
-        </section>
+        {% endunless -%}
+        {% if page.is_post %}
+          {% include post-sidebar.html %}
+        {%- else -%}
+          {% include sidebar.html %}
+        {%- endif %}
       </section>
 
       <div id="navigation-fixed">

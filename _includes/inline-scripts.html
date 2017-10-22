@@ -144,3 +144,16 @@
     }
   });
 </script>
+{% if page.randomize %}
+  <script type="text/text/javascript" src="/js/posts.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      var min = 1;
+      var max = {{ site.posts | size }}
+      var r = Math.floor(Math.random() * (max - min + 1)) + min;
+      var url = posts[r].url;
+      $("#main").remove();
+      $("#main-wrapper").load(url + " #main");
+    });
+  </script>
+{% endif %}
