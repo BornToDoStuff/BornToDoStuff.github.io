@@ -18,7 +18,7 @@ permalink: /items/
   <body>
     {% include navigation.html %}
     <a id="TippyTop"></a>
-    <div class="width-wrapper">
+    <div class="width-wrapper center">
       <div class="page">
         {% assign sorted_posts = site.posts | sort: 'title' %}
         {%- assign cat_names = "" | split: "|"   -%}
@@ -26,7 +26,7 @@ permalink: /items/
         {%- assign cat_names = cat_names | sort -%}
         {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
 
-        <input id="search" type="search" class="search" placeholder="Search..." data-column="all" style="width:80%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2)" /><input type="button" class="reset" value="Reset Search" style="width: 20%;border: 1px solid rgba(0,0,0,0.2);min-height: 37px;" />
+        <input id="search" type="search" class="search" placeholder="Search All..." data-column="all" style="width:80%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2)" /><input type="button" class="reset" value="Reset Search" style="width: 20%;border: 1px solid rgba(0,0,0,0.2);min-height: 37px;" />
 
         <table id="item_table" class="tablesorter">
           <thead>
@@ -38,7 +38,7 @@ permalink: /items/
               <th>Attune</th>
             </tr>
             <tr class="tablesorter-filter-row tablesorter-ignoreRow">
-              <th><input type="search" class="search" placeholder="Search..." data-column="0" /></th>
+              <th><input type="search" class="search" placeholder="Search Name..." data-column="0" /></th>
               <th>
                 <select class="search" data-column="1">
                   <option></option>
@@ -47,7 +47,7 @@ permalink: /items/
                   {%- endfor -%}
                 </select>
               </th>
-              <th><input type="search" class="search" placeholder="Search..." data-column="2" /></th>
+              <th><input type="search" class="search" placeholder="Search Sub-Types..." data-column="2" /></th>
               <th>
                 <select class="search" data-column="3">
                   <option></option>
@@ -79,7 +79,7 @@ permalink: /items/
         </table>
       </div>
     </div>
-    <div id="navigation-fixed">
+    <div id="navigation-fixed" class="center">
       <a id="return-to-top" href="#TippyTop">
         <img alt="white chevron" src="{{ site.baseurl }}/images/icons/chevron-up-white.svg" />
       </a>

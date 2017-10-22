@@ -110,6 +110,9 @@ h4 {
 body > .width-wrapper {
 	margin-top: 75px;
 }
+.width-wrapper.center {
+	padding: 0px 20px !important;
+}
 
 #main-wrapper {
 	display: block;
@@ -206,6 +209,16 @@ body > .width-wrapper {
 	&:hover {
 		background: rgba(0, 0, 0, 0.7);
 	}
+}
+#navigation-fixed.center {
+		left: 20px;
+		right: 20px;
+		padding: 0px;
+
+		#return-to-top {
+			left: 50%;
+			margin-left: -25px;
+		}
 }
 
 input[type="search"], input[type="text"] {
