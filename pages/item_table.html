@@ -23,20 +23,27 @@ permalink: /items/
         <section id="main" role="main">
           <div class="page">
             {% assign sorted_posts = site.posts | sort: 'title' %}
+            {%- assign cat_names = "" | split: "|"   -%}
+            {%- for cat in site.categories -%} {%- assign cat_names = cat_names | push: cat.first -%} {%- endfor -%}
+            {%- assign cat_names = cat_names | sort -%}
+            {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
+
             <input type="search" class="search" placeholder="Search..." data-column="all" />
             <select class="search" data-column="1">
-              {%- for cat in site.categories | sort -%}
+              <option></option>
+              {%- for cat in cat_names -%}
                 <option value="{{cat}}">{{cat}}</option>
               {%- endfor -%}
             </select>
             <select class="search" data-column="3">
-              {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
+              <option></option>
               {%- for rarity in rarities_names -%}
                 <option value="{{rarity}}">{{rarity}}</option>
               {%- endfor -%}
             </select>
             <input type="button" class="reset" value="Reset Search" />
             <hr />
+            
             <table id="item_table" class="tablesorter">
               <thead>
                 <tr>
