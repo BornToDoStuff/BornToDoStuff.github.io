@@ -1,5 +1,5 @@
 ---
-title:
+title: Babylonian Amulet of Hearing
 item_id: 63
 category: Wondrous
 item_subtypes:
