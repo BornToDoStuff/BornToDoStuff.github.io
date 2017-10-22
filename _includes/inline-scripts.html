@@ -184,7 +184,7 @@
       var r = randomInt();
       var items_visited = getCookie("items_visited");
       if (items_visited) { //if there is any useful value in items_visited
-        items_visited = items_visited.split("|");
+        items_visited = items_visited.split(",");
         while (items_visited.indexOf(r) > 0){ //find a value of "r" that is not in items_visited
           r = randomInt();
         }
@@ -195,7 +195,7 @@
       else {
         items_visited = r;
       }
-      createCookie("items_visited", items_visited);
+      createCookie("items_visited", items_visited.join(","));
 
       var url = posts[r].url;
       $("#main").remove();
