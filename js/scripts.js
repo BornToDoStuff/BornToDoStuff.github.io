@@ -8,12 +8,10 @@
 /* custom-bootstrap.min.js */
 /* ==================== */
 {% include /js/custom-bootstrap.min.js %}
-{% if page.search %}
 /* ==================== */
 /* lunr.min.js */
 /* ==================== */
 {% include /js/lunr.min.js %}
-{% endif %}
 {% comment %}
 /* ==================== */
 /* custom-elements.js */
