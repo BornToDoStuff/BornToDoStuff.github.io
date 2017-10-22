@@ -23,7 +23,18 @@ permalink: /items/
         <section id="main" role="main">
           <div class="page">
             {% assign sorted_posts = site.posts | sort: 'title' %}
-            <input type="search" class="search" placeholder="Search..." />
+            <input type="search" class="search" placeholder="Search..." data-column="all" />
+            <select class="search" data-column="1">
+              {%- for cat in site.categories | sort -%}
+                <option value="{{cat}}">{{cat}}</option>
+              {%- endfor -%}
+            </select>
+            <select class="search" data-column="3">
+              {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
+              {%- for rarity in rarities_names -%}
+                <option value="{{rarity}}">{{rarity}}</option>
+              {%- endfor -%}
+            </select>
             <input type="button" class="reset" value="Reset Search" />
             <hr />
             <table id="item_table" class="tablesorter">
@@ -68,23 +79,25 @@ permalink: /items/
           is: function(s) { return false; },
           format: function(s) {
             // format your data for normalization
-            return s.toLowerCase().replace(/artifact/,6).replace(/legendary/,5).replace(/very rare/,4).replace(/rare/,3).replace(/uncommon/,2).replace(/common/,1).replace(/mediocre/,0);
+            return s.toLowerCase().replace(/artifact/,7).replace(/legendary/,6).replace(/very rare/,5).replace(/rare/,4).replace(/uncommon/,3).replace(/common/,2).replace(/mediocre/,1);
           },
           type: 'numeric'
         });
-        
+
         var $table = $("#item_table").tablesorter({
           theme: 'default',
           widthFixed: false,
           sortReset: true,
-          widgets: ['stickyHeaders', 'filter'],
+          widgets: ['zebra', 'stickyHeaders', 'filter'],
           widgetOptions: {
-            filter_external : '.search',
             filter_reset: '.reset',
             filter_columnFilters: false,
             filter_defaultFilter: { 0 : '~{query}' },
           },
-          headers: { 3: { sorter: 'rarity' } }
+          headers: {
+            3: { sorter: 'rarity' },
+            4: { empty: 'zero' }
+           }
         });
         $.tablesorter.filter.bindSearch( $table, $('.search') );
       </script>
