@@ -66,27 +66,27 @@ permalink: /items/
             // set a unique id
             id: 'rarity',
             is: function(s) {
-              // return false so this parser is not auto detected
-              return false;
+              return false; // return false so this parser is not auto detected
             },
             format: function(s) {
               // format your data for normalization
-              return s.toLowerCase().replace(/artifact/,6).replace(/legendary/,5).replace(/very rare/,4)
-                .replace(/rare/,3).replace(/uncommon/,2).replace(/common/,1).replace(/mediocre/,0);
+              return s.toLowerCase().replace("artifact",6).replace("legendary",5).replace("very rare",4).replace("rare",3).replace("uncommon",2).replace("common",1).replace("mediocre",0);
             },
             // set type, either numeric or text
             type: 'numeric'
           });
           $("#item_table").tablesorter({
             theme: 'default',
-            widthFixed: false,
+            // widthFixed: false,
             sortReset: true,
             widgets: ['stickyHeaders', 'filter'],
-            headers: {
-                4: {
-                    sorter:'rarity'
-                }
+            widgetOptions: {
+              filter_external : '.search',
+              filter_reset: '.reset',
+              filter_columnFilters: true,
+              filter_defaultFilter: { 0 : '~{query}' },
             }
+            headers: { 3: { sorter: 'rarity' } }
           });
         });
       </script>
