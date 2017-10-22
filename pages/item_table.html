@@ -19,71 +19,65 @@ permalink: /items/
     {% include navigation.html %}
     <a id="TippyTop"></a>
     <div class="width-wrapper">
-      <div id="main-wrapper">
-        <section id="main" role="main">
-          <div class="page">
-            {% assign sorted_posts = site.posts | sort: 'title' %}
-            {%- assign cat_names = "" | split: "|"   -%}
-            {%- for cat in site.categories -%} {%- assign cat_names = cat_names | push: cat.first -%} {%- endfor -%}
-            {%- assign cat_names = cat_names | sort -%}
-            {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
+      <div class="page">
+        {% assign sorted_posts = site.posts | sort: 'title' %}
+        {%- assign cat_names = "" | split: "|"   -%}
+        {%- for cat in site.categories -%} {%- assign cat_names = cat_names | push: cat.first -%} {%- endfor -%}
+        {%- assign cat_names = cat_names | sort -%}
+        {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
 
-            <div id="search-form">
-              <input id="search" type="search" class="search" placeholder="Search..." data-column="all" />
-              <span id="search-btn"></span>
-            </div>
-            <input type="button" class="reset" value="Reset Search" />
-            <table id="item_table" class="tablesorter">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Sub-Types</th>
-                  <th>Rarity</th>
-                  <th>Attunement</th>
-                </tr>
-                <tr class="tablesorter-filter-row tablesorter-ignoreRow">
-                  <th><input type="search" class="search" placeholder="Search..." data-column="0" /></th>
-                  <th>
-                    <select class="search" data-column="1">
-                      <option></option>
-                      {%- for cat in cat_names -%}
-                        <option value="{{cat}}">{{cat}}</option>
-                      {%- endfor -%}
-                    </select>
-                  </th>
-                  <th><input type="search" class="search" placeholder="Search..." data-column="2" /></th>
-                  <th>
-                    <select class="search" data-column="3">
-                      <option></option>
-                      {%- for rarity in rarities_names -%}
-                        <option value="{{rarity}}">{{rarity}}</option>
-                      {%- endfor -%}
-                    </select>
-                  </th>
-                  <th>
-                    <select class="search" data-column="4">
-                      <option></option>
-                      <option value="Yes">Yes</option>
-                      <option value="">No</option>
-                    </select>
-                  </th>
-                </tr>
-              </thead>
-              <tbody>
-                {%- for post in sorted_posts -%}
-                  <tr>
-                    <td>{{post.title}}</td>
-                    <td>{{post.category}}</td>
-                    <td>{% for subcat in post.item_subtypes | sort %}{{subcat}}{% unless forloop.last %}, {% endunless %}{% endfor %}</td>
-                    <td>{{post.item_rarity}}</td>
-                    <td>{% if post.item_attunement %}Yes{% endif %}</td>
-                  </tr>
-                {%- endfor -%}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <input id="search" type="search" class="search" placeholder="Search..." data-column="all" style="width:100%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2)" />
+        <input type="button" class="reset" value="Reset Search" />
+
+        <table id="item_table" class="tablesorter">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Sub-Types</th>
+              <th>Rarity</th>
+              <th>Attune</th>
+            </tr>
+            <tr class="tablesorter-filter-row tablesorter-ignoreRow">
+              <th><input type="search" class="search" placeholder="Search..." data-column="0" /></th>
+              <th>
+                <select class="search" data-column="1">
+                  <option></option>
+                  {%- for cat in cat_names -%}
+                    <option value="{{cat}}">{{cat}}</option>
+                  {%- endfor -%}
+                </select>
+              </th>
+              <th><input type="search" class="search" placeholder="Search..." data-column="2" /></th>
+              <th>
+                <select class="search" data-column="3">
+                  <option></option>
+                  {%- for rarity in rarities_names -%}
+                    <option value="{{rarity}}">{{rarity}}</option>
+                  {%- endfor -%}
+                </select>
+              </th>
+              <th>
+                <select class="search" data-column="4">
+                  <option></option>
+                  <option value="Yes">Yes</option>
+                  <option value="">No</option>
+                </select>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for post in sorted_posts -%}
+              <tr>
+                <td>{{post.title}}</td>
+                <td>{{post.category}}</td>
+                <td>{% for subcat in post.item_subtypes | sort %}{{subcat}}{% unless forloop.last %}, {% endunless %}{% endfor %}</td>
+                <td>{{post.item_rarity}}</td>
+                <td>{% if post.item_attunement %}Yes{% else %} {% endif %}</td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
       </div>
     </div>
     <div id="navigation-fixed">
@@ -106,8 +100,32 @@ permalink: /items/
           },
           type: 'numeric'
         });
+        $.tablesorter.addParser({
+          // set a unique id
+          id: 'attunement',
+          is: function(s) { return false; },
+          format: function(s) {
+            // format your data for normalization
+            return s.toLowerCase().replace(/Yes/,1).replace(/ /,0);
+          },
+          type: 'numeric'
+        });
 
-        var $table = $("#item_table").tablesorter({
+        var $table = $("#item_table")
+        .on('filterEnd filterReset', function(e, table) {
+          var c = this.config,
+            fr = c.filteredRows;
+          if (fr === 0) {
+            c.$table.append([
+              '<tr class="noData remove-me" role="alert" aria-live="assertive">',
+              '<td colspan="' + c.columns + '">No Items Found</td>',
+              '</tr>'
+            ].join(''));
+          } else {
+    				c.$table.find('.noData').remove();
+          }
+        })
+        .tablesorter({
           theme: 'default',
           widthFixed: false,
           sortReset: true,
@@ -115,11 +133,15 @@ permalink: /items/
           widgetOptions: {
             filter_reset: '.reset',
             filter_columnFilters: false,
-            filter_defaultFilter: { 0 : '~{query}' },
+            filter_defaultFilter: {
+              0 : '~{query}',
+              3 : '={query}'
+            },
           },
           headers: {
+            2: { sorter: false },
             3: { sorter: 'rarity' },
-            4: { empty: 'zero' }
+            4: { sorter: 'attunement', empty: 'zero' }
            }
         });
         $.tablesorter.filter.bindSearch( $table, $('.search') );

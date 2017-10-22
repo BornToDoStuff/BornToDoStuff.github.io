@@ -632,11 +632,27 @@ input, button {
 }
 table {
 	width: 100%;
-}
-tr { border-bottom: 1px solid $transp_lightGray; }
-thead tr{ border-top: 1px solid $transp_lightGray; }
+	text-align: left;
 
-td{ padding: 4px 10px; }
+	input.search, select.search {
+    border: 0;
+    border-left: 1px solid $transp_lightGray;
+    border-right: 1px solid $transp_lightGray;
+    min-height: 35px;
+    max-height: 35px;
+    width: 100%;
+    box-shadow: none !important;
+    background: white;
+	}
+}
+.tablesorter-filter-row th {
+	padding: 0;
+}
+
+tr { border-bottom: 1px solid $transp_lightGray; }
+thead tr { border-top: 1px solid $transp_lightGray; }
+
+td { padding: 4px 10px; }
 th { padding: 8px 10px; }
 
 .tablesorter-header {
