@@ -1,5 +1,5 @@
 ---
-title: Augmier's Orrb of Armament
+title: Augmier's Orb of Armament
 item_id: 53
 category: Wondrous
 item_subtypes:
