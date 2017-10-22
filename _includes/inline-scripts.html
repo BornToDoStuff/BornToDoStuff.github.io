@@ -175,8 +175,8 @@
     }
 
     function randomInt(){
-      var min = 1;
-      var max = {{ site.posts | size }};
+      var min = 0;
+      var max = {{ site.posts | size }} - 1;
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
