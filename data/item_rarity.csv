@@ -1,11 +1,7 @@
 ---
 ---
-{% assign rarities = site.posts | group_by: 'item_rarity' %}
-{% assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " %}
+{%- assign rarities = site.posts | group_by: 'item_rarity' -%}
+{%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
 
-x,{%- for rarity_name in rarities_names -%}{{rarity_name}}{%- endfor -%}
-{%- for rarity_name in rarities_names -%}
-{%- for rarity in rarities -%}
-{{rarity.name}},{{rarity.items.size}}
-{%- endfor -%}
-{%- endfor -%}
+x,{% for rarity_name in rarities_names %}{{rarity_name}}{% unless forloop.last %},{% endunless %}{% endfor %}
+{% for rarity_name in rarities_names %}{% for rarity in rarities %}{{rarity.name}},{{rarity.items.size}}{% endfor %}{% endfor %}
