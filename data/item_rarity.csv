@@ -1,0 +1,20 @@
+---
+---
+
+{% assign rarities = site.posts | group_by: 'item_rarity' %}
+{% assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " %}
+
+<section id="head">
+	<h1>{{ page.title }}</h1>
+	<item-tags>
+		{%- for rarity_name in rarities_names -%}
+		{%- for rarity in rarities -%}
+		{%- if rarity.name == rarity_name -%}
+		<item-tag><a href="#{{ rarity.name | slugify }}">{{rarity.name}} <span>|</span> {{rarity.items.size}}</a></item-tag>
+
+x,{%- for rarity_name in rarities_names -%}{{rarity_name}}{%- endfor -%}
+{%- for rarity_name in rarities_names -%}
+{%- for rarity in rarities -%}
+{{rarity.name}},{{rarity.items.size}}
+{%- endfor -%}
+{%- endfor -%}

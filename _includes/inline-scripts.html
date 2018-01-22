@@ -144,8 +144,9 @@
     }
   });
 </script>
+
 {% if page.randomize %}
-  <script src="/js/posts.min.js"></script>
+  <script src="/data/posts.min.js"></script>
   <script>
     var createCookie = function(name, value, days) {
       var expires;
@@ -191,11 +192,12 @@
         if (items_visited.length == 10)
           items_visited.pop();
         items_visited.unshift(r);
+
+        createCookie("items_visited", items_visited.join(","));
       }
       else {
-        items_visited = r;
+        createCookie("items_visited", r);
       }
-      createCookie("items_visited", items_visited.join(","));
 
       var url = posts[r].url;
       $("#main").remove();
