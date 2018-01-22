@@ -2,7 +2,7 @@
 ---
 {%- assign rarities = site.posts | group_by: 'item_rarity' -%}
 {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
-{% comment %}{% for rarity_name in rarities_names %}{{rarity_name}}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcomment %}
+{%- comment -%}{% for rarity_name in rarities_names %}{{rarity_name}}{% unless forloop.last %},{% endunless %}{% endfor %}{%- endcomment -%}
 x,Rarity
 {% for rarity in rarities %}{{rarity.name}},{{rarity.items.size}}
 {% endfor %}
