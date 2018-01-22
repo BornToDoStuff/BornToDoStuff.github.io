@@ -23,7 +23,7 @@ x,Rarity
     {%- if rarity.name == rarity_name -%}
       {%- assign items = rarity.items -%}
       {%- for post in items -%}
-        {%- if post.item_classes contains "Barbarian" -%}{%- incriment barbarian_count -%}{%- endif -%}
+        {% comment %}{%- if post.item_classes contains "Barbarian" -%}{%- incriment barbarian_count -%}{%- endif -%}
         {%- if post.item_classes contains "Bard" -%}{%- incriment bard_count -%}{%- endif -%}
         {%- if post.item_classes contains "Cleric" -%}{%- incriment cleric_count -%}{%- endif -%}
         {%- if post.item_classes contains "Druid" -%}{%- incriment druid_count -%}{%- endif -%}
@@ -35,7 +35,7 @@ x,Rarity
         {%- if post.item_classes contains "Sorcerer" -%}{%- incriment sorcerer_count -%}{%- endif -%}
         {%- if post.item_classes contains "Warlock" -%}{%- incriment warlock_count -%}{%- endif -%}
         {%- if post.item_classes contains "Wizard" -%}{%- incriment wizard_count -%}{%- endif -%}
-        {%- if post.item_classes contains "All" -%}{%- incriment all_count -%}{%- endif -%}
+        {%- if post.item_classes contains "All" -%}{%- incriment all_count -%}{%- endif -%}{% endcomment %}
       {%- endfor -%}
 {{rarity.name}},{{rarity.items.size}}
 {% endif -%}
