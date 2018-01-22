@@ -24,8 +24,6 @@ x,{% for class_name in class_names -%}{{ class_name }}{% unless forloop.last %},
         {%- if item_classes contains "Warlock" -%}{%- assign classes_count[10] = classes_count[10] | plus: 1 -%}{%- endif -%}
         {%- if item_classes contains "Wizard" -%}{%- assign classes_count[11] = classes_count[11] | plus: 1 -%}{%- endif -%}
         {%- if item_classes contains "All" -%}{%- assign classes_count[12] = classes_count[12] | plus: 1 -%}{%- endif -%}
-        {{ post.item_classes }},
-        {{ item_classes }}
       {%- endfor -%}
 {{ rarity_name }},{{ classes_count | join: "," }}{% unless forloop.last %},{% endunless %}
 {% endif -%}

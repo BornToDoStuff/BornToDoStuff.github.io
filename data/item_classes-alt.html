@@ -1,0 +1,43 @@
+---
+---
+{%- assign rarities = site.posts | group_by: 'item_rarity' -%}
+{%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
+{%- assign class_names = "Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard, All" | split: ", " -%}
+x,Rarity
+{% for rarity_name in rarities_names -%}
+  {%- assign barbarian_count = 0 -%}
+  {%- assign bard_count = 0 -%}
+  {%- assign cleric_count = 0 -%}
+  {%- assign druid_count = 0 -%}
+  {%- assign fighter_count = 0 -%}
+  {%- assign monk_count = 0 -%}
+  {%- assign paladin_count = 0 -%}
+  {%- assign ranger_count = 0 -%}
+  {%- assign rogue_count = 0 -%}
+  {%- assign sorcerer_count = 0 -%}
+  {%- assign warlock_count = 0 -%}
+  {%- assign wizard_count = 0 -%}
+  {%- assign all_count = 0 -%}
+
+  {%- for rarity in rarities -%}
+    {%- if rarity.name == rarity_name -%}
+      {%- assign items = rarity.items -%}
+      {%- for post in items -%}
+        {%- if post.item_classes contains "Barbarian" -%}{%- incriment barbarian_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Bard" -%}{%- incriment bard_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Cleric" -%}{%- incriment cleric_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Druid" -%}{%- incriment druid_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Fighter" -%}{%- incriment fighter_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Monk" -%}{%- incriment monk_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Paladin" -%}{%- incriment paladin_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Ranger" -%}{%- incriment ranger_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Rogue" -%}{%- incriment rogue_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Sorcerer" -%}{%- incriment sorcerer_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Warlock" -%}{%- incriment warlock_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Wizard" -%}{%- incriment wizard_count -%}{%- endif -%}
+        {%- if post.item_classes contains "All" -%}{%- incriment all_count -%}{%- endif -%}
+      {%- endfor -%}
+{{rarity.name}},{{rarity.items.size}}
+{% endif -%}
+  {%- endfor -%}
+{%- endfor -%}

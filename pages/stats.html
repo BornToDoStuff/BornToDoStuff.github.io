@@ -29,7 +29,8 @@ var rarity_data = c3.generate({
     axis: {
         x: { type: 'category' }
     },
-    legend: { show: false }
+    legend: { show: false },
+    tooltip: { show: false }
 });
 
 var class_data = c3.generate({
@@ -51,7 +52,9 @@ var class_data = c3.generate({
         x: {
             type: 'category' // this needed to load string x value
         }
-    }
+    },
+    legend: { show: false },
+    tooltip: { show: false }
 });
 
 </script>
