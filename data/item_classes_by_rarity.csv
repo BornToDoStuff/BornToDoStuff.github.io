@@ -3,7 +3,7 @@
 {%- assign rarities = site.posts | group_by: 'item_rarity' -%}
 {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
 {%- assign class_names = "Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard, All" | split: ", " -%}
-x,{% for class_name in class_names -%}{{ class_name }}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+x,{% for class_name in class_names -%}{{ class_name }}{% unless forloop.last %},{% endunless %}{%- endfor %}
 {% for rarity_name in rarities_names -%}
   {%- assign classes_count = "0,0,0,0,0,0,0,0,0,0,0,0,0" | split: "," -%}
   {%- for rarity in rarities -%}
