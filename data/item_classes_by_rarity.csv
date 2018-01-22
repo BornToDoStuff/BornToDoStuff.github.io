@@ -1,0 +1,30 @@
+---
+---
+{%- assign rarities = site.posts | group_by: 'item_rarity' -%}
+{%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
+{%- assign class_names = "Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard, All" | split: ", " -%}
+x,{% for class_name in class_names -%}{{ class_name }}{% unless forloop.last %},{% endunless %}{%- endfor -%}
+{% for rarity_name in rarities_names -%}
+  {%- assign classes_count = "0,0,0,0,0,0,0,0,0,0,0,0,0" | split: "," -%}
+  {%- for rarity in rarities -%}
+    {%- if rarity.name == rarity_name -%}
+      {%- assign items = rarity.items -%}
+      {%- for post in items -%}
+        {%- if post.item_classes contains "Barbarian" -%}{%- incriment classes_count[0] -%}{%- endif -%}
+        {%- if post.item_classes contains "Bard" -%}{%- incriment classes_count[1] -%}{%- endif -%}
+        {%- if post.item_classes contains "Cleric" -%}{%- incriment classes_count[2] -%}{%- endif -%}
+        {%- if post.item_classes contains "Druid" -%}{%- incriment classes_count[3] -%}{%- endif -%}
+        {%- if post.item_classes contains "Fighter" -%}{%- incriment classes_count[4] -%}{%- endif -%}
+        {%- if post.item_classes contains "Monk" -%}{%- incriment classes_count[5] -%}{%- endif -%}
+        {%- if post.item_classes contains "Paladin" -%}{%- incriment classes_count[6] -%}{%- endif -%}
+        {%- if post.item_classes contains "Ranger" -%}{%- incriment classes_count[7] -%}{%- endif -%}
+        {%- if post.item_classes contains "Rogue" -%}{%- incriment classes_count[8] -%}{%- endif -%}
+        {%- if post.item_classes contains "Sorcerer" -%}{%- incriment classes_count[9] -%}{%- endif -%}
+        {%- if post.item_classes contains "Warlock" -%}{%- incriment classes_count[10] -%}{%- endif -%}
+        {%- if post.item_classes contains "Wizard" -%}{%- incriment classes_count[11] -%}{%- endif -%}
+        {%- if post.item_classes contains "All" -%}{%- incriment classes_count[12] -%}{%- endif -%}
+      {%- endfor -%}
+{{ rarity_name }},{{ classes_count | join: "," }}{% unless forloop.last %},{% endunless %}
+{% endif -%}
+  {%- endfor -%}
+{%- endfor -%}
