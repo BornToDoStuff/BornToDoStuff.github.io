@@ -23,19 +23,19 @@ x,Rarity
     {%- if rarity.name == rarity_name -%}
       {%- assign items = rarity.items -%}
       {%- for post in items -%}
-        {% comment %}{%- if post.item_classes contains "Barbarian" -%}{%- incriment barbarian_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Bard" -%}{%- incriment bard_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Cleric" -%}{%- incriment cleric_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Druid" -%}{%- incriment druid_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Fighter" -%}{%- incriment fighter_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Monk" -%}{%- incriment monk_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Paladin" -%}{%- incriment paladin_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Ranger" -%}{%- incriment ranger_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Rogue" -%}{%- incriment rogue_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Sorcerer" -%}{%- incriment sorcerer_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Warlock" -%}{%- incriment warlock_count -%}{%- endif -%}
-        {%- if post.item_classes contains "Wizard" -%}{%- incriment wizard_count -%}{%- endif -%}
-        {%- if post.item_classes contains "All" -%}{%- incriment all_count -%}{%- endif -%}{% endcomment %}
+        {%- if post.item_classes contains "Barbarian" -%}{%- assign barbarian_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Bard" -%}{%- assign bard_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Cleric" -%}{%- assign cleric_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Druid" -%}{%- assign druid_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Fighter" -%}{%- assign fighter_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Monk" -%}{%- assign monk_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Paladin" -%}{%- assign paladin_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Ranger" -%}{%- assign ranger_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Rogue" -%}{%- assign rogue_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Sorcerer" -%}{%- assign sorcerer_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Warlock" -%}{%- assign warlock_count -%}{%- endif -%}
+        {%- if post.item_classes contains "Wizard" -%}{%- assign wizard_count -%}{%- endif -%}
+        {%- if post.item_classes contains "All" -%}{%- assign all_count -%}{%- endif -%}
       {%- endfor -%}
 {{rarity.name}},{{rarity.items.size}}
 {% endif -%}
