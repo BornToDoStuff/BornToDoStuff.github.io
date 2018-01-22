@@ -23,6 +23,7 @@ var rarity_data = c3.generate({
     bindto: '#rarity_data',
     data: {
         x : 'x',
+        url: '/data/item_rarity.csv'
         // columns: [
         //     ['x', 'www.site1.com', 'www.site2.com', 'www.site3.com', 'www.site4.com'],
         //     ['download', 30, 200, 100, 400],
@@ -41,10 +42,6 @@ var rarity_data = c3.generate({
     legend: {
         show: false
     }
-});
-
-rarity_data.load({
-  url: '/data/item_rarity.csv'
 });
 
 </script>
