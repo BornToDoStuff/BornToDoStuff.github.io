@@ -2,7 +2,7 @@
 layout: default
 ---
 {% for post in paginator.posts %}
-  <magic-item id="{{post.item_id}}">
+  <magic-item id="{{ post.item_id }}">
     <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
     <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
     <item-description>
