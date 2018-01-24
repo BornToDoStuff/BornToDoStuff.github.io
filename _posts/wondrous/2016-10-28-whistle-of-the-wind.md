@@ -25,7 +25,7 @@ item_updated:
 last_modified_at:
 ---
 
-This wooden whistle hangs from a thick twine and when blown does not produce the expected high shrill.
+This wooden whistle hangs from a thick twine and when blown does not produce the expected high shrill.    
 As a bonus action you can blow through the whistle, seizing the air and compelling it to create one of the following effects.
 
 - One Medium or smaller creature within 30 feet must succeed on a Strength saving throw or be pushed up to 10 feet away from you.
