@@ -3,8 +3,6 @@ title: Babylonian Amulet of Speech
 item_id: 62
 category: Wondrous
 item_subtypes:
-  - Breastplate
-  - Half Plate
 item_rarity: Common
 item_attunement: false
 item_requirement:

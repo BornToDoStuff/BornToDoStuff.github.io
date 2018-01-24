@@ -24,6 +24,7 @@ item_co_creator:
 item_updated:
 last_modified_at:
 ---
+
 This wooden whistle hangs from a thick twine and when blown does not produce the expected high shrill.
 As a bonus action you can blow through the whistle, seizing the air and compelling it to create one of the following effects.
 

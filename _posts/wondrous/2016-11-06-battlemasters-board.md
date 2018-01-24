@@ -23,7 +23,6 @@ item_co_creator:
 item_updated:
 ---
 
-
 This game set is extremely unique, as you travel the wooden board morphs its ivory inlays to portray major features in the landscape. It has a small drawer underneath it to hold up to 20 figurines, made from precious stones and bone and weighs 10 pounds. When you find it has 4 pieces carved from gemstones, 3 pieces made from goblin bone, 2 from human bone, and 1 from ogre bone. These pieces allow you control both friend and foe as you move them across the board in the deadly game of war.
 
 ### The Bones of my Enemies

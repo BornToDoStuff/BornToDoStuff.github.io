@@ -23,6 +23,7 @@ item_co_creator:
 item_updated:
 last_modified_at:
 ---
+
 This crystal orb is filled with water and has no visible opening but is covered in magic runes. If you learn the proper command word from the runes you can speak the command word to allow the water to permeate the orb and create one of two effects.
 
 - The water coalesces around you like a coating of mucus. You are able to breathe as normal but are completely covered with 1 inch barrier of magical water for 1 minute. Fire is unable to pass through the barrier but all other effects and objects are. While the barrier is active you are considered immune to fire damage.

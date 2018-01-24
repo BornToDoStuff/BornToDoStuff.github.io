@@ -3,8 +3,6 @@ title: Dionysus' Decanter
 item_id: 41
 category: Wondrous
 item_subtypes:
-  - Breastplate
-  - Half Plate
 item_rarity: Common
 item_attunement: false
 item_requirement:

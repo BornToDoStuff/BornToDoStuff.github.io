@@ -25,6 +25,7 @@ item_co_creator:
 item_updated: 2018-01-24
 last_modified_at: 2018-01-24
 ---
+
 This deck of playing cards has a charred purple color almost as if it was put through a dying process. The stranger part of them though is that they all have 1 or more holes punched straight through them.
 After studying the cards for a long or short rest you figure out that the holes correspond to how strong the magic of the card is. Each numbered card has a number of holes punched in it equal to half its value rounded down. Face cards all have 5 holes, but aces are different. They only have a single hole, and its much larger than any of the other cards’ holes.
 

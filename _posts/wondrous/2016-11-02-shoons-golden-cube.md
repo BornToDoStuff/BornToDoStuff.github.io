@@ -25,6 +25,7 @@ item_co_creator:
 item_updated:
 last_modified_at:
 ---
+
 This 1 inch cube appears to be made of solid gold, yet is hard as diamond, and is unusually heavy even for gold, weighing in at 3 pounds. As an action you can speak the command word to activate it casting <magic-spell>Circle of Death</magic-spell>, with no material cost, centered yourself and affecting all creatures except you. The command word is “Death Spell” and must be said with a lisp.
 
 <section id="curse">

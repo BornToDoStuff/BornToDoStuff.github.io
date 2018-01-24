@@ -3,8 +3,6 @@ title: Deck of Many Hands
 item_id: 66
 category: Wondrous
 item_subtypes:
-  - Breastplate
-  - Half Plate
 item_rarity: Legendary
 item_attunement: true
 item_requirement:
@@ -31,6 +29,7 @@ item_co_creator:
 item_updated:
 last_modified_at:
 ---
+
 This box contains 15 black ivory cards. The deck contains 3 cards each of Spiked Gauntlet, Hand of Death, and Stone Fist as well as 6 Strong Hand cards. 
 You may randomly draw a card as an action or bonus action and throw it into the air, forming a floating disembodied hand depending on the card. Each hand lasts 1 hour, until dismissed as an action, or otherwise specified. When their time runs out or they are dismissed their respective card reappears in the deck. These hands move with you, slowly floating around you waiting for commands, and can move up to 30 feet from you.
 
