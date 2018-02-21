@@ -1,6 +1,20 @@
 
 <script src="{{ site.baseurl }}/js/scripts.js"></script>
 <script>
+	//for arguments given in the URL
+	var urlParams;
+	(window.onpopstate = function () {
+		var match,
+			pl     = /\+/g,  // Regex for replacing addition symbol with a space
+			search = /([^&=]+)=?([^&]*)/g,
+			decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+			query  = window.location.search.substring(1);
+
+		urlParams = {};
+		while (match = search.exec(query))
+			urlParams[decode(match[1])] = decode(match[2]);
+	})();
+
   $(document).ready(function(){
     {% if page.subpaging %}
       var current_page = window.location.protocol + "//" + window.location.hostname + window.location.pathname;
@@ -142,6 +156,15 @@
       }
       scrollPosition = currentPosition;
     }
+
+  	//if there are arguments in the URL
+    if (urlParams["textOnly"]){
+    	$('head').append("<link rel='stylesheet' href='text-only.css' type='text/css' />");
+    }
+    if (urlParams["dmOnly"]){
+      	$('head').append("<style type='text/css'> item-details,#curse{display: none;} </style>");
+    }
+  	
   });
 </script>
 
@@ -181,6 +204,7 @@
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+	//get an item that has not been seen in the last 10 clicks.
     $(document).ready(function(){
       var r = randomInt();
       var items_visited = getCookie("items_visited");
