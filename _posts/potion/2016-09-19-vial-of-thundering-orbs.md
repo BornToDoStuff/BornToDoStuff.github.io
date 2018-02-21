@@ -3,6 +3,7 @@ title: Vial of Thundering Orbs
 item_id: 39
 category: Potion
 item_subtypes:
+  - Consumable
   - Multi Use
 item_rarity: Uncommon
 item_attunement: false
