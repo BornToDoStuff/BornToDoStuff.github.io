@@ -306,6 +306,9 @@ magic-item, item-details, .page {
 
 	item-description {
 		line-height: $normal;
+		ul {
+			margin: 10px 0px;
+		}
 
 		@include mobile {
 			line-height: $compressed;
