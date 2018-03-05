@@ -28,4 +28,4 @@ item_co_creator:
 item_updated:
 ---
 
-These bulky leather gloves are decorated with a white filigree and are chill to the touch. If you grapple a creature with both hands while you are wearing the gloves that creature takes 1d6 cold damage each turn until they are no longer grappled. If they break the grapple they must roll a Constitution saving throw equal to 8 + your proficiency bonus. On a failure they are Restrained by ice until the beginning of their next turn.
+These bulky leather gloves are decorated with a white filigree and are chill to the touch. If you grapple a creature with both hands while you are wearing these gloves that creature takes 1d6 cold damage each turn until they are no longer grappled. If they break the grapple they must roll a Constitution saving throw equal to 8 + your proficiency bonus. On a failure they are Restrained by ice until the beginning of their next turn.
