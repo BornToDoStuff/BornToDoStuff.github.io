@@ -25,7 +25,7 @@ item_updated:
 last_modified_at:
 ---
 
-This scale is no merchant’s scale. It holds the power of life and death itself in its balance. The base and arms are made of black ivory, and inlaid with pearl. The weighing pans are in the shape of hands cast from pure silver and hung from silver chains.
+This scale is no merchant’s scale. It holds the power of life and death itself in its balance. The base and arms are made of black ivory, and inlaid with pearl. The weighing pans are in the shape of hands cast from pure silver and hung from silver chains.    
 This scale is found with three ornate alignment weights made to look like figurines. The first is chiseled from stone and covered in black opals, and represents evil. The second is carved from wood and inlaid with diamonds, and represents neutral. The last is shaped from gold and has a single sapphire in its center, and it represents good.
 
 ### Unerring Judge
