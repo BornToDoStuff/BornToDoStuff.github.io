@@ -24,9 +24,9 @@ last_modified_at: 2018-03-06
 ---
 
 These 10 inch squares of paper are beautifully flowered on one side and some even gilded. On the other side they are blank except for an intricately inked magic circle. When you find them there are 1d4+1 sheets.
-When someone begins to fold them they continue folding themselves until they begin to resemble a creature and become animated, although they don’t increase in size and only stand a few inches tall. These little helpers last for the next month, until they are damaged, or become wet. They are follow commands from whoever began folding the paper.
+When someone begins to fold them they continue folding themselves until they begin to resemble a creature and become animated, although they don’t increase in size and only stand a few inches tall. These little helpers last for the next month, until they are damaged, or become wet. They follow commands from whoever began folding the paper.
 
-With a little practice anyone can learn how to create one of the common forms or possibly even something new. The first time you make one of the common forms you must succeed a DC 12 Dexterity (Sleight of Hand) check. On a success you create the form you tried to make and never have to make this check again for that form. On a failure roll 1d4. On a 4 you are able to use the paper again. On a 1-3 the magic circle is too damaged to attempt it again.    
+With a little practice anyone can learn how to create one of the common forms or possibly even something new. The first time you make one of the common forms you must succeed on a DC 12 Dexterity (Sleight of Hand) check. On a success you create the form you tried to make and never have to make this check again for that form. On a failure roll 1d4. On a 4 you are able to use the paper again. On a 1-3 the magic circle is too damaged to attempt it again.    
 At the DM's discretion you can attempt to create a new form with different effects, which may be more difficult or have new rules.
 
 #### Humanoid
