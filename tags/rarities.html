@@ -28,7 +28,7 @@ subpaging: true
 				<a href="#{{ rarity.name | slugify }}"><h2>{{ rarity.name }}</h2></a>
 				<div class="children">
 					<ul>
-						{%- assign items_sorted = rarity.items | sort "title" -%}
+						{%- assign items_sorted = rarity.items | sort: "title" -%}
 						{% for post in items_sorted -%}
 						{% include tag-result.html %}
 						{%- endfor %}
