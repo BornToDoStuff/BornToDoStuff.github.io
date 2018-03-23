@@ -3,6 +3,7 @@ title: Folded Friends
 item_id: 32
 category: Wondrous
 item_subtypes:
+  - Item
 item_rarity: common
 item_attunement: false
 item_requirement:
