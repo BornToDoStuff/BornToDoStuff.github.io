@@ -1,27 +1,27 @@
 ---
-title: Axe of the Swarm
-item_id: 87
-category: Weapon
+title: Teacup of the Tempest
+item_id: 88
+category: Wondrous
 item_subtypes:
-  - Battleaxe
-  - Greataxe
-item_rarity: Rare
-item_attunement: false
-item_requirement:
+  - Item
+item_rarity: Very Rare
+item_attunement: true
+item_requirement: by a Barbarian
 item_curse: false
 item_classes:
   - Barbarian
-  - Ranger
-item_school: Conjuration
+item_school: Evocation
 item_role:
   - Attack
 item_damage:
-  - Slashing
-  - Piercing
+  - Bludgeoning
 tags:
-  - Critical
-  - Animal Handling
-  - Piercing
+  - Exhaustion
+  - Rage
+  - Dexterity
+  - Strength
+  - Aura
+  - Bludgeoning
 item_idea:
 item_co_creator:
 item_updated:
