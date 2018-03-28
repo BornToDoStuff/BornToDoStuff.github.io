@@ -33,4 +33,3 @@ This crossbow is made almost entirely of metal and has a rune scorched into the 
 When imbued with the aspect of lead the bolts do not do any damage, but on a successful hit they explode into a hexagonal prism of metal that appears to pierce through the target. These prisms do not create any holes or surface damage, despite appearing to pass through objects. This prism weighs 15 pounds if it’s from a hand crossbow, 20 pounds from a light crossbow, and 40 pounds from a heavy crossbow. Each prism decreases the target creature’s movement by 5 feet if it is large or smaller, and if the total weight of the prisms is equal to or greater than the weight of the target creature it is considered Restrained. 
 
 You can create up to 10 of these prisms, if you attempt to create more than 10 the oldest prism dissolves. The prisms can not be removed from their target, but dissolve after 10 minutes.
-

@@ -34,4 +34,3 @@ On a critical hit with this weapon a small swarm of beetles fly from the beads a
 While holding this weapon as an action you can make a DC 10 Animal Handling check, on a success a small swarm of beetles emerges that can accomplish any task that Mage Hand could and lasts 1 minute. You can summon up to three swarms in this manner, these swarms are under your control but will not attack.
 
 If you put down or for any reason stop holding this weapon any swarms you currently have summoned attack you for the remainder of the minute, or until you pick up the weapon again, dealing 2d4 piercing damage a round per swarm.
-

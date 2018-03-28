@@ -1,28 +1,27 @@
 ---
-title: Teacup of the Tempest
-item_id: 88
-category: Wondrous
+title: Axe of the Swarm
+item_id: 87
+category: Weapon
 item_subtypes:
-  - Breastplate
-  - Half Plate
-item_rarity: Very Rare
-item_attunement: true
-item_requirement: by a Barbarian
+  - Battleaxe
+  - Greataxe
+item_rarity: Rare
+item_attunement: false
+item_requirement:
 item_curse: false
 item_classes:
   - Barbarian
-item_school: Evocation
+  - Ranger
+item_school: Conjuration
 item_role:
   - Attack
 item_damage:
-  - Bludgeoning
+  - Slashing
+  - Piercing
 tags:
-  - Exhaustion
-  - Rage
-  - Dexterity
-  - Strength
-  - Aura
-  - Bludgeoning
+  - Critical
+  - Animal Handling
+  - Piercing
 item_idea:
 item_co_creator:
 item_updated:
@@ -39,4 +38,3 @@ As an action while raging you can expend a charge to attack your enemies with th
 
 ### Heart of the Storm
 When you activate your rage you can choose to expend all 5 charges to release the full power of the tempest. A 20-foot radius sphere of whirling air springs into existence centered on you that follows you until your rage ends. Each creature (not including you) that ends its turn in the sphere must succeed a Strength saving throw with a DC equal to 8 + your proficiency + your strength modifier. On a failed save they take 2d6 bludgeoning damage. Additionally the sphere’s space is difficult terrain for all creatures besides you.
-
