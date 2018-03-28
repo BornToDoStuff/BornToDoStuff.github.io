@@ -300,6 +300,9 @@ magic-item, item-details, .page {
 	overflow-y: hidden;
 	transition: max-height 0.5s;
 
+	@include large-up {
+		padding: 30px 25px;
+	}
 	@include mobile {
 		text-align: left;
 	}
