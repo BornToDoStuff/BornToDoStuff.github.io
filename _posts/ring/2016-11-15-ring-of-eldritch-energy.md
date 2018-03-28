@@ -41,6 +41,6 @@ Additionally, while attuned to the ring you know the cantrip <magic-spell>Chill 
 
 **Permanent Curse.** The first time the ring consumes any of your hit points it becomes permanently attuned to your very soul.    
 The ring dissolves into your finger, the finger withers, and purple veins spider through your hand from the finger. Now when you cast eldritch blast using your temporary hit points it originates from your chest, ignoring verbal and somatic components, but leaves a dull purple mark where it originated. The veins in your hand and the purple mark spread almost imperceptibly each time you do this.
-<magic-spell>Chill Touch</magic-spell> can still be cast, also ignoring verbal and somatic components, from your withered finger.    
+After your finger whithers <magic-spell>Chill Touch</magic-spell> can still be cast, also ignoring verbal and somatic components, eminating from your withered finger.    
 When cursed in this way the curse and attunement can not be removed without destroying the soul of the creature bound to the ring.
 </section>

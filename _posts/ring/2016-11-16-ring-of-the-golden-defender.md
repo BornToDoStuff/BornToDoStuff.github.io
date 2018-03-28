@@ -3,8 +3,6 @@ title: Ring of the Golden Defender
 item_id: 96
 category: Ring
 item_subtypes:
-  - Breastplate
-  - Half Plate
 item_rarity: Varies
 item_attunement: false
 item_requirement: by a creature not of evil alignment
