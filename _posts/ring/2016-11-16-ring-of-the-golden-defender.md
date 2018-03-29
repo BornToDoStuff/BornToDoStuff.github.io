@@ -46,7 +46,7 @@ While the ring is content, and you wear it on your first finger, it grants you b
 ### Glove Stage (Very Rare)
 The ring stretches out tendrils of ivory, coating your hand and wrist. The ivory forms into plates and gold trim manifests as they harden. Strands arch from the ring onto the gold edged glove and to each finger. The entire system of white arches and plates seems to weigh almost nothing as if it is floating around your hand.
 
-**Defender’s Blessing.** Once per day as an action while wearing this gauntlet you can fire a beam of brilliant yellow light in a 5 foot wide, 60 foot line from the gauntlet. Each creature in this line must make a Constitution saving throw. On a failed save a creature takes 8d6 Radiant damage and is blinded until your next turn. On a successful save it takes half as much damage and is not blinded. Undead and oozes have disadvantage on this saving throw. This beam counts as a 3rd level light spell for the sake of dispelling magical darkness.    
+**Defenderâ€™s Blessing.** Once per day as an action while wearing this gauntlet you can fire a beam of brilliant yellow light in a 5 foot wide, 60 foot line from the gauntlet. Each creature in this line must make a Constitution saving throw. On a failed save a creature takes 8d6 Radiant damage and is blinded until your next turn. On a successful save it takes half as much damage and is not blinded. Undead and oozes have disadvantage on this saving throw. This beam counts as a 3rd level light spell for the sake of dispelling magical darkness.    
 **Divine Fist.** Your unarmed strikes deal 1d4 damage while wearing the gauntlet. Additionally you can choose to deal Radiant damage instead of bludgeoning damage.
 
 ### Gauntlet Stage (Very Tare)
