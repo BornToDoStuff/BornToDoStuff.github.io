@@ -28,7 +28,8 @@ subpaging: true
 		<a href="#{{ tag | slugify }}"><h2>{{ tag }}</h2></a>
 		<div class="children">
 			<ul>
-				{%- for post in site.tags[tag] | sort: 'title' -%}
+				{%- assign tag_sorted = site.tags[tag] | sort: "title" -%}
+				{%- for post in tag_sorted -%}
 				{% include tag-result.html %}
 				{%- endfor -%}
 			</ul>

@@ -22,7 +22,7 @@ var item_cache = [
     "idea" : "{{ post.item_idea }}",
     "co_creator" : "{{ post.item_co_creator }}",
     "updated" : "{{ post.item_updated }}",
-    "content" : {{ post.content | jsonify}},
+    "content" : {{ post.excerpt | jsonify}},
     "searchtext" : {{ post.content | strip_html | strip_newlines | jsonify}}
     }{% unless forloop.last %},{% endunless %} {% endfor %}
 ];
