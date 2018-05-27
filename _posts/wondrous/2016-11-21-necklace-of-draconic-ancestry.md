@@ -3,19 +3,22 @@ title: Necklace of Draconic Ancestry
 item_id: 101
 category: Wondrous
 item_subtypes:
-item_rarity: Very Rare Legendary
+item_rarity: Very Rare
 item_attunement: true
 item_requirement:
 item_curse: false
 item_classes:
   - Barbarian
   - Monk
+  - Sorcerer
 item_school: Evocation
 item_role:
   - Attack
 item_damage:
+  - Varies
 tags:
-  - Draconic
+  - Alignment
+  - Race
 item_idea:
 item_co_creator:
 item_updated:
