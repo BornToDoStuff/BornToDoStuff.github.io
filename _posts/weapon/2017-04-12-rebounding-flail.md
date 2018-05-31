@@ -9,6 +9,9 @@ item_attunement: false
 item_requirement:
 item_curse: false
 item_classes:
+  - Fighter
+  - Paladin
+  - Barbarian
 item_school: Transmutation
 item_role:
   - Attack

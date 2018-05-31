@@ -9,6 +9,8 @@ item_attunement: false
 item_requirement:
 item_curse: false
 item_classes:
+  - Monk
+  - Rogue
 item_school: Transmutation
 item_role:
 item_damage:

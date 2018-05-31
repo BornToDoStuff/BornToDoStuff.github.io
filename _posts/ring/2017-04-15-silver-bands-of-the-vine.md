@@ -8,6 +8,10 @@ item_attunement: true
 item_requirement:
 item_curse: false
 item_classes:
+  - Rogue
+  - Monk
+  - Bard
+  - Ranger
 item_school: Transmutation
 item_role: Attack
 item_damage: Slashing
