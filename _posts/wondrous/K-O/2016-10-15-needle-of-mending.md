@@ -3,6 +3,7 @@ title: Needle of Mending
 item_id: 43
 category: Wondrous
 item_subtypes:
+  - Item
 item_rarity: Common
 item_attunement: false
 item_requirement:

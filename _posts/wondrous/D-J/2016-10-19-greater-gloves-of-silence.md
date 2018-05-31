@@ -4,6 +4,7 @@ item_id: 50
 category: Wondrous
 item_subtypes:
   - Clothing
+  - Gloves
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:

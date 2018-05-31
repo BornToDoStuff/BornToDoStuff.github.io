@@ -3,6 +3,7 @@ title: Necklace of Draconic Ancestry
 item_id: 101
 category: Wondrous
 item_subtypes:
+  - Necklace
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:

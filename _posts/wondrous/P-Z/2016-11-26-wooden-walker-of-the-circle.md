@@ -3,6 +3,7 @@ title: Wooden Walker of the Circle
 item_id: 106
 category: Wondrous
 item_subtypes:
+  - Sentient
 item_rarity: Very Rare
 item_attunement: false
 item_requirement:

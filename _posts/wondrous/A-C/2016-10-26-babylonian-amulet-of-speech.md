@@ -3,6 +3,7 @@ title: Babylonian Amulet of Speech
 item_id: 62
 category: Wondrous
 item_subtypes:
+  - Necklace
 item_rarity: Common
 item_attunement: false
 item_requirement:

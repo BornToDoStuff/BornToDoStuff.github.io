@@ -3,7 +3,7 @@ title: Necklace of Many Hands
 item_id: 65
 category: Wondrous
 item_subtypes:
-  - Pendant
+  - Necklace
 item_rarity: Uncommon
 item_attunement: true
 item_requirement:

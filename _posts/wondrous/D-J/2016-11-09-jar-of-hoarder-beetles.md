@@ -3,6 +3,7 @@ title: Jar of Hoarder Beetles
 item_id: 86
 category: Wondrous
 item_subtypes:
+  - Item
 item_rarity: Common
 item_attunement: false
 item_requirement:

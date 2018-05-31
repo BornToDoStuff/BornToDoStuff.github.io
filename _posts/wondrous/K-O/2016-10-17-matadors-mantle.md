@@ -3,6 +3,7 @@ title: Matador's Mantle
 item_id: 48
 category: Wondrous
 item_subtypes:
+  - Clothing
 item_rarity: Mediocre
 item_attunement: false
 item_requirement:

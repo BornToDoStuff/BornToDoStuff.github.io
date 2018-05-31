@@ -3,6 +3,7 @@ title: Dionysus' Decanter
 item_id: 41
 category: Wondrous
 item_subtypes:
+  - Item
 item_rarity: Common
 item_attunement: false
 item_requirement:

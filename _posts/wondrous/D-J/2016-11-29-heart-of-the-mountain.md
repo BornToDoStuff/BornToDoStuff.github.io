@@ -3,6 +3,7 @@ title: Heart of the Mountain
 item_id: 112
 category: Wondrous
 item_subtypes:
+  - Item
 item_rarity: Very Rare
 item_attunement: true
 item_requirement: by a spellcaster or dwarf

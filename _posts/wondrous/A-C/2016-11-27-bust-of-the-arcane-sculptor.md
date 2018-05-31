@@ -3,6 +3,7 @@ title: Bust of the Arcane Sculptor
 item_id: 108
 category: Wondrous
 item_subtypes:
+  - Item
 item_rarity: Very Rare
 item_attunement: true
 item_requirement: arcane spellcaster

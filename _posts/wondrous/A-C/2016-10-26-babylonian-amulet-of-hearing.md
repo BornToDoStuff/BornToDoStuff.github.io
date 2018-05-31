@@ -3,7 +3,7 @@ title: Babylonian Amulet of Hearing
 item_id: 63
 category: Wondrous
 item_subtypes:
-  - Pendant
+  - Necklace
 item_rarity: Common
 item_attunement: false
 item_requirement:
