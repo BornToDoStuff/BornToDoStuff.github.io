@@ -21,6 +21,7 @@ tags:
   - Water
   - Curse Purge
   - Dexterity
+  - Long Rest
 item_idea:
 item_co_creator:
 item_updated: 2018-05-27

@@ -18,7 +18,10 @@ item_damage:
   - Bludgeoning
 tags:
   - Stages
-item_idea:
+  - Long Rest
+  - Critical
+  - Bastion
+item_idea: Bastion
 item_co_creator:
 item_updated:
 last_modified_at:

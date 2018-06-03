@@ -19,6 +19,7 @@ item_damage:
 tags:
   - Temporary Hitpoints
   - Poisoned
+  - Long Rest
 item_idea:
 item_co_creator:
 item_updated: 2017-10-16
