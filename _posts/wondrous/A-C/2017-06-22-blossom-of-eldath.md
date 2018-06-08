@@ -31,5 +31,7 @@ Additionally, you may activate the Blossom by making a prayer to Eldath. When ac
 Your casting ability while using this item is 15 unless your class casting ability is higher.
 
 **1 Charge.** <magic-spell>Locate Animals or Plants</magic-spell>, <magic-spell>Entangle</magic-spell>
+
 **2 Charges.** <magic-spell>Plant Growth</magic-spell>, <magic-spell>Greater Restoration</magic-spell> (can not end or remove curse)
+
 **4 Charges.** <magic-spell>Plant Growth</magic-spell> (as if cast for 8 hours), <magic-spell>Wall of Thorns</magic-spell> (if no creatures are within its area when cast)
