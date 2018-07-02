@@ -39,11 +39,11 @@
 <meta property="og:type" content="article" />
 <meta name="author" content="BornToDoStuff" />
 <meta property="article:author" content="BornToDoStuff" />
-{% if page.date or page.date != nil %}
-<meta property="og:article:published_time" content="{{ page.date }}" />
+{% if page.date %}
+<meta property="article:published_time" content="{{ page.date }}" />
 {% endif %}
-{% if page.last_modified_at or page.last_modified_at != nil %}
-<meta property="og:article:modified_time" content="{{ page.last_modified_at }}" />
+{% if page.last_modified_at %}
+<meta property="article:modified_time" content="{{ page.last_modified_at }}" />
 {% endif %}
 
 <!-- location info -->
