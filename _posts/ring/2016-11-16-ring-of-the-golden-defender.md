@@ -19,7 +19,7 @@ item_role:
 item_damage:
   - Radiant
 tags:
-  - Legacy Item
+  - Evolving
   - Constitution
   - Unarmed
   - Spellcasting
