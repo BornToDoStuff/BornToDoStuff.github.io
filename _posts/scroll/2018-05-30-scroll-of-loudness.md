@@ -1,3 +1,4 @@
+---
 title: Scroll of Loudness
 item_id: 211
 category: Scroll
