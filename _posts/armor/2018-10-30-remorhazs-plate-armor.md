@@ -9,6 +9,9 @@ item_attunement: true
 item_requirement: 
 item_curse: false
 item_classes: 
+  - Fighter
+  - Barbarian
+  - Ranger
 item_school: Abjuration
 item_role: 
   - Defense
