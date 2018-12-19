@@ -30,7 +30,7 @@ item_updated:
 last_modified_at: 
 ---
 
-This javelin is heavily weathered and is carved out of a single piece of what seems to be made of solid stone but is strangely light to be made of such a dense material.  
+This javelin is heavily weathered and is carved out of a single piece of what seems to be solid stone but is strangely light to be made of such a dense material.  
 It has 3 charges and regains all expended charges each day at dawn.  
   
 While you are on solid ground as a bonus action you can reach a free hand to the floor and speak its command word. When you do so if the javelin is on the same plane as you it disintegrates and rises out of the ground to meet your hand.  
