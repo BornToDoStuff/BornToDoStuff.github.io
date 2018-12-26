@@ -17,10 +17,13 @@ item_role:
   - Attack
 item_damage:
 tags:
-  - Reaction
   - Attack of Opportunity
   - Disadvantage
   - Wisdom
+  - Truesight
+  - At Dawn
+  - Bonus Action
+  - Auto Fail
 item_idea:
 item_co_creator:
 item_updated: 
