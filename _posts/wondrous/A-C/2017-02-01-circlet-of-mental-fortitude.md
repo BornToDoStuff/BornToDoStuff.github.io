@@ -3,6 +3,7 @@ title: Circlet of Mental Fortitude
 item_id: 151
 category: Wondrous
 item_subtypes:
+  - Headband
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:
