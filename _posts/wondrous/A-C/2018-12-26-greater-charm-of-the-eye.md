@@ -1,6 +1,6 @@
 ---
 title: Greater Charm of the Eye
-item_id: 223
+item_id: 228
 category: Wondrous
 item_subtypes:
   - Necklace
