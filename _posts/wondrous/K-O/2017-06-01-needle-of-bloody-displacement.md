@@ -24,24 +24,25 @@ tags:
   - Constitution
 item_idea:
 item_co_creator:
-item_updated:
-last_modified_at:
+item_updated: 2019-02-14
+last_modified_at: 2019-02-14
 ---
 
-This amulet has a compass rose etched into its golden surface. It is stained and tarnished, and at the southern point of the rose a spike the length of a finger extends straight down.
+This amulet has a compass rose etched into its golden surface. It is stained and tarnished, and at the southern point of the compass rose a spike the length of a finger extends straight down.
 
-As a bonus action you can plunge the spike into your skin, taking 1d4 piercing damage, and gaining that many charges, as the blood flows upwards into the compass rose and seeps into the cracks.
+As a bonus action you can plunge the spike into yourself. You take 1d4 Piercing damage, and gain charges equal to the damage taken, as the blood flows against gravity into the compass rose and seeps into the etching.
 
 The amulet can hold up to 12 charges and loses all stored charges at dawn.
-As an action you can expend a number of charges to either teleport yourself or other nearby creatures.
+As an action you can expend a number of charges to teleport yourself or other nearby creatures.
 
-If you use charges to teleport other creatures you can teleport any number of creatures within 30 feet to any unoccupied space you can see within 30 feet, expending 1 charge for every 10 feet teleported per creature. If the creature is unwilling they must make a Constitution saving throw with a DC equal to 12 + the number of charges expended or be teleported against their will.
-If you use charges to teleport yourself you may teleport up to 10 feet per charge expended to any unoccupied space you can see.
+You can teleport any number of creatures within 30 feet to any unoccupied space you can see within 30 feet, expending 1 charge for every 10 feet teleported per creature. 
+As an action you can expend a number of charges to teleport creatures you can see to any unoccupied space you can see within 30 feet. For each creature teleported you must expend 1 charge for every 10 feet you move them. If the creature is unwilling they must make a Constitution saving throw with a DC equal to 10 + the total charges expended this turn or be teleported against their will.
 
 <section id="curse">
 **Curse.** If you are magically healed you lose all stored charges in this item.
-Additionally, every time you teleport using this item it creates a sigil on your skin around the most recent wound from the needle, adding a new ring to the sigil if there is already a sigil at the wound. Each ring or sigil has a number of spines radiating from it equal to the number of creatures teleported or no spines if you teleported yourself.
+Additionally, every time you use this item to teleport 1 or more creatures it creates a sigil on your skin around the most recent wound from the needle. This sigil has a number of spines radiating from it equal to the number of creatures teleported or 0 spines if you teleported yourself.
 
-When you stab yourself with the needle you take 1 additional necrotic damage for each sigil and ring on your body. This damage can not be resisted.
-These sigils and rings will not disappear until you spend at least 1 day without using this item. After 1 day 1d4-1 random rings disappear, and 1d4 sigils without rings disappear each day you haven't used it.
+When you stab yourself with the needle you take 1 additional Necrotic damage for each sigil on your body. This damage can not be resisted. 
+
+Each day at dawn 1d4-1 random sigils disappear if you did not use this item the previous day.
 </section>
