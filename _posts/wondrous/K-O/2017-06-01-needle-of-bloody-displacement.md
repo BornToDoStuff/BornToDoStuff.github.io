@@ -31,12 +31,9 @@ last_modified_at: 2019-02-14
 This amulet has a compass rose etched into its golden surface. It is stained and tarnished, and at the southern point of the compass rose a spike the length of a finger extends straight down.
 
 As a bonus action you can plunge the spike into yourself. You take 1d4 Piercing damage, and gain charges equal to the damage taken, as the blood flows against gravity into the compass rose and seeps into the etching.
-
 The amulet can hold up to 12 charges and loses all stored charges at dawn.
-As an action you can expend a number of charges to teleport yourself or other nearby creatures.
 
-You can teleport any number of creatures within 30 feet to any unoccupied space you can see within 30 feet, expending 1 charge for every 10 feet teleported per creature. 
-As an action you can expend a number of charges to teleport creatures you can see to any unoccupied space you can see within 30 feet. For each creature teleported you must expend 1 charge for every 10 feet you move them. If the creature is unwilling they must make a Constitution saving throw with a DC equal to 10 + the total charges expended this turn or be teleported against their will.
+As an action you can expend a number of charges to teleport creatures you can see within 30 feet to another unoccupied space you can see within 30 feet. For each creature teleported you must expend 1 charge for every 10 feet you move them. If the creature is unwilling they must make a Constitution saving throw with a DC equal to 10 + the total charges expended this turn or be teleported against their will.
 
 <section id="curse">
 **Curse.** If you are magically healed you lose all stored charges in this item.
