@@ -12,19 +12,22 @@ permalink: /items/advanced/
 	<!--[if lt IE 9]>
 	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
-	<!--<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css" />-->
 	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/theme.default.css" />
-	<!--<link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />-->
+	<style>
+		input, select {
+			min-height: 35px;
+			widtH: 100%;
+		}
+	</style>
 </head>
 <body>
-	<!--{% include navigation.html %}-->
 	<nav id="navbar">
 		<div class="width-wrapper">
 			<a href="{{ site.baseurl }}/" id="navbar-brand">Back to main site</a>
 		</div>
 	</nav>
+	<br />
 
-	<a id="TippyTop"></a>
 	<div class="width-wrapper center">
 		<div class="page">
 			{% assign sorted_posts = site.posts | sort: 'title' %}
@@ -37,7 +40,7 @@ permalink: /items/advanced/
 			{%- assign role_names = "Attack, Auxillary, Defense, Healing, Mixed, Mundane, Utility" | split: ", " -%}
 			{%- assign damage_names = "Acid, Bludgeoning, Cold, Fire, Force, Lightning, Necrotic, Piercing, Poison, Psychic, Radiant, Slashing, Thunder, Mixed" | split: ", " -%}
 
-			<input id="search" type="search" class="search" placeholder="Search All..." data-column="all" style="width:80%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2);min-height: 35px" /><input type="button" class="reset" value="Reset Search" style="width: 20%;border: 1px solid rgba(0,0,0,0.2);min-height: 35px" />
+			<input id="search" type="search" class="search" placeholder="Search All..." data-column="all" style="width:80%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2);" /><input type="button" class="reset" value="Reset Search" style="width: 20%;border: 1px solid rgba(0,0,0,0.2);" />
 
 			<table id="item_table_advanced" class="tablesorter">
 				<thead>
@@ -57,7 +60,7 @@ permalink: /items/advanced/
 						<th>Last Edited</th>
 					</tr>
 					<tr class="tablesorter-filter-row tablesorter-ignoreRow">
-						<th></th>
+						<th><input type="search" class="search" placeholder="" data-column="5" /></th>
 						<th><input type="search" class="search" placeholder="Search Name..." data-column="0" /></th>
 						<th>
 							<select class="search" data-column="1">
@@ -194,7 +197,8 @@ permalink: /items/advanced/
 						filter_columnFilters: false,
 						filter_defaultFilter: {
 							// 0 : '~{query}',
-							3: '={query}'
+							3: '={query}',
+							5: '={query}'
 						},
 					},
 					headers: {
