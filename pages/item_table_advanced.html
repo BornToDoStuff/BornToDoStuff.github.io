@@ -43,7 +43,7 @@ permalink: /items/advanced/
 			<input id="search" type="search" class="search" placeholder="Search All..." data-column="all" style="width:80%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2);" /><input type="button" class="reset" value="Reset Search" style="width: 20%;border: 1px solid rgba(0,0,0,0.2);" />
 
 			<table id="item_table_advanced" class="tablesorter">
-				<thead class="tablesorter-stickyHeader">
+				<thead>
 					<tr>
 						<th>ID</th>
 						<th>Name</th>
@@ -198,7 +198,10 @@ permalink: /items/advanced/
 							0: '={query}',
 							4: '={query}'
 						},
-						stickyHeaders: "tablesorter-stickyHeader"
+						stickyHeaders_attachTo: null,
+						stickyHeaders: "tablesorter-stickyHeader",
+						stickyHeaders_offset: 0,
+						stickyHeaders_cloneId: '-sticky'
 					},
 					headers: {
 						//0: { sorter: false },
