@@ -158,8 +158,9 @@ permalink: /items/advanced/
 	</div>-->
 	<div>
 		<script src="{{ site.baseurl }}/js/scripts.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/jquery.tablesorter.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.29.0/js/widgets/widget-filter.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/jquery.tablesorter.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/widgets/widget-filter.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.1/js/widgets/widget-cssStickyHeaders.min.js"></script>
 		<script>
 			$.tablesorter.addParser({
 				// set a unique id
@@ -190,7 +191,7 @@ permalink: /items/advanced/
 					theme: 'default',
 					widthFixed: false,
 					sortReset: true,
-					widgets: ['zebra', 'stickyHeaders', 'filter'],
+					widgets: ['zebra', 'cssStickyHeaders', 'filter'],
 					widgetOptions: {
 						filter_reset: '.reset',
 						filter_columnFilters: false,
@@ -198,10 +199,10 @@ permalink: /items/advanced/
 							0: '={query}',
 							4: '={query}'
 						},
-						stickyHeaders_attachTo: null,
-						stickyHeaders: "tablesorter-stickyHeader",
-						stickyHeaders_offset: 0,
-						stickyHeaders_cloneId: '-sticky'
+						cssStickyHeaders_attachTo: null,
+						cssStickyHeaders_offset: 0,
+						cssStickyHeaders_filteredToTop: true,
+						cssStickyHeaders_zIndex: 10
 					},
 					headers: {
 						//0: { sorter: false },
