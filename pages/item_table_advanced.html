@@ -30,7 +30,7 @@ permalink: /items/advanced/
 
 	<div class="width-wrapper center">
 		<div class="page">
-			{% assign sorted_posts = site.posts | sort: 'title' %}
+			{% assign sorted_posts = site.posts | sort: 'item_id' | reverse %}
 			{%- assign cat_names = "" | split: "|"   -%}
 			{%- for cat in site.categories -%} {%- assign cat_names = cat_names | push: cat.first -%} {%- endfor -%}
 			{%- assign cat_names = cat_names | sort -%}
@@ -60,41 +60,40 @@ permalink: /items/advanced/
 						<th>Last Edited</th>
 					</tr>
 					<tr class="tablesorter-filter-row tablesorter-ignoreRow">
-						<th><input type="search" class="search" placeholder="" data-column="5" /></th>
-						<th><input type="search" class="search" placeholder="Search Name..." data-column="0" /></th>
-						<th>
-							<select class="search" data-column="1">
+						<th style="width:50px;"><input type="search" class="search" placeholder="" data-column="0" /></th>
+						<th><input type="search" class="search" placeholder="Search Name..." data-column="1" /></th>
+						<th style="width:250px;">
+							<select class="search" data-column="2">
 								<option></option>
 								{%- for cat in cat_names -%}
 								<option value="{{cat}}">{{cat}}</option>
 								{%- endfor -%}
 							</select>
 						</th>
-						<th><input type="search" class="search" placeholder="Search Sub-Types..." data-column="2" /></th>
+						<th><input type="search" class="search" placeholder="Search Sub-Types..." data-column="3" /></th>
 						<th>
-							<select class="search" data-column="3">
+							<select class="search" data-column="4">
 								<option></option>
 								{%- for rarity in rarities_names -%}
 								<option value="{{rarity}}">{{rarity}}</option>
 								{%- endfor -%}
 							</select>
 						</th>
-						<th>
-							<select class="search" data-column="4">
+						<th style="width:50px;">
+							<select class="search" data-column="5">
 								<option></option>
 								<option value="Yes">Yes</option>
 								<option value="—">No</option>
 							</select>
 						</th>
-						<!-- data-column 5 is ID -->
-						<th>
+						<th style="width:50px;">
 							<select class="search" data-column="6">
 								<option></option>
 								<option value="Yes">Yes</option>
 								<option value="—">No</option>
 							</select>
 						</th>
-						<th>
+						<th style="width:175px;">
 							<select class="search" data-column="7">
 								<option></option>
 								{%- for class in class_names -%}
@@ -126,8 +125,8 @@ permalink: /items/advanced/
 								{%- endfor -%}
 							</select>
 						</th>
-						<th><input type="search" class="search" placeholder="Search Tags..." data-column="11" /></th>
-						<th></th>
+						<th style="width:250px;"><input type="search" class="search" placeholder="Search Tags..." data-column="11" /></th>
+						<th style="width:80px;"></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -197,15 +196,14 @@ permalink: /items/advanced/
 						filter_columnFilters: false,
 						filter_defaultFilter: {
 							// 0 : '~{query}',
-							3: '={query}',
-							5: '={query}'
+							4: '={query}'
 						},
 					},
 					headers: {
 						//0: { sorter: false },
 						//2: { sorter: false },
-						3: { sorter: 'rarity' },
-						4: { empty: 'zero' },
+						4: { sorter: 'rarity' },
+						5: { empty: 'zero' },
 						6: { empty: 'zero' }
 					}
 				});
