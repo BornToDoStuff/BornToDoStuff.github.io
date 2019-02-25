@@ -188,7 +188,6 @@ permalink: /items/advanced/
 						c.$table.find('.noData').remove();
 					}
 
-
 					$("#result_count").val(fr + " results");
 				})
 				.tablesorter({
@@ -216,7 +215,9 @@ permalink: /items/advanced/
 						6: { empty: 'zero' }
 					}
 				});
+
 			$.tablesorter.filter.bindSearch($table, $('.search'));
+			$("#result_count").val($table[0].config.totalRows + " results");
 		</script>
 		{% include inline-scripts.html %}
 	</div>
