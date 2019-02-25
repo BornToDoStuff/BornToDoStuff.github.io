@@ -188,7 +188,7 @@ permalink: /items/advanced/
 						c.$table.find('.noData').remove();
 					}
 
-					$("#result_count").val(fr + " results");
+					$("#result_count").text(fr + " results");
 				})
 				.tablesorter({
 					theme: 'default',
@@ -217,7 +217,7 @@ permalink: /items/advanced/
 				});
 
 			$.tablesorter.filter.bindSearch($table, $('.search'));
-			$("#result_count").val($table[0].config.totalRows + " results");
+			$("#result_count").text($table[0].config.totalRows + " results");
 		</script>
 		{% include inline-scripts.html %}
 	</div>
