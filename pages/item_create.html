@@ -10,12 +10,14 @@ permalink: /items/create/
 	<title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
 	{% include meta.html %}
 	{% include analytics.html %}
-	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/admin_add/custom-bootstrap-only.css" />
-	<script src="{{ site.baseurl }}/admin_add/jquery.hotkeys.js"></script>
-	<script src="{{ site.baseurl }}/admin_add/jquery-ui.min.js"></script>
-	<script src="{{ site.baseurl }}/admin_add/quill.min.js"></script>
-	<script src="{{ site.baseurl }}/admin_add/turndown.js"></script>
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/item_create/custom-bootstrap-only.css" />
+	<script src="https://use.fontawesome.com/af42e3060e.js"></script>
 
+	<script src="{{ site.baseurl }}/js/scripts.js"></script>
+	<script src="{{ site.baseurl }}/item_create/jquery.hotkeys.js"></script>
+	<script src="{{ site.baseurl }}/item_create/jquery-ui.min.js"></script>
+	<script src="{{ site.baseurl }}/item_create/quill.min.js"></script>
+	<script src="{{ site.baseurl }}/item_create/turndown.js"></script>
 	<style>
 		.btn-toolbar {
 			margin-bottom: 5px;
@@ -563,6 +565,5 @@ ${item.Description}
 				.replace(/(<br>){2,}/g, "</p><p>");
 		}
 	</script>
-	{% include inline-scripts.html %}
 </body>
 </html>
