@@ -20,8 +20,9 @@ tags:
   - Constitution
   - Charges
   - At Dawn
-  - Extreme Climate
+  - Climate
   - Reduce
+  - Resistance
 item_idea: 
 item_co_creator: 
 item_updated: 

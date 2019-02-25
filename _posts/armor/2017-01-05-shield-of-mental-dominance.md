@@ -23,11 +23,11 @@ tags:
   - Spellcasting
 item_idea:
 item_co_creator:
-item_updated:
+item_updated: 2019-01-23
 last_modified_at: 2019-01-23
 ---
 
-This round metal shield is rimmed with clear crystal that is hard as iron.
+This simple round metal shield is rimmed with a band of clear crystal that is hard as iron.
 
 While attuned to this shield you have proficiency with Intelligence saving throws if you did not before.
 This shield has 3 charges that recharge on a long or short rest. While you are wielding this shield at the end of another creature's turn you can choose to expend a number of charges to activate it.

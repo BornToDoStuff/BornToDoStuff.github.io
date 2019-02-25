@@ -13,10 +13,6 @@ item_classes:
 item_school: Necromancy
 item_role:
   - Attack
-  - Auxiliary
-  - Defense
-  - Healing
-  - Utility
 item_damage:
   - Cold
   - Necrotic

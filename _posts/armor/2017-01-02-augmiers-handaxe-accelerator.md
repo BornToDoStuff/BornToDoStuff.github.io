@@ -18,15 +18,18 @@ item_damage:
   - Mixed
 tags:
   - Augmier
+  - Gnomish
+  - Orb
 item_idea:
 item_co_creator:
-item_updated: 2018-05-31
-last_modified_at: 2018-05-31
+item_updates: [2018-05-31, 2019-02-25]
+item_updated: 2019-02-25
+last_modified_at: 2019-02-25
 ---
 
-This round metal shield is rather thick and has an orb embedded within its center surrounded by reinforcing bands. There is a slot on the back of the shield, through which you can clearly see that the shield is hollow.
+This round metal shield is very thick and has an orb embedded within its center surrounded by reinforcing bands. There is a slot on the back of the shield, through which you can clearly see that the shield is hollow.
 
-If you insert a light thrown weapon into the slot the orb begins to glow and a distinct whirring noise can be heard from the shield. While the orb is glowing you can speak the command word inscribed under the slot in gnomish and point your shield arm at a target as an action. When you do so the weapon you put into the shield is expelled with deadly accuracy and incredible speeds as if it melds directly through the metal flying out to a range of 80/320 from the front edge of the shield.
+If you insert a light thrown weapon into the slot the orb begins to glow and a distinct whirring noise can be heard from the shield. While the orb is glowing as an action you can point your shield arm at a target and speak the command word inscribed under the slot in gnomish. When you do so the weapon you put into the shield is expelled as if it melds directly through the metal with a range of 80/320.
 Make a ranged attack against the target, if you have proficiency with shields you have proficiency with this attack. On a successful hit you deal 2d6 damage of the weapon's damage type.
 
 After one minute or if you insert another weapon into the slot during this time the weapon(s) shatter and the orb and whirring die down.

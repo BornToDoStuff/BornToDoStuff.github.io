@@ -18,6 +18,7 @@ item_damage:
 tags:
   - Bonus Action
   - Armor Class
+  - Heavy
 item_idea:
 item_co_creator:
 item_updated:

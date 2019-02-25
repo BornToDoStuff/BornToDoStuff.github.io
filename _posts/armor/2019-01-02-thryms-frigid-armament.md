@@ -25,6 +25,7 @@ tags:
   - Restrained
   - Ice
   - Deity
+  - Divine
 item_idea: Kuma
 commisioned: true
 item_co_creator: 
