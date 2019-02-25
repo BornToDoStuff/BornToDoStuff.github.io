@@ -24,6 +24,7 @@ permalink: /items/advanced/
 	<nav id="navbar">
 		<div class="width-wrapper">
 			<a href="{{ site.baseurl }}/" id="navbar-brand">Back to main site</a>
+			<b style="float:right"><span id="result_count"></span></b>
 		</div>
 	</nav>
 	<br />
@@ -34,7 +35,7 @@ permalink: /items/advanced/
 			{%- assign cat_names = "" | split: "|"   -%}
 			{%- for cat in site.categories -%} {%- assign cat_names = cat_names | push: cat.first -%} {%- endfor -%}
 			{%- assign cat_names = cat_names | sort -%}
-			{%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
+			{%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary, Artifact, Varies" | split: ", " -%}
 			{%- assign class_names = "Barbarian, Bard, Cleric, Druid, Fighter, Monk, Paladin, Ranger, Rogue, Sorcerer, Warlock, Wizard, All" | split: ", " -%}
 			{%- assign school_names = "Abjuration, Conjuration, Divination, Enchantment, Evocation, Illusion, Necromancy, Transmutation, Unidentifiable, Ancient" | split: ", " -%}
 			{%- assign role_names = "Attack, Auxillary, Defense, Healing, Mixed, Mundane, Utility" | split: ", " -%}
@@ -186,6 +187,9 @@ permalink: /items/advanced/
 					} else {
 						c.$table.find('.noData').remove();
 					}
+
+
+					$("#result_count").val(filteredRows + " results");
 				})
 				.tablesorter({
 					theme: 'default',
