@@ -25,7 +25,7 @@ tags:
 item_idea:
 item_co_creator:
 item_updated: 2019-02-25
-last_modified_at:2019-02-25
+last_modified_at: 2019-02-25
 ---
 
 This chainmail is dull and rusted, and has red links of an unknown metal woven throughout it in no discernable pattern. No amount of scrubbing and polishing can clean off the rust that has accumulated.
