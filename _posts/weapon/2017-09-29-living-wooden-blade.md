@@ -1,6 +1,6 @@
 ---
 title: Living Wooden Blade
-item_id: 199
+item_id: 182
 category: Weapon
 item_subtypes: 
   - any sword
