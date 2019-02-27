@@ -37,4 +37,4 @@ These little guys can only lift up to 5 pounds but are quite dextrous with their
 Their triangular build makes them much stronger than most other transformations and they are able to carry and lift up to 15 pounds. They aren’t smart but they can still follow simple two or three word commands. They have a walking speed of 10.
 
 #### Bird
-Unfortunately unable to sing, this little bird is able to carry messages written on it, or with it, to a specific location. If shown on a map where to take it and told to “fly” it will be able to navigate exactly to where you pointed, and do its best to fly around storms. It can also return to where it was folded by being told to “go home”. They have a flying speed of 30 and a walking speed of 5.
+Unfortunately unable to sing, this little bird is able to carry messages written on it, or with it, to a specific location. If shown on a map where to take it and told to "fly" it will be able to navigate exactly to where you pointed, and do its best to fly around storms. It can also return to where it was folded by being told to "go home". They have a flying speed of 30 and a walking speed of 5.

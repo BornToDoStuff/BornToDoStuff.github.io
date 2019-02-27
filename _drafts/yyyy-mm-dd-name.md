@@ -5,7 +5,7 @@ category: Armor Potion Ring Rod Scroll Shield Staff Tattoo Wand Weapon Wondrous
 item_subtypes:
   - Breastplate
   - Half Plate
-item_rarity: Mediocre Common Uncommon Rare Very Rare Legendary
+item_rarity: Common Uncommon Rare Very Rare Legendary
 item_attunement: false
 item_requirement:
 item_curse: false
@@ -48,6 +48,10 @@ item_damage:
 tags:
   - tag
   - tag
+item_goofy: 100
+item_dark: 100
+item_complexity: 100
+item_rating: 100
 item_idea:
 item_co_creator:
 item_updated:

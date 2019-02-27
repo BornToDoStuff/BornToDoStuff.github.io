@@ -3,7 +3,7 @@ title: Channeling Circuits
 item_id: 47
 category: Tattoo
 item_subtypes:
-item_rarity: Mediocre
+item_rarity: Common
 item_attunement: false
 item_requirement:
 item_curse: false
@@ -15,12 +15,18 @@ item_role:
 item_damage:
 tags:
   - Spellcasting
+  - Short Rest
+  - Reaction
+item_goofy: 15
+item_dark: 15
+item_complexity: 25
+item_rating: 65
 item_idea:
 item_co_creator:
-item_updated:
-last_modified_at:
+item_co_creator: 2019-02-26
+item_updated: 2019-02-26
 ---
 
 This tattoo is an interwoven web of right angles, usually stretching from the torso to fingertips. You gain two abilities and you may use one per short rest.
-- You may cast a spell up to 5th level, expending a spell slot as normal, but ignoring verbal and somatic components.
-- You may cast any spell up to 1st level that would normally be an action or bonus action as a reaction triggered by being attacked, or as an opportunity attack. If a spell slot would be expended it is expended as normal.
+- You cast a spell up to 5th level ignoring verbal and somatic components.
+- You cast any 1st level spell or cantrip that would normally be an action or bonus action as a reaction to being attacked, or as an opportunity attack.

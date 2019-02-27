@@ -4,7 +4,7 @@ item_id: 49
 category: Wondrous
 item_subtypes:
   - Clothing
-item_rarity: Mediocre 
+item_rarity: Common 
 item_attunement: false
 item_requirement:
 item_curse: false
@@ -15,10 +15,16 @@ item_role:
 item_damage:
 tags:
   - Charisma
+  - Advantage
+  - Medciocre
+item_goofy: 85
+item_dark: 5
+item_complexity: 10
+item_rating: 65
 item_idea:
 item_co_creator:
-item_updated:
-last_modified_at:
+item_co_creator: 2019-02-26
+item_updated: 2019-02-26
 ---
 
 This cloak always seems to be affected by a light breeze and flows behind you constantly. While wearing this cape you have advantage on Charisma checks to appear heroic, royal, or awe-inspiring.

@@ -39,7 +39,7 @@ You can turn the handle of the grinder either clockwise or counterclockwise, exp
 
 1.  **Salt**.The target creature takes 1d4 Piercing damage and is compelled to attack you with its next attack.
 2.  **Peppercorn**. The target takes 1d4 Fire damage and 1d4 Piercing damage from the spicy shards.
-3.  **Paprika**. The target feels a burning sensation and must succeed an Intelligence saving throw DC 12 or use their next action to try to “put out the fire”.
+3.  **Paprika**. The target feels a burning sensation and must succeed an Intelligence saving throw DC 12 or use their next action to try to "put out the fire".
 4.  **Nutmeg**. The target must make a Wisdom saving throw DC 12 or be Charmed for the next minute or until they take damage.
 5.  **Thyme**. Spines of dried thyme pierce the target doing 1d10 Piercing damage.
 6.  **Oregano**. A small 5 foot cloud of oregano forms around the target Blinding them until the end of their next turn or until they move out of the cloud.
