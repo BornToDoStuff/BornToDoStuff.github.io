@@ -19,7 +19,7 @@ item_damage:
   - Lightning
   - Fire
 tags:
-item_idea: "https://en.wikipedia.org/wiki/Xiuhcoatl 'turquoise lord' and 'ord of fire', Xiuhtecuhtli was apparently known for wielding a staff (or atlatl depending on depiction) which was the weapon form of the avatar of Huitzilopochtli, a lesser god. This is me taking artistic liberty of that weapon."
+item_idea: "https://en.wikipedia.org/wiki/Xiuhcoatl 'turquoise lord' and 'lord of fire', Xiuhtecuhtli was apparently known for wielding a staff (or atlatl depending on depiction) which was the weapon form of the avatar of Huitzilopochtli, a lesser god. This is me taking artistic liberty of that weapon."
 item_co_creator: 
 item_updated: 
 last_modified_at: 
