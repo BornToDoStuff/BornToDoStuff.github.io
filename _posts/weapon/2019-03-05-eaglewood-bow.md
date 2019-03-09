@@ -1,7 +1,7 @@
 ---
 title: Eaglewood Bow
 item_id: 233
-category: 
+category: Weapon
 item_subtypes: 
   - Shortbow
   - Longbow
