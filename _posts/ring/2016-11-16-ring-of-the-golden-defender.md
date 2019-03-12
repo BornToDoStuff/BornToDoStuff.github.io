@@ -49,7 +49,7 @@ The ring stretches out tendrils of ivory, coating your hand and wrist. The ivory
 **Defender’s Blessing.** Once per day as an action while wearing this gauntlet you can fire a beam of brilliant yellow light in a 5 foot wide, 60 foot line from the gauntlet. Each creature in this line must make a Constitution saving throw. On a failed save a creature takes 8d6 Radiant damage and is blinded until your next turn. On a successful save it takes half as much damage and is not blinded. Undead and oozes have disadvantage on this saving throw. This beam counts as a 3rd level light spell for the sake of dispelling magical darkness.    
 **Divine Fist.** Your unarmed strikes deal 1d4 damage while wearing the gauntlet. Additionally you can choose to deal Radiant damage instead of bludgeoning damage.
 
-### Gauntlet Stage (Very Tare)
+### Gauntlet Stage (Very Rare)
 The ring sprouts a dense network of ivory and gold tendrils, covering even your upper arm, up to your shoulder. Each gold trimmed plate is connected with a series of ivory strands all gracefully twisting back to the ring. You move unhindered by this long gauntlet, as if it floats effortlessly just above your skin.
 
 **Golden Circuitry.** You now have a pool of 3 charges stored in the gauntlet. As a reaction you can expend a number of charges to activate Shield of Gold, even if it has already been used, on a number of creatures equal to the charges expended.

@@ -1,8 +1,9 @@
 ---
 title: Greater Deathsbane Shield
 item_id: 232
-category: Shield
+category: Armor
 item_subtypes: 
+  - Shield
 item_rarity: Very Rare
 item_attunement: true
 item_requirement: 

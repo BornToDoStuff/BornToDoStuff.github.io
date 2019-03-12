@@ -1,8 +1,9 @@
 ---
 title: Deathsbane Shield
 item_id: 231
-category: Shield
+category: Armor
 item_subtypes: 
+  - Shield
 item_rarity: Uncommon
 item_attunement: true
 item_requirement: 
