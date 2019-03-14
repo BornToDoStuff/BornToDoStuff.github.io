@@ -5,17 +5,18 @@ layout: default
   <magic-item id="{{ post.item_id }}">
     <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
     <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
-    <item-description>
-      {{ post.excerpt }}
-      {% if post.excerpt != post.content -%}
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-        <p>Read more &raquo;</p>
-        <div class="expander">
-          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-        </div>
-      </a>
-      {%- endif -%}
-    </item-description>
+	<item-description>
+		{%- assign content_truncated = post.content | truncatewords: 150 -%}
+		{{ content_truncated }}
+		{% if post.content != content_truncated -%}
+		<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+			<!--<p>Read more &raquo;</p>-->
+			<div class="expander">
+				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+			</div>
+		</a>
+		{%- endif -%}
+	</item-description>
   </magic-item>
 {% endfor %}
 
