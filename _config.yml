@@ -33,7 +33,7 @@ defaults:
       is_post: true
 
 
-excerpt_separator: <!--excerpt-->
+excerpt_separator: "<!--excerpt-->"
 permalink: /:title/
 paginate: 10
 paginate_path: "/page/:num/"
