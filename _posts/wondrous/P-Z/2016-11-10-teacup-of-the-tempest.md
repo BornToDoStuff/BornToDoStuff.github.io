@@ -30,6 +30,7 @@ last_modified_at:
 
 This delicate white teacup is fit for a nobleman, but will not chip or crack. It has been rumored to have been originally found when it was flung through a window, carried from a shipment of china by a violent storm. While you are attuned to the teacup you can gain up to 5 charges that can be used to activate the magic of the teacup.
 
+<!--excerpt-->
 ### Calm Before the Storm
 During a short rest if you drink tea from this teacup you regain all expended charges and your exhaustion decreases by 1 level. The tea can be of any type but must be hot when you drink it. You also regain 1 charge each long rest that you take.
 

@@ -32,6 +32,7 @@ If you have already moved this turn you have disadvantage on all attacks with th
 
 **Hollowed Chamber.** This crossbow does not have the loading property, but instead has the reload(9) property, meaning that you can fire 9 bolts before having to reload as an action.
 
+<!--excerpt-->
 ### Bone Fragments.
 There are ribs missing from the spine of the repeater. If you find the missing ribs and re-fasten them the power of the repeater will increase. You will know when you found the right bones because the eye sockets of the skull on the crossbow gently glow red when you grow near a piece.
 

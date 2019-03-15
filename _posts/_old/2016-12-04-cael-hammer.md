@@ -33,6 +33,7 @@ This hammer has a massive square head made from a gold alloy and is well worn on
 
 **Stunning Wallop.** If you have not moved yet this turn as an action you can bring the hammer down over your head with inhuman force, the hammer seeming to pull itself towards the ground. Make an attack roll against a target within 5 feet. Hit or miss, each creature other than you within 5 feet of the target must make a DC 14 Constitution saving throw. On a failed save, the creature takes 2d6 thunder damage. When you use the hammer in this way your movement speed is reduced to 0 until the beginning of your next turn.
 
+<!--excerpt-->
 ### Returned Shards.
 If you can manage to find the missing pieces of the Cael Hammer its power will increase with each shard returned. These shards appear to be small cubes of gold and are placed point first into the holes of the Cael Hammer. They settle into place with a click, and are almost impossible to remove.
 

@@ -31,7 +31,7 @@ While you are incapacitated once per turn you can mentally command the wandering
 
 If a creature makes a melee attack against you while you are incapacitated they must make a DC 10 Wisdom saving throw or become Frightened of you for the next minute or until they are farther than 30 feet from you as their mind is bombarded by the wandering soul.
 Additionally, while incapacitated you can telepathically reach out to a humanoid corpse that still has its mind and is within 30 feet and determine the answer to a single yes or no question if the creature knew the answer to your question in life. You can do this once per turn and can ask up to three questions of a single corpse before the information in its mind dulls.
-
+<!--excerpt-->
 <section id="curse">
 **Curse.** While the wandering soul remains in the bones you can not un-attune from this item unless you are within the area of a Hallow spell. If Remove Curse is cast on this item or the attuned creature the caster must make a DC 16 Intelligence(Arcana) check as the wanderer resists. On a failure the spell does nothing.
 If all of the bones are removed from the bag the bones begin to clatter and an Avatar of Death (DMG 164) is summoned within 10 feet of the creature holding the most bones. It screeches at the creature for disturbing its slumber and begins attacking it. It is resistant to any damage from all other creatures, even if the creature holding the most bones changes.

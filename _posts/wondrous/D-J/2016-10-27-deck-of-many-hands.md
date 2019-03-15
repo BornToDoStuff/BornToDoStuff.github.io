@@ -34,6 +34,7 @@ last_modified_at:
 This box contains 15 black ivory cards. The deck contains 3 cards each of Spiked Gauntlet, Hand of Death, and Stone Fist as well as 6 Strong Hand cards.
 You may randomly draw a card as an action or bonus action and throw it into the air, forming a floating disembodied hand depending on the card. Each hand lasts 1 hour, until dismissed as an action, or otherwise specified. When their time runs out or they are dismissed their respective card reappears in the deck. These hands move with you, slowly floating around you waiting for commands, and can move up to 30 feet from you.
 
+<!--excerpt-->
 ### Army of Hands
 As an action you can command up to three hands currently floating around you to do anything they are able to as long as it is within range.
 If you are not a caster your spellcasting ability for the sake of using this item is your constitution modifier.

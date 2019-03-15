@@ -33,10 +33,12 @@ item_updated:
 last_modified_at:
 ---
 
-This polished gold ring has a thick ivory inlay. As soon as you attune to it it reaches out to you, impressing upon you to put it on the first finger of your dominant hand. It can not speak, but it can communicate to you through ideas, images, and emotions. 
-Stages of Power. The desire of this ring is to protect other innocent creatures lives. If you earn the trust of the ring by showing your devotion to the protection of creatures around you and going beyond the call of duty to do so it will grant you power. When you attune with it you start at the Ring Stage, and move forward as the ring decides you are trustworthy. However if you betray the trust of the ring, you may move back a stage.
+This polished gold ring has a thick ivory inlay. As soon as you attune to it it reaches out to you, impressing upon you to put it on the first finger of your dominant hand. It can not speak, but it can communicate to you through ideas, images, and emotions.
+
+**Stages of Power.** The desire of this ring is to protect other innocent creatures lives. If you earn the trust of the ring by showing your devotion to the protection of creatures around you and going beyond the call of duty to do so it will grant you power. When you attune with it you start at the Ring Stage, and move forward as the ring decides you are trustworthy. However if you betray the trust of the ring, you may move back a stage.
 Each stage of power has access to all the abilities of the stage before it. As an action you can transform the ring into any stage it allows you to have access to.
 
+<!--excerpt-->
 ### Ring Stage (Rare)
 While the ring is content, and you wear it on your first finger, it grants you basic abilities.
 

@@ -33,6 +33,7 @@ While the serpent's eyes are glowing you can choose to expend a charge as an act
 
 Once per week as an action you can expend all remaining charges to create a massive mote of brilliant blue light. All the stones on the staff suddenly pulse and a 10 foot sphere of crackling light coalesces 100 feet above your head. This mote sheds bright light in a 250-foot-radius and dim light out for an additional 100 feet for the next 10 minutes before fading out with a roar. This effect dispels any darkness in its area that was created by a spell. Any creature in this radius that looks directly at the light must make a Constitution saving throw DC 17 or be blinded for the next minute. A creature blinded by this effect may make another Constitution saving throw at the end of each of its turns and on a success is no longer blinded.  
 
+<!--excerpt-->
 <section id="curse">
 **Curse.** If the snake has not has blood dripped in its mouth in the last month each time you expend a charge you take 1d8 Lightning damage.
 </section>

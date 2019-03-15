@@ -35,6 +35,7 @@ This straight blade is crafted from a black alloy that gleams red in the light. 
 
 **Unnatural Speed.** The blade seems to cut through the air and it swings with an uncanny speed. At the start of your turn you can prepare yourself to make a flurry of attacks. Until the end of your turn you take a -5 penalty to all your attack rolls, but in return you can make an additional Attack Action as a bonus action.
 
+<!--excerpt-->
 ### Blade Segments.
 There are sections yet missing from this blade. If you find the missing segments you can place them near the end of the machete and they fly toward it and snap into place. Each segment returned increases the power of this weapon as it increases in length just slightly.
 

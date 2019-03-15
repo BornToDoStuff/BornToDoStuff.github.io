@@ -30,6 +30,7 @@ When someone begins to fold them they continue folding themselves until they beg
 With a little practice anyone can learn how to create one of the common forms or possibly even something new. The first time you make one of the common forms you must succeed on a DC 12 Dexterity (Sleight of Hand) check. On a success you create the form you tried to make and never have to make this check again for that form. On a failure roll 1d4. On a 4 you are able to use the paper again. On a 1-3 the magic circle is too damaged to attempt it again.    
 At the DM's discretion you can attempt to create a new form with different effects, which may be more difficult or have new rules.
 
+<!--excerpt-->
 #### Humanoid
 These little guys can only lift up to 5 pounds but are quite dextrous with their hands, and able to follow rather complex orders. They have a walking speed of 15 and a climbing speed of 5.
 

@@ -32,6 +32,7 @@ last_modified_at:
 
 This greatsword has a blade of folded steel that shimmers in the light and a hilt adorned with pearl inlays. When you attune to it you feel a faint presence touch your mind and you hear a whisper through your thoughts. The sword can telepathically communicate with anyone touching it, but it seems far away and is barely audible. It asks you for souls, it does not care of what or whom, to be sent to the ethereal plane. Or in simpler terms, for you to kill.
 
+<!--excerpt-->
 ### Bloody Displacement
 Every time you draw blood with this sword you can feel it's satisfaction. When you successfully hit a creature with this sword you may teleport up to 10 feet, and when you reduce a creature to 0 hit points with this sword you may teleport up to 30 feet. You must teleport to an unoccupied space when you teleport in this manner.
 

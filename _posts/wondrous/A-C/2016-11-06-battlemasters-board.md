@@ -25,6 +25,7 @@ item_updated:
 
 This game set is extremely unique, as you travel the wooden board morphs its ivory inlays to portray major features in the landscape. It has a small drawer underneath it to hold up to 20 figurines, made from precious stones and bone and weighs 10 pounds. When you find it has 4 pieces carved from gemstones, 3 pieces made from goblin bone, 2 from human bone, and 1 from ogre bone. These pieces allow you control both friend and foe as you move them across the board in the deadly game of war.
 
+<!--excerpt-->
 ### The Bones of my Enemies
 You can create a figurine for any type of enemy that is size Large or smaller as long as you have bones from that creature to carve the piece from. To create a piece for the board you must spend a short rest attempting to do so and make a DC 14 Intelligence (Arcana) crafting check to properly form it. If you fail this check the material used is damaged and can not be used again.
 Pieces can be made out of gemstone and precious materials worth at least 50gp in the same manner can be bound to any creature that is willing, no matter the type of creature.

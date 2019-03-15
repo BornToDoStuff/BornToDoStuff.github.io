@@ -30,6 +30,7 @@ This piece is an artful combination of steel and wood that looks like it has had
 
 On a successful hit this weapon does 1d12 + your Dexterity modifier bludgeoning damage to the target. You do not have disadvantage in close combat while making ranged attacks with this weapon.
 
+<!--excerpt-->
 ### Flaired Barrel
 On a successful hit you deal 1 bludgeoning damage to all creatures within 5 feet of the target.
 

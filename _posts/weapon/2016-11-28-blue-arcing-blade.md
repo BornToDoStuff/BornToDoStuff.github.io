@@ -32,6 +32,7 @@ When you find this weapon it has lightning coming off it in tendrils, arcing to 
 
 Until it is attuned with a creature every time you attempt to pick it up you must succeed on a DC 12 Constitution saving throw or take 1d4 lightning damage.
 
+<!--excerpt-->
 ### Water Affinity.
 As an attack action you can stab this sword into a body of water and target a creature you can see within 10 feet of the body of water. That creature must make a Dexterity saving throw or take 2d10 lightning damage. If you are not a spellcaster this uses your Constitution modifier as your spellcasting ability.
 

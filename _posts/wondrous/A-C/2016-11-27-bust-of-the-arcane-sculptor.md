@@ -28,6 +28,7 @@ This marble bust weighs 4 pounds and depicts a heavily bearded man in a philosop
 
 While you are holding this bust you can use it as an arcane focus. When you use this item as an arcane focus you gain the following benefits.
 
+<!--excerpt-->
 ### Artist's Flair.
 When you cast a spell you can create one minor visual effect as if with the cantrip <magic-spell>Prestidigitation</magic-spell> or make a visual change to the spell such as adding a color, changing its color, or making it appear to take on a shape.
 

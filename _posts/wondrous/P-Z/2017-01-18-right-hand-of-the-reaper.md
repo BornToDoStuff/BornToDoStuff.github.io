@@ -32,6 +32,7 @@ This glove has a cuff that extends down the length of your forearm and is stitch
 While attuned to this glove you gain a pool of arcane energy that replenishes when you take a long rest. You have 25 points in this pool. If your wisdom modifier is positive you gain a bonus to this pool equal to your Wisdom modifier x 5.
 As an action, you can make an unarmed attack against a creature within 5 feet. On a hit you can draw power from the pool to deal additional Necrotic damage to that creature equal to the number of points expended, up to the maximum amount remaining in your pool.
 
+<!--excerpt-->
 ### Skilled Harvester
 When you wield a Sickle it now deals 1d6 slashing damage, has the property Finesse, and when you wield it with two hands it deals an additional 1d6 Necrotic damage.
 

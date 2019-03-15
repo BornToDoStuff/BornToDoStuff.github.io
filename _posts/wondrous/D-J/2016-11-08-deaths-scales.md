@@ -28,6 +28,7 @@ last_modified_at:
 This scale is no merchant’s scale. It holds the power of life and death itself in its balance. The base and arms are made of black ivory, and inlaid with pearl. The weighing pans are in the shape of hands cast from pure silver and hung from silver chains.    
 This scale is found with three ornate alignment weights made to look like figurines. The first is chiseled from stone and covered in black opals, and represents evil. The second is carved from wood and inlaid with diamonds, and represents neutral. The last is shaped from gold and has a single sapphire in its center, and it represents good.
 
+<!--excerpt-->
 ### Unerring Judge
 While holding the scales you can see the souls of dead humanoid creatures that have neither passed on nor been destroyed. You can telepathically communicate with these souls, and are able to understand and express emotions and ideas even if you do not share a language. They are under no compulsion to communicate truthfully, and may recognize you if they met you in life. Using the scales you can hold and weigh the souls to find their true alignment. The scales will come to balance with the weight that is closest to the creature’s alignment throughout life.
 

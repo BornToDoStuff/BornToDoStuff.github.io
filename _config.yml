@@ -31,6 +31,7 @@ defaults:
       title: New Magic Item
       item_rejected: false
       is_post: true
+      excerpt_separator: "<!--excerpt-->"
 
 permalink: /:title/
 paginate: 10
