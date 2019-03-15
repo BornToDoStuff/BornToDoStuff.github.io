@@ -39,6 +39,7 @@ This rough keyring has 8 keys on it, 3 of which appear to be copies of the same 
 **5.** The fifth key has a rough texture and 10 holes drilled through its head and shaft. When you take fire damage as a reaction you can have the key take up to 10 fire damage in your stead, before resistances are applied, and store the damage taken. You can not use this reaction again until the energy stored is expended. When you cast a spell or cantrip from this keyring you can choose to expendexpend the stored damage before the DM announces the result of the attack or save, adding it to the damage taken by the first creature hit, if any.
 
 **6-8.** The last three keys all are shaped the same, but they are larger than the others, and cracked. Flickering light can be seen flowing through the cracks in the keys. Each key has a single charge of <magic-spell>Hellish Rebuke</magic-spell> that is expended when you cast it and recharges at dawn. The light within the keys ebbs and flows with the charges.
+
 <!--excerpt-->
 <section id="curse">
 **Curse.** If you target a fiend with any spell from this item you automatically become the new target for the spell and must roll against yourself.

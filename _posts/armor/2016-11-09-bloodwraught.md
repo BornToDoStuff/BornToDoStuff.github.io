@@ -30,6 +30,7 @@ last_modified_at: 2019-01-23
 
 This rectangular shield of dark iron has deep grooves in it stained a dull red.    
 As a reaction to being hit by an attack you can activate the shield. When you activate the shield you feel a sharp pang in your hand and forearm. You take 1d8 Necrotic damage, and the grooves in the shield glow a sickly red as a dark barrier of magical force surrounds you. Until the start of your next turn, you have a +5 bonus to AC, including against the triggering attack, and are lightly obscured.
+
 <!--excerpt-->
 <section id="curse">
 **Curse.** Every time you activate Bloodwraught it gains a charge, and you take Necrotic damage equal to 1d8 for each charge instead of 1d8 total. These charges reset each day at dawn.

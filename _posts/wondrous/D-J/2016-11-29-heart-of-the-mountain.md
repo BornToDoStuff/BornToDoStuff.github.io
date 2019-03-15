@@ -31,6 +31,7 @@ This item is visibly sculpted to look like a humanoid heart. It has a large ruby
 While attuned to this item you must fail 5 death saving throws to die instead of 3.
 
 Additionally, once per day as an action you can choose to cast either <magic-spell>Stoneskin</magic-spell> or <magic-spell>Investiture of Stone</magic-spell> on yourself, ignoring concentration. If you are not a spellcaster you use your Constitution modifier as your spellcasting ability for this effect. If you choose <magic-spell>Investiture of Stone</magic-spell> you gain 1 level of exhaustion as the spell ends.
+
 <!--excerpt-->
 <section id="curse">
 **Curse.** While attuned with this item you are vulnerable to thunder damage.

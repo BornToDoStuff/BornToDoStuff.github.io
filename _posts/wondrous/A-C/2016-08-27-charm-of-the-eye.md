@@ -28,6 +28,7 @@ last_modified_at: 2018-12-26
 ---
 
 This small golden amulet is about an inch across and resembles an eye half closed over an inlaid ruby. It hangs on three frail chains coming from each corner of the eye. While wearing this amulet when you make an opportunity attack against a creature you may make another opportunity attack before the beginning of your next turn so long as the second attack is not against the same creature.
+
 <!--excerpt-->
 <section id="curse">
 **Curse.** When a creature puts this amulet over their head it tightens around their temples and the eye snaps open. It cannot be taken off unless the curse is removed and the chains cannot be broken despite their dainty appearance.

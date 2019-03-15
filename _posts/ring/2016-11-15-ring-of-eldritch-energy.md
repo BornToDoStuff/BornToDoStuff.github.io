@@ -31,6 +31,7 @@ last_modified_at: 2018-03-28
 This bone ring has a deep purple inlay, and is set with an onyx. While wearing this ring, every short rest you take you gain 1d6+4 temporary hit points.    
 As a bonus action you can choose to expend all remaining temporary hit points gained in this way to cast <magic-spell>Eldritch Blast</magic-spell> even if you do not know it.    
 Additionally, while attuned to the ring you know the cantrip <magic-spell>Chill Touch</magic-spell>, and can cast it using the ring as a focus.    
+
 <!--excerpt-->
 <section id="curse">
 **Curse.** Each time you gain temporary hit points from this ring it consumes a hit die. If there are no hit dice to be consumed you take damage equal to the temporary hit points gained, although you can not drop below 1 hit point from this effect.

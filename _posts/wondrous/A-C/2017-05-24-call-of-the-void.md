@@ -33,6 +33,7 @@ This black chunk of obsidian is a rough spherical shape with no sharp edges. As 
 This item has 3 charges. While holding it, you can use an action to expend a number of its charges to create a sphere of swirling emptiness at a point within 120 feet of you. The radius of the sphere is equal to the number charges expended x 10. Space itself begins to warp within the area and each creature within the sphere must make a DC 14 Strength saving throw; a creature can choose to fail this saving throw if it wishes. On a failed save they are pulled to an unoccupied space nearest to the center of the vortex. On a successful save they take 2d8 force damage and are not moved.
 
 This item regains all of its expended charges after a long or short rest.
+
 <!--excerpt-->
 <section id="curse">
 **Curse.** The first time this item is used after a long or short rest the user takes 1d8 Necrotic damage for each charge they expended as a tiny piece of their life force is pulled into Limbo. This damage can not be resisted and if a creature goes unconscious from taking this damage a gate appears beneath them and they are sucked through it to Limbo. This gate is one-way only and can't be reopened.
