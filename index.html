@@ -6,8 +6,9 @@ layout: default
     <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
     <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
 	<item-description>
-		{{ post.excerpt }}
-		{% if post.excerpt != post.content-%}
+		{%- assign content_excerpt = post.excerpt | truncatewords: 150 -%}
+		{{ content_excerpt }}
+		{% if content_excerpt != post.content-%}
 		</p>
 		<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
 			<div class="expander">
