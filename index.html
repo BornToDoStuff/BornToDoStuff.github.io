@@ -9,8 +9,8 @@ layout: default
 		{%- assign content_truncated = post.content | truncatewords: 150 -%}
 		{{ content_truncated }}
 		{% if post.content != content_truncated -%}
+		</p>
 		<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-			<!--<p>Read more &raquo;</p>-->
 			<div class="expander">
 				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
 			</div>
