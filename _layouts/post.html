@@ -43,12 +43,14 @@ layout: default
 	<item-attribution><b>Co-creator:&nbsp;</b>{{ page.item_co_creator }}</item-attribution>
 	{%- endif %}
 	{% if page.item_idea -%}
-		<item-attribution><b>Item inspiration:&nbsp;</b>{{ page.item_idea | truncatewords: 3, ""}}</item-attribution>
+	<item-attribution><b>Item inspiration:&nbsp;</b>{{ page.item_idea | truncatewords: 3, ""}}</item-attribution>
 	{%- endif %}
+	{% comment %}
 	<div>
 		<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
 		<span style="display:none"><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">{{page.title}}</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="{{site.url}}{{page.url}}" property="cc:attributionName" rel="cc:attributionURL">BornToDoStuff</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://items.borntodostuff.com/about/" rel="cc:morePermissions">https://items.borntodostuff.com/about/</a>.</span>
 	</div>
+	{% endcomment %}
 </item-details>
 
 <nav class="page-navigation" aria-label="page navigation">
