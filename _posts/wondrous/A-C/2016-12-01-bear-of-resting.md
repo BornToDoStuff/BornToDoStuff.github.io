@@ -19,8 +19,8 @@ tags:
   - Temporary Hitpoints
 item_idea:
 item_co_creator:
-item_updated:
-last_modified_at:
+item_updated: 2019-09-03
+last_modified_at: 2019-09-03
 ---
 
-This is a small stuffed animal appears to be a slightly smushed bear with several patches sewn onto it. If you spend a long rest holding or sleeping with this bear you lose 1d4 levels of exhaustion. Additionally, if you hold or sleep with this bear during a short rest you gain 1d4 temporary hit points. You can not gain these effects if you share the bear during these times.
+This is a small stuffed animal appears to be a slightly smushed bear with several patches sewn onto it. If you spend a long rest holding or sleeping with this bear you lose 1d4-1 levels of exhaustion. Additionally, if you hold or sleep with this bear during a long or short rest you gain 1d4 temporary hit points that last until your next rest. You do not gain any benefits if you share the bear during your rest.
