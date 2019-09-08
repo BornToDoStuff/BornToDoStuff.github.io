@@ -2,30 +2,30 @@
 title: Tears of Ra
 item_id: 240
 category: Potion
-item_subtypes: 
+item_subtypes:
   - Thrown
   - Consumable
 item_rarity: Rare
 item_attunement: false
-item_requirement: 
+item_requirement:
 item_curse: false
-item_classes: 
+item_classes:
   - Cleric
   - Druid
   - Ranger
 item_school: Conjuration
-item_role: 
+item_role:
   - Attack
-item_damage: 
+item_damage:
   - Piercing
 tags:
-  - summoning
-  - mythology
-item_idea: Egyptian lore
-item_co_creator: 
-item_updated: 
-last_modified_at: 
+  - Summoning
+  - Mythology
+item_idea: Egyptian mythology
+item_co_creator:
+item_updated:
+last_modified_at:
 ---
 
-This small clay flask is covered in ancient hieroglyphs but one stands out against all the others; a large hieroglyph of an eye.  
+This small clay flask is covered in ancient hieroglyphs but one stands out against all the others; a large hieroglyph of an eye.
 As an action you can throw this bottle up to 30 feet or pour it on the ground. When you do so the liquid shines like gold in the light before twinkling into four swarms of bees (Swarm of Insects MM338, Wasp variant) in the nearest spaces. These bees attack anyone hostile towards the creature currently holding the bottle for the next hour before returning to mundane water droplets and falling from the sky.
