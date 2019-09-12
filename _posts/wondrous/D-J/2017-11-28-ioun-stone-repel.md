@@ -1,5 +1,5 @@
 ---
-title: Ioun Stone: Repel
+title: Ioun Stone&#58; Repel
 item_id: 191
 category: Wondrous
 item_subtypes:
