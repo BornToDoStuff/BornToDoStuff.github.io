@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+	  <title>
+	  	{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}
+	  </title>
 
     {% include meta.html %}
     {% include analytics.html %}
@@ -20,7 +22,7 @@
             {{ content }}
         </section>
       </div>
-      <section id="sidebar">
+      <!--<section id="sidebar">
         {% unless page.nosearch %}
           {% include search-form.html %}
         {% endunless -%}
@@ -29,11 +31,11 @@
         {%- else -%}
           {% include sidebar.html %}
         {%- endif %}
-      </section>
+      </section>-->
 
       <div id="navigation-fixed">
         <a id="return-to-top" href="#TippyTop">
-          <img alt="white chevron" src="{{ site.baseurl }}/images/icons/chevron-up-white.svg" />
+          <img alt="white chevron" src="{{ site.baseurl }}/images/icons/chevron-up.svg" />
         </a>
       </div>
     </div>
