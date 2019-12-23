@@ -6,7 +6,7 @@ item_subtypes:
   - Breastplate
   - Half Plate
   - Plate
-item_rarity: Rare
+item_rarity: Uncommon
 item_attunement: true
 item_requirement: by a Cleric or Paladin
 item_curse: false
