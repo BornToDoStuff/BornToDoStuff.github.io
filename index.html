@@ -8,12 +8,6 @@ layout: home
       <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
       <item-description>
     		{{ post.content }}
-    		<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-    			<div class="expander">
-    				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
-    			</div>
-    		</a>
-    		{%- endif -%}
     	</item-description>
       <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
 				<div class="expander">
