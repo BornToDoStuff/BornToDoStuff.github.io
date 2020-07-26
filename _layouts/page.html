@@ -3,13 +3,16 @@ layout: default
 ---
 
 <a id="TippyTop"></a>
-<div class="page">
-  <div class="width-wrapper">
-    <div id="main-wrapper">
-      <section id="main" role="main">
+
+<div class="width-wrapper small">
+  <div id="main-wrapper">
+    <section id="main" role="main">
+
+      <div class="page">
         {{ content }}
-      </section>
-    </div>
+      </div>
+
+    </section>
   </div>
   <div id="navigation-fixed">
     <a id="return-to-top" href="#TippyTop">
@@ -19,5 +22,6 @@ layout: default
 </div>
 <div>
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
+
   {% include inline-scripts.html %}
 </div>
