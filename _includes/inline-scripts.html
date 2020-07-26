@@ -9,7 +9,20 @@
 	});
 	var sizes = $("#grid-sizes item-description");
 
-	$(document).ready(function () {	
+	function setItemHeight(ele) {
+		var description = $(ele).find("item-description")[0];
+		var heightCount = 0;
+		while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+			heightCount++;
+		}
+		heightCount = Math.min(heightCount, heights.length - 1);
+
+		$(ele).addClass(heights[heightCount]);
+		if (description.scrollHeight > description.clientHeight)
+			$(ele).addClass("show-more");
+	}
+
+	$(document).ready(function () {
 		$("#main magic-item").each(setItemHeight(this));
 
 		var $grid = $('section#main').masonry({
@@ -34,19 +47,6 @@
 		  items.each(setItemHeight(this));
 		});
 	});
-
-	function setItemHeight(ele) {
-		var description = $(ele).find("item-description")[0];
-		var heightCount = 0;
-		while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
-			heightCount++;
-		}
-		heightCount = Math.min(heightCount, heights.length - 1);
-
-		$(ele).addClass(heights[heightCount]);
-		if (description.scrollHeight > description.clientHeight)
-			$(ele).addClass("show-more");
-	}
 
 	//for arguments given in the URL
 	var urlParams;
