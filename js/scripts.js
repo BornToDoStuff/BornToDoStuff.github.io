@@ -12,6 +12,10 @@
 /* lunr.min.js */
 /* ==================== */
 {% include /js/lunr.min.js %}
+/* ==================== */
+/* masonry.pkgd.min.js */
+/* ==================== */
+{% include /js/lunr.min.js %}
 {% comment %}
 /* ==================== */
 /* custom-elements.js */
