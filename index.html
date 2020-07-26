@@ -3,20 +3,24 @@ layout: home
 ---
 {% for post in paginator.posts %}
   <magic-item id="{{ post.item_id }}" class="{{ post.item_rarity | slugify }}{% if post.item_attunement %} attunement{% endif %}">
-    <div class="contents">
-      <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
-      <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
-      <item-description>
-    		{{ post.content }}
-    	</item-description>
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-				<div class="expander">
-					<span class="dot"></span><span class="dot"></span><span class="dot"></span>
-				</div>
-			</a>
-    </div>
-    <item-extras aria-hidden="true">
-			<div class="rarity"><img src="/images/rarities.png" title="{{ post.item_rarity | downcase }}" /></div>
-		</item-extras>
+    <item-head>
+      <item-title>
+        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+        <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
+      </item-title>
+      <item-extras aria-hidden="true">
+  			<div class="rarity"><img src="/images/rarities.png" title="{{ post.item_rarity | downcase }}" /></div>
+  		</item-extras>
+    </item-head>
+    
+    <item-description>
+  		{{ post.content }}
+  	</item-description>
+
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+			<div class="expander">
+				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+			</div>
+		</a>
   </magic-item>
 {% endfor %}

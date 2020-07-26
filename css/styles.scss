@@ -39,10 +39,10 @@ hr {
 	border-top: 1px solid $transp_lightGray;
 }
 
-h1, h2, h3, h4, item-name, item-tagline {
+h1, h2, h3, h4, item-title, item-tagline {
 	text-align: left;
 }
-h1, item-name {
+h1, item-title a{
 	color: $bluakDark;
 	font-family: 'ZCOOL XiaoWei', serif;
 }
@@ -167,11 +167,17 @@ item-description {
 	overflow: hidden;
 }
 
-item-name {
-	display: block;
-	font-size: 3rem;
-	line-height: 3.1rem;
+item-head {
+	display: flex;
 }
+item-title {
+	flex: 1 1;
+}
+	item-title a {
+		display: block;
+		font-size: 3rem;
+		line-height: 3.1rem;
+	}
 
 item-tagline {
 	display: block;
@@ -184,11 +190,8 @@ magic-item a {
 }
 
 item-extras {
-	display: flex;
-	flex: 0 0 auto;
-	flex-direction: column;
-	padding-left: 10px;
-	transition: width 0.5s;
+	flex: 0 0 50px;
+	height: 50px;
 	overflow: hidden;
 	-webkit-user-select: none;
 	-moz-user-select: none;
