@@ -1,4 +1,4 @@
-<meta charset="utf-8" />
+﻿<meta charset="utf-8" />
 <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta http-equiv="Content-Language" content="en">
@@ -19,12 +19,41 @@
 <meta name="theme-color" content="#ffffff">
 
 <!-- SEO and og tags -->
+{% if page.item_rarity %}
+<meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/favicon-96x96.png" />
+<meta property="og:image:width" content="96" />
+<meta property="og:image:height" content="96" />
+
+<meta property="twitter:description" content="{{ page.category }}, {{ page.item_rarity | downcase }} {% if page.item_attunement %}(requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){% endif %}">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="/favicon-96x96.png">
+{% else %}
 {% if page.excerpt %}
 <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
-<meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 150 }}" />
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/favicon-96x96.png" />
+<meta property="og:image:width" content="96" />
+<meta property="og:image:height" content="96" />
+
+<meta property="twitter:description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="/favicon-96x96.png">
 {% else %}
 <meta name="description" content="{{ site.description }}">
 <meta property="og:description" content="{{ site.description }}" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="/favicon-96x96.png" />
+<meta property="og:image:width" content="96" />
+<meta property="og:image:height" content="96" />
+
+<meta property="twitter:description" content="{{ site.description }}">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:image" content="/favicon-96x96.png">
+{% endif %}
 {% endif %}
 
 {% if page.title %}
@@ -33,10 +62,8 @@
 {% endif %}
 
 <meta property="og:url" content="https://items.borntodostuff.com{{ page.url }}" />
-<meta property="og:image" content="/favicon-96x96.png" />
-<meta property="og:image:width" content="96" />
-<meta property="og:image:height" content="96" />
-<meta property="og:type" content="article" />
+<meta property="twitter:url" content="https://items.borntodostuff.com{{ page.url }}">
+
 <meta name="author" content="BornToDoStuff" />
 <meta property="article:author" content="BornToDoStuff" />
 {% if page.date %}

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}</title>
+	  <title>
+	  	{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }}
+	  </title>
 
     {% include meta.html %}
     {% include analytics.html %}
@@ -9,6 +11,7 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+<<<<<<< HEAD
     <!--[if lt IE 9]>
 	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
@@ -54,6 +57,11 @@
 			});
 		});
 	</script>
+=======
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+  	<link rel="canonical" href="https://items.borntodostuff.com{{ page.url }}">
+>>>>>>> refs/remotes/origin/master
   </head>
   <body>
     {% include navigation.html %}
@@ -78,7 +86,7 @@
 
       <div id="navigation-fixed">
         <a id="return-to-top" href="#TippyTop">
-          <img alt="white chevron" src="{{ site.baseurl }}/images/icons/chevron-up-white.svg" />
+          <img alt="white chevron" src="{{ site.baseurl }}/images/icons/chevron-up.svg" />
         </a>
       </div>
     </div>
