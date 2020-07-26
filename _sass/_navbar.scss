@@ -1,107 +1,64 @@
 #navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+  height: 60px;
   background: $backgroundLight;
-  z-index: 1000;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  position: fixed;
+	z-index: 1000;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	line-height: 60px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.2);
   border-bottom: 2px solid $bluakMedium;
-  line-height: 50px;
-
 }
 #navbar-header {
-  width: 100%;
-
-  @include desktop{
-    width: 25%;
-    max-width: 200px;
-    float: left;
-  }
+	color: black;
+	font-size: 2rem;
+	float: left;
+	position: relative;
 }
-#navbar-brand {
-  display: block;
-  height: 100%;
-	color: $bluakDark;
-	font-size: 1.8rem;
-}
-
 #navbar-content {
-  // @include mobile {
-  //   width: 100%;
-  //   position: absolute;
-  //   left: 0px;
-  // }
-
-  @include desktop{
-    width: 75%;
-    float: left;
-  }
+	margin-left: 25px;
+	display: block;
+	float: left;
+	position: relative;
 }
 
+#navbar ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
 #navbar li {
-  position: relative;
-  background: $backgroundLight;
+	position: relative;
 }
 
-#navbar #navbar-content > ul {
-  height: 50px;
-  padding: 0px;
-  list-style: none;
+	#navbar li ul {
+		position: absolute;
+		top: 50px;
+		left:0px;
+		width: 100%;
+		max-height: 0px;
+		overflow: hidden;
+	}
 
-  @include mobile {
-    border-bottom: 2px solid $bluakMedium;
-  }
+#navbar li:hover .dropdown ul {
+	max-height:500px;
 }
-#navbar #navbar-content > ul > li {
-  float: left;
 
-  @include desktop { border-left: 1px solid $lightGray; }
-  &:last-child {
-    @include desktop { border-right: 1px solid $lightGray; }
-  }
+#navbar-content > ul > li {
+	float: left;
+}
 
-  a {
-    display: block;
-    height: 100%;
-    width: 100%;
-    padding: 0px 20px;
-    transition: background 0.2s ease;
-  }
+.dropdown ul {
+	width: 100%;
+	overflow: hidden;
+}
+.dropdown li {
+	background: $backgroundLight;
+	line-height: 50px;
 }
 
 #navbar-content li:hover > a.dropdown-toggle, #navbar-content li > a:hover { background: $transp_lightBlue; }
-
-#navbar li ul {
-  display: block;
-  max-height: 0px;
-  overflow: hidden;
-  position: absolute;
-  top: 50px;
-  width: 100%;
-  padding: 0px;
-  list-style: none;
-  box-shadow: $boxshadow;
-  z-index: -1;
-  border: 0;
-  border-bottom: 2px solid $bluakMedium;
-  transition: max-height 0.3s ease;
-  transition-delay: 0.05s;
-
-  @include mobile {
-    border: 0px;
-    border-top: 2px solid $transp_lightGray;
-    max-height: initial;
-    // border-bottom: 2px solid $transp_lightGray;
-  }
-}
-li:hover .dropdown ul {
-  @include desktop {
-    max-height: 500% !important;
-    border-left: 1px solid $lightGray !important;
-    border-right: 1px solid $lightGray !important;
-  }
-}
 
 @include mobile {
   #navbar #navbar-content > ul {

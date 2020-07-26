@@ -4,9 +4,9 @@
 @import "reset";
 @import "variables";
 // @import "scrollbar";
-@import "custom-bootstrap";
+// @import "custom-bootstrap";
 @import "navbar";
-@import "loader";
+// @import "loader";
 // @import "modal";
 
 
@@ -38,12 +38,15 @@ hr {
 	border: 0;
 	border-top: 1px solid $transp_lightGray;
 }
-
-h1, h2, h3, h4 {
+h1, item-name {
 	color: $bluakDark;
-	line-height: $normal;
-	margin: 0px;
-	margin-top: 10px;
+	font-family: 'ZCOOL XiaoWei', serif;
+}
+
+h2, h3, h4 {
+	color: $bluakDark;
+	margin: 10px 0px -5px 0px;
+	font-family: 'Roboto',Helvetica,sans-serif;
 }
 
 h1 {
@@ -63,6 +66,11 @@ h4 {
 	color: $gray;
 }
 
+p {
+	margin: 0px;
+	margin-top: 10px;
+}
+
 #{$a-tags} {
 	color: $blue;
 	text-decoration: none;
@@ -79,167 +87,245 @@ h4 {
 	cursor: default !important;
 }
 
-.caret {
-	display: inline-block;
-	width: 0;
-	height: 0;
-	margin-left: 2px;
-	vertical-align: middle;
-	border: 4px solid transparent;
-	border-top-color: $gray;
-	border-bottom: none;
-}
 
 .width-wrapper {
-	display: block;
-	position: relative;
-	max-width: 1400px;
+	max-width: 3000px;
+	padding: 0px 50px;
 	margin: 0px auto;
-	padding: 0px 20px;
-
-	@include medium {
-		padding: 0px 12%;
-	}
-
-	@include large {
-		padding-left: 80px;
-	}
-
-	@include xlarge {
-		padding: 0px 80px;
-	}
 }
 
-body > .width-wrapper {
-	margin-top: 75px;
+section#main {
+	margin: 0px auto;
 }
-
-.width-wrapper.center {
-	padding: 0px 20px;
-
-	@include medium {
-		padding: 0px 12%;
-	}
-
-	@include large-up {
-		padding: 0px 80px;
-	}
-}
-
-#main-wrapper {
-	display: block;
+magic-item {
+	display: flex;
+	background: url(subtle_grunge_white.jpg) white;
+	margin-bottom: 15px;
+	padding: 20px 25px;
+	width: 550px;
+	height: 335px;
+	box-sizing: border-box;
+	text-align: justify;
 	position: relative;
-	float: left;
-	width: 100%;
-
-	@include large-up {
-		width: 75%;
-	}
+	border-radius: 4px;
+	border: 2px solid #40434e;
+	border-left: none;
+	border-right: none;
 }
 
-#main {
-	@include large-up {
-		margin-right: 20px;
+	magic-item.tall {
+		height: 510px;
 	}
+	magic-item.taller {
+		height:685px;
+	}
+	magic-item.tallest {
+		height: 860px;
+	}
+
+	magic-item .contents {
+		display: flex;
+		flex-direction: column;
+	}
+
+item-description {
+	overflow: hidden;
 }
 
-#sidebar {
+item-name {
 	display: block;
-	position: relative;
-	float: right;
-	width: 100%;
-	margin-bottom: 20px;
-
-	@include mobile {
-		margin-bottom: 80px;
-	}
-	@include large-up {
-		width: 25%;
-	}
-
-	#recent-posts {
-		a {
-			display: block;
-		}
-	}
+	font-size: 2.8rem;
+	line-height: 3rem;
 }
+
+item-tagline {
+	display: block;
+	color: gray;
+}
+
+magic-item a {
+	text-decoration: none;
+	color: darkslategray;
+}
+
+item-extras {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	padding-left: 10px;
+	width: 50px;
+	transition: width 0.5s;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+	item-extras > div {
+		width: 50px;
+		height: 50px;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 15px;
+	}
+
+.rarity img {
+	height: 150px;
+	width: 350px;
+	position: absolute;
+}
+
+magic-item.common .rarity img {
+	left: 0px;
+	top: 0px;
+}
+
+magic-item.common.attunement .rarity img {
+	left: 0px;
+	top: -100px;
+}
+
+magic-item.uncommon .rarity img {
+	left: -50px;
+	top: 0px;
+}
+
+magic-item.uncommon.attunement .rarity img {
+	left: -50px;
+	top: -100px;
+}
+
+magic-item.rare .rarity img {
+	left: -100px;
+	top: 0px;
+}
+
+magic-item.rare.attunement .rarity img {
+	left: -100px;
+	top: -100px;
+}
+
+magic-item.very-rare .rarity img {
+	left: -150px;
+	top: 0px;
+}
+
+magic-item.very-rare.attunement .rarity img {
+	left: -150px;
+	top: -100px;
+}
+
+magic-item.legendary .rarity img {
+	left: -250px;
+	top: 0px;
+}
+
+magic-item.legendary.attunement .rarity img {
+	left: -250px;
+	top: -100px;
+}
+
+magic-item.artifact .rarity img {
+	left: -300px;
+	top: 0px;
+}
+
+magic-item.artifact.attunement .rarity img {
+	left: -300px;
+	top: -100px;
+}
+
+/*=============== START read-more ===============*/
+
+a.read-more {
+	background: url(subtle_grunge_white.jpg) white;
+	position: absolute;
+	bottom: 0px;
+	width: 500px;
+	box-sizing: border-box;
+	padding: 10px;
+	z-index: 100;
+}
+
+	a.read-more::before {
+		content: "";
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		height: 40px;
+		width: 100%;
+		background: linear-gradient(rgba(0,0,0,0), #fff);
+		box-shadow: 0px -8px 10px -7px rgba(0,0,0,0.5) inset;
+	}
+
+	a.read-more:hover .dot {
+		background: rgba(31,76,121,.4);
+	}
+
+.read-more .expander {
+	text-align: center;
+}
+
+span.dot {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	background: rgba(31,76,121,.2);
+	transition: background 0.2s;
+	border-radius: 2px;
+	transform: rotate(45deg);
+	margin: 0px 7px;
+}
+
+.read-more {
+	display: none;
+}
+.show-more .read-more {
+	display: block;
+}
+
+/*=============== END read-more ===============*/
 
 #navigation-fixed {
-	max-width: 1400px;
 	display: block;
 	position: fixed;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	margin: 0px auto;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
 	z-index: 1000;
-
-	@include small {
-		left: 20px;
-		right: 20px;
-	}
-
-	@include medium {
-		padding: 0px 12%;
-	}
-
-	@include large-up {
-		padding: 0px 80px;
-	}
 }
+
+	#navigation-fixed img {
+		position: absolute;
+		bottom: 5px;
+		right: 5px;
+		transform: rotate(-45deg);
+		width: 50px;
+		height: 50px;
+	}
 
 #return-to-top {
 	position: absolute;
-	bottom: 20px;
-	background: rgba(0, 0, 0, 0.5);
-	width: 50px;
-	height: 50px;
-	border-radius: 50px;
-	padding: 7px 10px;
+	bottom: 25px;
+	right:25px;
+	background: transparent;
+	border: 5px solid black;
+	box-sizing: border-box;
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+	transform: rotate(45deg);
+	/* padding: 5px; */
 	display: block;
 	opacity: 0;
 	text-decoration: none;
-	transition: background 0.2s ease;
-
-	@include small {
-		left: 50%;
-		margin-left: -25px;
-	}
-
-	@include medium {
-		float: right;
-		right: 3%;
-	}
-
-	@include large {
-		float: right;
-		right: 20%;
-	}
-
-	@include xlarge {
-		float: right;
-		right: 24.5%;
-	}
-
-	&:hover {
-		background: rgba(0, 0, 0, 0.7);
-	}
-
-    img {
-        height: 100%;
-        width: 100%;
-    }
+	transition: background .2s ease;
 }
-#navigation-fixed.center {
-		left: 20px;
-		right: 20px;
-		padding: 0px;
-
-		#return-to-top {
-			left: 50%;
-			margin-left: -25px;
-		}
-}
+	#return-to-top:hover {
+		background: black;
+	}
 
 input[type="search"], input[type="text"] {
 	border: none;
@@ -288,7 +374,10 @@ magic-spell {
 	color: $gray;
 }
 
-magic-item, item-details, .page, #sidebar {
+
+/*=============== BEGIN old page styles ===============*/
+
+.page, #sidebar {
 	display: block;
 	padding: 20px 15px;
 	background: $backgroundLight;
@@ -298,11 +387,12 @@ magic-item, item-details, .page, #sidebar {
 	box-shadow: $boxshadow;
 }
 
-magic-item, item-details, .page {
+.page {
 	position: relative;
 	text-align: justify;
 	margin-bottom: 15px;
 	overflow-y: hidden;
+	min-height: 95vh;
 	transition: max-height 0.5s;
 
 	@include large-up {
@@ -311,7 +401,9 @@ magic-item, item-details, .page {
 	@include mobile {
 		text-align: left;
 	}
+}
 
+.post {
 	item-description {
 		line-height: $normal;
 		ul {
@@ -322,130 +414,96 @@ magic-item, item-details, .page {
 			line-height: $compressed;
 		}
 	}
-}
 
-.page {
-	min-height: 95vh;
-}
 
-item-details {
-	text-align: left;
-}
-
-item-details > * {
-	display: inline-block;
-	width: 49%;
-	padding-bottom: 5px;
-	text-align: left;
-	vertical-align: top;
-
-	@include mobile {
-		width: 100%;
-	}
-}
-
-item-name {
-	display: block;
-	font-size: 3.0rem;
-	font-family: inherit;
-	font-weight: 500;
-	line-height: $compressed;
-	color: $bluakDark;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	text-align: left;
-
-	@include mobile {
-		font-size: 2.5rem;
-		max-width: 100%;
-	}
-}
-
-item-tagline {
-	color: $mediumGray;
-	position: relative;
-	top: -4px;
-}
-
-item-tags {
-	padding-top: 10px;
-	display: block;
-}
-item-tags.compact {
-	item-tag a:before {
-		display: none;
-	}
-}
-
-item-tag {
-	display: inline-block;
-	margin-right: 5px;
-	margin-bottom: 5px;
-	border-radius: 4px;
-	transition: background 0.2s ease;
-
-	a {
-		display: block;
-		padding: 3px 6px;
-		border-radius: 4px;
-		border: 1px solid $mediumGray;
+	item-details {
+		text-align: left;
 	}
 
-	a:before {
-		@include desktop {
-			content: "";
-			background-image: url("/images/icons/tag-solid.svg");
-			background-repeat: no-repeat;
-			height: 100%;
-			min-height: 12px;
-			width: 16px;
-			display: inline-block;
+	item-details > * {
+		display: inline-block;
+		width: 49%;
+		padding-bottom: 5px;
+		text-align: left;
+		vertical-align: top;
+
+		@include mobile {
+			width: 100%;
 		}
 	}
 
-	span {
-		color: rgba(0,0,0,0.3);
+	item-name {
+		display: block;
+		font-size: 3.0rem;
+		font-family: inherit;
+		font-weight: 500;
+		line-height: $compressed;
+		color: $bluakDark;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		text-align: left;
+
+		@include mobile {
+			font-size: 2.5rem;
+			max-width: 100%;
+		}
+	}
+
+	item-tagline {
+		color: $mediumGray;
+		position: relative;
+		top: -4px;
+	}
+
+	item-tags {
+		padding-top: 10px;
+		display: block;
+	}
+	item-tags.compact {
+		item-tag a:before {
+			display: none;
+		}
+	}
+
+	item-tag {
+		display: inline-block;
+		margin-right: 5px;
+		margin-bottom: 5px;
+		border-radius: 4px;
+		transition: background 0.2s ease;
+
+		a {
+			display: block;
+			padding: 3px 6px;
+			border-radius: 4px;
+			border: 1px solid $mediumGray;
+		}
+
+		a:before {
+			@include desktop {
+				content: "";
+				background-image: url("/images/icons/tag-solid.svg");
+				background-repeat: no-repeat;
+				height: 100%;
+				min-height: 12px;
+				width: 16px;
+				display: inline-block;
+			}
+		}
+
+		span {
+			color: rgba(0,0,0,0.3);
+		}
+	}
+
+	item-tag:hover {
+		background: $transp_medBlue;
 	}
 }
 
-item-tag:hover {
-	background: $transp_medBlue;
-}
+/*=============== END old page styles ===============*/
 
-.expander {
-    text-align: center;
-    line-height: 0px;
-}
-
-.read-more {
-    display: inline-block;
-    margin-bottom: -25px;
-    margin-top: -10px;
-    padding: 5px 5px 25px 5px;
-    width: 100%;
-
-    p {
-        position: absolute;
-        right: 15px;
-        color: $mediumGray;
-    }
-
-    .dot {
-        display: inline-block;
-        /* float: left; */
-        height: 15px;
-        width: 15px;
-        margin-right: 10px;
-        border-radius: 15px;
-        background: $transp_lightBlue;
-        transition: background 0.2s ease;
-    }
-}
-
-.read-more:hover .dot {
-	background: $transp_medBlue;
-}
 
 .form-control, .btn-default {
 	border: 1px solid $mediumGray;
@@ -454,99 +512,6 @@ item-tag:hover {
 input, button {
 	font-size: 1.6rem;
 	line-height: $normal;
-}
-
-.pull-right {
-	float: right;
-}
-
-.pull-left {
-	float: left;
-}
-
-.pager {
-	padding-left: 0px;
-	list-style: none;
-
-	li {
-		display: inline-block;
-	}
-
-	.next {
-		float: right;
-		text-align: right;
-	}
-
-	.previous {
-		float: left;
-		text-align: left;
-	}
-
-	.circle {
-		position: relative;
-		display: inline-block;
-		height: 50px;
-		width: 50px;
-		border: 2px solid #5c5f6d;
-		border-radius: 50px;
-		text-align: center;
-		vertical-align: middle;
-		background: $backgroundLight;
-		padding: 8px;
-		font-size: 40px;
-		z-index: 10;
-		margin-bottom: 4px;
-		box-shadow: $boxshadow;
-
-		@include mobile {
-			padding-top: 10px;
-		}
-	}
-
-	.top .circle {
-		padding-top: 3px;
-	}
-}
-
-.pager span {
-	position: relative;
-	display: inline-block;
-	background: $backgroundLight;
-	padding: 6px 10px;
-	border-radius: 4px;
-	border-bottom: 2px solid $bluakMedium;
-	box-shadow: $boxshadow;
-
-	@include mobile {
-		display: none;
-	}
-}
-
-.pager .next span {
-	padding-right: 30px;
-	margin-right: -25px;
-}
-
-.pager .previous span {
-	padding-left: 30px;
-	margin-left: -25px;
-}
-
-.pager a .circle:after {
-	content: "";
-	height: 50px;
-	width: 50px;
-	background: $transp_medBlue;
-	position: absolute;
-	top: -2px;
-	left: -2px;
-	border-radius: 50px;
-	opacity: 0;
-	transition: opacity 0.2s ease;
-}
-
-.pager a:hover .circle:after {
-	opacity: 1;
 }
 
 #tags-list {
@@ -598,67 +563,6 @@ input, button {
 	text-align: center;
 }
 
-.pagination {
-	display: inline-block;
-	padding-left: 0px;
-
-	.active {
-		background: $blue;
-		color: $white;
-
-		a {
-			color: $white;
-		}
-	}
-}
-
-.pagination > li {
-	display: block;
-	float: left;
-	background: $backgroundLight;
-	border: 2px solid $bluakMedium;
-	border-radius: 50px;
-	height: 50px;
-	width: 50px;
-	margin-left: 3px;
-	margin-right: 3px;
-	font-size: 2rem;
-	vertical-align: middle;
-
-	a {
-		display: block;
-		padding: 12px 5px;
-		border-radius: 50px;
-		transition: background 0.2s ease;
-
-		&:hover {
-			background: $transp_lightBlue;
-		}
-	}
-
-	&:first-child a, &:last-child a {
-		padding: 8px 5px;
-		height: 50px;
-		width: 50px;
-		font-size: 4rem;
-		line-height: 26px;
-	}
-	&:first-child a {
-		margin-left: -3px;
-	}
-}
-
-.pagination > li.extra {
-	@include mobile {
-		display: none;
-	}
-}
-
-.page-navigation {
-	min-height: 50px;
-	margin: 20px 0px;
-	text-align: center;
-}
 
 #mobile-menu-block {
 	position: fixed;

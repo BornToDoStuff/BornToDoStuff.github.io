@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+<div class="post">
 <magic-item>
   <item-name>{{page.title}}</item-name>
   <item-tagline>{{ page.category | downcase }}, {{ page.item_rarity | downcase }} {% if page.item_attunement %}(requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){% endif %}</item-tagline>
@@ -92,3 +93,4 @@ layout: default
     {%- endif %}
   </ul>
 </nav>
+</div>
