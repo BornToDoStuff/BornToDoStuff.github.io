@@ -10,20 +10,7 @@
 		});
 		var sizes = $("#grid-sizes item-description");
 
-		$("#main magic-item").each(function () {
-			var description = $(this).find("item-description")[0];
-			var name = $(this).find("item-name").text();
-			var heightCount = 0;
-			var highEnough = false;
-			while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
-				heightCount++;
-			}
-			heightCount = Math.min(heightCount, heights.length - 1);
-
-			$(this).addClass(heights[heightCount]);
-			if (description.scrollHeight > description.clientHeight)
-				$(this).addClass("show-more");
-		});
+		$("#main magic-item").each(setItemHeight(this));
 
 		var $grid = $('section#main').masonry({
 			columnWidth: 'magic-item',
@@ -34,13 +21,32 @@
 			stagger: 25,
 			absolute: false
 		});
+
 		var masonry = $grid.data('masonry');
 		$grid.infiniteScroll({
 		  path: function() { return '/page/' + (this.pageIndex + 1);},
 		  append: 'magic-item',
-		  outlayer: masonry,
+			scrollThreshold: 600,
+		  outlayer: masonry
+		});
+
+		$grid.on('append.infiniteScroll', function( event, response, path, items ) {
+		  items.each(setItemHeight(this));
 		});
 	});
+
+	function setItemHeight(ele) {
+		var description = $(ele).find("item-description")[0];
+		var heightCount = 0;
+		while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+			heightCount++;
+		}
+		heightCount = Math.min(heightCount, heights.length - 1);
+
+		$(ele).addClass(heights[heightCount]);
+		if (description.scrollHeight > description.clientHeight)
+			$(ele).addClass("show-more");
+	}
 
 	//for arguments given in the URL
 	var urlParams;
