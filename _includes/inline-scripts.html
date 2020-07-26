@@ -36,7 +36,7 @@
 		});
 		var masonry = $grid.data('masonry');
 		$grid.infiniteScroll({
-		  path: '/page/' + (this.pageIndex + 1),
+		  path: function() { return '/page/' + (this.pageIndex + 1);},
 		  append: 'magic-item',
 		  outlayer: masonry,
 		});

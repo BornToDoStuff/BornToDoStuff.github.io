@@ -89,16 +89,16 @@ p {
 .width-wrapper {
 	display: block;
 	position: relative;
-	max-width: 1400px;
+	max-width: 3000px;
 	margin: 0px auto;
 	padding: 0px 20px;
 
 	@include medium {
-		padding: 0px 12%;
+		padding: 0px 50px;
 	}
 
 	@include large {
-		padding-left: 50px;
+		padding: 0px 50px;
 	}
 
 	@include xlarge {
@@ -122,10 +122,12 @@ section#main {
 }
 magic-item {
 	display: flex;
-	background: url(subtle_grunge_white.jpg) white;
+	background: $backgroundLight;
 	margin-bottom: 15px;
 	padding: 20px 25px;
 	width: 550px;
+	max-width: 90vw;
+	max-width: calc(100vw - 50px);
 	height: 335px;
 	box-sizing: border-box;
 	text-align: justify;
@@ -261,10 +263,12 @@ magic-item.artifact.attunement .rarity img {
 /*=============== START read-more ===============*/
 
 a.read-more {
-	background: url(subtle_grunge_white.jpg) white;
+	background: $backgroundLight;
 	position: absolute;
 	bottom: 0px;
 	width: 500px;
+	max-width: 90%;
+  max-width: calc(100% - 50px);
 	box-sizing: border-box;
 	padding: 10px;
 	z-index: 100;

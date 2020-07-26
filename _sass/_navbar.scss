@@ -45,7 +45,7 @@
 
 	#navbar li ul {
 		position: absolute;
-		top: 50px;
+		top: 58px;
 		left:0px;
 		width: 100%;
 		max-height: 0px;
@@ -77,6 +77,8 @@
     position: absolute;
     left: 0;
     right: 0;
+    background: $backgroundLight;
+    border-bottom: 2px solid $bluakMedium;
 
     & > li {
       width: 100%;
@@ -98,16 +100,17 @@
 }
 
 #navbar-toggle {
-	position: absolute;
+  position: absolute;
   top: 0px;
   right: 0px;
-  padding: 12px 10px!important;
-  margin: 10px 20px;
+  padding: 8px 4px!important;
+  margin: 12px 26px;
   background: transparent;
-  border: 1px solid $transp_lightGray;
-  border-radius: 40px;
-	cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 2px;
+  cursor: pointer;
   z-index: 10;
+  transform: rotate(45deg);
 
 	@include desktop{
 		display:none!important;
@@ -118,13 +121,23 @@
 		background-color: $transp_lightBlue;
 	}
 
+  .icon-wrapper {
+      transform: rotate(-45deg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
 	.icon-bar {
-		display: block;
-    width: 18px;
+    display: block;
+    width: 22px;
     height: 2px;
     border-radius: 1px;
-    background-color: $gray;
-		margin-bottom: 4px;
+    background-color: #666;
+    margin-bottom: 4px;
+	}
+  .icon-bar:first-child,.icon-bar:last-child{
+		margin-bottom: width: 12px;
 	}
 	.icon-bar:last-child{
 		margin-bottom: 0px;
