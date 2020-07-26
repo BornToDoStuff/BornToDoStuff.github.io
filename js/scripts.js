@@ -15,7 +15,7 @@
 /* ==================== */
 /* masonry.pkgd.min.js */
 /* ==================== */
-{% include /js/lunr.min.js %}
+{% include /js/masonry.pkgd.min.js %}
 {% comment %}
 /* ==================== */
 /* custom-elements.js */

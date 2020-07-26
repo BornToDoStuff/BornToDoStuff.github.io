@@ -3,7 +3,7 @@
 }
 
 body {
-	background: url("hatching_light.png") #778192;
+	background: #778192 url("/images/hatching_light.png");
 	font-family: 'Roboto',Helvetica,sans-serif;
 	line-height: 1.4em;
 	font-size: 1.6rem;
