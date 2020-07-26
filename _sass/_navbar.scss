@@ -10,6 +10,13 @@
 	box-shadow: 1px 1px 3px rgba(0,0,0,.2);
   border-bottom: 2px solid $bluakMedium;
 }
+  #navbar a {
+    text-decoration: none;
+    color: $bluakDark;
+    display: block;
+    padding: 0px 15px;
+  }
+
 #navbar-header {
 	color: black;
 	font-size: 2rem;

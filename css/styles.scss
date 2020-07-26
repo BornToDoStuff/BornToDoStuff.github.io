@@ -412,102 +412,61 @@ magic-spell {
 }
 
 .post {
-	item-description {
-		line-height: $normal;
-		ul {
-			margin: 10px 0px;
-		}
-
-		@include mobile {
-			line-height: $compressed;
-		}
+	magic-item {
+		display: initial;
+		width: auto;
 	}
+}
 
+item-tagline {
+	color: $mediumGray;
+	position: relative;
+	top: -4px;
+}
 
-	item-details {
-		text-align: left;
+item-tags {
+	padding-top: 10px;
+	display: block;
+}
+item-tags.compact {
+	item-tag a:before {
+		display: none;
 	}
+}
 
-	item-details > * {
-		display: inline-block;
-		width: 49%;
-		padding-bottom: 5px;
-		text-align: left;
-		vertical-align: top;
+item-tag {
+	display: inline-block;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	border-radius: 4px;
+	transition: background 0.2s ease;
 
-		@include mobile {
-			width: 100%;
-		}
-	}
-
-	item-name {
+	a {
 		display: block;
-		font-size: 3.0rem;
-		font-family: inherit;
-		font-weight: 500;
-		line-height: $compressed;
-		color: $bluakDark;
-		overflow: hidden;
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		text-align: left;
-
-		@include mobile {
-			font-size: 2.5rem;
-			max-width: 100%;
-		}
-	}
-
-	item-tagline {
-		color: $mediumGray;
-		position: relative;
-		top: -4px;
-	}
-
-	item-tags {
-		padding-top: 10px;
-		display: block;
-	}
-	item-tags.compact {
-		item-tag a:before {
-			display: none;
-		}
-	}
-
-	item-tag {
-		display: inline-block;
-		margin-right: 5px;
-		margin-bottom: 5px;
+		padding: 3px 6px;
 		border-radius: 4px;
-		transition: background 0.2s ease;
+		border: 1px solid $mediumGray;
+	}
 
-		a {
-			display: block;
-			padding: 3px 6px;
-			border-radius: 4px;
-			border: 1px solid $mediumGray;
-		}
-
-		a:before {
-			@include desktop {
-				content: "";
-				background-image: url("/images/icons/tag-solid.svg");
-				background-repeat: no-repeat;
-				height: 100%;
-				min-height: 12px;
-				width: 16px;
-				display: inline-block;
-			}
-		}
-
-		span {
-			color: rgba(0,0,0,0.3);
+	a:before {
+		@include desktop {
+			content: "";
+			background-image: url("/images/icons/tag-solid.svg");
+			background-repeat: no-repeat;
+			height: 100%;
+			min-height: 12px;
+			width: 16px;
+			display: inline-block;
 		}
 	}
 
-	item-tag:hover {
-		background: $transp_medBlue;
+	span {
+		color: rgba(0,0,0,0.3);
 	}
+}
+
+item-tag:hover {
+	background: $transp_medBlue;
 }
 
 /*=============== END old page styles ===============*/
