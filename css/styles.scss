@@ -159,13 +159,9 @@ magic-item {
 		height: 860px;
 	}
 
-	magic-item .contents {
-		display: flex;
-		flex-direction: column;
-	}
-
 item-description {
 	overflow: hidden;
+	height: 100%; //hack to fix item height sizing
 }
 
 item-head {
