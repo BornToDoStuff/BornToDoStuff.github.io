@@ -131,7 +131,8 @@ section#main {
 	margin: 0px auto;
 }
 magic-item {
-	display: block;
+	display: flex;
+  flex-direction: column;
 	background: $backgroundLight;
 	margin-bottom: 15px;
 	padding: 20px 25px;
