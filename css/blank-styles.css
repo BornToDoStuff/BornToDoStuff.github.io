@@ -1,0 +1,398 @@
+﻿html {
+	font-size: 62.5%;
+}
+
+body {
+	background: url("hatching_light.png") #778192;
+	font-family: 'Roboto',Helvetica,sans-serif;
+	line-height: 1.4em;
+	font-size: 1.6rem;
+	margin: 0px;
+}
+
+h1, item-name {
+	color: #40434e;
+	/*font-family: 'Amethysta', serif;*/
+	font-family: 'ZCOOL XiaoWei', serif;
+}
+h2, h3, h4 {
+	color: #40434e;
+	margin: 10px 0px -5px 0px;
+	font-family: 'Roboto',Helvetica,sans-serif;
+}
+
+.width-wrapper {
+	max-width: 3000px;
+	padding: 0px 50px;
+	margin: 0px auto;
+}
+
+#navbar {
+	height: 60px;
+	background: url(subtle_grunge_white.jpg) white;
+	position: fixed;
+	z-index: 1000;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	line-height: 60px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+	border-bottom: 2px solid #40434e;
+}
+
+	#navbar a {
+		text-decoration: none;
+		color: #40434e;
+		display: block;
+		padding: 0px 15px;
+	}
+
+#navbar-header {
+	color: black;
+	font-size: 2rem;
+	float: left;
+	position: relative;
+}
+#navbar-content {
+	margin-left: 25px;
+	display: block;
+	float: left;
+	position: relative;
+}
+
+#navbar ul {
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+}
+#navbar li {
+	position: relative;
+}
+
+	#navbar li ul {
+		position: absolute;
+		top: 50px;
+		left:0px;
+		width: 100%;
+		max-height: 0px;
+		overflow: hidden;
+	}
+
+#navbar li:hover .dropdown ul {
+	max-height:500px;
+}
+
+#navbar-content > ul > li {
+	float: left;
+}
+
+.dropdown ul {
+	width: 100%;
+	overflow: hidden;
+}
+.dropdown li {
+	background: url(subtle_grunge_white.jpg) white;
+	line-height: 50px;
+}
+
+a#TippyTop {
+	display: block;
+	margin-top: 80px;
+}
+
+#grid-sizes {
+	position: absolute;
+	visibility: hidden;
+	z-index: -999999;
+}
+
+section#main {
+	margin: 0px auto;
+}
+
+magic-item {
+	display: flex;
+	background: url(subtle_grunge_white.jpg) white;
+	margin-bottom: 15px;
+	padding: 20px 25px;
+	width: 550px;
+	height: 335px;
+	box-sizing: border-box;
+	text-align: justify;
+	position: relative;
+	border-radius: 4px;
+	border: 2px solid #40434e;
+	border-left: none;
+	border-right: none;
+}
+
+	magic-item.tall {
+		height: 510px;
+	}
+	magic-item.taller {
+		height:685px;
+	}
+	magic-item.tallest {
+		height: 860px;
+	}
+
+	magic-item .contents {
+		display: flex;
+		flex-direction: column;
+	}
+
+item-description {
+	overflow: hidden;
+}
+/*item-description::before {
+		content: "";
+		position: absolute;
+		top: 310px;
+		left: 0;
+		height: 40px;
+		width: 100%;
+		background: linear-gradient(rgba(0,0,0,0), #fff);
+	}*/
+
+item-name {
+	display: block;
+	font-size: 2.8rem;
+	line-height: 3rem;
+}
+
+item-tagline {
+	display: block;
+	color: gray;
+}
+
+magic-item a {
+	text-decoration: none;
+	color: darkslategray;
+}
+
+item-extras {
+	display: flex;
+	flex: 0 0 auto;
+	flex-direction: column;
+	padding-left: 10px;
+	width: 50px;
+	transition: width 0.5s;
+	overflow: hidden;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+	item-extras > div {
+		width: 50px;
+		height: 50px;
+		overflow: hidden;
+		position: relative;
+		margin-bottom: 15px;
+	}
+
+.rarity img {
+	height: 150px;
+	width: 350px;
+	position: absolute;
+}
+
+magic-item.common .rarity img {
+	left: 0px;
+	top: 0px;
+}
+
+magic-item.common.attunement .rarity img {
+	left: 0px;
+	top: -100px;
+}
+
+magic-item.uncommon .rarity img {
+	left: -50px;
+	top: 0px;
+}
+
+magic-item.uncommon.attunement .rarity img {
+	left: -50px;
+	top: -100px;
+}
+
+magic-item.rare .rarity img {
+	left: -100px;
+	top: 0px;
+}
+
+magic-item.rare.attunement .rarity img {
+	left: -100px;
+	top: -100px;
+}
+
+magic-item.very-rare .rarity img {
+	left: -150px;
+	top: 0px;
+}
+
+magic-item.very-rare.attunement .rarity img {
+	left: -150px;
+	top: -100px;
+}
+
+magic-item.legendary .rarity img {
+	left: -250px;
+	top: 0px;
+}
+
+magic-item.legendary.attunement .rarity img {
+	left: -250px;
+	top: -100px;
+}
+
+magic-item.artifact .rarity img {
+	left: -300px;
+	top: 0px;
+}
+
+magic-item.artifact.attunement .rarity img {
+	left: -300px;
+	top: -100px;
+}
+
+/*magic-item.attunement .rarity::after {
+	content: "";
+	display: block;
+	background-color: #40434e;
+	height: 10px;
+	width: 10px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	transform: rotate(45deg);
+	transform-origin: 5px 5px;
+}*/
+
+p {
+	margin: 0px;
+	margin-top: 10px;
+}
+
+/*=============== START read-more ===============*/
+
+a.read-more {
+	background: url(subtle_grunge_white.jpg) white;
+	position: absolute;
+	bottom: 0px;
+	width: 500px;
+	box-sizing: border-box;
+	padding: 10px;
+	z-index: 100;
+}
+
+	a.read-more::before {
+		content: "";
+		position: absolute;
+		bottom: 100%;
+		left: 0;
+		height: 40px;
+		width: 100%;
+		background: linear-gradient(rgba(0,0,0,0), #fff);
+		box-shadow: 0px -8px 10px -7px rgba(0,0,0,0.5) inset;
+	}
+
+	a.read-more:hover .dot {
+		background: rgba(31,76,121,.4);
+	}
+
+.read-more .expander {
+	text-align: center;
+}
+
+span.dot {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	background: rgba(31,76,121,.2);
+	transition: background 0.2s;
+	border-radius: 2px;
+	transform: rotate(45deg);
+	margin: 0px 7px;
+}
+
+.read-more {
+	display: none;
+}
+.show-more .read-more {
+	display: block;
+}
+
+/*=============== END read-more ===============*/
+
+#navigation-fixed {
+	display: block;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	z-index: 1000;
+}
+
+#return-to-top {
+	position: absolute;
+	bottom: 25px;
+	right:25px;
+	background: transparent;
+	border: 5px solid black;
+	box-sizing: border-box;
+	width: 30px;
+	height: 30px;
+	border-radius: 4px;
+	transform: rotate(45deg);
+	/* padding: 5px; */
+	display: block;
+	opacity: 0;
+	text-decoration: none;
+	transition: background .2s ease;
+}
+	#return-to-top:hover {
+		background: black;
+	}
+#navigation-fixed img {
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	transform: rotate(-45deg);
+	width: 50px;
+	height: 50px;
+}
+
+/*=============== START table display ===============*/
+
+.table magic-item {
+	display: block;
+	margin-bottom: 0px;
+	padding: 10px 20px;
+	height: fit-content;
+	border: 1px solid #40434e;
+	border-radius: 0px;
+	width: 100%;
+}
+	.table magic-item .contents {
+		flex-direction: column;
+	}
+.table item-description {
+	display: none;
+}
+
+.table item-extras {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	width: fit-content;
+	flex-direction: row;
+}
+.table .show-more {
+	display: none;
+}
+
+/*=============== END table display ===============*/

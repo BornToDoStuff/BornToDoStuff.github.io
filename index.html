@@ -2,21 +2,26 @@
 layout: default
 ---
 {% for post in paginator.posts %}
-  <magic-item id="{{ post.item_id }}">
-    <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
-    <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
-	<item-description>
-		{%- assign content_excerpt = post.excerpt | truncatewords: 150 -%}
-		{{ content_excerpt }}
-		{% if content_excerpt != post.content-%}
-		</p>
-		<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
-			<div class="expander">
-				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
-			</div>
-		</a>
-		{%- endif -%}
-	</item-description>
+  <magic-item id="{{ post.item_id }}" class="{{ post.item_rarity | downcase }}">
+    <div class="contents">
+      <a href="{{ site.baseurl }}{{ post.url }}"><item-name>{{ post.title }}</item-name></a>
+      <item-tagline>{{ post.category | downcase }}, {{ post.item_rarity | downcase }} {% if post.item_attunement %}(requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
+      <item-description>
+    		{%- assign content_excerpt = post.excerpt | truncatewords: 150 -%}
+    		{{ content_excerpt }}
+    		{% if content_excerpt != post.content-%}
+    		</p>
+    		<a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+    			<div class="expander">
+    				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    			</div>
+    		</a>
+    		{%- endif -%}
+    	</item-description>
+    </div>
+    <item-extras aria-hidden="true">
+			<div class="rarity"><img src="images/rarities.png" title="{{ post.item_rarity | downcase }}" /></div>
+		</item-extras>
   </magic-item>
 {% endfor %}
 

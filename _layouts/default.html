@@ -9,18 +9,63 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/styles.css" />
+    <!--[if lt IE 9]>
+	  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<!--<link href="https://fonts.googleapis.com/css?family=Amethysta" rel="stylesheet">-->
+	<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="blank-styles.css" />
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="masonry.pkgd.min.js"></script>
+	<!--<script src="scripts/bricks.js"></script>-->
+	<script>
+		$(document).ready(function () {
+			var heights = ["","tall", "taller", "tallest"];
+
+			heights.forEach(function (e, i) {
+				$("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
+			});
+			var sizes = $("#grid-sizes item-description");
+
+			$("#main magic-item").each(function () {
+				var description = $(this).find("item-description")[0];
+				var name = $(this).find("item-name").text();
+				var heightCount = 0;
+				var highEnough = false;
+				while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+					heightCount++;
+				}
+				heightCount = Math.min(heightCount, heights.length - 1);
+
+				$(this).addClass(heights[heightCount]);
+				if (description.scrollHeight > description.clientHeight)
+					$(this).addClass("show-more");
+			});
+
+			$('section#main').masonry({
+				columnWidth: 'magic-item',
+				itemSelector: 'magic-item',
+				fitWidth: true,
+				horizontalOrder: true,
+				gutter: 15,
+				stagger: 25,
+				absolute: false
+			});
+		});
+	</script>
   </head>
   <body>
     {% include navigation.html %}
     <a id="TippyTop"></a>
     <div class="width-wrapper">
       <div id="main-wrapper">
+        <div id="grid-sizes"></div> <!-- hidden div to create children in. Small hack to determine sizes without affecting display. -->
         <section id="main" role="main">
             {{ content }}
         </section>
       </div>
-      <section id="sidebar">
+      <!-- <section id="sidebar">
         {% unless page.nosearch %}
           {% include search-form.html %}
         {% endunless -%}
@@ -29,7 +74,7 @@
         {%- else -%}
           {% include sidebar.html %}
         {%- endif %}
-      </section>
+      </section> -->
 
       <div id="navigation-fixed">
         <a id="return-to-top" href="#TippyTop">
