@@ -433,9 +433,12 @@ magic-spell {
 
 .post {
 	magic-item {
-		display: initial;
+		display: block;
 		width: auto;
 		height: auto;
+	}
+	item-details {
+		display: none;
 	}
 }
 
@@ -492,6 +495,10 @@ item-tag:hover {
 
 /*=============== END old page styles ===============*/
 
+
+.page-navigation {
+	display: none;
+}
 
 .form-control, .btn-default {
 	border: 1px solid $mediumGray;
