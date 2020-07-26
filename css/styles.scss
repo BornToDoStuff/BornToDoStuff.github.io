@@ -194,6 +194,10 @@ item-extras {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+
+	@include mobile {
+		display: none;
+	}
 }
 
 	item-extras > div {

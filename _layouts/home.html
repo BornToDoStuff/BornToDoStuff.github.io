@@ -44,7 +44,6 @@ layout: default
       while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
         heightCount++;
       }
-      heightCount = Math.min(heightCount, heights.length - 1);
 
       $(ele).addClass(heights[heightCount]);
       if (description.scrollHeight > description.clientHeight)
@@ -68,7 +67,7 @@ layout: default
       $grid.infiniteScroll({
         path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
         append: 'magic-item',
-        scrollThreshold: 1200,
+        scrollThreshold: 1400,
         outlayer: masonry
       });
 
