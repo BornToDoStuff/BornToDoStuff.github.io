@@ -48,6 +48,56 @@
       </div>
     </div>
     <div>
+      <script src="{{ site.baseurl }}/js/scripts.js"></script>
+      <script>
+        // masonry and element sizing
+
+        var heights = ["","tall", "taller", "tallest"];
+        heights.forEach(function (e, i) {
+          $("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
+        });
+        var sizes = $("#grid-sizes item-description");
+
+        function setItemHeight(ele) {
+          var description = $(ele).find("item-description")[0];
+          var heightCount = 0;
+          while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+            heightCount++;
+          }
+          heightCount = Math.min(heightCount, heights.length - 1);
+
+          $(ele).addClass(heights[heightCount]);
+          if (description.scrollHeight > description.clientHeight)
+            $(ele).addClass("show-more");
+        }
+
+        $(document).ready(function () {
+          $("#main magic-item").each(function(){setItemHeight($(this))});
+
+          var $grid = $('section#main').masonry({
+            columnWidth: 'magic-item',
+            itemSelector: 'magic-item',
+            fitWidth: true,
+            horizontalOrder: true,
+            gutter: 15,
+            stagger: 25,
+            absolute: false
+          });
+
+          var masonry = $grid.data('masonry');
+          $grid.infiniteScroll({
+            path: function() { return '/page/' + (this.pageIndex + 1);},
+            append: 'magic-item',
+            scrollThreshold: 1000,
+            outlayer: masonry
+          });
+
+          $grid.on('append.infiniteScroll', function( event, response, path, items ) {
+            $(items).each(function(){setItemHeight($(this))});
+            $grid.masonry('layout');
+          });
+        });
+      </script>
       {% include inline-scripts.html %}
     </div>
   </body>
