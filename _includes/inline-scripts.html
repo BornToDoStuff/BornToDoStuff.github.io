@@ -4,12 +4,12 @@
 	// masonry and element sizing
 
 	var heights = ["","tall", "taller", "tallest"];
-	$(document).ready(function () {
-		heights.forEach(function (e, i) {
-			$("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
-		});
-		var sizes = $("#grid-sizes item-description");
+	heights.forEach(function (e, i) {
+		$("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
+	});
+	var sizes = $("#grid-sizes item-description");
 
+	$(document).ready(function () {	
 		$("#main magic-item").each(setItemHeight(this));
 
 		var $grid = $('section#main').masonry({
