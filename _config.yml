@@ -37,7 +37,7 @@ excerpt_separator: "<!--excerpt-->"
 excerpt_length: 150
 
 permalink: /:title/
-paginate: 10
+paginate: 20
 paginate_path: "/page/:num/"
 
 # The release of Jekyll Now that you're using
