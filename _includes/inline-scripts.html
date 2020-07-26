@@ -44,7 +44,7 @@
 		});
 
 		$grid.on('append.infiniteScroll', function( event, response, path, items ) {
-		  items.each(function(){setItemHeight($(this))});
+		  $(items).each(function(){setItemHeight($(this))});
 		});
 	});
 
