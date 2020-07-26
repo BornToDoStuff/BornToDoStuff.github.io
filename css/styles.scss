@@ -428,6 +428,10 @@ magic-spell {
 	@include mobile {
 		text-align: left;
 	}
+
+	.width-wrapper {
+		max-width: 1400px!important;
+	}
 }
 
 .post {
@@ -435,6 +439,9 @@ magic-spell {
 		display: initial;
 		width: auto;
 		height: auto;
+	}
+	.width-wrapper {
+		max-width: 1400px!important;
 	}
 }
 
