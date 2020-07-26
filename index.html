@@ -18,6 +18,11 @@ layout: default
     		</a>
     		{%- endif -%}
     	</item-description>
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
+				<div class="expander">
+					<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+				</div>
+			</a>
     </div>
     <item-extras aria-hidden="true">
 			<div class="rarity"><img src="/images/rarities.png" title="{{ post.item_rarity | downcase }}" /></div>
