@@ -1,96 +1,132 @@
 ---
 layout: default
 ---
-<div class="post">
-<magic-item>
-  <item-name>{{page.title}}</item-name>
-  <item-tagline>{{ page.category | downcase }}, {{ page.item_rarity | downcase }} {% if page.item_attunement %}(requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){% endif %}</item-tagline>
-  <item-description>
-    {{content}}
-  </item-description>
-  {% assign tags_count = page.tags | size %}
-  {%- if tags_count > 0 -%}
-  <hr />
-  <item-tags>
-    {%- for tag in page.tags -%}
-    <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
-    {%- endfor -%}
-  </item-tags>
-  {%- endif -%}
-</magic-item>
 
-<item-details>
-	<item-type><b>Type:&nbsp;</b><a href="/tags/types/#{{ page.category | slugify }}">{{ page.category }}</a></item-type>
-	{% assign subtypes_count = page.item_subtypes | size %}
-	{%- if subtypes_count > 0 -%}
-	<item-subtypes>
-		<b>Subtypes:&nbsp;</b>
-		{%- for subtype in page.item_subtypes -%}
-		<item-subtype>{{subtype}}</item-subtype>{% unless forloop.last %}, {% endunless %}
-		{%- endfor -%}
-	</item-subtypes>
-	{%- endif -%}
-	<item-rarity><b>Rarity:&nbsp;</b><a href="/tags/rarities/#{{ page.item_rarity | slugify }}">{{ page.item_rarity }}</a></item-rarity>
-	<item-school><b>School:&nbsp;</b>{{ page.item_school }}</item-school>
-	<item-attunement><b>Attunement:&nbsp;</b>{% if page.item_attunement -%}{% if page.item_requirement %}requires attunement {{ page.item_requirement }}{% else %}True{%- endif %}{% else %}False{%- endif %}</item-attunement>
-	<item-classes>
-		<b>Suggested Classes:&nbsp;</b>
-		{%- for class in page.item_classes -%}
-		<item-class>{{class}}</item-class>{% unless forloop.last %}, {% endunless %}
-		{%- endfor -%}
-	</item-classes>
-	<item-role><b>Role:&nbsp;</b>{%- for role in page.item_role -%}{{ role }}{% unless forloop.last %}, {% endunless %}{%- endfor -%}</item-role>
-	{% if page.item_co_creator -%}
-	<item-attribution><b>Co-creator:&nbsp;</b>{{ page.item_co_creator }}</item-attribution>
-	{%- endif %}
-	{% if page.item_idea -%}
-	<item-attribution><b>Item inspiration:&nbsp;</b>{{ page.item_idea | truncatewords: 3, ""}}</item-attribution>
-	{%- endif %}
-	{% comment %}
-	<div>
-		<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
-		<span style="display:none"><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">{{page.title}}</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="{{site.url}}{{page.url}}" property="cc:attributionName" rel="cc:attributionURL">BornToDoStuff</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://items.borntodostuff.com/about/" rel="cc:morePermissions">https://items.borntodostuff.com/about/</a>.</span>
-	</div>
-	{% endcomment %}
-</item-details>
+<div class="width-wrapper">
+  <div id="main-wrapper">
+    <section id="main" role="main">
 
-<nav class="page-navigation" aria-label="page navigation">
-  <ul class="pager">
-    {% if page.previous.url -%}
-      <li class="previous">
-        <a href="{{ page.previous.url }}">
-          <div class="circle">&laquo;</div>
-          <span>{{page.previous.title}}</span>
-        </a>
-      </li>
-    {%- else -%}
-      <li class="previous disabled">
-        <a>
-          <div class="circle">&laquo;</div>
-          <span>No older posts</span>
-        </a>
-      </li>
-    {%- endif -%}
-    <!-- <li class="top">
+      <div class="post">
+        <magic-item>
+          <item-name>{{page.title}}</item-name>
+          <item-tagline>
+
+            {{ page.category | downcase }},
+
+            {{ page.item_rarity | downcase }} {% if page.item_attunement %}(requires attunement{% if page.item_requirement != null %}
+
+            {{ page.item_requirement }}{% endif %}){% endif %}</item-tagline>
+          <item-description>
+            {{content}}
+          </item-description>
+          {% assign tags_count = page.tags | size %}
+          {%- if tags_count > 0 -%}
+          <hr />
+          <item-tags>
+            {%- for tag in page.tags -%}
+            <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></item-tag>
+            {%- endfor -%}
+          </item-tags>
+          {%- endif -%}
+        </magic-item>
+
+        <item-details>
+          <item-type><b>Type:&nbsp;</b><a href="/tags/types/#{{ page.category | slugify }}">
+
+              {{ page.category }}</a></item-type>
+          {% assign subtypes_count = page.item_subtypes | size %}
+          {%- if subtypes_count > 0 -%}
+          <item-subtypes>
+            <b>Subtypes:&nbsp;</b>
+            {%- for subtype in page.item_subtypes -%}
+            <item-subtype>{{subtype}}</item-subtype>{% unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+          </item-subtypes>
+          {%- endif -%}
+          <item-rarity><b>Rarity:&nbsp;</b><a href="/tags/rarities/#{{ page.item_rarity | slugify }}">
+
+              {{ page.item_rarity }}</a></item-rarity>
+          <item-school><b>School:&nbsp;</b>
+
+            {{ page.item_school }}</item-school>
+          <item-attunement><b>Attunement:&nbsp;</b>{% if page.item_attunement -%}{% if page.item_requirement %}requires attunement
+
+            {{ page.item_requirement }}{% else %}True{%- endif %}{% else %}False{%- endif %}</item-attunement>
+          <item-classes>
+            <b>Suggested Classes:&nbsp;</b>
+            {%- for class in page.item_classes -%}
+            <item-class>{{class}}</item-class>{% unless forloop.last %}, {% endunless %}
+            {%- endfor -%}
+          </item-classes>
+          <item-role><b>Role:&nbsp;</b>{%- for role in page.item_role -%}
+
+            {{ role }}{% unless forloop.last %}, {% endunless %}{%- endfor -%}</item-role>
+          {% if page.item_co_creator -%}
+          <item-attribution><b>Co-creator:&nbsp;</b>
+
+            {{ page.item_co_creator }}</item-attribution>
+          {%- endif %}
+          {% if page.item_idea -%}
+          <item-attribution><b>Item inspiration:&nbsp;</b>
+
+            {{ page.item_idea | truncatewords: 3, ""}}</item-attribution>
+          {%- endif %}
+          {% comment %}
+          <div>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/80x15.png" /></a>
+            <span style="display:none"><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">{{page.title}}</span> by <a xmlns:cc="http://creativecommons.org/ns#"
+                href="{{site.url}}{{page.url}}" property="cc:attributionName" rel="cc:attributionURL">BornToDoStuff</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons
+                Attribution-NonCommercial 4.0 International License</a>.<br />Permissions beyond the scope of this license may be available at <a xmlns:cc="http://creativecommons.org/ns#" href="https://items.borntodostuff.com/about/"
+                rel="cc:morePermissions">https://items.borntodostuff.com/about/</a>.</span>
+          </div>
+          {% endcomment %}
+        </item-details>
+
+        <nav class="page-navigation" aria-label="page navigation">
+          <ul class="pager">
+            {% if page.previous.url -%}
+            <li class="previous">
+              <a href="{{ page.previous.url }}">
+                <div class="circle">&laquo;</div>
+                <span>{{page.previous.title}}</span>
+              </a>
+            </li>
+            {%- else -%}
+            <li class="previous disabled">
+              <a>
+                <div class="circle">&laquo;</div>
+                <span>No older posts</span>
+              </a>
+            </li>
+            {%- endif -%}
+            <!-- <li class="top">
       <a href="#TippyTop">
         <div class="circle"><img src="{{site.baseurl}}/images/icons/chevron-up-blue.svg" /></div>
       </a>
     </li> -->
-    {%- if page.next.url -%}
-      <li class="next">
-        <a href="{{ page.next.url }}">
-          <span>{{page.next.title}}</span>
-          <div class="circle">&raquo;</div>
-        </a>
-      </li>
-    {%- else -%}
-      <li class="next disabled">
-        <a>
-          <span>No newer posts</span>
-          <div class="circle">&raquo;</div>
-        </a>
-      </li>
-    {%- endif %}
-  </ul>
-</nav>
+            {%- if page.next.url -%}
+            <li class="next">
+              <a href="{{ page.next.url }}">
+                <span>{{page.next.title}}</span>
+                <div class="circle">&raquo;</div>
+              </a>
+            </li>
+            {%- else -%}
+            <li class="next disabled">
+              <a>
+                <span>No newer posts</span>
+                <div class="circle">&raquo;</div>
+              </a>
+            </li>
+            {%- endif %}
+          </ul>
+        </nav>
+      </div>
+
+    </section>
+  </div>
+</div>
+<div>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
+  {% include inline-scripts.html %}
 </div>

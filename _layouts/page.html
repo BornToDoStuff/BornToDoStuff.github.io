@@ -2,6 +2,25 @@
 layout: default
 ---
 
-<div class="page">
-  {{ content }}
+<a id="TippyTop"></a>
+
+<div class="width-wrapper">
+  <div id="main-wrapper">
+    <section id="main" role="main">
+
+      <div class="page">
+        {{ content }}
+      </div>
+
+    </section>
+  </div>
+  <div id="navigation-fixed">
+    <a id="return-to-top" href="#TippyTop">
+      <img alt="white chevron" src="{{ site.baseurl }}/images/icons/chevron-up.svg" />
+    </a>
+  </div>
+</div>
+<div>
+  <script src="{{ site.baseurl }}/js/scripts.js"></script>
+  {% include inline-scripts.html %}
 </div>

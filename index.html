@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: home
 ---
 {% for post in paginator.posts %}
   <magic-item id="{{ post.item_id }}" class="{{ post.item_rarity | slugify }}{% if post.item_attunement %} attunement{% endif %}">
