@@ -131,7 +131,7 @@ section#main {
 	margin: 0px auto;
 }
 magic-item {
-	display: flex;
+	display: block;
 	background: $backgroundLight;
 	margin-bottom: 15px;
 	padding: 20px 25px;
@@ -186,13 +186,14 @@ item-tagline {
 
 magic-item a {
 	text-decoration: none;
-	color: darkslategray;
+	color: darkslategray!important;
 }
 
 item-extras {
-	flex: 0 0 50px;
-	height: 50px;
-	overflow: hidden;
+	flex: 0 0 auto;
+  height: 50px;
+  padding-left: 10px;
+  overflow: hidden;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
