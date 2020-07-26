@@ -23,7 +23,7 @@
 	}
 
 	$(document).ready(function () {
-		$("#main magic-item").each(setItemHeight(this));
+		$("#main magic-item").each(function(){setItemHeight($(this))});
 
 		var $grid = $('section#main').masonry({
 			columnWidth: 'magic-item',
@@ -44,7 +44,7 @@
 		});
 
 		$grid.on('append.infiniteScroll', function( event, response, path, items ) {
-		  items.each(setItemHeight(this));
+		  items.each(function(){setItemHeight($(this))});
 		});
 	});
 
