@@ -18,43 +18,7 @@
 	<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/blank-styles.css" />
-	<script src="scripts.js"></script>
-	<!--<script src="scripts/bricks.js"></script>-->
-	<script>
-		$(document).ready(function () {
-			var heights = ["","tall", "taller", "tallest"];
 
-			heights.forEach(function (e, i) {
-				$("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
-			});
-			var sizes = $("#grid-sizes item-description");
-
-			$("#main magic-item").each(function () {
-				var description = $(this).find("item-description")[0];
-				var name = $(this).find("item-name").text();
-				var heightCount = 0;
-				var highEnough = false;
-				while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
-					heightCount++;
-				}
-				heightCount = Math.min(heightCount, heights.length - 1);
-
-				$(this).addClass(heights[heightCount]);
-				if (description.scrollHeight > description.clientHeight)
-					$(this).addClass("show-more");
-			});
-
-			$('section#main').masonry({
-				columnWidth: 'magic-item',
-				itemSelector: 'magic-item',
-				fitWidth: true,
-				horizontalOrder: true,
-				gutter: 15,
-				stagger: 25,
-				absolute: false
-			});
-		});
-	</script>
   </head>
   <body>
     {% include navigation.html %}
