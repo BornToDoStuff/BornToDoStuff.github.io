@@ -16,6 +16,12 @@
 /* masonry.pkgd.min.js */
 /* ==================== */
 {% include /js/masonry.pkgd.min.js %}
+
+/* ==================== */
+/* infinite-scroll.pkgd.min.js */
+/* ==================== */
+{% include /js/infinite-scroll.pkgd.min.js %}
+
 {% comment %}
 /* ==================== */
 /* custom-elements.js */

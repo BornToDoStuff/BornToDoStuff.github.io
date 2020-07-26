@@ -25,7 +25,7 @@
 				$(this).addClass("show-more");
 		});
 
-		$('section#main').masonry({
+		var $grid = $('section#main').masonry({
 			columnWidth: 'magic-item',
 			itemSelector: 'magic-item',
 			fitWidth: true,
@@ -33,6 +33,12 @@
 			gutter: 15,
 			stagger: 25,
 			absolute: false
+		});
+		var masonry = $grid.data('masonry');
+		$grid.infiniteScroll({
+		  path: '/page/' + (this.pageIndex + 1),
+		  append: 'magic-item',
+		  outlayer: msnry,
 		});
 	});
 

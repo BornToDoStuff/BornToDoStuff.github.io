@@ -65,6 +65,38 @@
 	line-height: 50px;
 }
 
+#navbar li {
+  position: relative;
+  background: $backgroundLight;
+}
+
+#navbar #navbar-content > ul {
+  height: 50px;
+  padding: 0px;
+  list-style: none;
+
+  @include mobile {
+    border-bottom: 2px solid $bluakMedium;
+  }
+}
+#navbar #navbar-content > ul > li {
+  float: left;
+
+  @include desktop { border-left: 1px solid $lightGray; }
+  &:last-child {
+    @include desktop { border-right: 1px solid $lightGray; }
+  }
+
+  a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding: 0px 20px;
+    transition: background 0.2s ease;
+  }
+}
+
+
 #navbar-content li:hover > a.dropdown-toggle, #navbar-content li > a:hover { background: $transp_lightBlue; }
 
 @include mobile {
@@ -106,7 +138,7 @@
   z-index: 10;
 
 	@include desktop{
-		display:none;
+		display:none!important;
 	}
 
 	&:hover {
