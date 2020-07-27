@@ -297,7 +297,7 @@ a.read-more {
 		height: 40px;
 		width: 100%;
 		background: linear-gradient(rgba(0,0,0,0), #fff);
-		box-shadow: 0px -8px 10px -7px rgba(0,0,0,0.5) inset;
+		// box-shadow: 0px -8px 10px -7px rgba(0,0,0,0.5) inset;
 	}
 
 	a.read-more:hover .dot {
@@ -380,35 +380,6 @@ input[type="search"], input[type="text"] {
 		outline: 0;
 		box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0px 2px 0px $blue;
 	}
-}
-
-#search-form {
-	position: relative;
-	background: $backgroundLight;
-
-	#search {
-		width: 100%;
-		padding-right: 35px;
-	}
-
-	#search-btn {
-		background: url(/images/icons/search.svg) no-repeat;
-		background-position: center;
-		background-size: 23px;
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		border: 0;
-		font-size: 0px;
-		padding: 0px;
-		display: block;
-		height: 35px;
-		width: 35px;
-	}
-}
-
-#search-results {
-	margin-top: 20px;
 }
 
 magic-spell {

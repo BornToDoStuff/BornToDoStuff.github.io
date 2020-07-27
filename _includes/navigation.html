@@ -11,22 +11,11 @@
       </div>
     </a>
     <div id="navbar-content">
-      <ul>
-        <li><a href="{{ site.baseurl }}/items/table/">Items</a></li>
-        <li><a href="{{ site.baseurl }}/about/">About</a></li>
-        <li>
-          <a class="dropdown-toggle">View by Category <span class="caret"></span></a>
-          <div class="dropdown">
-            <ul>
-              <li><a href="{{ site.baseurl }}/tags/types/">Type</a></li>
-              <li><a href="{{ site.baseurl }}/tags/rarities/">Rarity</a></li>
-              <li><a href="{{ site.baseurl }}/tags/">Tags</a></li>
-            </ul>
-          </div>
-        </li>
-        <!-- <li><a href="{{ site.baseurl }}/search">Search</a></li> -->
-      </ul>
+      <form id="search-form" method="get" action="/search/">
+        <input id="search" name="q" type="search" placeholder="Search" />
+        <input id="search-btn" type="submit" />
+      </form>
     </div>
-
+    <a href="{{ site.baseurl }}/about/"><span id="about">?</span></a>
   </div>
 </nav>

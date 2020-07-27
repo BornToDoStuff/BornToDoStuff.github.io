@@ -16,22 +16,17 @@
     display: block;
     padding: 0px 15px;
   }
+  #navbar .width-wrapper {
+      display: flex;
+  }
 
 #navbar-header {
-	color: black;
-	font-size: 2rem;
-  @include desktop{
-  	float: left;
-  	position: relative;
-  }
+  font-size: 2rem;
+  flex: 0 0 auto;
 }
 #navbar-content {
-  @include desktop{
-  	margin-left: 25px;
-  	display: block;
-  	float: left;
-  	position: relative;
-  }
+  margin-left: 25px;
+  flex: 1 1 auto;
 }
 
 #navbar ul {
@@ -143,4 +138,42 @@
 	.icon-bar:last-child{
 		margin-bottom: 0px;
 	}
+}
+
+#search-form {
+	position: relative;
+	background: $backgroundLight;
+
+	#search {
+		width: 100%;
+		padding-right: 35px;
+	}
+
+	#search-btn {
+		background: url('/images/icons/search.svg') no-repeat;
+		background-position: center;
+		background-size: 23px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		border: 0;
+		font-size: 0px;
+		padding: 0px;
+		display: block;
+		height: 35px;
+		width: 35px;
+	}
+}
+
+#search-results {
+	margin-top: 20px;
+}
+
+#about {
+	display: block;
+	background: url('/images/icons/question-circle.svg') no-repeat;
+	opacity: 0.4;
+	width: 30px;
+	height: 30px;
+	margin: 15px 0px;
 }

@@ -27,17 +27,17 @@ var item_cache = [
     }{% unless forloop.last %},{% endunless %} {% endfor %}
 ];
 
-var search_index = lunr(function () {
-  this.ref("ord");
-  this.field("title", {boost: 10});
-  this.field("type");
-  this.field("subtypes");
-  this.field("classes");
-  this.field("damage");
-  this.field("tags", {boost: 5});
-  this.field("searchtext");
+var search_index = elasticlunr(function () {
+  this.setRef('ord');
+  this.addField('title');
+  this.addField("type");
+  this.addField("subtypes");
+  this.addField("classes");
+  this.addField("damage");
+  this.addField("tags");
+  this.addField("searchtext");
+});
 
-  item_cache.forEach(function (item) {
-    this.add(item)
-  }, this)
+item_cache.forEach(function(item) {
+  search_index.addDoc(item);
 });

@@ -9,9 +9,9 @@
 /* ==================== */
 {% include /js/custom-bootstrap.min.js %}
 /* ==================== */
-/* lunr.min.js */
+/* elasticlunr.min.js */
 /* ==================== */
-{% include /js/lunr.min.js %}
+{% include /js/elasticlunr.min.js %}
 /* ==================== */
 /* masonry.pkgd.min.js */
 /* ==================== */
