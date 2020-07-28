@@ -46,17 +46,6 @@
 
     $("#search-results magic-item").each(function(){setItemHeight($(this))});
 
-    var $searchGrid = $('section#search-results').masonry({
-      columnWidth: 'magic-item',
-      itemSelector: 'magic-item',
-      fitWidth: true,
-      horizontalOrder: true,
-      gutter: 15,
-      stagger: 0,
-      absolute: false
-    });
-
-
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
     const itemTemplate = (item) => `
       <magic-item id="${item.doc.id}" class="${item.doc.rarity.replace(' ', '-')} ${item.doc.attunement ? 'attunement' : ''}">
@@ -120,7 +109,15 @@
 
       $('#search-results').show();
       $('#main').hide();
-      $searchGrid.masonry('layout');
+      var $searchGrid = $('section#search-results').masonry({
+        columnWidth: 'magic-item',
+        itemSelector: 'magic-item',
+        fitWidth: true,
+        horizontalOrder: true,
+        gutter: 15,
+        stagger: 0,
+        absolute: false
+      });
     }
 
     function unsearch(){
