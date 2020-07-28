@@ -44,8 +44,6 @@
         $(ele).addClass("show-more");
     }
 
-    $("#search-results magic-item").each(function(){setItemHeight($(this))});
-
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
     const itemTemplate = (item) => `
       <magic-item id="${item.doc.id}" class="${item.doc.rarity.replace(' ', '-')} ${item.doc.attunement ? 'attunement' : ''}">
@@ -55,7 +53,7 @@
             <item-tagline>${item.doc.category}, ${item.doc.rarity} ${item.doc.attunement ? `(requires attunement${item.doc.requirement ? ` by ${item.doc.requirement}`: ''})` : '' }</item-tagline>
           </item-title>
           <item-extras aria-hidden="true">
-      			<div class="rarity"><img src="rarities.png" title="${item.doc.rarity}" /></div>
+      			<div class="rarity"><img src="/images/rarities.png" title="${item.doc.rarity}" /></div>
       		</item-extras>
         </item-head>
 
@@ -118,6 +116,8 @@
         stagger: 0,
         absolute: false
       });
+      $("#search-results magic-item").each(function(){setItemHeight($(this))});
+
     }
 
     function unsearch(){
