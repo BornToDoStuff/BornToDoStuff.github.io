@@ -27,7 +27,7 @@ var item_cache = [
     }{% unless forloop.last %},{% endunless %} {% endfor %}
 ];
 
-var search_index = elasticlunr(function () {
+var index = elasticlunr(function () {
   this.setRef('ord');
   this.addField('title');
   this.addField("type");
@@ -39,5 +39,5 @@ var search_index = elasticlunr(function () {
 });
 
 item_cache.forEach(function(item) {
-  search_index.addDoc(item);
+  index.addDoc(item);
 });

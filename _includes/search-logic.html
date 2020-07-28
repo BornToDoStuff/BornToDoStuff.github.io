@@ -1,7 +1,7 @@
 
 <!-- search logic -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script> -->
-<script src="{{ site.baseurl }}/js/search-index.js"></script>
+<script src="/js/search-index.js"></script>
 <!-- <script id="result-template" type="x-tmpl-mustache">
   {% raw %}
     <magic-item id="{{id}}">
@@ -19,12 +19,73 @@
     </magic-item>
   {% endraw %}
 </script> -->
+
+searchResults.html([
+  { url: '/foo', img: 'foo.png', title: 'Foo item' },
+  { url: '/bar', img: 'bar.png', title: 'Bar item' },
+].map(itemTemplate).join(''));
+
+
 <script>
   $(document).ready(function() {
     var searchbox = $('#search');
     var searchResults = $('#search-results');
-    var template = $('#result-template').html();
-    Mustache.parse(template);
+
+    var heights = ["","tall", "taller", "tallest"];
+    heights.forEach(function (e, i) {
+      $("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
+    });
+    var sizes = $("#grid-sizes item-description");
+
+    function setItemHeight(ele) {
+      var description = $(ele).find("item-description")[0];
+      var heightCount = 0;
+      while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+        heightCount++;
+      }
+
+      $(ele).addClass(heights[heightCount]);
+      if (description.scrollHeight > description.clientHeight)
+        $(ele).addClass("show-more");
+    }
+
+    $("#search-results magic-item").each(function(){setItemHeight($(this))});
+
+    var $searchGrid = $('section#search-results').masonry({
+      columnWidth: 'magic-item',
+      itemSelector: 'magic-item',
+      fitWidth: true,
+      horizontalOrder: true,
+      gutter: 15,
+      stagger: 0,
+      absolute: false
+    });
+
+
+    //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
+    const itemTemplate = (item) => `
+      <magic-item id="${item.id}" class="${item.rarity.replace(' ', '-')} ${item.attunement ? 'attunement' : ''}">
+        <item-head>
+          <item-title>
+            <a href="${item.url}">${item.title}</a>
+            <item-tagline>${item.category}, ${item.rarity} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
+          </item-title>
+          <item-extras aria-hidden="true">
+      			<div class="rarity"><img src="/images/rarities.png" title="${item.rarity}" /></div>
+      		</item-extras>
+        </item-head>
+
+        <item-description>
+      		${item.content}
+      	</item-description>
+
+        <a href="${item.url}" class="read-more">
+    			<div class="expander">
+    				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+    			</div>
+    		</a>
+      </magic-item>
+    `;
 
     $("#search-btn").on("click", function(){
       if (searchbox.val() == "") { unsearch(); }
@@ -40,29 +101,39 @@
 
     function search(){
       var query = searchbox.val();
-      var results = search_index.search(query);
+      var results = index.search(query, {
+        fields: {
+            title: {boost: 5},
+            tags: {boost: 3},
+            subtypes: {boost: 1},
+            searchtext: {boost: 1}
+        },
+        bool: "OR",
+        expand: true
+      });
       searchResults.empty();
 
       if (results.length) {
-        for (var item in results){
-          var ref = results[item].ref;
-          var result = item_cache[ref];
-          loadResult(result);
-        }
+        searchResults.html(results.map(itemTemplate).join(''));
       }
       else {
         searchResults.html("<magic-item><item-name>There's nothing here</item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
       }
-      /* hide all normal elements and just show searched elements */
-      $("<style id='search-style' type='text/css'> magic-item, .pagination{display:none} #search-results magic-item{display:block}</style>").appendTo("head");
 
-      history.replaceState(null, "Search", "/search/?q=" + encodeURIComponent(query)); /* replace URL so current search is saved but it does not create a large history stack */
+      /* replace URL so current search is saved but it does not create a large history stack */
+      history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
+
+      $('#search-results').show();
+      $('#main').hide();
+      $searchGrid.masonry('layout');
     }
 
     function unsearch(){
       searchbox.val("");
       searchResults.empty();
-      $("#search-style").remove();
+
+      $('#search-results').hide();
+      $('#main').show();
     }
 
     function loadResult(result) {
@@ -75,6 +146,11 @@
       searchbox.val(searchParams.get("q"));
       search();
     }
+
   });
+</script>
+
+<script>
+
 </script>
 <!-- end search logic -->
