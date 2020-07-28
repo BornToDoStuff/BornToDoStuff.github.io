@@ -142,8 +142,7 @@
 
 #search-form {
 	position: relative;
-	background: $backgroundLight;
-
+  
 	#search {
 		width: 100%;
 		padding-right: 35px;
@@ -154,7 +153,7 @@
 		background-position: center;
 		background-size: 23px;
 		position: absolute;
-		top: 0px;
+		top: 12px;
 		right: 0px;
 		border: 0;
 		font-size: 0px;
@@ -162,6 +161,7 @@
 		display: block;
 		height: 35px;
 		width: 35px;
+    opacity: 0.8;
 	}
 }
 
