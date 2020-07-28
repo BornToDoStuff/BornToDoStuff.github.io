@@ -59,22 +59,22 @@
 
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
     const itemTemplate = (item) => `
-      <magic-item id="${item.id}" class="${item.rarity.replace(' ', '-')} ${item.attunement ? 'attunement' : ''}">
+      <magic-item id="${item.doc.id}" class="${item.doc.rarity.replace(' ', '-')} ${item.doc.attunement ? 'attunement' : ''}">
         <item-head>
           <item-title>
-            <a href="${item.url}">${item.title}</a>
-            <item-tagline>${item.category}, ${item.rarity} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
+            <a href="${item.doc.url}">${item.doc.title}</a>
+            <item-tagline>${item.doc.category}, ${item.doc.rarity} ${item.doc.attunement ? `(requires attunement${item.doc.requirement ? ` by ${item.doc.requirement}`: ''})` : '' }</item-tagline>
           </item-title>
           <item-extras aria-hidden="true">
-      			<div class="rarity"><img src="/images/rarities.png" title="${item.rarity}" /></div>
+      			<div class="rarity"><img src="rarities.png" title="${item.doc.rarity}" /></div>
       		</item-extras>
         </item-head>
 
         <item-description>
-      		${item.content}
+      		${item.doc.content}
       	</item-description>
 
-        <a href="${item.url}" class="read-more">
+        <a href="${item.doc.url}" class="read-more">
     			<div class="expander">
     				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
     			</div>
