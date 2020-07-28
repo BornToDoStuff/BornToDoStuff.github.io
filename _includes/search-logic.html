@@ -105,6 +105,8 @@
       /* replace URL so current search is saved but it does not create a large history stack */
       history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
 
+      $('#search-results').show();
+      
       $("#search-results magic-item").each(function(){setItemHeight($(this))});
       var $searchGrid = $('section#search-results').masonry({
         columnWidth: 'magic-item',
@@ -116,21 +118,15 @@
         absolute: false
       });
 
-      $('#search-results').show();
       $('#main').hide();
     }
 
     function unsearch(){
+      $('#main').show();
+      $('#search-results').hide();
       searchbox.val("");
       searchResults.empty();
-
-      $('#search-results').hide();
-      $('#main').show();
     }
-
-    function loadResult(result) {
-      searchResults.append(Mustache.render(template, result));
-    };
 
     var searchParams = new URLSearchParams(window.location.search);
     if (searchParams.get("q") && searchParams.get("q") !== null)
