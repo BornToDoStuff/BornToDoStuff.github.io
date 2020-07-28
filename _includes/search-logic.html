@@ -46,14 +46,14 @@
 
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
     const itemTemplate = (item) => `
-      <magic-item id="${item.doc.id}" class="${item.doc.rarity.replace(' ', '-')} ${item.doc.attunement ? 'attunement' : ''}">
+      <magic-item id="${item.doc.id}" class="${item.doc.rarity.toLowerCase().replace(' ', '-')} ${item.doc.attunement ? 'attunement' : ''}">
         <item-head>
           <item-title>
             <a href="${item.doc.url}">${item.doc.title}</a>
-            <item-tagline>${item.doc.category}, ${item.doc.rarity} ${item.doc.attunement ? `(requires attunement${item.doc.requirement ? ` by ${item.doc.requirement}`: ''})` : '' }</item-tagline>
+            <item-tagline>${item.doc.category}, ${item.doc.rarity.toLowerCase()} ${item.doc.attunement ? `(requires attunement${item.doc.requirement ? ` by ${item.doc.requirement}`: ''})` : '' }</item-tagline>
           </item-title>
           <item-extras aria-hidden="true">
-      			<div class="rarity"><img src="/images/rarities.png" title="${item.doc.rarity}" /></div>
+      			<div class="rarity"><img src="/images/rarities.png" title="${item.doc.rarity.toLowerCase()}" /></div>
       		</item-extras>
         </item-head>
 
@@ -107,6 +107,8 @@
 
       $('#search-results').show();
       $('#main').hide();
+
+      $("#search-results magic-item").each(function(){setItemHeight($(this))});
       var $searchGrid = $('section#search-results').masonry({
         columnWidth: 'magic-item',
         itemSelector: 'magic-item',
@@ -116,8 +118,6 @@
         stagger: 0,
         absolute: false
       });
-      $("#search-results magic-item").each(function(){setItemHeight($(this))});
-
     }
 
     function unsearch(){
