@@ -83,7 +83,7 @@
 
     function search(){
       var query = searchbox.val();
-      var results = index.search("${query}^20 ${query}*^5 ${query}~2");
+      var results = index.search(`${query}^20 ${query}*^5 ${query}~2`);
       searchResults.empty();
 
       if (results.length) {
