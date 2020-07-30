@@ -83,16 +83,7 @@
 
     function search(){
       var query = searchbox.val();
-      var results = index.search(query, {
-        fields: {
-            title: {boost: 5},
-            tags: {boost: 3},
-            subtypes: {boost: 1},
-            searchtext: {boost: 1}
-        },
-        bool: "OR",
-        expand: true
-      });
+      var results = index.search("${query}^20 ${query}*^5 ${query}~2");
       searchResults.empty();
 
       if (results.length) {
@@ -126,6 +117,7 @@
       $('#search-results').hide();
       searchbox.val("");
       searchResults.empty();
+      $("#search-form").css("width","0px");
     }
 
     var searchParams = new URLSearchParams(window.location.search);

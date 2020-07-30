@@ -29,15 +29,15 @@ var item_cache = [
 
 var index = lunr(function () {
   this.ref('ord');
-  this.field('title');
-  this.field("type");
+  this.field('title', { boost: 10 });
+  this.field("type", { boost: 2 });
   this.field("subtypes");
   this.field("classes");
   this.field("damage");
-  this.field("tags");
+  this.field("tags", { boost: 5 });
   this.field("searchtext");
 
-  item_cache.forEach(function(item) {
-    index.add(item);
+  item_cache.forEach(function (doc) {
+    this.add(doc);
   }, this);
 });
