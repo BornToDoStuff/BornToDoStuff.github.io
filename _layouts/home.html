@@ -76,6 +76,10 @@ layout: default
         $(items).each(function(){setItemHeight($(this))});
         $grid.masonry('layout');
       });
+
+      $("#search-show").on("click", function() {
+        $("#search-form").css("width", "100%");
+      })
     });
   </script>
   {% include inline-scripts.html %}
