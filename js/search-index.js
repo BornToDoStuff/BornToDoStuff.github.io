@@ -39,5 +39,5 @@ var index = lunr(function () {
 
   item_cache.forEach(function(item) {
     index.add(item);
-  } this);
+  }, this);
 });

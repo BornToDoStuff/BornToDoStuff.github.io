@@ -19,9 +19,9 @@
   #navbar a:first-child { padding-left: 0px; }
   #navbar a:last-child { padding-right: 0px; }
   
-  #navbar .width-wrapper {
-      display: flex;
-  }
+#main-nav {
+    display: flex;
+}
 
 #navbar-header {
   font-size: 2rem;
@@ -150,6 +150,7 @@
   width: 0%;
   max-width: 1000px;
   overflow: hidden;
+  z-index: 10;
   transition: width 0.5s;
 
 	#search {
@@ -188,7 +189,6 @@
   height: 35px;
   width: 35px;
   opacity: 0.8;
-  z-index: -1;
 }
 
 #search-results {
