@@ -16,6 +16,9 @@
     display: block;
     padding: 0px 15px;
   }
+  #navbar a:first-child { padding-left: 0px; }
+  #navbar a:last-child { padding-right: 0px; }
+  
   #navbar .width-wrapper {
       display: flex;
   }
@@ -27,6 +30,7 @@
 #navbar-content {
   margin-left: 25px;
   flex: 1 1 auto;
+  position: relative;
 }
 
 #navbar ul {
@@ -184,6 +188,7 @@
   height: 35px;
   width: 35px;
   opacity: 0.8;
+  z-index: -1;
 }
 
 #search-results {

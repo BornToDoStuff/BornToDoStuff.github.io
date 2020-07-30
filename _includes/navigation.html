@@ -1,22 +1,26 @@
 <nav id="navbar">
   <div class="width-wrapper">
-    <div id="navbar-header">
-      <a href="{{ site.baseurl }}/" id="navbar-brand">{{ site.name }}</a>
-    </div>
-    <a id="navbar-toggle">
-      <div class="icon-wrapper">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+    <div id="main-nav">
+      <div id="navbar-header">
+        <a href="{{ site.baseurl }}/" id="navbar-brand">
+
+          {{ site.name }}</a>
       </div>
-    </a>
-    <div id="navbar-content">
-      <form id="search-form" method="get" action="/">
-        <input id="search" name="q" type="text" placeholder="Search" />
-        <input id="search-btn" type="submit" />
-      </form>
-      <input id="search-show" type="button" />
+      <a id="navbar-toggle">
+        <div class="icon-wrapper">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </div>
+      </a>
+      <div id="navbar-content">
+        <form id="search-form" method="get" action="/">
+          <input id="search" name="q" type="text" placeholder="Search" />
+          <input id="search-btn" type="submit" />
+        </form>
+        <input id="search-show" type="button" />
+      </div>
+      <a href="{{ site.baseurl }}/about/"><span id="about"></span></a>
     </div>
-    <a href="{{ site.baseurl }}/about/"><span id="about"></span></a>
   </div>
 </nav>
