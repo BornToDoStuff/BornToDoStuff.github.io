@@ -47,7 +47,7 @@
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
     const itemTemplate = function(result) {
       var item = item_cache[result.ref];
-      
+
       return `<magic-item id="${item.id}" class="${item.rarity.toLowerCase().replace(' ', '-')} ${item.attunement ? 'attunement' : ''}">
         <item-head>
           <item-title>
@@ -90,8 +90,6 @@
       searchResults.empty();
 
       if (results.length) {
-        var ref = results[item].ref;
-        var result = item_cache[ref];
         searchResults.html(results.map(itemTemplate).join(''));
       }
       else {
