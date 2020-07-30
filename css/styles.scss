@@ -186,8 +186,11 @@ magic-item a {
 
 item-extras {
 	flex: 0 0 auto;
+	display: block;
+	position: relative;
   height: 50px;
-  padding-left: 10px;
+	width: 50px;
+  margin-left: 10px;
   overflow: hidden;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -200,77 +203,76 @@ item-extras {
 }
 
 	item-extras > div {
-		width: 50px;
-		height: 50px;
+		width: 100%
+		height: 100%
 		overflow: hidden;
 		position: relative;
-		margin-bottom: 15px;
 	}
 
 .rarity img {
-	height: 150px;
-	width: 350px;
+	height: 300%;
+	width: auto;
 	position: absolute;
 }
 
 magic-item.common .rarity img {
-	left: 0px;
-	top: 0px;
+	left: 0%;
+	top: 0%;
 }
 
 magic-item.common.attunement .rarity img {
-	left: 0px;
-	top: -100px;
+	left: 0%;
+	top: -200%
 }
 
 magic-item.uncommon .rarity img {
-	left: -50px;
-	top: 0px;
+	left: -100%;
+	top: 0%;
 }
 
 magic-item.uncommon.attunement .rarity img {
-	left: -50px;
-	top: -100px;
+	left: -100%;
+	top: -200%;
 }
 
 magic-item.rare .rarity img {
-	left: -100px;
-	top: 0px;
+	left: -200%;
+	top: 0%;
 }
 
 magic-item.rare.attunement .rarity img {
-	left: -100px;
-	top: -100px;
+	left: -200%;
+	top: -200%;
 }
 
 magic-item.very-rare .rarity img {
-	left: -150px;
-	top: 0px;
+	left: -300%;
+	top: 0%;
 }
 
 magic-item.very-rare.attunement .rarity img {
-	left: -150px;
-	top: -100px;
+	left: -300%;
+	top: -200%;
 }
 
 magic-item.legendary .rarity img {
-	left: -250px;
-	top: 0px;
+	left: -500%;
+	top: 0%;
 }
 
 magic-item.legendary.attunement .rarity img {
-	left: -250px;
-	top: -100px;
+	left: -500%;
+	top: -200%;
 }
 
 magic-item.artifact .rarity img {
-	left: -300px;
-	top: 0px;
+	left: -600%;
+	top: 0%;
 }
 
 magic-item.artifact.attunement .rarity img {
-	left: -300px;
-	top: -100px;
+	left: -600%;
+	top: -200%;
 }
 
 /*=============== START read-more ===============*/
@@ -425,7 +427,6 @@ magic-spell {
 	}
 
 	item-title {
-		display: block;
 		font-size: 3rem;
 		line-height: 3.1rem;
 	}

@@ -142,7 +142,12 @@
 
 #search-form {
 	position: relative;
-  
+  float: right;
+  width: 100%;
+  max-width: 1000px;
+  overflow: hidden;
+  transition: width 0.5s;
+
 	#search {
 		width: 100%;
 		padding-right: 35px;
@@ -163,6 +168,22 @@
 		width: 35px;
     opacity: 0.8;
 	}
+}
+
+#search-show {
+  background: url('/images/icons/search.svg') no-repeat;
+  background-position: center;
+  background-size: 23px;
+  position: absolute;
+  top: 12px;
+  right: 0px;
+  border: 0;
+  font-size: 0px;
+  padding: 0px;
+  display: block;
+  height: 35px;
+  width: 35px;
+  opacity: 0.8;
 }
 
 #search-results {

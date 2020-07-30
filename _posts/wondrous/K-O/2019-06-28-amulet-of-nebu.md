@@ -26,7 +26,6 @@ item_updated:
 last_modified_at:
 ---
 
-2019-06-28
 This amulet made for the Golden One is a circle, shined to a mirror finish, with horns of a cow on either side and a large turquoise set in its base.
 It has 7 charges and regains all expended charges each day at dawn. While wearing it you are resistant to Radiant damage and have advantage on saving throws against being Blinded.
 
