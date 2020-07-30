@@ -45,23 +45,25 @@
     }
 
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
-    const itemTemplate = (item) => `
-      <magic-item id="${item.doc.id}" class="${item.doc.rarity.toLowerCase().replace(' ', '-')} ${item.doc.attunement ? 'attunement' : ''}">
+    const itemTemplate = (result) =>
+      var item = item_cache[result.ref];
+      
+      return `<magic-item id="${item.id}" class="${item.rarity.toLowerCase().replace(' ', '-')} ${item.attunement ? 'attunement' : ''}">
         <item-head>
           <item-title>
-            <a href="${item.doc.url}">${item.doc.title}</a>
-            <item-tagline>${item.doc.category}, ${item.doc.rarity.toLowerCase()} ${item.doc.attunement ? `(requires attunement${item.doc.requirement ? ` by ${item.doc.requirement}`: ''})` : '' }</item-tagline>
+            <a href="${item.url}">${item.title}</a>
+            <item-tagline>${item.category}, ${item.rarity.toLowerCase()} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
           </item-title>
           <item-extras aria-hidden="true">
-      			<div class="rarity"><img src="/images/rarities.png" title="${item.doc.rarity.toLowerCase()}" /></div>
+      			<div class="rarity"><img src="/images/rarities.png" title="${item.rarity.toLowerCase()}" /></div>
       		</item-extras>
         </item-head>
 
         <item-description>
-      		${item.doc.content}
+      		${item.content}
       	</item-description>
 
-        <a href="${item.doc.url}" class="read-more">
+        <a href="${item.url}" class="read-more">
     			<div class="expander">
     				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
     			</div>
@@ -87,6 +89,8 @@
       searchResults.empty();
 
       if (results.length) {
+        var ref = results[item].ref;
+        var result = item_cache[ref];
         searchResults.html(results.map(itemTemplate).join(''));
       }
       else {
