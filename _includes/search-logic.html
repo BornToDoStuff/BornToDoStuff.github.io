@@ -101,8 +101,9 @@
       /* replace URL so current search is saved but it does not create a large history stack */
       history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
 
-
       $("#search-results magic-item").each(function(){setItemHeight($(this))});
+
+      $('#search-results').show();
       var $searchGrid = $('section#search-results').masonry({
         columnWidth: 'magic-item',
         itemSelector: 'magic-item',
@@ -114,7 +115,6 @@
       });
 
       $("body").delay(200).removeClass("loading");
-      $('#search-results').show();
     }
 
     function unsearch(){
