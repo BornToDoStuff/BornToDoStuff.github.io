@@ -2,7 +2,7 @@
 	visibility: hidden;
 }
 .loading #search-results {
-	margin-left: 9999px; //move element off screen instead of hiding it to allow it to undergo layout (needs to be visible for plugin to do layout)
+	opacity: 0; //move element off screen instead of hiding it to allow it to undergo layout (needs to be visible for plugin to do layout)
 }
 // .loading #loading-wrapper{
 // 	opacity: 1;
