@@ -68,6 +68,7 @@ layout: default
         gutter: 15,
         stagger: 0
       });
+      $("#main-nav").width($("#main").width());
 
       var masonry = $grid.data('masonry');
       $grid.infiniteScroll({
@@ -85,8 +86,6 @@ layout: default
       $("#search-show").on("click", function() {
         $("#search-form").css("width", "100%");
       });
-
-      $("#main-nav").width($("#main").width());
     });
 
     $(window).on("resize", function(){

@@ -4,6 +4,7 @@
 .loading #loading-wrapper{
 	opacity: 1;
 	pointer-events: auto;
+	animation-play-state: running!important;
 }
 
 
@@ -105,7 +106,7 @@
 }
 
 // #loading-logo, #loading-logo > * {
-// 	animation-play-state: paused;
+// 	animation-play-state: paused!important;
 // }
 
 
