@@ -95,7 +95,7 @@
         searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
       }
       else {
-        searchResults.html("<magic-item><item-name>There's nothing here</item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
+        searchResults.html("<magic-item><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
       }
 
       /* replace URL so current search is saved but it does not create a large history stack */
@@ -109,10 +109,11 @@
         fitWidth: true,
         horizontalOrder: true,
         gutter: 15,
-        stagger: 50,
-        absolute: false
+        stagger: 0
       });
-      $("#search-results").width($("#main").width()); //set to main width under assumption it will be the same width so it is less likely to "flash"
+      $searchGrid.masonry()
+      //$("#search-results").width($("#main").width()); //set to main width under assumption it will be the same width so it is less likely to "flash"
+
       $('section#main').infiniteScroll('destroy'); //$grid is from the main page.
 
       $("body").removeClass("loading");
