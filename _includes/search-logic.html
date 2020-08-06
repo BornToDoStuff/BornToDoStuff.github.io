@@ -88,7 +88,7 @@
       var query = searchbox.val();
       var results = index.search(`${query}^20 ${query}*^5 ${query}~2`);
       searchResults.empty();
-      $(body).addClass("loading");
+      $("body").addClass("loading");
       $('#main').hide();
 
       if (results.length) {
@@ -113,7 +113,7 @@
         absolute: false
       });
 
-      $(body).delay(200).removeClass("loading");
+      $("body").delay(200).removeClass("loading");
       $('#search-results').show();
     }
 
