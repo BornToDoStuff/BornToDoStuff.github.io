@@ -113,7 +113,7 @@
         absolute: false
       });
       $("#search-results").width($("#main").width()); //set to main width under assumption it will be the same width so it is less likely to "flash"
-      $grid.infiniteScroll('destroy'); //$grid is from the main page.
+      $('section#main').infiniteScroll('destroy'); //$grid is from the main page.
 
       $("body").removeClass("loading");
     }
@@ -124,7 +124,7 @@
       searchResults.empty();
       $("#search-form").css("width","0px");
 
-      setupScroll($grid, $grid.data('masonry')); //$grid is from the main page.
+      setupScroll($('section#main'), $('section#main').data('masonry')); //$grid is from the main page.
     }
 
     var searchParams = new URLSearchParams(window.location.search);
