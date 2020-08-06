@@ -27,16 +27,6 @@ layout: default
 			</div>
     </section>
   </div>
-  <!-- <section id="sidebar">
-    {% unless page.nosearch %}
-      {% include search-form.html %}
-    {% endunless -%}
-    {% if page.is_post %}
-      {% include post-sidebar.html %}
-    {%- else -%}
-      {% include sidebar.html %}
-    {%- endif %}
-  </section> -->
 
   <div id="navigation-fixed">
     <a id="return-to-top" href="#TippyTop">
@@ -47,6 +37,9 @@ layout: default
 <div>
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
   <script>
+    $(window).on("load", function() {
+      $("body").removeClass("loading");
+    })
     // masonry and element sizing
 
     var heights = ["","tall", "taller", "tallest"];
@@ -102,10 +95,6 @@ layout: default
     $(window).on("resize", function(){
         $("#main-nav").width($("#main").width());
     });
-
-    $(window).load(function() {
-      $(body).removeClass("loading");
-    })
   </script>
   {% include inline-scripts.html %}
   {% include search-logic.html %}
