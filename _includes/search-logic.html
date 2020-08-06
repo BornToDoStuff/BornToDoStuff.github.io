@@ -72,10 +72,10 @@
     `;
   }
 
-    $("#search-btn").on("click", function(){
-      if (searchbox.val() == "") { unsearch(); }
-      else{ search(); }
-    });
+    // $("#search-btn").on("click", function(){
+    //   if (searchbox.val() == "") { unsearch(); }
+    //   else{ search(); }
+    // });
     $("#search-clear").on("click", function(){
        unsearch();
     });
@@ -115,7 +115,7 @@
 
       $("section#main").infiniteScroll("destroy"); //$grid is from the main page.
 
-      $("body").delay(200).removeClass("loading");
+      $("body").removeClass("loading");
     }
 
     function unsearch(){

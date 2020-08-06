@@ -1,9 +1,9 @@
-.loading #main-wrapper{
+.loading #main-wrapper, .loading #search-results{
 	visibility: hidden;
 }
-.loading #search-results {
-	opacity: 0; //move element off screen instead of hiding it to allow it to undergo layout (needs to be visible for plugin to do layout)
-}
+// .loading #search-results {
+// 	opacity: 0; //move element off screen instead of hiding it to allow it to undergo layout (needs to be visible for plugin to do layout)
+// }
 // .loading #loading-wrapper{
 // 	opacity: 1;
 // 	pointer-events: auto;
