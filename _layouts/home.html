@@ -11,6 +11,21 @@ layout: default
     </section>
     <section id="search-results">
     </section>
+    <section id="loading-wrapper">
+      <div class="loading-spacer">
+			</div>
+			<div class="loading-spacer">
+				<div id="loading">
+					<img class="top" src="/images/loading/loading_T.png" />
+					<img class="right" src="/images/loading/loading_R.png" />
+					<img class="bottom" src="/images/loading/loading_B.png" />
+					<img class="left" src="/images/loading/loading_L.png" />
+					<img class="middle" src="/images/loading/loading_M.png" />
+				</div>
+			</div>
+			<div class="loading-spacer">
+			</div>
+    </section>
   </div>
   <!-- <section id="sidebar">
     {% unless page.nosearch %}
@@ -79,8 +94,18 @@ layout: default
 
       $("#search-show").on("click", function() {
         $("#search-form").css("width", "100%");
-      })
+      });
+
+      $("#main-nav").width($("#main").width());
     });
+
+    $(window).on("resize", function(){
+        $("#main-nav").width($("#main").width());
+    });
+
+    $(window).load(function() {
+      $(body).removeClass("loading");
+    })
   </script>
   {% include inline-scripts.html %}
   {% include search-logic.html %}

@@ -88,9 +88,11 @@
       var query = searchbox.val();
       var results = index.search(`${query}^20 ${query}*^5 ${query}~2`);
       searchResults.empty();
+      $(body).addClass("loading");
+      $('#main').hide();
 
       if (results.length) {
-        searchResults.html(results.map(itemTemplate).join(''));
+        searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
       }
       else {
         searchResults.html("<magic-item><item-name>There's nothing here</item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
@@ -99,7 +101,6 @@
       /* replace URL so current search is saved but it does not create a large history stack */
       history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
 
-      $('#search-results').show();
 
       $("#search-results magic-item").each(function(){setItemHeight($(this))});
       var $searchGrid = $('section#search-results').masonry({
@@ -112,7 +113,8 @@
         absolute: false
       });
 
-      $('#main').hide();
+      $(body).delay(200).removeClass("loading");
+      $('#search-results').show();
     }
 
     function unsearch(){

@@ -3,11 +3,8 @@
 
 @import "reset";
 @import "variables";
-// @import "scrollbar";
-// @import "custom-bootstrap";
 @import "navbar";
-// @import "loader";
-// @import "modal";
+@import "loading";
 
 
 html {
@@ -369,6 +366,9 @@ span.dot {
 		background: black;
 	}
 
+input:focus {
+	outline: none;
+}
 input[type="search"], input[type="text"] {
 	border: none;
 	background: $transp_lightBlue;
@@ -377,10 +377,11 @@ input[type="search"], input[type="text"] {
 	transition: border-color ease-in-out 0.15s,box-shadow ease-in-out 0.15s;
 
 	&:focus {
-		outline: 0;
+		outline: none;
 		box-shadow: inset 0 1px 1px rgba(0,0,0,0.1), 0px 2px 0px $blue;
 	}
 }
+
 
 magic-spell {
 	font-style: italic;
