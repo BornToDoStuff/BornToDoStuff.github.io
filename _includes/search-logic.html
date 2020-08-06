@@ -103,7 +103,6 @@
 
       $("#search-results magic-item").each(function(){setItemHeight($(this))});
 
-      $('#search-results').show();
       var $searchGrid = $('section#search-results').masonry({
         columnWidth: 'magic-item',
         itemSelector: 'magic-item',
@@ -113,13 +112,12 @@
         stagger: 50,
         absolute: false
       });
-
+      $("#search-results").width($("#main").width(); //set to main width under assumption it will be the same width so it is less likely to "flash"
       $("body").removeClass("loading");
     }
 
     function unsearch(){
       $('#main').show();
-      $('#search-results').hide();
       searchbox.val("");
       searchResults.empty();
       $("#search-form").css("width","0px");
