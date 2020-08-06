@@ -73,18 +73,7 @@ layout: default
       });
       $("#main-nav").width($("#main").width());
 
-      var masonry = $grid.data('masonry');
-      $grid.infiniteScroll({
-        path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
-        append: 'magic-item',
-        scrollThreshold: 2000,
-        outlayer: masonry
-      });
-
-      $grid.on('append.infiniteScroll', function( event, response, path, items ) {
-        $(items).each(function(){setItemHeight($(this))});
-        $grid.masonry('layout');
-      });
+      setupScroll($grid, $grid.data('masonry'));
 
       $("#search-show").on("click", function() {
         $("#search-form").css("width", "100%");
@@ -94,6 +83,21 @@ layout: default
     $(window).on("resize", function(){
         $("#main-nav").width($("#main").width());
     });
+
+
+    function setupScroll(grid, masonry){
+      grid.infiniteScroll({
+        path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
+        append: 'magic-item',
+        scrollThreshold: 2000,
+        outlayer: masonry
+      });
+
+      grid.on('append.infiniteScroll', function( event, response, path, items ) {
+        $(items).each(function(){setItemHeight($(this))});
+        grid.masonry('layout');
+      });
+    }
   </script>
   {% include inline-scripts.html %}
   {% include search-logic.html %}
