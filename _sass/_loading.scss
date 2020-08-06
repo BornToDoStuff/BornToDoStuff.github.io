@@ -1,5 +1,5 @@
 .loading #main-wrapper, .loading #search-results{
-	display: none;
+	visibility: hidden;
 }
 .loading #loading_wrapper{
 	opacity: 1;
