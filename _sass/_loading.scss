@@ -1,13 +1,13 @@
 .loading #main-wrapper, .loading #search-results{
 	visibility: hidden;
 }
-.loading #loading_wrapper{
+.loading #loading-wrapper{
 	opacity: 1;
 	pointer-events: auto;
 }
 
 
-#loading_wrapper {
+#loading-wrapper {
 	position: absolute;
 	top: 0px;
 	right: 0px;
@@ -46,7 +46,7 @@
 	position: absolute;
 	margin-top: 375px;
 }
-#loading_logo {
+#loading-logo {
     height: 250px;
     width: 250px;
     margin: 50px auto;
@@ -54,11 +54,11 @@
 		animation: loading_expand 4s cubic-bezier(.23,-0.25,.74,1.25) 2.5s infinite normal;
 		filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5));
 }
-#loading_logo > img {
+#loading-logo > img {
     position: absolute;
 		animation-fill-mode: none;
 }
-#loading_logo > .top {
+#loading-logo > .top {
 	animation: loading_flashing 4s ease-in 0s infinite normal;
 	top: 0px;
 	right: 50%!important;
@@ -67,7 +67,7 @@
 
 	margin-right:-125px;
 }
-#loading_logo > .right {
+#loading-logo > .right {
 	animation: loading_flashing 4s ease-in 0.5s infinite normal;
 	top: 50%!important;
 	right: 0px;
@@ -76,7 +76,7 @@
 
 	margin-top:-125px;
 }
-#loading_logo > .bottom {
+#loading-logo > .bottom {
 	animation: loading_flashing 4s ease-in 1s infinite normal;
 	top: initial!important;
 	right: 50%!important;
@@ -85,7 +85,7 @@
 
 	margin-right:-125px;
 }
-#loading_logo > .left {
+#loading-logo > .left {
 	animation: loading_flashing 4s ease-in 1.5s infinite normal;
 	top: 50%!important;
 	right: initial!important;
@@ -94,7 +94,7 @@
 
 	margin-top:-125px;
 }
-#loading_logo > .middle {
+#loading-logo > .middle {
 	top: 50%!important;
 	right: 50%!important;
 	bottom:initial!important;
@@ -104,7 +104,7 @@
 	animation: loading_spin 4s cubic-bezier(.23,-0.25,.77,1.25) 2.67s infinite normal;
 }
 
-// #loading_logo, #loading_logo > * {
+// #loading-logo, #loading-logo > * {
 // 	animation-play-state: paused;
 // }
 

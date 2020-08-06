@@ -5,21 +5,21 @@ layout: default
 <a id="TippyTop"></a>
 <div class="width-wrapper">
   <div id="main-wrapper">
-    <div id="grid-sizes"></div> <!-- hidden div to create children in. Small hack to determine sizes without affecting display. -->
+    <div id="grid-sizes">
+      <!-- hidden div to create children in. Small hack to determine sizes without affecting display. -->
+    </div>
     <section id="loading-wrapper">
-      <div class="loading-spacer">
-			</div>
+      <div class="loading-spacer"></div>
 			<div class="loading-spacer">
-				<div id="loading">
-					<img class="top" src="/images/loading/loading_T.png" />
+        <div id="loading">
+          <img class="top" src="/images/loading/loading_T.png" />
 					<img class="right" src="/images/loading/loading_R.png" />
 					<img class="bottom" src="/images/loading/loading_B.png" />
 					<img class="left" src="/images/loading/loading_L.png" />
 					<img class="middle" src="/images/loading/loading_M.png" />
 				</div>
 			</div>
-			<div class="loading-spacer">
-			</div>
+			<div class="loading-spacer"></div>
     </section>
     <section id="main" role="main">
         {{ content }}
