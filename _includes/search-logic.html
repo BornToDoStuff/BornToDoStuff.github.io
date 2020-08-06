@@ -86,7 +86,7 @@
 
     function search(){
       var query = searchbox.val();
-      var results = index.search(`${query}^20 ${query}*^5 ${query}~2`);
+      var results = index.search(`${query}^20 ${query}*^5 ${query}~1`);
       searchResults.empty();
       $("body").addClass("loading");
       $('#main').hide();
@@ -114,7 +114,7 @@
         absolute: false
       });
 
-      $("body").delay(200).removeClass("loading");
+      $("body").removeClass("loading");
     }
 
     function unsearch(){
