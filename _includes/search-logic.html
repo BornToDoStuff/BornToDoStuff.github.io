@@ -103,7 +103,7 @@
 
       $("#search-results magic-item").each(function(){setItemHeight($(this))});
 
-      var $searchGrid = $('section#search-results').masonry({
+      var $searchGrid = $("section#search-results").masonry({
         columnWidth: 'magic-item',
         itemSelector: 'magic-item',
         fitWidth: true,
@@ -111,9 +111,10 @@
         gutter: 15,
         stagger: 0
       });
+      $searchGrid.masonry();
       //$("#search-results").width($("#main").width()); //set to main width under assumption it will be the same width so it is less likely to "flash"
 
-      $('section#main').infiniteScroll('destroy'); //$grid is from the main page.
+      $("section#main").infiniteScroll("destroy"); //$grid is from the main page.
 
       $("body").removeClass("loading");
     }
