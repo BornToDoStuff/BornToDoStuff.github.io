@@ -1,5 +1,8 @@
-.loading #main-wrapper, .loading #search-results{
+.loading #main-wrapper{
 	visibility: hidden;
+}
+.loading #search-results {
+	margin-left: 9999px; //move element off screen instead of hiding it to allow it to undergo layout (needs to be visible for plugin to do layout)
 }
 // .loading #loading-wrapper{
 // 	opacity: 1;
