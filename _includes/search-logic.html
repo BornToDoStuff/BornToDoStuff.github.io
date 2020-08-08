@@ -115,7 +115,10 @@
 
       $("section#main").infiniteScroll("destroy"); //$grid is from the main page.
 
-      $("body").removeClass("loading");
+      $("body").delay(getRandom(1200,2200)).removeClass("loading");
+    }
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) ) + min;
     }
 
     function unsearch(){
