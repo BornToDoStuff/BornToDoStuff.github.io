@@ -8,19 +8,6 @@ layout: default
     <div id="grid-sizes">
       <!-- hidden div to create children in. Small hack to determine sizes without affecting display. -->
     </div>
-    <section id="loading-wrapper">
-      <div class="loading-spacer"></div>
-			<div class="loading-spacer">
-        <div id="loading">
-          <img class="top" src="/images/loading/loading_T.png" />
-					<img class="right" src="/images/loading/loading_R.png" />
-					<img class="bottom" src="/images/loading/loading_B.png" />
-					<img class="left" src="/images/loading/loading_L.png" />
-					<img class="middle" src="/images/loading/loading_M.png" />
-				</div>
-			</div>
-			<div class="loading-spacer"></div>
-    </section>
     <section id="main" role="main">
         {{ content }}
     </section>
@@ -56,6 +43,7 @@ layout: default
       if (description.scrollHeight > description.clientHeight)
         $(ele).addClass("show-more");
     }
+    var resizeNav = setTimeout(function, milliseconds);
 
     $(document).ready(function () {
       $("#main magic-item").each(function(){setItemHeight($(this))});
@@ -78,10 +66,13 @@ layout: default
     });
 
     $(window).on("resize", function(){
-        $("#main-nav").width($("#main").width());
+      clearTimeout(resizeNav);
+      resizeNav = setTimeout(resizeNavigation, 50);
     });
 
-
+    function resizeNavigation() {
+      $("#main-nav").width($("#main").width());
+    }
     function setupScroll(grid, masonry){
       grid.infiniteScroll({
         path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},

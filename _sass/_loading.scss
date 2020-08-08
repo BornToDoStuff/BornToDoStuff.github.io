@@ -4,11 +4,12 @@
 // .loading #search-results {
 // 	opacity: 0; //move element off screen instead of hiding it to allow it to undergo layout (needs to be visible for plugin to do layout)
 // }
-// .loading #loading-wrapper{
-// 	opacity: 1;
-// 	pointer-events: auto;
-// 	animation-play-state: running!important;
-// }
+.loading #loading-wrapper{
+	opacity: 1;
+	display: auto;
+	pointer-events: auto;
+	animation-play-state: running!important;
+}
 
 
 #loading-wrapper {
@@ -26,6 +27,7 @@
 	transition: opacity 0.2s ease;
 
 	opacity: 0;
+	display: none;
 	user-select: none;
 	pointer-events: none;
 }
@@ -55,7 +57,6 @@
     width: 250px;
     margin: 50px auto;
     position: relative;
-		animation: loading_expand 4s cubic-bezier(.23,-0.25,.74,1.25) 2.5s infinite normal;
 		filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5));
 }
 #loading-logo > img {
@@ -108,6 +109,20 @@
 	animation: loading_spin 4s cubic-bezier(.23,-0.25,.77,1.25) 2.67s infinite normal;
 }
 
+.short {
+	#loading-logo > .top, #loading-logo > .right, #loading-logo > .bottom, #loading-logo > .left {
+		animation: loading_expandv2_short 1.3s cubic-bezier(.23,-0.25,.77,1.25) 02 infinite normal!important;
+	}
+
+	#loading-logo > .middle {
+		animation: loading_spin_short 1s cubic-bezier(.23,-0.25,.77,1.25) 0s infinite normal!important;
+	}
+
+	#loading-logo {
+		animation: none!important;
+	}
+}
+
 // #loading-logo, #loading-logo > * {
 // 	animation-play-state: paused!important;
 // }
@@ -151,6 +166,14 @@
 	25.01% {transform: rotate(0deg);}
 	100% {transform: rotate(0deg);}
 }
+@keyframes loading_spin_short {
+  0% {transform: rotate(0deg);}
+	5% {transform: rotate(0deg);}
+	60% {transform: rotate(360deg);}
+	99.99% {transform: rotate(360deg);}
+	100% {transform: rotate(0deg);}
+}
+
 @keyframes loading_expand {
 	0% {
 		width: 250px;
@@ -175,5 +198,44 @@
 	100% {
 		width: 250px;
 		height: 250px;
+	}
+}
+
+@keyframes loading_expandv2_short {
+  0% {
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+	}
+	5% {
+		top: 2px;
+		right: 2px;
+		bottom: 2px;
+		left: 2px;
+	}
+	37.5% {
+		top: -25px;
+		right: -25px;
+		bottom: -25px;
+		left: -25px;
+	}
+	60% {
+		top: 2px;
+		right: 2px;
+		bottom: 2px;
+		left: 2px;
+	}
+  75% {
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
+	}
+	100% {
+		top: 0px;
+		right: 0px;
+		bottom: 0px;
+		left: 0px;
 	}
 }

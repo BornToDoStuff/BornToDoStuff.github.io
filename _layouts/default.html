@@ -20,8 +20,33 @@
 	<link rel="stylesheet" type="text/css" href="/css/styles.css?version=2.3.6" />
 
   </head>
-  <body class="loading" onload="document.body.classList.remove('loading')">
+  <body class="loading" onload="stopLoading()">
+  	<script>
+  		function stopLoading() {
+  			if (sessionStorage.getItem("firstLoad")) {
+  				document.body.classList.remove('loading');
+  			}
+  			else {
+  				setTimeout(function() {document.body.classList.remove('loading')}, 2000);
+  				sessionStorage.setItem("firstLoad", "true");
+  			}
+  		}
+  	</script>
     {% include navigation.html %}
+    
+    <div id="loading-wrapper">
+      <div class="loading-spacer"></div>
+      <div class="loading-spacer">
+        <div id="loading-logo">
+          <img class="top" src="/images/loading/loading_T.png" />
+          <img class="right" src="/images/loading/loading_R.png" />
+          <img class="bottom" src="/images/loading/loading_B.png" />
+          <img class="left" src="/images/loading/loading_L.png" />
+          <img class="middle" src="/images/loading/loading_M.png" />
+        </div>
+      </div>
+      <div class="loading-spacer"></div>
+    </div>
 
     {{content}}
 
