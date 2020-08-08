@@ -4,7 +4,7 @@
 // .loading #search-results {
 // 	opacity: 0; //move element off screen instead of hiding it to allow it to undergo layout (needs to be visible for plugin to do layout)
 // }
-.loading #loading-wrapper{
+.loading #loading-wrapper, .searching #loading-wrapper{
 	opacity: 1;
 	pointer-events: auto;
 	animation-play-state: running!important;
@@ -22,7 +22,7 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 100;
-	transition: opacity 0.2s ease 0.2s;
+	transition: opacity 0.2s ease 0.4s;
 
 	opacity: 0;
 	display: flex;
