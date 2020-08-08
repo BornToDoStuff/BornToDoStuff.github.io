@@ -6,7 +6,7 @@
 // }
 .loading #loading-wrapper{
 	opacity: 1;
-	display: auto;
+	display: flex;
 	pointer-events: auto;
 	animation-play-state: running!important;
 }
@@ -19,7 +19,6 @@
 	bottom: 0px;
 	left: 0px;
 	overflow: hidden;
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -109,7 +108,7 @@
 	animation: loading_spin 4s cubic-bezier(.23,-0.25,.77,1.25) 2.67s infinite normal;
 }
 
-.short {
+#loading-wrapper.short {
 	#loading-logo > .top, #loading-logo > .right, #loading-logo > .bottom, #loading-logo > .left {
 		animation: loading_expandv2_short 1.3s cubic-bezier(.23,-0.25,.77,1.25) 02 infinite normal!important;
 	}
