@@ -43,7 +43,7 @@ layout: default
       if (description.scrollHeight > description.clientHeight)
         $(ele).addClass("show-more");
     }
-    var resizeNav = setTimeout(function, milliseconds);
+    var resizeNav;
 
     $(document).ready(function () {
       $("#main magic-item").each(function(){setItemHeight($(this))});
