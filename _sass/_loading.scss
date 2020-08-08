@@ -30,20 +30,6 @@
 	pointer-events: none;
 }
 
-#loading-wrapper.short {
-	#loading-logo > .top, #loading-logo > .right, #loading-logo > .bottom, #loading-logo > .left {
-		animation: loading_expandv2_short 1.3s cubic-bezier(.23,-0.25,.77,1.25) 02 infinite normal!important;
-	}
-
-	#loading-logo > .middle {
-		animation: loading_spin_short 1s cubic-bezier(.23,-0.25,.77,1.25) 0s infinite normal!important;
-	}
-
-	#loading-logo {
-		animation: none!important;
-	}
-}
-
 .loading-spacer {
     flex: 1 1 auto;
     width: 100vw;
@@ -124,6 +110,20 @@
 // #loading-logo, #loading-logo > * {
 // 	animation-play-state: paused!important;
 // }
+
+#loading-wrapper.short {
+	#loading-logo > .top, #loading-logo > .right, #loading-logo > .bottom, #loading-logo > .left {
+		animation: loading_expandv2_short 1.3s cubic-bezier(.23,-0.25,.77,1.25) 0s infinite normal!important;
+	}
+
+	#loading-logo > .middle {
+		animation: loading_spin_short 1.3s cubic-bezier(.23,-0.25,.77,1.25) 0s infinite normal!important;
+	}
+
+	#loading-logo {
+		animation: none!important;
+	}
+}
 
 
 @keyframes loading_flashing {
