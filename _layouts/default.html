@@ -17,10 +17,10 @@
 	<!--<link href="https://fonts.googleapis.com/css?family=Amethysta" rel="stylesheet">-->
 	<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/css/styles.css?version=2.3.12" />
+	<link rel="stylesheet" type="text/css" href="/css/styles.css?version=2.3.13" />
 
   </head>
-  <body onload="stopLoading()">
+  <body class="loading" onload="stopLoading()">
     {% include navigation.html %}
 
     <div id="loading-wrapper" class="short">
@@ -37,15 +37,15 @@
       <div class="loading-spacer"></div>
 
       <script>
-        document.addEventListener("DOMContentLoaded", function(){
-          document.body.classList.add('loading');      
-        });
+        // document.addEventListener("DOMContentLoaded", function(){
+        //   document.body.classList.add('loading');
+        // });
         function stopLoading() {
           if (sessionStorage.getItem("firstLoad")) {
             document.body.classList.remove('loading');
           }
           else {
-            setTimeout(function() {document.body.classList.remove('loading')}, 2000);
+            setTimeout(function() {document.body.classList.remove('loading')}, 500);
             sessionStorage.setItem("firstLoad", "true");
           }
         }

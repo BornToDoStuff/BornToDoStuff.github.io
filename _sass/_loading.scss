@@ -4,11 +4,26 @@
 // .loading #search-results {
 // 	opacity: 0; //move element off screen instead of hiding it to allow it to undergo layout (needs to be visible for plugin to do layout)
 // }
-.loading #loading-wrapper, .searching #loading-wrapper{
+.loading #navigation-fixed,
+.searching #navigation-fixed {
+	visibility: hidden;
+}
+.loading #loading-wrapper,
+.searching #loading-wrapper{
+	background: $backgroundMedium;
 	opacity: 1;
 	pointer-events: auto;
 	animation-play-state: running!important;
 }
+.loading .loading-spacer,
+.searching .loading-spacer{
+	opacity: 1;
+}
+
+#main-nav > * { transition: transform 0.3s ease; }
+.loading #main-nav > * { transform: translateX(300px); }
+.loading #main-nav > *:first-child { transform: translateX(-300px); }
+
 
 
 #loading-wrapper {
@@ -22,19 +37,24 @@
 	justify-content: center;
 	align-items: center;
 	z-index: 100;
-	transition: opacity 0.2s ease 0.4s;
+	transition: opacity 0.3s ease 0.2s, background 0.5s ease-in;
+	background: none;
 
-	opacity: 0;
 	display: flex;
 	user-select: none;
 	pointer-events: none;
 }
+	.loading #loading-wrapper {
+		transition: opacity 0.2s ease 0.4s;
+	}
 
 .loading-spacer {
-    flex: 1 1 auto;
-    width: 100vw;
-		background: rgba(0,0,0,0.5);
-		pointer-events: none;
+	opacity: 0;
+  flex: 1 1 auto;
+  width: 100vw;
+	background: rgba(0,0,0,0.5);
+	pointer-events: none;
+	transition: opacity 0.3s ease 0.2s;
 }
 
 .loading-spacer:nth-child(2) {
