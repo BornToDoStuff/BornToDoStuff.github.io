@@ -74,6 +74,7 @@
       searchResults.empty();
 
       if (results.length) {
+        var item_cache = $.get("/data/search-index.min.json").items;
         searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
       }
       else {
@@ -134,7 +135,7 @@
   }
 
   function getIndex(){
-    const endpoint = "/data/search-index.json";
+    const endpoint = "/data/search-index.min.json";
     const key = "search-index";
 
     let index = sessionStorage.getItem(key);
