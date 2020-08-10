@@ -140,7 +140,20 @@
     let index = sessionStorage.getItem(key);
     if(index){ return JSON.parse(data); }
 
-    var ajaxRequest = $.get(endpoint)
+
+    $.ajax({
+        url: 'Handlers/GetBalance.ashx?type=authenticateRequest',
+        type: 'post',
+        dataType: 'json',
+        cache: false,
+        data: mydata,
+        success: function (data) {
+        },
+        error: function (xhr, status) {
+            console.log(status);
+            console.log(xhr.responseText);
+        }
+    var ajaxRequest = $.get(endpoint, null, null, "text")
       .done(function( item_data ) {
         index = lunr(function () {
           this.ref('ord');
@@ -152,7 +165,7 @@
           this.field("tags", { boost: 5 });
           this.field("searchtext");
 
-          item_data.items.forEach(function (doc) {
+          JSON.parse(item_data).items.forEach(function (doc) {
             this.add(doc);
           }, this);
         });
