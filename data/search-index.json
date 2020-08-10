@@ -1,6 +1,6 @@
 ---
 ---
-//assign loop to forloop.index0 to reference it against the item location
+{% comment %}assign loop to forloop.index0 to reference it against the item location{% endcomment %}
 {% for post in site.posts %}
 {
   "ord" : "{{ forloop.index0 }}",
