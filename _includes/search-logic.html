@@ -1,6 +1,4 @@
 
-<script src="/js/search-index.js"></script>
-
 <script>
   $(document).ready(function() {
     var searchbox = $('#search');
@@ -162,8 +160,9 @@
         sessionStorage.setItem(key, JSON.stringify(index));
         return index;
       })
-      .fail(function() {
-        console.log("error during ajax call to retrieve search index");
+      .fail(function( data ) {
+        console.log("error during ajax call to retrieve search index. This is the data:");
+        console.log(data);
       });
   }
 </script>
