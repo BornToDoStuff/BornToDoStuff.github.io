@@ -140,19 +140,6 @@
     let index = sessionStorage.getItem(key);
     if(index){ return JSON.parse(data); }
 
-
-    $.ajax({
-        url: 'Handlers/GetBalance.ashx?type=authenticateRequest',
-        type: 'post',
-        dataType: 'json',
-        cache: false,
-        data: mydata,
-        success: function (data) {
-        },
-        error: function (xhr, status) {
-            console.log(status);
-            console.log(xhr.responseText);
-        }
     var ajaxRequest = $.get(endpoint, null, null, "text")
       .done(function( item_data ) {
         index = lunr(function () {
