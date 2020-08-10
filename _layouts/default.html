@@ -17,7 +17,7 @@
 	<!--<link href="https://fonts.googleapis.com/css?family=Amethysta" rel="stylesheet">-->
 	<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/css/styles.css?version=2.4" />
+	<link rel="stylesheet" type="text/css" href="/css/styles.css?version=2.4.1" />
 
   </head>
   <body onload="stopLoading()">
@@ -55,22 +55,10 @@
 
     {{content}}
 
-
-    var jqxhr = $.get( "example.php", function() {
-      alert( "success" );
-    })
-      .done(function() {
-        alert( "second success" );
-      })
-      .fail(function() {
-        alert( "error" );
-      })
-      .always(function() {
-        alert( "finished" );
-      });
-      <div>
-        <script src="{{ site.baseurl }}/js/scripts.js"></script>
-        {% include inline-scripts.html %}
-      </div>
+    <div>
+      <script src="{{ site.baseurl }}/js/scripts.js"></script>
+      {% include inline-scripts.html %}
+      {% include search-logic.html %}
+    </div>
   </body>
 </html>

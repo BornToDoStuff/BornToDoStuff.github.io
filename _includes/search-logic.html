@@ -50,13 +50,17 @@
     `;
   }
 
-    // $("#search-btn").on("click", function(){
-    //   if (searchbox.val() == "") { unsearch(); }
-    //   else{ search(); }
-    // });
-    $("#search-clear").on("click", function(){
-       unsearch();
+    $("#search-form").submit(function(e){
+      if (searchbox.val() == "") {
+        $("#search-form").css("width", "0px");
+        e.preventDefault();
+        return false;
+      }
     });
+
+    // $("#search-clear").on("click", function(){
+    //    unsearch();
+    // });
     // searchbox.on('keyup', function (e) {
     //     if (e.keyCode == 13) { search(); }
     //     if (searchbox.val() == "") { unsearch(); }

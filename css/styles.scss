@@ -118,8 +118,9 @@ a#TippyTop {
 
 #grid-sizes {
 	position: absolute;
+	top: -10000px;
 	visibility: hidden;
-	z-index: -999999;
+	pointer-events: none;
 }
 
 section#main, section#search-results {
