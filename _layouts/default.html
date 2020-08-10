@@ -17,10 +17,10 @@
 	<!--<link href="https://fonts.googleapis.com/css?family=Amethysta" rel="stylesheet">-->
 	<link href="https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="/css/styles.css?version=2.3.13" />
+	<link rel="stylesheet" type="text/css" href="/css/styles.css?version=2.4" />
 
   </head>
-  <body class="loading" onload="stopLoading()">
+  <body onload="stopLoading()">
     {% include navigation.html %}
 
     <div id="loading-wrapper" class="short">
@@ -37,15 +37,16 @@
       <div class="loading-spacer"></div>
 
       <script>
-        // document.addEventListener("DOMContentLoaded", function(){
-        //   document.body.classList.add('loading');
-        // });
+        if (!sessionStorage.getItem("firstLoad")) {
+          document.body.classList.add('loading');
+        }
+
         function stopLoading() {
           if (sessionStorage.getItem("firstLoad")) {
             document.body.classList.remove('loading');
           }
           else {
-            setTimeout(function() {document.body.classList.remove('loading')}, 500);
+            setTimeout(function() {document.body.classList.remove('loading')}, 1000);
             sessionStorage.setItem("firstLoad", "true");
           }
         }
@@ -54,5 +55,22 @@
 
     {{content}}
 
+
+    var jqxhr = $.get( "example.php", function() {
+      alert( "success" );
+    })
+      .done(function() {
+        alert( "second success" );
+      })
+      .fail(function() {
+        alert( "error" );
+      })
+      .always(function() {
+        alert( "finished" );
+      });
+      <div>
+        <script src="{{ site.baseurl }}/js/scripts.js"></script>
+        {% include inline-scripts.html %}
+      </div>
   </body>
 </html>
