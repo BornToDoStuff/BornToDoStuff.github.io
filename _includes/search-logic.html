@@ -69,7 +69,7 @@
       $('#main').hide();
 
       var query = searchbox.val();
-      var index = getIndex();
+      var index = lunr.Index.load(getIndex());
       var results = index.search(`${query}^20 ${query}*^5 ${query}~1`);
       searchResults.empty();
 
