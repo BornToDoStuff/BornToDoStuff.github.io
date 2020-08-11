@@ -87,6 +87,9 @@
           .fail(function( data ) {
             console.log("error during ajax call to retrieve search index for item cache. This is the data:");
             console.log(data);
+
+            searchResults.html("<magic-item style='margin:auto'><item-title><a>There was an issue while searching the tomes. Please try again in a minute or two.</item-description></magic-item>")
+            document.body.classList.remove('searching');
           })
           .always(function() {
             history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
@@ -179,6 +182,9 @@
       .fail(function( data ) {
         console.log("error during ajax call to retrieve search index. This is the data:");
         console.log(data);
+
+        searchResults.html("<magic-item style='margin:auto'><item-title><a>There was an issue while searching the tomes. Please try again in a minute or two.</item-description></magic-item>")
+        document.body.classList.remove('searching');
       });
   }
 </script>
