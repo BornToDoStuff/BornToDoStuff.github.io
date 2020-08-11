@@ -74,9 +74,9 @@
       searchResults.empty();
 
       if (results.length) {
-        $.get("/data/search-index.min.json")
-          .done(function( item_data) {
-            item_cache = item_data.items;
+        $.get("/data/search-index.min.json", null, null, "text")
+          .done(function(item_data) {
+            item_cache = JSON.parse(item_data).items;
             searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
           })
           .fail(function( data ) {
