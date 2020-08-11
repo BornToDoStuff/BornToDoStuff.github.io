@@ -84,7 +84,7 @@
             console.log("error during ajax call to retrieve search index for item cache. This is the data:");
             console.log(data);
           })
-          .finally(function() {
+          .always(function() {
             history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
 
             $("#search-results magic-item").each(function(){setItemHeight($(this))});
