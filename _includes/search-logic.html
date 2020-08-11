@@ -19,7 +19,7 @@
       if (description.scrollHeight > description.clientHeight)
         $(ele).addClass("show-more");
     }
-
+    var item_cache = [];
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
     const itemTemplate = function(result) {
       var item = item_cache[result.ref];
@@ -74,8 +74,16 @@
       searchResults.empty();
 
       if (results.length) {
-        var item_cache = $.get("/data/search-index.min.json").items;
-        searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
+        $.get("/data/search-index.min.json")
+          .done(function( item_data) {
+            item_cache = item_data.items;
+            searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
+          })
+          .fail(function( data ) {
+            console.log("error during ajax call to retrieve search index for item cache. This is the data:");
+            console.log(data);
+          });
+
       }
       else {
         searchResults.html("<magic-item><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
