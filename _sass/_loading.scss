@@ -68,6 +68,9 @@
 	.loading .loading-spacer, .searching .loading-spacer {
 		transition: none;
 	}
+	.searching #search-form{
+		transition: none;
+	}
 
 #loading_text {
 	position: absolute;

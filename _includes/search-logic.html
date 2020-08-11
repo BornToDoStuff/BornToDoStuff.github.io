@@ -25,28 +25,28 @@
       var item = item_cache[result.ref];
 
       return `<magic-item id="${item.id}" class="${item.rarity.toLowerCase().replace(' ', '-')} ${item.attunement ? 'attunement' : ''}">
-        <item-head>
-          <item-title>
-            <a href="${item.url}">${item.title}</a>
-            <item-tagline>${item.category}, ${item.rarity.toLowerCase()} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
-          </item-title>
-          <item-extras aria-hidden="true">
-      			<div class="rarity"><img src="/images/rarities.png" title="${item.rarity.toLowerCase()}" /></div>
-      		</item-extras>
-        </item-head>
+          <item-head>
+            <item-title>
+              <a href="${item.url}">${item.title}</a>
+              <item-tagline>${item.category}, ${item.rarity.toLowerCase()} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
+            </item-title>
+            <item-extras aria-hidden="true">
+        			<div class="rarity"><img src="/images/rarities.png" title="${item.rarity.toLowerCase()}" /></div>
+        		</item-extras>
+          </item-head>
 
-        <item-description>
-      		${item.content}
-      	</item-description>
+          <item-description>
+        		${item.content}
+        	</item-description>
 
-        <a href="${item.url}" class="read-more">
-    			<div class="expander">
-    				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
-    			</div>
-    		</a>
-      </magic-item>
-    `;
-  }
+          <a href="${item.url}" class="read-more">
+      			<div class="expander">
+      				<span class="dot"></span><span class="dot"></span><span class="dot"></span>
+      			</div>
+      		</a>
+        </magic-item>
+      `;
+    }
 
     $("#search-form").submit(function(e){
       if (searchbox.val() == "") {
@@ -67,6 +67,10 @@
     function search(){
       $("body").addClass("searching");
       $('#main').hide();
+      $("section#main").infiniteScroll("destroy");
+
+      searchbox.val(searchParams.get("q"));
+      searchform.css("width", "100%");
 
       var query = searchbox.val();
       var index = lunr.Index.load(getIndex());
@@ -96,7 +100,7 @@
               gutter: 15,
               stagger: 0
             });
-            $("section#main").infiniteScroll("destroy"); //$grid is from the main page.
+             //$grid is from the main page.
 
             setTimeout(function() {document.body.classList.remove('searching')}, getRandom(1100,1800));
           });
@@ -115,7 +119,11 @@
       $('#main').show();
       searchbox.val("");
       searchResults.empty();
+
+      searchform.addClass("no-transition");
       searchform.css("width","0px");
+      searchform[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
+      searchform.removeClass("no-transition");
 
       setupScroll($('section#main'), $('section#main').data('masonry')); //$grid is from the main page.
     }
@@ -123,8 +131,8 @@
     var searchParams = new URLSearchParams(window.location.search);
     if (searchParams.get("q") && searchParams.get("q") !== null)
     {
-      searchbox.val(searchParams.get("q"));
-      searchform.css("width", "100%");
+
+
       search();
     }
 
