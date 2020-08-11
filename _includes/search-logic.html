@@ -5,6 +5,8 @@
     var searchResults = $('#search-results');
     var searchform = $("#search-form");
 
+    var errorMessage = "<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>"
+
     var heights = ["","tall", "taller", "tallest"];
     var sizes = $("#grid-sizes item-description");
 
@@ -72,47 +74,54 @@
       searchbox.val(searchParams.get("q"));
       searchform.css("width", "100%");
 
-      var query = searchbox.val();
-      var index = lunr.Index.load(getIndex());
-      var results = index.search(`${query}^20 ${query}*^5 ${query}~1`);
-      searchResults.empty();
+      try {
+        var query = searchbox.val();
+        var index = lunr.Index.load(getIndex());
+        var results = index.search(`${query}^20 ${query}*^5 ${query}~1`);
+        searchResults.empty();
 
-      var search_ajax;
-      if (results.length) {
-        search_ajax = $.get("/data/search-index.min.json", null, null, "text")
-          .done(function(item_data) {
-            item_cache = JSON.parse(item_data).items;
-            searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
-          })
-          .fail(function( data ) {
-            console.log("error during ajax call to retrieve search index for item cache. This is the data:");
-            console.log(data);
-          })
-          .always(function() {
-            history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
+        var search_ajax;
+        if (results.length) {
+          search_ajax = $.get("/data/search-index.min.json", null, null, "text")
+            .done(function(item_data) {
+              item_cache = JSON.parse(item_data).items;
+              searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
+            })
+            .fail(function( data ) {
+              console.log("error during ajax call to retrieve search index for item cache. This is the data:");
+              console.log(data);
 
-            $("#search-results magic-item").each(function(){setItemHeight($(this))});
-            var $searchGrid = $("section#search-results").masonry({
-              columnWidth: 'magic-item',
-              itemSelector: 'magic-item',
-              fitWidth: true,
-              horizontalOrder: true,
-              gutter: 15,
-              stagger: 0
+              searchResults.html(errorMessage);
+              document.body.classList.remove('searching');
+            })
+            .always(function() {
+              history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
+
+              $("#search-results magic-item").each(function(){setItemHeight($(this))});
+              var $searchGrid = $("section#search-results").masonry({
+                columnWidth: 'magic-item',
+                itemSelector: 'magic-item',
+                fitWidth: true,
+                horizontalOrder: true,
+                gutter: 15,
+                stagger: 0
+              });
+               //$grid is from the main page.
+
+              setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
             });
-             //$grid is from the main page.
-
-            setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
-          });
+        }
+        else {
+          searchResults.html("<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
+          setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
+        }
       }
-      else {
-        searchResults.html("<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
-        setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
-      }
+      catch(err){
+        console.log(err);
 
-    }
-    function getRandom(min, max) {
-      return Math.floor(Math.random() * (max - min + 1) ) + min;
+        searchResults.html(errorMessage);
+        document.body.classList.remove('searching');
+      }
     }
 
     function unsearch(){
@@ -137,6 +146,10 @@
     }
 
   });
+
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
 
   async function getDocument(endpoint, key){
     let data = sessionStorage.getItem(key);     // First check if there's data in SessionStorage
@@ -179,6 +192,9 @@
       .fail(function( data ) {
         console.log("error during ajax call to retrieve search index. This is the data:");
         console.log(data);
+
+        searchResults.html(errorMessage);
+        document.body.classList.remove('searching');
       });
   }
 </script>
