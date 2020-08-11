@@ -106,15 +106,12 @@
                 gutter: 15,
                 stagger: 0
               });
-               //$grid is from the main page.
-
-              setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
-            });
-        }
-        else {
-          searchResults.html("<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
-          setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
-        }
+            }
+          }
+          else {
+            searchResults.html("<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
+            setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
+          }
       }
       catch(err){
         console.log(err);
