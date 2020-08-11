@@ -73,8 +73,9 @@
       var results = index.search(`${query}^20 ${query}*^5 ${query}~1`);
       searchResults.empty();
 
+      var search_ajax;
       if (results.length) {
-        $.get("/data/search-index.min.json", null, null, "text")
+        search_ajax = $.get("/data/search-index.min.json", null, null, "text")
           .done(function(item_data) {
             item_cache = JSON.parse(item_data).items;
             searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
@@ -82,31 +83,29 @@
           .fail(function( data ) {
             console.log("error during ajax call to retrieve search index for item cache. This is the data:");
             console.log(data);
-          });
+          })
+          .finally(function() {
+            history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
 
+            $("#search-results magic-item").each(function(){setItemHeight($(this))});
+            var $searchGrid = $("section#search-results").masonry({
+              columnWidth: 'magic-item',
+              itemSelector: 'magic-item',
+              fitWidth: true,
+              horizontalOrder: true,
+              gutter: 15,
+              stagger: 0
+            });
+            $("section#main").infiniteScroll("destroy"); //$grid is from the main page.
+
+            setTimeout(function() {document.body.classList.remove('searching')}, getRandom(1100,1800));
+          });
       }
       else {
-        searchResults.html("<magic-item><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
+        searchResults.html("<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
+        setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
       }
 
-      /* replace URL so current search is saved but it does not create a large history stack */
-      history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
-
-      $("#search-results magic-item").each(function(){setItemHeight($(this))});
-
-      var $searchGrid = $("section#search-results").masonry({
-        columnWidth: 'magic-item',
-        itemSelector: 'magic-item',
-        fitWidth: true,
-        horizontalOrder: true,
-        gutter: 15,
-        stagger: 0
-      });
-      //$("#search-results").width($("#main").width()); //set to main width under assumption it will be the same width so it is less likely to "flash"
-
-      $("section#main").infiniteScroll("destroy"); //$grid is from the main page.
-
-      setTimeout(function() {document.body.classList.remove('searching')}, getRandom(1100,1800));
     }
     function getRandom(min, max) {
       return Math.floor(Math.random() * (max - min + 1) ) + min;
