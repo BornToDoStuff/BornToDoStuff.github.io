@@ -86,13 +86,14 @@
             .done(function(item_data) {
               item_cache = JSON.parse(item_data).items;
               searchResults.html(results.slice(0, 50).map(itemTemplate).join(''));
+              setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
             })
             .fail(function( data ) {
               console.log("error during ajax call to retrieve search index for item cache. This is the data:");
               console.log(data);
 
               searchResults.html(errorMessage);
-              document.body.classList.remove('searching');
+              setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
             })
             .always(function() {
               history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
@@ -106,7 +107,9 @@
                 gutter: 15,
                 stagger: 0
               });
-            }
+
+              setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
+            });
           }
           else {
             searchResults.html("<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
@@ -117,7 +120,7 @@
         console.log(err);
 
         searchResults.html(errorMessage);
-        document.body.classList.remove('searching');
+        setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
       }
     }
 
@@ -191,7 +194,7 @@
         console.log(data);
 
         searchResults.html(errorMessage);
-        document.body.classList.remove('searching');
+        setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
       });
   }
 </script>
