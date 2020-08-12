@@ -8,7 +8,7 @@
 	right: 0px;
 	line-height: 60px;
 	box-shadow: 1px 1px 3px rgba(0,0,0,.2);
-  border-bottom: 2px solid $bluakMedium;
+  border-bottom: 2px solid $bluakDark;
 }
   #navbar a {
     text-decoration: none;
@@ -89,7 +89,7 @@
     left: 0;
     right: 0;
     background: $backgroundLight;
-    border-bottom: 2px solid $bluakMedium;
+    border-bottom: 2px solid $bluakDark;
 
     & > li {
       width: 100%;

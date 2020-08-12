@@ -299,7 +299,7 @@ a.read-more {
 	}
 
 	a.read-more:hover .dot {
-		background: rgba(31,76,121,.4);
+		background: rgba(34, 157, 178, 0.5);
 	}
 
 .read-more .expander {
@@ -310,7 +310,7 @@ span.dot {
 	display: inline-block;
 	height: 15px;
 	width: 15px;
-	background: rgba(31,76,121,.2);
+	background: rgba(34, 157, 178, 0.3);
 	transition: background 0.2s;
 	border-radius: 2px;
 	transform: rotate(45deg);
@@ -350,13 +350,12 @@ span.dot {
 	bottom: 25px;
 	right:25px;
 	background: transparent;
-	border: 5px solid black;
+	border: 5px solid $bluakDark;
 	box-sizing: border-box;
 	width: 30px;
 	height: 30px;
 	border-radius: 4px;
 	transform: rotate(45deg);
-	/* padding: 5px; */
 	display: block;
 	opacity: 0;
 	text-decoration: none;
@@ -364,7 +363,7 @@ span.dot {
 	filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5));
 }
 	#return-to-top:hover {
-		background: black;
+		background: $bluakDark;
 	}
 
 input:focus {
