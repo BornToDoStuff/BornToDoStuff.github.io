@@ -299,7 +299,7 @@ a.read-more {
 	}
 
 	a.read-more:hover .dot {
-		background: rgba(34, 157, 178, 0.5);
+		background: rgba(98, 157, 167, 0.3);
 	}
 
 .read-more .expander {
@@ -310,7 +310,7 @@ span.dot {
 	display: inline-block;
 	height: 15px;
 	width: 15px;
-	background: rgba(34, 157, 178, 0.3);
+	background: rgba(98, 157, 167, 0.3);
 	transition: background 0.2s;
 	border-radius: 2px;
 	transform: rotate(45deg);
