@@ -30,11 +30,12 @@
   flex: 0 0 auto;
 }
   #navbar-brand {
-    display: flex;
+    display: flex!important;
   }
   #navbar-brand img {
     height: 45px;
     margin: auto;
+    padding-right: 5px;
   }
 
 #navbar-content {
