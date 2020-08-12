@@ -26,9 +26,17 @@
 }
 
 #navbar-header {
-  font-size: 2rem;
+  font-size: 2.4rem;
   flex: 0 0 auto;
 }
+  #navbar-brand {
+    display: flex;
+  }
+  #navbar-brand img {
+    height: 45px;
+    margin: auto;
+  }
+
 #navbar-content {
   margin-left: 25px;
   flex: 1 1 auto;
