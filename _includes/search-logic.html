@@ -43,7 +43,7 @@
 
           <item-details>
             <div class="type">${item.type.toLowerCase()}</div>
-            <div class="subtypes">${item.subtypes.join(', ').toLowerCase()}</div>
+            <div class="subtypes">${item.subtypes ? item.subtypes.join(', ').toLowerCase() : ''}</div>
             <div class="rarity">${item.rarity.toLowerCase()}</div>
             <div class="attunement">${item.attunement ? 'Yes' : ''}</div>
             <div class="curse">${item.curse ? 'Yes' : ''}</div>
