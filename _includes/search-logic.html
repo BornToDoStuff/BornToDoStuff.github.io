@@ -30,7 +30,7 @@
           <item-head>
             <item-title>
               <a href="${item.url}">${item.title}</a>
-              <item-tagline>${item.category}, ${item.rarity.toLowerCase()} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
+              <item-tagline>${item.type}, ${item.rarity.toLowerCase()} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
             </item-title>
             <item-extras aria-hidden="true">
         			<div class="rarity"><img src="/images/rarities.svg" title="${item.rarity.toLowerCase()}" /></div>
@@ -42,7 +42,7 @@
         	</item-description>
 
           <item-details>
-            <div class="type">${item.category.toLowerCase()}</div>
+            <div class="type">${item.type.toLowerCase()}</div>
             <div class="subtypes">${item.subtypes.join(', ').toLowerCase()}</div>
             <div class="rarity">${item.rarity.toLowerCase()}</div>
             <div class="attunement">${item.attunement ? 'Yes' : ''}</div>
