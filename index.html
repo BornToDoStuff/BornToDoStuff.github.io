@@ -13,6 +13,14 @@ layout: home
   		</item-extras>
     </item-head>
 
+    <item-details>
+      <div class="type">{{ post.category | downcase }}</div>
+      <div class="subtypes">{% for subcat in post.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
+      <div class="rarity">{{ post.item_rarity | downcase }}</div>
+      <div class="attunement">{% if post.item_attunement %}Yes{% else %}{% endif %}</div>
+      <div class="cursed">{% if post.item_curse %}Yes{% else %}{% endif %}</div>
+    </item-details>
+
     <item-description>
   		{{ post.content }}
   	</item-description>
