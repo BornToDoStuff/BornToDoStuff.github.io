@@ -24,11 +24,12 @@
   margin: 0px auto;
   transition: width 0.2s ease;
   width: 100%;
+  max-width: $col-single;
 
-  @media screen and (max-width: calc($col-single-padding + (100vw - 100%))) {
+  @include mobile {
     max-width: $col-single;
   }
-  @media screen and (min-width: calc($col-single-padding + (100vw - 100%)) + 1) and (max-width: calc($col-double-padding + (100vw - 100%))) {
+  @include medium {
     max-width: $col-double;
   }
   @include triple {
