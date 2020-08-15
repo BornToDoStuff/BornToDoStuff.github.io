@@ -291,6 +291,7 @@ magic-item.artifact.attunement .rarity img {
 	height: initial!important;
 	width: initial!important;
 	max-width: 750px;
+	flex: 1 1 750px;
 	margin: 0px 15px 25px 15px;
 	font-size: 1.05em;
 }
@@ -299,6 +300,7 @@ magic-item.artifact.attunement .rarity img {
   flex-direction: column;
   text-align: center;
   width: 100px;
+	flex: 0 0 100px;
   background: $backgroundLight;
   padding: 15px 0px;
   box-sizing: border-box;
