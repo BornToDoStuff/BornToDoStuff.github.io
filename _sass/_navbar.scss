@@ -24,12 +24,11 @@
   margin: 0px auto;
   transition: width 0.2s ease;
   width: 100%;
-  max-width: $col-single;
 
-  @include single
+  @include single {
     max-width: $col-single;
   }
-  @include double
+  @include double {
     max-width: $col-double;
   }
   @include triple {
