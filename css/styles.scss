@@ -278,7 +278,7 @@ magic-item.artifact.attunement .rarity img {
 }
 
 #item-wrapper {
-	position: fixed;
+	position: absolute; //need fixed when it becomes modal
   display: flex;
   align-items: flex-start;
   z-index: 102;
