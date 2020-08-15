@@ -65,14 +65,6 @@
         e.preventDefault();
         return false;
       }
-
-      $("#search-show").on("click", function() {
-  			$("#search-form").css("width", "100%");
-  			if ($(window).width() <= 768){
-  				$("#navbar-header").css("width", "0%"); //minimize header if it is a tablet or smaller
-  			}
-  			$("#search").focus();
-  		});
     });
 
     // $("#search-clear").on("click", function(){
