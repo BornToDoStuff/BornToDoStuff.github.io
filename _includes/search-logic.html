@@ -61,9 +61,18 @@
     $("#search-form").submit(function(e){
       if (searchbox.val() == "") {
         $("#search-form").css("width", "0px");
+        $("#navbar-header").css("width", "initial"); //return header to its regular size if it was minimized
         e.preventDefault();
         return false;
       }
+
+      $("#search-show").on("click", function() {
+  			$("#search-form").css("width", "100%");
+  			if ($(window).width() <= 768){
+  				$("#navbar-header").css("width", "0%"); //minimize header if it is a tablet or smaller
+  			}
+  			$("#search").focus();
+  		});
     });
 
     // $("#search-clear").on("click", function(){

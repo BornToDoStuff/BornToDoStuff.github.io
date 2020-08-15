@@ -42,6 +42,7 @@
 #navbar-header {
   font-size: 2.4rem;
   flex: 0 0 auto;
+  overflow: hidden;
 
   @include tiny {
       font-size: 2rem;
@@ -64,6 +65,10 @@
   margin: 0px 5px 0px 25px;
   flex: 1 0 30px;
   position: relative;
+
+  @include small {
+    margin: 0px 5px 0px 0px;
+  }
 }
 
 #navbar ul {
