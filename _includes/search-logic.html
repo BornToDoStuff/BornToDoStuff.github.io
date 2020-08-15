@@ -61,7 +61,7 @@
     $("#search-form").submit(function(e){
       if (searchbox.val() == "") {
         $("#search-form").css("width", "0px");
-        $("#navbar-header").css("transform", "translateX(-110%)"); //return header to its regular size if it was minimized
+        $("#navbar-header").css("transform", "translateX(0%)"); //return header to its regular size if it was minimized
         e.preventDefault();
         return false;
       }
