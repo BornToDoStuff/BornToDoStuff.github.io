@@ -37,8 +37,9 @@
 
 		$("#search-show").on("click", function() {
 			$("#search-form").css("width", "100%");
-			if ($(window).width() <= 768){
-				$("#navbar-header").css("transform", "translateX(-110%)"); //minimize header if it is a tablet or smaller
+			if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
+				$("#navbar-header").css("transform", "translateX(-110%)");
+				$("#navbar-header").css("position", "absolute");
 			}
 			$("#search").focus();
 		});
