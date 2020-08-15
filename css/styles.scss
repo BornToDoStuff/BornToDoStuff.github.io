@@ -277,6 +277,58 @@ magic-item.artifact.attunement .rarity img {
 	top: -200%;
 }
 
+#item-wrapper {
+	position: fixed;
+  display: flex;
+  align-items: flex-start;
+  z-index: 102;
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateX(calc(-50% - 50px));
+}
+#item-wrapper magic-item {
+	position: relative!important;
+	height: initial!important;
+	width: initial!important;
+	max-width: 750px;
+	margin: 0px 15px;
+	font-size: 1.05em;
+}
+#item-menu {
+	display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100px;
+  background: url(subtle_grunge_white.jpg) white;
+  padding: 15px 0px;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 4px;
+  border: 2px solid #40434e;
+  border-left: none;
+  border-right: none;
+  font-size: 0.8em;
+  color: gray;
+}
+	#item-menu img {
+		max-width: 30px;
+    opacity: 0.4;
+    display: block;
+    margin: auto;
+	}
+
+#modal-background {
+	position: fixed;
+	top: 60px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+
+	z-index: 101;
+  background: url(hatching_med.png) rgba(0,0,0,0.7);
+}
+
+
 /*=============== START read-more ===============*/
 
 a.read-more {

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout:
 randomize: true
 title: Randomize
 permalink: /items/random/
@@ -14,7 +14,6 @@ permalink: /items/random/
   }
 
 //get an item that has not been seen in the last 10 randoms to make it APPEAR more random.
-  $(document).ready(function(){
     var r = getRandom();
     var items_visited = sessionStorage.getItem("items_visited");
     if (items_visited) { //if there is any useful value in items_visited
@@ -35,5 +34,4 @@ permalink: /items/random/
     //$("#main").remove();
     //$("#main-wrapper").load(posts[r].url + " #main");
     window.location.href = posts[r].url;
-  });
 </script>
