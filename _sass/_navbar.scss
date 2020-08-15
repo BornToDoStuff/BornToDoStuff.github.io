@@ -25,17 +25,17 @@
   transition: width 0.2s ease;
   width: 100%;
 
-  @include single {
-		max-width: $col-single;
-	}
-  @include double {
-		max-width: $col-double;
-	}
-  @include triple {
-		max-width: $col-triple;
-	}
-  @include quad {
-		max-width: $col-quad;
+  @media screen and (max-width: calc($col-single-padding + (100vw - 100%))) {
+    max-width: $col-single;
+  }
+  @media screen and (min-width: calc($col-single-padding + (100vw - 100%)) + 1) and (max-width: calc($col-double-padding + (100vw - 100%))) {
+    max-width: $col-double;
+  }
+  @media screen and (min-width: calc($col-double-padding + (100vw - 100%)) + 1) and (max-width: calc($col-triple-padding + (100vw - 100%))) {
+    max-width: $col-triple;
+  }
+  @media screen and (min-width: calc($col-triple-padding + (100vw - 100%)) + 1) {
+  	max-width: $col-quad;
 	}
 }
 
