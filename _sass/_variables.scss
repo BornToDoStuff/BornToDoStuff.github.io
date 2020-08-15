@@ -64,8 +64,6 @@ $col-lg: 1200px;
 $item-width: 550px;
 $item-gutter: 15px;
 $wrapper-padding: 50px;
-$scrollbar-width: calc(100vw - 100%);
-
 
 $col-single: $item-width;
 $col-double: ($item-width * 2) + ($item-gutter * 1);
@@ -108,6 +106,7 @@ $col-triple-padding: (($wrapper-padding * 2) + $col-quad - 1px);
     @content;
   }
 }
+
 
 @mixin small {
   @media screen and (max-width: $col-small){
