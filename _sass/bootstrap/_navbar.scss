@@ -22,12 +22,7 @@
   }
 }
 
-
 // Navbar heading
-//
-// Groups `.navbar-brand` and `.navbar-toggle` into a single component for easy
-// styling of responsive aspects.
-
 .navbar-header {
   @include clearfix;
 
@@ -181,45 +176,6 @@
     .navbar > .container-fluid & {
       margin-left: -$navbar-padding-horizontal;
     }
-  }
-}
-
-
-// Navbar toggle
-//
-// Custom button for toggling the `.navbar-collapse`, powered by the collapse
-// JavaScript plugin.
-
-.navbar-toggle {
-  position: relative;
-  float: right;
-  margin-right: $navbar-padding-horizontal;
-  padding: 9px 10px;
-  @include navbar-vertical-align(34px);
-  background-color: transparent;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid transparent;
-  border-radius: $border-radius-base;
-
-  // We remove the `outline` here, but later compensate by attaching `:hover`
-  // styles to `:focus`.
-  &:focus {
-    outline: 0;
-  }
-
-  // Bars
-  .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-  }
-  .icon-bar + .icon-bar {
-    margin-top: 4px;
-  }
-
-  @media (min-width: $grid-float-breakpoint) {
-    display: none;
   }
 }
 
@@ -439,17 +395,6 @@
     }
   }
 
-  .navbar-toggle {
-    border-color: $navbar-default-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: $navbar-default-toggle-icon-bar-bg;
-    }
-  }
-
   .navbar-collapse,
   .navbar-form {
     border-color: $navbar-default-border;
@@ -570,18 +515,6 @@
         color: $navbar-inverse-link-disabled-color;
         background-color: $navbar-inverse-link-disabled-bg;
       }
-    }
-  }
-
-  // Darken the responsive nav toggle
-  .navbar-toggle {
-    border-color: $navbar-inverse-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $navbar-inverse-toggle-hover-bg;
-    }
-    .icon-bar {
-      background-color: $navbar-inverse-toggle-icon-bar-bg;
     }
   }
 

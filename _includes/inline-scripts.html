@@ -149,22 +149,9 @@
     });
 
     var mobileblock = "mobile-menu-block";
-    $("#navbar-toggle").on("click", function() {
-      if ($(window).width() < 768){ /* mobile size */
-        if ($("#" + mobileblock).length > 0){
-          $("#" + mobileblock).remove();
-          $("#navbar-content > ul").slideUp(250);
-        }
-        else {
-          $("#navbar").removeAttr("style");
-          $("body").prepend("<div id='"+ mobileblock +"'></div>");
-          $("#navbar-content > ul").slideDown(250);
-        }
-      }
-    });
+
     $("body").on("click touchend","#" + mobileblock, function() {
       $("#" + mobileblock).remove();
-      $("#navbar-content > ul").slideUp(250);
     });
 
     var timer;

@@ -109,6 +109,11 @@ $col-triple-total: ($wrapper-padding * 2) + $col-quad   + 14px;
   }
 }
 
+@mixin tiny {
+  @media screen and (max-width: $col-xsmall){
+    @content;
+  }
+}
 @mixin small {
   @media screen and (max-width: $col-small){
     @content;
