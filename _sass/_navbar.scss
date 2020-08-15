@@ -14,7 +14,7 @@
     text-decoration: none;
     color: $bluakDark;
     display: block;
-    padding: 0px 15px;
+    padding: 0px 10px;
   }
   #navbar a:first-child { padding-left: 0px; }
   #navbar a:last-child { padding-right: 0px; }
@@ -39,7 +39,7 @@
   }
 
 #navbar-content {
-  margin-left: 0px 10px 0px 25px;
+  margin: 0px 5px 0px 25px;
   flex: 1 1 auto;
   position: relative;
 }
@@ -182,7 +182,7 @@
 		display: block;
 		height: 35px;
 		width: 35px;
-    opacity: 0.8;
+    opacity: 0.6;
 	}
 }
 
@@ -199,7 +199,7 @@
   display: block;
   height: 35px;
   width: 35px;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 #search-results {
