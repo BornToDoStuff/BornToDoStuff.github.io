@@ -67,7 +67,7 @@ $wrapper-padding: 50px;
 $scrollbar-width: calc(100vw - 100%);
 
 
-$col-single: ($item-width * 1) + ($item-gutter * 0);
+$col-single: $item-width;
 $col-double: ($item-width * 2) + ($item-gutter * 1);
 $col-triple: ($item-width * 3) + ($item-gutter * 2);
 $col-quad:   ($item-width * 4) + ($item-gutter * 3);
