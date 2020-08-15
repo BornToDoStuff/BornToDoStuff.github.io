@@ -72,9 +72,13 @@ $col-double: ($item-width * 2) + ($item-gutter * 1);
 $col-triple: ($item-width * 3) + ($item-gutter * 2);
 $col-quad:   ($item-width * 4) + ($item-gutter * 3);
 
-$col-single-total: calc((($wrapper-padding * 2) + $col-double - 1px) + (100vw - 100%));
-$col-double-total: calc((($wrapper-padding * 2) + $col-triple - 1px) + (100vw - 100%));
-$col-triple-total: calc((($wrapper-padding * 2) + $col-quad - 1px) + (100vw - 100%));
+$col-single-padding: (($wrapper-padding * 2) + $col-double - 1px);
+$col-double-padding: (($wrapper-padding * 2) + $col-triple - 1px);
+$col-triple-padding: (($wrapper-padding * 2) + $col-quad - 1px);
+
+$col-single-total: calc($col-single-padding + (100vw - 100%));
+$col-double-total: calc($col-double-padding + (100vw - 100%));
+$col-triple-total: calc($col-triple-padding + (100vw - 100%));
 
 @mixin single {
   @media screen and (max-width: $col-single-total) {
