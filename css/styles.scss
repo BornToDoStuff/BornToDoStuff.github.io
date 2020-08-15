@@ -291,7 +291,7 @@ magic-item.artifact.attunement .rarity img {
 	height: initial!important;
 	width: initial!important;
 	max-width: 750px;
-	margin: 0px 15px;
+	margin: 0px 15px 25px 15px;
 	font-size: 1.05em;
 }
 #item-menu {
@@ -299,7 +299,7 @@ magic-item.artifact.attunement .rarity img {
   flex-direction: column;
   text-align: center;
   width: 100px;
-  background: url(subtle_grunge_white.jpg) white;
+  background: $backgroundLight;
   padding: 15px 0px;
   box-sizing: border-box;
   position: relative;
