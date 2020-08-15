@@ -64,33 +64,35 @@ $col-lg: 1200px;
 $item-width: 550px;
 $item-gutter: 15px;
 $wrapper-padding: 50px;
+$scrollbar-width: calc(100vw - 100%);
+
 
 $col-single: $item-width;
 $col-double: ($item-width * 2) + ($item-gutter * 1);
 $col-triple: ($item-width * 3) + ($item-gutter * 2);
 $col-quad:   ($item-width * 4) + ($item-gutter * 3);
 
-$col-single-padding: (($wrapper-padding * 2) + $col-double - 1px);
-$col-double-padding: (($wrapper-padding * 2) + $col-triple - 1px);
-$col-triple-padding: (($wrapper-padding * 2) + $col-quad - 1px);
+$col-single-total: calc(#{($wrapper-padding * 2) + $col-double - 1px} + (100vw - 100%));
+$col-double-total: calc(#{($wrapper-padding * 2) + $col-triple - 1px} + (100vw - 100%));
+$col-triple-total: calc(#{($wrapper-padding * 2) + $col-quad   - 1px} + (100vw - 100%));
 
 @mixin single {
-  @media screen and (max-width: calc($col-single-padding + (100vw - 100%))) {
+  @media screen and (max-width: $col-single-total) {
     @content;
   }
 }
 @mixin double {
-  @media screen and (min-width: calc($col-single-padding + (100vw - 100%)) + 1) and (max-width: calc($col-double-padding + (100vw - 100%))) {
+  @media screen and (min-width: $col-single-total + 1) and (max-width: $col-double-total) {
     @content;
   }
 }
 @mixin triple {
-  @media screen and (min-width: calc($col-double-padding + (100vw - 100%)) + 1) and (max-width: calc($col-triple-padding + (100vw - 100%))) {
+  @media screen and (min-width: $col-double-total + 1) and (max-width: $col-triple-total) {
     @content;
   }
 }
 @mixin quad {
-  @media screen and (min-width: calc($col-triple-padding + (100vw - 100%)) + 1) {
+  @media screen and (min-width: $col-triple-total + 1) {
     @content;
   }
 }
@@ -106,7 +108,6 @@ $col-triple-padding: (($wrapper-padding * 2) + $col-quad - 1px);
     @content;
   }
 }
-
 
 @mixin small {
   @media screen and (max-width: $col-small){

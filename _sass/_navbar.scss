@@ -26,10 +26,10 @@
   width: 100%;
   max-width: $col-single;
 
-  @include mobile {
+  @include single
     max-width: $col-single;
   }
-  @include medium {
+  @include double
     max-width: $col-double;
   }
   @include triple {
