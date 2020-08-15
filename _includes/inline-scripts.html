@@ -31,7 +31,7 @@
 			gutter: 15,
 			stagger: 0
 		});
-		$("#main-nav").width($("#main").width());
+		// $("#main-nav").width($("#main").width());
 
 		setupScroll($grid, $grid.data('masonry'));
 
@@ -41,14 +41,14 @@
 		});
 	});
 
-	$(window).on("resize", function(){
-		clearTimeout(resizeNav);
-		resizeNav = setTimeout(resizeNavigation, 150);
-	});
-
-	function resizeNavigation() {
-		$("#main-nav").width($("#main").width());
-	}
+	// $(window).on("resize", function(){
+	// 	clearTimeout(resizeNav);
+	// 	resizeNav = setTimeout(resizeNavigation, 150);
+	// });
+	//
+	// function resizeNavigation() {
+	// 	$("#main-nav").width($("#main").width());
+	// }
 	function setupScroll(grid, masonry){
 		grid.infiniteScroll({
 			path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},

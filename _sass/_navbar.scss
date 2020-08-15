@@ -20,9 +20,22 @@
   #navbar a:last-child { padding-right: 0px; }
 
 #main-nav {
-    display: flex;
-    margin: 0px auto;
-    transition: width 0.2s ease;
+  display: flex;
+  margin: 0px auto;
+  transition: width 0.2s ease;
+
+  @include single {
+		max-width: $col-single;
+	}
+  @include double {
+		max-width: $col-double;
+	}
+  @include triple {
+		max-width: $col-single;
+	}
+  @include quad {
+		max-width: $col-quad;
+	}
 }
 
 #navbar-header {

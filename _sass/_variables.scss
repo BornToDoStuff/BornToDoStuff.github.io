@@ -61,39 +61,76 @@ $col-small: 768px;
 $col-med: 992px;
 $col-lg: 1200px;
 
+$item-width: 550px;
+$item-gutter: 15px;
+$wrapper-padding: 50px;
+$scrollbar-width: calc(100vw - 100%);
+
+
+$col-single: ($item-width * 1) + ($item-gutter * 0);
+$col-double: ($item-width * 2) + ($item-gutter * 1);
+$col-triple: ($item-width * 3) + ($item-gutter * 2);
+$col-quad:   ($item-width * 4) + ($item-gutter * 3);
+
+$col-single-total: ($wrapper-padding * 2) + $col-double + $scrollbar-width - 1;
+$col-double-total: ($wrapper-padding * 2) + $col-triple + $scrollbar-width - 1;
+$col-triple-total: ($wrapper-padding * 2) + $col-quad   + $scrollbar-width - 1;
+
+@mixin single {
+  @media screen and (max-width: $col-single-total) {
+    @content;
+  }
+}
+@mixin double {
+  @media screen and (min-width: $col-single-total + 1) and (max-width: $col-double-total) {
+    @content;
+  }
+}
+@mixin triple {
+  @media screen and (min-width: $col-double-total + 1) and (max-width: $col-triple-total) {
+    @content;
+  }
+}
+@mixin quad {
+  @media screen and (min-width: $col-triple-total + 1) {
+    @content;
+  }
+}
+
+
 @mixin desktop {
   @media screen and (min-width: $col-small) {
     @content;
   }
 }
 @mixin mobile {
-  @media screen and (max-width: $col-small - 1) {
+  @media screen and (max-width: $col-small) {
     @content;
   }
 }
 
 @mixin small {
-  @media screen and (max-width: $col-small - 1){
+  @media screen and (max-width: $col-small){
     @content;
   }
 }
 @mixin medium {
-  @media screen and (min-width: $col-small) and (max-width: $col-med - 1) {
+  @media screen and (min-width: $col-small + 1) and (max-width: $col-med) {
     @content;
   }
 }
 @mixin large {
-  @media screen and (min-width: $col-med) and (max-width: $col-lg - 1) {
+  @media screen and (min-width: $col-med + 1) and (max-width: $col-lg) {
     @content;
   }
 }
 @mixin large-up {
-  @media screen and (min-width: $col-med) {
+  @media screen and (min-width: $col-med + 1) {
     @content;
   }
 }
 @mixin xlarge {
-  @media screen and (min-width: $col-lg) {
+  @media screen and (min-width: $col-lg + 1) {
     @content;
   }
 }
