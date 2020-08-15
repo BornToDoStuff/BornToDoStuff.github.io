@@ -42,7 +42,7 @@
 #navbar-header {
   font-size: 2.4rem;
   flex: 0 0 auto;
-  overflow: hidden;
+  transition: margin 0.5s;
 
   @include tiny {
       font-size: 2rem;
