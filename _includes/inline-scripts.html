@@ -163,7 +163,7 @@
       if (this.hash != ""){ //watch for empty hashes
         e.preventDefault();
         var $target = $(this.hash);
-				if ($target && $target.length < 0) {
+				if ($target && $target.length > 0) {
 					var top = $target.offset().top - 75;
 	        if (top < 0)
 	          top = 0;
