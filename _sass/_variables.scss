@@ -58,7 +58,7 @@ $a-tags: 'a, a:active, a:hover, a:focus, a:visited';
 
 $col-xsmall: 480px;
 $col-small: 768px;
-$col-med: 992px;
+// $col-med: 992px;
 $col-lg: 1200px;
 
 $item-width: 550px;
@@ -104,7 +104,7 @@ $col-triple-total: ($wrapper-padding * 2) + $col-quad   + 14px;
   }
 }
 @mixin mobile {
-  @media screen and (max-width: $col-small) {
+  @media screen and (max-width: #{$col-small - 1px}) {
     @content;
   }
 }
@@ -119,11 +119,11 @@ $col-triple-total: ($wrapper-padding * 2) + $col-quad   + 14px;
     @content;
   }
 }
-@mixin medium {
-  @media screen and (min-width: $col-small + 1) and (max-width: $col-med) {
-    @content;
-  }
-}
+// @mixin medium {
+//   @media screen and (min-width: $col-small + 1) and (max-width: $col-med) {
+//     @content;
+//   }
+// }
 @mixin large {
   @media screen and (min-width: $col-med + 1) and (max-width: $col-lg) {
     @content;
