@@ -163,13 +163,15 @@
       if (this.hash != ""){ //watch for empty hashes
         e.preventDefault();
         var $target = $(this.hash);
-        var top = $target.offset().top - 75;
-        if (top < 0)
-          top = 0;
+				if ($target) {
+					var top = $target.offset().top - 75;
+	        if (top < 0)
+	          top = 0;
 
-        $('html, body').stop().animate({
-            'scrollTop': top
-        }, 500, 'swing');
+	        $('html, body').stop().animate({
+	            'scrollTop': top
+	        }, 500, 'swing');
+				}
       }
     });
 
