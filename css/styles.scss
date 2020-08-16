@@ -707,6 +707,19 @@ thead .tablesorter-headerAsc {
   box-sizing: border-box;
   border-radius: 8px;
 
+	@include single {
+		max-width: $col-single;
+	}
+	@include double {
+		max-width: $col-double;
+	}
+	@include triple {
+		max-width: $col-triple;
+	}
+	@include quad {
+		max-width: $col-quad;
+	}
+
 	magic-item {
 		position: relative!important;
     top: initial!important;
@@ -719,20 +732,8 @@ thead .tablesorter-headerAsc {
     width: 100%;
     height: initial!important;
     border-radius: 0px;
+		border: 0;
     border-bottom: 1px solid rgba(39, 73, 92, 0.1);
-
-		@include single {
-			max-width: $col-single;
-		}
-		@include double {
-			max-width: $col-double;
-		}
-		@include triple {
-			max-width: $col-triple;
-		}
-		@include quad {
-			max-width: $col-quad;
-		}
 	}
 
 	item-head { flex: 1 1 auto; }

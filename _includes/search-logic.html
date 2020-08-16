@@ -108,15 +108,19 @@
             .always(function() {
               history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
 
-              $("#search-results magic-item").each(function(){setItemHeight($(this))});
-              var $searchGrid = $("section#search-results").masonry({
-                columnWidth: 'magic-item',
-                itemSelector: 'magic-item',
-                fitWidth: true,
-                horizontalOrder: true,
-                gutter: 15,
-                stagger: 0
-              });
+              var table_layout = sessionStorage.getItem("table");
+              if (table_layout !== "true")
+              {
+                $("#search-results magic-item").each(function(){setItemHeight($(this))});
+                var $searchGrid = $("section#search-results").masonry({
+                  columnWidth: 'magic-item',
+                  itemSelector: 'magic-item',
+                  fitWidth: true,
+                  horizontalOrder: true,
+                  gutter: 15,
+                  stagger: 0
+                });
+              }
 
               setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
             });
