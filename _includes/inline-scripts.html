@@ -28,6 +28,8 @@
 			$("#search-results").addClass("table");
 			$("#btn-grid").hide(); //swap buttons
 			$("#btn-table").show();
+
+			setupScroll($('section#main'));
 		}
 		else {
 			$("#main magic-item").each(function(){setItemHeight($(this))});
