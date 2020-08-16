@@ -273,7 +273,7 @@ magic-item.artifact.attunement .rarity img {
 	align-items: flex-start;
 	flex-direction: row-reverse;
 	justify-content: center;
-	margin-left: -50px;
+	margin-left: -35px;
 
 	@include tiny {
 		align-items: center;
@@ -288,8 +288,13 @@ magic-item.artifact.attunement .rarity img {
 	width: initial!important;
 	max-width: 750px;
 	flex: 1 1 750px;
-	margin: 0px 15px 25px 15px;
+	margin-left: 15px;
 	font-size: 1.05em;
+
+	@include tiny { margin-left: 0px; }
+	@include single {
+		max-width: $col-single;
+	}
 }
 #item-menu {
 	display: flex;
@@ -298,8 +303,7 @@ magic-item.artifact.attunement .rarity img {
   left: 0px;
   flex-direction: column;
   text-align: center;
-  width: 100px;
-  flex: 0 0 100px;
+  flex: 0 0 70px;
 	background: $backgroundLight;
   padding: 10px 0px;
   box-sizing: border-box;
