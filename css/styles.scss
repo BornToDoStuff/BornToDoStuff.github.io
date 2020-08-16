@@ -271,8 +271,16 @@ magic-item.artifact.attunement .rarity img {
 #item-wrapper {
 	display: flex;
 	align-items: flex-start;
+	flex-direction: row-reverse;
 	justify-content: center;
 	margin-left: -50px;
+
+	@include tiny {
+		align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 0px;
+	}
 }
 #item-wrapper magic-item {
 	position: relative!important;
@@ -292,22 +300,34 @@ magic-item.artifact.attunement .rarity img {
   text-align: center;
   width: 100px;
   flex: 0 0 100px;
-  background: #fff url(/images/subtle_grunge_white.jpg);
+	background: $backgroundLight;
   padding: 10px 0px;
   box-sizing: border-box;
   border-radius: 4px;
-  border: 2px solid #40434e;
+  border: 2px solid $bluakDark;
   border-left: none;
   border-right: none;
   font-size: 0.8em;
   color: gray;
+	margin-bottom: 15px;
+
+	@include tiny {
+		flex-direction: row;
+		text-align: center;
+		align-items: center;
+		width: 100%;
+		max-width: 750px;
+		flex: 0 0 auto;
+	}
 }
 	#item-menu img {
-		max-width: 30px;
+		width: 30px;
     opacity: 0.4;
     display: block;
     margin: auto;
 		padding: 5px 0px;
+
+		@include tiny { margin-left: 10px; }
 	}
 
 #modal-background {
@@ -327,13 +347,13 @@ magic-item.artifact.attunement .rarity img {
 a.read-more {
 	background: $backgroundLight;
 	position: absolute;
-	bottom: 0px;
-	width: 500px;
-	max-width: 90%;
+  bottom: 0px;
+  width: 550px;
+  max-width: 90%;
   max-width: calc(100% - 30px);
-	box-sizing: border-box;
-	padding: 10px;
-	z-index: 99;
+  box-sizing: border-box;
+  padding: 10px;
+  z-index: 99;
 }
 
 	a.read-more::before {

@@ -6,11 +6,6 @@ layout: default
 <div class="width-wrapper">
   <div id="main-wrapper">
     <div id="item-wrapper">
-      <div id="item-menu">
-        <a id="btnCopy-item" href="#copy" title="Copy Text"><img src="/images/icons/copy.svg" /></a>
-        <a id="btnCopy-link" href="#copy-link" title="Copy Link"><img src="/images/icons/link.svg" /></a>
-        <a id="btnRandom-item" href="/items/random/" title="Random Item"><img src="/images/icons/random.svg" /></a>
-      </div>
       <magic-item class="{{ page.item_rarity | slugify }}{% if page.item_attunement %} attunement{% endif %}">
         <item-head>
           <item-title>
@@ -26,6 +21,12 @@ layout: default
           {{content}}
         </item-description>
       </magic-item>
+      
+      <div id="item-menu">
+        <a id="btnCopy-item" href="#copy" title="Copy Text"><img src="/images/icons/copy.svg" /></a>
+        <a id="btnCopy-link" href="#copy-link" title="Copy Link"><img src="/images/icons/link.svg" /></a>
+        <a id="btnRandom-item" href="/items/random/" title="Random Item"><img src="/images/icons/random.svg" /></a>
+      </div>
     </div>
   </div>
 </div>
