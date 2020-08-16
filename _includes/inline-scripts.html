@@ -248,29 +248,16 @@
 		$("#btn-table").on("click", function(e) {
 			e.preventDefault();
 			$("body").addClass("loading");
+			try {
+				$("#main").removeClass("table"); //go back to grid
+				$("#search-results").removeClass("table");
+				$("#btn-grid").show(); //swap buttons
+				$("#btn-table").hide();
+				var table_layout = sessionStorage.setItem("table", "false");
 
-			$("#main").removeClass("table"); //go back to grid
-			$("#search-results").removeClass("table");
-			$("#btn-grid").show(); //swap buttons
-			$("#btn-table").hide();
-			var table_layout = sessionStorage.setItem("table", "false");
-
-			//start the layout process over since it was presumably destroyed
-			$("#main magic-item").each(function(){setItemHeight($(this))});
-			var $grid = $('section#main').masonry({
-				columnWidth: 'magic-item',
-				itemSelector: 'magic-item',
-				fitWidth: true,
-				horizontalOrder: true,
-				gutter: 15,
-				stagger: 0
-			});
-			setupScroll($grid, $grid.data('masonry'));
-
-			var searchParams = new URLSearchParams(window.location.search);
-			if (searchParams.get("q") && searchParams.get("q") !== null) {
-				$("#search-results magic-item").each(function(){setItemHeight($(this))});
-				var $searchGrid = $("section#search-results").masonry({
+				//start the layout process over since it was presumably destroyed
+				$("#main magic-item").each(function(){setItemHeight($(this))});
+				var $grid = $('section#main').masonry({
 					columnWidth: 'magic-item',
 					itemSelector: 'magic-item',
 					fitWidth: true,
@@ -278,8 +265,26 @@
 					gutter: 15,
 					stagger: 0
 				});
-			}
+				setupScroll($grid, $grid.data('masonry'));
 
+				var searchParams = new URLSearchParams(window.location.search);
+				if (searchParams.get("q") && searchParams.get("q") !== null) {
+					$("#search-results magic-item").each(function(){setItemHeight($(this))});
+					var $searchGrid = $("section#search-results").masonry({
+						columnWidth: 'magic-item',
+						itemSelector: 'magic-item',
+						fitWidth: true,
+						horizontalOrder: true,
+						gutter: 15,
+						stagger: 0
+					});
+				}
+			}
+			catch(err){
+				console.log("Error occurred while attempting to switch to grid layout");
+				console.log(err);
+			}
+			
 			setTimeout(function() { $("body").removeClass("loading"); }, 800);
 			return false;
 		});
@@ -288,14 +293,20 @@
 			e.preventDefault();
 			$("body").addClass("loading");
 
-			$("#main").addClass("table"); //go to table
-			$("#search-results").addClass("table");
-			$("#btn-grid").hide(); //swap buttons
-			$("#btn-table").show();
-			var table_layout = sessionStorage.setItem("table", "true");
+			try {
+				$("#main").addClass("table"); //go to table
+				$("#search-results").addClass("table");
+				$("#btn-grid").hide(); //swap buttons
+				$("#btn-table").show();
+				var table_layout = sessionStorage.setItem("table", "true");
 
-			$('section#main').data('masonry').destroy(); //remove masonry
-			setupScroll($('section#main')); //re-setup scroll
+				$('section#main').data('masonry').destroy(); //remove masonry
+				setupScroll($('section#main')); //re-setup scroll
+			}
+			catch(err){
+				console.log("Error occurred while attempting to switch to grid layout");
+				console.log(err);
+			}
 
 			setTimeout(function() { $("body").removeClass("loading"); }, 800);
 			return false;
