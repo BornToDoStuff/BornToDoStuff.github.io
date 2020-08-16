@@ -153,7 +153,7 @@
 #search-results {
 	margin-top: 20px;
 }
-#about, #random, #search-show, #search-btn {
+#about, #random, #grid-layout, #table-layout, #search-show, #search-btn {
   display: block;
 	opacity: 0.4;
 	width: 30px;
@@ -167,9 +167,10 @@
   }
 }
 
-#about {
-	background: url('/images/icons/question-circle.svg') no-repeat;
-}
-#random {
-	background: url('/images/icons/random.svg') no-repeat;
+#about { background: url('/images/icons/question-circle.svg') no-repeat; }
+#random { background: url('/images/icons/random.svg') no-repeat; }
+#grid-layout { background: url('/images/icons/th-grid.svg') no-repeat; }
+#table-layout {
+  background: url('/images/icons/th-list.svg') no-repeat;
+  display: none;
 }

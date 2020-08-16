@@ -220,67 +220,25 @@
       	$('head').append("<style type='text/css'> item-details,#curse{display: none;} </style>");
     }
 
+
+		$("#table-layout").on("click", function(e) {
+			e.preventDefault();
+
+			$("#main").removeClass("table");
+			$("#table-layout").hide();
+			$("#grid-layout").show();
+
+			return false;
+		});
+		$("#grid-layout").on("click", function(e) {
+			e.preventDefault();
+
+			$("#main").addClass("table");
+			$("#grid-layout").hide();
+			$("#table-layout").show();
+
+			return false;
+		});
+
   });
 </script>
-
-{% if page.randomize %}
-  <script src="/data/posts.min.json"></script>
-  <script>
-    var createCookie = function(name, value, days) {
-      var expires;
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toGMTString();
-      }
-      else {
-        expires = "";
-      }
-      document.cookie = name + "=" + value + expires;
-    }
-    function getCookie(c_name) {
-      if (document.cookie.length > 0) {
-        c_start = document.cookie.indexOf(c_name + "=");
-        if (c_start != -1) {
-          c_start = c_start + c_name.length + 1;
-          c_end = document.cookie.indexOf(";", c_start);
-          if (c_end == -1) {
-            c_end = document.cookie.length;
-          }
-          return unescape(document.cookie.substring(c_start, c_end));
-        }
-      }
-      return "";
-    }
-
-    function randomInt(){
-      var min = 0;
-      var max = {{ site.posts | size }} - 1;
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-
-	//get an item that has not been seen in the last 10 clicks.
-    $(document).ready(function(){
-      var r = randomInt();
-      var items_visited = getCookie("items_visited");
-      if (items_visited) { //if there is any useful value in items_visited
-        items_visited = items_visited.split(",");
-        while (items_visited.indexOf(r.toString()) >= 0){ //find a value of "r" that is not in items_visited
-          r = randomInt();
-        }
-        if (items_visited.length == 10)
-          items_visited.pop();
-        items_visited.unshift(r);
-
-        createCookie("items_visited", items_visited.join(","));
-      }
-      else {
-        createCookie("items_visited", r);
-      }
-
-      var url = posts[r].url;
-      $("#main").remove();
-      $("#main-wrapper").load(url + " #main");
-    });
-  </script>
-{% endif %}

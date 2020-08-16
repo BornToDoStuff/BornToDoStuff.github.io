@@ -320,7 +320,7 @@ magic-item.artifact.attunement .rarity img {
 		text-align: center;
 		align-items: center;
 		width: 100%;
-		max-width: 750px;
+		max-width: $col-single;
 		flex: 0 0 auto;
 	}
 }
@@ -697,3 +697,55 @@ thead .tablesorter-headerAsc {
 #item_table {
 	font-size: 1.3rem;
 }
+
+
+/*=============== START post table layout styles ===============*/
+
+#main.table {
+	background: url(/images/subtle_grunge_white.jpg) rgb(255, 255, 255);
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 8px;
+
+	magic-item {
+		position: relative!important;
+    top: initial!important;
+    left: initial!important;
+    flex-direction: row;
+    align-items: flex-end;
+    background: none;
+    margin-bottom: 0px;
+    padding: 10px 15px;
+    width: 100%;
+    max-width: 100%
+    height: initial!important;
+    border-radius: 0px;
+    border-bottom: 1px solid rgba(39, 73, 92, 0.1);
+	}
+
+	item-head { flex: 1 1 auto; }
+	item-title a {
+    font-size: 2.8rem;
+	}
+
+	item-tagline {display: none;}
+	item-extras {display: none;}
+
+	item-details {
+		display: flex;
+    flex: 0 0 350px;
+    margin-bottom: -5px;
+    justify-content: flex-end;
+	}
+		item-details > * {
+			padding: 5px;
+			color: #ababab;
+		}
+		item-details .type, item-details .rarity { width: 30%; }
+		item-details .attunement, item-details .cursed { width: 20%; }
+
+	item-description { display: none; }
+	a.read-more { display: none; }
+}
+
+/*=============== END post table layout styles ===============*/
