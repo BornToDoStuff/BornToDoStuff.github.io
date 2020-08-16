@@ -20,6 +20,7 @@ $gray: #666;
 $mediumGray: #ababab;
 $lightGray: #eee;
 $white: #fff;
+
 $transp_lightGray: rgba(0, 0, 0, 0.2);
 $transp_lightBlue: rgba(31, 76, 121, 0.1);
 $transp_medBlue: rgba(31, 76, 121, 0.3);
@@ -58,7 +59,7 @@ $a-tags: 'a, a:active, a:hover, a:focus, a:visited';
 
 $col-xsmall: 480px;
 $col-small: 768px;
-// $col-med: 992px;
+$col-med: 992px;
 $col-lg: 1200px;
 
 $item-width: 550px;
