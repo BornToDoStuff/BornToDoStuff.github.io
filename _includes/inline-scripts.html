@@ -299,5 +299,31 @@
 			return false;
 		});
 
+		$("btnCopy-item").on( "click", function() {
+			var id = $(this).attr('id');
+			var el = $("item-description")[0];
+			var range = document.createRange();
+			range.selectNodeContents(el);
+
+			var selection = window.getSelection();
+			selection.removeAllRanges();
+			selection.addRange(range);
+			document.execCommand('copy');
+			selection.removeAllRanges();
+			//alert("Contents copied to clipboard.");
+			return false;
+		});
+
+		$("btnCopy-link").on("click", function() {
+			var dummy = document.createElement('input');
+
+			document.body.appendChild(dummy);
+			dummy.value = window.location.href;
+			dummy.select();
+			document.execCommand('copy');
+			document.body.removeChild(dummy);
+
+			return false;
+		});
   });
 </script>
