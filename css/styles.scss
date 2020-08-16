@@ -701,7 +701,7 @@ thead .tablesorter-headerAsc {
 
 /*=============== START post table layout styles ===============*/
 
-#main.table {
+#main.table, #search-results.table {
 	background: url(/images/subtle_grunge_white.jpg) rgb(255, 255, 255);
   padding: 5px 10px;
   box-sizing: border-box;

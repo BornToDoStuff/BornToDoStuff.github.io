@@ -25,6 +25,7 @@
 
 		if (table_layout == "true"){
 			$("#main").addClass("table"); //go to table
+			$("#search-results").addClass("table");
 			$("#btn-grid").hide(); //swap buttons
 			$("#btn-table").show();
 		}
@@ -245,6 +246,7 @@
 			$("body").addClass("loading");
 
 			$("#main").removeClass("table"); //go back to grid
+			$("#search-results").removeClass("table");
 			$("#btn-grid").show(); //swap buttons
 			$("#btn-table").hide();
 			var table_layout = sessionStorage.setItem("table", "false");
@@ -261,6 +263,18 @@
 			});
 			setupScroll($grid, $grid.data('masonry'));
 
+			if (searchParams.get("q") && searchParams.get("q") !== null) {
+				$("#search-results magic-item").each(function(){setItemHeight($(this))});
+				var $searchGrid = $("section#search-results").masonry({
+					columnWidth: 'magic-item',
+					itemSelector: 'magic-item',
+					fitWidth: true,
+					horizontalOrder: true,
+					gutter: 15,
+					stagger: 0
+				});
+			}
+
 			setTimeout(function() { $("body").removeClass("loading"); }, 800);
 			return false;
 		});
@@ -270,6 +284,7 @@
 			$("body").addClass("loading");
 
 			$("#main").addClass("table"); //go to table
+			$("#search-results").addClass("table");
 			$("#btn-grid").hide(); //swap buttons
 			$("#btn-table").show();
 			var table_layout = sessionStorage.setItem("table", "true");
