@@ -301,7 +301,7 @@
 			return false;
 		});
 
-		$("btnCopy-item").on( "click", function() {
+		$("#btnCopy-item").on( "click", function() {
 			var id = $(this).attr('id');
 			var el = $("item-description")[0];
 			var range = document.createRange();
@@ -316,7 +316,7 @@
 			return false;
 		});
 
-		$("btnCopy-link").on("click", function() {
+		$("#btnCopy-link").on("click", function() {
 			var dummy = document.createElement('input');
 
 			document.body.appendChild(dummy);
