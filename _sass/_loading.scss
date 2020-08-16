@@ -20,8 +20,8 @@
 	opacity: 1;
 }
 
-#main-nav > * { transition: transform 0.3s ease 0s; }
-.loading #main-nav > * { transform: translateX(300px); }
+#main-nav > * { transition: transform 0.3s ease 0s, opacity 0.2s ease 0s; }
+.loading #main-nav > * { transform: translateX(300px); opacity: 0; }
 .loading #main-nav > *:first-child { transform: translateX(0px); }
 
 
