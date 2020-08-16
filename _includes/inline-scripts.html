@@ -53,12 +53,22 @@
 	// 	$("#main-nav").width($("#main").width());
 	// }
 	function setupScroll(grid, masonry){
-		grid.infiniteScroll({
-			path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
-			append: 'magic-item',
-			scrollThreshold: 2000,
-			outlayer: masonry
-		});
+
+		if (masonry){
+			grid.infiniteScroll({
+				path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
+				append: 'magic-item',
+				scrollThreshold: 2000,
+				outlayer: masonry
+			});
+		}
+		else {
+			grid.infiniteScroll({
+				path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
+				append: 'magic-item',
+				scrollThreshold: 1000
+			});
+		}
 
 		grid.on('append.infiniteScroll', function( event, response, path, items ) {
 			$(items).each(function(){setItemHeight($(this))});
@@ -221,22 +231,42 @@
     }
 
 
-		$("#table-layout").on("click", function(e) {
+		$("#btn-table").on("click", function(e) {
 			e.preventDefault();
+			$("body").addClass("loading");
 
-			$("#main").removeClass("table");
-			$("#table-layout").hide();
+			$("#main").removeClass("table"); //go back to grid
+			$("#table-layout").hide(); //swap buttons
 			$("#grid-layout").show();
 
+			//start the layout process over since it was presumably destroyed
+			$("#main magic-item").each(function(){setItemHeight($(this))});
+			var $grid = $('section#main').masonry({
+				columnWidth: 'magic-item',
+				itemSelector: 'magic-item',
+				fitWidth: true,
+				horizontalOrder: true,
+				gutter: 15,
+				stagger: 0
+			});
+			setupScroll($grid, $grid.data('masonry'));
+
+			$("body").removeClass("loading");
 			return false;
 		});
-		$("#grid-layout").on("click", function(e) {
-			e.preventDefault();
 
-			$("#main").addClass("table");
-			$("#grid-layout").hide();
+		$("#btn-grid").on("click", function(e) {
+			e.preventDefault();
+			$("body").addClass("loading");
+
+			$("#main").addClass("table"); //go back to table
+			$("#grid-layout").hide(); //swap buttons
 			$("#table-layout").show();
 
+			$('section#main').data('masonry').destroy(); //remove masonry
+			setupScroll($('section#main')); //re-setup scroll
+
+			$("body").removeClass("loading");
 			return false;
 		});
 
