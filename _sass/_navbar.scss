@@ -171,6 +171,6 @@
 #random { background: url('/images/icons/random.svg') no-repeat; }
 #grid-layout { background: url('/images/icons/th-large.svg') no-repeat; }
 #table-layout { background: url('/images/icons/th-list.svg') no-repeat; }
-#btn-table {
+#navbar #main-nav #btn-table { //the most specific identifier wins, so unfortunately this must be annoyingly specific
   display: none;
 }

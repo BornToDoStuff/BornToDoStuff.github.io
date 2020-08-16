@@ -717,10 +717,22 @@ thead .tablesorter-headerAsc {
     margin-bottom: 0px;
     padding: 10px 15px;
     width: 100%;
-    max-width: 100%;
     height: initial!important;
     border-radius: 0px;
     border-bottom: 1px solid rgba(39, 73, 92, 0.1);
+
+		@include single {
+			max-width: $col-single;
+		}
+		@include double {
+			max-width: $col-double;
+		}
+		@include triple {
+			max-width: $col-triple;
+		}
+		@include quad {
+			max-width: $col-quad;
+		}
 	}
 
 	item-head { flex: 1 1 auto; }

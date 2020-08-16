@@ -236,8 +236,8 @@
 			$("body").addClass("loading");
 
 			$("#main").removeClass("table"); //go back to grid
-			$("#table-layout").hide(); //swap buttons
-			$("#grid-layout").show();
+			$("#btn-grid").show(); //swap buttons
+			$("#btn-table").hide();
 
 			//start the layout process over since it was presumably destroyed
 			$("#main magic-item").each(function(){setItemHeight($(this))});
@@ -251,7 +251,7 @@
 			});
 			setupScroll($grid, $grid.data('masonry'));
 
-			$("body").removeClass("loading");
+			setTimeout(function() { $("body").removeClass("loading"); }, 500);
 			return false;
 		});
 
@@ -260,13 +260,13 @@
 			$("body").addClass("loading");
 
 			$("#main").addClass("table"); //go back to table
-			$("#grid-layout").hide(); //swap buttons
-			$("#table-layout").show();
+			$("#btn-grid").hide(); //swap buttons
+			$("#btn-table").show();
 
 			$('section#main').data('masonry').destroy(); //remove masonry
 			setupScroll($('section#main')); //re-setup scroll
 
-			$("body").removeClass("loading");
+			setTimeout(function() { $("body").removeClass("loading"); }, 500);
 			return false;
 		});
 
