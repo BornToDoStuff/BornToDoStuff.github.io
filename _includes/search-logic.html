@@ -79,6 +79,7 @@
     function search(){
       $("body").addClass("searching");
       $('#main').hide();
+      searchResults.show();
       $("section#main").infiniteScroll("destroy");
 
       searchbox.val(searchParams.get("q"));
@@ -142,6 +143,7 @@
       $('#main').show();
       searchbox.val("");
       searchResults.empty();
+      searchResults.hide();
 
       searchform.addClass("no-transition");
       searchform.css("width","0px");

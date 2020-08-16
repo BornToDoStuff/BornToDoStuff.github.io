@@ -265,6 +265,7 @@
 			});
 			setupScroll($grid, $grid.data('masonry'));
 
+			var searchParams = new URLSearchParams(window.location.search);
 			if (searchParams.get("q") && searchParams.get("q") !== null) {
 				$("#search-results magic-item").each(function(){setItemHeight($(this))});
 				var $searchGrid = $("section#search-results").masonry({
