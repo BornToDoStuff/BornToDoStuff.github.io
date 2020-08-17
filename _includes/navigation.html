@@ -4,6 +4,7 @@
       <div id="navbar-header">
         <a href="{{ site.baseurl }}/" id="navbar-brand">
           <img src="/images/borntobrewstuff-logo.svg" />
+
           {{ site.name }}</a>
       </div>
       <div id="navbar-content">
@@ -13,10 +14,18 @@
         </form>
         <input id="search-show" type="button" />
       </div>
-      <a href="/items/random/" title="Random Item"><span id="random"></span></a>
-      <a href="/table" id="btn-table" title="Table Layout"><span id="table-layout"></span></a>
-      <a href="/grid" id="btn-grid" title="Grid Layout"><span id="grid-layout"></span></a>
-      <a href="/about/" title="About BornToBrewStuff"><span id="about"></span></a>
+      <a href="/items/random/" title="Random Item" ga-on="click" ga-event-category="Random" ga-event-action="click">
+        <span id="random"></span>
+      </a>
+      <a href="/table" id="btn-table" title="Table Layout" ga-on="click" ga-event-category="Grid" ga-event-action="layout">
+        <span id="table-layout"></span>
+      </a>
+      <a href="/grid" id="btn-grid" title="Grid Layout" ga-on="click" ga-event-category="Table" ga-event-action="layout">
+        <span id="grid-layout"></span>
+      </a>
+      <a href="/about/" title="About BornToBrewStuff">
+        <span id="about"></span>
+      </a>
     </div>
   </div>
 </nav>
