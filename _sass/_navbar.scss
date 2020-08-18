@@ -15,6 +15,10 @@
     color: $bluakDark;
     display: block;
     padding: 0px 8px;
+
+    @include tiny {
+      padding: 0px 5px;
+    }
   }
   #navbar a:first-child { padding-left: 0px; }
   #navbar a:last-child { padding-right: 0px; }

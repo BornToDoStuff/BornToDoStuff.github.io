@@ -4,8 +4,8 @@
     var searchbox = $('#search');
     var searchResults = $('#search-results');
     var searchform = $("#search-form");
-
-    var errorMessage = "<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>"
+    var searchHeader = $("#navbar-header");
+    var errorMessage = "<magic-item style='margin:auto'><item-title><a>Error!</a></item-name><item-description>Ah phooie, looks like the gnomes pressed the wrong button. Please wait a moment and then try again.</item-description></magic-item>"
 
     var heights = ["","tall", "taller", "tallest"];
     var sizes = $("#grid-sizes item-description");
@@ -58,11 +58,10 @@
       `;
     }
 
+
     $("#search-form").submit(function(e){
       if (searchbox.val() == "") {
-        $("#search-form").css("width", "0px");
-        $("#navbar-header").css("transform", "translateX(0%)"); //return header to its regular size if it was minimized
-
+        unsearch();
         e.preventDefault();
         return false;
       }
@@ -84,6 +83,7 @@
 
       searchbox.val(searchParams.get("q"));
       searchform.css("width", "100%");
+      searchHeader.css("transform", "translateX(-350px)");
 
       try {
         var query = searchbox.val();
@@ -150,7 +150,12 @@
       searchform[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
       searchform.removeClass("no-transition");
 
-      setupScroll($('section#main'), $('section#main').data('masonry')); //$grid is from the main page.
+      searchHeader.addClass("no-transition");
+      searchHeader.css("transform", "translateX(-350px)");
+      searchHeader[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
+      searchHeader.removeClass("no-transition");
+
+      setupScroll($('section#main'), $('section#main').data('masonry'));
     }
 
     var searchParams = new URLSearchParams(window.location.search);
