@@ -150,10 +150,12 @@
       searchform[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
       searchform.removeClass("no-transition");
 
-      searchHeader.addClass("no-transition");
-      searchHeader.css("transform", "translateX(-350px)");
-      searchHeader[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
-      searchHeader.removeClass("no-transition");
+      if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
+        searchHeader.addClass("no-transition");
+        searchHeader.css("transform", "translateX(-350px)");
+        searchHeader[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
+        searchHeader.removeClass("no-transition");
+      }
 
       setupScroll($('section#main'), $('section#main').data('masonry'));
     }
