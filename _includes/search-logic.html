@@ -84,7 +84,9 @@
 
       searchbox.val(searchParams.get("q"));
       searchform.css("width", "100%");
-      searchHeader.css("transform", "translateX(-350px)");
+      if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
+				searchHeader.css("transform", "translateX(-350px)");
+			}
 
       try {
         var query = searchbox.val();
@@ -153,7 +155,7 @@
 
       if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
         searchHeader.addClass("no-transition");
-        searchHeader.css("transform", "translateX(-350px)");
+        searchHeader.css("transform", "translateX(0px)");
         searchHeader[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
         searchHeader.removeClass("no-transition");
       }
