@@ -741,7 +741,13 @@ thead .tablesorter-headerAsc {
     font-size: 2.8rem;
 	}
 
-	item-tagline {display: none;}
+	item-tagline {
+		display: none;
+
+		@include single {
+				display: block;
+		}
+	}
 	item-extras {display: none;}
 
 	item-details {
@@ -749,6 +755,10 @@ thead .tablesorter-headerAsc {
     flex: 0 0 350px;
     margin-bottom: -5px;
     justify-content: flex-end;
+
+		@include single {
+			display: none;
+		}
 	}
 		item-details > * {
 			padding: 5px;

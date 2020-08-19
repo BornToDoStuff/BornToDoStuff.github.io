@@ -93,43 +93,33 @@
 	right: 50%!important;
 	bottom: initial!important;
 	left: initial!important;
-
-	margin-right:-125px;
 }
 #loading-logo > .right {
 	animation: loading_flashing 4s ease-in 0.5s infinite normal;
-	top: 50%!important;
+	top: 0px!important;
 	right: 0px;
 	bottom: initial!important;
 	left: initial!important;
-
-	margin-top:-125px;
 }
 #loading-logo > .bottom {
 	animation: loading_flashing 4s ease-in 1s infinite normal;
 	top: initial!important;
-	right: 50%!important;
+	right: 0px!important;
 	bottom: 0px;
 	left: initial!important;
-
-	margin-right:-125px;
 }
 #loading-logo > .left {
 	animation: loading_flashing 4s ease-in 1.5s infinite normal;
-	top: 50%!important;
+	top: 0px!important;
 	right: initial!important;
 	bottom: initial!important;
 	left: 0px;
-
-	margin-top:-125px;
 }
 #loading-logo > .middle {
-	top: 50%!important;
-	right: 50%!important;
+	top: 0px!important;
+	right: 0px!important;
 	bottom:initial!important;
 	left:initial!important;
-	margin-top:-125px;
-	margin-right:-125px;
 	animation: loading_spin 4s cubic-bezier(.23,-0.25,.77,1.25) 2.67s infinite normal;
 }
 

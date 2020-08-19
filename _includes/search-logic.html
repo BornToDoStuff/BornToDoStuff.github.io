@@ -7,7 +7,8 @@
     var searchHeader = $("#navbar-header");
     var errorMessage = "<magic-item style='margin:auto'><item-title><a>Error!</a></item-name><item-description>Ah phooie, looks like the gnomes pressed the wrong button. Please wait a moment and then try again.</item-description></magic-item>"
 
-    var heights = ["","tall", "taller", "tallest"];
+    if ($(window).width() <= 768) { var heights = ["","tall"]; }
+  	else { var heights = ["","tall", "taller", "tallest"]; }
     var sizes = $("#grid-sizes item-description");
 
     function setItemHeight(ele) {
