@@ -102,6 +102,25 @@ p {
 }
 .width-wrapper.small { max-width: 1400px; }
 
+.column-wrapper {
+  margin: 0px auto;
+  transition: width 0.2s ease;
+  width: 100%;
+
+  @include single {
+    max-width: $col-single;
+  }
+  @include double {
+    max-width: $col-double;
+  }
+  @include triple {
+		max-width: $col-triple;
+	}
+  @include quad {
+		max-width: $col-quad;
+	}
+}
+
 a#TippyTop {
 	display: block;
 	margin-top: 80px;

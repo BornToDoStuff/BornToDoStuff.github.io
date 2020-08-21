@@ -1,31 +1,80 @@
 <nav id="navbar">
   <div class="width-wrapper">
-    <div id="main-nav">
-      <div id="navbar-header">
-        <a href="{{ site.baseurl }}/" id="navbar-brand">
-          <img src="/images/borntobrewstuff-logo.svg" />
+    <div class="column-wrapper">
 
-          {{ site.name }}</a>
+      <div id="main-nav" class="column-wrapper">
+        <div id="navbar-header">
+          <a href="{{ site.baseurl }}/" id="navbar-brand">
+            <img src="/images/borntobrewstuff-logo.svg" />
+            {{ site.name }}
+          </a>
+        </div>
+        <div id="navbar-content">
+          <form id="search-form" method="get" action="/">
+            <input id="search" name="q" type="text" placeholder="Search" />
+            <input id="search-btn" type="submit" />
+          </form>
+          <input id="search-show" type="button" />
+        </div>
+        <a href="/items/random/" title="Random Item" ga-on="click" ga-event-category="Random" ga-event-action="click">
+          <span id="random"></span>
+        </a>
+        <a href="/table" id="btn-table" title="Table Layout" ga-on="click" ga-event-category="Grid" ga-event-action="layout">
+          <span id="table-layout"></span>
+        </a>
+        <a href="/grid" id="btn-grid" title="Grid Layout" ga-on="click" ga-event-category="Table" ga-event-action="layout">
+          <span id="grid-layout"></span>
+        </a>
+        <a href="/about/" title="About BornToBrewStuff">
+          <span id="about"></span>
+        </a>
       </div>
-      <div id="navbar-content">
-        <form id="search-form" method="get" action="/">
-          <input id="search" name="q" type="text" placeholder="Search" />
-          <input id="search-btn" type="submit" />
-        </form>
-        <input id="search-show" type="button" />
+    </div>
+  </div>
+  <div class="width-wrapper border-top hidden">
+    <div class="column-wrapper">
+      <div id="advanced-nav">
+        <div>
+          <label>Rarity</label>
+          <div class="input-group">
+            <input type="button" data-filter=".common" value="Common" />
+            <input type="button" data-filter=".uncommon" value="Uncommon" />
+            <input type="button" data-filter=".rare" value="Rare" />
+            <input type="button" data-filter=".very-rare" value="Very Rare" />
+            <input type="button" data-filter=".legendary" value="Legendary" />
+            <input type="button" data-filter=".artifact" value="Artifact" />
+          </div>
+        </div>
+        <div>
+          <label>Category</label>
+          <div class="input-group">
+            <input type="button" data-filter=".armor" value="Armor" />
+            <input type="button" data-filter=".potion" value="Potion" />
+            <input type="button" data-filter=".ring" value="Ring" />
+            <input type="button" data-filter=".rod" value="Rod" />
+            <input type="button" data-filter=".scroll" value="Scroll" />
+            <input type="button" data-filter=".staff" value="Staff" />
+            <input type="button" data-filter=".tattoo" value="Tattoo" />
+            <input type="button" data-filter=".wand" value="Wand" />
+            <input type="button" data-filter=".weapon" value="Weapon" />
+            <input type="button" data-filter=".wondrous" value="Wondrous" />
+          </div>
+        </div>
+        <div>
+          <label>Properties</label>
+          <div class="input-group">
+            <div>
+              Attunement
+              <input type="checkbox" data-filter=".attunement" id="chkAttunement" name="chkAttunement" />
+            </div>
+            <div>
+              Cursed
+              <input type="checkbox" data-filter=".cursed" id="chkCursed" name="chkCursed" />
+            </div>
+          </div>
+        </div>
       </div>
-      <a href="/items/random/" title="Random Item" ga-on="click" ga-event-category="Random" ga-event-action="click">
-        <span id="random"></span>
-      </a>
-      <a href="/table" id="btn-table" title="Table Layout" ga-on="click" ga-event-category="Grid" ga-event-action="layout">
-        <span id="table-layout"></span>
-      </a>
-      <a href="/grid" id="btn-grid" title="Grid Layout" ga-on="click" ga-event-category="Table" ga-event-action="layout">
-        <span id="grid-layout"></span>
-      </a>
-      <a href="/about/" title="About BornToBrewStuff">
-        <span id="about"></span>
-      </a>
+
     </div>
   </div>
 </nav>

@@ -1,5 +1,5 @@
 #navbar {
-  height: 60px;
+  min-height: 60px;
   background: $backgroundLight;
   position: fixed;
 	z-index: 1000;
@@ -7,7 +7,7 @@
 	left: 0px;
 	right: 0px;
 	line-height: 60px;
-	box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+	box-shadow: 0px 1px 3px $transp_lightGray;
   border-bottom: 2px solid $bluakDark;
 }
   #navbar a {
@@ -23,25 +23,7 @@
   #navbar a:first-child { padding-left: 0px; }
   #navbar a:last-child { padding-right: 0px; }
 
-#main-nav {
-  display: flex;
-  margin: 0px auto;
-  transition: width 0.2s ease;
-  width: 100%;
-
-  @include single {
-    max-width: $col-single;
-  }
-  @include double {
-    max-width: $col-double;
-  }
-  @include triple {
-		max-width: $col-triple;
-	}
-  @include quad {
-		max-width: $col-quad;
-	}
-}
+#main-nav { display: flex; }
 
 #navbar-header {
   font-size: 2.4rem;
@@ -177,4 +159,69 @@
 #table-layout { background: url('/images/icons/th-list.svg') no-repeat; }
 #navbar #main-nav #btn-table { //the most specific identifier wins, so unfortunately this must be annoyingly specific
   display: none;
+}
+
+#advanced-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 7.5px -7.5px;
+}
+#advanced-nav > * {
+  margin: 7.5px;
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 300px;
+  flex-direction: column;
+}
+#advanced-nav label {
+  line-height: 1.3em;
+}
+
+.input-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 2px solid gray;
+  border-bottom: 2px solid gray;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.input-group input {
+  border: none;
+  border-right: 1px solid $borderLight;
+  background: transparent;
+  height: 1em;
+  box-sizing: content-box;
+  padding: 5px;
+  margin: 7px 0px;
+  cursor: pointer;
+  flex: 1 1 30px;
+  outline: none;
+  position: relative;
+}
+.input-group input[type="checkbox"] {
+    margin: 12px 0px;
+}
+  .input-group input.selected {
+    background: $transp_lightBlue;
+    padding: 12px 5px;
+    margin: 0px;
+  }
+
+#navbar .width-wrapper.border-top {
+  border-top: 2px solid gray;
+  box-shadow: inset 0px 2px 3px $transp_lightGray;
+  transition: height ease 0.3s, border 0s linear 0.3s, box-shadow 0s linear 0.3s;
+  max-height: 300px;
+  overflow: hidden;
+}
+#navbar .width-wrapper.hidden {
+  border: none;
+  box-shadow: none;
+  max-height: 0px;
+  overflow: hidden;
 }

@@ -22,6 +22,11 @@
 {% include /js/masonry.pkgd.min.js %}
 
 /* ==================== */
+/* isotope.min.js */
+/* ==================== */
+{% include /js/isotope.min.js %}
+
+/* ==================== */
 /* infinite-scroll.pkgd.min.js */
 /* ==================== */
 {% include /js/infinite-scroll.pkgd.min.js %}

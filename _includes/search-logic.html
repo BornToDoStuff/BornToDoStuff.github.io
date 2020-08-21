@@ -27,7 +27,7 @@
     const itemTemplate = function(result) {
       var item = item_cache[result.ref];
 
-      return `<magic-item id="${item.id}" class="${item.rarity.toLowerCase().replace(' ', '-')} ${item.attunement ? 'attunement' : ''}">
+      return `<magic-item id="${item.id}" class="${item.rarity.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.item_curse ? ' cursed' : ''}">
           <item-head>
             <item-title>
               <a href="${item.url}">${item.title}</a>
