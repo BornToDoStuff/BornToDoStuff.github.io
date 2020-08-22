@@ -195,7 +195,8 @@
 }
 #advanced-nav > div:first-child {
   min-width: 100%;
-
+  min-width: calc(100% - 14px);
+  
   @include quad {
     min-width: initial;
   }
