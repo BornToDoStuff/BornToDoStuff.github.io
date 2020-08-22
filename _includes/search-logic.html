@@ -255,7 +255,7 @@
 
     function updateFilterCounts()  {
       // get filtered item elements
-      var itemElems = $grid.data('isotope').filteredItems;
+      var itemElems = $('#search-results').data('isotope').filteredItems;
       var $itemElems = $( itemElems );
       $('.input-group button').each( function( i, button ) {
         var $button = $( button );
