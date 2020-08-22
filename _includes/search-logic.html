@@ -258,7 +258,7 @@
 
     function updateFilterCounts()  {
       // get filtered item elements
-      var itemElems = $iso_grid.data('isotope').isotope('getFilteredItemElements');
+      var itemElems = $iso_grid.data('isotope').filteredItems.map(i => i.element);
       var $itemElems = $( itemElems );
       $('.input-group button').each( function( i, button ) {
         var $button = $( button );
