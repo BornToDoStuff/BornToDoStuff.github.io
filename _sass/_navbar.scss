@@ -169,7 +169,7 @@
   margin: 7.5px -7.5px;
   line-height: 1em;
 }
-#advanced-nav > * {
+#advanced-nav > div {
   margin: 7.5px;
   display: flex;
   flex: 1 1 auto;
@@ -177,6 +177,7 @@
   flex-direction: column;
   overflow: hidden;
 }
+#advanced-nav > div:first-child { flex: 1 1 1000px; }
 #advanced-nav label {
   line-height: 1.3em;
 }
@@ -217,9 +218,9 @@
 #navbar .width-wrapper.border-top {
   border-top: 2px solid gray;
   box-shadow: inset 0px 2px 3px $transp_lightGray;
-  transition: max-height ease 0.3s;
-  max-height: 400px;
-  overflow: hidden;
+  transition: none;
+  max-height: 300px;
+  overflow: auto;
 }
 #navbar .width-wrapper.hidden {
   border: none;

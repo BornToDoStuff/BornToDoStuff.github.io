@@ -236,7 +236,9 @@
       var properties = groups["properties"];
       var strProps = "";
 
-      if (properties && properties.length){ strProps = properties.join(""); }
+      if (properties && properties.length){ 
+        strProps = properties.join("").replace(".attunement:not(.attunement)",""); //if both positive and negative filters are selected at once, they cancel out
+      }
 
       if (types && types.length){
         if (rarity && rarity.length) { //at least one of each selected
@@ -259,14 +261,16 @@
         filters = strProps;
       }
 
-      if (filters.length){ return filters.join(","); }
-      else { return "*"; }
+      if (filters.length == 0 ){ return "*"; }
+      else if filters.length == 1 { return filters; }
+      else { return filters.join(","); }
 
     }
 
     function updateFilterCounts(disable)  {
       // get filtered item elements
-      var itemElems = $iso_grid.data('isotope').filteredItems.map(i => i.element);
+      //var itemElems = $iso_grid.data('isotope').filteredItems.map(i => i.element); //select only currently visible items
+      var itemElems = $iso_grid.data('isotope').items.map(i => i.element); //show all items whether or not they are visible with filter
       var $itemElems = $( itemElems );
       if (disable) { $itemElems.attr("disabled", false); } //reset disabled attribute
 
@@ -275,7 +279,7 @@
         var filterValue = $button.attr('data-filter');
         if ( !filterValue ) { return; } // do not update 'any' buttons
 
-        var count = $itemElems.filter( filterValue ).length;
+        var count = $itemElems.filter( filterValue ).length; //filter to current items
         if (disable && count == 0){ //disable buttons that have nothing to filter
           $button.find('.filter-count').text('');
           $button.attr("disabled", true);
