@@ -118,13 +118,13 @@
               if (table_layout !== "true")
               {
                 $("#search-results magic-item").each(function(){setItemHeight($(this))});
-                var $searchGrid = $("#search-results").masonry({
-                  columnWidth: 'magic-item',
-                  itemSelector: 'magic-item',
-                  fitWidth: true,
-                  gutter: 15,
-                  stagger: 0
-                });
+                // var $searchGrid = $("#search-results").masonry({
+                //   columnWidth: 'magic-item',
+                //   itemSelector: 'magic-item',
+                //   fitWidth: true,
+                //   gutter: 15,
+                //   stagger: 0
+                // });
 
                 $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
                 updateFilterCounts();
