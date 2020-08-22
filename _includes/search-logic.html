@@ -8,8 +8,9 @@
     var errorMessage = "<magic-item style='margin:auto'><item-title><a>Error!</a></item-name><item-description>Ah phooie, looks like the gnomes pressed the wrong button. Please wait a moment and then try again.</item-description></magic-item>"
     var $iso_grid = $('#search-results');
 
-    if ($(window).width() <= 768) { var heights = [""]; }
-  	else { var heights = ["","tall", "taller", "tallest"]; }
+    var heights = ["","tall", "taller", "tallest"];
+    if ($(window).width() <= 768) { heights = [""]; }
+
     var sizes = $("#grid-sizes item-description");
 
     function setItemHeight(ele) {
@@ -132,7 +133,7 @@
                 $(".width-wrapper.border-top").removeClass("hidden");
                 setTimeout(function(){ $("#navbar hr").removeClass('hidden') }, 250);
 
-                $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
+                fixTippyTopMargin();
 
                 $iso_grid.isotope({
                   itemSelector: '.magic-item',
@@ -192,6 +193,9 @@
     $(window).on("resize", function(){
       clearTimeout(resizeNav);
       resizeNav = setTimeout(function() { fixTippyTopMargin() }, 150);
+
+      if ($(window).width() <= 768) { heights = [""]; }
+      else { heights = ["","tall", "taller", "tallest"]; }
     });
 
     function fixTippyTopMargin(){
