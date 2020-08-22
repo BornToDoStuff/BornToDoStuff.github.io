@@ -1,105 +1,4 @@
 <script>
-	// masonry and element sizing
-
-	var heights = ["","tall", "taller", "tallest"];
-
-
-	heights.forEach(function (e, i) {
-		$("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
-	});
-	var sizes = $("#grid-sizes item-description");
-
-	if ($(window).width() <= 768) { heights = [""]; }
-	else { heights = ["","tall", "taller", "tallest"]; }
-	$(window).on("resize", function(){
-		if ($(window).width() <= 768) { heights = [""]; }
-		else { heights = ["","tall", "taller", "tallest"]; }
-	});
-
-
-	function setItemHeight(ele) {
-		var description = $(ele).find("item-description")[0];
-		var heightCount = 0;
-		while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
-			heightCount++;
-		}
-
-		$(ele).addClass(heights[heightCount]);
-		if (description.scrollHeight > description.clientHeight)
-			$(ele).addClass("show-more");
-	}
-	var resizeNav;
-
-	$(document).ready(function () {
-		var table_layout = sessionStorage.getItem("table");
-
-		if (table_layout == "true"){
-			$("#main").addClass("table"); //go to table
-			$("#search-results").addClass("table");
-			$("#btn-grid").hide(); //swap buttons
-			$("#btn-table").show();
-
-			setupScroll($('section#main'));
-		}
-		else {
-			$("#main magic-item").each(function(){setItemHeight($(this))});
-
-			var $grid = $('section#main').masonry({
-				columnWidth: 'magic-item',
-				itemSelector: 'magic-item',
-				fitWidth: true,
-				horizontalOrder: true,
-				gutter: 15,
-				stagger: 0
-			});
-			// $("#main-nav").width($("#main").width());
-
-			setupScroll($grid, $grid.data('masonry'));
-		}
-
-		$("#search-show").on("click", function() {
-			$("#search-form").css("width", "100%");
-			if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
-				$("#navbar-header").css("transform", "translateX(-350px)");
-			}
-			$("#search").focus();
-		});
-	});
-
-	// $(window).on("resize", function(){
-	// 	clearTimeout(resizeNav);
-	// 	resizeNav = setTimeout(resizeNavigation, 150);
-	// });
-	//
-	// function resizeNavigation() {
-	// 	$("#main-nav").width($("#main").width());
-	// }
-	function setupScroll(grid, masonry){
-
-		if (masonry){
-			grid.infiniteScroll({
-				path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
-				append: 'magic-item',
-				scrollThreshold: 2000,
-				outlayer: masonry
-			});
-		}
-		else {
-			grid.infiniteScroll({
-				path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
-				append: 'magic-item',
-				scrollThreshold: 1000
-			});
-		}
-
-		grid.on('append.infiniteScroll', function( event, response, path, items ) {
-			$(items).each(function(){setItemHeight($(this))});
-			grid.masonry('layout');
-		});
-	}
-
-
-
 
 	//for arguments given in the URL
 	var urlParams;
@@ -115,51 +14,66 @@
 			urlParams[decode(match[1])] = decode(match[2]);
 	})();
 
+	//if there are arguments in the URL
+	if (urlParams["textOnly"]){
+		$('head').append("<link rel='stylesheet' href='/css/text-only.css' type='text/css' />");
+	}
+	if (urlParams["dmOnly"]){
+			$('head').append("<style type='text/css'> item-details,#curse{display: none;} </style>");
+	}
+
+	function checkContextButton(){
+		if ($(window).scrollTop() >= 150) {
+				$("#return-to-top").stop(true, false).animate({ opacity: 1}, 250);
+		} else { $("#return-to-top").stop(true, false).animate({ opacity: 0}, 250); }
+	}
+
+	function checkMobileMenu(){
+		currentPosition = $(window).scrollTop();
+		if ($(window).width() < 768){ /* mobile size */
+			if ($(window).scrollTop() >= 150) {
+				if (currentPosition > scrollPosition){ /*scrolling down*/
+					if (down){
+						$("#" + mobileblock).remove();
+						$("#navbar").stop(true, false).slideUp(250);
+						$("#navbar-content > ul").stop(true, false).slideUp(250);
+						difference = 0;
+						down = false;
+					}
+				}
+				else { /*scrolling up*/
+					difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
+					if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
+						$("#navbar").stop(true, false).slideDown(250);
+						down = true;
+					}
+				}
+			}
+			else if (!down) {
+				$("#navbar").slideDown(250);
+				down = true;
+			}
+		}
+		else { /* desktop size */
+			$("#" + mobileblock).remove();
+			$("#navbar").removeAttr("style");
+			$("#navbar-content > ul").removeAttr("style");
+			$(".dropdown").removeAttr("style");
+			down = true;
+		}
+		scrollPosition = currentPosition;
+	}
+
   $(document).ready(function(){
-    // {% if page.subpaging %}
-    //   var current_page = window.location.protocol + "//" + window.location.hostname + window.location.pathname;
-    //   var styles_id = "tags-style";
-    //   //if a link in a tags-list starts with "#" pretend that hash is its own page
-    //   $('#main a[href^="#"]').on("click touchend", function (e) {
-    //     e.stopImmediatePropagation();
-    //     e.preventDefault();
-    //     var tag = $(this).attr("href");
-		//
-    //     if (tag != "#" && $(tag).length == 1) {
-    //       hideAllExcept(tag);
-    //     }
-    //     else { showAll(); }
-    //   });
-		//
-    //   $('#return').hide();
-    //   if (window.location.hash) { // load the page with only the elements in the hash if there is one
-    //     var tag = window.location.hash;
-		//
-    //     if ($(tag).length == 1) { hideAllExcept(tag); }
-    //     else { showAll(); }
-    //   }
-		//
-    //   function hideAllExcept(tag) {
-    //     var styles;
-		//
-    //     if ($(tag).attr("class") == "subtag") { //if its a subtag
-    //       var parent_tag = "#" + $(tag).closest(".tag").attr("id");
-    //       styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head, .tag" + parent_tag + " .subtag{display:none} #return,.tag" + parent_tag + ",.tag" + parent_tag + " .subtag" + tag + "{display:block}</style>";
-    //     }
-    //     else {
-    //       styles = "<style id='" + styles_id + "' type='text/css'> .tag, #head{display:none} #return,.tag" + tag + "{display:block}</style>";
-    //     }
-    //     $("#" + styles_id).remove();
-    //     $(styles).appendTo("head");
-    //     $("#return").show();
-    //     history.replaceState(null, null, current_page + tag); /* replace URL so current place is saved but it does not create a large history stack */
-    //   }
-    //   function showAll(){
-    //       $("#" + styles_id).remove();
-    //       $("#return").hide();
-    //       history.replaceState(null, null, current_page); /* replace URL so current place is saved but it does not create a large history stack */
-    //   }
-    // {% endif %}
+		checkContextButton(); /* check once on load */
+
+		$("#search-show").on("click", function() {
+			$("#search-form").css("width", "100%");
+			if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
+				$("#navbar-header").css("transform", "translateX(-350px)");
+			}
+			$("#search").focus();
+		});
 
     $(".dropdown-toggle").on("click touchend", function (e) {
       if ($(window).width() < 768){
@@ -198,61 +112,13 @@
       checkMobileMenu();
     });
 
-    checkContextButton(); /* check once on load */
-    function checkContextButton(){
-      if ($(window).scrollTop() >= 150) {
-          $("#return-to-top").stop(true, false).animate({ opacity: 1}, 250);
-      } else { $("#return-to-top").stop(true, false).animate({ opacity: 0}, 250); }
-    }
+
 
     var scrollPosition = 0;
     var currentPosition = 0;
     var difference = 0;
     var down = true;
     /*if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu*/
-    function checkMobileMenu(){
-      currentPosition = $(window).scrollTop();
-      if ($(window).width() < 768){ /* mobile size */
-        if ($(window).scrollTop() >= 150) {
-          if (currentPosition > scrollPosition){ /*scrolling down*/
-            if (down){
-              $("#" + mobileblock).remove();
-              $("#navbar").stop(true, false).slideUp(250);
-              $("#navbar-content > ul").stop(true, false).slideUp(250);
-              difference = 0;
-              down = false;
-            }
-          }
-          else { /*scrolling up*/
-            difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
-            if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
-              $("#navbar").stop(true, false).slideDown(250);
-              down = true;
-            }
-          }
-        }
-        else if (!down) {
-          $("#navbar").slideDown(250);
-          down = true;
-        }
-      }
-      else { /* desktop size */
-        $("#" + mobileblock).remove();
-        $("#navbar").removeAttr("style");
-        $("#navbar-content > ul").removeAttr("style");
-        $(".dropdown").removeAttr("style");
-        down = true;
-      }
-      scrollPosition = currentPosition;
-    }
-
-  	//if there are arguments in the URL
-    if (urlParams["textOnly"]){
-    	$('head').append("<link rel='stylesheet' href='/css/text-only.css' type='text/css' />");
-    }
-    if (urlParams["dmOnly"]){
-      	$('head').append("<style type='text/css'> item-details,#curse{display: none;} </style>");
-    }
 
 
 		$("#btn-table").on("click", function(e) {
