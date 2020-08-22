@@ -97,10 +97,7 @@
         var advanced = false;
         var symbols = [":","*","^","~","+","-"];
         symbols.foreach(function(symbol) {
-          if (query.includes(symbol)){
-            advanced = true;
-            continue;
-          }
+          if (query.includes(symbol)){ advanced = true; }
         })
 
         if (advanced) { //if its an advanced query search how the user wants
