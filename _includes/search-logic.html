@@ -118,16 +118,22 @@
               if (table_layout !== "true")
               {
                 $("#search-results magic-item").each(function(){setItemHeight($(this))});
-                var $searchGrid = $("section#search-results").masonry({
-                  columnWidth: 'magic-item',
-                  itemSelector: 'magic-item',
-                  fitWidth: true,
-                  horizontalOrder: true,
-                  gutter: 15,
-                  stagger: 0
-                });
+                // var $searchGrid = $("section#search-results").masonry({
+                //   columnWidth: 'magic-item',
+                //   itemSelector: 'magic-item',
+                //   fitWidth: true,
+                //   gutter: 15,
+                //   stagger: 0
+                // });
 
-                $iso_grid = $('section#search-results').isotope({ itemSelector: 'magic-item' });
+                $iso_grid = $('section#search-results').isotope({
+                  itemSelector: 'magic-item',
+                  masonry: {
+                    columnWidth: 'magic-item',
+                    fitWidth: true,
+                    gutter: 15
+                  }
+                });
                 updateFilterCounts();
               }
 
