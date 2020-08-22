@@ -130,6 +130,8 @@
               setTimeout(function() {
                 document.body.classList.remove('searching');
                 $(".width-wrapper.border-top").removeClass("hidden");
+                setTimeout(function(){ $("#navbar hr").removeClass('hidden') }, 250);
+
                 $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
 
                 $iso_grid.isotope({
@@ -163,6 +165,7 @@
       searchResults.empty();
       searchResults.hide();
       $(".width-wrapper.border-top").addClass("hidden");
+      setTimeout(function(){ $("#navbar hr").addClass('hidden') }, 250);
 
       searchform.addClass("no-transition");
       searchform.css("width","0px");
