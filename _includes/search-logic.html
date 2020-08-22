@@ -258,7 +258,7 @@
           filters.push(rarity + strProps);
         });
       } else { //only properties selected if anything
-        filters = strProps;
+        filters.push(strProps);
       }
 
       if (filters.length == 0 ){ return "*"; }
@@ -269,8 +269,8 @@
 
     function updateFilterCounts(disable)  {
       // get filtered item elements
-      //var itemElems = $iso_grid.data('isotope').filteredItems.map(i => i.element); //select only currently visible items
-      var itemElems = $iso_grid.data('isotope').items.map(i => i.element); //show all items whether or not they are visible with filter
+      var itemElems = $iso_grid.data('isotope').filteredItems.map(i => i.element); //select only currently visible items
+      //var itemElems = $iso_grid.data('isotope').items.map(i => i.element); //show all items whether or not they are visible with filter
       var $itemElems = $( itemElems );
       if (disable) { $itemElems.attr("disabled", false); } //reset disabled attribute
 
@@ -284,7 +284,9 @@
           $button.find('.filter-count').text('');
           $button.attr("disabled", true);
         }
-        $button.find('.filter-count').text( '(' + count +')' );
+        else {
+          $button.find('.filter-count').text( '(' + count +')' );
+        }
       });
     }
   });
