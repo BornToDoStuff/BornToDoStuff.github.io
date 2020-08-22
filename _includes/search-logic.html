@@ -236,7 +236,7 @@
       var properties = groups["properties"];
       var strProps = "";
 
-      if (properties && properties.length){ 
+      if (properties && properties.length){
         strProps = properties.join("").replace(".attunement:not(.attunement)",""); //if both positive and negative filters are selected at once, they cancel out
       }
 
@@ -262,7 +262,7 @@
       }
 
       if (filters.length == 0 ){ return "*"; }
-      else if filters.length == 1 { return filters; }
+      else if (filters.length == 1) { return filters; }
       else { return filters.join(","); }
 
     }
