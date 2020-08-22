@@ -80,6 +80,7 @@
       $("body").addClass("searching");
       $('#main').hide();
       searchResults.show();
+      $(".width-wrapper.border-top").removeClass("hidden");
       $("section#main").infiniteScroll("destroy");
 
       searchbox.val(searchParams.get("q"));
@@ -91,7 +92,7 @@
       try {
         var query = searchbox.val();
         var index = lunr.Index.load(getIndex());
-        var results = index.search(`${query}^20 ${query}*^5 ${query}~1`);
+        var results = index.search(`${query}^10 ${query}*^3 *${query}^3 ${query}~1`);
         searchResults.empty();
 
         var search_ajax;
@@ -147,6 +148,7 @@
       searchbox.val("");
       searchResults.empty();
       searchResults.hide();
+      $(".width-wrapper.border-top").addClass("hidden");
 
       searchform.addClass("no-transition");
       searchform.css("width","0px");
@@ -166,10 +168,19 @@
     var searchParams = new URLSearchParams(window.location.search);
     if (searchParams.get("q") && searchParams.get("q") !== null)
     {
-
-
       search();
     }
+    $(window).on("resize", function(){
+      clearTimeout(resizeNav);
+      resizeNav = setTimeout(function() {
+        if ($(".width-wrapper.border-top").hasClass("hidden")){
+          $("a#TippyTop").css("margin-top", "80px");
+        }
+        else {
+          $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
+        }
+      }, 150);
+    });
 
   });
 
@@ -200,10 +211,11 @@
         index = lunr(function () {
           this.ref('ord');
           this.field('title', { boost: 10 });
-          this.field("type", { boost: 2 });
-          this.field("subtypes");
+          this.field("type", { boost: 3 });
+          this.field("subtypes", { boost: 2 });
           this.field("classes");
           this.field("damage");
+          this.field("school");
           this.field("tags", { boost: 5 });
           this.field("searchtext");
 

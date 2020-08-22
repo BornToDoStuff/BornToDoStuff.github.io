@@ -44,9 +44,6 @@
 				gutter: 15,
 				stagger: 0
 			});
-			var $iso_grid = $('section#main').isotope({
-			  itemSelector: 'magic-item'
-			});
 			// $("#main-nav").width($("#main").width());
 
 			setupScroll($grid, $grid.data('masonry'));
@@ -282,6 +279,10 @@
 						horizontalOrder: true,
 						gutter: 15,
 						stagger: 0
+					});
+
+					var $iso_grid = $('section#search-results').isotope({
+						itemSelector: 'magic-item'
 					});
 				}
 			}

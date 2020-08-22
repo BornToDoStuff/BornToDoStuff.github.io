@@ -167,6 +167,7 @@
   align-items: center;
   justify-content: center;
   margin: 7.5px -7.5px;
+  line-height: 1em;
 }
 #advanced-nav > * {
   margin: 7.5px;
@@ -174,6 +175,7 @@
   flex: 1 1 auto;
   min-width: 300px;
   flex-direction: column;
+  overflow: hidden;
 }
 #advanced-nav label {
   line-height: 1.3em;
@@ -188,6 +190,7 @@
   border-bottom: 2px solid gray;
   border-radius: 6px;
   overflow: hidden;
+  margin: 0px -1px;
 }
 
 .input-group input {
@@ -203,9 +206,13 @@
   outline: none;
   position: relative;
 }
-.input-group input[type="checkbox"] {
-    margin: 12px 0px;
-}
+  .input-group>div {
+      display: flex;
+      align-items: center;
+  }
+  .input-group input[type="checkbox"] {
+      margin: 12px 0px;
+  }
   .input-group input.selected {
     background: $transp_lightBlue;
     padding: 12px 5px;
@@ -215,13 +222,14 @@
 #navbar .width-wrapper.border-top {
   border-top: 2px solid gray;
   box-shadow: inset 0px 2px 3px $transp_lightGray;
-  transition: height ease 0.3s, border 0s linear 0.3s, box-shadow 0s linear 0.3s;
-  max-height: 300px;
+  transition: max-height ease 0.3s;
+  max-height: 400px;
   overflow: hidden;
 }
 #navbar .width-wrapper.hidden {
   border: none;
   box-shadow: none;
+  transition: max-height ease 0.3s, border 0s linear 0.3s, box-shadow 0s linear 0.3s;
   max-height: 0px;
   overflow: hidden;
 }
