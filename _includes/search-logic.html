@@ -262,7 +262,7 @@
       }
 
       if (filters.length == 0 ){ return "*"; }
-      else if (filters.length == 1) { return filters; }
+      else if (filters.length == 1) { return filters[0]; }
       else { return filters.join(","); }
 
     }
