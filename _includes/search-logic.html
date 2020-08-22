@@ -93,7 +93,22 @@
       try {
         var query = searchbox.val();
         var index = lunr.Index.load(getIndex());
-        var results = index.search(`${query}^10 ${query}*^3 *${query}^3 ${query}~1`);
+
+        var advanced = false;
+        var symbols = [":","*","^","~","+","-"];
+        symbols.foreach(function(symbol) {
+          if (query.includes(symbol)){
+            advanced = true;
+            continue;
+          }
+        })
+
+        if (advanced) { //if its an advanced query search how the user wants
+          var results = index.search(query);
+        }
+        else { //else use the default query
+          var results = index.search(`${query}^10 ${query}*^3 *${query}^3 ${query}~1`);
+        }
         searchResults.empty();
 
         var search_ajax;
