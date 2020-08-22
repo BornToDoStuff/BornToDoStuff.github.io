@@ -125,10 +125,10 @@
                   gutter: 15,
                   stagger: 0
                 });
-
-                $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
-                updateFilterCounts();
               }
+
+              $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
+              updateFilterCounts();
 
               setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
             });
@@ -255,7 +255,7 @@
 
     function updateFilterCounts()  {
       // get filtered item elements
-      var itemElems = $iso_grid.isotope('getFilteredItemElements');
+      var itemElems = $iso_grid.isotope('getItemElements');
       var $itemElems = $( itemElems );
       $('.input-group button').each( function( i, button ) {
         var $button = $( button );
