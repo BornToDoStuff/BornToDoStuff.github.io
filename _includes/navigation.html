@@ -36,40 +36,38 @@
       <div id="advanced-nav">
         <div>
           <label>Rarity</label>
-          <div class="input-group">
-            <input type="button" data-filter=".common" value="Common" />
-            <input type="button" data-filter=".uncommon" value="Uncommon" />
-            <input type="button" data-filter=".rare" value="Rare" />
-            <input type="button" data-filter=".very-rare" value="Very Rare" />
-            <input type="button" data-filter=".legendary" value="Legendary" />
-            <input type="button" data-filter=".artifact" value="Artifact" />
+          <div class="input-group" data-filter-group="rarity" id="type-group">
+            <button data-filter=".common">Common <span class="filter-count"></span></button>
+            <button data-filter=".uncommon">Uncommon <span class="filter-count"></span></button>
+            <button data-filter=".rare">Rare <span class="filter-count"></span></button>
+            <button data-filter=".very-rare">Very Rare <span class="filter-count"></span></button>
+            <button data-filter=".legendary">Legendary <span class="filter-count"></span></button>
+            <button data-filter=".artifact">Artifact <span class="filter-count"></span></button>
           </div>
         </div>
         <div>
           <label>Category</label>
-          <div class="input-group">
-            <input type="button" data-filter=".armor" value="Armor" />
-            <input type="button" data-filter=".potion" value="Potion" />
-            <input type="button" data-filter=".ring" value="Ring" />
-            <input type="button" data-filter=".rod" value="Rod" />
-            <input type="button" data-filter=".scroll" value="Scroll" />
-            <input type="button" data-filter=".staff" value="Staff" />
-            <input type="button" data-filter=".tattoo" value="Tattoo" />
-            <input type="button" data-filter=".wand" value="Wand" />
-            <input type="button" data-filter=".weapon" value="Weapon" />
-            <input type="button" data-filter=".wondrous" value="Wondrous" />
+          <div class="input-group" data-filter-group="type" id="rarity-group">
+            <button data-filter=".armor">Armor <span class="filter-count"></span></button>
+            <button data-filter=".potion">Potion <span class="filter-count"></span></button>
+            <button data-filter=".ring">Ring <span class="filter-count"></span></button>
+            <button data-filter=".rod">Rod <span class="filter-count"></span></button>
+            <button data-filter=".scroll">Scroll <span class="filter-count"></span></button>
+            <button data-filter=".staff">Staff <span class="filter-count"></span></button>
+            <button data-filter=".tattoo">Tattoo <span class="filter-count"></span></button>
+            <button data-filter=".wand">Wand <span class="filter-count"></span></button>
+            <button data-filter=".weapon">Weapon <span class="filter-count"></span></button>
+            <button data-filter=".wondrous">Wondrous <span class="filter-count"></span></button>
           </div>
         </div>
         <div>
           <label>Properties</label>
-          <div class="input-group">
+          <div class="input-group" data-filter-group="properties" id="property-group">
             <div>
-              Attunement
-              <input type="checkbox" data-filter=".attunement" id="chkAttunement" name="chkAttunement" />
+              <button data-filter=".attunement">Attunement <span class="filter-count"></span></button>
             </div>
             <div>
-              Cursed
-              <input type="checkbox" data-filter=".cursed" id="chkCursed" name="chkCursed" />
+              <button data-filter=".cursed">Cursed <span class="filter-count"></span></button>
             </div>
           </div>
         </div>

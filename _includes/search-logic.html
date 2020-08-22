@@ -6,6 +6,7 @@
     var searchform = $("#search-form");
     var searchHeader = $("#navbar-header");
     var errorMessage = "<magic-item style='margin:auto'><item-title><a>Error!</a></item-name><item-description>Ah phooie, looks like the gnomes pressed the wrong button. Please wait a moment and then try again.</item-description></magic-item>"
+    var $iso_grid = $('section#search-results')
 
     if ($(window).width() <= 768) { var heights = ["","tall"]; }
   	else { var heights = ["","tall", "taller", "tallest"]; }
@@ -125,6 +126,10 @@
                   gutter: 15,
                   stagger: 0
                 });
+
+                $iso_grid.isotope({
+      						itemSelector: 'magic-item'
+      					});
               }
 
               setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
@@ -170,6 +175,9 @@
     {
       search();
     }
+
+    $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
+
     $(window).on("resize", function(){
       clearTimeout(resizeNav);
       resizeNav = setTimeout(function() {
@@ -182,6 +190,86 @@
       }, 150);
     });
 
+
+
+    var $filterButtons = $('.filters .button');
+    updateFilterCounts();
+
+    // store filter for each group
+    var filters = {};
+
+    $('#advanced-nav').on('click', 'input', function() {
+      var $this = $(this);
+
+      var $buttonGroup = $this.parents('.input-group');
+      var filterGroup = $buttonGroup.attr('data-filter-group'); // get group key
+      filters[filterGroup] = $buttonGroup.find('button.selected').attr('data-filter'); // set filter for group
+      $("#rarity-group").find('button.selected').attr('data-filter')
+      var filterValue = concatValues( filters ); // combine filters
+
+      $iso_grid.isotope({ filter: filterValue }); // set filter for Isotope
+      updateFilterCounts();
+    });
+
+    // change is-checked class on buttons
+    // $('.button-group').each( function( i, buttonGroup ) {
+    //   var $buttonGroup = $( buttonGroup );
+    //   $buttonGroup.on( 'click', 'button', function() {
+    //     $buttonGroup.find('.is-checked').removeClass('is-checked');
+    //     $( this ).addClass('is-checked');
+    //   });
+    // });
+
+    $('.input-group button').on("click", function() {
+      $(this).toggleClass('selected');
+    });
+
+    function concatValues( groups ) {
+      var filters = "";
+      var types = groups["type"];
+      var rarity = groups["rarity"];
+      var properties = groups["properties"];
+      str strProps = "";
+
+      if (properties.length){ strProps = properties.join(""); }
+
+      if (types.length){
+        if (rarity.length) { //at least one of each selected
+          types.forEach(function(type, i) {
+            rarity.forEach(function(rarity, i) {
+              filters += type + rarity + strProps + ",";
+            });
+          });
+        }
+        else { //only type selected
+          types.forEach(function(type, i) {
+            filters += type + strProps + ",";
+          });
+        }
+      } else if (rarity.length) { //only rarity selected
+        rarity.forEach(function(rarity, i) {
+          filters += rarity + strProps + ",";
+        });
+      } else { //only properties selected if anything
+        filters = strProps;
+      }
+
+      return filters;
+    }
+
+    function updateFilterCounts()  {
+      // get filtered item elements
+      var itemElems = $iso_grid.isotope('getFilteredItemElements');
+      var $itemElems = $( itemElems );
+      $filterButtons.each( function( i, button ) {
+        var $button = $( button );
+        var filterValue = $button.attr('data-filter');
+        // do not update 'any' buttons
+        if ( !filterValue ) { return; }
+        var count = $itemElems.filter( filterValue ).length;
+        $button.find('.filter-count').text( '(' + count +')' );
+      });
+    }
   });
 
   function getRandom(min, max) {
