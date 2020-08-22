@@ -6,7 +6,7 @@
     var searchform = $("#search-form");
     var searchHeader = $("#navbar-header");
     var errorMessage = "<magic-item style='margin:auto'><item-title><a>Error!</a></item-name><item-description>Ah phooie, looks like the gnomes pressed the wrong button. Please wait a moment and then try again.</item-description></magic-item>"
-    var $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
+    var $iso_grid = $('#search-results').isotope({ itemSelector: '.magic-item' });
 
     if ($(window).width() <= 768) { var heights = ["","tall"]; }
   	else { var heights = ["","tall", "taller", "tallest"]; }
@@ -28,7 +28,7 @@
     const itemTemplate = function(result) {
       var item = item_cache[result.ref];
 
-      return `<magic-item id="${item.id}" class="${item.rarity.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.item_curse ? ' cursed' : ''}">
+      return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.item_curse ? ' cursed' : ''}">
           <item-head>
             <item-title>
               <a href="${item.url}">${item.title}</a>
@@ -127,7 +127,7 @@
                 });
               }
 
-              $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
+              $iso_grid = $('#search-results').isotope({ itemSelector: '.magic-item' });
               updateFilterCounts();
 
               setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
@@ -255,7 +255,7 @@
 
     function updateFilterCounts()  {
       // get filtered item elements
-      var itemElems = $iso_grid.isotope('getItemElements');
+      var itemElems = $iso_grid.isotope('getFilteredItemElements');
       var $itemElems = $( itemElems );
       $('.input-group button').each( function( i, button ) {
         var $button = $( button );

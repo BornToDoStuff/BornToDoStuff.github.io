@@ -24,7 +24,7 @@
 /* ==================== */
 /* isotope.pkgd.min.js */
 /* ==================== */
-{% include /js/isotope.js %}
+{% include /js/isotope.pkgd.min.js %}
 
 /* ==================== */
 /* infinite-scroll.pkgd.min.js */
