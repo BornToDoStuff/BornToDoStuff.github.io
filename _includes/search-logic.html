@@ -6,7 +6,7 @@
     var searchform = $("#search-form");
     var searchHeader = $("#navbar-header");
     var errorMessage = "<magic-item style='margin:auto'><item-title><a>Error!</a></item-name><item-description>Ah phooie, looks like the gnomes pressed the wrong button. Please wait a moment and then try again.</item-description></magic-item>"
-    var $iso_grid = $('section#search-results').isotope({ itemSelector: 'magic-item' });
+    var $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
 
     if ($(window).width() <= 768) { var heights = ["","tall"]; }
   	else { var heights = ["","tall", "taller", "tallest"]; }
@@ -118,7 +118,7 @@
               if (table_layout !== "true")
               {
                 $("#search-results magic-item").each(function(){setItemHeight($(this))});
-                var $searchGrid = $("section#search-results").masonry({
+                var $searchGrid = $("#search-results").masonry({
                   columnWidth: 'magic-item',
                   itemSelector: 'magic-item',
                   fitWidth: true,
@@ -126,7 +126,7 @@
                   stagger: 0
                 });
 
-                $iso_grid = $('section#search-results').isotope({ itemSelector: 'magic-item' });
+                $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
                 updateFilterCounts();
               }
 
