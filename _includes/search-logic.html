@@ -130,9 +130,17 @@
               setTimeout(function() {
                 document.body.classList.remove('searching');
                 $(".width-wrapper.border-top").removeClass("hidden");
+                $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
 
-                $iso_grid.isotope({ itemSelector: '.magic-item' });
-                updateFilterCounts();
+                $iso_grid.isotope({
+                  itemSelector: '.magic-item',
+                  masonry: {
+                    columnWidth: '.magic-item',
+                    fitWidth: true,
+                    gutter: 15
+                  }
+                 });
+                updateFilterCounts(true);
               }, getRandom(900,1400));
             });
           }
@@ -149,7 +157,7 @@
       }
     }
 
-    function unsearch(){
+    function unsearch() {
       $('#main').show();
       searchbox.val("");
       searchResults.empty();
@@ -176,8 +184,6 @@
     {
       search();
     }
-
-    $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
 
     $(window).on("resize", function(){
       clearTimeout(resizeNav);
@@ -253,19 +259,27 @@
         filters = strProps;
       }
 
-      return filters.join(",");
+      if (filters.length){ return filters.join(","); }
+      else { return "*"; }
+
     }
 
-    function updateFilterCounts()  {
+    function updateFilterCounts(disable)  {
       // get filtered item elements
       var itemElems = $iso_grid.data('isotope').filteredItems.map(i => i.element);
       var $itemElems = $( itemElems );
-      $('.input-group button').each( function( i, button ) {
+      if (disable) { $itemElems.attr("disabled", false); } //reset disabled attribute
+
+      $('.input-group button:not([disabled])').each( function( i, button ) {
         var $button = $( button );
         var filterValue = $button.attr('data-filter');
-        // do not update 'any' buttons
-        if ( !filterValue ) { return; }
+        if ( !filterValue ) { return; } // do not update 'any' buttons
+
         var count = $itemElems.filter( filterValue ).length;
+        if (disable && count == 0){ //disable buttons that have nothing to filter
+          $button.find('.filter-count').text('');
+          $button.attr("disabled", true);
+        }
         $button.find('.filter-count').text( '(' + count +')' );
       });
     }

@@ -205,10 +205,8 @@
   position: relative;
   font-size: 0.9em;
 }
-  .input-group>div {
-    display: flex;
-    align-items: center;
-    flex: 1 1 auto;
+  .input-group button[disabled] {
+    pointer-events: none;
   }
   .input-group button.selected {
     background: $transp_lightBlue;

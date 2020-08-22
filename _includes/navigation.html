@@ -19,12 +19,12 @@
         <a href="/items/random/" title="Random Item" ga-on="click" ga-event-category="Random" ga-event-action="click">
           <span id="random"></span>
         </a>
-        <a href="/table" id="btn-table" title="Table Layout" ga-on="click" ga-event-category="Grid" ga-event-action="layout">
+        <!-- <a href="/table" id="btn-table" title="Table Layout" ga-on="click" ga-event-category="Grid" ga-event-action="layout">
           <span id="table-layout"></span>
         </a>
         <a href="/grid" id="btn-grid" title="Grid Layout" ga-on="click" ga-event-category="Table" ga-event-action="layout">
           <span id="grid-layout"></span>
-        </a>
+        </a> -->
         <a href="/about/" title="About BornToBrewStuff">
           <span id="about"></span>
         </a>
@@ -63,12 +63,9 @@
         <div>
           <label>Properties</label>
           <div class="input-group" data-filter-group="properties" id="property-group">
-            <div>
-              <button data-filter=".attunement">Attunement <span class="filter-count"></span></button>
-            </div>
-            <div>
-              <button data-filter=".cursed">Cursed <span class="filter-count"></span></button>
-            </div>
+            <button data-filter=".attunement">Attunement <span class="filter-count"></span></button>
+            <button data-filter=":not(.attunement)">No Attunement <span class="filter-count"></span></button>
+            <button data-filter=".cursed">Cursed <span class="filter-count"></span></button>
           </div>
         </div>
       </div>
