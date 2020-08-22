@@ -79,6 +79,13 @@ p {
 	// transition-delay: 0.05s;
 }
 
+code {
+	background: $transp_medBlue;
+	padding: 2px 4px;
+	border-radius: 3px;
+	margin: 0px 2px;
+}
+
 .active:hover a, .disabled:hover a {
 	background: 0 !important;
 	color: inherit !important;
