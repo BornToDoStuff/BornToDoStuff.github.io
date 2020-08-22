@@ -127,10 +127,12 @@
                 });
               }
 
-              $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
-              updateFilterCounts();
 
-              setTimeout(function() {document.body.classList.remove('searching')}, getRandom(900,1400));
+              setTimeout(function() {
+                document.body.classList.remove('searching');
+                $iso_grid = $('#search-results').isotope({ itemSelector: 'magic-item' });
+                updateFilterCounts();
+              }, getRandom(900,1400));
             });
           }
           else {
