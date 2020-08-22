@@ -202,7 +202,9 @@
         $("a#TippyTop").css("margin-top", "115px");
       }
       else {
-        $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
+        setTimeout(function() {
+          $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
+        }, 300); //set 300ms delay for animation to finish
       }
     }
 
