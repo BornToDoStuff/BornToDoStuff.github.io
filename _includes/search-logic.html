@@ -194,14 +194,17 @@
     updateFilterCounts();
 
     // store filter for each group
-    var filters = {};
+    var filters = {"type":[],"rarity":[], "properties":[]};
 
     $('#advanced-nav').on('click', 'button', function() {
       var $this = $(this);
 
       var $buttonGroup = $this.parents('.input-group');
       var filterGroup = $buttonGroup.attr('data-filter-group'); // get group key
-      filters[filterGroup] = $buttonGroup.find('button.selected').attr('data-filter'); // set filter for group
+      filters[filterGroup] = []; //reset filters for group
+      $buttonGroup.find('button.selected').each(function(){
+        filters[filterGroup].push($(this).attr('data-filter'));
+      }); // set filters for group
       $("#rarity-group").find('button.selected').attr('data-filter')
       var filterValue = concatValues( filters ); // combine filters
 
@@ -229,10 +232,10 @@
       var properties = groups["properties"];
       var strProps = "";
 
-      if (properties.length){ strProps = properties.join(""); }
+      if (properties && properties.length){ strProps = properties.join(""); }
 
-      if (types.length){
-        if (rarity.length) { //at least one of each selected
+      if (types && types.length){
+        if (rarity && rarity.length) { //at least one of each selected
           types.forEach(function(type, i) {
             rarity.forEach(function(rarity, i) {
               filters += type + rarity + strProps + ",";
@@ -244,7 +247,7 @@
             filters += type + strProps + ",";
           });
         }
-      } else if (rarity.length) { //only rarity selected
+      } else if (rarity && rarity.length) { //only rarity selected
         rarity.forEach(function(rarity, i) {
           filters += rarity + strProps + ",";
         });
