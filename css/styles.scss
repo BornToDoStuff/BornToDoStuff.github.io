@@ -109,7 +109,7 @@ code {
 }
 .width-wrapper.small { max-width: 1400px; }
 
-.column-wrapper {
+.column-wrapper, .page {
   margin: 0px auto;
   transition: width 0.2s ease;
   width: 100%;
