@@ -192,7 +192,7 @@
       clearTimeout(resizeNav);
       resizeNav = setTimeout(function() {
         if ($(".width-wrapper.border-top").hasClass("hidden")){
-          $("a#TippyTop").css("margin-top", "80px");
+          $("a#TippyTop").removeAttr("style");
         }
         else {
           $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 80) + "px");
@@ -200,6 +200,10 @@
       }, 150);
     });
 
+
+    $("#show-advanced-nav").on("click", function() {
+      $('#advanced-nav').toggleClass("hidden");
+    });
 
     // store filter for each group
     var filters = {"type":[],"rarity":[], "properties":[]};
@@ -276,6 +280,8 @@
       //var itemElems = $iso_grid.data('isotope').items.map(i => i.element); //show all items whether or not they are visible with filter
       var $itemElems = $( itemElems );
       if (disable) { $itemElems.attr("disabled", false); } //reset disabled attribute
+
+      $("#search-count").text($itemElems.length); //set results count
 
       $('.input-group button:not([disabled])').each( function( i, button ) {
         var $button = $( button );

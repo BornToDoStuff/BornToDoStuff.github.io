@@ -176,7 +176,14 @@
   align-items: center;
   justify-content: center;
   margin: 7.5px -7.5px;
+  margin-bottom: 25px;
   line-height: 1em;
+  position: relative;
+  max-height: 500px;
+  overflow-y: auto;
+}
+#advanced-nav.hidden{
+  max-height: 0px;
 }
 #advanced-nav > div {
   margin: 7.5px;
@@ -232,8 +239,8 @@
 
 #navbar .width-wrapper.border-top {
   transition: none;
-  max-height: 300px;
-  overflow: auto;
+  max-height: 90vh;
+  max-height: calc(100vh - 60px);
 }
 #navbar .width-wrapper.hidden {
   border: none;
@@ -241,4 +248,13 @@
   transition: max-height ease 0.3s;
   max-height: 0px;
   overflow: hidden;
+}
+
+#nav-results {
+  position: absolute;
+  height: 25px;
+  line-height: 25px;
+  width: 100%;
+  bottom: -25px;
+  left: 0px;
 }
