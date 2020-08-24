@@ -36,7 +36,7 @@ This grinder has 3 charges and it regains all charges on a short rest.
 You can turn the handle of the grinder either clockwise or counterclockwise, expending a charge each time you do so. When the handle is turned roll 1d10 to determine the spice that is ground. Clockwise, and the spices nicely fall from the grinder with no special effects. Counter-clockwise and after a small delay large shards of spices spew from the mouth of grinder up to 15 feet away affecting anything they hit in strange ways. You can make an ranged attack against a creature within range and on a hit the spice effect takes place. If you have multiple attacks this replaces one of them.
 
 <!--excerpt-->
-#### Spices
+### Spices
 
 1.  **Salt**.The target creature takes 1d4 Piercing damage and is compelled to attack you with its next attack.
 2.  **Peppercorn**. The target takes 1d4 Fire damage and 1d4 Piercing damage from the spicy shards.

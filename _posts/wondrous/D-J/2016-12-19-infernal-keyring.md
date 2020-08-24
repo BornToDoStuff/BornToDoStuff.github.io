@@ -19,7 +19,7 @@ item_damage:
 tags:
   - Spellcasting
   - Constitution
-
+  - Infernal
 item_idea:
 item_co_creator:
 item_updated:

@@ -22,6 +22,7 @@ tags:
   - At Dawn
   - Charges
   - Dexterity
+  - Infernal
 item_idea:
 item_co_creator:
 item_updated: 2020-08-17

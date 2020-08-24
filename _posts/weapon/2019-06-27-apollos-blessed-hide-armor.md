@@ -31,10 +31,10 @@ last_modified_at:
 
 This well-crafted hide armor is a deep red, but does not appear to be dyed, and does not have a single blemish or scratch.
 
-#### Hand of Apollo
+### Hand of Apollo
 
 Once per short rest you can cast <magic-spell>Conjure Volley</magic-spell>, <magic-spell>Swift Quiver</magic-spell>, or <magic-spell>Mass Cure Wounds</magic-spell> as an action. 
 
-#### Averter of Evil
+### Averter of Evil
 
 While wearing this armor each day at dawn you can choose one type of creature: aberrations, fey, fiends, or undead. Creatures of this type have disadvantage on attacks rolls against you, and you can not be Charmed, Frightened, or Possessed by your chosen creature type until the next day.
