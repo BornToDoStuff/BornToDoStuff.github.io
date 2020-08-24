@@ -1,11 +1,5 @@
 
 <script>
-    var searchParams = new URLSearchParams(window.location.search);
-    if (searchParams.get("q") && searchParams.get("q") !== null)
-    {
-      search();
-    }
-
     var searchbox = $('#search');
     var searchResults = $('#search-results');
     var searchform = $("#search-form");
@@ -15,25 +9,11 @@
 
     var heights = ["","tall", "taller", "tallest"];
     if ($(window).width() <= 768) { heights = [""]; }
-
     var sizes = $("#grid-sizes item-description");
-
-    function setItemHeight(ele) {
-      var description = $(ele).find("item-description")[0];
-      var heightCount = 0;
-      while (heightCount < (heights.length - 1) && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
-        heightCount++;
-      }
-
-      $(ele).addClass(heights[heightCount]);
-      if (description.scrollHeight > description.clientHeight)
-        $(ele).addClass("show-more");
-    }
     var item_cache = [];
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
     const itemTemplate = function(result) {
       var item = item_cache[result.ref];
-
       return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.item_curse ? ' cursed' : ''}">
           <item-head>
             <item-title>
@@ -66,6 +46,28 @@
       `;
     }
 
+    var searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get("q") && searchParams.get("q") !== null)
+    {
+      $("body").addClass("searching");
+
+      $(document).ready(function() {
+        search();
+      });
+    }
+
+    function setItemHeight(ele) {
+      var description = $(ele).find("item-description")[0];
+      var heightCount = 0;
+      while (heightCount < (heights.length - 1) && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+        heightCount++;
+      }
+
+      $(ele).addClass(heights[heightCount]);
+      if (description.scrollHeight > description.clientHeight)
+        $(ele).addClass("show-more");
+    }
+
 
     $("#search-form").submit(function(e){
       if (searchbox.val() == "") {
@@ -84,7 +86,6 @@
     // });
 
     function search(){
-      $("body").addClass("searching");
       $('#main').hide();
       searchResults.show();
       $("section#main").infiniteScroll("destroy");
