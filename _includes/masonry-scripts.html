@@ -1,12 +1,5 @@
 <script>
 // masonry and element sizing
-var heights = ["","tall", "taller", "tallest"];
-
-heights.forEach(function (e, i) {
-  $("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
-});
-var sizes = $("#grid-sizes item-description");
-
 if ($(window).width() <= 768) { heights = [""]; }
 else { heights = ["","tall", "taller", "tallest"]; }
 $(window).on("resize", function(){
@@ -14,11 +7,18 @@ $(window).on("resize", function(){
   else { heights = ["","tall", "taller", "tallest"]; }
 });
 
+heights.forEach(function (e, i) {
+  $("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
+});
+var sizes = $("#grid-sizes item-description");
+
+
+
 
 function setItemHeight(ele) {
   var description = $(ele).find("item-description")[0];
   var heightCount = 0;
-  while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+  while (heightCount < (heights.length - 1) && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
     heightCount++;
   }
 

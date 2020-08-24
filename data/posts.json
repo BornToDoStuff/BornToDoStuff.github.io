@@ -18,7 +18,7 @@
     "idea": "{{ post.item_idea }}",
     "co_creator": "{{ post.item_co_creator }}",
     "updated": "{{ post.item_updated }}",
-    "content": {{ post.excerpt | jsonify}},
+    "content": {{ post.content | jsonify}},
     "searchtext": {{ post.content | strip_html | strip_newlines | jsonify}}
     } {% unless forloop.last %}, {% endunless %} {%-endfor - %}]
 }

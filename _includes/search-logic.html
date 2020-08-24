@@ -6,7 +6,7 @@
     var searchform = $("#search-form");
     var searchHeader = $("#navbar-header");
     var errorMessage = "<magic-item style='margin:auto'><item-title><a>Error!</a></item-name><item-description>Ah phooie, looks like the gnomes pressed the wrong button. Please wait a moment and then try again.</item-description></magic-item>"
-    var $iso_grid = $('#search-results');
+    var searchResults = $('#search-results');
 
     var heights = ["","tall", "taller", "tallest"];
     if ($(window).width() <= 768) { heights = [""]; }
@@ -16,7 +16,7 @@
     function setItemHeight(ele) {
       var description = $(ele).find("item-description")[0];
       var heightCount = 0;
-      while (heightCount < heights.length && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+      while (heightCount < (heights.length - 1) && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
         heightCount++;
       }
 
@@ -130,7 +130,7 @@
               if (table_layout !== "true")
               {
                 $("#search-results magic-item").each(function(){setItemHeight($(this))});
-                var $searchGrid = $("#search-results").masonry({
+                var $searchGrid = searchResults.masonry({
                   columnWidth: 'magic-item',
                   itemSelector: 'magic-item',
                   fitWidth: true,
@@ -147,7 +147,7 @@
 
                 fixTippyTopMargin();
 
-                $iso_grid.isotope({
+                searchResults.isotope({
                   itemSelector: '.magic-item',
                   masonry: {
                     columnWidth: '.magic-item',
@@ -254,7 +254,7 @@
       }); // set filters for group
       var filterValue = concatValues( filters ); // combine filters
 
-      $iso_grid.isotope({ filter: filterValue }); // set filter for Isotope
+      searchResults.isotope({ filter: filterValue }); // set filter for Isotope
       updateFilterCounts();
     });
 
@@ -311,8 +311,8 @@
 
     function updateFilterCounts(disable)  {
       // get filtered item elements
-      var itemElems = $iso_grid.data('isotope').filteredItems.map(i => i.element); //select only currently visible items
-      //var itemElems = $iso_grid.data('isotope').items.map(i => i.element); //show all items whether or not they are visible with filter
+      var itemElems = searchResults.data('isotope').filteredItems.map(i => i.element); //select only currently visible items
+      //var itemElems = searchResults.data('isotope').items.map(i => i.element); //show all items whether or not they are visible with filter
       var $itemElems = $( itemElems );
       if (disable) { $itemElems.attr("disabled", false); } //reset disabled attribute
 
