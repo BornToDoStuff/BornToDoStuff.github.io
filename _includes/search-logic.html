@@ -1,6 +1,11 @@
 
 <script>
-  $(document).ready(function() {
+    var searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get("q") && searchParams.get("q") !== null)
+    {
+      search();
+    }
+
     var searchbox = $('#search');
     var searchResults = $('#search-results');
     var searchform = $("#search-form");
@@ -196,11 +201,7 @@
       setupScroll($('section#main'), $('section#main').data('masonry'));
     }
 
-    var searchParams = new URLSearchParams(window.location.search);
-    if (searchParams.get("q") && searchParams.get("q") !== null)
-    {
-      search();
-    }
+
 
     $(window).on("resize", function(){
       clearTimeout(resizeNav);
@@ -333,7 +334,6 @@
         }
       });
     }
-  });
 
   function getRandom(min, max) {
     return Math.floor(Math.random() * (max - min + 1) ) + min;
