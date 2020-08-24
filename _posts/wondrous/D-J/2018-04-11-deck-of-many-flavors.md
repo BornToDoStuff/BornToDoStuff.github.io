@@ -17,6 +17,7 @@ item_role:
 item_damage:
 tags:
  - Tradeoff
+ - Many
  - Many Effects
 item_idea:
 item_co_creator:

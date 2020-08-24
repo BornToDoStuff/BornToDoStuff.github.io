@@ -18,6 +18,7 @@ item_role:
 item_damage:
 tags:
   - Spellcasting
+  - Many
 item_idea:
 item_co_creator:
 item_updated:
