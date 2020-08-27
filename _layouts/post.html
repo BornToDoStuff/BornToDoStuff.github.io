@@ -5,6 +5,7 @@ layout: default
 
 <div class="width-wrapper">
   <div id="main-wrapper">
+    <div id="grid-sizes"> <!-- hidden div to create children in. Small hack to determine sizes without affecting display. --> </div>
     <section id="item-wrapper">
       <magic-item class="{{ page.item_rarity | slugify }}{% if page.item_attunement %} attunement{% endif %}">
         <item-head>
