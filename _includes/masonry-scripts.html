@@ -114,7 +114,11 @@
       });
     }
     else {
-      $("#main").infiniteScroll("destroy");
+      try {
+        $("#main").infiniteScroll("destroy");
+      }
+      catch {}
+
     }
   }
 </script>
