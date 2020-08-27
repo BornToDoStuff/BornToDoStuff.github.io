@@ -10,42 +10,8 @@ permalink: /items/random/
 <div class="width-wrapper">
   <div id="main-wrapper">
     <section id="grid-sizes"> <!-- hidden div to create children in. Small hack to determine sizes without affecting display. --> </section>
-    <section id="item-wrapper">
-      <script src="/data/posts.min.js"></script> <!-- posts var -->
-      <script>
-        function getRandom(min_par, max_par) {
-          var min = min_par ?? 0;
-          var max = max_par ?? {{ site.posts | size }} - 1;
-          return Math.floor(Math.random() * (max - min + 1) ) + min;
-        }
-
-      //get an item that has not been seen in the last 10 randoms to make it APPEAR more random.
-          var r = getRandom();
-          var items_visited = sessionStorage.getItem("items_visited");
-          if (items_visited) { //if there is any useful value in items_visited
-            items_visited = items_visited.split(",");
-            while (items_visited.indexOf(r.toString()) >= 0){ //find a value of "r" that is not in items_visited
-              r = getRandom();
-            }
-            if (items_visited.length == 10)
-              items_visited.pop();
-            items_visited.unshift(r);
-
-            sessionStorage.setItem("items_visited", items_visited.join(","));
-          }
-          else {
-            sessionStorage.setItem("items_visited", r);
-          }
-
-          //$("#main").remove();
-          //$("#main-wrapper").load(posts[r].url + " #main");
-          history.replaceState(null, posts[r].title, posts[r].url);
-          $("#main-wrapper").load(posts[r].url + " #main-wrapper section");
-      </script>
-    </section>
-    <section id="main" data-scrollable="false">
-    </section>
-    <section id="search-results">
-    </section>
+    <section id="item-wrapper"></section>
+    <section id="main" data-scrollable="false"></section>
+    <section id="search-results"></section>
   </div>
 </div>
