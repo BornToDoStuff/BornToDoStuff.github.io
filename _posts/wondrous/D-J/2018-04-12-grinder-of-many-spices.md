@@ -39,7 +39,7 @@ You can turn the handle of the grinder either clockwise or counterclockwise, exp
 
 <!--excerpt-->
 ### Spices
-
+<p>
 1.  **Salt**.The target creature takes 1d4 Piercing damage and is compelled to attack you with its next attack.
 2.  **Peppercorn**. The target takes 1d4 Fire damage and 1d4 Piercing damage from the spicy shards.
 3.  **Paprika**. The target feels a burning sensation and must succeed an Intelligence saving throw DC 12 or use their next action to try to "put out the fire".
@@ -50,3 +50,4 @@ You can turn the handle of the grinder either clockwise or counterclockwise, exp
 8.  **Ginger**. The target creature is overcome by the zing of ginger and must use their reaction to move 5 feet in any direction if they are able to move.
 9.  **Mint**. The creature feels an immense chill surround them. They take 1d8 Cold damage.
 10.  **All Spice**. The aroma is almost overwhelming. Roll twice on this table, if a 10 is rolled again you must re-roll that result. This effect only consumes 1 charge.
+</p>
