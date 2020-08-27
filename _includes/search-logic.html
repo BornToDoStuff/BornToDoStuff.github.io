@@ -104,8 +104,7 @@
     function search(){
       $('#main').hide();
       searchResults.show();
-      $("section#main").infiniteScroll("destroy");
-
+      
       searchbox.val(searchParams.get("q"));
       searchform.css("width", "100%");
       if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller

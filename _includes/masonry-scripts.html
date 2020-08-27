@@ -91,26 +91,30 @@
 
 
   function setupScroll(grid, masonry){
+    if ($("#main").data("scrollable")){
+      if (masonry){
+        grid.infiniteScroll({
+          path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
+          append: 'magic-item',
+          scrollThreshold: 2000,
+          outlayer: masonry
+        });
+      }
+      else {
+        grid.infiniteScroll({
+          path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
+          append: 'magic-item',
+          scrollThreshold: 1000
+        });
+      }
 
-    if (masonry){
-      grid.infiniteScroll({
-        path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
-        append: 'magic-item',
-        scrollThreshold: 2000,
-        outlayer: masonry
+      grid.on('append.infiniteScroll', function( event, response, path, items ) {
+        $(items).each(function(){setItemHeight($(this))});
+        grid.masonry('layout');
       });
     }
     else {
-      grid.infiniteScroll({
-        path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
-        append: 'magic-item',
-        scrollThreshold: 1000
-      });
+      $("#main").infiniteScroll("destroy");
     }
-
-    grid.on('append.infiniteScroll', function( event, response, path, items ) {
-      $(items).each(function(){setItemHeight($(this))});
-      grid.masonry('layout');
-    });
   }
 </script>
