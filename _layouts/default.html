@@ -45,13 +45,23 @@
             sessionStorage.setItem("firstLoad", "true");
           }
         }
+
+        var pjax = new Pjax({
+          elements: "a", // default is "a[href], form[action]"
+          selectors: [
+            "title",
+            "meta[name=description]",
+            "meta[property]",
+            "#navbar",
+            "#item-wrapper",
+            "#main",
+            "#search-results"
+          ]
+        })
     	</script>
     </div>
 
     {{content}}
-    
-    <div>
-      {% include search-logic.html %}
-    </div>
+
   </body>
 </html>

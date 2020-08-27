@@ -1,3 +1,4 @@
+
 <nav id="navbar">
   <div class="width-wrapper">
     <div class="column-wrapper">
@@ -10,7 +11,7 @@
           </a>
         </div>
         <div id="navbar-content">
-          <form id="search-form" method="get" action="/">
+          <form id="search-form" method="get" action="/search/">
             <input id="search" name="q" type="text" placeholder="Search" />
             <input id="search-btn" type="submit" />
           </form>
@@ -31,6 +32,7 @@
       </div>
     </div>
   </div>
+  {% if page.search %}
   <hr class="hidden" />
   <div class="width-wrapper border-top hidden">
     <div class="column-wrapper">
@@ -73,4 +75,5 @@
       <div id="advanced-results"><div><span id="search-count"></span> Results</div> <div id="show-advanced-nav">Filter Results</div>
     </div>
   </div>
+  {% endif %}
 </nav>

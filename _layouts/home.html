@@ -8,10 +8,12 @@ layout: default
     <div id="grid-sizes">
       <!-- hidden div to create children in. Small hack to determine sizes without affecting display. -->
     </div>
+    <section id="item-wrapper">
+    </section>
     <section id="main" role="main">
         {{ content }}
     </section>
-    <section id="search-results" style="display: none;">
+    <section id="search-results">
     </section>
   </div>
 
@@ -22,8 +24,10 @@ layout: default
   </div>
 </div>
 
-<div>
+
+<div id="scripts">
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
-  {% include masonry-scripts.html %}
   {% include inline-scripts.html %}
+  {% include masonry-scripts.html %}
+  {% include search-logic.html %}
 </div>

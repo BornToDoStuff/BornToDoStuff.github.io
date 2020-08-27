@@ -5,7 +5,7 @@ layout: default
 
 <div class="width-wrapper">
   <div id="main-wrapper">
-    <div id="item-wrapper">
+    <section id="item-wrapper">
       <magic-item class="{{ page.item_rarity | slugify }}{% if page.item_attunement %} attunement{% endif %}">
         <item-head>
           <item-title>
@@ -33,11 +33,12 @@ layout: default
           <img src="/images/icons/random.svg" />
         </a>
       </div>
-    </div>
+    </section>
   </div>
 </div>
 
-<div>
+<div id="scripts">
   <script src="{{ site.baseurl }}/js/scripts.js"></script>
   {% include inline-scripts.html %}
+  {% include masonry-scripts.html %}
 </div>
