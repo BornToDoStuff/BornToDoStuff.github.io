@@ -64,7 +64,7 @@
 		scrollPosition = currentPosition;
 	}
 
-  $(document).ready(function(){
+	function inlineScriptWhenReady() {
 		checkContextButton(); /* check once on load */
 
 		$("#search-show").on("click", function() {
@@ -217,5 +217,8 @@
 
 			return false;
 		});
-  });
+  };
+	inlineScriptWhenReady();
+	document.addEventListener("pjax:success", inlineScriptWhenReady);
+
 </script>

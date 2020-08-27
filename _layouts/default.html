@@ -47,7 +47,8 @@
         }
 
         var pjax = new Pjax({
-          elements: "a", // default is "a[href], form[action]"
+          scrollRestoration: false,
+          cacheBust: false,
           selectors: [
             "title",
             "meta[name=description]",

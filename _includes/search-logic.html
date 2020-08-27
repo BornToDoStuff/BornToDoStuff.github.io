@@ -63,9 +63,10 @@
     {
       $("body").addClass("searching");
 
-      $(document).ready(function() {
-        search();
-      });
+      document.addEventListener("pjax:success", search())
+      // $(document).ready(function() {
+      //   search();
+      // });
     }
 
     function setItemHeight(ele) {
@@ -214,7 +215,7 @@
     }
 
 
-
+    var resizeNav;
     $(window).on("resize", function(){
       clearTimeout(resizeNav);
       resizeNav = setTimeout(function() { fixTippyTopMargin() }, 150);

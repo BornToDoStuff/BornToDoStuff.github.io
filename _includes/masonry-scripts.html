@@ -16,7 +16,7 @@
   // masonry and element sizing
   if ($(window).width() <= 768) { heights = [""]; }
   else { heights = ["","tall", "taller", "tallest"]; }
-  
+
   $(window).on("resize", function(){
     if ($(window).width() <= 768) { heights = [""]; }
     else { heights = ["","tall", "taller", "tallest"]; }
@@ -42,7 +42,7 @@
       $(ele).addClass("show-more");
   }
 
-  $(document).ready(function () {
+  masonryWhenReady() {
 
     try {
       var table_layout = sessionStorage.getItem("table");
@@ -83,6 +83,9 @@
       $("#search").focus();
     });
   });
+  masonryWhenReady();
+  document.addEventListener("pjax:success", masonryWhenReady);
+
 
   function setupScroll(grid, masonry){
 
