@@ -6,11 +6,6 @@
 /* ==================== */
 {% include /js/jquery-3.1.1.min.js %}
 
-{% comment %}
-
-//these were moved to places that made more sense
-
-
 /* ==================== */
 /* masonry.pkgd.min.js */
 /* ==================== */
@@ -30,5 +25,3 @@
 /* isotope.pkgd.min.js */
 /* ==================== */
 {% include /js/isotope.pkgd.min.js %}
-
-{% endcomment %}
