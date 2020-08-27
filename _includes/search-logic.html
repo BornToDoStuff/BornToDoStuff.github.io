@@ -141,7 +141,7 @@
               setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
             })
             .always(function() {
-              history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
+              // history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
 
               var table_layout = sessionStorage.getItem("table");
               if (table_layout !== "true")
@@ -223,7 +223,7 @@
     });
 
     function fixTippyTopMargin(){
-      if ($(".width-wrapper.border-top").hasClass("hidden")){
+      if ($(".width-wrapper.border-top").length == 0 || $(".width-wrapper.border-top").hasClass("hidden")){
         $("a#TippyTop").removeAttr("style");
       }
       else if ($('#advanced-nav').hasClass("hidden")) {
