@@ -92,6 +92,7 @@
             path: function() { return '/page/' + (this.pageIndex);},
             append: 'magic-item',
             scrollThreshold: 1500,
+            history: false,
             outlayer: masonry
           });
         }
@@ -99,7 +100,8 @@
           grid.infiniteScroll({
             path: function() { return '/page/' + (this.pageIndex);},
             append: 'magic-item',
-            scrollThreshold: 750
+            scrollThreshold: 750,
+            history: false
           });
         }
 
