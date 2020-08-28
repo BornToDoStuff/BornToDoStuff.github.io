@@ -34,8 +34,7 @@ This warhammer has an unusually large head made of blue tinted steel, and weighs
 On a critical hit with this weapon you deal an additional 2d10 radiant damage. If you score a critical hit against an undead creature you gain half of the radiant damage in temporary hit points as the hammer dimly glows.
 
 <!--excerpt-->
-<section id="curse">
+<div id="curse">
 **Curse.** On a critical failure with this weapon all creatures within 5 feet of the hammer, including yourself, must make a DC 15 constitution saving throw or take 2d10 necrotic damage as the hammer hums loudly and crackles with dark energy.    
 Additionally, while attuned to this hammer you take half healing from spells of 2nd level or lower.
-</section>
-
+</div>

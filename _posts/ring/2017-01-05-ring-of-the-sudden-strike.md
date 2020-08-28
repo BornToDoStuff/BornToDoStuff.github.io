@@ -28,6 +28,6 @@ Once per short rest at the end of a hostile creature's turn you can teleport to 
 Additionally, once per day at the end of a hostile creature's turn you can take the attack action as if it is your turn.
 
 <!--excerpt-->
-<section id="curse">
+<div id="curse">
 **Curse.** If you use either of this ring's features the first attack roll against you within the next minute has advantage. If this attack hits you you take an additional 2d8 Necrotic damage.
-</section>
+</div>

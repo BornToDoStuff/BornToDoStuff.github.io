@@ -33,11 +33,11 @@ As a bonus action you can choose to expend all remaining temporary hit points ga
 Additionally, while attuned to the ring you know the cantrip <magic-spell>Chill Touch</magic-spell>, and can cast it using the ring as a focus.    
 
 <!--excerpt-->
-<section id="curse">
+<div id="curse">
 **Curse.** Each time you gain temporary hit points from this ring it consumes a hit die. If there are no hit dice to be consumed you take damage equal to the temporary hit points gained, although you can not drop below 1 hit point from this effect.
 
 **Permanent Curse.** The first time the ring consumes any of your hit points it becomes permanently attuned to your very soul.    
 The ring dissolves into your finger, the finger withers, and purple veins spider through your hand from the finger. Now when you cast eldritch blast using your temporary hit points it originates from your chest, ignoring verbal and somatic components, but leaves a dull purple mark where it originated. The veins in your hand and the purple mark spread almost imperceptibly each time you do this.
 After your finger withers <magic-spell>Chill Touch</magic-spell> can still be cast, also ignoring verbal and somatic components, eminating from your withered finger.    
 When cursed in this way the curse and attunement can not be removed without destroying the soul of the creature bound to the ring.
-</section>
+</div>

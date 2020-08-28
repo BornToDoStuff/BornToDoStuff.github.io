@@ -37,8 +37,8 @@ On a miss the sword shatters.
 ### Angelic Properties
 The halo will float above your head even in an antimagic field, despite its effects being nullified. Additionally, if you are ever separated from the halo you can summon it back to your head as a bonus action unless it is blocked by an antimagic field or a ward against magical travel such as Forbiddance.
 
-<section id="curse">
+<div id="curse">
 **Curse.**If you are ever more than 15 feet from the halo you take 1 psychic damage per minute as your eyes begin to swim and your head inexplicably aches. If you are on a different plane from the halo you are also blinded until you are once again on the same plane as it.
 
 The only way to unattune from the halo apart from a Wish spell or act of a deity is to commit a horribly evil act. When you unattune in this way from the halo the previously white light coming from it glows a dark red, and the silver dulls. The blackened halo falls to the ground, all magic properties lost and its diamond cracked. If you have proficiency with Religion you lose your proficiency in it and take 4d10 psychic damage as the knowledge is sloughed from your memory.
-</section>
+</div>

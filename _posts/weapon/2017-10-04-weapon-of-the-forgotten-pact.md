@@ -32,6 +32,6 @@ For every minute the weapon is activated you gain an additional +1 to hit with t
 
 Each time you make a Wisdom saving throw against this weapon's effect you may choose to try to break free from it. On a success you take no damage and the weapon is deactivated. On a failure you are unable to clear the voices from your head and you take damage as normal.
 
-<section id="curse">
+<div id="curse">
 **Curse.** When you attune to this weapon you make a binding pact with an ancient one. If you die while attuned to this weapon or go unconscious while the weapon is activated your soul will be trapped within the weapon as one of the many voices, and just as all the other souls, you can not be released until a favor for the ancient one has been completed by another person. If you un-attune with this weapon before completing a favor for the ancient one you are certain you will suffer great misfortune.
-</section>
+</div>

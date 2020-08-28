@@ -41,6 +41,6 @@ This rough keyring has 8 keys on it, 3 of which appear to be copies of the same 
 **6-8.** The last three keys all are shaped the same, but they are larger than the others, and cracked. Flickering light can be seen flowing through the cracks in the keys. Each key has a single charge of <magic-spell>Hellish Rebuke</magic-spell> that is expended when you cast it and recharges at dawn. The light within the keys ebbs and flows with the charges.
 
 <!--excerpt-->
-<section id="curse">
+<div id="curse">
 **Curse.** If you target a fiend with any spell from this item you automatically become the new target for the spell and must roll against yourself.
-</secttion>
+</div>

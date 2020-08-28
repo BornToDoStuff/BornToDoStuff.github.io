@@ -35,7 +35,7 @@ While wearing this amulet when you make an opportunity attack against a creature
 Additionally, as a bonus action you can activate the amulet and the two small eyes snap open. When you do so you gain Truesight out to a range of 30 feet for the next 10 minutes. During this time you can not suffer from the condition Blinded but the condition is not removed. This feature can not be used again until the next dawn.
 
 <!--excerpt-->
-<section id="curse">
+<div id="curse">
 **Curse.** When a creature puts this amulet over their head it tightens around their temples and the largest eye snaps open. It cannot be taken off unless the curse is removed and the chains cannot be broken despite their dainty appearance.
 While wearing this charm you automatically fail saving throws against being Blinded, and have disadvantage on Wisdom saving throws against Beholders, Death Tyrants and Spectators. If you are charmed by any of these creatures the duration of the charm is permanent unless the curse is removed or the enchantment is broken by <magic-spell>Dispel Evil and Good</magic-spell> (Break Enchantment).
-</section>
+</div>

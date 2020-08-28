@@ -38,7 +38,7 @@ As an attack action you can stab this sword into a body of water and target a cr
 
 If this sword has not touched water in over a week it must be fully submerged in water for at least a long rest to regain this property. While it is doing so it sparks slightly and the water tingles with electricity.
 
-<section id="curse">
+<div id="curse">
 **Curse.**
 Every time you stab this sword into a body of water you must make a DC 12 Constitution saving throw or take 1d10 lightning damage. Additionally, you have disadvantage to saving throws against other effects that deal lightning damage.
 
@@ -50,4 +50,4 @@ There is a way to purge this item of its curse.
 If a creature is attuned to this weapon and takes more than 30 damage in one hit while taking it out of the water or the weapon has been fully submerged for over a week without being disturbed the electricity constantly arcing off of it is now contained to the sword, and the arcs of electricity run up and down the length of the blade instead. The curse is now completely gone and additionally the weapon gains a new ability that the player learns about.
 
 Once per day as an action you can activate the sword and a dark roiling fog coalesces around your feet out to a radius of 30 feet. For the next minute this fog follows you and sparks crackle through it. Once per turn you can choose a point within the fog as a bonus action. A surge of lightning erupts from that point and all creatures within 5 feet of that point except yourself must make a Dexterity saving throw. If you are not a spellcaster this uses your Constitution modifier as your spellcasting ability. The affected creatures take 3d10 lightning damage on a failed save or half as much damage on a successful one.
-</section>
+</div>
