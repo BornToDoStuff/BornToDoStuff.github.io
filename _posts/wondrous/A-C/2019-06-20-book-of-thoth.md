@@ -31,7 +31,7 @@ This leatherbound book of ancient parchment is sealed shut and you are unable to
 While attuned to this book you are able to speak with plants and animals as if affected by the spells <magic-spell>Speak with Animals</magic-spell> and <magic-spell>Speak with Plants</magic-spell>. Additionally, you have proficiency with all Wisdom checks and saving throws.
 As an action once per day you can cast either <magic-spell>True Seeing</magic-spell> (with a duration of 10 minutes), or <magic-spell>Contact Other Plane</magic-spell>, ignoring components.
 
-<div id="curse">
+<div class="curse">
 **Curse.** If you do not cast either True Seeing or Contact Other Plane for at least one day while attuned to this book you begin to see and hear things. When you make a critical fail on an ability check, or at any time your DM chooses, you suffer one of the following effects:
 You see something that does not exist until the end of your next turn, something near you appears to change forms until the end of your next turn, or you hear the voice of another creature near you.
 

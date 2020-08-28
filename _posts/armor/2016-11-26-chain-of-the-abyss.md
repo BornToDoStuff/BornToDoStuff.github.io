@@ -34,6 +34,6 @@ While wearing this armor when your speed is reduced to 0 a large dark sigil appe
 Any creature entangled by the chains must make a DC 16 Strength check to escape. These chains return to the ground and the sigil disappears once all creatures trapped by them have escaped or died. The chains also release their targets and return into the ground if exposed to <magic-spell>Aura of Purity</magic-spell>, <magic-spell>Aura of Life</magic-spell>, or <magic-spell>Holy Aura</magic-spell>.
 
 <!--excerpt-->
-<div id="curse">
+<div class="curse">
 **Curse.** Each time you fail to escape from the chains you take 1d4 Necrotic damage. If you are reduced to 0 hp while trapped in the chains they persist for 3 rounds. If you are not stabilized by the end of this time you are dragged through the ground and transported to The Abyss.
 </div>

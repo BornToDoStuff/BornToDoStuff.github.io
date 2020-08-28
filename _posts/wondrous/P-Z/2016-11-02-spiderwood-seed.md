@@ -34,7 +34,7 @@ As an attack action you can make a melee attack with one of these limbs as if yo
 These limbs automatically regrow 1 minute after being seriously damaged or removed, and are each able to hold objects weighing up to 30 pounds. Additionally, you have a climbing speed equal to half your walking speed and are able to move your full speed while prone as long as these legs are free.
 
 <!--excerpt-->
-<div id="curse">
+<div class="curse">
 **Curse.** Once swallowed the seed begins to grow, causing great pain in your upper back. For the next week you suffer 1 level of exhaustion which can not be removed even with <magic-spell>Greater Restoration.</magic-spell> This seed feeds on your life force in exchange for submitting to your control. Up to 4 hit dice are automatically consumed each day at dawn. Additionally, a hit dice is consumed for each limb  that regrows or repairs major damage to itself. If there are no remaining hit dice when a limb repairs itself you take 1d8 necrotic damage. This damage ignores resistance and immunity.
 If the curse is removed from this item the appendages slowly shrivel, die, and fall off. The attunement is broken, but the wooden knobs on your back remain.
 </div>

@@ -32,6 +32,6 @@ As an action if you are in wild unsettled territory, you can expend all 8 charge
 
 As you pick a location a small tree with red leaves and pale smooth bark shoots from the ground, rapidly encasing you before you disappear from sight within its foliage. The tree remains where you once were, forever growing in the plane you left.
 
-<div id="curse">
+<div class="curse">
 **Curse.** This cloak is only able to regain the 8th charge by killing a creature to protect an innocent in danger and dripping the cloak with its blood. It can not recover the last charge by resting.
 </div>

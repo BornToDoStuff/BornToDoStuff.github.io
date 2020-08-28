@@ -35,6 +35,6 @@ This item has 3 charges. While holding it, you can use an action to expend a num
 This item regains all of its expended charges after a long or short rest.
 
 <!--excerpt-->
-<div id="curse">
+<div class="curse">
 **Curse.** The first time this item is used after a long or short rest the user takes 1d8 Necrotic damage for each charge they expended as a tiny piece of their life force is pulled into Limbo. This damage can not be resisted and if a creature goes unconscious from taking this damage a gate appears beneath them and they are sucked through it to Limbo. This gate is one-way only and can't be reopened.
 </div>

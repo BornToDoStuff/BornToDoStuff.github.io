@@ -39,7 +39,7 @@ When you wield a Sickle it now deals 1d6 slashing damage, has the property Fines
 ### Hand of Repose
 While attuned to this glove you gain the ability to cast <magic-spell>Mage Hand</magic-spell> if you could not before. Additionally, when you cast <magic-spell>Mage Hand</magic-spell> it is completely invisible to all except you, appearing to you as a skeletal hand. This variant of mage hand is unusually strong and can carry up to 20 pounds and has no duration, lasting until you dismiss it as an action.
 
-<div id="curse">
+<div class="curse">
 **Curse.** The moment you finish attuning to this glove the arm you are wearing it on is wracked with pain. You take 1d12 Necrotic damage and everything around you momentarily appears as if you are in the Ethereal plane even though your body remains in the mortal plane. You hear whispers around you growing ever closer until your senses return to your body and you are now aware of how light your arm is.
 
 While the glove is covering your arm it feels as normal, but when you lift the cuff several inches above where it is covered your arm stops in a withered stump. Your arm and hand are gone. You can push up the cuff and pass your remaining hand straight through where there should be flesh and bone and the glove will not move from your wrist, as if it is fixed in place to the nothing replacing your hand. You can still use your hand as normal, it simply has no substance beneath the glove.

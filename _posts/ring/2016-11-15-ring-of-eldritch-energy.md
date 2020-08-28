@@ -33,7 +33,7 @@ As a bonus action you can choose to expend all remaining temporary hit points ga
 Additionally, while attuned to the ring you know the cantrip <magic-spell>Chill Touch</magic-spell>, and can cast it using the ring as a focus.    
 
 <!--excerpt-->
-<div id="curse">
+<div class="curse">
 **Curse.** Each time you gain temporary hit points from this ring it consumes a hit die. If there are no hit dice to be consumed you take damage equal to the temporary hit points gained, although you can not drop below 1 hit point from this effect.
 
 **Permanent Curse.** The first time the ring consumes any of your hit points it becomes permanently attuned to your very soul.    

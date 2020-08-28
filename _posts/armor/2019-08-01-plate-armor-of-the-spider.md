@@ -36,6 +36,6 @@ While you are attuned to this armor you are able to convey basic commands and fe
 ### Spider Summoner
 As an action you can expend a charge to simultaneously cast <magic-spell>Web</magic-spell> and <magic-spell>Conjure Animals</magic-spell> at a point within range. Conjure Animals can either summon 4 Swarm of Spiders or 1 Ettercap when used in this way. Additionally, webs created by this effect do not expire and must be destroyed to be removed.
 
-<div id="curse">
+<div class="curse">
 **Curse.** When you are near spiders you sometimes hear whispers from Lolth herself of things she wants you to do. Additionally, any charges that are not expended by midnight are automatically used at point(s) of the DM's choice within range. Any creatures summoned in this way have no duration and are not under your control, though they will not be hostile towards you unless you attack them.
 </div>
