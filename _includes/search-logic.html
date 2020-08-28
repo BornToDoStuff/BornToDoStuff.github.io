@@ -15,7 +15,7 @@
 {% endcomment %}
 
 <script>
-  document.addEventListener("pjax:success", function() {
+  function searchWhenReady() {
 
     var searchbox = $('#search');
     var searchResults = $('#search-results');
@@ -399,7 +399,10 @@
         });
     }
 
-  });
+  }
+
+  document.addEventListener("pjax:success", searchWhenReady);
+  searchWhenReady();
 </script>
 
 <!-- end search logic -->

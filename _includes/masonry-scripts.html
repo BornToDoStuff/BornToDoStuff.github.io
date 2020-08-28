@@ -15,7 +15,7 @@
 {% endcomment %}
 
 <script>
-  document.addEventListener("pjax:success", function() {
+  function masonryWhenReady() {
     // masonry and element sizing
     if ($(window).width() <= 768) { heights = [""]; }
     else { heights = ["","tall", "taller", "tallest"]; }
@@ -112,5 +112,8 @@
         //do nothin'
       }
     }
-  });
+  }
+
+  document.addEventListener("pjax:success", masonryWhenReady);
+  masonryWhenReady();
 </script>

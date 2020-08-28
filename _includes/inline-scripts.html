@@ -2,7 +2,8 @@
 <script src="/data/posts.min.js"></script>
 
 <script>
-	document.addEventListener("pjax:success", function() {
+
+	function inlineWhenReady() {
 		var mobileblock = "mobile-menu-block";
 		//for arguments given in the URL
 		var urlParams;
@@ -250,5 +251,8 @@
 
 				return false;
 			});
-	});
+	}
+
+	document.addEventListener("pjax:success", inlineWhenReady);
+	inlineWhenReady();
 </script>
