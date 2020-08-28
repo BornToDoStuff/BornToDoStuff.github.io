@@ -15,106 +15,106 @@
 {% endcomment %}
 
 <script>
-  // masonry and element sizing
-  if ($(window).width() <= 768) { heights = [""]; }
-  else { heights = ["","tall", "taller", "tallest"]; }
-
-  $(window).on("resize", function(){
+  document.addEventListener("pjax:complete", function() {
+    // masonry and element sizing
     if ($(window).width() <= 768) { heights = [""]; }
     else { heights = ["","tall", "taller", "tallest"]; }
-  });
 
-  function masonryWhenReady() {
-
-    if ($("#grid-sizes magic-item").length == 0){
-      heights.forEach(function (e, i) {
-        $("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
-      });
-    }
-    var sizes = $("#grid-sizes item-description");
-
-
-    function setItemHeight(ele) {
-      var description = $(ele).find("item-description")[0];
-      var heightCount = 0;
-      while (heightCount < (heights.length - 1) && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
-        heightCount++;
-      }
-
-      $(ele).addClass(heights[heightCount]);
-      if (description.scrollHeight > description.clientHeight)
-        $(ele).addClass("show-more");
-    }
-
-
-    try {
-      var table_layout = sessionStorage.getItem("table");
-      if (table_layout == "true"){
-        $("#main").addClass("table"); //go to table
-        $("#search-results").addClass("table");
-        $("#btn-grid").hide(); //swap buttons
-        $("#btn-table").show();
-
-        setupScroll($('section#main'));
-      }
-      else {
-        $("#main magic-item").each(function(){setItemHeight($(this))});
-
-        var $grid = $('section#main').masonry({
-          columnWidth: 'magic-item',
-          itemSelector: 'magic-item',
-          fitWidth: true,
-          horizontalOrder: false,
-          gutter: 15,
-          stagger: 0
-        });
-        // $("#main-nav").width($("#main").width());
-
-        setupScroll($grid, $grid.data('masonry'));
-      }
-    }
-    catch(err){
-      console.log("Error occurred while trying to set up layout or infinite scroll");
-      console.log(err);
-    }
-
-    $("#search-show").on("click", function() {
-      $("#search-form").css("width", "100%");
-      if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
-        $("#navbar-header").css("transform", "translateX(-350px)");
-      }
-      $("#search").focus();
+    $(window).on("resize", function(){
+      if ($(window).width() <= 768) { heights = [""]; }
+      else { heights = ["","tall", "taller", "tallest"]; }
     });
-  };
-  masonryWhenReady();
-  document.addEventListener("pjax:success", masonryWhenReady);
 
+    function masonryWhenReady() {
 
-  function setupScroll(grid, masonry){
-    if ($("#main").data("scrollable")){
-      if (masonry){
-        grid.infiniteScroll({
-          path: function() { return '/page/' + (this.pageIndex);},
-          append: 'magic-item',
-          scrollThreshold: 2000,
-          outlayer: masonry
+      if ($("#grid-sizes magic-item").length == 0){
+        heights.forEach(function (e, i) {
+          $("#grid-sizes").append($("<magic-item class='" + heights[i]+"'><item-description></item-description></magic-item>"))
         });
       }
-      else {
-        grid.infiniteScroll({
-          path: function() { return '/page/' + (this.pageIndex);},
-          append: 'magic-item',
-          scrollThreshold: 1000
-        });
+      var sizes = $("#grid-sizes item-description");
+
+
+      function setItemHeight(ele) {
+        var description = $(ele).find("item-description")[0];
+        var heightCount = 0;
+        while (heightCount < (heights.length - 1) && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+          heightCount++;
+        }
+
+        $(ele).addClass(heights[heightCount]);
+        if (description.scrollHeight > description.clientHeight)
+          $(ele).addClass("show-more");
       }
 
-      grid.on('append.infiniteScroll', function( event, response, path, items ) {
-        $(items).each(function(){setItemHeight($(this))});
-        grid.masonry('layout');
+
+      try {
+        var table_layout = sessionStorage.getItem("table");
+        if (table_layout == "true"){
+          $("#main").addClass("table"); //go to table
+          $("#search-results").addClass("table");
+          $("#btn-grid").hide(); //swap buttons
+          $("#btn-table").show();
+
+          setupScroll($('section#main'));
+        }
+        else {
+          $("#main magic-item").each(function(){setItemHeight($(this))});
+
+          var $grid = $('section#main').masonry({
+            columnWidth: 'magic-item',
+            itemSelector: 'magic-item',
+            fitWidth: true,
+            horizontalOrder: false,
+            gutter: 15,
+            stagger: 0
+          });
+          // $("#main-nav").width($("#main").width());
+
+          setupScroll($grid, $grid.data('masonry'));
+        }
+      }
+      catch(err){
+        console.log("Error occurred while trying to set up layout or infinite scroll");
+        console.log(err);
+      }
+
+      $("#search-show").on("click", function() {
+        $("#search-form").css("width", "100%");
+        if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
+          $("#navbar-header").css("transform", "translateX(-350px)");
+        }
+        $("#search").focus();
       });
+      };
+
+
+      function setupScroll(grid, masonry){
+        if ($("#main").data("scrollable")){
+          if (masonry){
+            grid.infiniteScroll({
+              path: function() { return '/page/' + (this.pageIndex);},
+              append: 'magic-item',
+              scrollThreshold: 2000,
+              outlayer: masonry
+            });
+          }
+          else {
+            grid.infiniteScroll({
+              path: function() { return '/page/' + (this.pageIndex);},
+              append: 'magic-item',
+              scrollThreshold: 1000
+            });
+          }
+
+          grid.on('append.infiniteScroll', function( event, response, path, items ) {
+            $(items).each(function(){setItemHeight($(this))});
+            grid.masonry('layout');
+          });
+        }
+        else {
+          //do nothin'
+        }
     }
-    else {
-      //do nothin'
-    }
-  }
+  });
 </script>

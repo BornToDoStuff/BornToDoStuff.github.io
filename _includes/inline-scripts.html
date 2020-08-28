@@ -2,183 +2,170 @@
 <script src="/data/posts.min.js"></script>
 
 <script>
-	var mobileblock = "mobile-menu-block";
-	//for arguments given in the URL
-	var urlParams;
-	(window.onpopstate = function () {
-		var match,
-			pl     = /\+/g,  // Regex for replacing addition symbol with a space
-			search = /([^&=]+)=?([^&]*)/g,
-			decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
-			query  = window.location.search.substring(1);
+	document.addEventListener("pjax:complete", function() {
+		var mobileblock = "mobile-menu-block";
+		//for arguments given in the URL
+		var urlParams;
+		(window.onpopstate = function () {
+			var match,
+				pl     = /\+/g,  // Regex for replacing addition symbol with a space
+				search = /([^&=]+)=?([^&]*)/g,
+				decode = function (s) { return decodeURIComponent(s.replace(pl, " ")); },
+				query  = window.location.search.substring(1);
 
-		urlParams = {};
-		while (match = search.exec(query))
-			urlParams[decode(match[1])] = decode(match[2]);
-	})();
+			urlParams = {};
+			while (match = search.exec(query))
+				urlParams[decode(match[1])] = decode(match[2]);
+		})();
 
-	//if there are arguments in the URL
-	if (urlParams["textOnly"]){
-		$('head').append("<link rel='stylesheet' href='/css/text-only.css' type='text/css' />");
-	}
-	if (urlParams["dmOnly"]){
-			$('head').append("<style type='text/css'> item-details,#curse{display: none;} </style>");
-	}
+		//if there are arguments in the URL
+		if (urlParams["textOnly"]){
+			$('head').append("<link rel='stylesheet' href='/css/text-only.css' type='text/css' />");
+		}
+		if (urlParams["dmOnly"]){
+				$('head').append("<style type='text/css'> item-details,#curse{display: none;} </style>");
+		}
 
-	function checkContextButton(){
-		if ($(window).scrollTop() >= 150) {
-				$("#return-to-top").stop(true, false).animate({ opacity: 1}, 250);
-		} else { $("#return-to-top").stop(true, false).animate({ opacity: 0}, 250); }
-	}
-
-	function checkMobileMenu(){
-		currentPosition = $(window).scrollTop();
-		if ($(window).width() < 768){ /* mobile size */
+		function checkContextButton(){
 			if ($(window).scrollTop() >= 150) {
-				if (currentPosition > scrollPosition){ /*scrolling down*/
-					if (down){
-						$("#" + mobileblock).remove();
-						$("#navbar").stop(true, false).slideUp(250);
-						$("#navbar-content > ul").stop(true, false).slideUp(250);
-						difference = 0;
-						down = false;
+					$("#return-to-top").stop(true, false).animate({ opacity: 1}, 250);
+			} else { $("#return-to-top").stop(true, false).animate({ opacity: 0}, 250); }
+		}
+
+		function checkMobileMenu(){
+			currentPosition = $(window).scrollTop();
+			if ($(window).width() < 768){ /* mobile size */
+				if ($(window).scrollTop() >= 150) {
+					if (currentPosition > scrollPosition){ /*scrolling down*/
+						if (down){
+							$("#" + mobileblock).remove();
+							$("#navbar").stop(true, false).slideUp(250);
+							$("#navbar-content > ul").stop(true, false).slideUp(250);
+							difference = 0;
+							down = false;
+						}
+					}
+					else { /*scrolling up*/
+						difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
+						if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
+							$("#navbar").stop(true, false).slideDown(250);
+							down = true;
+						}
 					}
 				}
-				else { /*scrolling up*/
-					difference += scrollPosition - currentPosition; /*difference is the change between the last positions*/
-					if (difference > 50 && !down){ /*if the difference is positive the screen is going up. If its more than 50 show the menu*/
-						$("#navbar").stop(true, false).slideDown(250);
-						down = true;
-					}
+				else if (!down) {
+					$("#navbar").slideDown(250);
+					down = true;
 				}
 			}
-			else if (!down) {
-				$("#navbar").slideDown(250);
+			else { /* desktop size */
+				$("#" + mobileblock).remove();
+				$("#navbar").removeAttr("style");
+				$("#navbar-content > ul").removeAttr("style");
+				$(".dropdown").removeAttr("style");
 				down = true;
 			}
+			scrollPosition = currentPosition;
 		}
-		else { /* desktop size */
-			$("#" + mobileblock).remove();
-			$("#navbar").removeAttr("style");
-			$("#navbar-content > ul").removeAttr("style");
-			$(".dropdown").removeAttr("style");
-			down = true;
+
+		function getRandom(min_par, max_par) {
+			var min = min_par ?? 0;
+			var max = max_par ?? {{ site.posts | size }} - 1;
+			return Math.floor(Math.random() * (max - min + 1) ) + min;
 		}
-		scrollPosition = currentPosition;
-	}
 
-	function getRandom(min_par, max_par) {
-		var min = min_par ?? 0;
-		var max = max_par ?? {{ site.posts | size }} - 1;
-		return Math.floor(Math.random() * (max - min + 1) ) + min;
-	}
+			checkContextButton(); /* check once on load */
 
-	function inlineScriptWhenReady() {
-		checkContextButton(); /* check once on load */
+			if ($("#item-wrapper").data("random")){
+				var r = getRandom();
+				var items_visited = sessionStorage.getItem("items_visited");
+				if (items_visited) { //if there is any useful value in items_visited
+					items_visited = items_visited.split(",");
+					while (items_visited.indexOf(r.toString()) >= 0){ //find a value of "r" that is not in items_visited
+						r = getRandom();
+					}
+					if (items_visited.length == 10)
+						items_visited.pop();
+					items_visited.unshift(r);
 
-		if ($("#item-wrapper").data("random")){
-			var r = getRandom();
-			var items_visited = sessionStorage.getItem("items_visited");
-			if (items_visited) { //if there is any useful value in items_visited
-				items_visited = items_visited.split(",");
-				while (items_visited.indexOf(r.toString()) >= 0){ //find a value of "r" that is not in items_visited
-					r = getRandom();
+					sessionStorage.setItem("items_visited", items_visited.join(","));
 				}
-				if (items_visited.length == 10)
-					items_visited.pop();
-				items_visited.unshift(r);
-
-				sessionStorage.setItem("items_visited", items_visited.join(","));
-			}
-			else {
-				sessionStorage.setItem("items_visited", r);
-			}
-
-			//$("#main").remove();
-			//$("#main-wrapper").load(posts[r].url + " #main");
-			history.replaceState(null, posts[r].title, posts[r].url);
-			$("#main-wrapper").load(posts[r].url + " #main-wrapper section");
-		}
-
-		$("#search-show").on("click", function() {
-			$("#search-form").css("width", "100%");
-			if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
-				$("#navbar-header").css("transform", "translateX(-350px)");
-			}
-			$("#search").focus();
-		});
-
-    $(".dropdown-toggle").on("click touchend", function (e) {
-      if ($(window).width() < 768){
-        e.preventDefault();
-        $(this).next(".dropdown").stop(true, false).slideToggle(250);
-      }
-    });
-
-    //if a link starts with "#" make it animate to that position and prevent adding it to the url
-    $('a[href^="#"]').on("click touchend", function (e) {
-      if (this.hash != ""){ //watch for empty hashes
-        e.preventDefault();
-        var $target = $(this.hash);
-				if ($target && $target.length > 0) {
-					var top = $target.offset().top - 75;
-	        if (top < 0)
-	          top = 0;
-
-	        $('html, body').stop().animate({
-	            'scrollTop': top
-	        }, 500, 'swing');
+				else {
+					sessionStorage.setItem("items_visited", r);
 				}
-      }
-    });
+
+				//$("#main").remove();
+				//$("#main-wrapper").load(posts[r].url + " #main");
+				history.replaceState(null, posts[r].title, posts[r].url);
+				$("#main-wrapper").load(posts[r].url + " #main-wrapper section");
+			}
+
+			$("#search-show").on("click", function() {
+				$("#search-form").css("width", "100%");
+				if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
+					$("#navbar-header").css("transform", "translateX(-350px)");
+				}
+				$("#search").focus();
+			});
+
+	    $(".dropdown-toggle").on("click touchend", function (e) {
+	      if ($(window).width() < 768){
+	        e.preventDefault();
+	        $(this).next(".dropdown").stop(true, false).slideToggle(250);
+	      }
+	    });
+
+	    //if a link starts with "#" make it animate to that position and prevent adding it to the url
+	    $('a[href^="#"]').on("click touchend", function (e) {
+	      if (this.hash != ""){ //watch for empty hashes
+	        e.preventDefault();
+	        var $target = $(this.hash);
+					if ($target && $target.length > 0) {
+						var top = $target.offset().top - 75;
+		        if (top < 0)
+		          top = 0;
+
+		        $('html, body').stop().animate({
+		            'scrollTop': top
+		        }, 500, 'swing');
+					}
+	      }
+	    });
 
 
-    $("body").on("click touchend","#" + mobileblock, function() {
-      $("#" + mobileblock).remove();
-    });
+	    $("body").on("click touchend","#" + mobileblock, function() {
+	      $("#" + mobileblock).remove();
+	    });
 
-    var timer;
-    $(window).on("scroll resize", function () {
-      clearInterval(timer);
-      timer = setInterval(checkContextButton, 150);
-      checkMobileMenu();
-    });
-
-
-
-    var scrollPosition = 0;
-    var currentPosition = 0;
-    var difference = 0;
-    var down = true;
-    /*if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu*/
+	    var timer;
+	    $(window).on("scroll resize", function () {
+	      clearInterval(timer);
+	      timer = setInterval(checkContextButton, 150);
+	      checkMobileMenu();
+	    });
 
 
-		$("#btn-table").on("click", function(e) {
-			e.preventDefault();
-			$("body").addClass("loading");
-			try {
-				$("#main").removeClass("table"); //go back to grid
-				$("#search-results").removeClass("table");
-				$("#btn-grid").show(); //swap buttons
-				$("#btn-table").hide();
-				var table_layout = sessionStorage.setItem("table", "false");
 
-				//start the layout process over since it was presumably destroyed
-				$("#main magic-item").each(function(){setItemHeight($(this))});
-				var $grid = $('section#main').masonry({
-					columnWidth: 'magic-item',
-					itemSelector: 'magic-item',
-					fitWidth: true,
-					horizontalOrder: false,
-					gutter: 15,
-					stagger: 0
-				});
-				setupScroll($grid, $grid.data('masonry'));
+	    var scrollPosition = 0;
+	    var currentPosition = 0;
+	    var difference = 0;
+	    var down = true;
+	    /*if the user is scrolling down hide the mobile menu. Scrolling up, bring back the menu*/
 
-				var searchParams = new URLSearchParams(window.location.search);
-				if (searchParams.get("q") && searchParams.get("q") !== null) {
-					$("#search-results magic-item").each(function(){setItemHeight($(this))});
-					var $searchGrid = $("section#search-results").masonry({
+
+			$("#btn-table").on("click", function(e) {
+				e.preventDefault();
+				$("body").addClass("loading");
+				try {
+					$("#main").removeClass("table"); //go back to grid
+					$("#search-results").removeClass("table");
+					$("#btn-grid").show(); //swap buttons
+					$("#btn-table").hide();
+					var table_layout = sessionStorage.setItem("table", "false");
+
+					//start the layout process over since it was presumably destroyed
+					$("#main magic-item").each(function(){setItemHeight($(this))});
+					var $grid = $('section#main').masonry({
 						columnWidth: 'magic-item',
 						itemSelector: 'magic-item',
 						fitWidth: true,
@@ -186,72 +173,83 @@
 						gutter: 15,
 						stagger: 0
 					});
+					setupScroll($grid, $grid.data('masonry'));
 
-					var $iso_grid = $('section#search-results').isotope({
-						itemSelector: 'magic-item'
-					});
+					var searchParams = new URLSearchParams(window.location.search);
+					if (searchParams.get("q") && searchParams.get("q") !== null) {
+						$("#search-results magic-item").each(function(){setItemHeight($(this))});
+						var $searchGrid = $("section#search-results").masonry({
+							columnWidth: 'magic-item',
+							itemSelector: 'magic-item',
+							fitWidth: true,
+							horizontalOrder: false,
+							gutter: 15,
+							stagger: 0
+						});
+
+						var $iso_grid = $('section#search-results').isotope({
+							itemSelector: 'magic-item'
+						});
+					}
 				}
-			}
-			catch(err){
-				console.log("Error occurred while attempting to switch to grid layout");
-				console.log(err);
-			}
+				catch(err){
+					console.log("Error occurred while attempting to switch to grid layout");
+					console.log(err);
+				}
 
-			setTimeout(function() { $("body").removeClass("loading"); }, 800);
-			return false;
-		});
+				setTimeout(function() { $("body").removeClass("loading"); }, 800);
+				return false;
+			});
 
-		$("#btn-grid").on("click", function(e) {
-			e.preventDefault();
-			$("body").addClass("loading");
+			$("#btn-grid").on("click", function(e) {
+				e.preventDefault();
+				$("body").addClass("loading");
 
-			try {
-				$("#main").addClass("table"); //go to table
-				$("#search-results").addClass("table");
-				$("#btn-grid").hide(); //swap buttons
-				$("#btn-table").show();
-				var table_layout = sessionStorage.setItem("table", "true");
+				try {
+					$("#main").addClass("table"); //go to table
+					$("#search-results").addClass("table");
+					$("#btn-grid").hide(); //swap buttons
+					$("#btn-table").show();
+					var table_layout = sessionStorage.setItem("table", "true");
 
-				$('section#main').data('masonry').destroy(); //remove masonry
-				setupScroll($('section#main')); //re-setup scroll
-			}
-			catch(err){
-				console.log("Error occurred while attempting to switch to grid layout");
-				console.log(err);
-			}
+					$('section#main').data('masonry').destroy(); //remove masonry
+					setupScroll($('section#main')); //re-setup scroll
+				}
+				catch(err){
+					console.log("Error occurred while attempting to switch to grid layout");
+					console.log(err);
+				}
 
-			setTimeout(function() { $("body").removeClass("loading"); }, 800);
-			return false;
-		});
+				setTimeout(function() { $("body").removeClass("loading"); }, 800);
+				return false;
+			});
 
-		$("#btnCopy-item").on( "click", function() {
-			var id = $(this).attr('id');
-			var el = $("item-description")[0];
-			var range = document.createRange();
-			range.selectNodeContents(el);
+			$("#btnCopy-item").on( "click", function() {
+				var id = $(this).attr('id');
+				var el = $("item-description")[0];
+				var range = document.createRange();
+				range.selectNodeContents(el);
 
-			var selection = window.getSelection();
-			selection.removeAllRanges();
-			selection.addRange(range);
-			document.execCommand('copy');
-			selection.removeAllRanges();
-			//alert("Contents copied to clipboard.");
-			return false;
-		});
+				var selection = window.getSelection();
+				selection.removeAllRanges();
+				selection.addRange(range);
+				document.execCommand('copy');
+				selection.removeAllRanges();
+				//alert("Contents copied to clipboard.");
+				return false;
+			});
 
-		$("#btnCopy-link").on("click", function() {
-			var dummy = document.createElement('input');
+			$("#btnCopy-link").on("click", function() {
+				var dummy = document.createElement('input');
 
-			document.body.appendChild(dummy);
-			dummy.value = window.location.href;
-			dummy.select();
-			document.execCommand('copy');
-			document.body.removeChild(dummy);
+				document.body.appendChild(dummy);
+				dummy.value = window.location.href;
+				dummy.select();
+				document.execCommand('copy');
+				document.body.removeChild(dummy);
 
-			return false;
-		});
-  };
-	inlineScriptWhenReady();
-	document.addEventListener("pjax:success", inlineScriptWhenReady);
-
+				return false;
+			});
+	  };
+	});
 </script>
