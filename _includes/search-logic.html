@@ -61,15 +61,13 @@
       `;
     }
 
-    var searchParams = new URLSearchParams(window.location.search);
-    if (searchParams.get("q") && searchParams.get("q") !== null)
-    {
-      $("body").addClass("searching");
-
-      document.addEventListener("pjax:success", search())
-      // $(document).ready(function() {
-      //   search();
-      // });
+    document.addEventListener("pjax:send", function() {
+      var searchParams = new URLSearchParams(window.location.search);
+      if (searchParams.get("q") && searchParams.get("q") !== null)
+      {
+        $("body").addClass("searching");
+        document.addEventListener("pjax:complete", search()}
+      }
     }
 
     function setItemHeight(ele) {
@@ -104,7 +102,7 @@
     function search(){
       $('#main').hide();
       searchResults.show();
-      
+
       searchbox.val(searchParams.get("q"));
       searchform.css("width", "100%");
       if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller

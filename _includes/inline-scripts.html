@@ -1,40 +1,37 @@
 
-{% if page.randomize %}
-<div class="delete-me">
-	<script src="/data/posts.min.js"></script> <!-- posts var -->
-	<script>
-		function getRandom(min_par, max_par) {
-			var min = min_par ?? 0;
-			var max = max_par ?? {{ site.posts | size }} - 1;
-			return Math.floor(Math.random() * (max - min + 1) ) + min;
+<script src="/data/posts.min.js"></script>
+<script>
+	function getRandom(min_par, max_par) {
+		var min = min_par ?? 0;
+		var max = max_par ?? {{ site.posts | size }} - 1;
+		return Math.floor(Math.random() * (max - min + 1) ) + min;
+	}
+
+//get an item that has not been seen in the last 10 randoms to make it APPEAR more random.
+		var r = getRandom();
+		var items_visited = sessionStorage.getItem("items_visited");
+		if (items_visited) { //if there is any useful value in items_visited
+			items_visited = items_visited.split(",");
+			while (items_visited.indexOf(r.toString()) >= 0){ //find a value of "r" that is not in items_visited
+				r = getRandom();
+			}
+			if (items_visited.length == 10)
+				items_visited.pop();
+			items_visited.unshift(r);
+
+			sessionStorage.setItem("items_visited", items_visited.join(","));
+		}
+		else {
+			sessionStorage.setItem("items_visited", r);
 		}
 
-	//get an item that has not been seen in the last 10 randoms to make it APPEAR more random.
-			var r = getRandom();
-			var items_visited = sessionStorage.getItem("items_visited");
-			if (items_visited) { //if there is any useful value in items_visited
-				items_visited = items_visited.split(",");
-				while (items_visited.indexOf(r.toString()) >= 0){ //find a value of "r" that is not in items_visited
-					r = getRandom();
-				}
-				if (items_visited.length == 10)
-					items_visited.pop();
-				items_visited.unshift(r);
+		//$("#main").remove();
+		//$("#main-wrapper").load(posts[r].url + " #main");
+		history.replaceState(null, posts[r].title, posts[r].url);
+		$("#main-wrapper").load(posts[r].url + " #main-wrapper section");
+		$(".delete-me").remove();
+</script>
 
-				sessionStorage.setItem("items_visited", items_visited.join(","));
-			}
-			else {
-				sessionStorage.setItem("items_visited", r);
-			}
-
-			//$("#main").remove();
-			//$("#main-wrapper").load(posts[r].url + " #main");
-			history.replaceState(null, posts[r].title, posts[r].url);
-			$("#main-wrapper").load(posts[r].url + " #main-wrapper section");
-			$(".delete-me").remove();
-	</script>
-</div>
-{% endif %}
 
 <script>
 	var mobileblock = "mobile-menu-block";
@@ -102,8 +99,34 @@
 		scrollPosition = currentPosition;
 	}
 
+	function getRandom(min_par, max_par) {
+		var min = min_par ?? 0;
+		var max = max_par ?? {{ site.posts | size }} - 1;
+		return Math.floor(Math.random() * (max - min + 1) ) + min;
+	}
+
 	function inlineScriptWhenReady() {
 		checkContextButton(); /* check once on load */
+
+	  if ($("#item-wrapper").data("random")){ //if the item should be random
+			var r = getRandom();
+			var items_visited = sessionStorage.getItem("items_visited");
+			if (items_visited) { //if there is any useful value in items_visited
+				items_visited = items_visited.split(",");
+				while (items_visited.indexOf(r.toString()) >= 0){ //find a value of "r" that is not in items_visited
+					r = getRandom();
+				}
+				if (items_visited.length == 10){ items_visited.pop(); }
+				items_visited.unshift(r);
+
+				sessionStorage.setItem("items_visited", items_visited.join(","));
+			}
+			else { sessionStorage.setItem("items_visited", r); }
+
+			history.replaceState(null, posts[r].title, posts[r].url);
+			$("#main-wrapper").load(posts[r].url + " #main-wrapper section");
+		}
+
 
 		$("#search-show").on("click", function() {
 			$("#search-form").css("width", "100%");

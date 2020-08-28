@@ -47,7 +47,7 @@
         }
 
         var pjax = new Pjax({
-          scrollRestoration: false,
+          scrollRestoration: true,
           cacheBust: false,
           selectors: [
             "title",
@@ -56,7 +56,8 @@
             "#navbar",
             "#item-wrapper",
             "#main",
-            "#search-results"
+            "#search-results",
+            "#pagination"
           ]
         })
     	</script>
