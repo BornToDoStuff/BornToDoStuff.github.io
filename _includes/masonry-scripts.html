@@ -94,7 +94,7 @@
     if ($("#main").data("scrollable")){
       if (masonry){
         grid.infiniteScroll({
-          path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
+          path: function() { return '/page/' + (this.pageIndex);},
           append: 'magic-item',
           scrollThreshold: 2000,
           outlayer: masonry
@@ -102,7 +102,7 @@
       }
       else {
         grid.infiniteScroll({
-          path: function() { return '/page/' + ({{paginator.page}} + this.pageIndex);},
+          path: function() { return '/page/' + (this.pageIndex);},
           append: 'magic-item',
           scrollThreshold: 1000
         });

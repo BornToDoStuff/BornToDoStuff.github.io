@@ -4,6 +4,7 @@
 @import "reset";
 @import "variables";
 @import "navbar";
+@import "pagination";
 @import "loading";
 
 
@@ -159,7 +160,7 @@ magic-item {
 	text-align: justify;
 	position: relative;
 	border-radius: 4px;
-	border: 2px solid #40434e;
+	border: 2px solid $bluakDark;
 	border-left: none;
 	border-right: none;
 }
@@ -597,11 +598,6 @@ item-tag:hover {
 
 /*=============== END old page styles ===============*/
 
-
-.page-navigation {
-	display: none;
-}
-
 .form-control, .btn-default {
 	border: 1px solid $mediumGray;
 }
@@ -700,7 +696,7 @@ tbody tr {
 thead tr {
 	background-color: none;
 	border-top: 1px solid $transp_lightGray;
-	color: #40434e;
+	color: $bluakDark;
 }
 
 td { padding: 4px 10px; }
