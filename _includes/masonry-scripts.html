@@ -87,11 +87,21 @@
 
     function setupScroll(grid, masonry){
       if ($("#main").data("scrollable")){
-        grid.infiniteScroll({
-          path: function() { return '/page/' + (this.pageIndex);},
-          append: 'magic-item',
-          scrollThreshold: 1000
-        });
+        if (masonry){
+          grid.infiniteScroll({
+            path: function() { return '/page/' + (this.pageIndex);},
+            append: 'magic-item',
+            scrollThreshold: 1500,
+            outlayer: masonry
+          });
+        }
+        else {
+          grid.infiniteScroll({
+            path: function() { return '/page/' + (this.pageIndex);},
+            append: 'magic-item',
+            scrollThreshold: 750
+          });
+        }
 
         grid.on('append.infiniteScroll', function( event, response, path, items ) {
           $(items).each(function(){setItemHeight($(this))});
