@@ -109,7 +109,10 @@
         });
       }
       else {
-        //do nothin'
+        try {
+          grid.infiniteScroll("destroy");
+        }
+        catch {}
       }
     }
   }
