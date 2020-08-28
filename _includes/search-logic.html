@@ -60,13 +60,13 @@
         </magic-item>
       `;
     }
-
-    document.addEventListener("pjax:send", function() {
-      var searchParams = new URLSearchParams(window.location.search);
+    var searchParams = "";
+    document.addEventListener("pjax:complete", function() {
+      searchParams = new URLSearchParams(window.location.search);
       if (searchParams.get("q") && searchParams.get("q") !== null)
       {
         $("body").addClass("searching");
-        document.addEventListener("pjax:complete", search());
+        search()
       }
     });
 
