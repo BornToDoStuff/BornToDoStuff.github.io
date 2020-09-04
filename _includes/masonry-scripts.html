@@ -89,9 +89,13 @@
       $("#pagination.page-navigation").hide(); //if there is javascript, just hide the pagination lol
 
       if ($("#main").data("scrollable")){
+        var href = window.location.href.split('/');
+        var currentPage = href[href.length - 1];
+        if (!currentPage) currentPage = href[href.length - 2];
+
         if (masonry){
           grid.infiniteScroll({
-            path: function() { return '/page/' + (this.pageIndex);},
+            path: function() { return '/page/' + (currentPage + this.pageIndex);},
             append: 'magic-item',
             scrollThreshold: 1500,
             history: false,
@@ -100,7 +104,7 @@
         }
         else {
           grid.infiniteScroll({
-            path: function() { return '/page/' + (this.pageIndex);},
+            path: function() { return '/page/' + (currentPage + this.pageIndex);},
             append: 'magic-item',
             scrollThreshold: 750,
             history: false
