@@ -92,6 +92,7 @@
         var href = window.location.href.split('/');
         var currentPage = href[href.length - 1];
         if (!currentPage) currentPage = href[href.length - 2];
+        currentPage = parseInt(currentPage) || 0;
 
         if (masonry){
           grid.infiniteScroll({
