@@ -95,7 +95,7 @@
 
         if (masonry){
           grid.infiniteScroll({
-            path: function() { return '/page/' + (currentPage + this.pageIndex);},
+            path: function() { return '/page/' + (parseInt(currentPage) + this.pageIndex);},
             append: 'magic-item',
             scrollThreshold: 1500,
             history: false,
@@ -104,7 +104,7 @@
         }
         else {
           grid.infiniteScroll({
-            path: function() { return '/page/' + (currentPage + this.pageIndex);},
+            path: function() { return '/page/' + (parseInt(currentPage) + this.pageIndex);},
             append: 'magic-item',
             scrollThreshold: 750,
             history: false
