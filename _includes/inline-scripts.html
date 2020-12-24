@@ -227,7 +227,7 @@
 
 			$("#btnCopy-item").on( "click", function() {
 				var id = $(this).attr('id');
-				var el = $("item-description")[0];
+				var el = $("#item-wrapper item-description")[0];
 				var range = document.createRange();
 				range.selectNodeContents(el);
 
