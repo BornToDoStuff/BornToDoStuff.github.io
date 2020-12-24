@@ -226,14 +226,15 @@
 			});
 
 			$("#btnCopy-item").on( "click", function() {
-				var id = $(this).attr('id');
-				var el = $("#item-wrapper item-description")[0];
-				var range = document.createRange();
-				range.selectNodeContents(el);
+				var desc = document.createRange();
+				var title = document.createRange();
+				desc.selectNodeContents($("#item-wrapper item-description")[0]);
+				title.selectNodeContents($("#item-wrapper item-title")[0]);
 
 				var selection = window.getSelection();
 				selection.removeAllRanges();
-				selection.addRange(range);
+				selection.addRange(title);
+				selection.addRange(desc);
 				document.execCommand('copy');
 				selection.removeAllRanges();
 				//alert("Contents copied to clipboard.");
