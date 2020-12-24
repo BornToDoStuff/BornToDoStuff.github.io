@@ -226,17 +226,29 @@
 			});
 
 			$("#btnCopy-item").on( "click", function() {
-				var desc = document.createRange();
-				var title = document.createRange();
-				desc.selectNodeContents($("#item-wrapper item-description")[0]);
-				title.selectNodeContents($("#item-wrapper item-title")[0]);
+				var range = document.createRange();
 
-				var selection = window.getSelection();
-				selection.removeAllRanges();
-				selection.addRange(title);
-				selection.addRange(desc);
-				document.execCommand('copy');
-				selection.removeAllRanges();
+				var title = range.selectNodeContents(
+						document.getElementById("item-wrapper").getElementsByTagName("item-title")[0]
+					).toString().trim();
+				var desc = range.selectNodeContents(
+						document.getElementById("item-wrapper").getElementsByTagName("item-description")[0]
+					).toString().trim();
+
+				// var selection = window.getSelection();
+				// selection.removeAllRanges();
+				// selection.addRange(title);
+				// selection.addRange(desc);
+				// document.execCommand('copy');
+				// selection.removeAllRanges();
+
+				const el = document.createElement('textarea');
+			  el.value = title + "\n\n" + desc;
+			  document.body.appendChild(el);
+			  el.select();
+			  document.execCommand('copy');
+			  document.body.removeChild(el);
+
 				//alert("Contents copied to clipboard.");
 				return false;
 			});
