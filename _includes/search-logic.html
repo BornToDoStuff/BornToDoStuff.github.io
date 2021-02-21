@@ -409,9 +409,11 @@
             sessionStorage.setItem(key, JSON.stringify(index));
             return index;
           })
-          .fail(function(data) {
+          .fail(function(jqXHR, textStatus, errorThrown) {
             console.log("error during ajax call to retrieve search index. This is the data:");
-            console.log(data);
+            console.log(jqXHR);
+            console.log(textStatus);
+            console.log(errorThrown);
 
             searchResults.html(errorMessage);
             setTimeout(function() {
