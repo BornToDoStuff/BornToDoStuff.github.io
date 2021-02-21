@@ -24,8 +24,10 @@
     var errorMessage = "<magic-item style='margin:auto'><item-title><a>Error!</a></item-name><item-description>Ah phooie, looks like the gnomes pressed the wrong button. Please wait a moment and then try again.</item-description></magic-item>"
     var searchResults = $('#search-results');
 
-    var heights = ["","tall", "taller", "tallest"];
-    if ($(window).width() <= 768) { heights = [""]; }
+    var heights = ["", "tall", "taller", "tallest"];
+    if ($(window).width() <= 768) {
+      heights = [""];
+    }
     var sizes = $("#grid-sizes item-description");
     var item_cache = [];
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
@@ -62,12 +64,11 @@
       `;
     }
 
-      var searchParams = new URLSearchParams(window.location.search);
-      if (searchParams.get("q") && searchParams.get("q") !== null)
-      {
-        $("body").addClass("searching");
-        search()
-      }
+    var searchParams = new URLSearchParams(window.location.search);
+    if (searchParams.get("q") && searchParams.get("q") !== null) {
+      $("body").addClass("searching");
+      search()
+    }
 
     function setItemHeight(ele) {
       var description = $(ele).find("item-description")[0];
@@ -82,7 +83,7 @@
     }
 
 
-    $("#search-form").submit(function(e){
+    $("#search-form").submit(function(e) {
       if (searchbox.val() == "") {
         unsearch();
         e.preventDefault();
@@ -90,38 +91,31 @@
       }
     });
 
-    // $("#search-clear").on("click", function(){
-    //    unsearch();
-    // });
-    // searchbox.on('keyup', function (e) {
-    //     if (e.keyCode == 13) { search(); }
-    //     if (searchbox.val() == "") { unsearch(); }
-    // });
-
-    function search(){
+    function search() {
       $('#main').hide();
       searchResults.show();
 
       searchbox.val(searchParams.get("q"));
       searchform.css("width", "100%");
-      if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
-				searchHeader.css("transform", "translateX(-350px)");
-			}
+      if ($(window).width() <= 768) { //minimize header if it is a tablet or smaller
+        searchHeader.css("transform", "translateX(-350px)");
+      }
 
       try {
         var query = searchbox.val();
         var index = lunr.Index.load(getIndex());
 
         var advanced = false;
-        var symbols = [":","*","^","~","+","-"];
+        var symbols = [":", "*", "^", "~", "+", "-"];
         symbols.forEach(function(symbol) {
-          if (query.includes(symbol)){ advanced = true; }
+          if (query.includes(symbol)) {
+            advanced = true;
+          }
         })
 
         if (advanced) { //if its an advanced query search how the user wants
           var results = index.search(query);
-        }
-        else { //else use the default query
+        } else { //else use the default query
           var results = index.search(`${query}^10 ${query}*^3 *${query}^3 ${query}~1`);
         }
         searchResults.empty();
@@ -132,22 +126,27 @@
             .done(function(item_data) {
               item_cache = JSON.parse(item_data).items;
               searchResults.html(results.map(itemTemplate).join(''));
-              setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
+              setTimeout(function() {
+                document.body.classList.remove('searching')
+              }, getRandom(300, 700));
             })
-            .fail(function( data ) {
+            .fail(function(data) {
               console.log("error during ajax call to retrieve search index for item cache. This is the data:");
               console.log(data);
 
               searchResults.html(errorMessage);
-              setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
+              setTimeout(function() {
+                document.body.classList.remove('searching')
+              }, getRandom(300, 700));
             })
             .always(function() {
               // history.replaceState(null, "Search", "/?q=" + encodeURIComponent(query));
 
               var table_layout = sessionStorage.getItem("table");
-              if (table_layout !== "true")
-              {
-                $("#search-results magic-item").each(function(){setItemHeight($(this))});
+              if (table_layout !== "true") {
+                $("#search-results magic-item").each(function() {
+                  setItemHeight($(this))
+                });
                 var $searchGrid = searchResults.masonry({
                   columnWidth: 'magic-item',
                   itemSelector: 'magic-item',
@@ -171,21 +170,23 @@
                     fitWidth: true,
                     gutter: 15
                   }
-                 });
+                });
                 updateFilterCounts(true);
-              }, getRandom(900,1400));
+              }, getRandom(900, 1400));
             });
-          }
-          else {
-            searchResults.html("<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
-            setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
-          }
-      }
-      catch(err){
+        } else {
+          searchResults.html("<magic-item style='margin:auto'><item-title><a>There's nothing here</a></item-name><item-description>Looks like I haven't made this item yet, weird.</item-description></magic-item>")
+          setTimeout(function() {
+            document.body.classList.remove('searching')
+          }, getRandom(300, 700));
+        }
+      } catch (err) {
         console.log(err);
 
         searchResults.html(errorMessage);
-        setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
+        setTimeout(function() {
+          document.body.classList.remove('searching')
+        }, getRandom(300, 700));
       }
     }
 
@@ -199,11 +200,11 @@
       fixTippyTopMargin();
 
       searchform.addClass("no-transition");
-      searchform.css("width","0px");
+      searchform.css("width", "0px");
       searchform[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
       searchform.removeClass("no-transition");
 
-      if ($(window).width() <= 768){  //minimize header if it is a tablet or smaller
+      if ($(window).width() <= 768) { //minimize header if it is a tablet or smaller
         searchHeader.addClass("no-transition");
         searchHeader.css("transform", "translateX(0px)");
         searchHeader[0].offsetHeight; // Trigger a reflow, flushing the CSS changes
@@ -215,22 +216,25 @@
 
 
     var resizeNav;
-    $(window).on("resize", function(){
+    $(window).on("resize", function() {
       clearTimeout(resizeNav);
-      resizeNav = setTimeout(function() { fixTippyTopMargin() }, 150);
+      resizeNav = setTimeout(function() {
+        fixTippyTopMargin()
+      }, 150);
 
-      if ($(window).width() <= 768) { heights = [""]; }
-      else { heights = ["","tall", "taller", "tallest"]; }
+      if ($(window).width() <= 768) {
+        heights = [""];
+      } else {
+        heights = ["", "tall", "taller", "tallest"];
+      }
     });
 
-    function fixTippyTopMargin(){
-      if ($(".width-wrapper.border-top").length == 0 || $(".width-wrapper.border-top").hasClass("hidden")){
+    function fixTippyTopMargin() {
+      if ($(".width-wrapper.border-top").length == 0 || $(".width-wrapper.border-top").hasClass("hidden")) {
         $("a#TippyTop").removeAttr("style");
-      }
-      else if ($('#advanced-nav').hasClass("hidden")) {
+      } else if ($('#advanced-nav').hasClass("hidden")) {
         $("a#TippyTop").css("margin-top", "115px");
-      }
-      else {
+      } else {
         $("a#TippyTop").css("margin-top", "275px"); //start animation to assumed height
         setTimeout(function() {
           $("a#TippyTop").css("margin-top", ($(".width-wrapper.border-top").height() + 90) + "px");
@@ -241,11 +245,10 @@
 
     $("#show-advanced-nav").on("click", function() {
 
-      if ($('#advanced-nav').hasClass("hidden")){
+      if ($('#advanced-nav').hasClass("hidden")) {
         $('#advanced-nav').removeClass("hidden");
         $("#show-advanced-nav").text("Hide Filters");
-      }
-      else {
+      } else {
         $('#advanced-nav').addClass("hidden");
         $("#show-advanced-nav").text("Filter Results");
       }
@@ -254,7 +257,11 @@
     });
 
     // store filter for each group
-    var filters = {"type":[],"rarity":[], "properties":[]};
+    var filters = {
+      "type": [],
+      "rarity": [],
+      "properties": []
+    };
 
     $('#advanced-nav').on('click', 'button', function() {
       var $this = $(this);
@@ -262,48 +269,40 @@
       var $buttonGroup = $this.parents('.input-group');
       var filterGroup = $buttonGroup.attr('data-filter-group'); // get group key
       filters[filterGroup] = []; //reset filters for group
-      $buttonGroup.find('button.selected').each(function(){
+      $buttonGroup.find('button.selected').each(function() {
         filters[filterGroup].push($(this).attr('data-filter'));
       }); // set filters for group
-      var filterValue = concatValues( filters ); // combine filters
+      var filterValue = concatValues(filters); // combine filters
 
-      searchResults.isotope({ filter: filterValue }); // set filter for Isotope
+      searchResults.isotope({
+        filter: filterValue
+      }); // set filter for Isotope
       updateFilterCounts();
     });
-
-    // change is-checked class on buttons
-    // $('.button-group').each( function( i, buttonGroup ) {
-    //   var $buttonGroup = $( buttonGroup );
-    //   $buttonGroup.on( 'click', 'button', function() {
-    //     $buttonGroup.find('.is-checked').removeClass('is-checked');
-    //     $( this ).addClass('is-checked');
-    //   });
-    // });
 
     $('.input-group button').on("click", function() {
       $(this).toggleClass('selected');
     });
 
-    function concatValues( groups ) {
+    function concatValues(groups) {
       var filters = [];
       var types = groups["type"];
       var rarity = groups["rarity"];
       var properties = groups["properties"];
       var strProps = "";
 
-      if (properties && properties.length){
-        strProps = properties.join("").replace(".attunement:not(.attunement)",""); //if both positive and negative filters are selected at once, they cancel out
+      if (properties && properties.length) {
+        strProps = properties.join("").replace(".attunement:not(.attunement)", ""); //if both positive and negative filters are selected at once, they cancel out
       }
 
-      if (types && types.length){
+      if (types && types.length) {
         if (rarity && rarity.length) { //at least one of each selected
           types.forEach(function(type, i) {
             rarity.forEach(function(rarity, i) {
               filters.push(type + rarity + strProps);
             });
           });
-        }
-        else { //only type selected
+        } else { //only type selected
           types.forEach(function(type, i) {
             filters.push(type + strProps);
           });
@@ -316,73 +315,90 @@
         filters.push(strProps);
       }
 
-      if (filters.length == 0 ){ return "*"; }
-      else if (filters.length == 1) { return filters[0]; }
-      else { return filters.join(","); }
+      if (filters.length == 0) {
+        return "*";
+      } else if (filters.length == 1) {
+        return filters[0];
+      } else {
+        return filters.join(",");
+      }
 
     }
 
-    function updateFilterCounts(disable)  {
+    function updateFilterCounts(disable) {
       // get filtered item elements
       var itemElems = searchResults.data('isotope').filteredItems.map(i => i.element); //select only currently visible items
       //var itemElems = searchResults.data('isotope').items.map(i => i.element); //show all items whether or not they are visible with filter
-      var $itemElems = $( itemElems );
-      if (disable) { $itemElems.attr("disabled", false); } //reset disabled attribute
+      var $itemElems = $(itemElems);
+      if (disable) {
+        $itemElems.attr("disabled", false);
+      } //reset disabled attribute
 
       $("#search-count").text($itemElems.length); //set results count
 
-      $('.input-group button:not([disabled])').each( function( i, button ) {
-        var $button = $( button );
+      $('.input-group button:not([disabled])').each(function(i, button) {
+        var $button = $(button);
         var filterValue = $button.attr('data-filter');
-        if ( !filterValue ) { return; } // do not update 'any' buttons
+        if (!filterValue) {
+          return;
+        } // do not update 'any' buttons
 
-        var count = $itemElems.filter( filterValue ).length; //filter to current items
-        if (disable && count == 0){ //disable buttons that have nothing to filter
+        var count = $itemElems.filter(filterValue).length; //filter to current items
+        if (disable && count == 0) { //disable buttons that have nothing to filter
           $button.find('.filter-count').text('');
           $button.attr("disabled", true);
-        }
-        else {
-          $button.find('.filter-count').text( '(' + count +')' );
+        } else {
+          $button.find('.filter-count').text('(' + count + ')');
         }
       });
     }
 
     function getRandom(min, max) {
-      return Math.floor(Math.random() * (max - min + 1) ) + min;
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
-    async function getDocument(endpoint, key){
-      let data = sessionStorage.getItem(key);     // First check if there's data in SessionStorage
-      if(data){
-        return JSON.parse(data);       // If there's something in the sessionStorage with our key, return it
+    async function getDocument(endpoint, key) {
+      let data = sessionStorage.getItem(key); // First check if there's data in SessionStorage
+      if (data) {
+        return JSON.parse(data); // If there's something in the sessionStorage with our key, return it
       }
       data = await fetch(endpoint).then(r => r.json()); //If there's nothing in the storage, make the AJAX request
-      sessionStorage.setItem(key, JSON.stringify(data));     //Then save it into the storage to avoid more requests later on
+      sessionStorage.setItem(key, JSON.stringify(data)); //Then save it into the storage to avoid more requests later on
 
       return data;
     }
 
-    function getIndex(){
+    function getIndex() {
       const endpoint = "/data/search-index.min.json";
       const key = "search-index";
 
       let index = sessionStorage.getItem(key);
-      if(index){ return JSON.parse(index); }
+      if (index) {
+        return JSON.parse(index);
+      }
 
       var ajaxRequest = $.get(endpoint, null, null, "text")
-        .done(function( item_data ) {
-          index = lunr(function () {
+        .done(function(item_data) {
+          index = lunr(function() {
             this.ref('ord');
-            this.field('title', { boost: 10 });
-            this.field("type", { boost: 3 });
-            this.field("subtypes", { boost: 2 });
+            this.field('title', {
+              boost: 10
+            });
+            this.field("type", {
+              boost: 3
+            });
+            this.field("subtypes", {
+              boost: 2
+            });
             this.field("classes");
             this.field("damage");
             this.field("school");
-            this.field("tags", { boost: 5 });
+            this.field("tags", {
+              boost: 5
+            });
             this.field("searchtext");
 
-            JSON.parse(item_data).items.forEach(function (doc) {
+            JSON.parse(item_data).items.forEach(function(doc) {
               this.add(doc);
             }, this);
           });
@@ -390,15 +406,16 @@
           sessionStorage.setItem(key, JSON.stringify(index));
           return index;
         })
-        .fail(function( data ) {
+        .fail(function(data) {
           console.log("error during ajax call to retrieve search index. This is the data:");
           console.log(data);
 
           searchResults.html(errorMessage);
-          setTimeout(function() {document.body.classList.remove('searching')}, getRandom(300,700));
+          setTimeout(function() {
+            document.body.classList.remove('searching')
+          }, getRandom(300, 700));
         });
     }
-
   }
 
   document.addEventListener("pjax:success", searchWhenReady);
