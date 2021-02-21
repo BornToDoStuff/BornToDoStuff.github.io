@@ -19,10 +19,10 @@ tags:
   - Thrown
 item_idea: Chrisu
 item_co_creator:
-item_updated:
-last_modified_at:
+item_updated: 2021-02-21
+last_modified_at: 2021-02-21
 ---
 
-These three silver bands are simple yet elegant, similar but subtly different, and sized to fit different fingers. Vines and leaves etched into both the inside and outside. When they are not being worn by another creature you can call the name of any number of the rings you are attuned to to activate them as an action. They can be attuned to separately by different creatures or as a single item by one creature. Budo activates the smallest of the rings, Vignes activates the middle one, and the largest's name is Reben.
-
-When activated each ring expands to a large metal chakram, perfectly smooth except for their etchings, and razor sharp. These chakram have the properties thrown (range 30/90), finesse, and deal 1d6 slashing damage. Additionally, as part of your attack action you can call a ring by name and it will return to your hand.
+These three silver rings are elegantly simple but subtly different from each other. They magically adjust to fit your first finger, second finger, and thumb. All three are etched with incredibly detailed vines and leaves on both the inside and outside. 
+While attuned as an action you can call out to one or more rings to activate them or deactivate them.
+When activated each ring expands to a large razor sharp chakram in your hand, still etched with their designs which enlarge with them. These chakram are melee weapons that have the properties thrown (range 30/120), finesse, and deal 1d6 slashing damage. As a bonus action you can call to one or more chakram and they will return to your hand if possible, moving around obstacles and creatures to do so.
