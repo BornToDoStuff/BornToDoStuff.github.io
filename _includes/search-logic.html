@@ -426,7 +426,7 @@
 
           jQuery.ajaxSetup({async:true});
 
-          return rawIndex;
+          return JSON.parse(JSON.stringify(rawIndex));
       }
 
     }
