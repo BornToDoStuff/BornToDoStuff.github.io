@@ -6,7 +6,7 @@ layout: home
     <item-head>
       <item-title>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <item-tagline>{{ post.category | downcase }}{% if post.category = "Weapon" %}({% for subcat in post.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}){% endif %}, {{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
+        <item-tagline>{{ post.category | downcase }}{% if post.category == "Weapon" %}({% for subcat in post.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}){% endif %}, {{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
       </item-title>
       <item-extras aria-hidden="true">
   			<div class="rarity"><img src="/images/rarities.svg" title="{{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement){% endif %}" /></div>
