@@ -376,50 +376,52 @@
       if (index) {
         return JSON.parse(index);
       }
+      else {
+        var ajaxRequest = $.get(endpoint, null, null, "text")
+          .done(function(item_data) {
+            index = lunr(function() {
+              this.ref('ord');
+              this.field('title', {
+                boost: 10
+              });
+              this.field("type", {
+                boost: 3
+              });
+              this.field("subtypes", {
+                boost: 2
+              });
+              this.field("classes");
+              this.field("damage");
+              this.field("school");
+              this.field("tags", {
+                boost: 5
+              });
+              this.field("searchtext");
 
-      var ajaxRequest = $.get(endpoint, null, null, "text")
-        .done(function(item_data) {
-          index = lunr(function() {
-            this.ref('ord');
-            this.field('title', {
-              boost: 10
+              JSON.parse(item_data).items.forEach(function(doc) {
+                this.add(doc);
+              }, this);
             });
-            this.field("type", {
-              boost: 3
-            });
-            this.field("subtypes", {
-              boost: 2
-            });
-            this.field("classes");
-            this.field("damage");
-            this.field("school");
-            this.field("tags", {
-              boost: 5
-            });
-            this.field("searchtext");
 
-            JSON.parse(item_data).items.forEach(function(doc) {
-              this.add(doc);
-            }, this);
+            sessionStorage.setItem(key, JSON.stringify(index));
+            return index;
+          })
+          .fail(function(data) {
+            console.log("error during ajax call to retrieve search index. This is the data:");
+            console.log(data);
+
+            searchResults.html(errorMessage);
+            setTimeout(function() {
+              document.body.classList.remove('searching')
+            }, getRandom(300, 700));
           });
+      }
 
-          sessionStorage.setItem(key, JSON.stringify(index));
-          return index;
-        })
-        .fail(function(data) {
-          console.log("error during ajax call to retrieve search index. This is the data:");
-          console.log(data);
-
-          searchResults.html(errorMessage);
-          setTimeout(function() {
-            document.body.classList.remove('searching')
-          }, getRandom(300, 700));
-        });
     }
   }
 
   document.addEventListener("pjax:success", searchWhenReady);
-  //searchWhenReady();
+  searchWhenReady();
 </script>
 
 <!-- end search logic -->
