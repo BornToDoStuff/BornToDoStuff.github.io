@@ -371,6 +371,7 @@
     //   return data;
     // }
 
+    //I am not 100% sure what part of this ugly function made it work and I dont care to figure it out
     function getIndex() {
       const endpoint = "/data/search-index.min.json";
       const key = "search-index";
@@ -426,7 +427,7 @@
 
           jQuery.ajaxSetup({async:true});
 
-          return JSON.parse(JSON.stringify(rawIndex));
+          return JSON.parse(JSON.stringify(rawIndex)); //I am not 100% sure what part of this ugly function made it work and I dont care to figure it out
       }
 
     }

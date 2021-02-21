@@ -14,7 +14,7 @@ layout: default
             <item-tagline>{{ page.category | downcase }}, {{ page.item_rarity | downcase }} {% if page.item_attunement %}(requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){% endif %}</item-tagline>
           </item-title>
           <item-extras aria-hidden="true">
-            <div class="rarity"><img src="/images/rarities.svg" title="very rare"></div>
+            <div class="rarity"><img src="/images/rarities.svg" title="{{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement){% endif %}" /></div>
           </item-extras>
         </item-head>
 
