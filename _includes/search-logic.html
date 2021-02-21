@@ -103,8 +103,7 @@
 
       try {
         var query = searchbox.val();
-        var rawIndex = getIndex();
-        var index = lunr.Index.load(rawIndex);
+        var index = lunr.Index.load(getIndex());
 
         var advanced = false;
         var symbols = [":", "*", "^", "~", "+", "-"];
@@ -375,14 +374,16 @@
       const endpoint = "/data/search-index.min.json";
       const key = "search-index";
 
-      let index = sessionStorage.getItem(key);
-      if (index) {
-        return JSON.parse(index);
+      let rawIndex = sessionStorage.getItem(key);
+      if (rawIndex) {
+        return JSON.parse(rawIndex);
       }
       else {
+        jQuery.ajaxSetup({async:false});
+
         var ajaxRequest = $.get(endpoint, null, null, "text")
           .done(function(item_data) {
-            index = lunr(function() {
+            rawIndex = lunr(function() {
               this.ref('ord');
               this.field('title', {
                 boost: 10
@@ -406,8 +407,8 @@
               }, this);
             });
 
-            sessionStorage.setItem(key, JSON.stringify(index));
-            return index;
+            sessionStorage.setItem(key, JSON.stringify(rawIndex));
+            return rawIndex;
           })
           .fail(function(jqXHR, textStatus, errorThrown) {
             console.log("error during ajax call to retrieve search index. This is the data:");
@@ -423,6 +424,8 @@
           .always(function() {
             console.log("always log after trying to get index");
           });
+
+          jQuery.ajaxSetup({async:true});
       }
 
     }
