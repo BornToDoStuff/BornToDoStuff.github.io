@@ -3,6 +3,7 @@ title: Lead Hex Crossbow
 item_id: 95
 category: Weapon
 item_subtypes:
+  - Any Crossbow
   - Hand Crossbow
   - Light Crossbow
   - Heavy Crossbow

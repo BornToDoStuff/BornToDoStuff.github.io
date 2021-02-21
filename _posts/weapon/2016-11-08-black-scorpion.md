@@ -3,7 +3,8 @@ title: Black Scorpion
 item_id: 84
 category: Weapon
 item_subtypes:
-  - Scimitar and Dagger
+  - Scimitar
+  - Special
 item_rarity: Rare
 item_attunement: false
 item_requirement:

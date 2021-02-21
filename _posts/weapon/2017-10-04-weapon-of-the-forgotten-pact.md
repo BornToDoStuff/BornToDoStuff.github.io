@@ -3,7 +3,7 @@ title: Weapon of the Forgotten Pact
 item_id: 186
 category: Weapon
 item_subtypes:
-  - any melee weapon
+  - Any Melee Weapon
 item_rarity: Rare
 item_attunement: true
 item_requirement:

@@ -3,7 +3,8 @@ title: Shooting Shot Bag
 item_id: 160
 category: Wondrous
 item_subtypes:
-  - Item
+  - Pouch
+  - Satchel
 item_rarity: uncommon
 item_attunement: false
 item_requirement:
@@ -17,8 +18,6 @@ item_damage:
   - Bludgeoning
 tags:
   - Bonus Action
-  - Pouch
-  - Satchel
 item_idea:
 item_co_creator:
 item_updated: 2021-02-21
