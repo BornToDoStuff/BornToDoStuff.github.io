@@ -131,9 +131,11 @@
                 document.body.classList.remove('searching')
               }, getRandom(300, 700));
             })
-            .fail(function(data) {
+            .fail(function(jqXHR, textStatus, errorThrown) {
               console.log("error during ajax call to retrieve search index for item cache. This is the data:");
-              console.log(data);
+              console.log(jqXHR);
+              console.log(textStatus);
+              console.log(errorThrown);
 
               searchResults.html(errorMessage);
               setTimeout(function() {
