@@ -103,7 +103,8 @@
 
       try {
         var query = searchbox.val();
-        var index = lunr.Index.load(getIndex());
+        var rawIndex = await getIndex();
+        var index = lunr.Index.load(rawIndex);
 
         var advanced = false;
         var symbols = [":", "*", "^", "~", "+", "-"];
