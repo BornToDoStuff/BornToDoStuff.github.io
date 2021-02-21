@@ -375,7 +375,7 @@
       const endpoint = "/data/search-index.min.json";
       const key = "search-index";
 
-      let rawIndex = sessionStorage.getItem(key);
+      var rawIndex = sessionStorage.getItem(key);
       if (rawIndex) {
         return JSON.parse(rawIndex);
       }
@@ -407,9 +407,7 @@
                 this.add(doc);
               }, this);
             });
-
             sessionStorage.setItem(key, JSON.stringify(rawIndex));
-            return rawIndex;
           })
           .fail(function(jqXHR, textStatus, errorThrown) {
             console.log("error during ajax call to retrieve search index. This is the data:");
@@ -427,6 +425,8 @@
           });
 
           jQuery.ajaxSetup({async:true});
+
+          return rawIndex;
       }
 
     }
