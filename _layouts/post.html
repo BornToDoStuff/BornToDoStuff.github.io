@@ -11,10 +11,10 @@ layout: default
         <item-head>
           <item-title>
             <a>{{page.title}}</a>
-            <item-tagline>{{ post.category | downcase }}{% if post.category == "Weapon" %}({% for subcat in post.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}){% endif %}, {{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
+            <item-tagline>{{ page.category | downcase }}{% if page.category == "Weapon" %}({% for subcat in page.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}){% endif %}, {{ page.item_rarity | downcase }}{% if page.item_attunement %} (requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){% endif %}</item-tagline>
           </item-title>
           <item-extras aria-hidden="true">
-            <div class="rarity"><img src="/images/rarities.svg" title="{{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement){% endif %}" /></div>
+            <div class="rarity"><img src="/images/rarities.svg" title="{{ page.item_rarity | downcase }}{% if page.item_attunement %} (requires attunement){% endif %}" /></div>
           </item-extras>
         </item-head>
 
