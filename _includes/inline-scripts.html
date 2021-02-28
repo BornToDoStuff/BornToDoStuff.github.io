@@ -92,12 +92,24 @@
 			// document.execCommand('copy');
 			// selection.removeAllRanges();
 
-			const el = document.createElement('textarea');
-			el.value = title + "\n\n" + desc;
-			document.body.appendChild(el);
-			el.select();
-			document.execCommand('copy');
-			document.body.removeChild(el);
+			// const el = document.createElement('textarea');
+			// el.value = title + "\n\n" + desc;
+			// document.body.appendChild(el);
+			// el.select();
+
+			var copyText = title + "\n\n" + desc.replace(/\n\n/g, '\n');
+
+			function listener(e) {
+		    e.clipboardData.setData("text/html", copyText);
+		    e.clipboardData.setData("text/plain", copyText);
+		    e.preventDefault();
+		  }
+
+			document.addEventListener("copy", listener);
+		  document.execCommand("copy");
+		  document.removeEventListener("copy", listener);
+
+			// document.body.removeChild(el);
 
 			//alert("Contents copied to clipboard.");
 			return false;
