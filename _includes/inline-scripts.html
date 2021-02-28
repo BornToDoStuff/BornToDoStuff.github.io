@@ -97,9 +97,9 @@
 			// document.body.appendChild(el);
 			// el.select();
 
-			var rawTitle = document.getElementById("item-wrapper").getElementsByTagName("item-title")[0].innerHTML;
+			var rawTitle = document.getElementById("item-wrapper").getElementsByTagName("item-title")[0].innerText;
 			var title = rawTitle.trim().replace("            ", "");
-			var rawDesc = document.getElementById("item-wrapper").getElementsByTagName("item-description")[0].innerHTML;
+			var rawDesc = document.getElementById("item-wrapper").getElementsByTagName("item-description")[0].innerText;
 			var desc = rawDesc.trim();
 
 
