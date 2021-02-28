@@ -78,12 +78,12 @@
 		}
 
 		function copyItem() {
-			var range = document.createRange();
+			// var range = document.createRange();
 
-			range.selectNodeContents(document.getElementById("item-wrapper").getElementsByTagName("item-title")[0].innerHTML);
-			var title = range.toString().trim().replace("            ", "");
-			range.selectNodeContents(document.getElementById("item-wrapper").getElementsByTagName("item-description")[0].innerHTML);
-			var desc = range.toString().trim();
+			// range.selectNodeContents(document.getElementById("item-wrapper").getElementsByTagName("item-title")[0].innerHTML);
+			// var title = range.toString().trim().replace("            ", "");
+			// range.selectNodeContents(document.getElementById("item-wrapper").getElementsByTagName("item-description")[0].innerHTML);
+			// var desc = range.toString().trim();
 
 			// var selection = window.getSelection();
 			// selection.removeAllRanges();
@@ -96,6 +96,12 @@
 			// el.value = title + "\n\n" + desc;
 			// document.body.appendChild(el);
 			// el.select();
+
+			var rawTitle = document.getElementById("item-wrapper").getElementsByTagName("item-title")[0].innerHTML;
+			var title = rawTitle.trim().replace("            ", "");
+			var rawDesc = document.getElementById("item-wrapper").getElementsByTagName("item-description")[0].innerHTML;
+			var desc = rawDesc.trim();
+
 
 			var copyText = title + "\n\n" + desc.replace(/\n\n/g, '\n');
 
