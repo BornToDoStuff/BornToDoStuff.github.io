@@ -80,9 +80,9 @@
 		function copyItem() {
 			var range = document.createRange();
 
-			range.selectNodeContents(document.getElementById("item-wrapper").getElementsByTagName("item-title")[0]);
+			range.selectNodeContents(document.getElementById("item-wrapper").getElementsByTagName("item-title")[0].innerHTML);
 			var title = range.toString().trim().replace("            ", "");
-			range.selectNodeContents(document.getElementById("item-wrapper").getElementsByTagName("item-description")[0]);
+			range.selectNodeContents(document.getElementById("item-wrapper").getElementsByTagName("item-description")[0].innerHTML);
 			var desc = range.toString().trim();
 
 			// var selection = window.getSelection();
