@@ -152,8 +152,9 @@
 			//$("#main").remove();
 			//$("#main-wrapper").load(posts[r].url + " #main");
 			history.replaceState(null, posts[r].title, posts[r].url);
-			$("#main-wrapper").load(posts[r].url + " #main-wrapper section");
-			initItemMenu();
+			$("#main-wrapper").load(posts[r].url + " #main-wrapper section", function() {
+				initItemMenu();
+			});
 		}
 
 		$("#search-show").on("click", function() {
