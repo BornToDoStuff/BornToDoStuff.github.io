@@ -28,4 +28,6 @@ last_modified_at: 2021-02-26
 
 his rock has a large cluster of bio-luminescent mushrooms and moss growing on it that act like a natural lantern. It has a chain bolted into the rock with a hoop fastened at the top so you can easily carry it. This magical item has three charges and regains all expended charges each day at dawn if it is in darkness.  
 After 1 minute of being in darkness the mushrooms begin to glow heavily, casting a bright light in a 30-foot radius and a dim light for an additional 30 feet.  
-**Rapport spores.** As a bonus action you can pluck one of the mushrooms from the lantern, expending a charge. A 10-foot radius of spores extends from the lantern. These spores can go around corners and only affect creatures that have an Intelligence of 5 or higher. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other for the next hour. When you pluck a mushroom from this lantern all myconids within 500 feet sense it.
+
+### Rapport spores
+As a bonus action you can pluck one of the mushrooms from the lantern, expending a charge. A 10-foot radius of spores extends from the lantern. These spores can go around corners and only affect creatures that have an Intelligence of 5 or higher. Affected creatures can communicate telepathically with one another while they are within 30 feet of each other for the next hour. When you pluck a mushroom from this lantern all myconids within 500 feet sense it.
