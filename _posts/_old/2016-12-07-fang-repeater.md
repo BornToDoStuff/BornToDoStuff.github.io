@@ -48,5 +48,6 @@ The ribs bend outward as the central bone cluster expands. The repeater can hold
 ### 4 Ribs: Tracking Critters
 The eye sockets of the repeater now constantly glow red. Once per short rest as an action you can empty the remainder of the bolts in the repeater. The bolts wind through the air as they seek their targets. For every 3 bolts remaining you may target an additional creature within a 60 foot cone and make a single attack roll with advantage against each creature.
 
-<hr />
+<div class="notes">
 Notes: For increased power the revolver can be found with extra ribs already in it. Of course this increases the rarity of the item. At your discretion you can easily discard the Bone Fragments feature.
+</div>

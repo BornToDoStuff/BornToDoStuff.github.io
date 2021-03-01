@@ -47,5 +47,6 @@ If you can manage to find the missing pieces of the Cael Hammer its power will i
 
 **4 Shards: Ura Engravings.** As the last shard snaps into place the hammer glows slightly as delicate lines trace over the hammer etching tribal symbols into its surface. This hammer now scores a critical hit on a 19 or 20. Additionally, on a critical hit you deal an extra 2d8 damage (for a total of 5d8 bludgeoning damage).
 
-<hr />
+<div class="notes">
 **Notes:** At your discretion you can easily discard the Returned Shards feature for a more standard item.
+</div

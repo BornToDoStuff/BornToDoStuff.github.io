@@ -50,4 +50,6 @@ There are sections yet missing from this blade. If you find the missing segments
 
 You will know when you can use this feature again as the ethereal wisps begin anew.
 
+<div class="notes">
 Notes: For increased power the machete can be found with extra segments already on it. Of course this increases the rarity of the item. At your discretion you can easily discard the Blade Segments feature.
+</div>

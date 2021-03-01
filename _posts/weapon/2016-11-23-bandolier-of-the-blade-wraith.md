@@ -33,5 +33,6 @@ If you throw a sword into the air it orbits you at arm’s length for up to 1 ho
 If you throw one of these swords at a creature, or as an attack action command a sword already orbiting you to attack a creature, it flies at the target avoiding cover and obstacles. Target creatures must be visible to you and within 30 feet. If you are able to make multiple attacks this replaces one of them.  When you make an attack with these swords in either of these ways make an attack roll with proficiency and your Strength or Intelligence modifier. On a hit it deals 1d6 + your Strength or Intelligence modifier magical Slashing damage.    
 After an hour, when you dismiss it, or after it attacks a target, any sword still orbiting you will fly to your hand if you have a free hand, return to the bandolier if you are wearing it, or stab itself into the ground at your feet.
 
-<hr />
-Notes: The player can later find more swords if you want to make it increase in power slowly, or even find more than 6. Nothing says they can't eventually have a dozen of these wraith swords.
+<div class="notes">
+**Notes:** The player can later find more swords if you want to make it increase in power slowly, or even find more than 6. Nothing says they can't eventually have a dozen of these wraith swords.
+</div>

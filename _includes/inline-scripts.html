@@ -102,6 +102,7 @@
 			var descPlain = document.getElementById("item-wrapper").getElementsByTagName("item-description")[0].innerText;
 			var descRich = document.getElementById("item-wrapper").getElementsByTagName("item-description")[0].innerHTML;
 
+			//is it the cleanest? No. Do I want to make it better? Also no.
 			var copyTextRich = titleRich.trim().replace("            ", "").replace(new RegExp('a>', 'g'), 'h2>').replace(new RegExp('item\-tagline', 'g'), 'i') + "\n\n" + descRich.trim().replace(/\n\n/g, '\n');
 			var copyText = titlePlain.trim().replace("            ", "") + "\n\n" + descPlain.trim().replace(new RegExp('\n\n', 'g'), '\n');
 

@@ -24,5 +24,6 @@ This small rolled up bundle of fabrics is more than it appears. When you unroll 
 
 This scroll, when placed over a break or tear in an object as an action, immediately begins unraveling at the hems if the break or tear is completely covered by the cloth. At the beginning of your next turn the now unraveling cloth melds into the surface, casting <magic-spell>Mending</magic-spell> on the object it was placed on. The object is now repaired, leaving no trace of former damage, and the scroll gone.
 
-<hr />
+<div class="notes">
 **Notes:** Could be made in bigger sizes. It is exponentially more valuable the larger it is.
+</div>
