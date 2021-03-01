@@ -382,7 +382,7 @@ magic-item.artifact.attunement .rarity img {
 	border-radius: 4px;
 	padding: 15px;
 
-	::before {
+	&::before {
 		content: "Curse";
 		font-weight: bold;
 		font-size: 0.9em;
@@ -390,7 +390,7 @@ magic-item.artifact.attunement .rarity img {
 		top: -10px;
 		left: 8px;
 	}
-	::after {
+	&::after {
 		display: block;
 		content: "";
 		width: 90%;
@@ -402,15 +402,15 @@ magic-item.artifact.attunement .rarity img {
 		top: 0px;
 		right: -1px;
 	}
-	strong:first-child {
+	p:first-child strong:first-child {
 		display: none;
 	}
 }
 .notes {
-	::before {
+	&::before {
 		content: "Notes";
 	}
-	::after {
+	&::after {
 		width: calc( 100% - 60px );
 	}
 }
