@@ -403,7 +403,10 @@ magic-item.artifact.attunement .rarity img {
 		right: -1px;
 	}
 	p:first-child strong:first-child {
-		display: none;
+		font-size: 0px;
+    display: inline-block;
+    height: 0px;
+    margin-right: -5px;
 	}
 }
 .notes {
