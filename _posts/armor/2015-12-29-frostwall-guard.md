@@ -17,16 +17,19 @@ item_role:
 item_damage:
   - Cold
 tags:
+  - Arctic
   - Ice
   - Spellcasting
   - Long Rest
   - Dragon
 item_idea:
 item_co_creator:
-item_updated: 2019-12-20
-last_modified_at: 2019-12-20
+item_updates: [2019-12-20, 2021-03-02]
+item_updated: 2021-03-02
+last_modified_at: 2021-03-02
 ---
 
-This angular shield is pure white with blue fractals emblazoned along its edges. It is said it was forged from the scales of a white dragon to defend an ancient dwarven city, but has since lost much of its power. 
-Once per long rest, as an action, you can hold it aloft and speak its command word, casting <magic-spell>Wall of Ice</magic-spell> without concentration.
+This pure white kiteshield is emblazoned with blue fractals along its edges. It is said it was forged from the scales of a white dragon to defend an ancient dwarven city, but has since lost much of its power. This shield has 10 charges and regains 1d8 + 2 expended charges each day at dawn. 
+
+As an action, you can hold the shield aloft and speak its command word, expending a number of charges. As you do so an icy blast comes forth from the shield casting <magic-spell>Wall of Ice</magic-spell> and forming a total number of 10-foot-square panels equal to the charges spent.
 Additionally, while attuned with this shield you can sense incoming snow storms, and always know if there is a white dragon within 1 mile of you.
