@@ -23,7 +23,7 @@ tags:
   - Underdark
   - Cave
   - Nature
-  - Spell casting
+  - Spellcasting
   - Spider
 item_idea: 
 item_co_creator: 

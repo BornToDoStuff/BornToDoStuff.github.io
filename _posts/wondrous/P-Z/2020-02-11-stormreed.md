@@ -20,7 +20,7 @@ item_damage:
 tags:
   - Nature
   - Weather
-  - Spell Casting
+  - Spellcasting
   - Charges
   - At Dawn
 item_idea: 
