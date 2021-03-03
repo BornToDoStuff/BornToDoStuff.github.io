@@ -36,7 +36,7 @@
     function setItemHeight(ele) {
       var description = $(ele).find("item-description")[0];
       var heightCount = 0;
-      while (heightCount < (heights.length - 1) && description.scrollHeight > sizes[heightCount].scrollHeight + 15) {
+      while (heightCount < (heights.length - 1) && description.scrollHeight > sizes[heightCount].scrollHeight + 15 && description.scrollHeight > sizes[Math.min(heights.length-1,heightCount+1)].scrollHeight - 100) {
         heightCount++;
       }
 
