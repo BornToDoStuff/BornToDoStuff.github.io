@@ -374,7 +374,7 @@ magic-item.artifact.attunement .rarity img {
   background: url(hatching_med.png) rgba(0,0,0,0.7);
 }
 
-.curse, .notes {
+.curse, .notes, .sentience {
 	margin-top: 15px;
 	position: relative;
 	border: 2px solid #e0e0e0;
@@ -415,6 +415,14 @@ magic-item.artifact.attunement .rarity img {
 	}
 	&::after {
 		width: calc( 100% - 60px );
+	}
+}
+.sentience {
+	&::before {
+		content: "Sentience";
+	}
+	&::after {
+		width: calc( 100% - 80px );
 	}
 }
 
