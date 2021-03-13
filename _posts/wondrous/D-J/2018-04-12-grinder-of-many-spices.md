@@ -39,15 +39,14 @@ You can turn the handle of the grinder either clockwise or counterclockwise, exp
 
 <!--excerpt-->
 ### Spices
-<p>
-1.  **Salt**.The target creature takes 1d4 Piercing damage and is compelled to attack you with its next attack.
-2.  **Peppercorn**. The target takes 1d4 Fire damage and 1d4 Piercing damage from the spicy shards.
-3.  **Paprika**. The target feels a burning sensation and must succeed an Intelligence saving throw DC 12 or use their next action to try to "put out the fire".
-4.  **Nutmeg**. The target must make a Wisdom saving throw DC 12 or be Charmed for the next minute or until they take damage.
-5.  **Thyme**. Spines of dried thyme pierce the target doing 1d10 Piercing damage.
-6.  **Oregano**. A small 5 foot cloud of oregano forms around the target Blinding them until the end of their next turn or until they move out of the cloud.
-7.  **Cloves**. Whole cloves pummel the target, dealing 1d10 Bludgeoning damage.
-8.  **Ginger**. The target creature is overcome by the zing of ginger and must use their reaction to move 5 feet in any direction if they are able to move.
-9.  **Mint**. The creature feels an immense chill surround them. They take 1d8 Cold damage.
-10.  **All Spice**. The aroma is almost overwhelming. Roll twice on this table, if a 10 is rolled again you must re-roll that result. This effect only consumes 1 charge.
-</p>
+
+1. **Salt**.The target creature takes 1d4 Piercing damage and is compelled to attack you with its next attack.
+2. **Peppercorn**. The target takes 1d4 Fire damage and 1d4 Piercing damage from the spicy shards.
+3. **Paprika**. The target feels a burning sensation and must succeed an Intelligence saving throw DC 12 or use their next action to try to "put out the fire".
+4. **Nutmeg**. The target must make a Wisdom saving throw DC 12 or be Charmed for the next minute or until they take damage.
+5. **Thyme**. Spines of dried thyme pierce the target doing 1d10 Piercing damage.
+6. **Oregano**. A small 5 foot cloud of oregano forms around the target Blinding them until the end of their next turn or until they move out of the cloud.
+7. **Cloves**. Whole cloves pummel the target, dealing 1d10 Bludgeoning damage.
+8. **Ginger**. The target creature is overcome by the zing of ginger and must use their reaction to move 5 feet in any direction if they are able to move.
+9. **Mint**. The creature feels an immense chill surround them. They take 1d8 Cold damage.
+10. **All Spice**. The aroma is almost overwhelming. Roll twice on this table, if a 10 is rolled again you must re-roll that result. This effect only consumes 1 charge.
