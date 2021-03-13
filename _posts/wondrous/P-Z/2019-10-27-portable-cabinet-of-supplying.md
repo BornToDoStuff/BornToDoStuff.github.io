@@ -29,4 +29,4 @@ This double door cabinet looks like it was made for dolls by a skilled toy-maker
 
 Inside is 3 brooms, mops, and buckets, as well as a small collection of cleaning rags, soap that never runs out, and aprons, that all belong to the cabinet. These objects are teleported back into the cabinet every time it is opened.
 
-While holding any of the supplies that belong to the cabinet, as an action, you can expend a charge to animate that object as if under the effects of <magic-spell>animate objects</magic-spell> for the next hour. Additionally, you can choose to expend two charges while holding a broom or mop to make it function as a Broom of Flying until the next dawn.
+While holding any of the supplies that belong to the cabinet, as an action, you can expend a charge to animate that object as if under the effects of <magic-spell>Animate Objects</magic-spell> for the next hour. Additionally, you can choose to expend two charges while holding a broom or mop to make it function as a Broom of Flying until the next dawn.
