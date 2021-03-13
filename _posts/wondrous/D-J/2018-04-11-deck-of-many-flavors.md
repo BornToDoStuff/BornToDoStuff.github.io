@@ -32,6 +32,7 @@ As a bonus action you can draw a card from the deck and consume it, return it to
 When you first put it into your mouth all you can taste is the bitterness of inked paper until suddenly flavor explodes over your tongue.
 
 ### Flavors
+
 **1:** The flavor, it is indistinguishable. It is as if all the others have mixed together in the worst way. You spend the next turn wretching and can not take a reaction for the next minute. If you can handle this though, you can handle anything. For the next 10 minutes you can not taste anything, you are immune to the Poisoned effect, and are resistant to Poison damage.
 
 **2-3:** Chili, cayenne, or pepper. You have never tasted spice this strong before, you take 1d4 fire damage and your mouth nearly glows it is so hot. For the next 10 minutes you can not burn your tongue while eating or drinking, any creature that you bite takes an additional 1d10 fire damage, and you do not feel full while drinking liquids.
@@ -43,8 +44,3 @@ When you first put it into your mouth all you can taste is the bitterness of ink
 **8-9:** Oregano and Sage. The earthy flavors bring you a sense of immense earthly wisdom. For the next hour you have advantage on all Intelligence and Wisdom checks and saves, however for some reason your vision goes fuzzy. For the duration creatures and objects farther than 30 feet away are considered heavily obscured for you.
 
 **10:** Allspice. The flavors have melded in a pleasant and well refined joy to the tongue. You feel your mind relax and transcend your mortal restraints. Your exhaustion level is reduced to 0, and for the next minute you are proficient in all skills and saving throws.
-
-**Jack:**
-**Queen:**
-**King:**
-**Ace:**
