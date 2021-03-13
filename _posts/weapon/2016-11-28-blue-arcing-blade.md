@@ -39,8 +39,7 @@ As an attack action you can stab this sword into a body of water and target a cr
 If this sword has not touched water in over a week it must be fully submerged in water for at least a long rest to regain this property. While it is doing so it sparks slightly and the water tingles with electricity.
 
 <div class="curse">
-**Curse.**
-Every time you stab this sword into a body of water you must make a DC 12 Constitution saving throw or take 1d10 lightning damage. Additionally, you have disadvantage to saving throws against other effects that deal lightning damage.
+**Curse.** Every time you stab this sword into a body of water you must make a DC 12 Constitution saving throw or take 1d10 lightning damage. Additionally, you have disadvantage to saving throws against other effects that deal lightning damage.
 
 If this weapon is fully submerged for a day or more the water surrounding begins actively arcing with electricity and any creature that attempts to take it out of the water must make a DC 12 Constitution saving throw or take 1d10 lightning damage for each day it has been submerged.
 
