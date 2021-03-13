@@ -39,6 +39,7 @@ You can turn the handle of the grinder either clockwise or counterclockwise, exp
 
 <!--excerpt-->
 ### Spices
+<br />
 
 1. **Salt**.The target creature takes 1d4 Piercing damage and is compelled to attack you with its next attack.
 2. **Peppercorn**. The target takes 1d4 Fire damage and 1d4 Piercing damage from the spicy shards.
