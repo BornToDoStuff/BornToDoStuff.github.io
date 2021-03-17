@@ -88,7 +88,7 @@
       if (searchbox.val() == "") {
         unsearch();
         e.preventDefault();
-        return false;
+        window.history.back();
       }
     });
 
