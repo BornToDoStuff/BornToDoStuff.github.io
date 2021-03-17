@@ -42,7 +42,7 @@ h1, h2, h3, h4, item-title, item-tagline {
 }
 h1, item-title a{
 	color: $bluakDark;
-	font-family: 'ZCOOL XiaoWei', serif;
+	font-family: $philo;
 }
 
 h1 {
@@ -53,19 +53,19 @@ h1 {
 h2 {
 	font-size: 2.6rem;
 	color: $bluakDark;
-	font-family: 'Roboto',Helvetica,sans-serif;
+	font-family: $roboto;
 	margin: 10px 0px -5px 0px;
 }
 
 h3 {
 	color: $bluakDark;
-	font-family: 'Roboto',Helvetica,sans-serif;
+	font-family: $roboto;
 	margin: 10px 0px -5px 0px;
 }
 
 h4 {
 	color: $gray;
-	font-family: 'Roboto',Helvetica,sans-serif;
+	font-family: $roboto;
 	margin: 10px 0px -5px 0px;
 }
 
@@ -193,7 +193,8 @@ item-title {
 	item-title a {
 		display: block;
 		font-size: 3rem;
-		line-height: 3.1rem;
+		line-height: 1.1em;
+		text-shadow: 0 0 $bluakDark;
 	}
 
 item-tagline {
@@ -385,7 +386,7 @@ magic-item.artifact.attunement .rarity img {
 	&::before {
 		content: "Curse";
 		font-weight: bold;
-		font-size: 0.9em;
+		color: $bluakDark;
 		position: absolute;
 		top: -10px;
 		left: 8px;
@@ -429,29 +430,16 @@ magic-item.artifact.attunement .rarity img {
 /*=============== START read-more ===============*/
 
 a.read-more {
-	background: $backgroundLight;
 	position: absolute;
   bottom: 0px;
+	left: 0px;
   width: 550px;
-  max-width: 90%;
-  max-width: calc(100% - 30px);
+  max-width: 100%;
   box-sizing: border-box;
   padding: 10px;
+	padding-top: 40px;
   z-index: 99;
 }
-
-	a.read-more::before {
-		content: "";
-		position: absolute;
-		bottom: 100%;
-		left: 0;
-		height: 40px;
-		width: 100%;
-		background: -moz-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-		background: -webkit-linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-		background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-		// box-shadow: 0px -8px 10px -7px rgba(0,0,0,0.5) inset;
-	}
 
 	a.read-more:hover .dot {
 		background: rgba(98, 157, 167, 0.5);
@@ -460,6 +448,7 @@ a.read-more {
 .read-more .expander {
 	text-align: center;
 }
+
 
 span.dot {
 	display: inline-block;
@@ -477,6 +466,11 @@ span.dot {
 }
 .show-more .read-more {
 	display: block;
+}
+
+.show-more item-description {
+    -webkit-mask-image: linear-gradient( 180deg, rgba(0,0,0,1) 75px,rgba(0,0,0,1) calc(100% - 70px),rgba(0,0,0,0) calc(100% - 20px));
+		mask-image: linear-gradient( 180deg, rgba(0,0,0,1) 75px,rgba(0,0,0,1) calc(100% - 70px),rgba(0,0,0,0) calc(100% - 20px));
 }
 
 /*=============== END read-more ===============*/
@@ -811,7 +805,18 @@ thead .tablesorter-headerAsc {
     border-bottom: 1px solid rgba(39, 73, 92, 0.1);
 	}
 
-	item-head { flex: 1 1 auto; }
+	item-head {
+		display: flex;
+    flex-wrap: wrap;
+		max-height: 500px;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 100px),rgba(0,0,0,0) 100%);
+		mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 100px),rgba(0,0,0,0) 100%);
+	}
+	item-head > img {
+		max-width: 100%;
+    padding: 15px 0px;
+	}
+
 	item-title a {
     font-size: 2.8rem;
 	}

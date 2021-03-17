@@ -33,9 +33,11 @@
 }
 
 #main-nav { display: flex; }
+#main-nav > a {cursor: default;}
 
 #navbar-header {
-  font-size: 2.4rem;
+  font-family: $philo;
+  font-size: 2.8rem;
   flex: 0 0 auto;
 
   @include tiny { font-size: 2rem; }
@@ -124,7 +126,7 @@
     border: 0;
     font-size: 0px;
     padding: 0px;
-    opacity: 0.6;
+    opacity: 0.3;
 
     @include tiny {
       width: 24px;
@@ -154,6 +156,9 @@
 	width: 30px;
 	height: 30px;
 	margin: 15px 0px;
+  cursor: pointer;
+
+  &:hover { opacity: 0.6; }
 
   @include tiny {
     width: 24px;
@@ -161,6 +166,7 @@
     margin: 18px 0px;
   }
 }
+#search-btn:hover { opacity: initial; }
 
 #about { background: url('/images/icons/question-circle.svg') no-repeat; }
 #random { background: url('/images/icons/random.svg') no-repeat; }
