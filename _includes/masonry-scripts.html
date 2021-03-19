@@ -40,6 +40,9 @@
         description.scrollHeight > sizes[heightCount].scrollHeight + 15 &&
         description.scrollHeight > sizes[Math.min(heights.length-1,heightCount+1)].scrollHeight - 125)
       { heightCount++; }
+      if ($(ele).hasClass("image")) {
+        heightCount = Math.min(heightCount+2, heightsIndex);
+      }
 
       $(ele).addClass(heights[heightCount]);
       if (description.scrollHeight > description.clientHeight)
