@@ -110,7 +110,7 @@ code {
 }
 .width-wrapper.small { max-width: 1400px; }
 
-.column-wrapper, .page {
+.column-wrapper, .page{
   margin: 0px auto;
   transition: width 0.2s ease;
   width: 100%;
@@ -128,6 +128,20 @@ code {
   @include quad {
 		max-width: $col-quad;
 	}
+}
+
+#item-wrapper { /* copy of above with max width changes */
+	margin: 0px auto;
+  transition: width 0.2s ease;
+  width: 100%;
+	position: relative;
+
+	@include single {
+    max-width: $col-single;
+  }
+  @include double-up {
+    max-width: $col-double;
+  }
 }
 
 a#TippyTop {
@@ -186,14 +200,17 @@ item-details {
 
 item-head {
 	display: flex;
-	flex-wrap: wrap;
+}
+
+item-image {
 	max-height: 500px;
 	-webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 100px),rgba(0,0,0,0) 100%);
 	mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 100px),rgba(0,0,0,0) 100%);
-}
-item-head > img {
-	max-width: 100%;
-	padding: 15px 0px;
+
+	img {
+		max-width: 100%;
+		padding: 15px 0px;
+	}
 }
 
 item-title {
@@ -312,7 +329,6 @@ magic-item.artifact.attunement .rarity img {
 	align-items: flex-start;
 	flex-direction: row-reverse;
 	justify-content: center;
-	margin-left: -85px;
 
 	@include mobile {
 		align-items: center;
@@ -320,21 +336,34 @@ magic-item.artifact.attunement .rarity img {
     justify-content: center;
     margin-left: 0px;
 	}
-}
-#item-wrapper magic-item {
-	position: relative!important;
-	height: initial!important;
-	width: initial!important;
-	max-width: 750px;
-	flex: 1 1 750px;
-	margin-left: 15px;
-	font-size: 1.05em;
 
-	@include mobile { margin-left: 0px; }
-	@include single {
-		max-width: $col-single;
+	magic-item {
+		height: initial!important;
+		width: initial!important;
+		margin-left: 15px;
+
+		@include mobile { margin-left: 0px; }
+	}
+	@include double-up {
+		magic-item.image {
+			display: block;
+
+			item-head, item-description {
+				float: right;
+				width: 550px;
+			}
+			item-image {
+				float: left;
+				width: 49%;
+		    width: calc(100% - 550px);
+		    max-height: none;
+		    -webkit-mask-image: none;
+		    mask-image: none;
+			}
+		}
 	}
 }
+
 #item-menu {
 	display: flex;
   position: relative;
@@ -812,10 +841,6 @@ thead .tablesorter-headerAsc {
     border-radius: 0px;
 		border: 0;
     border-bottom: 1px solid rgba(39, 73, 92, 0.1);
-	}
-
-	item-head {
-		display: flex;
 	}
 
 	item-title a {

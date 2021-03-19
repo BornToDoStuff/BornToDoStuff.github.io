@@ -41,7 +41,7 @@
   flex: 0 0 auto;
 
   @include tiny { font-size: 2rem; }
-  @include small { position: absolute; z-index: 10; }
+  @include mobile { position: absolute; z-index: 10; }
 }
   #navbar-brand {
     display: flex!important;
@@ -61,7 +61,7 @@
   flex: 1 0 30px;
   position: relative;
 
-  @include small {
+  @include mobile {
     margin: 0px 5px 0px 0px;
   }
 }
@@ -202,7 +202,7 @@
 #advanced-nav > div:first-child {
   min-width: 100%;
   min-width: calc(100% - 14px);
-  
+
   @include quad {
     min-width: initial;
   }
