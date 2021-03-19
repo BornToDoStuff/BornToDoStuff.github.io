@@ -6,11 +6,17 @@ layout: home
     <item-head>
       <item-title>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-        <item-tagline>{{ post.category | downcase }}{% if post.category == "Weapon" %}({% for subcat in post.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}){% endif %}, {{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
+        {%- if post.category == "Weapon" %} {% assign subtype_bool = true %} {% endif -%}
+        {%- if post.category == "Armor" %} {% assign subtype_bool = true %} {% endif -%}
+        {%- if subtype_bool -%}
+          {%- capture subtype_string %}({% for subcat in post.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}){% endcapture -%}
+        {%- endif -%}
+        <item-tagline>{{ post.category | downcase }}{{ subtype_string }}, {{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
       </item-title>
       <item-extras aria-hidden="true">
   			<div class="rarity"><img src="/images/rarities.svg" title="{{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement){% endif %}" /></div>
   		</item-extras>
+      {% if post.item_image %}<img src="{{ site.url }}{{ post.item_image }}" />{% endif %}
     </item-head>
 
     <item-details>

@@ -186,7 +186,16 @@ item-details {
 
 item-head {
 	display: flex;
+	flex-wrap: wrap;
+	max-height: 500px;
+	-webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 100px),rgba(0,0,0,0) 100%);
+	mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 100px),rgba(0,0,0,0) 100%);
 }
+item-head > img {
+	max-width: 100%;
+	padding: 15px 0px;
+}
+
 item-title {
 	flex: 1 1;
 }
@@ -807,14 +816,6 @@ thead .tablesorter-headerAsc {
 
 	item-head {
 		display: flex;
-    flex-wrap: wrap;
-		max-height: 500px;
-    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 100px),rgba(0,0,0,0) 100%);
-		mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 100px),rgba(0,0,0,0) 100%);
-	}
-	item-head > img {
-		max-width: 100%;
-    padding: 15px 0px;
 	}
 
 	item-title a {

@@ -33,6 +33,11 @@
     //const itemTemplate = ({ id, url, title, type, subtypes, rarity, attunement, requirement, content}) => `
     const itemTemplate = function(result) {
       var item = item_cache[result.ref];
+      var subtype_string = "";
+      if (item.type == "Weapon" || item.type == "Armor")
+      {
+        subtype_string = item.subtypes.sort().join(", ").toLowerCase();
+      }
       return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.curse ? ' cursed' : ''}">
           <item-head>
             <item-title>
@@ -42,6 +47,7 @@
             <item-extras aria-hidden="true">
         			<div class="rarity"><img src="/images/rarities.svg" title="${item.rarity.toLowerCase()}" /></div>
         		</item-extras>
+            ${item.image ? `<img src="${item.image}" />` : ''}
           </item-head>
 
           <item-description>
