@@ -1,5 +1,6 @@
 ---
 layout: default
+page_bool: true
 ---
 <a id="TippyTop"></a>
 
@@ -7,21 +8,7 @@ layout: default
   <div id="main-wrapper">
     <section id="grid-sizes"> <!-- hidden div to create children in. Small hack to determine sizes without affecting display. --> </section>
     <section id="item-wrapper" data-random="false">
-      <magic-item class="{{ page.item_rarity | slugify }}{% if page.item_attunement %} attunement{% endif %}">
-        <item-head>
-          <item-title>
-            <a>{{page.title}}</a>
-            <item-tagline>{{ page.category | downcase }}{% if page.category == "Weapon" %}({% for subcat in page.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}){% endif %}, {{ page.item_rarity | downcase }}{% if page.item_attunement %} (requires attunement{% if page.item_requirement != null %} {{ page.item_requirement }}{% endif %}){% endif %}</item-tagline>
-          </item-title>
-          <item-extras aria-hidden="true">
-            <div class="rarity"><img src="/images/rarities.svg" title="{{ page.item_rarity | downcase }}{% if page.item_attunement %} (requires attunement){% endif %}" /></div>
-          </item-extras>
-        </item-head>
-
-        <item-description>
-          {{content}}
-        </item-description>
-      </magic-item>
+      {% include magic-item.html %}
 
       <div id="item-menu">
         <a id="btnCopy-item" href="/copy" title="Copy Text" ga-on="click" ga-event-category="Item" ga-event-action="copy">
