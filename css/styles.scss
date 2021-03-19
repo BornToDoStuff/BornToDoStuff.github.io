@@ -38,35 +38,29 @@ hr {
 }
 
 
-h1 {
+h1, h2, h3, h4 {
 	color: $bluakDark;
 	font-family: $roboto;
+	text-align: left; // prevents poor justifying
+	line-height: 1.6em;
+}
+
+h1 {
+	font-family: $philo;
 	font-size: 3em;
-  line-height: 1.4em;
 }
 
 h2 {
-	color: $bluakDark;
-	font-family: $roboto;
 	font-size: 1.7em;
-  line-height: 1.2em;
 }
 
 h3 {
-	color: $bluakDark;
-	font-family: $roboto;
-	margin: 10px 0px -5px 0px;
+	margin-bottom: -0.3em;
 }
 
 h4 {
 	color: $gray;
-	font-family: $roboto;
-	margin: 10px 0px -5px 0px;
-}
-
-p {
-	margin: 0px;
-	margin-top: 10px;
+  margin-bottom: -0.3em;
 }
 
 #{$a-tags} {
@@ -214,6 +208,7 @@ item-title {
 	item-title a {
 		color: $bluakDark;
 		font-family: $philo;
+		text-align: left;
 
 		display: block;
 		font-size: 1.9em;
