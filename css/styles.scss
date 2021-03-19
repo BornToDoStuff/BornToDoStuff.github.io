@@ -209,7 +209,7 @@ item-image {
 
 	img {
 		max-width: 100%;
-		padding: 15px 0px;
+		padding: 15px;
 	}
 }
 
@@ -334,7 +334,6 @@ magic-item.artifact.attunement .rarity img {
 		align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-left: 0px;
 	}
 
 	magic-item {
@@ -344,6 +343,13 @@ magic-item.artifact.attunement .rarity img {
 
 		@include mobile { margin-left: 0px; }
 	}
+
+	item-image {
+		max-height: none;
+		-webkit-mask-image: none;
+		mask-image: none;
+	}
+
 	@include double-up {
 		magic-item.image {
 			display: block;
@@ -356,12 +362,11 @@ magic-item.artifact.attunement .rarity img {
 				float: left;
 				width: 49%;
 		    width: calc(100% - 550px);
-		    max-height: none;
-		    -webkit-mask-image: none;
-		    mask-image: none;
 			}
+
 		}
 	}
+
 }
 
 #item-menu {
