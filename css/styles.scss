@@ -37,24 +37,19 @@ hr {
 	border-top: 1px solid $transp_lightGray;
 }
 
-h1, h2, h3, h4, item-title, item-tagline {
-	text-align: left;
-}
-h1, item-title a{
-	color: $bluakDark;
-	font-family: $philo;
-}
 
 h1 {
-	font-size: 4rem;
-	line-height: 4.2rem;
+	color: $bluakDark;
+	font-family: $roboto;
+	font-size: 3em;
+  line-height: 1.4em;
 }
 
 h2 {
-	font-size: 2.6rem;
 	color: $bluakDark;
 	font-family: $roboto;
-	margin: 10px 0px -5px 0px;
+	font-size: 1.7em;
+  line-height: 1.2em;
 }
 
 h3 {
@@ -210,6 +205,8 @@ item-image {
 	img {
 		max-width: 100%;
 		padding: 15px;
+
+		@include
 	}
 }
 
@@ -217,15 +214,19 @@ item-title {
 	flex: 1 1;
 }
 	item-title a {
+		color: $bluakDark;
+		font-family: $philo;
+
 		display: block;
-		font-size: 3rem;
+		font-size: 1.9em;
 		line-height: 1.1em;
 		text-shadow: 0 0 $bluakDark;
 	}
 
 item-tagline {
-	display: block;
-	color: gray;
+	color: $mediumGray;
+	position: relative;
+	top: -4px;
 }
 
 magic-item a {
@@ -356,14 +357,19 @@ magic-item.artifact.attunement .rarity img {
 
 			item-head, item-description {
 				float: right;
-				width: 550px;
+				width: $item-width;
 			}
+			
 			item-image {
 				float: left;
 				width: 49%;
-		    width: calc(100% - 550px);
-			}
+		    width: calc(100% - #{$item-width + 15px});
 
+				img {
+					padding: 0px;
+					padding-right: 15px;
+				}
+			}
 		}
 	}
 
@@ -637,12 +643,6 @@ magic-spell {
 	}
 }
 
-item-tagline {
-	color: $mediumGray;
-	position: relative;
-	top: -4px;
-}
-
 item-tags {
 	padding-top: 10px;
 	display: block;
@@ -695,7 +695,7 @@ item-tag:hover {
 }
 
 input, button {
-	font-size: 1.6rem;
+	font-size: 1em;
 	line-height: $normal;
 }
 
@@ -735,13 +735,16 @@ input, button {
 
 	.children {
 		margin-left: 5px;
-		margin-top: 5px;
 		padding-left: 20px;
 		border-left: 1px solid $transp_medBlue;
 		transition: all 0.2s ease;
 	}
 
 	.solo { display: none; }
+
+	.tag {
+    margin-top: 10px;
+	}
 }
 
 #return {
