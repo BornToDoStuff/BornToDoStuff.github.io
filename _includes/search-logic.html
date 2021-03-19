@@ -34,7 +34,7 @@
     const itemTemplate = function(result) {
       var item = item_cache[result.ref];
       var subtype_string = "";
-      if (item.type == "Weapon" || item.type == "Armor")
+      if ((item.type == "Weapon" || item.type == "Armor") && item.subtypes.length)
       {
         subtype_string = item.subtypes.sort().join(", ").toLowerCase();
       }
