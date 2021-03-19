@@ -2,7 +2,7 @@
 layout: home
 ---
 {% for post in paginator.posts %}
-  <magic-item id="{{ post.item_id }}" class="magic-item {{ post.item_rarity | slugify }} {{ post.category | slugify }}{% if post.item_attunement %} attunement{% endif %}{% if post.item_curse %} cursed{% endif %}">
+  <magic-item id="{{ post.item_id }}" class="magic-item {{ post.item_rarity | slugify }} {{ post.category | slugify }}{% if post.item_attunement %} attunement{% endif %}{% if post.item_curse %} cursed{% endif %}{% if post.item_image %} image{% endif %}">
     <item-head>
       <item-title>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>

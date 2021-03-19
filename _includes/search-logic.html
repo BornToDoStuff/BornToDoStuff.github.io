@@ -38,7 +38,7 @@
       {
         subtype_string = item.subtypes.sort().join(", ").toLowerCase();
       }
-      return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.curse ? ' cursed' : ''}">
+      return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.curse ? ' cursed' : ''}${item.image ? ' image' : ''}">
           <item-head>
             <item-title>
               <a href="${item.url}">${item.title}</a>
@@ -79,10 +79,14 @@
     function setItemHeight(ele) {
       var description = $(ele).find("item-description")[0];
       var heightCount = 0;
-      while (heightCount < (heights.length - 1) &&
+      var heightsIndex = heights.length - 1;
+      while (heightCount < heightsIndex &&
         description.scrollHeight > sizes[heightCount].scrollHeight + 15 &&
-        description.scrollHeight > sizes[Math.min(heights.length-1,heightCount+1)].scrollHeight - 125)
+        description.scrollHeight > sizes[Math.min(heightsIndex,heightCount+1)].scrollHeight - 125)
       { heightCount++; }
+      if ($(ele).hasClass("image")) {
+        heightCount = Math.min(heightCount+2, heightsIndex);
+      }
 
       $(ele).addClass(heights[heightCount]);
       if (description.scrollHeight > description.clientHeight)
