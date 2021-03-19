@@ -13,9 +13,8 @@
     <item-extras aria-hidden="true">
       <div class="rarity"><img src="/images/rarities.svg" title="{{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement){% endif %}" /></div>
     </item-extras>
-    {% if post.item_image %}<img src="{{ site.url }}{{ post.item_image }}" />{% endif %}
   </item-head>
-
+  {% if post.item_image %}<item-image><img src="{{ site.url }}{{ post.item_image }}" /></item-image>{% endif %}
   <item-details>
     <div class="type">{{ post.category | downcase }}</div>
     <div class="subtypes">{% for subcat in post.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
