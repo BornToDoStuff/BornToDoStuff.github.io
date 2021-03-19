@@ -15,10 +15,10 @@
 <meta name="theme-color" content="#ffffff">
 
 <!-- SEO and og tags -->
-{%- assign page_image = "{{ site.url }}/images/borntobrewstuff-logo-alt.png" -%}
+{%- capture page_image %}{{ site.url }}/images/borntobrewstuff-logo-alt.png{% endcapture -%}
 {% if page.item_rarity %} <!-- its an item if it has a rarity -->
 {%- if page.item_image %}
-  {% assign page_image = "{{ site.url }}{{page.item_image}}" %}
+  {%- capture page_image %}{{ site.url }}{{page.item_image}}{% endcapture -%}
 {% endif -%}
 <meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
 <meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 50 }}" />
