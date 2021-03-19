@@ -205,8 +205,6 @@ item-image {
 	img {
 		max-width: 100%;
 		padding: 15px;
-
-		@include
 	}
 }
 
@@ -359,7 +357,7 @@ magic-item.artifact.attunement .rarity img {
 				float: right;
 				width: $item-width;
 			}
-			
+
 			item-image {
 				float: left;
 				width: 49%;
