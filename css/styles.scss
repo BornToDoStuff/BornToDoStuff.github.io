@@ -229,7 +229,7 @@ item-tagline {
 
 magic-item a {
 	text-decoration: none;
-	color: darkslategray!important;
+	color: $bluakDark!important;
 }
 
 item-extras {
@@ -362,7 +362,6 @@ magic-item.artifact.attunement .rarity img {
 				float: left;
 				width: 49%;
 		    width: calc(100% - #{$item-width + 15px});
-		    border-right: 2px solid #d8d8d8;
 
 				img {
 					padding: 0px;
