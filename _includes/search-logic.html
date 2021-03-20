@@ -76,22 +76,8 @@
       search()
     }
 
-    function setItemHeight(ele) {
-      var description = $(ele).find("item-description")[0];
-      var heightCount = 0;
-      var heightsIndex = heights.length - 1;
-      while (heightCount < heightsIndex &&
-        description.scrollHeight > sizes[heightCount].scrollHeight + 15 &&
-        description.scrollHeight > sizes[Math.min(heightsIndex,heightCount+1)].scrollHeight - 125)
-      { heightCount++; }
-      if ($(ele).hasClass("image")) {
-        heightCount = Math.min(heightCount+2, heightsIndex);
-      }
-
-      $(ele).addClass(heights[heightCount]);
-      if (description.scrollHeight > description.clientHeight)
-        $(ele).addClass("show-more");
-    }
+    //function setItemHeight(ele)
+    {% include masonry-item-height.html %}
 
 
     $("#search-form").submit(function(e) {

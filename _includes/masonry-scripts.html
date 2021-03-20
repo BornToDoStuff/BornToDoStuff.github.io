@@ -17,13 +17,7 @@
 <script>
   function masonryWhenReady() {
     // masonry and element sizing
-    if ($(window).width() <= 768) { heights = [""]; }
-    else { heights = ["","tall", "taller", "tallest"]; }
-
-    $(window).on("resize", function(){
-      if ($(window).width() <= 768) { heights = [""]; }
-      else { heights = ["","tall", "taller", "tallest"]; }
-    });
+    heights = ["", "tall", "taller", "tallest"];
 
     if ($("#grid-sizes magic-item").length == 0){
       heights.forEach(function (e, i) {
@@ -33,22 +27,8 @@
     var sizes = $("#grid-sizes item-description");
 
 
-    function setItemHeight(ele) {
-      var description = $(ele).find("item-description")[0];
-      var heightCount = 0;
-      var heightsIndex = heights.length - 1;
-      while (heightCount < heightsIndex &&
-        description.scrollHeight > sizes[heightCount].scrollHeight + 15 &&
-        description.scrollHeight > sizes[Math.min(heightsIndex,heightCount+1)].scrollHeight - 125)
-      { heightCount++; }
-      if ($(ele).hasClass("image")) {
-        heightCount = Math.min(heightCount+2, heightsIndex);
-      }
-
-      $(ele).addClass(heights[heightCount]);
-      if (description.scrollHeight > description.clientHeight)
-        $(ele).addClass("show-more");
-    }
+    //function setItemHeight(ele)
+    {% include masonry-item-height.html %}
 
 
     try {
@@ -91,7 +71,7 @@
     });
 
     function setupScroll(grid, masonry){
-      $("#pagination.page-navigation").hide(); //if there is javascript, just hide the pagination lol
+      $("#pagination .page-navigation").hide(); //if there is javascript, just hide the pagination lol
 
       if ($("#main").data("scrollable")){
         var href = window.location.href.split('/');
@@ -122,7 +102,7 @@
           grid.masonry('layout');
         });
         grid.on('last.infiniteScroll', function( event, response, path ) {
-          $("#pagination.no-more").show();
+          $("#pagination .no-more").show();
         });
       }
       else {

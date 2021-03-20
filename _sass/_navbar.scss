@@ -37,17 +37,17 @@
 
 #navbar-header {
   font-family: $philo;
-  font-size: 2.8rem;
+  font-size: 1.7em;
   flex: 0 0 auto;
 
-  @include tiny { font-size: 2rem; }
+  @include tiny { font-size: 1.4em; }
   @include mobile { position: absolute; z-index: 10; }
 }
   #navbar-brand {
     display: flex!important;
   }
   #navbar-brand img {
-    height: 40px;
+    height: 45px;
     margin: auto;
     padding-right: 5px;
 
@@ -152,13 +152,13 @@
 }
 #about, #random, #grid-layout, #table-layout, #search-show, #search-btn {
   display: block;
-	opacity: 0.4;
+	opacity: 0.45;
 	width: 30px;
 	height: 30px;
 	margin: 15px 0px;
   cursor: pointer;
 
-  &:hover { opacity: 0.6; }
+  &:hover { opacity: 0.7; }
 
   @include tiny {
     width: 24px;
