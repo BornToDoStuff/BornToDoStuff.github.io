@@ -8,12 +8,14 @@ body {
 }
 
 #item-wrapper {
-  padding: 50px;
+  padding: 30px;
   background: #495b65 url("/images/hatching_light.png");
 }
 
 magic-item {
   width: 100%;
+  padding: 25px;
+  margin: 0px;
 }
 
 #item-menu {
