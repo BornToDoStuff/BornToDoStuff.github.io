@@ -1,0 +1,31 @@
+body {
+  font-size: 1.8rem;
+  background: none;
+}
+
+#navbar {
+  display: none;
+}
+
+#item-wrapper {
+  padding: 50px;
+  background: #495b65 url("/images/hatching_light.png");
+}
+
+magic-item {
+  width: 100%;
+}
+
+#item-menu {
+  display: none;
+}
+
+#item-wrapper magic-item.image item-head, #item-wrapper magic-item.image item-description {
+  float: right;
+  width: 58%;
+}
+
+#item-wrapper magic-item.image item-image {
+  float: left;
+  width: 40%;
+}

@@ -515,8 +515,8 @@ span.dot {
 }
 
 .show-more item-description {
-    -webkit-mask-image: linear-gradient( 180deg, rgba(0,0,0,1) 75px,rgba(0,0,0,1) calc(100% - 70px),rgba(0,0,0,0) calc(100% - 20px));
-		mask-image: linear-gradient( 180deg, rgba(0,0,0,1) 75px,rgba(0,0,0,1) calc(100% - 70px),rgba(0,0,0,0) calc(100% - 20px));
+    -webkit-mask-image: linear-gradient(180deg, #000 30px, #000 calc(100% - 70px), transparent calc(100% - 20px));
+		mask-image: linear-gradient(180deg, #000 30px, #000 calc(100% - 70px), transparent calc(100% - 20px));
 }
 
 /*=============== END read-more ===============*/
