@@ -16,7 +16,43 @@ magic-item {
   width: 100%;
   padding: 25px;
   margin: 0px;
+  position: relative;
 }
+/*magic-item::after, magic-item.image::before {*/
+magic-item::after {
+  content: "BornToBrewStuff";
+  display: block;
+  position: absolute;
+  font-weight: bold;
+  
+  right: 10px;
+  bottom: 10px;
+  font-size: 1.5em;
+  color: rgba(9, 48, 70,0.1);
+}
+/* magic-item.image::before {
+    top: 205px;
+    left: -165px;
+    font-size: 3em;
+    color: rgba(9, 48, 70, 0.05);
+    transform: rotate(90deg);
+} */
+
+
+magic-item::after {
+  content: "BornToBrewStuff";
+  display: block;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: rgba(9, 48, 70, 0.1);
+}
+item-description {
+  margin-bottom: 25px;
+}
+
 
 #item-menu {
   display: none;
