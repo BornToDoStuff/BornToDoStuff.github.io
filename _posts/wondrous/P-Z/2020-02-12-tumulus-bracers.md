@@ -21,8 +21,8 @@ item_damage:
   - Bludgeoning
 tags:
   - Nature
-  - Charges
-  - Strength
+  
+  
   - Restrained
   - Blinded
 item_idea: 

@@ -18,7 +18,7 @@ item_damage:
   - Fire
 tags:
   - Spellcasting
-  - Constitution
+  
   - Infernal
 item_idea:
 item_co_creator:

@@ -20,7 +20,7 @@ item_damage:
 tags:
   - Spellcasting
   - Mythology
-  - At Dawn
+  
   - Short Rest
   - Disadvatange
 item_idea: Greek mythology

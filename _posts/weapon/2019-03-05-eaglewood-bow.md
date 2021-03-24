@@ -19,8 +19,8 @@ item_role:
 item_damage: 
   - Piercing
 tags:
-  - Charges
-  - At Dawn
+  
+  
   - Sight
 item_idea: 
 item_co_creator: 

@@ -17,7 +17,7 @@ item_role:
 item_damage:
 tags:
   - Partner
-  - Constitution
+  
   - Restrained
 item_idea:
 item_co_creator:

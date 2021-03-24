@@ -22,7 +22,7 @@ tags:
   - Fiend
   - Immunity
   - Poisoned
-  - At Dawn
+  
   - Mythology
 item_idea: Greek mythology
 item_co_creator:

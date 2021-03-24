@@ -20,7 +20,7 @@ tags:
   - Swamp
   - Marsh
   - Spellcasting
-  - Charges
+  
   - Healing
 item_idea: 
 item_co_creator: 

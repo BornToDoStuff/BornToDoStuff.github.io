@@ -17,10 +17,10 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Charges
-  - At Dawn
+  
+  
   - Bonus Action
-  - Dexterity
+  
 item_idea:
 item_co_creator:
 item_updated:

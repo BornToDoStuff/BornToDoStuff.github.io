@@ -19,9 +19,9 @@ item_damage:
   - Necrotic
 tags:
   - Bonus Action
-  - Charges
+  
   - Teleport
-  - Constitution
+  
 item_idea:
 item_co_creator:
 item_updated: 2019-02-14

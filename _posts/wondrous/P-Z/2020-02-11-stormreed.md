@@ -21,8 +21,8 @@ tags:
   - Nature
   - Weather
   - Spellcasting
-  - Charges
-  - At Dawn
+  
+  
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-28

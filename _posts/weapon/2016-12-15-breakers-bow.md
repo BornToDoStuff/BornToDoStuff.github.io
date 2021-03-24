@@ -19,7 +19,7 @@ item_damage:
   - Piercing
   - Radiant
 tags:
-  - Strength
+  
   - Bastion
 item_idea: Bastion
 item_co_creator:

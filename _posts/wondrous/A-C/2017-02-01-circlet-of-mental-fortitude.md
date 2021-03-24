@@ -15,8 +15,8 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Charges
-  - At Dawn
+  
+  
   - Proficiency
 item_idea:
 item_co_creator:

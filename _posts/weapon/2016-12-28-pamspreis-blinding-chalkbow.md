@@ -15,8 +15,8 @@ item_school:
 item_role:
 item_damage:
 tags:
-  - Dexterity
-  - Constitution
+  
+  
   - Blinded
 item_idea:
 item_co_creator:

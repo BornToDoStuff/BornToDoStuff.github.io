@@ -19,8 +19,8 @@ item_role:
   - Attack
 item_damage: Piercing
 tags:
-  - Charges
-  - At Dawn
+  
+  
   - Light
   - Line
 item_idea: 

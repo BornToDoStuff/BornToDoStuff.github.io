@@ -19,8 +19,8 @@ item_role:
   - Defense
 item_damage: 
 tags:
-  - Charges
-  - At dawn
+  
+  
   - Wisdom
   - Charmed
   - Incapacitated

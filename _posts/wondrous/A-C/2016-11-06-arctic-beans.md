@@ -18,7 +18,7 @@ item_damage:
   - Cold
 tags:
   - Cold
-  - Constitution
+  
 item_idea:
 item_co_creator:
 item_updated:

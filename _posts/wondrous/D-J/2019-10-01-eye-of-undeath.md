@@ -17,8 +17,8 @@ item_role:
 item_damage: 
 tags:
   - Spellcasting
-  - Charges
-  - At Dawn
+  
+  
   - Spell Focus
 item_idea: 
 item_co_creator: 

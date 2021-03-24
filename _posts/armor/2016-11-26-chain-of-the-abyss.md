@@ -19,7 +19,7 @@ item_damage:
   - Necrotic
 tags:
   - Planar
-  - Strength
+  
   - Restrained
   - Resistance
 item_idea:

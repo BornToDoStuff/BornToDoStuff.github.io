@@ -18,10 +18,10 @@ item_role:
 item_damage: 
   - Lightning
 tags:
-  - Charges
-  - At Dawn
-  - Dexterity
-  - Strength
+  
+  
+  
+  
   - Movement
   - Initiative
   - Reaction

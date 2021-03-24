@@ -21,7 +21,6 @@ tags:
   - Disadvantage
   - Wisdom
   - Truesight
-  - At Dawn
   - Bonus Action
   - Auto Fail
 item_idea:

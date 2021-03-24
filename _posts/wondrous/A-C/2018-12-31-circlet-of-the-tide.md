@@ -18,9 +18,9 @@ item_role:
 item_damage: 
   - Bludgeoning
 tags:
-  - Charges
-  - At Dawn
-  - Dexterity
+  
+  
+  
   - Deity
 item_idea: Kuma
 commissioned: true

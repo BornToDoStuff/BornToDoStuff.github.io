@@ -21,7 +21,7 @@ tags:
   - Underdark
   - Cave
   - Nature
-  - Constitution
+  
   - Summoning
 item_idea: 
 item_co_creator: 

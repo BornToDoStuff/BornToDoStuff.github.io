@@ -18,9 +18,9 @@ item_damage:
   - Lightning
 tags:
   - Lightning
-  - Constitution
+  
   - Blinded
-  - Strength
+  
   - Pull
 item_idea:
 item_co_creator:

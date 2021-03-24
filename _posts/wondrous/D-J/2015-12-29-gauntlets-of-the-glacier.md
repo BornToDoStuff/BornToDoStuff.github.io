@@ -19,7 +19,7 @@ item_role:
 item_damage:
   - Cold
 tags:
-  - Constitution
+  
   - Grapple
   - Ice
   - Restrained

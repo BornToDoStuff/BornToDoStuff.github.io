@@ -18,8 +18,8 @@ item_role:
 item_damage: 
 tags:
   - Consumable
-  - Dexterity
-  - Strength
+  
+  
   - Difficult Terrain
   - Restrained
   - Forest

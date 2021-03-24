@@ -17,7 +17,7 @@ item_role:
 item_damage:
 tags:
   - Ioun
-  - Strength
+  
   - Movement
 item_idea:
 item_co_creator:

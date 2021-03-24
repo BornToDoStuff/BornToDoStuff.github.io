@@ -18,7 +18,7 @@ item_role:
 item_damage: 
 tags:
   - Light
-  - Charges
+  
   - Visibility
   - Dim Light
   - Darkness

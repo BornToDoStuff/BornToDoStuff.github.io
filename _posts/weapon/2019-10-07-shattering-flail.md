@@ -18,8 +18,8 @@ item_role:
 item_damage: Bludgeoning
 tags:
   - Long Rest
-  - Strength
-  - Charges
+  
+  
   - Ice
 item_idea:
 item_co_creator:

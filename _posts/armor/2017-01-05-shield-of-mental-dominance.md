@@ -15,7 +15,6 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Charges
   - Long Rest
   - Short Rest
   - Intelligence

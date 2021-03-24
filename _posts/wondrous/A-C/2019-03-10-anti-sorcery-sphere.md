@@ -18,8 +18,8 @@ tags:
   - Antimagic
   - Spellcasting
   - Years
-  - Charges
-  - At Dawn
+  
+  
 item_idea: 
 item_co_creator: 
 item_updated: 

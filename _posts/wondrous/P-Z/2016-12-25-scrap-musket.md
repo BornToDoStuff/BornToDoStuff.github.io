@@ -18,8 +18,8 @@ item_damage:
   - Bludgeoning
   - Piercing
 tags:
-  - Dexterity
-  - Strength
+  
+  
 item_idea:
 item_co_creator:
 item_updated: 2018-06-02

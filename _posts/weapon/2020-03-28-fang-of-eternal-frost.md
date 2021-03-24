@@ -24,7 +24,7 @@ tags:
   - Cold
   - Petrified
   - Restrained
-  - Constitution
+  
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-02

@@ -15,7 +15,7 @@ item_role:
 item_damage:
   - Bludgeoning
 tags:
-  - Dexterity
+  
   - Augmier
 item_idea:
 item_co_creator:

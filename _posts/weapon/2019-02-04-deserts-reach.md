@@ -17,7 +17,7 @@ item_school:
 item_role: 
 item_damage: 
 tags:
-  - Constitution
+  
   - Desert
   - Short Rest
 item_idea: 

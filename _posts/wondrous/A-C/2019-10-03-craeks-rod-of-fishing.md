@@ -16,9 +16,11 @@ item_role:
   - Utility
 item_damage:
 tags:
-  - Dexterity
+  
   - Sleight of Hand
   - Grapple
+  - Artificer
+  - Craek
 item_idea:
 item_co_creator:
 item_updated:

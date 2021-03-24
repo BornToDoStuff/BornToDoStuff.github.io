@@ -19,8 +19,8 @@ item_role:
   - Utility
 item_damage: Bludgeoning
 tags:
-  - At Dawn
-  - Charges
+  
+  
   - Unarmed
 item_idea:
 item_co_creator:

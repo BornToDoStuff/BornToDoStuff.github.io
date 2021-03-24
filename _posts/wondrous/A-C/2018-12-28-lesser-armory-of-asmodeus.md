@@ -19,10 +19,10 @@ item_damage:
   - Lightning
   - Various
 tags:
-  - Charges
-  - At Dawn
+  
+  
   - Charisma
-  - Dexterity
+  
   - Transforming
   - Deity
 item_idea: Kuma

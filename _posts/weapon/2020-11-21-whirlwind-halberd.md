@@ -21,7 +21,7 @@ tags:
   - Nature
   - Desert
   - Sand
-  - Constitution
+  
   - Obscured
   - Breathe
 item_idea: 

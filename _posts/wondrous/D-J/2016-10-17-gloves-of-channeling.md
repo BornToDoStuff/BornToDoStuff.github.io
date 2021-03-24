@@ -17,8 +17,8 @@ item_role:
   - Auxiliary
 item_damage:
 tags:
-  - At Dawn
-  - Charges
+  
+  
   - Spellcasting
 item_idea:
 item_co_creator:

@@ -19,6 +19,8 @@ tags:
   - Movement
   - Difficult Terrain
   - Bludgeoning
+  - Artificer
+  - Craek
 item_idea:
 item_co_creator:
 item_updates: [2019-10-23, 2020-08-23]

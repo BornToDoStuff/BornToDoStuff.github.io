@@ -17,7 +17,7 @@ item_damage:
   - Poison
 tags:
   - Elemental
-  - Constitution
+  
   - Poisoned
   - Paralyzed
 item_idea:

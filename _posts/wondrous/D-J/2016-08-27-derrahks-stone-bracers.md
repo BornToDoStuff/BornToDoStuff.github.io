@@ -21,7 +21,7 @@ item_damage:
 tags:
   - Spellcasting
   - Stone
-  - Constitution
+  
   - Long Rest
 item_idea:
 item_co_creator:

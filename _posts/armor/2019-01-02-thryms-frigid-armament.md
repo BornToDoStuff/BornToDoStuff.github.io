@@ -19,9 +19,9 @@ item_role:
 item_damage: 
   - Cold
 tags:
-  - Charges
-  - At Dawn
-  - Constitution
+  
+  
+  
   - Restrained
   - Ice
   - Deity

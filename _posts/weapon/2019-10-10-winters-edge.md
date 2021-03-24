@@ -20,10 +20,10 @@ item_role:
 item_damage:
   - Cold
 tags:
-  - Strength
+  
   - Prone
   - Long Rest
-  - Charges
+  
   - Winter
   - Cold
 item_idea:

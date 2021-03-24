@@ -18,7 +18,7 @@ item_damage:
   - Radiant
 tags:
   - Mythology
-  - At Dawn
+  
   - Blinded
 item_idea: Egyptian mythology
 item_co_creator:

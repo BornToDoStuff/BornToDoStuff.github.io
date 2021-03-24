@@ -20,7 +20,7 @@ item_damage:
   - Radiant
 tags:
   - Tradeoff
-  - Constitution
+  
   - Undead
   - Critical
   - Healing

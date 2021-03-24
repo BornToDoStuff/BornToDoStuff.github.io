@@ -20,12 +20,12 @@ item_damage:
   - Radiant
 tags:
   - Evolving
-  - Constitution
+  
   - Unarmed
   - Spellcasting
   - Armor Class
-  - Charges
-  - At Dawn
+  
+  
   - Divine
 item_idea:
 item_co_creator:

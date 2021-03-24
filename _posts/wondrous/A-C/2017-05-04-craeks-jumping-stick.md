@@ -18,8 +18,10 @@ tags:
   - Movement
   - Jumping
   - Attack of Opportunity
-  - Dexterity
+  
   - Prone
+  - Artificer
+  - Craek
 item_idea:
 item_co_creator:
 item_updated: 2018-05-30

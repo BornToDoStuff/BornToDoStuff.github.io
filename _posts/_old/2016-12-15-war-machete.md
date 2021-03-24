@@ -23,7 +23,7 @@ tags:
   - Stages
   - Bonus Action
   - Critical
-  - Constitution
+  
   - Bastion
 item_idea: Bastion
 item_co_creator:

@@ -15,7 +15,7 @@ item_role:
 item_damage: 
 tags:
   - Spellcasting
-  - Constitution
+  
   - Petrified
   - Restrained
   - Stone

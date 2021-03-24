@@ -17,8 +17,8 @@ item_role:
 item_damage:
 tags:
   - Living
-  - Charges
-  - Dexterity
+  
+  
   - Distadvantage
   - Prone
 item_goofy: 80

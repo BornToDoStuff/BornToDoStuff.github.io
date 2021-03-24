@@ -18,7 +18,7 @@ item_damage:
   - Bludgeoning
   - Piercing
 tags:
-  - Dexterity
+  
   - Forest
   - Growth
   - Plants

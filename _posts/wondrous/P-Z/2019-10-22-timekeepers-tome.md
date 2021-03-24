@@ -17,7 +17,7 @@ item_damage:
 tags:
   - Intelligence
   - History
-  - At Dawn
+  
   - Lore
   - Mystery
 item_idea: 

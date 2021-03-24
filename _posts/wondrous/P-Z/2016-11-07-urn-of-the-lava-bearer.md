@@ -17,7 +17,7 @@ item_damage:
   - Fire
 tags:
   - Aura
-  - Charges
+  
   - Dawn
   - Fire
 item_idea: CasualDM

@@ -19,7 +19,7 @@ item_damage:
 tags:
   - Lightning
   - Resistance
-  - Constitution
+  
   - Grapple
   - Concentration
   - Long Rest

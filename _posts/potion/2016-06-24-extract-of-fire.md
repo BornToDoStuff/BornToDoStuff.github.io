@@ -17,7 +17,7 @@ item_damage:
   - Fire
 tags:
   - Elemental
-  - Dexterity
+  
 item_idea:
 item_co_creator:
 item_updated:

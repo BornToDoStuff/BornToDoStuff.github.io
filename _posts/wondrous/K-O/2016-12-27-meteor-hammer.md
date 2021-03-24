@@ -17,7 +17,7 @@ item_role:
 item_damage:
   - Bludgeoning
 tags:
-  - Dexterity
+  
 item_idea:
 item_co_creator:
 item_updated:

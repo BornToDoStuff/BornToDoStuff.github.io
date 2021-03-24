@@ -20,7 +20,7 @@ tags:
   - Lightning
   - Water
   - Curse Purge
-  - Dexterity
+  
   - Long Rest
 item_idea:
 item_co_creator:

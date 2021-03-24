@@ -24,7 +24,7 @@ tags:
   - Charmed
   - Reaction
   - Short Rest
-  - Charges
+  
   - Many
   - Many Effects
 item_idea: 

@@ -20,7 +20,7 @@ item_damage:
   - Fire
 tags:
   - Long Recharge
-  - Dexterity
+  
   - Paralyzed
 item_idea:
 item_co_creator:

@@ -18,11 +18,11 @@ item_role:
   - Attack
 item_damage:
 tags:
-  - Constitution
-  - At Dawn
+  
+  
   - Incapacitated
   - Movement
-  - Charges
+  
 item_idea:
 item_co_creator:
 item_updated:

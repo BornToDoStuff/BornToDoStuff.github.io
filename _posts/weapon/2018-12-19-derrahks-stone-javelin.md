@@ -17,13 +17,13 @@ item_role:
 item_damage: 
   - Piercing
 tags:
-  - Constitution
-  - Strength
+  
+  
   - Summoning
   - Stone
   - Restrained
-  - Charges
-  - At Dawn
+  
+  
 item_idea: Novrodian
 item_co_creator: 
 item_updated: 

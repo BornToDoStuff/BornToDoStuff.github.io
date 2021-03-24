@@ -17,11 +17,11 @@ item_damage:
   - Bludgeoning
 tags:
   - Exhaustion
-  - Dexterity
-  - Strength
+  
+  
   - Aura
   - Bludgeoning
-  - Charges
+  
 item_idea:
 item_co_creator:
 item_updated:

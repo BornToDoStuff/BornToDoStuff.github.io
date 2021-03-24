@@ -18,9 +18,7 @@ item_role:
 item_damage: 
 tags:
   - Arctic
-  - Constitution
-  - Charges
-  - At Dawn
+  
   - Climate
   - Reduce
   - Resistance

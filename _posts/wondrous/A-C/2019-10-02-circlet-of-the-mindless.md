@@ -21,7 +21,7 @@ tags:
   - Psychic
   - Divination
   - Charmed
-  - At Dawn
+  
 item_idea:
 item_co_creator:
 item_updated:

@@ -17,8 +17,8 @@ item_damage:
   - Lightning
 tags:
   - Elemental
-  - Dexterity
-  - Constitution
+  
+  
   - Noisy
   - Blinded
 item_idea:

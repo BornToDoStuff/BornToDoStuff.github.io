@@ -20,7 +20,7 @@ item_damage:
   - Cold
 tags:
   - Aura
-  - Constitution
+  
   - Grapple
   - Movement
   - Resistance

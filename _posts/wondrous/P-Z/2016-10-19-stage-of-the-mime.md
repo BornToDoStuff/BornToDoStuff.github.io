@@ -15,8 +15,8 @@ item_role:
   - Utility
 item_damage:
 tags:
-  - At Dawn
-  - Charges
+  
+  
 item_idea:
 item_co_creator:
 item_updated:

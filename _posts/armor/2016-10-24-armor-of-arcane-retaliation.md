@@ -21,8 +21,7 @@ item_damage:
   - Force
 tags:
   - Resistance
-  - Dexterity
-  - Charges
+  
   - Reaction
   - Elemental
 item_idea:

@@ -20,7 +20,7 @@ item_damage:
 tags:
   - Planar
   - Necrotic
-  - Strength
+  
   - Restrained
 item_idea:
 item_co_creator:

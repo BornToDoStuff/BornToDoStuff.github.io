@@ -17,7 +17,7 @@ item_role:
 item_damage: 
   - Lightning
 tags:
-  - Dexterity
+  
   - Water
   - Weather
 item_idea: 

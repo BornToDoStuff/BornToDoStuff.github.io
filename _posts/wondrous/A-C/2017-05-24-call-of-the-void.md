@@ -17,10 +17,10 @@ item_damage:
   - Force
   - Necrotic
 tags:
-  - Charges
-  - Strength
+  
+  
   - Short Rest
-  - Constitution
+  
   - Planar
 item_idea:
 item_co_creator:

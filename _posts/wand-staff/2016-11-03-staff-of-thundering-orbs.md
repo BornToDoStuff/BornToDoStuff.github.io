@@ -18,9 +18,9 @@ item_damage:
   - Thunder
 tags:
   - Bubbles
-  - Constitution
-  - Charges
-  - At Dawn
+  
+  
+  
   - Cone
   - Thunder
 item_idea:

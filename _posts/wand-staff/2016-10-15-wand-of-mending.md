@@ -14,7 +14,7 @@ item_role:
   - Utility
 item_damage:
 tags:
-  - Charges
+  
   - Spellcasting
 item_idea:
 item_co_creator:

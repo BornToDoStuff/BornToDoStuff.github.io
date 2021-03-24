@@ -19,7 +19,7 @@ item_damage:
 tags:
   - Critical
   - Invisibile
-  - Dexterity
+  
   - Stealth
   - Initiative
 item_idea:

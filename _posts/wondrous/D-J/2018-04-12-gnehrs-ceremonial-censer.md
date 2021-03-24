@@ -17,7 +17,7 @@ item_role:
   - Utility
 item_damage: 
 tags:
-  - Constitution
+  
   - Initiative
   - Intelligence
   - Wisdom

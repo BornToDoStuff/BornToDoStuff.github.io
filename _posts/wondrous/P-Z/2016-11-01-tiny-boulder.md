@@ -18,7 +18,7 @@ item_damage:
   - Bludgeoning
 tags:
   - Bludgeoning
-  - Dexterity
+  
 item_idea:
 item_co_creator: RockGoliath
 item_updated:

@@ -19,9 +19,9 @@ item_role:
 item_damage:
   - Fire
 tags:
-  - At Dawn
-  - Charges
-  - Dexterity
+  
+  
+  
   - Infernal
 item_idea:
 item_co_creator:

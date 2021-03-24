@@ -20,7 +20,7 @@ item_damage:
 tags:
   - Stunned
   - Undead
-  - Constitution
+  
   - Lich
 item_idea: 
 item_co_creator: 

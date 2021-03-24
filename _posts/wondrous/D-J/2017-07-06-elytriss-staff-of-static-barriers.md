@@ -18,10 +18,10 @@ item_damage:
   - Lightning
   - Force
 tags:
-  - Charges
-  - At Dawn
-  - Strength
-  - Constitution
+  
+  
+  
+  
 item_idea:
 item_co_creator:
 item_updated:

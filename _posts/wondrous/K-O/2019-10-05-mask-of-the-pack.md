@@ -18,7 +18,7 @@ item_damage:
 tags:
   - Beast
   - Long Rest
-  - Charges
+  
   - Wisdom
   - Frightened
 item_idea:

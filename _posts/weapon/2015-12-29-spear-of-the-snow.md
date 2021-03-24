@@ -20,7 +20,7 @@ tags:
   - Ice
   - Vision
   - Obscure
-  - Constitution
+  
   - Difficult Terrain
 item_idea:
 item_co_creator:

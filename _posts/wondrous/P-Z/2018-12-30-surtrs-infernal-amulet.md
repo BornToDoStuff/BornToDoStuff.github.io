@@ -19,10 +19,10 @@ item_role:
 item_damage: 
   - Fire
 tags:
-  - Charges
-  - At Dawn
-  - Dexterity
-  - Constitution
+  
+  
+  
+  
   - Initiative
   - Reaction
   - Deity

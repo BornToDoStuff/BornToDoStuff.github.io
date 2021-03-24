@@ -20,7 +20,7 @@ tags:
   - Nature
   - Movement
   - Perception
-  - Dexterity
+  
   - Reaction
 item_idea: 
 item_co_creator: 

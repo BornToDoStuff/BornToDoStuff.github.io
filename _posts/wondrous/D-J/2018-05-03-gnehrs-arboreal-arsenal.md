@@ -16,8 +16,8 @@ item_role:
 item_damage: 
   - Mixed
 tags:
-  - At Dawn
-  - Charges
+  
+  
 item_idea: 
 item_co_creator: 
 item_updated: 2018-10-26

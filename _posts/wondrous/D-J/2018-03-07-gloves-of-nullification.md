@@ -18,7 +18,7 @@ item_role:
 item_damage:
 tags:
   - Concentration
-  - Constitution
+  
   - Spellcasting
 item_idea:
 item_co_creator:
