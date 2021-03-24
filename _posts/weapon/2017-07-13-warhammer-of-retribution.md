@@ -13,7 +13,6 @@ item_school: Transmutation
 item_role:
 item_damage:
 tags:
-  - Charisma
   - Prone
   - Movement
   - Abberation

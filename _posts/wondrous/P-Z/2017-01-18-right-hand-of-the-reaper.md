@@ -19,7 +19,7 @@ item_damage:
   - Necrotic
 tags:
   - Sickle
-  - Wisdom
+  
   - Unarmed
 item_idea:
 item_co_creator:

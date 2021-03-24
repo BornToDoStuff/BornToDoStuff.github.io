@@ -18,6 +18,7 @@ item_role:
 item_damage: 
   - Slashing
 tags:
+  - Shapeshifting
   - Transforming
 item_idea: 
 item_co_creator: 

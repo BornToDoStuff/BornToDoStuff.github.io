@@ -17,7 +17,6 @@ item_damage:
 tags:
   - Intelligence
   - History
-  
   - Lore
   - Mystery
 item_idea: 

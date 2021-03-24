@@ -17,7 +17,7 @@ item_role:
 item_damage:
   - Necrotic
 tags:
-  - Wisdom
+  
   - Charmed
 item_idea: lygerzero0zero
 item_co_creator:

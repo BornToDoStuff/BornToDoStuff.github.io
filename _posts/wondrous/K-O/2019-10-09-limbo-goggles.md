@@ -17,9 +17,9 @@ item_role:
 item_damage:
 tags:
   - Disadvantage
-  - Wisdom
-  - Intelligence
   - Illusion
+  - Vision
+  - Truesight
 item_idea:
 item_co_creator:
 item_updated:

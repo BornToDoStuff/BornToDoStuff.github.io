@@ -25,8 +25,6 @@ tags:
   - Demiplane
   - Long Rest
   - Short Rest
-  - Charisma
-  
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-13

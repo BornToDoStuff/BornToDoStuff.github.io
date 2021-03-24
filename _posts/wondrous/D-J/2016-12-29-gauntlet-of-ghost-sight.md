@@ -17,7 +17,7 @@ item_role:
 item_damage:
   - Force
 tags:
-  - Wisdom
+  
   - Truesight
 item_idea:
 item_co_creator:

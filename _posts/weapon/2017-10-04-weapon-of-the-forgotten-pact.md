@@ -15,7 +15,7 @@ item_role:
 item_damage:
   - Mixed
 tags:
- - Wisdom
+ 
  - Bonus Action
 item_idea:
 item_co_creator:

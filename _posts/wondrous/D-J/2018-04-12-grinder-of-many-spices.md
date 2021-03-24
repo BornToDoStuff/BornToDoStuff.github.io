@@ -18,15 +18,12 @@ item_role:
 item_damage: 
   - Mixed
 tags:
-  - Intelligence
-  - Wisdom
   - Blinding
   - Charmed
   - Reaction
   - Short Rest
-  
+  - Random
   - Many
-  - Many Effects
 item_idea: 
 item_co_creator: 
 item_updated: 

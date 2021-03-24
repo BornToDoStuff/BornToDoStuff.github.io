@@ -18,16 +18,14 @@ item_role:
 item_damage: 
   - Lightning
 tags:
-  
-  
-  
-  
   - Movement
   - Initiative
   - Reaction
+  - Special Casting
   - Deity
-item_idea: Kuma
-commissioned: true
+  - Divine
+commission: true
+commissioner: Kuma
 item_co_creator: 
 item_updated: 
 last_modified_at: 
@@ -40,10 +38,10 @@ While wearing this cloak you know the cantrip <magic-spell>Gust</magic-spell> if
 
 <!--excerpt-->
 ### Winds of Change
-As an action you can expend a number of charges to create a vortex of howling winds. When you do so choose one 5 foot space within 120 feet for each charge. Large or smaller creatures within 15 feet of a target space, but not in a target space, must make a Strength saving throw or be pushed 10 feet directly away from the nearest targeted space.
+As an action you can expend a number of charges to create a vortex of howling winds. When you do so choose one 5 foot space within 120 feet for each charge. Large or smaller creatures within 15 feet of a target space, but not in a target space, must make a Strength saving throw or be pushed 10 feet away from the nearest targeted space.
 
 ### Energizing Presence
-All allies, including yourself, within 10 feet are affected by the energy pulsing around you and have a +5 bonus to initiative.  
+All allies within 10 feet, including yourself, are affected by the energy pulsing around you and have a +5 bonus to initiative.  
 Additionally, as a reaction you can expend a charge to grant one creature you can see advantage on Dexterity or Strength saving throws until the end of their next turn.
 
 ### Lightning Mastery

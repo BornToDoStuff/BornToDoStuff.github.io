@@ -17,7 +17,7 @@ item_role:
 item_damage:
 tags:
   - Bonus Action
-  - Wisdom
+  
   - Charmed
   - Long Rest
 item_idea:

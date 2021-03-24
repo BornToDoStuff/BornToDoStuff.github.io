@@ -22,7 +22,7 @@ tags:
   - Charmed
   - Stunned
   - Prone
-  - Wisdom
+  
   - Long Rest
   - Hero
 item_idea: 

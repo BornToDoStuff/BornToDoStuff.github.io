@@ -18,8 +18,8 @@ item_role:
   - Utility
 item_damage: 
 tags:
-  - Intelligence
-  - Investigation
+  - Fashion
+  - Shapeshifting
   - Clothes
 item_idea: 
 item_co_creator: 

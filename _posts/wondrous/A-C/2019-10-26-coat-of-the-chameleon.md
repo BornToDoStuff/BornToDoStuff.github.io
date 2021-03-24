@@ -19,12 +19,9 @@ item_role:
   - Defense
 item_damage: 
 tags:
-  
-  
-  - Wisdom
   - Charmed
   - Incapacitated
-  - Shapeshift
+  - Shapeshifting
 item_idea: 
 item_co_creator: 
 item_updated: 

@@ -25,7 +25,7 @@ tags:
   - Sight
   - Ethereal Plane
   - Undead
-  - Wisdom
+  
   - Stunned
   - Frightened
 item_idea: 
