@@ -38,7 +38,7 @@
       {
         subtype_string = item.subtypes.sort().join(", ").toLowerCase();
       }
-      return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.curse ? ' cursed' : ''}${item.image ? ' image' : ''}">
+      return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')}${subtype_string} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.curse ? ' cursed' : ''}${item.image ? ' image' : ''}">
           <item-head>
             <item-title>
               <a href="${item.url}">${item.title}</a>
@@ -47,7 +47,7 @@
             <item-extras aria-hidden="true">
         			<div class="rarity"><img src="/images/rarities.svg" title="${item.rarity.toLowerCase()}" /></div>
         		</item-extras>
-            ${item.image ? `<img src="${item.image}" />` : ''}
+            ${item.image ? `<item-image><img src="${item.image}" /></item-image>` : ''}
           </item-head>
 
           <item-description>
