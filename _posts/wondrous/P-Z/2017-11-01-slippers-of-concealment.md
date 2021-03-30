@@ -1,7 +1,7 @@
 ---
 title: Slippers of Concealment
 item_id: 190
-category; Wondrous
+category: Wondrous
 item_subtypes:
 item_rarity: Common
 item_attunement: false
