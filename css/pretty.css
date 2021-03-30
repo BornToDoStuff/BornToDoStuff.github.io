@@ -1,5 +1,5 @@
 body {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   background: none;
 }
 
@@ -10,6 +10,8 @@ body {
 #item-wrapper {
   padding: 30px;
   background: #495b65 url("/images/hatching_light.png");
+  margin-bottom: 50px;
+  max-width: 800px;
 }
 
 magic-item {
@@ -24,7 +26,7 @@ magic-item::after {
   display: block;
   position: absolute;
   font-weight: bold;
-  
+
   right: 10px;
   bottom: 10px;
   font-size: 1.5em;
@@ -60,10 +62,10 @@ item-description {
 
 #item-wrapper magic-item.image item-head, #item-wrapper magic-item.image item-description {
   float: right;
-  width: 58%;
+  width: 65%;
 }
 
 #item-wrapper magic-item.image item-image {
   float: left;
-  width: 40%;
+  width: 35%;
 }
