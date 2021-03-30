@@ -47,13 +47,11 @@
             <item-extras aria-hidden="true">
         			<div class="rarity"><img src="/images/rarities.svg" title="${item.rarity.toLowerCase()}" /></div>
         		</item-extras>
-            ${item.image ? `<item-image><img src="${item.image}" /></item-image>` : ''}
           </item-head>
-
+          ${item.image ? `<item-image><img src="${item.image}" /></item-image>` : ''}
           <item-description>
         		${item.content}
         	</item-description>
-
           <item-details>
             <div class="type">${item.type.toLowerCase()}</div>
             <div class="subtypes">${item.subtypes ? item.subtypes.join(', ').toLowerCase() : ''}</div>
@@ -61,7 +59,6 @@
             <div class="attunement">${item.attunement ? 'Yes' : ''}</div>
             <div class="curse">${item.curse ? 'Yes' : ''}</div>
           </item-details>
-
           <a href="${item.url}" class="read-more">
       			<div class="expander"><span class="dot"></span><span class="dot"></span><span class="dot"></span>
       			</div>
