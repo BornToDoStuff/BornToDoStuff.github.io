@@ -5,7 +5,7 @@ permalink: /art
 {% assign sorted_posts = site.posts | sort: 'title' %}
 {% for post in sorted_posts %}
   {%- if post.item_image -%}
-  <magic-item id="{{ post.item_id }}" class="magic-item {{ post.item_rarity | slugify }} {{ post.category | slugify }}{% if post.item_attunement %} attunement{% endif %}{% if post.item_curse %} cursed{% endif %}{% if post.item_image %} image{% endif %}">
+  <magic-item id="{{ post.item_id }}" class="magic-item image infinite">
     <item-title>
       <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </item-title>
@@ -14,3 +14,7 @@ permalink: /art
   </magic-item>
   {%- endif -%}
 {% endfor %}
+
+<script>
+  $("#main").data("scrollable", "false")
+</script>

@@ -177,6 +177,9 @@ magic-item {
 	magic-item.tallest {
 		height: 860px;
 	}
+	magic-item.infinite {
+		height: initial!important;
+	}
 
 item-description {
 	overflow: hidden;
@@ -207,6 +210,11 @@ item-image {
 }
 .searching item-image img { /* dirty fix for images not loading when show-more is calculated during search */
 	min-height: 500px;
+}
+magic-item.infinite item-image {
+	max-height: initial;
+	-webkit-mask-image: none;
+	mask-image: none;
 }
 
 item-title {
