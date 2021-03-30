@@ -205,6 +205,9 @@ item-image {
 		padding: 15px;
 	}
 }
+.searching item-image img { /* dirty fix for images not loading when show-more is calculated during search */
+	min-height: 500px;
+}
 
 item-title {
 	flex: 1 1;

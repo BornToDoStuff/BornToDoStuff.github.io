@@ -38,11 +38,11 @@
       {
         subtype_string = item.subtypes.sort().join(", ").toLowerCase();
       }
-      return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')}${subtype_string} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.curse ? ' cursed' : ''}${item.image ? ' image' : ''}">
+      return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.curse ? ' cursed' : ''}${item.image ? ' image' : ''}">
           <item-head>
             <item-title>
               <a href="${item.url}">${item.title}</a>
-              <item-tagline>${item.type}, ${item.rarity.toLowerCase()} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
+              <item-tagline>${item.type}${subtype_string}, ${item.rarity.toLowerCase()} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
             </item-title>
             <item-extras aria-hidden="true">
         			<div class="rarity"><img src="/images/rarities.svg" title="${item.rarity.toLowerCase()}" /></div>
