@@ -6,13 +6,11 @@ permalink: /art
 {% for post in sorted_posts %}
   {%- if post.item_image -%}
   <magic-item id="{{post.item_id}}">
-    <a href="{{ site.baseurl }}{{ post.url }}">
-      <item-name>{{ post.title }}</item-name>
-    </a>
-    <a href="{{ site.baseurl }}{{ post.url }}">
-      <item-image><img src="{{ site.url }}{{ post.item_image }}" /></item-image>
-      <item-description>{{ post.image_artist }}</item-description>
-    </a>
+    <item-title>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </item-title>
+    <item-image><a href="{{ site.baseurl }}{{ post.url }}"><img src="{{ site.url }}{{ post.item_image }}" /></a></item-image>
+    <item-description>{{ post.image_artist }}</item-description>
   </magic-item>
   {%- endif -%}
 {% endfor %}
