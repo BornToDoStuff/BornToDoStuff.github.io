@@ -25,9 +25,10 @@ tags:
   - Sight
   - Ethereal Plane
   - Undead
-  
   - Stunned
   - Frightened
+item_image: "/images/item_art/staff-of-the-undying-gaze_compact.png"
+image_artist: direquest
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-13

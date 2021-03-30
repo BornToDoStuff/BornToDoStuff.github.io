@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /art
+---
+{% assign sorted_posts = site.posts | sort: 'title' %}
+{% for post in sorted_posts %}
+  {%- if post.item_image -%}
+  <magic-item id="{{post.item_id}}">
+    <a href="{{ site.baseurl }}{{ post.url }}">
+      <item-name>{{ post.title }}</item-name>
+    </a>
+    <a href="{{ site.baseurl }}{{ post.url }}">
+      <item-image><img src="{{ site.url }}{{ post.item_image }}" /></item-image>
+      <p>{{ post.image_artist }}</p>
+    </a>
+  </magic-item>
+  {%- endif -%}
+{% endfor %}

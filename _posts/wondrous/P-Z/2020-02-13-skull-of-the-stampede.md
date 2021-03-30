@@ -23,6 +23,7 @@ tags:
   - Movement
   - Resistance
 item_image: "/images/item_art/skull-of-the-stampede_compact.png"
+image_artist: direquest
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-28
