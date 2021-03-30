@@ -3,6 +3,7 @@ title: Circlet of The Tide
 item_id: 226
 category: Wondrous
 item_subtypes: 
+  - Circlet
   - Headband
 item_rarity: Very Rare
 item_attunement: true
@@ -24,14 +25,14 @@ tags:
   - Special Casting
   - Deity
   - Divine
-  commission: true
-  commissioner: Kuma
+commission: true
+commissioner: Kuma
 item_co_creator: 
 item_updated: 
 last_modified_at: 
 ---
 
-This crystal circlet is a deep aqua crested with white and in its center is set a gold symbol of Umberlee.  
+This crystal circlet is a deep aqua crested with white and in its center is set a gold symbol.  
 When you attune to this item 6 spheres of water, each 3 feet across, manifest as if drawing the water from the air itself before shrinking to the size of a fist and orbiting your head.  
 This item has 6 charges, represented by the orbs of water, and regains all expended charges at dawn.
 

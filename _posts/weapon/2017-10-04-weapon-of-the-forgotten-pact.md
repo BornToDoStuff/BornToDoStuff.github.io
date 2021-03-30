@@ -15,8 +15,7 @@ item_role:
 item_damage:
   - Mixed
 tags:
- 
- - Bonus Action
+  - Bonus Action
 item_idea:
 item_co_creator:
 item_updated:
