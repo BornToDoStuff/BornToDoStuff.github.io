@@ -2,7 +2,7 @@ function setItemHeight(ele) {
   var description = $(ele).find("item-description")[0];
   var heightCount = 0;
   var heightsIndex = heights.length - 1;
-  
+
   if ($(window).width() > 768) { //if its mobile just stick to 0 height
     while (heightCount < heightsIndex &&
       description.scrollHeight > sizes[heightCount].scrollHeight + 15 &&
@@ -10,9 +10,9 @@ function setItemHeight(ele) {
     { heightCount++; }
   }
 
-  if ($(ele).hasClass("image")) { //except for if it has an image
+  /* if ($(ele).hasClass("image")) { //except for if it has an image
     heightCount = Math.min(heightCount+2, heightsIndex);
-  }
+  } */
 
   $(ele).addClass(heights[heightCount]);
   if (description.scrollHeight > description.clientHeight)
