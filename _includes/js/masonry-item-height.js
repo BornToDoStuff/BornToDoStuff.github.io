@@ -10,9 +10,9 @@ function setItemHeight(ele) {
     { heightCount++; }
   }
 
-  /* if ($(ele).hasClass("image")) { //except for if it has an image
-    heightCount = Math.min(heightCount+2, heightsIndex);
-  } */
+  if ($(ele).hasClass("image")) { //except for if it has an image
+    heightCount = Math.max(1, heightCount); //it has to be at least "tall"
+  }
 
   $(ele).addClass(heights[heightCount]);
   if (description.scrollHeight > description.clientHeight)
