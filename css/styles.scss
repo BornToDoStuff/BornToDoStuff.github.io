@@ -377,12 +377,14 @@ magic-item.artifact.attunement .rarity img {
 
 			item-description {
 				float: right;
+				overflow: visible
 
 				img {
 					float: left;
 					max-width: calc(100% - 500px);
 					shape-outside: none!important;
 					shape-image-threshold: 0.3;
+					margin-top: -3em;
 				}
 			}
 
