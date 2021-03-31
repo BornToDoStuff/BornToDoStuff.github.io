@@ -53,23 +53,12 @@ magic-item::after {
 }
 item-description {
   margin-bottom: 25px;
-
-  img {
-    margin-bottom: -25px;
-  }
+}
+item-description img {
+  margin-bottom: -25px;
 }
 
 
 #item-menu {
   display: none;
-}
-
-#item-wrapper magic-item.image item-head, #item-wrapper magic-item.image item-description {
-  float: right;
-  width: 65%;
-}
-
-#item-wrapper magic-item.image item-image {
-  float: left;
-  width: 35%;
 }
