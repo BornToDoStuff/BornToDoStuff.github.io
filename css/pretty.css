@@ -53,6 +53,10 @@ magic-item::after {
 }
 item-description {
   margin-bottom: 25px;
+
+  img {
+    margin-bottom: -25px;
+  }
 }
 
 
