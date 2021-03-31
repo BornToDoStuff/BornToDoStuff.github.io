@@ -20,7 +20,7 @@ tags:
   - Nature
   - Myconid
   - Light
-item_image: "/images/item_art/sporelight_compact.png"
+item_image: "/images/item_art/sporelight.png"
 image_artist: direquest
 item_idea: 
 item_co_creator: 
@@ -28,7 +28,7 @@ item_updated: 2021-02-26
 last_modified_at: 2021-02-26
 ---
 
-his rock has a large cluster of bio-luminescent mushrooms and moss growing on it that act like a natural lantern. It has a chain bolted into the rock with a hoop fastened at the top so you can easily carry it. This magical item has three charges and regains all expended charges each day at dawn if it is in darkness.  
+This rock has a large cluster of bio-luminescent mushrooms and moss growing on it that act like a natural lantern. There is a chain with a handle bolted into the rock so you can easily carry it. This magical item has three charges and regains all expended charges each day at dawn if it is in darkness.  
 After 1 minute of being in darkness the mushrooms begin to glow heavily, casting a bright light in a 30-foot radius and a dim light for an additional 30 feet.  
 
 ### Rapport spores

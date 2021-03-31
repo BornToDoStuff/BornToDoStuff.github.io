@@ -22,7 +22,7 @@ tags:
   - Long Recharge
   - Paralyzed
   - Unconscious
-item_image: "/images/item_art/dark-pheonix-gauntlet-v2_compact.png"
+item_image: "/images/item_art/dark-pheonix-gauntlet-v2.png"
 image_artist: direquest
 item_idea:
 item_co_creator:

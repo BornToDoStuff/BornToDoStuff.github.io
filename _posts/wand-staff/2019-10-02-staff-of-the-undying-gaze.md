@@ -27,7 +27,7 @@ tags:
   - Undead
   - Stunned
   - Frightened
-item_image: "/images/item_art/staff-of-the-undying-gaze_compact.png"
+item_image: "/images/item_art/staff-of-the-undying-gaze.png"
 image_artist: direquest
 item_idea: 
 item_co_creator: 

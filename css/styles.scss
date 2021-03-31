@@ -184,6 +184,14 @@ magic-item {
 item-description {
 	overflow: hidden;
 	height: 100%; //hack to fix item height sizing
+	float: right; // only really used on items with art, but doesnt break the rest
+
+	img {
+		max-width: 45%;
+    float: left;
+    max-height: calc(100% - 3em);
+    shape-margin: 1em;
+	}
 }
 
 item-details {
@@ -349,35 +357,35 @@ magic-item.artifact.attunement .rarity img {
 		height: initial!important;
 	}
 
-	item-image {
-		max-height: none;
-		-webkit-mask-image: none;
-		mask-image: none;
-	}
-
 	@include double-up {
-		magic-item {
+		magic-item.double {
 			width: $col-double;
+
+			item-description {
+	    	column-count: 2;
+			}
 		}
 
 		magic-item.image {
+			width: 900px;
 			display: block;
 
-			item-head, item-description {
+			item-head {
 				float: right;
 				width: $item-width;
 			}
 
-			item-image {
-				float: left;
-				width: 49%;
-		    width: calc(100% - #{$item-width + 15px});
+			item-description {
+				float: right;
 
 				img {
-					padding: 0px;
-					padding-right: 15px;
+					float: left;
+					max-width: calc(100% - 500px);
+					shape-outside: none!important;
+					shape-image-threshold: 0.3;
 				}
 			}
+
 		}
 	}
 
@@ -437,7 +445,7 @@ magic-item.artifact.attunement .rarity img {
 }
 
 .curse, .notes, .sentience {
-	margin-top: 15px;
+	margin-top: 1.25em;
 	position: relative;
 	border: 2px solid #e0e0e0;
 	border-top: none;

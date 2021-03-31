@@ -22,7 +22,7 @@ tags:
   - Nature
   - Movement
   - Resistance
-item_image: "/images/item_art/skull-of-the-stampede_compact.png"
+item_image: "/images/item_art/skull-of-the-stampede.png"
 image_artist: direquest
 item_idea: 
 item_co_creator: 

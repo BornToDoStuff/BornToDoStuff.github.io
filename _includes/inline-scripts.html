@@ -154,6 +154,10 @@
 
 		checkContextButton(); /* check once on load */
 
+		if ($("#item-wrapper magic-item").height() > 750) {
+			$("#item-wrapper magic-item").addClass("double");
+		}
+
 		if ($("#item-wrapper").data("random")) {
 			var r = getRandom();
 			var items_visited = sessionStorage.getItem("items_visited");

@@ -48,8 +48,8 @@
         			<div class="rarity"><img src="/images/rarities.svg" title="${item.rarity.toLowerCase()}" /></div>
         		</item-extras>
           </item-head>
-          ${item.image ? `<item-image><img src="${item.image}" /></item-image>` : ''}
           <item-description>
+            ${item.image ? `<img src="${item.image}" style="shape-outside: url('${item.image}')" />` : ''}
         		${item.content}
         	</item-description>
           <item-details>
