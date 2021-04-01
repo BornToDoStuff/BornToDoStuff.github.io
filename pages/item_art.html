@@ -1,0 +1,13 @@
+---
+layout: home
+permalink: /items/art
+---
+{% for post in site.posts %}
+  {%- if post.item_image -%}
+    {% include magic-item.html %}
+  {%- endif -%}
+{% endfor %}
+
+<script>
+  document.querySelector("#main").dataset.scrollable = false;
+</script>
