@@ -23,6 +23,7 @@ tags:
   - Exhaustion
   - Climbing
   - Spider
+  - Cursed
 item_idea:
 item_co_creator:
 item_updated: 2019-03-12

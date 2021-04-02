@@ -3,6 +3,8 @@ title: Little Red Planar Hood
 item_id: 178
 category: Wondrous
 item_subtypes:
+  - Clothing
+  - Cloak
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:
@@ -14,6 +16,7 @@ item_role:
 item_damage:
 tags:
   - Planar
+  - Cursed
 item_idea:
 item_co_creator:
 item_updated:

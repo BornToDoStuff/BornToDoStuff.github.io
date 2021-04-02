@@ -18,8 +18,8 @@ item_damage:
   - Fire
 tags:
   - Spellcasting
-  
   - Infernal
+  - Cursed
 item_idea:
 item_co_creator:
 item_updated:

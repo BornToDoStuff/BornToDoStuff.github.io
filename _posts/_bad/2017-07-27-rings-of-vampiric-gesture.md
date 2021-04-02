@@ -13,6 +13,8 @@ item_role:
 item_damage:
   - Necrotic
 tags:
+  - Cursed
+  - Special Attunement
 item_idea:
 item_co_creator:
 item_updated:
@@ -25,6 +27,6 @@ As a bonus action either creature can activate their ring by pointing towards th
 
 While this bond is active a twisted ethereal cord stretches between the two creatures. This bond cannot be seen by anyone except the attuned creatures, except on the Ethereal Plane, and can not be interacted with. The first time on a turn an enemy creature moves through this cord they must make a constitution saving throw equal to 10 + both attuned creatures constitution modifiers. On a failure they take 2d12 Necrotic damage and each attuned creature regains hit points equal to half the damage dealt.
 
-<section id="curse">
+<div class="curse">
 **Curse.** Every time the bond is broken each attuned creature is Poisoned until the end of their next turn and takes 1d6 Necrotic damage.
-</section>
+</div>
