@@ -1,6 +1,9 @@
 <script src="/data/posts.min.js"></script>
 
 <script>
+	//function setItemHeight(ele)
+	{% include /js/masonry-item-height.js %}
+
 	function inlineWhenReady() {
 		var mobileblock = "mobile-menu-block";
 		//for arguments given in the URL
@@ -178,7 +181,7 @@
 				initItemMenu();
 				checkRelated();
 				$("#related magic-item").each(function(){setItemHeight($(this), false)});
-				
+
 				if ($("#item-wrapper > magic-item").height() > 750) {
 					$("#item-wrapper > magic-item").addClass("double");
 				}
