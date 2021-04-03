@@ -43,6 +43,7 @@
       }
       else {
         $("#main magic-item").each(function(){setItemHeight($(this))});
+        $("#related magic-item").each(function(){setItemHeight($(this), false)});
 
         var $grid = $('section#main').masonry({
           columnWidth: 'magic-item',
