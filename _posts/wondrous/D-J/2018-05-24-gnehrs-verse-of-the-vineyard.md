@@ -20,6 +20,8 @@ tags:
   - Druidic
   - Healing
   - Music
+  - Unique Character
+  - G'nehr
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-24

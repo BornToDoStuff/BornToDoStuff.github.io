@@ -11,8 +11,14 @@ item_classes:
 item_school: Evocation
 item_role:
   - Utility
+  - Healing
 item_damage:
 tags:
+  - Unique Character
+  - Reynier
+  - Trade-off
+  - Stunned
+  - Blinded
 item_idea:
 item_co_creator:
 item_updated:

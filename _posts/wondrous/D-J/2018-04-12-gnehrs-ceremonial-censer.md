@@ -20,6 +20,8 @@ tags:
   - Long Rest
   - Short Rest
   - Exhaustion
+  - Unique Character
+  - G'nehr
 item_idea: 
 item_co_creator: 
 item_updated: 

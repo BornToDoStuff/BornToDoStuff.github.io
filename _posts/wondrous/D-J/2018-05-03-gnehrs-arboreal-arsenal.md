@@ -3,6 +3,8 @@ title: G'nehr's Arboreal Arsenal
 item_id: 206
 category: Wondrous
 item_subtypes: 
+  - Gauntlet
+  - Glove
 item_rarity: Rare
 item_attunement: true
 item_requirement: 
@@ -16,8 +18,10 @@ item_role:
 item_damage: 
   - Mixed
 tags:
-  
-  
+  - Unique Character
+  - G'nehr
+  - Weapon
+  - Critical
 item_idea: 
 item_co_creator: 
 item_updated: 2018-10-26

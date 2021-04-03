@@ -17,6 +17,7 @@ item_role:
 item_damage:
 tags:
   - Force
+  - Unique Character
   - Augmier
 item_idea:
 item_co_creator:

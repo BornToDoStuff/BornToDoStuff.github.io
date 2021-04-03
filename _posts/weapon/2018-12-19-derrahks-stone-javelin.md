@@ -17,13 +17,11 @@ item_role:
 item_damage: 
   - Piercing
 tags:
-  
-  
   - Summoning
   - Stone
   - Restrained
-  
-  
+  - Unique Character
+  - Derrahk
 item_idea: Novrodian
 item_co_creator: 
 item_updated: 

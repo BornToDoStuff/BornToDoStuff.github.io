@@ -16,6 +16,9 @@ item_damage:
   - Lightning
 tags:
   - Stunned
+  - Lightning
+  - Unique Character
+  - Elytriss
 item_idea:
 item_co_creator:
 item_updated: 2019-09-06

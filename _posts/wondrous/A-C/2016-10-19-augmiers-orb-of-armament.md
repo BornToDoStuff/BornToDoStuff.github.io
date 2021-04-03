@@ -18,6 +18,7 @@ item_role:
 item_damage:
 tags:
   - Storage
+  - Unique Character
   - Augmier
 item_idea:
 item_co_creator:

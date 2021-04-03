@@ -17,9 +17,10 @@ item_role:
 item_damage: 
   - Lightning
 tags:
-  
   - Water
   - Weather
+  - Unique Character
+  - Reynier
 item_idea: 
 item_co_creator: 
 item_updated: 

@@ -21,8 +21,9 @@ item_damage:
 tags:
   - Spellcasting
   - Stone
-  
   - Long Rest
+  - Unique Character
+  - Derrahk
 item_idea:
 item_co_creator:
 item_updated:

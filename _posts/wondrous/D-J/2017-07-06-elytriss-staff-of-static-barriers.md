@@ -18,10 +18,9 @@ item_damage:
   - Lightning
   - Force
 tags:
-  
-  
-  
-  
+  - Unique Character
+  - Elytriss
+  - Lightning
 item_idea:
 item_co_creator:
 item_updated:

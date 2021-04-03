@@ -17,6 +17,7 @@ item_role:
 item_damage:
 tags:
   - Movement
+  - Unique Character
   - Pamsprei
 item_idea:
 item_co_creator:

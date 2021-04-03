@@ -21,6 +21,7 @@ tags:
   
   - Prone
   - Artificer
+  - Unique Character
   - Craek
 item_idea:
 item_co_creator:

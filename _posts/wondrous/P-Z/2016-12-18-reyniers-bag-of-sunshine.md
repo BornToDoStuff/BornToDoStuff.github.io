@@ -16,6 +16,7 @@ item_role:
 item_damage:
 tags:
   - Light
+  - Unique Character
   - Reynier
 item_idea:
 item_co_creator:

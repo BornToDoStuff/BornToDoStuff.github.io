@@ -19,6 +19,8 @@ item_damage:
 tags:
   - Spellcasting
   - DM Choice
+  - Unique Character
+  - G'nehr
 item_idea: 
 item_co_creator: 
 item_updated: 

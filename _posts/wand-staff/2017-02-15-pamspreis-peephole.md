@@ -14,6 +14,7 @@ item_role:
   - Utility
 item_damage:
 tags:
+  - Unique Character
   - Pamsprei
 item_idea:
 item_co_creator:

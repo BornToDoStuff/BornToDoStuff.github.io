@@ -20,6 +20,7 @@ tags:
   - Sleight of Hand
   - Grapple
   - Artificer
+  - Unique Character
   - Craek
 item_idea:
 item_co_creator:

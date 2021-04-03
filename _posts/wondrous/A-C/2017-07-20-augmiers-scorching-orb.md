@@ -14,6 +14,10 @@ item_role:
 item_damage:
   - Fire
 tags:
+  - Unique Character
+  - Augmier
+  - Bonus Action
+  - Spellcasting
 item_idea:
 item_co_creator:
 item_updated: 2019-09-06

@@ -17,6 +17,7 @@ item_role:
 item_damage:
   - Mixed
 tags:
+  - Unique Character
   - Augmier
   - Gnomish
   - Orb

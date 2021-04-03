@@ -20,6 +20,8 @@ tags:
   - Druidic
   - Bonus Action
   - Non-metal
+  - Unique Character
+  - G'nehr
 item_idea: 
 item_co_creator: 
 item_updates: [2019-02-05, 2021-03-08]
