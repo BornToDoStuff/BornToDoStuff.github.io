@@ -32,6 +32,7 @@ last_modified_at:
 
 This marbled stone pick is reinforced with black iron bands. It has obviously been imbued with magic to have lasted this long without shattering. This magical item has 10 charges and regains 1d8+2 expended charges each day at dawn.
 
+
 ### Molehill
 If you are standing on soil or stone, as an action you can strike the ground and expend a number of charges while concentrating as if concentrating on a spell, causing the earth to ripple around you. When you do so you target a number of 10-foot square areas of soil or stone within 120 feet, equal to the number of charges expended, which rise up to create a bluff. You can choose for each of these target areas’ sides to slope gradually, or be a sheer cliff up to 10 feet tall, so long as at least one side is an incline. If you maintain concentration on this effect for the next hour the bluffs become permanent and can't be dispelled. Otherwise, the bluffs sink back into the earth.
 
