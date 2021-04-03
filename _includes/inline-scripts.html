@@ -163,7 +163,8 @@
 			//sort them according to how relevant they are
 			var most_related = $("#related magic-item").sort(function(a, b){
 				return +a.dataset.related - +b.dataset.related;
-			}).slice(0,4); //get the top 4
+			});
+			most_related = most_related.slice(0,4); //get the top 4
 			//and make them the only 4
 			$("#related magic-item").detach();
 			$("#related").append(most_related);
