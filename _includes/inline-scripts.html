@@ -158,6 +158,22 @@
 			$("#item-wrapper magic-item").addClass("double");
 		}
 
+		// if there are related magic items, sort them according to how relevant they are, if not then hide the element
+		if ($("#related magic-item").length > 0){
+			$("#related magic-item").sort(function(a, b){
+				return +a.dataset.related - +b.dataset.related;
+			})
+			.slice(0,3).appendTo($("#related"));
+		}
+		else {
+			$("#related").hide();
+		}
+
+
+		if ($("#item-wrapper magic-item").height() > 750) {
+			$("#item-wrapper magic-item").addClass("double");
+		}
+
 		if ($("#item-wrapper").data("random")) {
 			var r = getRandom();
 			var items_visited = sessionStorage.getItem("items_visited");
