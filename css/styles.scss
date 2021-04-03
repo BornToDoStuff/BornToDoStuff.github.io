@@ -357,6 +357,7 @@ magic-item.artifact.attunement .rarity img {
 
 	& > magic-item {
 		height: initial!important;
+		min-height: 335px;
 		order: 1;
 	}
 

@@ -22,6 +22,8 @@ tags:
   - Long Recharge
   - Paralyzed
   - Unconscious
+  - Fire
+  - Resistance
 item_image: "/images/item_art/dark-pheonix-gauntlet.png"
 image_artist: direquest
 item_idea:
