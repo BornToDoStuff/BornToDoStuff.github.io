@@ -19,8 +19,8 @@ item_damage:
 tags:
   - Dimensions
   - Deck
-  - Purple
   - Many
+  - Many Effects
 item_idea:
 item_co_creator:
 item_updated: 2018-01-24

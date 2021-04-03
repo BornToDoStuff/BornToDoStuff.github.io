@@ -24,6 +24,7 @@ tags:
   - Short Rest
   - Random
   - Many
+  - Many Effects
 item_idea: 
 item_co_creator: 
 item_updated: 

@@ -3,6 +3,7 @@ title: Blue Arcing Blade
 item_id: 110
 category: Weapon
 item_subtypes:
+  - Any Sword
 item_rarity: Rare
 item_attunement: true
 item_requirement:

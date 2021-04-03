@@ -26,6 +26,7 @@ tags:
   - Necrotic
   - Piercing
   - Many
+  - Many Effects
 item_idea:
 item_co_creator:
 item_updated: 2019-09-03
