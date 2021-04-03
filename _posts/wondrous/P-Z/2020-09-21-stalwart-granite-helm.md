@@ -34,7 +34,6 @@ last_modified_at:
 This regal helmet is made of jet black granite, and trimmed with gold. Despite it’s dense materials it is not overly heavy. If you have horns the helmet gladly morphs to fit.  
 While attuned to this helmet you gain the following features.
 
-
 ### Mountain’s Soul
 You gain proficiency in Constitution saving throws and Athletics checks. You also gain fluent knowledge of the Giant and Terran languages.
 

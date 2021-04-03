@@ -23,6 +23,4 @@ item_co_creator:
 item_updated: 2021-03-08
 last_modified_at: 2021-03-08
 ---
-
-  
 This reinforced leather pack has a set of six glass spheres along its sides. These spherical vials are nearly indestructible from the inside, hold one gallon, and can seal once full. They seem to be connected through the pack to a hose via a set of magically enhanced tubes and nozzles but can be detached if desired. As an action you can activate the apparatus, and attempt to capture a Tiny or smaller creature, a liquid, or something such as leaves or a cloud of flies, that you can touch. If the target is a creature they must succeed a DC 16 Dexterity or Strength saving throw (target’s choice) or be captured within one of the six vials. To use the apparatus in this way you must have at least one empty vial. If you wish to empty a vial you can do so as a bonus action on your turn, expelling the contents up to 15 feet away.
