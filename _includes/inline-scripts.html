@@ -167,7 +167,7 @@
 			var most_related = related.slice(-2); //get the last 2 (most relevant)
 			related = related.slice(0,-2); //remove those two from the options
 			//get 2 random ones from other relevant items
-			related = related.sort(function() { return 0.5 - math.random(); });
+			related = related.sort(function() { return 0.5 - Math.random(); });
 			most_related.push(related[0]);
 			most_related.push(related[1]);
 
