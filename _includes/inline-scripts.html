@@ -177,6 +177,8 @@
 			$("#main-wrapper").load(posts[r].url + " #main-wrapper section", function() {
 				initItemMenu();
 				checkRelated();
+				$("#related magic-item").each(function(){setItemHeight($(this), false)});
+				
 				if ($("#item-wrapper > magic-item").height() > 750) {
 					$("#item-wrapper > magic-item").addClass("double");
 				}
