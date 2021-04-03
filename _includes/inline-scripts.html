@@ -165,11 +165,13 @@
 				return +a.dataset.related - +b.dataset.related;
 			})
 			var most_related = related.slice(-2); //get the last 2 (most relevant)
-			related = related.slice(-2); //remove those two from the options
+			related = related.slice(0,-2); //remove those two from the options
 			//get 2 random ones from other relevant items
-			most_related.push(related[Math.floor(Math.random() * related.length)]);
-			most_related.push(related[Math.floor(Math.random() * related.length)]);
-			
+			related = related.sort(function() { return 0.5 - math.random(); });
+			most_related.push(related[0]);
+			most_related.push(related[1]);
+
+			//replace the current items with the "new" ones
 			$("#related magic-item").detach();
 			$("#related").append(most_related);
 		}
