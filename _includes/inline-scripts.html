@@ -154,36 +154,6 @@
 
 		checkContextButton(); /* check once on load */
 
-		if ($("#item-wrapper magic-item").height() > 750) {
-			$("#item-wrapper magic-item").addClass("double");
-		}
-
-		// if there are related magic items
-		if ($("#related magic-item").length > 0){
-			//sort them according to how relevant they are
-			var related = $("#related magic-item").sort(function(a, b){
-				return +a.dataset.related - +b.dataset.related;
-			})
-			var most_related = related.slice(-2); //get the last 2 (most relevant)
-			related = related.slice(0,-2); //remove those two from the options
-			//get 2 random ones from other relevant items
-			related = related.sort(function() { return 0.5 - Math.random(); });
-			most_related.push(related[0]);
-			most_related.push(related[1]);
-
-			//replace the current items with the "new" ones
-			$("#related magic-item").detach();
-			$("#related").append(most_related);
-		}
-		else { // if not then hide the element
-			$("#related").hide();
-		}
-
-
-		if ($("#item-wrapper magic-item").height() > 750) {
-			$("#item-wrapper magic-item").addClass("double");
-		}
-
 		if ($("#item-wrapper").data("random")) {
 			var r = getRandom();
 			var items_visited = sessionStorage.getItem("items_visited");
@@ -207,6 +177,31 @@
 			$("#main-wrapper").load(posts[r].url + " #main-wrapper section", function() {
 				initItemMenu();
 			});
+		}
+
+		if ($("#item-wrapper > magic-item").height() > 750) {
+			$("#item-wrapper > magic-item").addClass("double");
+		}
+
+		// if there are related magic items
+		if ($("#related magic-item").length > 0){
+			//sort them according to how relevant they are
+			var related = $("#related magic-item").sort(function(a, b){
+				return +a.dataset.related - +b.dataset.related;
+			})
+			var most_related = related.slice(-2); //get the last 2 (most relevant)
+			related = related.slice(0,-2); //remove those two from the options
+			//get 2 random ones from other relevant items
+			related = related.sort(function() { return 0.5 - Math.random(); });
+			most_related.push(related[0]);
+			most_related.push(related[1]);
+
+			//replace the current items with the "new" ones
+			$("#related magic-item").detach();
+			$("#related").append(most_related);
+		}
+		else { // if not then hide the element
+			$("#related").hide();
 		}
 
 		$("#search-show").on("click", function() {

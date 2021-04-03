@@ -43,6 +43,7 @@ h1, h2, h3, h4 {
 	font-family: $roboto;
 	text-align: left; // prevents poor justifying
 	line-height: 1.6em;
+	break-after: avoid;
 }
 
 h1 {
@@ -160,7 +161,7 @@ magic-item {
   max-width: calc(100vw - 30px);
 	height: 335px;
 	box-sizing: border-box;
-	text-align: justify;
+	text-align: left;
 	position: relative;
 	border-radius: 4px;
 	border: 2px solid $bluakDark;
@@ -185,6 +186,7 @@ item-description {
 	overflow: hidden;
 	height: 100%; //hack to fix item height sizing
 	float: right; // only really used on items with art, but doesnt break the rest
+	text-align: left;
 
 	img {
 		max-width: 45%;
@@ -360,14 +362,15 @@ magic-item.artifact.attunement .rarity img {
 
 	@include double-up {
 		magic-item.double {
-			width: $col-double;
+			width: 1030px;
 
 			item-description {
 	    	column-count: 2;
+		    orphans: 2;
 			}
 		}
 
-		magic-item.image {
+		& > magic-item.image {
 			width: 900px;
 			display: block;
 
@@ -482,6 +485,8 @@ magic-item.artifact.attunement .rarity img {
 	border-top: none;
 	border-radius: 4px;
 	padding: 15px;
+	display: inline-block;
+	break-inside: avoid;
 
 	&::before {
 		content: "Curse";
