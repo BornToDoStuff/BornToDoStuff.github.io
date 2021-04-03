@@ -18,7 +18,7 @@
   </item-head>
   <item-description>
 {%- if post.item_image %}<img src="{{ site.url }}{{ post.item_image }}" style="shape-outside: url('{{ site.url }}{{ post.item_image }}')" />{% endif -%}
-{%- if page_bool -%}{{ content | markdownify }}{%- else -%}{{ post.content }}{%- endif -%}
+{%- if page_bool -%}{{ content | markdownify }}{%- else -%}{{ post.content | markdownify }}{%- endif -%}
   </item-description>
   <item-details>
     <div class="type">{{ post.category | downcase }}</div>
