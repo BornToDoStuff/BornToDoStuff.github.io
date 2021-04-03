@@ -197,7 +197,7 @@
 			if ($("#related magic-item").length > 0){
 				//sort them according to how relevant they are
 				var related = $("#related magic-item").sort(function(a, b){
-					return +a.dataset.related - +b.dataset.related;
+					return +(a.dataset.related + "." + a.id) - +(b.dataset.related + "." + b.id)
 				})
 				var most_related = related.slice(-2); //get the last 2 (most relevant)
 				related = related.slice(0,-2); //remove those two from the options

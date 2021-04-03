@@ -35,8 +35,9 @@ layout: default
               {% endif %}
             {% endif %}
           {%- endfor -%}
+          
           {% if sameTagCount >= minCommonTags %}
-            {%- include magic-item.html related=sameTagCount -%}
+{%- include magic-item.html related=sameTagCount -%}
 
             {%- assign maxRelatedCounter = maxRelatedCounter | plus: 1 -%}
             {% if maxRelatedCounter >= maxRelated %}
