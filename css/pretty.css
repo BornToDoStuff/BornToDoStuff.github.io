@@ -101,6 +101,6 @@ item-description img {
   height: fit-content;
   float: none;
 }
-#item-wrapper.image-only > magic-item item-description img {
+#item-wrapper.text-only > magic-item item-description img {
   display: none;
 }
