@@ -12,6 +12,7 @@ body {
   background: #495b65 url("/images/hatching_light.png");
   margin-bottom: 50px;
   max-width: 950px;
+  width: fit-content;
 }
 
 magic-item {
@@ -60,5 +61,26 @@ item-description img {
 
 
 #item-menu {
+  display: none;
+}
+
+#related {
+  display: none;
+}
+
+#item-wrapper.image-only > magic-item {
+  width: 550px;
+}
+#item-wrapper.image-only > magic-item item-head {
+  font-size: 1.1em;
+}
+#item-wrapper.image-only > magic-item item-description {
+  max-width: 100%;
+  max-height: initial;
+  float: none;
+  display: flex;
+  justify-content: center;
+}
+#item-wrapper.image-only > magic-item item-description p {
   display: none;
 }
