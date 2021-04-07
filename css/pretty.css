@@ -71,6 +71,7 @@ item-description img {
 #item-wrapper.image-only > magic-item {
   width: 550px;
   min-height: 550px;
+  display: flex;
 }
 #item-wrapper.image-only > magic-item item-description {
   width: 100%;
@@ -94,6 +95,7 @@ item-description img {
 #item-wrapper.text-only > magic-item {
   width: 550px;
   min-height: 550px;
+  display: flex;
 }
 #item-wrapper.text-only > magic-item item-description {
   width: 100%;
