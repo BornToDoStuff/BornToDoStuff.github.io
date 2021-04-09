@@ -36,7 +36,7 @@
       var subtype_string = "";
       if ((item.type == "Weapon" || item.type == "Armor") && item.subtypes.length)
       {
-        subtype_string = item.subtypes.sort().join(", ").toLowerCase();
+        subtype_string = "(" + item.subtypes.sort().join(", ").toLowerCase() + ")";
       }
       return `<magic-item id="${item.id}" class="magic-item ${item.rarity.toLowerCase().replace(' ', '-')} ${item.type.toLowerCase().replace(' ', '-')}${item.attunement ? ' attunement' : ''}${item.curse ? ' cursed' : ''}${item.image ? ' image' : ''}">
           <item-head>
