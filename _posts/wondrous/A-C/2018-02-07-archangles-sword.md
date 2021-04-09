@@ -17,6 +17,7 @@ item_damage:
   - Piecing
   - Radiant
 tags:
+  - Angelic
   - Divine
   - Dodge
   - Undead
@@ -24,8 +25,8 @@ tags:
   - Cursed
 item_idea:
 item_co_creator:
-item_updated:
-last_modified_at:
+item_updated: 2021-04-09
+last_modified_at: 2021-04-09
 ---
 
 This silvered sword has a broad blade that glints yellow in the sun. It’s golden hand-and-a-half hilt has an exorbitantly large diamond as the pommel.

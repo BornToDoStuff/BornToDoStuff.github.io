@@ -17,14 +17,15 @@ item_role:
 item_damage:
   - Radiant
 tags:
+  - Angelic
+  - Divine
   - Blinded
   - Light
-  - Divine
   - Cursed
 item_idea:
 item_co_creator:
-item_updated:
-last_modified_at:
+item_updated: 2021-04-09
+last_modified_at: 2021-04-09
 ---
 
 This golden pendant is a smooth ellipse shined to a mirror finish. On its face is a pair of feathered wings etched into its surface.

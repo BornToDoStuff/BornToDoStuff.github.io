@@ -15,14 +15,15 @@ item_damage:
   - Radiant
 tags:
   - Angelic
+  - Divine
   - Cursed
   - Religion
   - Resistant
   - Intelligence
 item_idea:
 item_co_creator:
-item_updated:
-last_modified_at:
+item_updated: 2021-04-09
+last_modified_at: 2021-04-09
 ---
 
 This large silver ring is nearly 3 feet in diameter, several inches tall and delicately thin. Along its length is a groove, and at the front it is notched through to the groove where an extravagantly large diamond is set.
