@@ -20,6 +20,7 @@ item_damage:
 tags:
   - Necrotic
   - Spellcasting
+  - Cursed
 item_idea:
 item_co_creator:
 item_updated:
