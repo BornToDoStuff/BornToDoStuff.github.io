@@ -186,7 +186,7 @@ item-description {
 	overflow: hidden;
 	height: 100%; //hack to fix item height sizing
 	float: right; // only really used on items with art, but doesnt break the rest
-	text-align: left;
+	text-align: justify;
 
 	img {
 		max-width: 45%;
@@ -197,11 +197,12 @@ item-description {
 	}
 }
 item-details {
-  margin-bottom: -10px;
-  display: flex;
+	display: flex;
   justify-content: space-between;
   align-items: baseline;
-	flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  margin-top: auto;
+	margin-bottom: -5px;
 }
 item-details > div {
 	display: none;
@@ -220,7 +221,6 @@ item-details > div {
 		opacity: 0.15;
 		font-weight: bold;
     font-size: 2em;
-		margin-top: -0.1em;
 	}
 	// .item_date {
 	// 	opacity: 0.25;
