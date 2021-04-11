@@ -3,7 +3,6 @@ title: Death's Scales
 item_id: 81
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Legendary
 item_attunement: true
 item_requirement:

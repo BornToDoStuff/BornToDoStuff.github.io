@@ -4,10 +4,10 @@ item_id: 19
 category: Wondrous
 item_subtypes:
   - Storage
-item_rarity: Mediocre
+item_rarity: Common
 item_attunement: false
 item_requirement:
-item_curse: false
+item_curse: true
 item_classes:
   - Wizard
   - Sorcerer

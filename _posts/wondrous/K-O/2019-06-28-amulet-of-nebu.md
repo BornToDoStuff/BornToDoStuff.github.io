@@ -3,7 +3,6 @@ title: Amulet of Nebu
 item_id: 246
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Very Rare
 item_attunement: true
 item_requirement: by a cleric or paladin

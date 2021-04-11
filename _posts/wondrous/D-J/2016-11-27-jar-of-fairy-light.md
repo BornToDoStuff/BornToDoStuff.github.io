@@ -3,7 +3,6 @@ title: Jar of Fairy Light
 item_id: 109
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Common
 item_attunement: false
 item_requirement:

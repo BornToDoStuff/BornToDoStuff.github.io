@@ -3,7 +3,6 @@ title: Craek’s Whirling Battleblade
 item_id: 196
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Rare
 item_attunement: false
 item_requirement:

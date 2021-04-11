@@ -3,7 +3,6 @@ title: Mummified Hand of Delilah
 item_id: 113
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:

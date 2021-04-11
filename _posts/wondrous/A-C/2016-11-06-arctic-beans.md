@@ -3,7 +3,6 @@ title: Arctic Beans
 item_id: 77
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Rare
 item_attunement: false
 item_requirement:

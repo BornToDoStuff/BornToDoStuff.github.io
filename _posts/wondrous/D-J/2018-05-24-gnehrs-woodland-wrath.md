@@ -2,8 +2,7 @@
 title: G'nehr's Woodland Wrath
 item_id: 207
 category: Wondrous
-item_subtypes: 
-  - Item
+item_subtypes:
 item_rarity: Rare
 item_attunement: false
 item_requirement: 

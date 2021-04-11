@@ -3,7 +3,6 @@ title: Whistle of the Wind
 item_id: 67
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:

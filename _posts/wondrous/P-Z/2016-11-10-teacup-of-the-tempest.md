@@ -3,7 +3,6 @@ title: Teacup of the Tempest
 item_id: 88
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Very Rare
 item_attunement: true
 item_requirement: by a Barbarian

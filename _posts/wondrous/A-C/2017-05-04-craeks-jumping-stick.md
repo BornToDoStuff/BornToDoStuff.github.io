@@ -3,7 +3,6 @@ title: Craek's Jumping Stick
 item_id: 165
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:

@@ -28,7 +28,7 @@ tags:
   - Stunned
   - Frightened
 item_image: "/images/item_art/staff-of-the-undying-gaze.png"
-image_artist: direquest
+image_artist: Direquest
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-13

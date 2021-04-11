@@ -3,7 +3,6 @@ title: Augmier's Orb of Armament
 item_id: 53
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:

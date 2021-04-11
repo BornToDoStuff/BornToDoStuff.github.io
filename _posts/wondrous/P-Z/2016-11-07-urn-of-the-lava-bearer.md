@@ -3,7 +3,6 @@ title: Urn of the Lava Bearer
 item_id: 79
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Rare
 item_attunement: true
 item_requirement:

@@ -2,8 +2,7 @@
 title: Grove Guardian
 item_id: 279
 category: Wondrous
-item_subtypes: 
-  - Item
+item_subtypes:
 item_rarity: Rare
 item_attunement: true
 item_requirement: 

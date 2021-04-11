@@ -3,7 +3,6 @@ title: Comb of Vanity
 item_id: 61
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:

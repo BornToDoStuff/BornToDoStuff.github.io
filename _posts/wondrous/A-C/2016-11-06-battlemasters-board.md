@@ -3,7 +3,6 @@ title: Battlemaster's Board
 item_id: 76
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Legendary
 item_attunement: true
 item_requirement:

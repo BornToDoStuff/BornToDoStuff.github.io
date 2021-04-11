@@ -3,7 +3,6 @@ title: Watery Shield
 item_id: 68
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Rare
 item_attunement: false
 item_requirement:

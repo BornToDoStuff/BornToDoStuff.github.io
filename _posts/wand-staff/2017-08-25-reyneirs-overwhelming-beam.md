@@ -16,7 +16,7 @@ item_damage:
 tags:
   - Unique Character
   - Reynier
-  - Trade-off
+  - Tradeoff
   - Stunned
   - Blinded
 item_idea:

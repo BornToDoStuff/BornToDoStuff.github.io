@@ -3,7 +3,6 @@ title: Compelling Necklace of the Beast
 item_id: 142
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Very Rare
 item_attunement: false
 item_requirement:

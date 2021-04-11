@@ -3,7 +3,6 @@ title: Shoon’s Golden Cube
 item_id: 70
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Artifact
 item_attunement: true
 item_requirement:

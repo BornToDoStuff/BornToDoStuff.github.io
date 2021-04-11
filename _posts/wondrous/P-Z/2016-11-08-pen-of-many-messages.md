@@ -3,7 +3,6 @@ title: Pen of Many Messages
 item_id: 83
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Rare
 item_attunement: true
 item_requirement:

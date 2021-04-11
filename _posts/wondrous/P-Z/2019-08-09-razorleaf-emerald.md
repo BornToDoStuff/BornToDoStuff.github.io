@@ -2,8 +2,7 @@
 title: Razorleaf Emerald
 item_id: 274
 category: Wondrous
-item_subtypes: 
-  - Item
+item_subtypes:
 item_rarity: Rare
 item_attunement: true
 item_requirement: 

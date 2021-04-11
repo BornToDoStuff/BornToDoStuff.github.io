@@ -3,7 +3,6 @@ title: Dryad's Grapes
 item_id: 28
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Common
 item_attunement: false
 item_requirement:
@@ -37,4 +36,3 @@ All "grapes" that have been plucked off the vine wither and grow mushy by the en
 These little wooden spheres are easily plucked off and the bunch can hold up to 50 of them before it stops growing more. As a bonus action a creature can grab a handful of the wooden orbs and scatter them on an adjacent space. Each time you do this it costs 20 grapes.
 Any creature moving from or through this space must make a DC 10 Dexterity check or fall prone. A creature does not have to make this check if they move at half speed. 
 If you do this twice on the same square any creature moving from or through this square must make the Dexterity check at disadvantage.
-

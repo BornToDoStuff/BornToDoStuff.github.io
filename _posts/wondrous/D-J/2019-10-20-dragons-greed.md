@@ -2,8 +2,7 @@
 title: Dragon's Greed
 item_id: 267
 category: Wondrous
-item_subtypes: 
-  - Item
+item_subtypes:
 item_rarity: Uncommon
 item_attunement: false
 item_requirement: 

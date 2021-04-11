@@ -13,7 +13,7 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Trade-off
+  - Tradeoff
   - Aura
   - Frightened
   - Charmed

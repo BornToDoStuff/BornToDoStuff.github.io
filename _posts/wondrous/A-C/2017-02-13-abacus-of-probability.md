@@ -3,7 +3,6 @@ title: Abacus of Probability
 item_id: 154
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:

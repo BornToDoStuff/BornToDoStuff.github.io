@@ -3,11 +3,10 @@ title: Watch of Timelessness
 item_id: 9
 category: Wondrous
 item_subtypes:
-  - Item
-item_rarity: Mediocre
+item_rarity: Common
 item_attunement: false
 item_requirement:
-item_curse: false
+item_curse: true
 item_classes:
   - All
 item_school: Enchantment
@@ -17,9 +16,15 @@ item_damage:
 tags:
   - Movement
   - Bonus Action
+  - Mediocre
 item_idea:
 item_co_creator:
-item_updated:
+item_updated: 2021-04-10
+last_modified_at: 2021-04-10
 ---
 
-This simple pocket watch is mesmerizing to a fault. Any creature that checks the time is momentarily hypnotized. They feel slightly disoriented and are unable to read a map or discern cardinal directions for the next minute making it very easy for them to become lost. It’s somehow cheering though, and if a creature takes a bonus action to pull it out of their pocket to check on it they gain an extra spring in their step and +10 movement speed.
+This monotone pocket watch is mesmerizing to a fault. It’s somehow cheering though, and as a bonus action you can pull it out to check the time, gaining an extra spring in your step and a +10 bonus to your movement speed for the next minute.
+
+<div class="curse">
+Any creature who checks the time on this watch is momentarily disoriented. They are unable to read a map or discern cardinal directions for the next minute, making it very easy for them to become lost. 
+</div>

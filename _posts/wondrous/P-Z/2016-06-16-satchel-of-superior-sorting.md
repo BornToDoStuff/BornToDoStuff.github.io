@@ -4,7 +4,8 @@ item_id: 18
 category: Wondrous
 item_subtypes:
   - Storage
-item_rarity: Mediocre
+  - Container
+item_rarity: Common
 item_attunement: false
 item_requirement:
 item_curse: false
@@ -18,6 +19,7 @@ item_role:
 item_damage:
 tags:
   - Storage
+  - Mediocre
 item_idea:
 item_co_creator:
 item_updated:

@@ -3,7 +3,6 @@ title: Tiny Boulder
 item_id: 69
 category: Wondrous
 item_subtypes:
-  - Item
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:
