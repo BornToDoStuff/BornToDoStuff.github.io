@@ -401,10 +401,10 @@ magic-item.artifact.attunement .rarity img {
 
 		& > magic-item.image {
 			width: 900px;
-			display: block;
+			// display: block;
 
 			item-head {
-				float: right;
+				margin-left: auto;
 				width: 500px;
 			}
 
