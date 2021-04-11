@@ -26,8 +26,8 @@
     <div class="item_rarity">{{ post.item_rarity | downcase }}</div>
     <div class="item_attunement">{% if post.item_attunement %}Yes{% else %}{% endif %}</div>
     <div class="item_curse">{% if post.item_curse %}Yes{% else %}{% endif %}</div>
-    <div class="item_id">#{{ post.item_id }}</div>
     <div class="item_date" title='Item created {{ post.date | date: "%Y-%m-%d" }}'>{%- if post.item_updated %}{{ post.item_updated }}*{%- else -%}{{ post.date | date: "%Y-%m-%d" }}{% endif -%}</div>
+    <div class="item_id">#{{ post.item_id }}</div>
   </item-details>
   <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">
     <div class="expander">

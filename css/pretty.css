@@ -7,6 +7,10 @@ body {
   display: none;
 }
 
+item-details {
+  display: none;
+}
+
 #item-wrapper {
   padding: 30px;
   background: #495b65 url("/images/hatching_light.png");

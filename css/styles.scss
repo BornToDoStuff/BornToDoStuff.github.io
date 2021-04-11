@@ -196,10 +196,38 @@ item-description {
 		shape-image-threshold: 0.3;
 	}
 }
-
 item-details {
+  margin-bottom: -10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+	flex-direction: row-reverse;
+}
+item-details > div {
 	display: none;
 }
+#item-wrapper > magic-item item-details {
+	// .item_id, .item_date {
+	// 	display: inline-block;
+	// 	color: $bluakDark;
+	// 	line-height: 1em;
+	// }
+	.item_id {
+		display: inline-block;
+		color: $bluakDark;
+		line-height: 1em;
+
+		opacity: 0.15;
+		font-weight: bold;
+    font-size: 2em;
+		margin-top: -0.1em;
+	}
+	// .item_date {
+	// 	opacity: 0.25;
+	// 	font-size: 1.2em;
+	// }
+}
+
 
 item-head {
 	display: flex;
