@@ -33,7 +33,7 @@ last_modified_at: 2021-04-03
 
 This quarterstaff is made from a pale wood and a segmented serpent is carved along its length with its head at the top of the staff. Its eyes are set with large turquoise and several smaller stones stud its back.    
 This item can hold 10 charges and regains 1d10 expended charges each day at dawn if you are not underground when the sun rises.    
-As a bonus action you tap the staff on the ground and the eyes shine a cold blue as if the cantrip<magic-spell>Light</magic-spell> was cast on them. You can tap the staff on the ground again to end this effect.    
+As a bonus action you tap the staff on the ground and the eyes shine a cold blue as if the cantrip <magic-spell>Light</magic-spell> was cast on them. You can tap the staff on the ground again to end this effect.    
 
 
 ### Prince of Lightning

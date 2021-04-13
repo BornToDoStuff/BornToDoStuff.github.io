@@ -63,6 +63,9 @@ item-description img {
   margin-bottom: -25px;
 }
 
+item-title {
+  font-size: 1.1em;
+}
 
 #item-menu {
   display: none;
@@ -91,7 +94,8 @@ item-description img {
   max-height: 550px;
   margin-top: 0px;
 }
-#item-wrapper.image-only > magic-item item-description p {
+#item-wrapper.image-only > magic-item item-description p,
+#item-wrapper.image-only > magic-item item-description h3 {
   display: none;
 }
 
