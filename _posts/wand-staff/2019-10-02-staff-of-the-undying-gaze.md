@@ -1,6 +1,6 @@
 ---
 title: Staff of the Undying Gaze
-item_id: 334
+item_id: 333
 category: Staff
 item_subtypes: 
 item_rarity: Very Rare
