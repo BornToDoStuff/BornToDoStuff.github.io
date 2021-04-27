@@ -53,5 +53,8 @@ layout: default
   </div>
 </div>
 <script>
- $("#item-wrapper > magic-item item-description img").insertAfter($("#item-wrapper > magic-item item-head"));
+  let magicheader = document.querySelector("#item-wrapper > magic-item item-head");
+  let magicimage  = document.querySelector("#item-wrapper > magic-item item-description img");
+  magicheader.insertAdjacentHTML('afterEnd', magicimage.outerHTML);
+  magicimage.delete();
 </script>
