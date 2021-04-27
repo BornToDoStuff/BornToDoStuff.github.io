@@ -184,8 +184,6 @@ magic-item {
 
 item-description {
 	overflow: hidden;
-	height: 100%; //hack to fix item height sizing
-	float: right; // only really used on items with art, but doesnt break the rest
 	text-align: justify;
 
 	img {
