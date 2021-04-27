@@ -22,6 +22,8 @@ tags:
   - Charm
   - Frighten
   - Seed
+item_image: "/images/item_art/sacred-acorn.png"
+image_artist: Direquest
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-21

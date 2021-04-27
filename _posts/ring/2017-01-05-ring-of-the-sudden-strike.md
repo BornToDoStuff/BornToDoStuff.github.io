@@ -16,6 +16,12 @@ item_role:
 item_damage:
   - Necrotic
 tags:
+  - Movement
+  - Teleport
+  - Legendary Action
+  - Advantage
+item_image: "/images/item_art/ring-of-the-sudden-strike.png"
+image_artist: Direquest
 item_idea:
 item_co_creator:
 item_updated:

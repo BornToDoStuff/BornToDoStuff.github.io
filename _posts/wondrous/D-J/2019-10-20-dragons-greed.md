@@ -17,6 +17,8 @@ tags:
   - Tracking
   - Gold
   - Dragon
+item_image: "/images/item_art/dragons-greed.png"
+image_artist: Direquest
 item_idea: 
 item_co_creator: 
 item_updated: 

@@ -21,6 +21,8 @@ item_damage:
 tags:
   - Summoning
   - Mythology
+item_image: "/images/item_art/tears-of-ra.png"
+image_artist: Direquest
 item_idea: Egyptian mythology
 item_co_creator:
 item_updated:

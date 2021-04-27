@@ -20,10 +20,8 @@ tags:
   - Temperature
   - Aura
   - Advantage
-item_goofy: 15
-item_dark: 10
-item_complexity: 35
-item_rating: 65
+item_image: "/images/item_art/hearthstone.png"
+image_artist: Direquest
 item_idea:
 item_co_creator:
 item_co_creator: 2019-02-26

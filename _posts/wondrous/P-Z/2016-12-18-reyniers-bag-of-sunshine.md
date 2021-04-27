@@ -18,6 +18,8 @@ tags:
   - Light
   - Unique Character
   - Reynier
+item_image: "/images/item_art/reyniers-bag-of-sunshine.png"
+image_artist: Direquest
 item_idea:
 item_co_creator:
 item_updated:

@@ -22,6 +22,8 @@ tags:
   - Marsh
   - Perception
   - Hiding
+item_image: "/images/item_art/moss-paste.png"
+image_artist: Direquest
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-08
