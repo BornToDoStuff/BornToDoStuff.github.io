@@ -12,9 +12,9 @@ function setItemHeight(ele, resize = true) {
       { heightCount++; }
     }
 
-    // if ($(ele).hasClass("image")) { //except for if it has an image
-    //   heightCount = Math.max(1, heightCount); //it has to be at least "tall"
-    // }
+    if ($(ele).hasClass("image")) { //except for if it has an image
+      heightCount = Math.max(1, heightCount); //it has to be at least "tall"
+    }
 
     $(ele).addClass(heights[heightCount]);
   }
