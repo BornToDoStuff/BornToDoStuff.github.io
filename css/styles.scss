@@ -152,8 +152,7 @@ section#main, section#search-results {
 }
 magic-item {
 	display: flex;
-  flex-direction: row-reverse;
-	flex-wrap: wrap;
+  flex-direction: column;
 	background: $backgroundLight;
 	margin-bottom: $item-gutter;
 	padding: 20px 15px;
@@ -387,6 +386,8 @@ magic-item.artifact.attunement .rarity img {
 	}
 
 	& > magic-item {
+		flex-direction: row-reverse;
+		flex-wrap: wrap;
 		height: initial!important;
 		min-height: 335px;
 		order: 1;
@@ -413,12 +414,12 @@ magic-item.artifact.attunement .rarity img {
 			// display: block;
 
 			item-head {
-				margin-left: auto;
 				width: 500px;
 			}
 
 			item-description {
 				overflow: visible;
+				width: 500px;
 
 				img {
 					max-width: calc(100% - 500px);
