@@ -394,6 +394,7 @@ magic-item.artifact.attunement .rarity img {
 		& > img {
 			max-width: calc(100% - 500px);
 			margin-top: -3em;
+			margin-bottom: -2em;
 			order: 1;
 		}
 	}
