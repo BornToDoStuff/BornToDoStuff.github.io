@@ -396,6 +396,7 @@ magic-item.artifact.attunement .rarity img {
 			margin-top: -3em;
 			margin-bottom: -2em;
 			order: 1;
+			display: none;
 		}
 	}
 
@@ -425,9 +426,14 @@ magic-item.artifact.attunement .rarity img {
 					max-width: calc(100% - 500px);
 					shape-outside: none!important;
 					margin-top: -3em;
+					display: none;
 				}
 			}
 
+		}
+
+		& > magic-item > img {
+			display: block;
 		}
 	}
 
