@@ -3,6 +3,7 @@ name: Refresh
 on:
   schedule:
     - cron:  '0 5 * * *' # Runs every day at 5am UTC
+  workflow_dispatch:
 
 jobs:
   refresh:
