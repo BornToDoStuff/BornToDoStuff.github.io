@@ -1,4 +1,4 @@
-name: Refresh
+name: Refresh Old
 
 on:
   schedule:
