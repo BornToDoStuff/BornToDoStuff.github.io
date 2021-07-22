@@ -55,5 +55,7 @@ layout: default
 <script>
   let magicheader = document.querySelector("#item-wrapper > magic-item item-head");
   let magicimage  = document.querySelector("#item-wrapper > magic-item item-description img");
-  magicheader.insertAdjacentHTML('afterEnd', magicimage.outerHTML);
+  if (magicimage) {
+    magicheader.insertAdjacentHTML('afterEnd', magicimage.outerHTML);
+  }
 </script>

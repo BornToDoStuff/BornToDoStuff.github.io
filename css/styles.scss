@@ -385,11 +385,14 @@ magic-item.artifact.attunement .rarity img {
 	}
 
 	& > magic-item {
-		flex-direction: row-reverse;
 		flex-wrap: wrap;
 		height: initial!important;
 		min-height: 335px;
 		order: 1;
+
+		&.image {
+			flex-direction: row-reverse;
+		}
 
 		& > img {
 			max-width: calc(100% - 500px);

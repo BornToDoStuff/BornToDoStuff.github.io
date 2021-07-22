@@ -30,4 +30,4 @@ last_modified_at:
 ---
 
 This small clay flask is covered in ancient hieroglyphs but one stands out against all the others; a large hieroglyph of an eye.
-As an action you can throw this bottle up to 30 feet or pour it on the ground. When you do so the liquid shines like gold in the light before twinkling into four swarms of bees in the nearest spaces. These bees attack anyone hostile towards the creature currently holding the bottle for the next hour before returning to mundane water droplets and falling from the sky.
+As an action you can throw this bottle up to 30 feet or pour it on the ground. When you do so the liquid shines like gold in the light before twinkling into four swarms of bees in the nearest spaces. For the next hour these bees attack anyone hostile towards the creature currently holding the bottle before returning to mundane water droplets and falling from the sky.
