@@ -1,5 +1,9 @@
 ---
-title: River's Mouth
+title: Oasis Lilly
+alt_title: River's Mouth
+included_in: "Amarune's Almanac: Deserts of the Realms"
+redirect_from: /item/rivers-mouth/
+
 item_id: 319
 category: Wondrous
 item_subtypes: 
@@ -17,10 +21,12 @@ tags:
   - Nature
   - Desert
   - Water
+  - Location
+  - Navigation
 item_idea: 
 item_co_creator: 
-item_updated: 
-last_modified_at: 
+item_updated: 2021-08-18
+last_modified_at: 2021-08-18
 ---
 
-This item is a rodent skull, deeply discolored from years of exposure to the elements, with it's mouth wired shut around a spherical vial of water. Inside the vial you can see a pink lily bud floating on the surface. This bud always points towards the closest natural water source, no matter how far it is.
+This item is a rodent skull, weathered from years of exposure to the elements, with it's mouth wired shut around a vial of water. Inside the vial you can see a pink lily bud floating on the surface. This bud always points towards the closest natural water source, no matter how far it is. If there is no natural water source on your plane of existence, the lilly will wilt and remain wilted until it returns to a plane with water.
