@@ -1,5 +1,7 @@
 ---
 title: Armor of the Inurned 
+included_in: "Amarune's Almanac: Deserts of the Realms"
+
 item_id: 326
 category: Armor
 item_subtypes: 
@@ -22,6 +24,8 @@ tags:
   - Desert
   - Sand
   - Terrain
+  - Breathing
+  - Burrow
 item_idea: 
 item_co_creator: 
 item_updated: 

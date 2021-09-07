@@ -1,5 +1,8 @@
 ---
 title: Marbled Spike
+alt_title: Maerth's Spike
+included_in: "Amarune's Almanac: Mountains of the Realms"
+
 item_id: 313
 category: Weapon
 item_subtypes: 
@@ -16,14 +19,15 @@ item_school: Transmutation
 item_role: 
   - Attack
 item_damage: 
+  - Piercing
   - Bludgeoning
 tags:
   - Nature
   - Mountain
-  - Cold
-  - Freezing
   - Restrained
+  - Concentration
   - Terrain
+  - Battlefield Control
 item_idea: 
 item_co_creator: 
 item_updated:

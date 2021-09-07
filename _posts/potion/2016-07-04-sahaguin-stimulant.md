@@ -17,7 +17,7 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Temporary Hitpoints
+  - Temporary Hit Points
   - Poisoned
   - Long Rest
 item_idea:
@@ -26,4 +26,4 @@ item_updated: 2017-10-16
 last_modified_at: 2017-10-16
 ---
 
-The primary ingredient for this deep red potion is supposedly shark blood. Any creature that consumes the viscous fluid from it's rough wooden cask gains 3d8 temporary hitpoints and a single action surge (see Fighter's Action Surge) they can use. These each last for one hour, and expire after that time. Any creature that is not a Sahaguin suffers from the Poisoned status the day after they take the stimulant which lasts until they take another long rest.
+The primary ingredient for this deep red potion is supposedly shark blood. Any creature that consumes the viscous fluid from it's rough wooden cask gains 3d8 temporary hit points and a single action surge (see Fighter's Action Surge) they can use. These each last for one hour, and expire after that time. Any creature that is not a Sahaguin suffers from the Poisoned status the day after they take the stimulant which lasts until they take another long rest.

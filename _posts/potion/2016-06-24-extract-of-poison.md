@@ -17,7 +17,6 @@ item_damage:
   - Poison
 tags:
   - Elemental
-  
   - Poisoned
   - Paralyzed
 item_idea:

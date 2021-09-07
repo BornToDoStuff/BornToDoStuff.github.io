@@ -1,5 +1,8 @@
 ---
 title: Augmier's Infinite Expanse
+alt_title: Karsus' Infinite Expanse
+included_in: "Amarune's Almanac: Deserts of the Realms"
+
 item_id: 320
 category: Wondrous
 item_subtypes: Orb

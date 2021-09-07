@@ -17,7 +17,7 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Temporary Hitpoints
+  - Temporary Hit Points
   - Long Rest
   - Exhaustion
 item_idea:

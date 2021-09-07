@@ -1,5 +1,7 @@
 ---
 title: Gauntlets of Stonesmithing
+included_in: "Amarune's Almanac: Mountains of the Realms"
+
 item_id: 251
 category: Wondrous
 item_subtypes:
@@ -19,8 +21,9 @@ item_role:
   - Utility
 item_damage: Bludgeoning
 tags:
-  
-  
+  - Stone
+  - Concentration
+  - Battlefield Control
   - Unarmed
 item_idea:
 item_co_creator:

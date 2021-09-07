@@ -1,5 +1,7 @@
 ---
 title: Decanter of Endless Sand
+included_in: "Amarune's Almanac: Deserts of the Realms"
+
 item_id: 325
 category: Wondrous
 item_subtypes: 
@@ -18,6 +20,7 @@ tags:
   - Desert
   - Sand
   - Terrain
+  - Movement
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-13

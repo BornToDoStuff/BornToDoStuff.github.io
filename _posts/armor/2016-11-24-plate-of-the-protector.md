@@ -20,7 +20,7 @@ item_role:
 item_damage:
 tags:
   - Divine
-  - Spellcasting
+  - Spell Altering
 item_idea:
 item_co_creator:
 item_updated:

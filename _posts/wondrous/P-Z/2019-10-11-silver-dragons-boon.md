@@ -33,4 +33,4 @@ This amulet carved from a silver dragon's scale is only given as a gift and sign
 
 As an action you can touch the amulet and begin concentrating, as if concentrating on a spell, to create a cloud of fog around you.
 You create a 20-foot-radius sphere of fog centered on yourself. The sphere spreads around corners, and its area is heavily obscured. It lasts for the next hour, until your concentration ends, or until a wind of moderate or greater speed (at least 10 miles per hour) disperses it. While within this fog you have immunity to cold damage and blindsight out to 60 feet.    
-Once used this feature can not be used again until your next short or long rest
+Once used this feature can not be used again until your next long or short rest

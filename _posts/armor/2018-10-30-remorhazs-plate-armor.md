@@ -1,5 +1,8 @@
 ---
 title: Remorhaz's Plate Armor
+alt_title: Darmshall Plate
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 221
 category: Armor
 item_subtypes: 
@@ -18,8 +21,9 @@ item_role:
 item_damage: 
 tags:
   - Arctic
-  
   - Climate
+  - Extreme Temperature
+  - Extreme Cold
   - Reduce
   - Resistance
 item_idea: 

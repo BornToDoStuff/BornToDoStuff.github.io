@@ -20,6 +20,7 @@ tags:
   - Necrotic
   - Advantage
   - Death
+  - Undead
 item_idea: Deathward Shield
 item_co_creator: 
 item_updated: 

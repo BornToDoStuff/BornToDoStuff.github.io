@@ -1,5 +1,7 @@
 ---
 title: Decanter of Finite Water
+included_in: "Amarune's Almanac: Deserts of the Realms"
+
 item_id: 322
 category: Wondrous
 item_subtypes: 

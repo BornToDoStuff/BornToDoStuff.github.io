@@ -15,7 +15,8 @@ item_classes:
 item_school: Transmutation
 item_role:
 item_damage:
-  - Mixed
+  - Attack
+  - Auxilary
 tags:
   - Unique Character
   - Augmier
@@ -23,14 +24,13 @@ tags:
   - Orb
 item_idea:
 item_co_creator:
-item_updates: [2018-05-31, 2019-02-25]
-item_updated: 2019-02-25
-last_modified_at: 2019-02-25
+item_updates: [2018-05-31, 2019-02-25, 2021-09-07]
+item_updated: 2021-09-07
+last_modified_at: 2021-09-07
 ---
 
-This round metal shield is very thick and has an orb embedded within its center surrounded by reinforcing bands. There is a slot on the back of the shield, through which you can clearly see that the shield is hollow.
+This reinforced metal shield has a crystal orb embedded in its center. On the left side there is a slot, through which you can see it is obviously hollow, and just underneath it is a phrase inscribed in gnomish.
 
-If you insert a light thrown weapon into the slot the orb begins to glow and a distinct whirring noise can be heard from the shield. While the orb is glowing as an action you can point your shield arm at a target and speak the command word inscribed under the slot in gnomish. When you do so the weapon you put into the shield is expelled as if it melds directly through the metal with a range of 80/320.
-Make a ranged attack against the target, if you have proficiency with shields you have proficiency with this attack. On a successful hit you deal 2d6 damage of the weapon's damage type.
+If you insert a weapon with the properties light and thrown into the slot the crystal begins to glow and a distinct whirring can be heard from the shield. As an action you can point the shield at a target and speak the command word expelling the weapon violently. Make a ranged attack (range 80/320) against the target, with proficiency if you have proficiency with shields. On a hit you deal 2d6 damage of the weapon's damage type.
 
-After one minute or if you insert another weapon into the slot during this time the weapon(s) shatter and the orb and whirring die down.
+After one minute, or if you insert another weapon into the slot during this time, the weapon(s) shatter and the whirring stops.

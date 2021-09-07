@@ -16,9 +16,7 @@ item_role:
 item_damage:
 tags:
   - Living
-  
-  
-  - Distadvantage
+  - Disadvantage
   - Prone
 item_goofy: 80
 item_dark: 10

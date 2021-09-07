@@ -15,7 +15,6 @@ item_role:
 item_damage:
   - Bludgeoning
 tags:
-  
   - Unique Character
   - Augmier
 item_idea:

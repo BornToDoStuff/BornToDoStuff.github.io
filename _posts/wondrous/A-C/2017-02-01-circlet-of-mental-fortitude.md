@@ -15,8 +15,6 @@ item_role:
   - Defense
 item_damage:
 tags:
-  
-  
   - Proficiency
 item_idea:
 item_co_creator:

@@ -17,9 +17,10 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Cover
+  - Full Cover
   - Stone
   - Restrained
+  - Movement
   - Unique Character
   - Derrahk
 item_idea:

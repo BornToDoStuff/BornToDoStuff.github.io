@@ -1,5 +1,7 @@
 ---
 title: Earthbound Gauntlet
+included_in: "Amarune's Almanac: Deserts of the Realms"
+
 item_id: 323
 category: Wondrous
 item_subtypes: 
@@ -20,6 +22,8 @@ tags:
   - Nature
   - Desert
   - Terrain
+  - Concentration
+  - Long Duration
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-13

@@ -18,9 +18,11 @@ item_role:
 item_damage:
   - Cold
 tags:
+  - Arctic
   - Ice
+  - Cold
+  - Extreme Cold
   - Temperature
-  - Climate
   - Aura
   - +Bonus
 item_idea:

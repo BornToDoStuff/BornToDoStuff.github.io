@@ -16,6 +16,7 @@ item_role:
   - Defense
 item_damage:
 tags:
+  - Transforming
   - Bonus Action
   - Armor Class
   - Heavy

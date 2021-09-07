@@ -19,16 +19,17 @@ item_damage:
 tags:
   - Critical
   - Invisibile
-  
   - Stealth
   - Initiative
+  - +X
 item_idea:
 item_co_creator:
-item_updated: 2019-02-25
-last_modified_at: 2019-02-25
+item_updates: [2019-02-25, 2021-09-07]
+item_updated: 2021-09-07
+last_modified_at: 2021-09-07
 ---
 
-This armor has a plate of silver embedded in the middle of it's chest. Its polished enough you can almost see your reflection in it, and you aren't positive how it's affixed to the armor.
+This armor has a plate of silver polished to a mirror finish embedded in the middle of its chest.
 
-While you are wearing this armor if you are struck with a critical hit and it does not knock you unconscious you turn Invisible as if affected by the spell Invisibility until the end of your next turn or until you attack or cast a spell.
+While you are wearing this armor if you are struck with a critical hit and it does not knock you unconscious you turn Invisible until the end of your next turn, or until you attack or cast a spell.
 Additionally, after each long or short rest while wearing this armor you gain +5 to Dexterity(Stealth) checks and initiative rolls for the next hour or until you make an attack or cast a spell.

@@ -1,5 +1,7 @@
 ---
 title: Shield of the Onyx Pillar
+included_in: "Amarune's Almanac: Mountains of the Realms"
+
 item_id: 317
 category: Armor
 item_subtypes: 
@@ -20,6 +22,8 @@ tags:
   - Nature
   - Mountain
   - Stone
+  - Bonus Action
+  - Battlefield Control
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-12

@@ -16,7 +16,7 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Temporary Hitpoints
+  - Temporary Hit Points
 item_idea:
 item_co_creator:
 item_updated: 2019-09-03

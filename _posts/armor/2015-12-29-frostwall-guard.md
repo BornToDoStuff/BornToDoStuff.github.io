@@ -19,9 +19,11 @@ item_damage:
 tags:
   - Arctic
   - Ice
+  - Cold
+  - Dragon
+  - Battlefield Control
   - Spellcasting
   - Long Rest
-  - Dragon
 item_idea:
 item_co_creator:
 item_updates: [2019-12-20, 2021-03-02]

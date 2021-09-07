@@ -17,10 +17,7 @@ item_damage:
   - Force
   - Necrotic
 tags:
-  
-  
   - Short Rest
-  
   - Planar
 item_idea:
 item_co_creator:

@@ -15,7 +15,7 @@ item_role:
 item_damage: 
 tags:
   - Expanding
-  - Teleporting
+  - Teleportation
   - Spellcasting
   - Mundane
   - Next Dawn

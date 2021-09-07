@@ -19,7 +19,7 @@ item_damage:
   - Necrotic
 tags:
   - Bonus Action
-  - Teleport
+  - Teleportation
   - Cursed
 item_idea:
 item_co_creator:

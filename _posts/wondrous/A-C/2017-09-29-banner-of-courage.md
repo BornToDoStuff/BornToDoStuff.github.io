@@ -39,4 +39,4 @@ Creatures affected by the banner are immune to being Frightened and any charm ef
 Whenever a creature affected by this banner must make a saving throw that creature gains a bonus to the saving throw equal to half your charisma modifier rounded up (minimum of 1).
 
 ### Surge of Hope
-As an action you can wave the banner and expend any number of remaining charges to bolster that many creatures affected by the banner. Each bolstered creature gains temporary hit points equal to 3d6 + your Charisma modifier that last until the banner is no longer aloft. Additionally, they are immune to the effects Blinded, Deafened, and Poisoned, while the temporary hitpoints remain.
+As an action you can wave the banner and expend any number of remaining charges to bolster that many creatures affected by the banner. Each bolstered creature gains temporary hit points equal to 3d6 + your Charisma modifier that last until the banner is no longer aloft. Additionally, they are immune to the effects Blinded, Deafened, and Poisoned, while the temporary hit points remain.

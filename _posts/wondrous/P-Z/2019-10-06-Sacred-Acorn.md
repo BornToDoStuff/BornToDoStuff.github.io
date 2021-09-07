@@ -19,7 +19,7 @@ tags:
   - Nature
   - Environment
   - Possess
-  - Charm
+  - Charmed
   - Frighten
   - Seed
 item_image: "/images/item_art/sacred-acorn.png"

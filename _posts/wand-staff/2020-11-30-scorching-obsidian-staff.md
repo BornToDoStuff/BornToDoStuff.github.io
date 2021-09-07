@@ -1,5 +1,7 @@
 ---
 title: Scorching Obsidian Staff
+included_in: "Amarune's Almanac: Deserts of the Realms"
+
 item_id: 324
 category: Staff
 item_subtypes: 
@@ -24,9 +26,6 @@ tags:
   - Desert
   - Sand
   - Terrain
-  
-  
-  
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-13

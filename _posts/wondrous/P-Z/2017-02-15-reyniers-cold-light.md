@@ -17,7 +17,7 @@ item_damage:
   - Cold
 tags:
   - Light
-  - Ooze
+  - Oozes
   - Shapeshifter
 item_idea:
 item_co_creator:

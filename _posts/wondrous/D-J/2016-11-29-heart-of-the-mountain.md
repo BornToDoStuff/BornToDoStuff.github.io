@@ -1,5 +1,7 @@
 ---
 title: Heart of the Mountain
+included_in: "Amarune's Almanac: Mountains of the Realms"
+
 item_id: 112
 category: Wondrous
 item_subtypes:
@@ -17,9 +19,12 @@ item_role:
 item_damage:
 tags:
   - Dwarven
+  - Death
   - Spellcasting
   - Exhaustion
   - Cursed
+  - Vulnerable
+  - Thunder
 item_idea:
 item_co_creator:
 item_updated:

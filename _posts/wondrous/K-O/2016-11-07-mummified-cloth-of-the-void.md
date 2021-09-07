@@ -16,7 +16,7 @@ item_role:
 item_damage:
 tags:
   - Bonus Action
-  - Teleport
+  - Teleportation
   - Unarmed
 item_idea:
 item_co_creator:

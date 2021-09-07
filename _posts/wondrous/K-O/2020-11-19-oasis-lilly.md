@@ -7,6 +7,7 @@ redirect_from: /item/rivers-mouth/
 item_id: 319
 category: Wondrous
 item_subtypes: 
+  - Compass
 item_rarity: Uncommon
 item_attunement: false
 item_requirement: 
@@ -23,6 +24,7 @@ tags:
   - Water
   - Location
   - Navigation
+  - Compass
 item_idea: 
 item_co_creator: 
 item_updated: 2021-08-18

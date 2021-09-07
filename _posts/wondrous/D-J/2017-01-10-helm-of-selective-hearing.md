@@ -18,7 +18,7 @@ item_role:
 item_damage:
 tags:
   - Deafened
-  - Disadvatage
+  - Disadvantage
   - Sound
 item_idea:
 item_co_creator:

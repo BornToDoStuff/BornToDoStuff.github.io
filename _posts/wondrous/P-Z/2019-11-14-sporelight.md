@@ -3,7 +3,7 @@ title: Sporelight
 item_id: 281
 category: Wondrous
 item_subtypes: 
-  - Instrument
+  - Lantern
 item_rarity: Uncommon
 item_attunement: false
 item_requirement: 

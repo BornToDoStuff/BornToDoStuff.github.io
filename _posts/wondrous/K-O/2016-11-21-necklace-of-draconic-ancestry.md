@@ -30,7 +30,7 @@ This necklace has an amulet in the shape of a dragon curled around a crystal orb
 
 While attuned with this necklace as an action you can exhale destructive energy. Your alignment determines the size, shape, and damage type of this effect. When you use your breath weapon creature in the area must make a saving throw, the type of which is determined by your alignment. The DC for this saving throw equals 8 + your Constitution modifier + your proficiency bonus. A creature takes 3d6 damage on a failed save, and half as much on a successful one.
 
-After you use your breath weapon you can't use it again until you complete a short or long rest.
+After you use your breath weapon you can't use it again until you complete a long or short rest.
 
 Dragonblood. If you have draconic ancestry and already have a breath weapon instead of gaining an additional use based on alignment your breath weapon increases to a 60 foot line, or a 30 foot cone, whichever your ancestry uses, and does an additional 1d6 damage.
 

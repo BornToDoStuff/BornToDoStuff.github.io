@@ -17,7 +17,7 @@ item_role:
 item_damage:
 tags:
   - Disadvantage
-  - Illusion
+  - Illusions
   - Vision
   - Truesight
 item_idea:

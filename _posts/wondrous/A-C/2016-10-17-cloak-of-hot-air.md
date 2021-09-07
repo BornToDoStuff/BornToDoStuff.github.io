@@ -16,7 +16,7 @@ item_damage:
 tags:
   - Charisma
   - Advantage
-  - Medciocre
+  - Mediocre
 item_goofy: 85
 item_dark: 5
 item_complexity: 10
