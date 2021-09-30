@@ -32,11 +32,11 @@ last_modified_at:
 
 A dark-purple heart steadily beats inside this small hardwood chest. All creatures within 60 feet of the box can hear a quiet heartbeat, and feel the rhythmic thump deep within them.
 
-#### Mortal’s Fragility
+### Mortal’s Fragility
 As an action you can point at a creature you can see within 60 feet and force them to make a DC 12 Constitution saving throw as they feel a tremor in their heart. On a failure they take 3d6 Necrotic damage and their hit point maximum is reduced by an amount equal to the damage dealt. On a success they take half as much damage and their hit points are not reduced. This reduction lasts until the creature finishes a long rest. The target dies if this effect reduces its hit point maximum to 0.  
 A creature with no heart automatically succeeds this saving throw.
 
-#### Immortal’s Resistance
+### Immortal’s Resistance
 If you are killed while attuned with this heart you are brought back to life at the next dawn as if by the spell <magic-spell>Resurrection</magic-spell>, even if you are undead. Your body forms around this heart as if it is your own. After being resurrected in this way you can not die to an injury to, or failure of, your heart, though the rest of your mortality is unchanged.
 
 <div class="curse">    
