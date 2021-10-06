@@ -20,7 +20,7 @@ item-details {
 }
 
 magic-item {
-  width: 100%;
+  min-height: 550px;
   padding: 25px;
   margin: 0px;
   position: relative;
