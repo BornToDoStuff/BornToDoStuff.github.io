@@ -1,7 +1,7 @@
 ---
 title: Phantom Raven Mantle
 item_id: 346
-category: 
+category: Wondrous
 item_subtypes: 
   - Cloak
   - Mantle
