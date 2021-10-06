@@ -20,7 +20,7 @@ tags:
   - Light
   - Oozes
   - Undead
-  - Fiends
+  - Fiend
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-27

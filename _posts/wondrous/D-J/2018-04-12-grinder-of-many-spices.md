@@ -18,7 +18,7 @@ item_role:
 item_damage: 
   - Mixed
 tags:
-  - Blinding
+  - Blinded
   - Charmed
   - Reaction
   - Short Rest

@@ -17,9 +17,7 @@ item_damage:
 tags:
   - Antimagic
   - Spellcasting
-  - Years
-  
-  
+  - Long Duration
 item_idea: 
 item_co_creator: 
 item_updated: 

@@ -17,7 +17,7 @@ item_role:
 item_damage: 
   - Necrotic
 tags:
-  - +1 Bonus
+  - +Bonus
   - Blood
 item_idea: 
 item_co_creator: 

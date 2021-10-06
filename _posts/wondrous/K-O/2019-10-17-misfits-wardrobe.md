@@ -20,7 +20,7 @@ item_damage:
 tags:
   - Fashion
   - Shapeshifting
-  - Clothes
+  - Clothing
 item_idea: 
 item_co_creator: 
 item_updated: 2020-08-23

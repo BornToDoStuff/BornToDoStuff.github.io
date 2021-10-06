@@ -20,7 +20,7 @@ tags:
   - Environment
   - Possess
   - Charmed
-  - Frighten
+  - Frightened
   - Seed
 item_image: "/images/item_art/sacred-acorn.png"
 image_artist: Direquest

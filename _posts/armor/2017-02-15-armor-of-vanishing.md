@@ -21,7 +21,7 @@ tags:
   - Invisibile
   - Stealth
   - Initiative
-  - +X
+  - +Bonus
 item_idea:
 item_co_creator:
 item_updates: [2019-02-25, 2021-09-07]
