@@ -22,6 +22,8 @@ tags:
   - Daylight
   - Blinded
   - Darkness
+  - Dim Light
+  - Lightly Obscured
 item_idea: 
 item_co_creator: 
 item_updated: 

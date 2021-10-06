@@ -19,8 +19,8 @@ item_damage:
 tags:
   - Ice
   - Vision
-  - Obscure
-  
+  - Obscured
+  - Heavily Obscured
   - Difficult Terrain
 item_idea:
 item_co_creator:

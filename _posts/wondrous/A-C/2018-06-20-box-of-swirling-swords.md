@@ -13,7 +13,7 @@ item_role:
 item_damage: 
 tags:
   - Reaction
-  - Opportunity Attack
+  - Attack of Opportunity
   - Half Cover
 item_idea: 
 item_co_creator: 

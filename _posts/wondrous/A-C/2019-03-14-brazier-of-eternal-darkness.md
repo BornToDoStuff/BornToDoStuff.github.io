@@ -15,11 +15,11 @@ item_role:
 item_damage: 
 tags:
   - Light
-  
   - Visibility
   - Dim Light
   - Darkness
   - Obscured
+  - Lightly Obscured
 item_idea: 
 item_co_creator: 
 item_updated: 

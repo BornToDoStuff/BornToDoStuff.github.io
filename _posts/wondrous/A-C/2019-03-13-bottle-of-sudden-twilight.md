@@ -18,10 +18,10 @@ item_role:
 item_damage: 
 tags:
   - Light
-  
   - Visibility
   - Dim Light
   - Obscured
+  - Lightly Obscured
 item_idea: Bottled Twilight
 item_co_creator: 
 item_updated: 
