@@ -23,6 +23,7 @@ tags:
   - Cantrips
   - Unique Character
   - Reynier
+  - Spellcasting Focus
 item_idea: 
 item_co_creator: 
 item_updated: 

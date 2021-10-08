@@ -15,7 +15,7 @@ item_role:
 item_damage:
 tags:
   - Truesight
-  
+  - Spellcasting Focus
   - Blindsight
 item_idea:
 item_co_creator:

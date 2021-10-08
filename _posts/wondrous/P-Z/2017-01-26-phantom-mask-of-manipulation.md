@@ -17,6 +17,7 @@ item_damage:
 tags:
   - Dim Light
   - Spellcasting
+  - Spellcasting Focus
 item_idea:
 item_co_creator:
 item_updated:
