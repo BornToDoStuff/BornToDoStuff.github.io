@@ -15,16 +15,13 @@ item_classes:
 item_school: Transmutation
 item_role: 
   - Attack
-item_damage: 
-  - Piercing
-  - Cold
+item_damage: Cold
 tags:
   - Nature
   - Arctic
   - Cold
   - Petrified
   - Restrained
-  
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-02

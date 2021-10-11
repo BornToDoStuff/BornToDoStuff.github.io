@@ -15,8 +15,7 @@ item_classes:
 item_school: Evocation
 item_role: 
   - Attack
-item_damage: 
-  - Slashing
+item_damage:
 tags:
   - Nature
   - Swamp

@@ -15,7 +15,7 @@ item_classes:
 item_school: Evocation
 item_role: 
   - Attack 
-item_damage: Piercing
+item_damage:
 tags:
   - Underdark
   - Cave

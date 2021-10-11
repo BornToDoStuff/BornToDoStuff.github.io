@@ -17,7 +17,6 @@ item_role:
   - Attack
 item_damage:
   - Slashing
-  - Piercing
   - Force
 tags:
   - Bonus Action

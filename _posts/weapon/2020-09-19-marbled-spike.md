@@ -18,9 +18,7 @@ item_classes:
 item_school: Transmutation
 item_role: 
   - Attack
-item_damage: 
-  - Piercing
-  - Bludgeoning
+item_damage: Bludgeoning
 tags:
   - Nature
   - Mountain

@@ -15,7 +15,7 @@ item_classes:
 item_school: Necromancy
 item_role: 
   - Attack
-item_damage: 
+item_damage: Radiant
 tags:
   - Radiant
   - Challenge Rating

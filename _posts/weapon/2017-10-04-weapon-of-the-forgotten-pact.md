@@ -13,7 +13,7 @@ item_school: Evocation
 item_role:
   - Attack
 item_damage:
-  - Mixed
+  - Psychic
 tags:
   - Bonus Action
 item_idea:

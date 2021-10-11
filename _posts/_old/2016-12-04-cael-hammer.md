@@ -15,7 +15,6 @@ item_school: Transmutation
 item_role:
   - Attack
 item_damage:
-  - Bludgeoning
 tags:
   - Stages
   - Long Rest

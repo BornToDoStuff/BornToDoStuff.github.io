@@ -14,8 +14,7 @@ item_classes:
 item_school: Conjuration
 item_role: 
   - Attack
-item_damage: 
-  - Piercing
+item_damage:
 tags:
   - Summoning
   - Stone

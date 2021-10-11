@@ -14,9 +14,7 @@ item_classes:
 item_school: Divination
 item_role:
   - Attack
-item_damage:
-  - Thunder
-  - Piercing
+item_damage: Thunder
 tags:
  - Deafened
 item_idea:

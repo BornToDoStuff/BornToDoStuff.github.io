@@ -15,11 +15,9 @@ item_classes:
 item_school: Evocation
 item_role:
   - Utility
-item_damage: Bludgeoning
+item_damage:
 tags:
   - Long Rest
-  
-  
   - Ice
 item_idea:
 item_co_creator:

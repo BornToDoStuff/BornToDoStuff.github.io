@@ -16,11 +16,8 @@ item_classes:
 item_school: Divination
 item_role: 
   - Attack
-item_damage: 
-  - Piercing
+item_damage:
 tags:
-  
-  
   - Sight
 item_idea: 
 item_co_creator: 

@@ -17,8 +17,6 @@ item_role:
   - Attack
 item_damage:
   - Necrotic
-  - Piercing
-  - Slashing
 tags:
   - Dual
   - Necrotic

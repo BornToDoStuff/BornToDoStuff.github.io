@@ -15,11 +15,8 @@ item_classes:
 item_school: Evocation
 item_role:
   - Attack
-item_damage:
-  - Piercing
-  - Radiant
+item_damage: Radiant
 tags:
-  
   - Bastion
 item_idea: Bastion
 item_co_creator:

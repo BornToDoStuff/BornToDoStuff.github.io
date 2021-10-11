@@ -15,8 +15,7 @@ item_school: Transmutation
 item_role: 
   - Attack
   - Defense
-item_damage: 
-  - Slashing
+item_damage:
 tags:
   - Shapeshifting
   - Transforming

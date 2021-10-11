@@ -16,7 +16,6 @@ item_classes:
 item_school:
 item_role:
 item_damage:
-  - Piercing
 tags:
 item_idea:
 item_co_creator:

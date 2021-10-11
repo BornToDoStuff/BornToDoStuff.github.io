@@ -14,7 +14,7 @@ item_school: Conjuration
 item_role:
   - Attack
 item_damage:
-  - Piecing
+  - Piercing
   - Radiant
 tags:
   - Angelic

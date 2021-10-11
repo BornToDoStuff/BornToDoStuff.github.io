@@ -16,7 +16,6 @@ item_school: Conjuration
 item_role:
   - Attack
 item_damage:
-  - Piercing
 tags:
   - Teleportation
   - Bonus Action
