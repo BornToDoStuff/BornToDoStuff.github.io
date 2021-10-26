@@ -59,7 +59,7 @@
       var href = window.location.href.split('/');
       var currentPage = href[href.length - 1];
       if (!currentPage) currentPage = href[href.length - 2];
-      currentPage = parseInt(currentPage) || 0;
+      currentPage = parseInt(currentPage) || 1; //always start on page 1 and use Math.max to force page 2?? For some reason????
 
       if ($("#main").data("scrollable")){
         if (masonry){
