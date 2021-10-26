@@ -16,7 +16,6 @@ item_role:
 item_damage: 
 tags:
   - Imagination
-  - Mundane
   - Many
   - Many Effects
 item_idea: 

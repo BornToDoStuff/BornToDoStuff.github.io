@@ -17,7 +17,6 @@ tags:
   - Expanding
   - Teleportation
   - Spellcasting
-  - Mundane
   - Next Dawn
 item_idea: 
 item_co_creator: 

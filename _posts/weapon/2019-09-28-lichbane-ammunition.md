@@ -3,7 +3,7 @@ title: Lichbane Ammunition
 item_id: 327
 category: Weapon
 item_subtypes: 
-  - Any ammunition
+  - Ammunition
 item_rarity: Very Rare
 item_attunement: false
 item_requirement: 
@@ -20,6 +20,7 @@ tags:
   - Radiant
   - Challenge Rating
   - Lich
+  - Ammunition
 item_idea: 
 item_co_creator: 
 item_updated: 
