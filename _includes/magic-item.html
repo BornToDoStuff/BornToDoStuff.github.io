@@ -78,6 +78,7 @@
     <div class="item_major">{% if major_item %}Major{% else %}Minor{% endif %}</div>
     <div class="item_cost">
       {{ site.data.economy | inspect }}
+      {{ site.data.economy | jsonify | escape }}
       ---
       {{ gold_values["max"] }} * {{ gold_scale }}
       {{ silver_values["max"] }} * {{ silver_scale }}
