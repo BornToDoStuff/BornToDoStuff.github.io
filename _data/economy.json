@@ -1,0 +1,80 @@
+{
+  "gold_economy": {
+    "scale": {
+      "default": 1,
+      "potions": 0.5,
+      "ammunition": 0.2,
+      "scrolls": 1
+    },
+    "default": {
+    	"simple": 	{ "min": 5, "max": 50 },
+    	"common": 	{ "min": 50, "max": 100 },
+    	"uncommon": { "min": 100, "max": 500 },
+    	"rare": 	  { "min": 500, "max": 5000 },
+    	"very rare":{ "min": 5000, "max": 50000 },
+    	"legendary":{ "min": 50000, "max": 500000 },
+    	"mythic": 	{ "min": 500000, "max": 5000000 }
+    },
+    "scrolls": {
+      "simple": 	{ "level": 0, "min": 3, "max": 25 },
+      "common": 	{ "level": 1, "min": 25, "max": 50 },
+      "uncommon": { "level": 2, "min": 50, "max": 250 },
+      "rare": 	  { "level": 4, "min": 250, "max": 2500 },
+      "very rare":{ "level": 6, "min": 2500, "max": 25000 },
+      "legendary":{ "level": 9, "min": 25000, "max": 250000 },
+      "mythic": 	{ "level": 10, "min": 250000, "max": 2500000 },
+      "levels": 	[
+        { "min": 3, "max": 25 },
+        { "min": 25, "max": 50 },
+        { "min": 50, "max": 250 },
+        { "min": 125, "max": 250 },
+        { "min": 250, "max": 2500 },
+        { "min": 1250, "max": 2500 },
+        { "min": 2500, "max": 25000 },
+        { "min": 8500, "max": 16500 },
+        { "min": 16500, "max": 25000 },
+        { "min": 25000, "max": 250000 },
+        { "min": 250000, "max": 2500000 }
+      ]
+  	}
+  },
+  "historic_silver_economy": {
+    "scale": {
+      "default": 1,
+      "potions": 0.5,
+      "ammunition": 0.2,
+      "scrolls": 1
+    },
+    "default": {
+    	"simple": 	{ "min": 25, "max": 50 },
+    	"common": 	{ "min": 50, "max": 200 },
+    	"uncommon": { "min": 200, "max": 800 },
+    	"rare": 	  { "min": 800, "max": 4800 },
+    	"very rare":{ "min": 4800, "max": 38000 },
+    	"legendary":{ "min": 38000, "max": 380000 },
+    	"mythic": 	{ "min": 380000, "max": 4600000 }
+    },
+    "scrolls": {
+      "simple": 	{ "level": 0, "min": 13, "max": 25 },
+      "common": 	{ "level": 1, "min": 25, "max": 100 },
+      "uncommon": { "level": 2, "min": 100, "max": 200 },
+      "rare": 	  { "level": 4, "min": 400, "max": 1200 },
+      "very rare":{ "level": 6, "min": 2400, "max": 6400 },
+      "legendary":{ "level": 9, "min": 19000, "max": 190000 },
+      "mythic": 	{ "level": 10, "min": 190000, "max": 2300000 },
+      "levels": 	[
+        { "min": 13, "max": 25 },
+        { "min": 25, "max": 100 },
+        { "min": 100, "max": 200 },
+        { "min": 200, "max": 400 },
+        { "min": 400, "max": 1200 },
+        { "min": 1200, "max": 2400 },
+        { "min": 2400, "max": 6400 },
+        { "min": 6400, "max": 12500 },
+        { "min": 12500, "max": 19000 },
+        { "min": 19000, "max": 190000 },
+        { "min": 190000, "max": 2300000 }
+      ]
+  	}
+  }
+}
