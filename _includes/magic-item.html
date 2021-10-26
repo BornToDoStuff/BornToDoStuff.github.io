@@ -77,8 +77,8 @@
     <div class="item_rarity">{{ post.item_rarity | downcase }}</div>
     <div class="item_major">{% if major_item %}Major{% else %}Minor{% endif %}</div>
     <div class="item_cost">
-      <div class="economy_GE">{% if major_item %}{{ gold_values["max"] | times: gold_scale | round | number_with_delimiter }}{% else %}{{ gold_values["max"] | plus: gold_values["min"] | divided_by: 2 | times: gold_scale | round | number_with_delimiter }}{% endif %} gp</div>
-      <div class="economy_HSE">{% if major_item %}{{ silver_values["max"] | times: silver_scale | round | number_with_delimiter }}{% else %}{{ silver_values["max"] | plus: silver_values["min"] | divided_by: 2 | times: silver_scale | round | number_with_delimiter }}{% endif %} sp</div>
+      <div class="economy_GE">{% if major_item %}{{ gold_values["max"] | times: gold_scale | round | delimited }}{% else %}{{ gold_values["max"] | plus: gold_values["min"] | divided_by: 2 | times: gold_scale | round | delimited }}{% endif %} gp</div>
+      <div class="economy_HSE">{% if major_item %}{{ silver_values["max"] | times: silver_scale | round | delimited }}{% else %}{{ silver_values["max"] | plus: silver_values["min"] | divided_by: 2 | times: silver_scale | round | delimited }}{% endif %} sp</div>
     </div>
     <div class="item_attunement">{% if post.item_attunement %}Yes{% else %}{% endif %}</div>
     <div class="item_curse">{% if post.item_curse %}Yes{% else %}{% endif %}</div>
