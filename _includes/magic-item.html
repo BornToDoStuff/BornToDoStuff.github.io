@@ -5,6 +5,33 @@
 {%- if post.category == "Armor" %} {% assign subtype_bool = true %} {% endif -%}
 {%- if post.category == "Weapon" %} {% assign subtype_bool = true %} {% endif -%}
 
+
+{%- assign rarity = post.item_rarity | downcase -%}
+{%- assign gold_scale = site.data.economy.gold_economy.scale.default -%}
+{%- assign silver_scale = site.data.economy.historic_silver_economy.scale.default -%}
+
+{%- if post.category == "Scroll" %}
+  {%- assign gold_values = site.data.economy.gold_economy.scrolls[{{rarity}}] -%}
+  {%- assign silver_values = site.data.economy.historic_silver_economy.scrolls[{{rarity}}] -%}
+{% else %}
+  {%- assign gold_values = site.data.economy.gold_economy.default[{{rarity}}] -%}
+  {%- assign silver_values = site.data.economy.historic_silver_economy.default[{{rarity}}] -%}
+{% endif -%}
+
+{%- if post.category == "Scroll" %}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.scrolls -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.scrolls -%}
+{% endif -%}
+{%- if post.category == "Potion" %}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.potions -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.potions -%}
+{% endif -%}
+{%- if post.item_subtypes contains "Ammunition" %}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.ammunition -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.ammunition -%}
+{% endif -%}
+
+
 {%- assign minor_item = false -%}
 {%- assign major_item = false -%}
 {%- if post.category == "Weapon" %}
@@ -25,6 +52,7 @@
     {% assign major_item = true %}
   {% endif -%}
 {% endif -%}
+
 
 <magic-item id="{{ post.item_id }}" class="magic-item {{ post.item_rarity | slugify }} {{ post.category | slugify }}{% if post.item_attunement %} attunement{% endif %}{% if post.item_curse %} cursed{% endif %}{% if post.item_image %} image{% endif %}" {% if include.related %}data-related="{{include.related}}"{% endif %}>
   <item-head>
@@ -48,6 +76,10 @@
     <div class="item_subtypes">{% for subcat in post.item_subtypes | sort %}{{subcat | downcase}}{% unless forloop.last %}, {% endunless %}{% endfor %}</div>
     <div class="item_rarity">{{ post.item_rarity | downcase }}</div>
     <div class="item_major">{% if major_item %}Major{% else %}Minor{% endif %}</div>
+    <div class="item_cost">
+      <div class="economy_GE">{% if major_item %}{{ gold_values["max"] | times: scale }}{% else %}{{ gold_values["max"] | plus: gold_values["min"] | divided_by: 2 }}{% endif %}</div>
+      <div class="economy_HSE">{% if major_item %}{{ silver_values["max"] | times: scale }}{% else %}{{ silver_values["max"] | plus: silver_values["min"] | divided_by: 2 }}{% endif %}</div>
+    </div>
     <div class="item_attunement">{% if post.item_attunement %}Yes{% else %}{% endif %}</div>
     <div class="item_curse">{% if post.item_curse %}Yes{% else %}{% endif %}</div>
     <div class="item_date" title='Item created {{ post.date | date: "%Y-%m-%d" }}'>{%- if post.item_updated %}{{ post.item_updated }}*{%- else -%}{{ post.date | date: "%Y-%m-%d" }}{% endif -%}</div>
