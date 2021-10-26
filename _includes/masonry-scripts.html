@@ -64,7 +64,7 @@
       if ($("#main").data("scrollable")){
         if (masonry){
           grid.infiniteScroll({
-            path: function() { return '/page/' + (parseInt(currentPage) + this.pageIndex);},
+            path: function() { return '/page/' + Math.max((currentPage + this.pageIndex), 2) + "/";},
             checkLastPage: '.pagination_next',
             append: 'magic-item',
             scrollThreshold: 1000,
@@ -77,7 +77,7 @@
         }
         else {
           grid.infiniteScroll({
-            path: function() { return '/page/' + (parseInt(currentPage) + this.pageIndex);},
+            path: function() { return '/page/' + Math.max((currentPage + this.pageIndex), 2) + "/";},
             checkLastPage: '.pagination_next',
             append: 'magic-item',
             scrollThreshold: 750,
