@@ -18,7 +18,7 @@
   <nav class="page-navigation" aria-label="page navigation">
     <ul class="pagination">
       {% if paginator.previous_page %}
-        <li class="extra"><a href="{{ site.baseurl }}{{ paginator.previous_page_path }}">&laquo;</a></li>
+        <li class="extra"><a class="pagination_previous" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">&laquo;</a></li>
       {%- else -%}
         <li class="disabled extra"><a>&laquo;</a></li>
       {% endif %}
@@ -43,7 +43,7 @@
         <li class="extra"><a href="{{ site.baseurl }}{{ site.paginate_path | replace: ':num', paginator.total_pages }}">{{ paginator.total_pages }}</a></li>
       {% endif %}
       {% if paginator.next_page %}
-        <li class="extra"><a href="{{ site.baseurl }}{{ paginator.next_page_path }}">&raquo;</a></li>
+        <li class="extra"><a class="pagination_next" href="{{ site.baseurl }}{{ paginator.next_page_path }}">&raquo;</a></li>
       {%- else -%}
         <li class="disabled extra"><a>&raquo;</a></li>
       {% endif %}

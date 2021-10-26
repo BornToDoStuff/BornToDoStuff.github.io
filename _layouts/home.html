@@ -13,8 +13,10 @@ layout: default
 
     <section id="search-results"></section>
     <section id="pagination">
-      <div class="no-more" style="display:none">You have browsed every tome in the archives! What a studious scholar you are.</div>
-
+      <div class="paginator-status" style="display:none">
+        <div class="no-more infinite-scroll-last">You have browsed every tome in the archives! What a studious scholar you are.</div>
+        <div class="no-more infinite-scroll-error">There was an issue while trying to find the rest of the archives, oops!</div>
+      </div>
       {% include paginator.html %}
     </section>
   </div>
