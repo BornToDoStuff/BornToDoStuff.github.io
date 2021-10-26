@@ -77,8 +77,7 @@
     <div class="item_rarity">{{ post.item_rarity | downcase }}</div>
     <div class="item_major">{% if major_item %}Major{% else %}Minor{% endif %}</div>
     <div class="item_cost">
-      {% assign GE_test = site.data.economy.["gold_economy"] %}
-      {{ GE_test.["default"].common[0] }} - {{ GE_test.default.common.min }} - {{ GE_test.default.common["min"] }}
+      {{ site.data.economy | inspect }}
       ---
       {{ gold_values["max"] }} * {{ gold_scale }}
       {{ silver_values["max"] }} * {{ silver_scale }}
