@@ -7,8 +7,8 @@
 
 
 {%- assign rarity = post.item_rarity | downcase -%}
-{%- assign gold_scale = site.data.economy.gold_economy.scale.default -%}
-{%- assign silver_scale = site.data.economy.historic_silver_economy.scale.default -%}
+{%- assign gold_scale = site.data.economy.gold_economy.scale.default | times: 100 -%}
+{%- assign silver_scale = site.data.economy.historic_silver_economy.scale.default | times: 100 -%}
 
 {%- if post.category == "Scroll" %}
   {%- assign gold_values = site.data.economy.gold_economy.scrolls[{{rarity}}] -%}
@@ -19,16 +19,16 @@
 {% endif -%}
 
 {%- if post.category == "Scroll" %}
-  {%- assign gold_scale = site.data.economy.gold_economy.scale.scrolls -%}
-  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.scrolls -%}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.scrolls | times: 100 -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.scrolls | times: 100 -%}
 {% endif -%}
 {%- if post.category == "Potion" %}
-  {%- assign gold_scale = site.data.economy.gold_economy.scale.potions -%}
-  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.potions -%}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.potions | times: 100 -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.potions | times: 100 -%}
 {% endif -%}
 {%- if post.item_subtypes contains "Ammunition" %}
-  {%- assign gold_scale = site.data.economy.gold_economy.scale.ammunition -%}
-  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.ammunition -%}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.ammunition | times: 100 -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.ammunition | times: 100 -%}
 {% endif -%}
 
 
@@ -77,8 +77,8 @@
     <div class="item_rarity">{{ post.item_rarity | downcase }}</div>
     <div class="item_major">{% if major_item %}Major{% else %}Minor{% endif %}</div>
     <div class="item_cost">
-      <div class="economy_GE">{% if major_item %}{{ gold_values["max"] | times: gold_scale | round | delimited }}{% else %}{{ gold_values["max"] | plus: gold_values["min"] | divided_by: 2 | times: gold_scale | round | delimited }}{% endif %} gp</div>
-      <div class="economy_HSE">{% if major_item %}{{ silver_values["max"] | times: silver_scale | round | delimited }}{% else %}{{ silver_values["max"] | plus: silver_values["min"] | divided_by: 2 | times: silver_scale | round | delimited }}{% endif %} sp</div>
+      <div class="economy_GE">{% if major_item %}{{ gold_values["max"] | times: gold_scale | round | money_without_currency | remove: '.00' }}{% else %}{{ gold_values["max"] | plus: gold_values["min"] | divided_by: 2 | times: gold_scale | round | money_without_currency | remove: '.00' }}{% endif %} gp</div>
+      <div class="economy_HSE">{% if major_item %}{{ silver_values["max"] | times: silver_scale | round | money_without_currency | remove: '.00' }}{% else %}{{ silver_values["max"] | plus: silver_values["min"] | divided_by: 2 | times: silver_scale | round | money_without_currency | remove: '.00' }}{% endif %} sp</div>
     </div>
     <div class="item_attunement">{% if post.item_attunement %}Yes{% else %}{% endif %}</div>
     <div class="item_curse">{% if post.item_curse %}Yes{% else %}{% endif %}</div>
