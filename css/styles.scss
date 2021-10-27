@@ -1022,7 +1022,6 @@ thead .tablesorter-headerAsc {
   right: 0;
   bottom: 0;
   transition: 0.2s;
-  z-index: -100;
 }
 
 .toggle {
@@ -1052,7 +1051,7 @@ thead .tablesorter-headerAsc {
 
 input:checked + .switch_wrapper .toggle_wrapper {
     transform: translate(70%);
-    transform: translate(calc(100% - 2.1em));
+    transform: translate(calc(100% - 2em));
 }
 
 input:checked + .switch_wrapper .toggle {
