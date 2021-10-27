@@ -290,10 +290,7 @@ item-extras {
 	width: 50px;
   margin-left: 10px;
   overflow: hidden;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
+	@include user-select(none);
 
 	@include mobile {
 		display: none;
@@ -991,3 +988,103 @@ thead .tablesorter-headerAsc {
 }
 
 /*=============== END post table layout styles ===============*/
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  height: 2em;
+  line-height: 1.8em;
+  font-size: 1.2em;
+  overflow: hidden;
+  border-radius: 0.2em;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 50%);
+  cursor: pointer;
+}
+
+.switch input {
+  display: none;
+}
+
+.switch_wrapper {
+  display: grid;
+}
+
+.toggle_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.2s;
+  z-index: -100;
+}
+
+.toggle {
+  position: absolute;
+  height: 100%;
+  width: 200%;
+  left: -100%;
+  left: calc(-100% + 0.2em);
+  cursor: pointer;
+  background-color: $white;
+}
+
+.toggle::before {
+  position: absolute;
+  content: "";
+  height: 1.4em;
+  width: 1.4em;
+  left: 50%;
+  bottom: 0.16em;
+  background: rgb(241 241 241 / 90%);
+  border: 0.15em solid $gray;
+  box-shadow: $boxshadow;
+  transition: 0.2s;
+  border-radius: 0.2em;
+}
+
+input:checked + .switch_wrapper .toggle_wrapper {
+    transform: translate(60%);
+    transform: translate(calc(100% - 2.1em));
+}
+
+input:checked + .switch_wrapper .toggle {
+  background-color: #009688;
+}
+
+input:focus + .switch_wrapper .toggle {
+  box-shadow: none;
+}
+
+input:checked + .switch_wrapper .toggle::before {
+  border: 0.15em solid $bluakDark;
+}
+
+
+.on {
+  visibility: hidden;
+  color: white;
+}
+.off {
+  color: #888888;
+}
+.on,
+.off {
+  grid-row-start: 1;
+  grid-column-start: 1;
+  font-size: 0.6em;
+  font-family: Verdana, sans-serif;
+  padding: 0em 4em;
+  text-align: center;
+  pointer-events: none;
+  @include user-select(none);
+}
+
+input:checked + .switch_wrapper .on {
+  visibility: visible;
+}
+
+input:checked + .switch_wrapper .off {
+  visibility: hidden;
+}
