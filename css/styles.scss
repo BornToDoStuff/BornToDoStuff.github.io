@@ -1028,6 +1028,7 @@ thead .tablesorter-headerAsc {
   left: calc(-100% + 0.2em);
   cursor: pointer;
   background-color: $white;
+	transition: 0.2s;
 }
 
 .toggle::before {
@@ -1075,7 +1076,7 @@ input:checked + .switch_wrapper .toggle::before {
   grid-column-start: 1;
   font-size: 0.6em;
   font-family: Verdana, sans-serif;
-  padding: 0em 4em;
+  padding: 0em 3.8em;
   text-align: center;
   pointer-events: none;
   @include user-select(none);

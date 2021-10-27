@@ -88,8 +88,8 @@
     <div class="item_rarity">{{ post.item_rarity | downcase }}</div>
     <div class="item_major">{% if major_item %}Major{% else %}Minor{% endif %}</div>
     <div class="item_cost">
-      <div class="economy_GE">{%- include numf.html number=gold_cost decimals=0 %} gp</div>
-      <div class="economy_HSE">{%- include numf.html number=silver_cost decimals=0 %} sp</div>
+      <div class="economy_GE">{% include numf.html number=gold_cost decimals=0 %} gp</div>
+      <div class="economy_HSE">{% include numf.html number=silver_cost decimals=0 %} sp</div>
     </div>
     <div class="item_attunement">{% if post.item_attunement %}Yes{% else %}{% endif %}</div>
     <div class="item_curse">{% if post.item_curse %}Yes{% else %}{% endif %}</div>

@@ -41,8 +41,8 @@
 	background: none;
 
 	display: flex;
-	user-select: none;
 	pointer-events: none;
+	@include user-select(none);
 }
 	.loading #loading-wrapper, .searching #loading-wrapper {
 		transition: none;
