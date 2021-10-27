@@ -998,7 +998,7 @@ thead .tablesorter-headerAsc {
 .switch {
   position: relative;
   display: inline-block;
-  height: 2em;
+  height: 1.8em;
   line-height: 1.8em;
   font-size: 1.2em;
   overflow: hidden;
@@ -1039,8 +1039,8 @@ thead .tablesorter-headerAsc {
 .toggle::before {
   position: absolute;
   content: "";
-  height: 1.4em;
-  width: 1.4em;
+  height: 1.45em;
+  width: 1.45em;
   left: 50%;
   bottom: 0.16em;
   background: rgba(241, 241, 241, 0.9);
@@ -1051,12 +1051,12 @@ thead .tablesorter-headerAsc {
 }
 
 input:checked + .switch_wrapper .toggle_wrapper {
-    transform: translate(60%);
+    transform: translate(70%);
     transform: translate(calc(100% - 2.1em));
 }
 
 input:checked + .switch_wrapper .toggle {
-  background-color: #009688;
+  background-color: $blueDark;
 }
 
 input:focus + .switch_wrapper .toggle {
@@ -1073,16 +1073,17 @@ input:checked + .switch_wrapper .toggle::before {
   color: white;
 }
 .off {
-  color: #888888;
+  color: $gray;
 }
 .on,
 .off {
   grid-row-start: 1;
   grid-column-start: 1;
-  font-size: 0.6em;
-  font-family: Verdana, sans-serif;
-  padding: 0em 3.8em;
+  font-size: 0.75em;
+  //font-family: Verdana, sans-serif;
+  padding: 0em 3em;
   text-align: center;
+	z-index: 10;
   pointer-events: none;
 	-webkit-touch-callout: none; /* iOS Safari */
 		-webkit-user-select: none; /* Safari */
