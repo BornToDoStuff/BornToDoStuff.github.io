@@ -1,14 +1,38 @@
-{%- if include.page_bool %}{% assign post = page %}{% endif -%}
+{%- if include.page_bool %}{%- assign post = page %}{% endif -%}
 
 {%- assign subtype_bool = false -%}
 {%- assign subtype_string = "" -%}
-{%- if post.category == "Armor" %} {% assign subtype_bool = true %} {% endif -%}
-{%- if post.category == "Weapon" %} {% assign subtype_bool = true %} {% endif -%}
+{%- if post.category == "Armor" %} {%- assign subtype_bool = true %} {% endif -%}
+{%- if post.category == "Weapon" %} {%- assign subtype_bool = true %} {% endif -%}
+
+
+
+{%- assign minor_item = false -%}
+{%- assign major_item = false -%}
+{%- if post.category == "Weapon" %}
+  {% if post.item_subtypes contains "Ammunition" %}
+    {%- assign minor_item = true -%}
+  {% else %}
+    {%- assign major_item = true -%}
+  {% endif %}
+{% endif -%}
+{%- if post.category == "Armor" %}  {%- assign major_item = true -%} {% endif -%}
+{%- if post.category == "Scroll" %} {%- assign minor_item = true -%} {% endif -%}
+{%- if post.category == "Potion" %} {%- assign minor_item = true -%} {% endif -%}
+
+{%- if minor_item == false and major_item == false %}
+  {%- if post.item_rarity == "Mediocre" or post.item_rarity == "Common" or post.item_rarity == "Uncommon" %}
+    {%- assign minor_item = true -%}
+  {% else %}
+    {%- assign major_item = true -%}
+  {% endif -%}
+{% endif -%}
+
 
 
 {%- assign rarity = post.item_rarity | downcase -%}
-{%- assign gold_scale = site.data.economy.gold_economy.scale.default | times: 100 -%}
-{%- assign silver_scale = site.data.economy.historic_silver_economy.scale.default | times: 100 -%}
+{%- assign gold_scale = site.data.economy.gold_economy.scale.default -%}
+{%- assign silver_scale = site.data.economy.historic_silver_economy.scale.default -%}
 
 {%- if post.category == "Scroll" %}
   {%- assign gold_values = site.data.economy.gold_economy.scrolls[{{rarity}}] -%}
@@ -19,38 +43,25 @@
 {% endif -%}
 
 {%- if post.category == "Scroll" %}
-  {%- assign gold_scale = site.data.economy.gold_economy.scale.scrolls | times: 100 -%}
-  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.scrolls | times: 100 -%}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.scrolls -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.scrolls -%}
 {% endif -%}
 {%- if post.category == "Potion" %}
-  {%- assign gold_scale = site.data.economy.gold_economy.scale.potions | times: 100 -%}
-  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.potions | times: 100 -%}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.potions -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.potions -%}
 {% endif -%}
 {%- if post.item_subtypes contains "Ammunition" %}
-  {%- assign gold_scale = site.data.economy.gold_economy.scale.ammunition | times: 100 -%}
-  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.ammunition | times: 100 -%}
+  {%- assign gold_scale = site.data.economy.gold_economy.scale.ammunition -%}
+  {%- assign silver_scale = site.data.economy.historic_silver_economy.scale.ammunition -%}
 {% endif -%}
 
 
-{%- assign minor_item = false -%}
-{%- assign major_item = false -%}
-{%- if post.category == "Weapon" %}
-  {% if post.item_subtypes contains "Ammunition" %}
-    {% assign minor_item = true %}
-  {% else %}
-    {% assign major_item = true %}
-  {% endif %}
-{% endif -%}
-{%- if post.category == "Armor" %}  {% assign major_item = true %} {% endif -%}
-{%- if post.category == "Scroll" %} {% assign minor_item = true %} {% endif -%}
-{%- if post.category == "Potion" %} {% assign minor_item = true %} {% endif -%}
-
-{%- if minor_item == false and major_item == false %}
-  {%- if post.item_rarity == "Mediocre" or post.item_rarity == "Common" or post.item_rarity == "Uncommon" %}
-    {% assign minor_item = true %}
-  {% else %}
-    {% assign major_item = true %}
-  {% endif -%}
+{%- if major_item %}
+  {%- assign gold_cost = gold_values["max"] | times: gold_scale -%}
+  {%- assign silver_cost = silver_values["max"] | times: silver_scale -%}
+{% else %}
+  {%- assign gold_cost = gold_values["max"] | plus: gold_values["min"] | divided_by: 2 | times: gold_scale -%}
+  {%- assign silver_cost = silver_values["max"] | plus: silver_values["min"] | divided_by: 2 | times: silver_scale -%}
 {% endif -%}
 
 
@@ -77,8 +88,8 @@
     <div class="item_rarity">{{ post.item_rarity | downcase }}</div>
     <div class="item_major">{% if major_item %}Major{% else %}Minor{% endif %}</div>
     <div class="item_cost">
-      <div class="economy_GE">{% if major_item %}{{ gold_values["max"] | times: gold_scale | round | money_without_currency | remove: '.00' }}{% else %}{{ gold_values["max"] | plus: gold_values["min"] | divided_by: 2 | times: gold_scale | round | money_without_currency | remove: '.00' }}{% endif %} gp</div>
-      <div class="economy_HSE">{% if major_item %}{{ silver_values["max"] | times: silver_scale | round | money_without_currency | remove: '.00' }}{% else %}{{ silver_values["max"] | plus: silver_values["min"] | divided_by: 2 | times: silver_scale | round | money_without_currency | remove: '.00' }}{% endif %} sp</div>
+      <div class="economy_GE">{% include numf.html number=gold_cost decimals=0 %} gp</div>
+      <div class="economy_HSE">{% include numf.html number=silver_cost decimals=0 %} sp</div>
     </div>
     <div class="item_attunement">{% if post.item_attunement %}Yes{% else %}{% endif %}</div>
     <div class="item_curse">{% if post.item_curse %}Yes{% else %}{% endif %}</div>
