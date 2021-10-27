@@ -1051,7 +1051,7 @@ thead .tablesorter-headerAsc {
 
 input:checked + .switch_wrapper .toggle_wrapper {
     transform: translate(70%);
-    transform: translate(calc(100% - 2em));
+    transform: translate(calc(100% - 1.8em));
 }
 
 input:checked + .switch_wrapper .toggle {
@@ -1098,4 +1098,19 @@ input:checked + .switch_wrapper .on {
 
 input:checked + .switch_wrapper .off {
   visibility: hidden;
+}
+
+
+
+
+.setting_item {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -10px;
+	padding: 10px 0px;
+	border-bottom: 1px solid #eee;
+}
+.setting_item > * {
+  flex: 1 1 400px;
+  margin: 10px;
 }
