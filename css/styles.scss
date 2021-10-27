@@ -290,7 +290,12 @@ item-extras {
 	width: 50px;
   margin-left: 10px;
   overflow: hidden;
-	@include user-select(none);
+	-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		 -khtml-user-select: none; /* Konqueror HTML */
+			 -moz-user-select: none; /* Old versions of Firefox */
+				-ms-user-select: none; /* Internet Explorer/Edge */
+						user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 
 	@include mobile {
 		display: none;
@@ -1079,7 +1084,12 @@ input:checked + .switch_wrapper .toggle::before {
   padding: 0em 3.8em;
   text-align: center;
   pointer-events: none;
-  @include user-select(none);
+	-webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		 -khtml-user-select: none; /* Konqueror HTML */
+			 -moz-user-select: none; /* Old versions of Firefox */
+				-ms-user-select: none; /* Internet Explorer/Edge */
+						user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 input:checked + .switch_wrapper .on {
