@@ -1003,7 +1003,7 @@ thead .tablesorter-headerAsc {
   font-size: 1.2em;
   overflow: hidden;
   border-radius: 0.2em;
-  box-shadow: 0px 1px 3px rgb(0 0 0 / 50%);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
   cursor: pointer;
 }
 
@@ -1043,7 +1043,7 @@ thead .tablesorter-headerAsc {
   width: 1.4em;
   left: 50%;
   bottom: 0.16em;
-  background: rgb(241 241 241 / 90%);
+  background: rgba(241, 241, 241, 0.9);
   border: 0.15em solid $gray;
   box-shadow: $boxshadow;
   transition: 0.2s;
