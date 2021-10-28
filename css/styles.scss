@@ -196,18 +196,45 @@ item-description {
 	}
 }
 item-details {
-	display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-direction: row-reverse;
-  margin-top: auto;
-	margin-bottom: -5px;
-	order: 2;
-}
-item-details > div {
 	display: none;
+
+	background: $backgroundLight;
+	padding: 10px;
+	column-count: 2;
+	column-width: 500px;
+	width: 100%;
+	margin-top: auto;
+	margin-bottom: -5px;
+	order: 1;
+
+	&.advanced { display: flex; }
+
+	.item_tags {
+	  display: flex;
+	  gap: 5px;
+
+		.tag {
+	    border: 1px solid $gray;
+	    border-radius: 2px;
+	    padding: 2px 4px;
+		}
+	}
 }
+
 #item-wrapper > magic-item item-details {
+	item-details {
+		display: flex;
+	  justify-content: space-between;
+	  align-items: baseline;
+	  flex-direction: row-reverse;
+	  margin-top: auto;
+		margin-bottom: -5px;
+		order: 2;
+	}
+	item-details > div {
+		display: none;
+	}
+
 	// .item_id, .item_date {
 	// 	display: inline-block;
 	// 	color: $bluakDark;

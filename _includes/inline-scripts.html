@@ -362,6 +362,10 @@
 			}
 		});
 		{% endif %}
+
+		if(localStorage.getItem("toggleDetails")) {
+			$("item-details").addClass("advanced");
+		}
 	}
 
 	document.addEventListener("pjax:success", inlineWhenReady);
