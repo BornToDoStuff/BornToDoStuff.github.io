@@ -207,8 +207,6 @@ item-details {
 	margin-bottom: -5px;
 	order: 1;
 
-	&.advanced { display: flex; }
-
 	.item_tags {
 	  display: flex;
 	  gap: 5px;
@@ -219,6 +217,9 @@ item-details {
 	    padding: 2px 4px;
 		}
 	}
+}
+#item-wrapper > item-details.advanced {
+  display: block;
 }
 
 #item-wrapper > magic-item item-details {
