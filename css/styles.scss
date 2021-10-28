@@ -217,6 +217,15 @@ item-details {
 	    padding: 2px 4px;
 		}
 	}
+	.item_cost {
+		.economy_GE { display: block; }
+		.economy_HSE { display: none; }
+
+		&.HSE {
+			.economy_GE { display: none; }
+			.economy_HSE { display: block; }
+		}
+	}
 }
 #item-wrapper > item-details.advanced {
   display: block;
