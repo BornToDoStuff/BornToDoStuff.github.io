@@ -8,7 +8,7 @@ layout: default
     <section id="grid-sizes"> <!-- hidden div to create children in. Small hack to determine sizes without affecting display. --> </section>
     <section id="item-wrapper" data-random="false">
       {% include magic-item.html page_bool="true" %}
-
+      {% include magic-item_details.html page_bool="true" %}
       <div id="item-menu">
         <a id="btnCopy-item" href="/copy" title="Copy Text" ga-on="click" ga-event-category="Item" ga-event-action="copy">
           <img src="/images/icons/copy.svg" />
@@ -37,7 +37,7 @@ layout: default
           {%- endfor -%}
 
           {%- if sameTagCount >= minCommonTags -%}
-{%- include magic-item.html related=sameTagCount -%}
+            {%- include magic-item.html related=sameTagCount -%}
 
             {%- assign maxRelatedCounter = maxRelatedCounter | plus: 1 -%}
             {%- if maxRelatedCounter >= maxRelated -%}
