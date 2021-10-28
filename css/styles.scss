@@ -218,12 +218,12 @@ item-details {
 		}
 	}
 	.item_cost {
-		.economy_GE { display: block; }
+		.economy_GE { display: inline-block; }
 		.economy_HSE { display: none; }
 
 		&.HSE {
 			.economy_GE { display: none; }
-			.economy_HSE { display: block; }
+			.economy_HSE { display: inline-block; }
 		}
 	}
 }

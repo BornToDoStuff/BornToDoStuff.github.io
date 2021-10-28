@@ -68,9 +68,7 @@
     <div class="tag"><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></div>
   {% endfor %}
   </div>
-  <div class="item_cost"><b>Cost:</b>
-    <span class="economy_GE">{%- include numf.html number=gold_cost decimals=0 %} gp</span>
-    <span class="economy_HSE">{%- include numf.html number=silver_cost decimals=0 %} sp</span>
+  <div class="item_cost"><b>Cost:</b> <span class="economy_GE">{%- include numf.html number=gold_cost decimals=0 %} gp</span><span class="economy_HSE">{%- include numf.html number=silver_cost decimals=0 %} sp</span>
   </div>
   <div class="item_created"><b>Item Created:</b> {{ post.date | date: "%Y-%m-%d" }}</div>
   {%- if post.item_updated %}
