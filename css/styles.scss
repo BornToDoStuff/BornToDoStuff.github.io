@@ -1111,6 +1111,14 @@ input:checked + .switch_wrapper .off {
 	border-bottom: 1px solid #eee;
 }
 .setting_item > * {
-  flex: 1 1 400px;
-  margin: 10px;
+	margin: 10px;
+}
+
+.setting_desc {
+  flex: 1 1 600px;
+}
+.setting_prop {
+	flex: 1 1 200px;
+  display: flex;
+  align-items: center;
 }

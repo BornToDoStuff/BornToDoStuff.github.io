@@ -64,3 +64,14 @@ permalink: /settings/
     </label>
   </div>
 </div>
+
+<script>
+  $("input[type='checkbox']").change(function() {
+    if(this.checked) {
+      localStorage.setItem(this.id, 'true');
+    }
+    else {
+      localStorage.setItem(this.id, 'false');
+    }
+  });
+</script>
