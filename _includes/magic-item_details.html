@@ -72,7 +72,7 @@
     <div class="economy_GE">{%- include numf.html number=gold_cost decimals=0 %} gp</div>
     <div class="economy_HSE">{%- include numf.html number=silver_cost decimals=0 %} sp</div>
   </div>
-  <div class="item_created"><b>Item Created:</b> {{ post.date | date: "%Y-%m-%d" }}
+  <div class="item_created"><b>Item Created:</b> {{ post.date | date: "%Y-%m-%d" }}</div>
   {%- if post.item_updated %}
   <div class="item_updated"><b>Updated:</b> {{ post.item_updated }}</div>
   {% endif -%}
