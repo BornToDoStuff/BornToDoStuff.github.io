@@ -345,6 +345,23 @@
 			}, 800);
 			return false;
 		});
+
+		{% if page.toggles %}
+		$("input[type='checkbox']").each(function(i){
+			if (localStorage.getItem(this.id)){
+				$(this).prop("checked", true);
+			}
+		});
+
+		$("input[type='checkbox']").change(function() {
+			if(this.checked) {
+				localStorage.setItem(this.id, "true");
+			}
+			else {
+				localStorage.setItem(this.id, "");
+			}
+		});
+		{% endif %}
 	}
 
 	document.addEventListener("pjax:success", inlineWhenReady);
