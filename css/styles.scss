@@ -150,15 +150,18 @@ a#TippyTop {
 section#main, section#search-results {
 	margin: 0px auto;
 }
-magic-item {
-	display: flex;
-  flex-direction: column;
-	background: $backgroundLight;
-	margin-bottom: $item-gutter;
-	padding: 20px 15px;
+
+#item-width {
 	width: $item-width;
 	max-width: 90vw;
   max-width: calc(100vw - 30px);
+}
+
+magic-item, magic-item + item-details {
+	background: $backgroundLight;
+	margin-bottom: $item-gutter;
+	padding: 20px 15px;
+	width: 100%;
 	height: 335px;
 	box-sizing: border-box;
 	text-align: left;
@@ -168,19 +171,23 @@ magic-item {
 	border-left: none;
 	border-right: none;
 }
+magic-item {
+	display: flex;
+  flex-direction: column;
 
-	magic-item.tall {
+	&.tall {
 		height: 510px;
 	}
-	magic-item.taller {
+	&.taller {
 		height:685px;
 	}
-	magic-item.tallest {
+	&.tallest {
 		height: 860px;
 	}
-	magic-item.infinite {
+	&.infinite {
 		height: initial!important;
 	}
+}
 
 item-description {
 	overflow: hidden;
@@ -195,21 +202,17 @@ item-description {
 		shape-image-threshold: 0.3;
 	}
 }
+
 item-details {
 	display: none;
-
-	background: $backgroundLight;
-	padding: 10px;
 	column-count: 2;
 	column-width: 500px;
-	width: 100%;
-	margin-top: auto;
-	margin-bottom: -5px;
 	order: 1;
 
 	.item_tags {
 	  display: flex;
 	  gap: 5px;
+		-webkit-column-break-inside: avoid;
 
 		.tag {
 	    border: 1px solid $gray;
@@ -227,21 +230,20 @@ item-details {
 		}
 	}
 }
-#item-wrapper > item-details.advanced {
+#item-width > item-details.advanced {
   display: block;
 }
 
-#item-wrapper > magic-item item-details {
-	item-details {
-		display: flex;
-	  justify-content: space-between;
-	  align-items: baseline;
-	  flex-direction: row-reverse;
-	  margin-top: auto;
-		margin-bottom: -5px;
-		order: 2;
-	}
-	item-details > div {
+#item-width > magic-item item-details {
+	display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-direction: row-reverse;
+  margin-top: auto;
+	margin-bottom: -5px;
+	order: 2;
+
+	& > div {
 		display: none;
 	}
 
@@ -423,7 +425,7 @@ magic-item.artifact.attunement .rarity img {
     justify-content: center;
 	}
 
-	& > magic-item {
+	#item-width > magic-item {
 		flex-wrap: wrap;
 		height: initial!important;
 		min-height: 335px;
@@ -443,7 +445,8 @@ magic-item.artifact.attunement .rarity img {
 	}
 
 	@include double-up {
-		magic-item.double {
+
+		#item-width.double {
 			width: 1030px;
 
 			item-description {
@@ -452,7 +455,7 @@ magic-item.artifact.attunement .rarity img {
 			}
 		}
 
-		& > magic-item.image {
+		#item-width.image {
 			width: 900px;
 			// display: block;
 
@@ -474,7 +477,7 @@ magic-item.artifact.attunement .rarity img {
 
 		}
 
-		& > magic-item > img {
+		#item-width magic-item > img {
 			display: block;
 		}
 	}

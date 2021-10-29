@@ -7,8 +7,10 @@ layout: default
   <div id="main-wrapper">
     <section id="grid-sizes"> <!-- hidden div to create children in. Small hack to determine sizes without affecting display. --> </section>
     <section id="item-wrapper" data-random="false">
-      {% include magic-item.html page_bool="true" %}
-      {% include magic-item_details.html page_bool="true" %}
+      <div id="item-width" class="{% if page.item_image %} image{% endif %}">
+        {% include magic-item.html page_bool="true" %}
+        {% include magic-item_details.html page_bool="true" %}
+      </div>
       <div id="item-menu">
         <a id="btnCopy-item" href="/copy" title="Copy Text" ga-on="click" ga-event-category="Item" ga-event-action="copy">
           <img src="/images/icons/copy.svg" />
@@ -53,8 +55,8 @@ layout: default
   </div>
 </div>
 <script>
-  let magicheader = document.querySelector("#item-wrapper > magic-item item-head");
-  let magicimage  = document.querySelector("#item-wrapper > magic-item item-description img");
+  let magicheader = document.querySelector("#item-width > magic-item item-head");
+  let magicimage  = document.querySelector("#item-width > magic-item item-description img");
   if (magicimage) {
     magicheader.insertAdjacentHTML('afterEnd', magicimage.outerHTML);
   }

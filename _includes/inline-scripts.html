@@ -182,14 +182,14 @@
 				checkRelated();
 				$("#related magic-item").each(function(){setItemHeight($(this), false)});
 
-				if ($("#item-wrapper > magic-item").height() > 750) {
-					$("#item-wrapper > magic-item").addClass("double");
+				if ($("#item-width > magic-item").height() > 750) {
+					$("#item-width").addClass("double");
 				}
 			});
 		}
 
-		if ($("#item-wrapper > magic-item").height() > 750) {
-			$("#item-wrapper > magic-item").addClass("double");
+		if ($("#item-width > magic-item").height() > 750) {
+			$("#item-width").addClass("double");
 		}
 
 		function checkRelated() {
@@ -367,7 +367,7 @@
 			$("item-details").addClass("advanced");
 		}
 		if(localStorage.getItem("toggleEconomy")) {
-			$("item-cost").addClass("HSE");
+			$("item_cost").addClass("HSE");
 		}
 	}
 
