@@ -150,11 +150,6 @@ a#TippyTop {
 section#main, section#search-results {
 	margin: 0px auto;
 }
-#main > magic-item {
-	width: $item-width;
-	max-width: 90vw;
-  max-width: calc(100vw - 30px);
-}
 
 #item-width {
 	width: $item-width;
@@ -179,6 +174,10 @@ magic-item, magic-item + item-details {
 magic-item {
 	display: flex;
   flex-direction: column;
+	
+	width: $item-width;
+	max-width: 90vw;
+  max-width: calc(100vw - 30px);
 
 	&.tall {
 		height: 510px;
@@ -432,6 +431,8 @@ magic-item.artifact.attunement .rarity img {
 	}
 
 	#item-width > magic-item {
+		width: 100%;
+		max-width: initial;
 		flex-wrap: wrap;
 		height: initial!important;
 		min-height: 335px;
