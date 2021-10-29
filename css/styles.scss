@@ -155,6 +155,7 @@ section#main, section#search-results {
 	width: $item-width;
 	max-width: 90vw;
   max-width: calc(100vw - 30px);
+	order: 1;
 }
 
 magic-item, magic-item + item-details {
@@ -162,7 +163,6 @@ magic-item, magic-item + item-details {
 	margin-bottom: $item-gutter;
 	padding: 20px 15px;
 	width: 100%;
-	height: 335px;
 	box-sizing: border-box;
 	text-align: left;
 	position: relative;
@@ -206,13 +206,14 @@ item-description {
 item-details {
 	display: none;
 	column-count: 2;
-	column-width: 500px;
+	column-width: 250px;
 	order: 1;
 
 	.item_tags {
 	  display: flex;
 	  gap: 5px;
 		-webkit-column-break-inside: avoid;
+		column-span: all;
 
 		.tag {
 	    border: 1px solid $gray;
