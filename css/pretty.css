@@ -10,6 +10,9 @@ body {
 item-details {
   display: none;
 }
+.item_type, .item_subtypes, .item_id, .item_tags, .item_created {
+  display: none!important;
+}
 
 #item-wrapper {
   padding: 30px;
@@ -113,4 +116,30 @@ item-title {
 }
 #item-wrapper.text-only > magic-item item-description img {
   display: none;
+}
+
+#pretty-controls {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#item-width.advanced {
+  item-description {
+    /* margin-bottom: 30px; */
+  }
+  magic-item + item-details {
+    display: block;
+    position: absolute;
+    margin: 0px;
+    bottom: 32px;
+    column-count: 1;
+    background: none;
+    border: none;
+    opacity: 0.5;
+    padding: 0px 25px 8px 25px;
+    font-size: 0.9em;
+    line-height: 1.2em;
+  }
 }

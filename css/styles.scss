@@ -157,6 +157,9 @@ section#main, section#search-results {
   max-width: calc(100vw - 30px);
 	order: 1;
 }
+#pretty_controls {
+	display: none;
+}
 
 magic-item, magic-item + item-details {
 	background: $backgroundLight;
@@ -215,17 +218,17 @@ item-details {
 
 	.item_tags {
 	  display: flex;
+		flex-wrap: wrap;
 	  gap: 5px;
-		-webkit-column-break-inside: avoid;
 		column-span: all;
-		border-top: 1px solid $lightGray;
+		border-top: 1px solid $borderLight;
     padding-top: 7px;
     margin-top: 7px;
 
 		.tag {
-	    border: 1px solid $gray;
+	    border: 1px solid $mediumGray;
 	    border-radius: 2px;
-	    padding: 2px 4px;
+	    padding: 0px 4px;
 		}
 	}
 	.item_cost {
@@ -580,7 +583,7 @@ magic-item.artifact.attunement .rarity img {
 	margin-top: 1.25em;
 	margin-bottom: 0.5em;
 	position: relative;
-	border: 2px solid #e0e0e0;
+	border: 2px solid $borderLight;
 	border-top: none;
 	border-radius: 4px;
 	padding: 15px;
@@ -601,7 +604,7 @@ magic-item.artifact.attunement .rarity img {
 		width: 90%;
 		width: calc( 100% - 55px );
 		height: 0.85em;
-		border-top: 2px solid #e0e0e0;
+		border-top: 2px solid $borderLight;
 		border-radius: 4px;
 		position: absolute;
 		top: 0px;
