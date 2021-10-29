@@ -67,10 +67,10 @@
   </div>
   <div class="item_created"><b>Item Created:</b> {{ post.date | date: "%Y-%m-%d" }}</div>
   {%- if post.item_updated %}
-  <div class="item_updated"><b>Updated:</b> {{ post.item_updated }}</div>
+  <div class="item_updated"><b>Last Updated:</b> {{ post.item_updated }}</div>
   {% endif -%}
   <div class="item_id"><b>Item #:</b> {{ post.item_id }}</div>
-  <div class="item_tags"><b>tags:</b>
+  <div class="item_tags"><b>Tags:</b>
   {% for tag in post.tags | sort %}
     <div class="tag"><a href="/tags/#{{ tag | slugify }}">{{tag}}</a></div>
   {% endfor %}

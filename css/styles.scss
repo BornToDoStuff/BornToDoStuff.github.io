@@ -174,7 +174,7 @@ magic-item, magic-item + item-details {
 magic-item {
 	display: flex;
   flex-direction: column;
-	
+
 	width: $item-width;
 	max-width: 90vw;
   max-width: calc(100vw - 30px);
@@ -218,6 +218,9 @@ item-details {
 	  gap: 5px;
 		-webkit-column-break-inside: avoid;
 		column-span: all;
+		border-top: 1px solid $darkGray;
+    padding-top: 7px;
+    margin-top: 7px;
 
 		.tag {
 	    border: 1px solid $gray;
