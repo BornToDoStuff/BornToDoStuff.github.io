@@ -150,6 +150,11 @@ a#TippyTop {
 section#main, section#search-results {
 	margin: 0px auto;
 }
+#main > magic-item {
+	width: $item-width;
+	max-width: 90vw;
+  max-width: calc(100vw - 30px);
+}
 
 #item-width {
 	width: $item-width;
