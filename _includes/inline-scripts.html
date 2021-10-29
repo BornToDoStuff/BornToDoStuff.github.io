@@ -376,13 +376,17 @@
 		}
 
 		$("#btnPrettyDownload").on("click", function() {
-			htmlToImage.toPng(document.getElementById("item-wrapper"))
-		    .then(function (dataUrl) {
-		        var link = document.createElement('a');
-		        link.download = slugify($("#item-width item-title a").text()) + ".png";
-		        link.href = dataUrl;
-		        link.click();
-		    });
+			htmlToImage.toCanvas(document.getElementById("item-wrapper"))
+			  .then(function (canvas) {
+			    document.body.appendChild(canvas);
+			  });
+			// htmlToImage.toPng(document.getElementById("item-wrapper"))
+		  //   .then(function (dataUrl) {
+		  //       var link = document.createElement('a');
+		  //       link.download = slugify($("#item-width item-title a").text()) + ".png";
+		  //       link.href = dataUrl;
+		  //       link.click();
+		  //   });
 		});
 		$("#prettyCurrency").change(function() {
 			$(".item_cost").toggle();
