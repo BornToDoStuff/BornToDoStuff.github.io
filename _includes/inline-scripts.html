@@ -375,7 +375,7 @@
 			$(".item_cost").addClass("HSE");
 		}
 
-		$("btnPrettyDownload").on("click", function() {
+		$("#btnPrettyDownload").on("click", function() {
 			domtoimage.toPng(document.getElementById("item-wrapper"))
 		    .then(function (dataUrl) {
 		        var link = document.createElement('a');

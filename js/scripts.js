@@ -25,3 +25,8 @@
 /* isotope.pkgd.min.js */
 /* ==================== */
 {% include /js/isotope.pkgd.min.js %}
+
+/* ==================== */
+/* dom-to-img.min.js */
+/* ==================== */
+{% include /js/dom-to-img.min.js %}
