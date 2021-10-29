@@ -376,7 +376,7 @@
 		}
 
 		$("#btnPrettyDownload").on("click", function() {
-			htmlToImage.toCanvas(document.getElementById("item-wrapper"))
+			htmlToImage.toCanvas(document.getElementById("item-wrapper"), { style:{ "margin":"0px" } })
 			  .then(function (canvas) {
 			    document.body.appendChild(canvas);
 			  });

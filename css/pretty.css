@@ -36,7 +36,7 @@ body {
 item-details {
   display: none;
 }
-.item_type, .item_subtypes, .item_id, .item_tags, .item_created {
+.item_type, .item_subtypes, .item_id, .item_tags, .item_created, .item_updated {
   display: none!important;
 }
 
@@ -60,6 +60,10 @@ magic-item + item-details {
   padding: 0px 25px 8px 25px;
   font-size: 0.9em;
   line-height: 1.2em;
+}
+magic-item.image + item-details {
+  width: 550px;
+  right: 30px;
 }
 
 magic-item {
