@@ -1158,13 +1158,10 @@ input:checked + .switch_wrapper .off {
 
 .setting_item {
 	display: flex;
+	gap: 20px;
 	flex-wrap: wrap;
-	margin: -10px;
 	padding: 10px 0px;
 	border-bottom: 1px solid #eee;
-}
-.setting_item > * {
-	margin: 10px;
 }
 
 .setting_desc {

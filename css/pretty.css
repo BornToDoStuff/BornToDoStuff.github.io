@@ -1,9 +1,35 @@
+body {
+  /* font-size: 1.8rem; */
+  background: none;
+}
+
+#navbar {
+  display: none;
+}
+
 #pretty-controls {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
-  background: white;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+#pretty-controls .setting_prop {
+  flex: 1 1 120px;
+  justify-content: flex-end;
+}
+
+#pretty-controls .setting_desc {
+  flex: 1 1 100px;
+}
+#pretty-controls button {
+  background: #1c7e9d;
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 item-details {

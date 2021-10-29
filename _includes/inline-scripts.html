@@ -155,6 +155,10 @@
 			return Math.floor(Math.random() * (max - min + 1) ) + min;
 		}
 
+		function slugify(text) {
+			return text.toLowerCase().replace(/[^\w ]+/g, '').replace(/ +/g, '-');
+		}
+
 		checkContextButton(); /* check once on load */
 
 		if ($("#item-wrapper").data("random")) {
@@ -370,6 +374,25 @@
 		if(localStorage.getItem("toggleEconomy")) {
 			$(".item_cost").addClass("HSE");
 		}
+
+		$("btnPrettyDownload").on("click", function() {
+			domtoimage.toPng(document.getElementById("item-wrapper"))
+		    .then(function (dataUrl) {
+		        var link = document.createElement('a');
+		        link.download = slugify($("#item-width item-title a").text()) + ".png";
+		        link.href = dataUrl;
+		        link.click();
+		    });
+		});
+		$("#prettyCurrency").change(function() {
+			$(".item_cost").toggle();
+		});
+		$("#prettySchool").change(function() {
+			$(".item_school").toggle();
+		});
+		$("#prettyCurse").change(function() {
+			$(".curse").toggle();
+		});
 	}
 
 	document.addEventListener("pjax:success", inlineWhenReady);
