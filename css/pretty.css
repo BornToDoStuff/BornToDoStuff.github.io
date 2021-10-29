@@ -7,7 +7,7 @@ body {
   display: none;
 }
 
-#pretty-controls {
+#pretty_controls {
   position: absolute;
   top: 0;
   left: 0;
@@ -15,15 +15,15 @@ body {
   background: rgba(255, 255, 255, 0.75);
 }
 
-#pretty-controls .setting_prop {
+#pretty_controls .setting_prop {
   flex: 1 1 120px;
   justify-content: flex-end;
 }
 
-#pretty-controls .setting_desc {
+#pretty_controls .setting_desc {
   flex: 1 1 100px;
 }
-#pretty-controls button {
+#pretty_controls button {
   background: #1c7e9d;
   color: white;
   border: none;
