@@ -376,7 +376,7 @@
 		}
 
 		$("#btnPrettyDownload").on("click", function() {
-			domtoimage.toPng(document.getElementById("item-wrapper"))
+			htmlToImage.toPng(document.getElementById("item-wrapper"))
 		    .then(function (dataUrl) {
 		        var link = document.createElement('a');
 		        link.download = slugify($("#item-width item-title a").text()) + ".png";
