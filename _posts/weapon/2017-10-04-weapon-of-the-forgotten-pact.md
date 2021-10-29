@@ -16,6 +16,7 @@ item_damage:
   - Psychic
 tags:
   - Bonus Action
+  - Cursed
 item_idea:
 item_co_creator:
 item_updated:

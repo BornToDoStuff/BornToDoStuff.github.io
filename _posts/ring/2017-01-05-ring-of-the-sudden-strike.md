@@ -20,6 +20,7 @@ tags:
   - Teleportation
   - Legendary Action
   - Advantage
+  - Cursed
 item_image: "/images/item_art/ring-of-the-sudden-strike.png"
 image_artist: Direquest
 item_idea:

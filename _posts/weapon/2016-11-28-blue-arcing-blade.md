@@ -21,7 +21,7 @@ tags:
   - Lightning
   - Water
   - Curse Purge
-  
+  - Cursed
   - Long Rest
 item_idea:
 item_co_creator:

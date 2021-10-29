@@ -16,6 +16,7 @@ item_damage:
 tags:
   - Truesight
   - Mythology
+  - Cursed
 item_idea: Greek mythology
 item_co_creator:
 item_updated:

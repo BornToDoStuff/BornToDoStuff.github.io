@@ -24,6 +24,7 @@ tags:
   - Incapacitated
   - Deafened
   - Short Rest
+  - Cursed
 item_idea:
 item_co_creator:
 item_updated:

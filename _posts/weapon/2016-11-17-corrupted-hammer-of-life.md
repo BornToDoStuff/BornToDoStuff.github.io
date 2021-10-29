@@ -20,7 +20,7 @@ item_damage:
   - Radiant
 tags:
   - Tradeoff
-  
+  - Cursed
   - Undead
   - Critical
   - Healing

@@ -25,6 +25,7 @@ tags:
   - Fire
   - Lightning
   - Blinded
+  - Cursed
 item_idea: "https://en.wikipedia.org/wiki/Xiuhcoatl 'turquoise lord' and 'lord of fire'. Huitzilopochtli was apparently known for wielding a staff (or atlatl depending on depiction) which was the weapon form of the avatar of Xiuhtecuhtli, a lesser god. This is me taking artistic liberty of that weapon and those deities."
 item_co_creator: 
 item_updated: 2021-04-03

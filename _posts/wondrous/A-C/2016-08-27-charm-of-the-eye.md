@@ -19,7 +19,7 @@ item_damage:
 tags:
   - Attack of Opportunity
   - Disadvantage
-  
+  - Cursed
 item_idea:
 item_co_creator:
 item_updates: [2017-10-16, 2018-12-26]
