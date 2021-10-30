@@ -45,6 +45,7 @@ item-details {
   background: #495b65 url("/images/hatching_light.png");
   margin-bottom: 50px;
   max-width: 950px;
+  width: -moz-fit-content;
   width: fit-content;
 }
 
@@ -131,6 +132,7 @@ item-title {
   width: 100%;
   max-height: initial;
   height: fit-content;
+  height: -moz-fit-content;
   float: none;
   display: flex;
   justify-content: center;

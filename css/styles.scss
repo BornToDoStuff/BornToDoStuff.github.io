@@ -194,6 +194,11 @@ magic-item {
 		height: initial!important;
 	}
 }
+@supports (-moz-appearance:none) {
+	magic-item {
+		flex-wrap: wrap;
+	}
+}
 
 item-description {
 	overflow: hidden;
