@@ -438,7 +438,6 @@ magic-item.artifact.attunement .rarity img {
 	#item-width > magic-item {
 		width: 100%;
 		max-width: initial;
-		flex-wrap: wrap;
 		height: initial!important;
 		min-height: 335px;
 		order: 1;
@@ -579,7 +578,7 @@ magic-item.artifact.attunement .rarity img {
 }
 
 .curse, .notes, .sentience {
-	margin-top: 1.25em;
+	margin-top: 1em;
 	margin-bottom: 0.5em;
 	position: relative;
 	border: 2px solid $borderLight;
