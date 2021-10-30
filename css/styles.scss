@@ -195,7 +195,7 @@ magic-item {
 	}
 }
 @supports (-moz-appearance:none) {
-	magic-item {
+	#item-width magic-item {
 		flex-wrap: wrap;
 	}
 }
