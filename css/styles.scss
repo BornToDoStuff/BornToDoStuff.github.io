@@ -194,10 +194,8 @@ magic-item {
 		height: initial!important;
 	}
 }
-@supports (-moz-appearance:none) {
-	#item-width magic-item.image {
-		flex-wrap: wrap;
-	}
+#item-width magic-item.image {
+	flex-wrap: wrap;
 }
 
 item-description {
