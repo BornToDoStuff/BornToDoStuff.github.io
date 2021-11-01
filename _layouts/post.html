@@ -53,58 +53,7 @@ layout: default
         {%- endfor -%}
       </div>
     </section>
-    <div id="pretty_controls">
-      <div class="setting_item advanced">
-        <div class="setting_desc">
-          <h3>Currency</h3>
-        </div>
-        <div class="setting_prop">
-          <label class="switch">
-            <input type="checkbox" id="prettyCurrency">
-            <div class="switch_wrapper">
-              <span class="off">OFF</span><span class="on">ON</span>
-              <div class="toggle_wrapper">
-                <div class="toggle"></div>
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
-      <div class="setting_item advanced">
-        <div class="setting_desc">
-          <h3>School</h3>
-        </div>
-        <div class="setting_prop">
-          <label class="switch">
-            <input type="checkbox" id="prettySchool">
-            <div class="switch_wrapper">
-              <span class="off">OFF</span><span class="on">ON</span>
-              <div class="toggle_wrapper">
-                <div class="toggle"></div>
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
-      <div class="setting_item">
-        <div class="setting_desc">
-          <h3>Curse</h3>
-        </div>
-        <div class="setting_prop">
-          <label class="switch">
-            <input type="checkbox" id="prettyCurse" checked>
-            <div class="switch_wrapper">
-              <span class="off">OFF</span><span class="on">ON</span>
-              <div class="toggle_wrapper">
-                <div class="toggle"></div>
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
-      <button id="btnPrettyDownload">Download Image</button>
-      <button id="btnPrettyReturn" onclick="location.reload()">Return to Site</button>
-    </div>
+    {% include pretty-controls.html %}
     <section id="main" data-scrollable="false"></section>
     <section id="search-results"></section>
     <section id="pagination"></section>
