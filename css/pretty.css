@@ -71,7 +71,7 @@ magic-item.image + item-details {
 }
 
 magic-item {
-  min-height: 550px!important;
+  /* min-height: 550px!important; */
   padding: 25px;
   margin: 0px;
   position: relative;

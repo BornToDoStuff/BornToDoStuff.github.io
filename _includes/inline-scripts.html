@@ -401,6 +401,12 @@
 		$("#prettyCurse").change(function() {
 			$(".curse").toggle();
 		});
+		$("#prettyText").change(function() {
+			$("#item-width").toggleClass("text-only");
+		});
+		$("#prettyImage").change(function() {
+			$("#item-width").toggleClass("image-only");
+		});
 	}
 
 	document.addEventListener("pjax:success", inlineWhenReady);
