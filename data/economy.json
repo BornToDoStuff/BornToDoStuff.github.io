@@ -13,6 +13,7 @@
     	"rare": 	  { "min": 500, "max": 5000 },
     	"very rare":{ "min": 5000, "max": 50000 },
     	"legendary":{ "min": 50000, "max": 500000 },
+      "artifact": { "min": 500000, "max": 5000000 },
     	"mythic": 	{ "min": 500000, "max": 5000000 }
     },
     "scrolls": {
@@ -22,6 +23,7 @@
       "rare": 	  { "level": 4, "min": 250, "max": 2500 },
       "very rare":{ "level": 6, "min": 2500, "max": 25000 },
       "legendary":{ "level": 9, "min": 25000, "max": 250000 },
+      "artifact": { "level": 10, "min": 250000, "max": 2500000 },
       "mythic": 	{ "level": 10, "min": 250000, "max": 2500000 },
       "levels": 	[
         { "min": 3, "max": 25 },
@@ -52,6 +54,7 @@
     	"rare": 	  { "min": 800, "max": 4800 },
     	"very rare":{ "min": 4800, "max": 38000 },
     	"legendary":{ "min": 38000, "max": 380000 },
+      "artifact": { "min": 380000, "max": 4600000 },
     	"mythic": 	{ "min": 380000, "max": 4600000 }
     },
     "scrolls": {
@@ -61,6 +64,7 @@
       "rare": 	  { "level": 4, "min": 400, "max": 1200 },
       "very rare":{ "level": 6, "min": 2400, "max": 6400 },
       "legendary":{ "level": 9, "min": 19000, "max": 190000 },
+      "artifact": { "level": 10, "min": 190000, "max": 2300000 },
       "mythic": 	{ "level": 10, "min": 190000, "max": 2300000 },
       "levels": 	[
         { "min": 13, "max": 25 },
