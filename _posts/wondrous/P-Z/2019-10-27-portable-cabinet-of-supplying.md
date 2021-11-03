@@ -24,7 +24,8 @@ item_updated:
 last_modified_at: 
 ---
 
-This double door cabinet looks like it was made for dolls by a skilled toy-maker. When you open it, if there is room, it expands to its full size and quickly becomes 5 feet high and 3 feet wide.
+This double door cabinet looks like it was made for dolls by a skilled toy-maker. When you open it, if there is room, it expands to its full size and quickly becomes 5 feet high and 3 feet wide. 
+This item has 12 charges and regains all expended charges each day at dawn.
 
 Inside is 3 brooms, mops, and buckets, as well as a small collection of cleaning rags, soap that never runs out, and aprons, that all belong to the cabinet. These objects are teleported back into the cabinet every time it is opened.
 
