@@ -20,6 +20,7 @@ tags:
   - Tradeoff
   - Prone
   - Hit Dice
+  - Special Attunement
 item_idea:
 item_co_creator:
 item_updated:

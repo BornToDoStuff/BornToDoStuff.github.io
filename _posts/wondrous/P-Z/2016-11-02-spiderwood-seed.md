@@ -27,6 +27,7 @@ tags:
   - Movement
   - Extra Appendages
   - Body Modification
+  - Special Attunement
 item_idea:
 item_co_creator:
 item_updates: [2019-03-12, 2021-09-07]

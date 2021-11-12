@@ -24,6 +24,7 @@ tags:
   - Extreme Cold
   - Temperature
   - Aura
+  - Special Attunement
   - +Bonus
 item_idea:
 item_co_creator:

@@ -176,7 +176,7 @@ magic-item, magic-item + item-details {
 magic-item {
 	display: flex;
   flex-direction: column;
-
+	height: 335px;
 	width: $item-width;
 	max-width: 90vw;
   max-width: calc(100vw - 30px);
