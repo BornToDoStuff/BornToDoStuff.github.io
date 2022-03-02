@@ -975,7 +975,7 @@ thead .tablesorter-headerAsc {
 /*=============== START post table layout styles ===============*/
 
 #main.table, #search-results.table {
-	background: url(/images/subtle_grunge_white.jpg) rgb(255, 255, 255);
+	background: $backgroundLight;
   padding: 5px 10px;
   box-sizing: border-box;
   border-radius: 8px;
