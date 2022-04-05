@@ -55,7 +55,7 @@ h2 {
 }
 
 h3 {
-	margin-bottom: -0.3em;
+	margin-bottom: -0.3em; //likely effected by widow hack
 }
 
 h4 {
@@ -202,6 +202,19 @@ item-description {
 	overflow: hidden;
 	height: 100%; //hack to fix item height sizing
 	text-align: justify;
+
+	//minor hack to prevent widowed headers inside of item descriptions
+	h2, h3, h4 {
+		page-break-inside: avoid;
+
+		&::after {
+			content: "";
+	    pointer-events: none;
+	    display: block;
+	    height: 3em;
+	    margin-bottom: -3.3em;
+		}
+	}
 
 	img {
 		max-width: 45%;
@@ -581,9 +594,10 @@ magic-item.artifact.attunement .rarity img {
 }
 
 .curse, .notes, .sentience {
-	margin-top: 1.1em;
+	margin-top: 1em;
 	margin-bottom: 0.5em;
 	position: relative;
+	display: inline-block; //see if this is a fix-all for breaking across lines in edge cases.
 	border: 2px solid $borderLight;
 	border-top: none;
 	border-radius: 4px;
