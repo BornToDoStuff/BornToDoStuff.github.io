@@ -206,13 +206,13 @@ item-description {
 	//minor hack to prevent widowed headers inside of item descriptions
 	h2, h3, h4 {
 		page-break-inside: avoid;
+		margin-bottom: -3.3em;
 
 		&::after {
 			content: "";
 	    pointer-events: none;
 	    display: block;
 	    height: 3em;
-	    margin-bottom: -3.3em;
 		}
 	}
 
@@ -595,7 +595,7 @@ magic-item.artifact.attunement .rarity img {
 
 .curse, .notes, .sentience {
 	margin-top: 1em;
-	margin-bottom: 0.5em;
+	margin-bottom: 1em;
 	position: relative;
 	display: inline-block; //see if this is a fix-all for breaking across lines in edge cases.
 	border: 2px solid $borderLight;
