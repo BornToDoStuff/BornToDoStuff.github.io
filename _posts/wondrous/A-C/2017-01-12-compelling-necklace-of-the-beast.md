@@ -17,6 +17,8 @@ item_damage:
   - Psychic
 tags:
   - Familiar
+  - Collar
+  - Animal
 item_idea:
 item_co_creator:
 item_updated:
