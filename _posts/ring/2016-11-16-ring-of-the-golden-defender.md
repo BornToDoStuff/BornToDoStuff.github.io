@@ -4,8 +4,8 @@ item_id: 96
 category: Ring
 item_subtypes:
 item_rarity: Varies
-item_attunement: false
-item_requirement: by a creature not of evil alignment
+item_attunement: true
+item_requirement: a creature not of evil alignment
 item_curse: false
 item_classes:
   - Paladin
@@ -24,6 +24,7 @@ tags:
   - Spellcasting
   - Armor Class
   - Divine
+  - Gold
 item_idea:
 item_co_creator:
 item_updated:
@@ -65,5 +66,5 @@ While the ring is in this form and its shield is protecting you, you have +2 AC 
 **Golden Circuitry.** The pool of charges stored in the gauntlet increases to your level/2 rounded down (minimum of 3).
 
 <div class="note">
-This item can also be used without its legacy (growing) mechanic. Just pick a stage and treat it as if that is all the item has to offer.
+**Note.** This item can also be used without its legacy (growing) mechanic. Just pick a stage and treat it as if that is all the item has to offer.
 </div>

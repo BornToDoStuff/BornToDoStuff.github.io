@@ -5,7 +5,7 @@ category: Ring
 item_subtypes: 
 item_rarity: Artifact
 item_attunement: true
-item_requirement: by a creature that knows planar magic
+item_requirement: a creature that knows planar magic
 item_curse: false
 item_classes: 
   - Wizard
