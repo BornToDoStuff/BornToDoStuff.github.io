@@ -29,11 +29,12 @@ This claw ring fits perfectly along the whole length of your first finger, and a
 Once per day, while wearing this item, as an action you can touch a plant and telepathically ask it a single question. You get a telepathic response you can understand, so long as the plant is still healthy enough to answer.
 
 
-<!--excerpt-->
+
 <div class="curse">
 **Curse.** This curse is a multi-stage curse that slowly takes effect the more the wearer uses it. This curse does not reset when the ring is taken off, and can only be removed with a <magic-spell>Wish</magic-spell> spell. Every 10 times the ring is used the curse progresses to the next stage, starting at the first stage after being used 10 times or being worn for 30 consecutive days. 
 </div>
 
+<!--excerpt-->
 <div class="curse">
 **Stages.** These stages are cumulative and you keep all previous effects when you advance to the next stage.
 
