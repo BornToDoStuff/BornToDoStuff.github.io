@@ -31,7 +31,11 @@ Once per day, while wearing this item, as an action you can touch a plant and te
 
 <!--excerpt-->
 <div class="curse">
-**Curse.** This curse is a multi-stage curse that slowly takes effect the more the wearer uses it. This curse does not reset when the ring is taken off, and can only be removed with a <magic-spell>Wish</magic-spell> spell. Every 10 times the ring is used the curse progresses to the next stage, starting at the first stage after being used 10 times or being worn for 30 consecutive days. The stages are cumulative and you keep all previous effects when moving to the next stage.
+**Curse.** This curse is a multi-stage curse that slowly takes effect the more the wearer uses it. This curse does not reset when the ring is taken off, and can only be removed with a <magic-spell>Wish</magic-spell> spell. Every 10 times the ring is used the curse progresses to the next stage, starting at the first stage after being used 10 times or being worn for 30 consecutive days. 
+</div>
+
+<div class="curse">
+**Stages.** These stages are cumulative and you keep all previous effects when you advance to the next stage.
 
 **Seedling**  
 Suddenly you can no longer take the ring off, it feels as if the bones of the ring are becoming your own, and the moss begins to creep along the back of your hand.
