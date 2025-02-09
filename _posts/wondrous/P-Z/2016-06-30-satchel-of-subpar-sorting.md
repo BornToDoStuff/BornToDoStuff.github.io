@@ -4,6 +4,7 @@ item_id: 19
 category: Wondrous
 item_subtypes:
   - Storage
+  - Container
 item_rarity: Common
 item_attunement: false
 item_requirement:
