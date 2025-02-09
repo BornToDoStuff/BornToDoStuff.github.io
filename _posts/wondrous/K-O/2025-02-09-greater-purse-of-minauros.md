@@ -1,12 +1,12 @@
 ---
 title: Greater Purse of Minauros
-item_id: 360
+item_id: 361
 category: Wondrous
 item_subtypes:
 item_rarity: Very Rare
-item_attunement: false
+item_attunement: true
 item_requirement:
-item_curse: false
+item_curse: true
 item_classes:
   - All
 item_school: Conjuration
@@ -22,16 +22,16 @@ tags:
   - Tattoo
 item_idea:
 item_co_creator:
-item_updated:
-last_modified_at:
+item_updated: 2025-02-09
+last_modified_at: 2025-02-09
 ---
 
 This deep red coin pouch is stitched in gold thread and sinched with a black braided serpent carrying an onyx in it's mouth.  
-When attuned with this item you can reach into it to pull out copper, silver, or gold pieces that fit in your hand. You can pull out coins worth up 20 gold per day. If you attempt to pull out more than this in a day you must make a Constitution check DC 15. On a failure you reach in and pull your hand out empty handed, taking 1 Necrotic damage per coin you tried to grab.
+When attuned with this item you can reach into it to pull out a number of copper, silver, or gold pieces that fit in your hand. You can pull out coins worth up 20 gold per day. If you attempt to pull out more than this in a day you must make a Constitution check DC 15. On a failure you reach in and pull your hand out empty handed, taking 1 Necrotic damage per coin you tried to grab.
 
 ### Time Is Money
 
-If you concentrate on the serpent's onyx with the name of a destination in mind you, and up to eight willing creatures that are touching you, teleport to within eyesight of the destination that the name best describes as if using the spell <magic-spell>Teleportation</magic-spell> with a familiarity of Very Familiar. This requires 1 gold per 25 miles traveled per creature teleported. If you do not have sufficient gold in your possession when attempting this you take 1d8 Necrotic damage per creature you attempted to teleport, including yourself, and can not use this ability again until your next long rest.
+If you concentrate on the serpent's onyx with the name of a destination in mind you, and up to eight willing creatures that are touching you, teleport to within eyesight of the destination that the name best describes as if using the spell <magic-spell>Teleportation</magic-spell> with a familiarity of Very Familiar. This requires 1 gold, per 25 miles traveled, per creature teleported. If you do not have sufficient gold in your possession when attempting this you take 1d8 Necrotic damage per creature you attempted to teleport, including yourself, and can not use this ability again until your next long rest.
 
 ### A Fool And His Gold
 

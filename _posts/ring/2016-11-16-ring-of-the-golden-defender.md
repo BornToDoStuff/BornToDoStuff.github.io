@@ -20,12 +20,9 @@ item_damage:
   - Radiant
 tags:
   - Evolving
-  
   - Unarmed
   - Spellcasting
   - Armor Class
-  
-  
   - Divine
 item_idea:
 item_co_creator:
@@ -67,6 +64,6 @@ While the ring is in this form and its shield is protecting you, you have +2 AC 
 **Selfless Defense.** As a bonus action you can command the ring to shield another creature within 30 feet. Until they end their turn farther than 30 feet away or you issue a new command the shield will hover by them, granting them +2 AC. While you are using this feature you can not benefit from the shield.    
 **Golden Circuitry.** The pool of charges stored in the gauntlet increases to your level/2 rounded down (minimum of 3).
 
-<section id="note">
+<div class="note">
 This item can also be used without its legacy (growing) mechanic. Just pick a stage and treat it as if that is all the item has to offer.
-</section>
+</div>
