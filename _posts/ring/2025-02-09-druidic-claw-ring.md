@@ -1,5 +1,5 @@
 ---
-title: Druidic Claw Ring
+title: Ring of Druidic Roots
 item_id: 360
 category: Ring
 item_subtypes:
@@ -20,17 +20,19 @@ tags:
   - Movement
   - Body Modification
   - Druidic
+  - Long Rest
+  - Plants
 item_idea:
 item_co_creator:
 item_updated: 2025-02-18
 last_modified_at: 2025-02-18
 ---
 
-This claw ring fits perfectly along the whole length of your first finger, and accross its ridge is the moss covered bones of a humanoid's finger.
+This wooden claw ring fits perfectly along the whole length of your first finger, and accross its ridge is the moss covered bones of a humanoid's finger.
 Once per day, while wearing this item, as an action you can touch a plant and telepathically ask it a single question. You get a telepathic response you can understand, so long as the plant is still healthy enough to answer.
 
 ### Stages of Strength
-Occasionally after using this ring it's effects will grow stronger. If you can read Druidic inscribed on the ring you see "every time you speak with your roots, I will bring you closer to them". These stages of strength are cumulative and the ring grants the new effects each time it advances while also keeping the previous effects, but only while wearing it. If you take off the ring you can no longer use any of these abilities and any passive abilities you might have gained are instantly lost until you wear it again for at least a short rest.
+Occasionally after using this ring it's effects will grow stronger. If you can read Druidic inscribed on the ring you see "every time you speak with your roots, I will bring you closer to them". These stages of strength are cumulative and the ring grants the new effects each time it advances while also keeping the previous effects, but only while wearing it. If you take off the ring you cant use any abilities until you put it back on, and any abilities that coincide with rests or the sun dont take effect until your next rest.
 
 **Seedling**  
 You gain advantage on rolls against magical plant-based effects that would limit your movement such as <magic-spell>Entangle</magic-spell>. Also, during sunny days if you spend at least 8 hours outside you only need half as much food.
