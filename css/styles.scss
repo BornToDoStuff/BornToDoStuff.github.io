@@ -280,12 +280,15 @@ item-details {
 	// }
 	.item_id {
 		display: inline-block;
-		color: $bluakDark;
-		line-height: 1em;
-
-		opacity: 0.15;
+		position: relative;
+		color: #264658;
+		bottom: -.15em;
+		opacity: .2;
 		font-weight: bold;
-    font-size: 2em;
+		font-size: 2em;
+		line-height: 0.85em;
+		-webkit-mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, rgba(1, 1, 1, 1) 80%);
+		mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, rgba(1, 1, 1, 1) 80%);
 	}
 	// .item_date {
 	// 	opacity: 0.25;
@@ -304,8 +307,8 @@ item-image {
 	-webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 70px),rgba(0,0,0,0) 100%);
 	mask-image: linear-gradient(180deg, rgba(0,0,0,1) 250px,rgba(0,0,0,1) calc(100% - 70px),rgba(0,0,0,0) 100%);
 	display: flex;
-  flex-direction: column;
-  align-items: center;
+  	flex-direction: column;
+  	align-items: center;
 
 	img {
 		max-width: 100%;
@@ -478,7 +481,8 @@ magic-item.artifact.attunement .rarity img {
 
 			item-description {
 	    	column-count: 2;
-		    orphans: 2;
+		    orphans: 3;
+        	widows: 3;
 			}
 		}
 
