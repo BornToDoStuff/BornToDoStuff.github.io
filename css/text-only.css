@@ -21,3 +21,7 @@ item-details, item-tags, item-description + hr {
 #main-wrapper, .width-wrapper {
 	position: initial;
 }
+
+#related {
+	display: none!important;
+}

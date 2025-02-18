@@ -26,11 +26,11 @@
 		if (urlParams["textOnly"]) {
 			$('head').append("<link rel='stylesheet' href='/css/text-only.css' type='text/css' />");
 		}
-		// if (urlParams["pretty"]) {
-		// 	$('head').append("<link rel='stylesheet' href='/css/pretty.css' type='text/css' />");
-		// }
+		if (urlParams["pretty"]) {
+			$('head').append("<link rel='stylesheet' href='/css/pretty.css' type='text/css' />");
+		}
 		if (urlParams["dmOnly"]) {
-			$('head').append("<style type='text/css'> item-details,#curse{display: none;} </style>");
+			$('head').append("<style type='text/css'> item-details,.curse,.notes{display: none!important;} </style>");
 		}
 
 		function checkContextButton() {
