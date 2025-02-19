@@ -106,7 +106,7 @@ magic-item::after {
   font-weight: bold;
   font-size: 1.5em;
   color: #264658;
-  opacity: .2;
+  opacity: .15;
   -webkit-mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
   mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
 }

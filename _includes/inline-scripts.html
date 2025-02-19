@@ -399,20 +399,19 @@
 			var original = $("#item-wrapper");
 			original.detach(); //temporarily remove the original
 			//add the copy and then get an image of it after its loaded
-			$("#main-wrapper").append(copy).queue(function() {
+			$("#main-wrapper").append(copy);
 
-				htmlToImage.toPng(document.getElementById("item-wrapper"), { style:{ "margin":"0px" } })
-				.then((dataUrl) => {
-					var link = document.createElement('a');
-					link.download = slugify($("#item-width item-title a").text()) + ".png";
-					link.href = dataUrl;
-					link.click();
-					
-					//remove the copy and put the original back, within the promise so its not done too early
+			htmlToImage.toPng(document.getElementById("item-wrapper"), { style:{ "margin":"0px" } })
+			.then((dataUrl) => {
+				var link = document.createElement('a');
+				link.download = slugify($("#item-width item-title a").text()) + ".png";
+				link.href = dataUrl;
+				link.click(function() {
+					//remove the copy and put the original back, within the return function so its dont after the click returns
 					copy.remove();
 					$("#main-wrapper").append(original);
-				}); 
-			});
+				});
+			}); 
 
 
 			// .then((dataUrl) => {
