@@ -380,16 +380,30 @@
 		}
 
 		$("#btnPrettyDownload").on("click", function() {
-			htmlToImage.toCanvas(document.getElementById("360"), { style:{ "margin":"0px" } })
-			  .then(function (canvas) {
-			    document.getElementById("item-wrapper").appendChild(canvas);
-			  });
-			// htmlToImage.toPng(document.getElementById("item-wrapper"))
-			// .then((dataUrl) => {
-			// 	const img = new Image();
-			// 	img.src = dataUrl;
-			// 	document.body.appendChild(img);
-			// });
+			// htmlToImage.toCanvas(document.querySelector("#item-wrapper"), { style:{ "margin":"0px" } })
+			//   .then(function (canvas) {
+			//     document.getElementById("item-wrapper").appendChild(canvas);
+			//   });
+
+			// const itemWrapper = document.getElementById("item-wrapper");
+			// const copy = itemWrapper.cloneNode(true);
+			var copy = $("#item-wrapper").clone(true, true);
+
+			copy.find("#item-menu").remove();
+			copy.find("#related").remove();
+			copy.find(".curse,.notes,.sentience").css({"display": "inline-block"});
+			copy.find(".curse p:first-child strong:first-child,.notes p:first-child strong:first-child,.sentience p:first-child strong:first-child").css({"display": "none"});
+			// specialBlocks.css({"display": "inline-block"});
+			// specialBlocks.find("p:first-child strong:first-child").css({"display": "none"});
+
+			//$("#item-wrapper").append(copy)
+
+			htmlToImage.toPng(copy[0], { style:{ "margin":"0px" } })
+			.then((dataUrl) => {
+				const img = new Image();
+				img.src = dataUrl;
+				document.getElementById("item-wrapper").appendChild(img);
+			});
 		    // .then(function (dataUrl) {
 		    //     var link = document.createElement('a');
 		    //     link.download = slugify($("#item-width item-title a").text()) + ".png";
