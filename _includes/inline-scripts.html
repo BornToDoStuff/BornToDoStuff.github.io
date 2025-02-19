@@ -384,13 +384,18 @@
 			//   .then(function (canvas) {
 			//     document.body.appendChild(canvas);
 			//   });
-			htmlToImage.toPng(document.getElementById("item-wrapper"), { style:{ "margin":"0px" } })
-		    .then(function (dataUrl) {
-		        var link = document.createElement('a');
-		        link.download = slugify($("#item-width item-title a").text()) + ".png";
-		        link.href = dataUrl;
-		        link.click();
-		    });
+			htmlToImage.toPng(document.getElementById("item-wrapper"), { style:{ "margin":"0px" }, cacheBust:true })
+			.then((dataUrl) => {
+				const img = new Image();
+				img.src = dataUrl;
+				document.body.appendChild(img);
+			});
+		    // .then(function (dataUrl) {
+		    //     var link = document.createElement('a');
+		    //     link.download = slugify($("#item-width item-title a").text()) + ".png";
+		    //     link.href = dataUrl;
+		    //     link.click();
+		    // });
 		});
 		$("#prettyCurrency").change(function() {
 			$(".item_cost").toggle();
