@@ -23,6 +23,7 @@ tags:
   - Frightened
   - Seed
   - Consumable
+  - Acorn
 item_image: "/images/item_art/sacred-acorn.png"
 image_artist: Direquest
 item_idea: 

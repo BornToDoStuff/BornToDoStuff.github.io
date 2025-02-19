@@ -4,6 +4,7 @@ item_id: 136
 category: Wondrous
 item_subtypes:
   - Necklace
+  - Pendant
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:

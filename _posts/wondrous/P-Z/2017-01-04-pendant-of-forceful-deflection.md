@@ -3,6 +3,8 @@ title: Pendant of Forceful Deflection
 item_id: 135
 category: Wondrous
 item_subtypes:
+  - Pendant
+  - Necklace
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:
@@ -17,9 +19,9 @@ item_role:
 item_damage:
 tags:
   - Bonus Action
-  
-  
-  
+  - Constitution
+  - Charges
+  - At Dawn
 item_idea:
 item_co_creator:
 item_updated:
