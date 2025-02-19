@@ -129,10 +129,6 @@ item-title {
   display: none;
 }
 
-#item-wrapper #item-width {
-  width: 100%;
-}
-
 #item-wrapper #item-width item-description::after {
   content: "";
   display: block;
