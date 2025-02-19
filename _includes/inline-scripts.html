@@ -379,24 +379,7 @@
 			$(".item_cost").addClass("HSE");
 		}
 
-		$("#btnPrettyDownload").on("click", function() {
-			htmlToImage.toCanvas(document.getElementById("360"), { style:{ "margin":"0px" } })
-			  .then(function (canvas) {
-			    document.getElementById("item-wrapper").appendChild(canvas);
-			  });
-			// htmlToImage.toPng(document.getElementById("item-wrapper"))
-			// .then((dataUrl) => {
-			// 	const img = new Image();
-			// 	img.src = dataUrl;
-			// 	document.body.appendChild(img);
-			// });
-		    // .then(function (dataUrl) {
-		    //     var link = document.createElement('a');
-		    //     link.download = slugify($("#item-width item-title a").text()) + ".png";
-		    //     link.href = dataUrl;
-		    //     link.click();
-		    // });
-		});
+		
 		$("#prettyCurrency").change(function() {
 			$(".item_cost").toggle();
 		});
@@ -416,4 +399,26 @@
 
 	document.addEventListener("pjax:success", inlineWhenReady);
 	inlineWhenReady();
+</script>
+
+<script>
+	$("#btnPrettyDownload").on("click", function() {
+			htmlToImage.toCanvas(document.querySelector("#item-wrapper item-description"), { style:{ "margin":"0px" } })
+			  .then(function (canvas) {
+			    document.getElementById("item-wrapper").appendChild(canvas);
+			  });
+			// htmlToImage.toPng(document.getElementById("item-wrapper"))
+			// .then((dataUrl) => {
+			// 	const img = new Image();
+			// 	img.src = dataUrl;
+			// 	document.body.appendChild(img);
+			// });
+		    // .then(function (dataUrl) {
+		    //     var link = document.createElement('a');
+		    //     link.download = slugify($("#item-width item-title a").text()) + ".png";
+		    //     link.href = dataUrl;
+		    //     link.click();
+		    // });
+		});
+
 </script>
