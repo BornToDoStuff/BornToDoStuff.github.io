@@ -383,7 +383,7 @@
 			htmlToImage.toCanvas(document.getElementById("item-wrapper"), { style:{ "margin":"0px" } })
 			  .then(function (canvas) {
 				document.body.appendChild(document.getElementById("item-wrapper"));
-			    $("#item-wrapper").appendChild(canvas);
+			    document.getElementById("item-wrapper").appendChild(canvas);
 			  });
 			// htmlToImage.toPng(document.getElementById("item-wrapper"))
 			// .then((dataUrl) => {
