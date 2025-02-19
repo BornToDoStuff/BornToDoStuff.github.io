@@ -28,12 +28,13 @@ layout: default
       </div>
       <div id="related">
         {%- assign maxRelated = 10 -%}
-        {%- assign minCommonTags =  2 -%}
+        {%- assign minSimilarityScore =  2 -%}
         {%- assign maxRelatedCounter = 0 -%}
 
         {%- for post in site.posts -%}
           {%- assign sameTagCount = 0 -%}
           {%- assign sameTypeCount = 0 -%}
+          {%- assign similarityScore = 0 -%}
 
           {%- for tag in post.tags -%}
             {%- if post.url != page.url -%}
@@ -50,11 +51,16 @@ layout: default
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
-          {%- assign sameTypeCount = sameTypeCount | times: 1.25 | ceil | at_most: 4  -%}
-          {%- assign sameTagCount = sameTagCount | plus: sameTypeCount -%}
+          {%- assign sameTypeCount = sameTypeCount | at_most: 2  -%}
 
-          {%- if sameTagCount >= minCommonTags -%}
-            {%- include magic-item.html related=sameTagCount -%}
+          {%- assign similarityScore = sameTypeCount | plus: sameTagCount -%}
+
+          {%- if sameTypeCount >= 1 and sameTagCount >= 1 -%}
+            {%- assign similarityScore = similarityScore | times: 1.3 | ceil -%}
+          {%- endif -%}
+
+          {%- if similarityScore >= minSimilarityScore -%}
+            {%- include magic-item.html related=similarityScore -%}
 
             {%- assign maxRelatedCounter = maxRelatedCounter | plus: 1 -%}
             {%- if maxRelatedCounter >= maxRelated -%}
