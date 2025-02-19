@@ -27,7 +27,7 @@ layout: default
 
       </div>
       <div id="related">
-        {%- assign maxRelated = 12 -%}
+        {%- assign maxRelated = 10 -%}
         {%- assign minCommonTags =  2 -%}
         {%- assign maxRelatedCounter = 0 -%}
 
@@ -37,6 +37,14 @@ layout: default
           {%- for tag in post.tags -%}
             {%- if post.url != page.url -%}
               {%- if page.tags contains tag -%}
+                {%- assign sameTagCount = sameTagCount | plus: 1 -%}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- for subtype in post.item_subtypes -%}
+            {%- if post.url != page.url -%}
+              {%- if page.item_subtypes contains subtype -%}
                 {%- assign sameTagCount = sameTagCount | plus: 1 -%}
               {%- endif -%}
             {%- endif -%}
