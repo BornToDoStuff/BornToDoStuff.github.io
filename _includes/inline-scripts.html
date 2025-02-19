@@ -387,7 +387,7 @@
 
 			// const itemWrapper = document.getElementById("item-wrapper");
 			// const copy = itemWrapper.cloneNode(true);
-			var copy = $("#item-wrapper").clone(true, true);
+			var copy = $("#item-wrapper").clone(true, true); //make a copy
 
 			copy.find("#item-menu").remove();
 			copy.find("#related").remove();
@@ -396,14 +396,23 @@
 			// specialBlocks.css({"display": "inline-block"});
 			// specialBlocks.find("p:first-child strong:first-child").css({"display": "none"});
 
-			//$("#item-wrapper").append(copy)
-
+			const original = $("#item-wrapper")
+			original.detach(); //remove the original
+			$("#main-wrapper").append(copy) //replace it with the copy
+			
+			//create an image of the copy
 			htmlToImage.toPng(copy[0], { style:{ "margin":"0px" } })
 			.then((dataUrl) => {
 				const img = new Image();
 				img.src = dataUrl;
 				document.getElementById("item-wrapper").appendChild(img);
-			});
+			}); 
+
+			//remove the copy and put the original back
+			copy.remove();
+			$("#main-wrapper").append(original);
+
+			
 		    // .then(function (dataUrl) {
 		    //     var link = document.createElement('a');
 		    //     link.download = slugify($("#item-width item-title a").text()) + ".png";
