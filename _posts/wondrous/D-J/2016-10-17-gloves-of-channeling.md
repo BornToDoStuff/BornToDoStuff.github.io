@@ -21,6 +21,7 @@ tags:
   - Special Casting
   - Components
   - Mediocre
+  - Spellcasting Focus
 item_idea:
 item_co_creator:
 item_updated: 2021-04-10

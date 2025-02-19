@@ -18,10 +18,10 @@ item_damage:
   - Bludgeoning
   - Piercing
 tags:
-  
   - Forest
   - Growth
   - Plants
+  - Consumable
 item_idea: 
 item_co_creator: 
 item_updated: 

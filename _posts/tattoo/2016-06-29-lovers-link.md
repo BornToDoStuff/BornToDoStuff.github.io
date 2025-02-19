@@ -16,6 +16,7 @@ item_damage:
 tags:
  - Tradeoff
  - Mediocre
+ - Tattoo
 item_goofy: 5
 item_dark: 40
 item_complexity: 5

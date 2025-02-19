@@ -21,6 +21,8 @@ tags:
   - Prone
   - Hit Dice
   - Special Attunement
+  - Seed
+  - Body Modification
 item_idea:
 item_co_creator:
 item_updated:

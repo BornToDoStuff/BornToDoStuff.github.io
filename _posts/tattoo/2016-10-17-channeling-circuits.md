@@ -17,6 +17,7 @@ tags:
   - Spellcasting
   - Short Rest
   - Reaction
+  - Tattoo
 item_goofy: 15
 item_dark: 15
 item_complexity: 25

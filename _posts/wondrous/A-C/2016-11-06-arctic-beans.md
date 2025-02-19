@@ -21,6 +21,7 @@ tags:
   - Battlefield Control
   - Difficult Terrain
   - Seed
+  - Consumable
 item_idea:
 item_co_creator:
 item_updated: 2021-08-18

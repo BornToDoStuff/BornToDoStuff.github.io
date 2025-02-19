@@ -16,6 +16,12 @@ item_role:
 item_damage:
 tags:
   - Proficiency
+  - Circlet
+  - Incapacitated
+  - Mental
+  - Wisdom
+  - Intelligence
+  - Charisma
 item_idea:
 item_co_creator:
 item_updated:

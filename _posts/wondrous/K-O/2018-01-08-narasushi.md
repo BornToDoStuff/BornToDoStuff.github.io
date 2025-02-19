@@ -17,7 +17,7 @@ item_role:
 item_damage:
 tags:
   - Sound
-  - Loud
+  - Noisy
   - Cursed
 item_idea:
 item_co_creator:

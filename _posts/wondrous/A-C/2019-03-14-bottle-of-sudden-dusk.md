@@ -23,6 +23,7 @@ tags:
   - Darkness
   - Obscured
   - Lightly Obscured
+  - Large Area
 item_idea: Bottled Twilight
 item_co_creator: 
 item_updated: 

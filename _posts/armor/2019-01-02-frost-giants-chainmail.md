@@ -27,6 +27,8 @@ tags:
   - Extreme Temperature
   - Extreme Cold
   - Extreme Heat
+  - Climate
+  - Special Casting
   - Ice
   - Deity
   - Divine

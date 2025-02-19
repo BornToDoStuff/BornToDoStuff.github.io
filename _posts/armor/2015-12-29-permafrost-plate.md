@@ -22,6 +22,7 @@ tags:
   - Ice
   - Cold
   - Extreme Cold
+  - Climate
   - Temperature
   - Aura
   - Special Attunement

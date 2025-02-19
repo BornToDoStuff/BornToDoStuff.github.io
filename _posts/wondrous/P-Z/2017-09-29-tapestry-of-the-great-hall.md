@@ -15,6 +15,7 @@ item_damage:
 tags:
   - Teleportation
   - Special Attunement
+  - Large Area
 item_idea:
 item_co_creator:
 item_updated:

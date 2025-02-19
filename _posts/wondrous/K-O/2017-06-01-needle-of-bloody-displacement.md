@@ -21,6 +21,7 @@ tags:
   - Bonus Action
   - Teleportation
   - Cursed
+  - Blood
 item_idea:
 item_co_creator:
 item_updated: 2019-02-14

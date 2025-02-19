@@ -22,6 +22,7 @@ tags:
   - Advantage
   - Charisma
   - Clothing
+  - Consumable
 item_idea: 
 item_co_creator: 
 item_updated: 

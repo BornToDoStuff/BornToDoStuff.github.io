@@ -15,6 +15,7 @@ item_damage:
 tags:
   - Unique Character
   - Craek
+  - Large Area
 item_idea:
 item_co_creator:
 item_updated:

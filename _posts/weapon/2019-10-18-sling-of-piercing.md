@@ -21,6 +21,10 @@ item_damage:
 tags:
   - Light
   - Line
+  - Sling
+  - Charges
+  - At Dawn
+  - Ammunition
 item_idea: 
 item_co_creator: 
 item_updated: 2020-08-23

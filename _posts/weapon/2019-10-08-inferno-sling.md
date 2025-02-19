@@ -19,10 +19,12 @@ item_role:
 item_damage:
   - Fire
 tags:
-  
-  
-  
+  - Sling
   - Infernal
+  - Fire
+  - Charges
+  - At Dawn
+  - Ammunition
 item_idea:
 item_co_creator:
 item_updated: 2020-08-17

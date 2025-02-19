@@ -21,6 +21,10 @@ tags:
   - Polymorph
   - Size
   - Shapeshifter
+  - Bone
+  - Movement
+  - Intimidation
+  - Blindsight
 item_idea: 
 item_co_creator: 
 item_updated: 

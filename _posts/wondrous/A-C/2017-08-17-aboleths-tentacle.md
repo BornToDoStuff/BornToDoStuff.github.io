@@ -14,6 +14,13 @@ item_role:
 item_damage:
   - Mixed
 tags:
+  - Blood
+  - Body Modification
+  - Proficiency
+  - Intelligence
+  - Breathing
+  - Underwater
+  - Psychic
 item_idea:
 item_co_creator:
 item_updated:
@@ -27,7 +34,7 @@ While you are attuned to this tentacle you can breathe underwater and have a +5 
 ### Bloody Awakening
 Once per short rest as an action if you slice your hand or wrist and drip your own blood onto the tentacle as you hold the rod the tentacle rejuvenates, and expands down the rod engulfing your arm. For the next minute you can not use that arm as it is encased in a giant tentacle. However you may make melee attacks with proficiency with the tentacle. It has a reach of 10 feet and deals 2d6 bludgeoning damage on a hit.
 
-After the minute is up the tentacle shrivels once again, receding back up the rod, and releasing your arm, now covered in slime. Until the next day your arm remains a pale green tint where the tentacle covered it and the cut you made to awaken the tentacle refuses to close, even in response to magical healing.
+After the minute is up the tentacle shrivels once again, receding back up the rod, and releasing your arm, now covered in slime. Until the next day your arm remains a pale green tint where the tentacle covered it and the cut you made to awaken the tentacle refuses to fully close, even in response to magical healing.
 
 ### Aboleth's Eye
 While the tentacle is engulfing your arm you may use an action to focus your gaze and force all creatures in a 30 foot cone to make a Wisdom saving throw DC 14 or take 1d6 psychic damage.

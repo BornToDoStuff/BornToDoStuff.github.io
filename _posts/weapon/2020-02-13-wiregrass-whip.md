@@ -21,6 +21,8 @@ item_damage:
 tags:
   - Nature
   - Reach
+  - Whip
+  - Plants
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-28

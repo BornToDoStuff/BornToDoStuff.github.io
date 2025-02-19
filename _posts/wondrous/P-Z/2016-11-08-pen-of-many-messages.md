@@ -16,7 +16,7 @@ item_role:
 item_damage:
 tags:
   - Spellcasting
-  - Focus
+  - Spellcasting Focus
   - Many
   - Many Effects
   - Special Attunement

@@ -17,6 +17,7 @@ item_damage:
 tags:
   - Food
   - Drink
+  - Consumable
 item_idea: 
 item_co_creator: 
 item_updated: 

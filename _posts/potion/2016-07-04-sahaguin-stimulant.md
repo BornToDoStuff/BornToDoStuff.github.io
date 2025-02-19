@@ -20,6 +20,8 @@ tags:
   - Temporary Hit Points
   - Poisoned
   - Long Rest
+  - Consumable
+  - Blood
 item_idea:
 item_co_creator:
 item_updated: 2017-10-16

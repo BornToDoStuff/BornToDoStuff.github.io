@@ -4,6 +4,7 @@ item_id: 13
 category: Potion
 item_subtypes:
   - Thrown
+  - Consumable
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:
@@ -17,8 +18,7 @@ item_damage:
   - Lightning
 tags:
   - Elemental
-  
-  
+  - Consumable
   - Noisy
   - Blinded
 item_idea:

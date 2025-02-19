@@ -17,6 +17,7 @@ item_role:
 item_damage:
 tags:
   - Spellcasting
+  - Spellcasting Focus
 item_idea:
 item_co_creator:
 item_updated: 2018-12-26

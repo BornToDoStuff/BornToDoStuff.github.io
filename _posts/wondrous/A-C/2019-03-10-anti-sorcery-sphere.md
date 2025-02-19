@@ -18,6 +18,7 @@ tags:
   - Antimagic
   - Spellcasting
   - Long Duration
+  - Large Area
 item_idea: 
 item_co_creator: 
 item_updated: 

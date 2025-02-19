@@ -22,7 +22,7 @@ item_damage:
 tags:
   - Ethereal
   - Ethereal Plane
-  - Critical hit
+  - Critical
   - Light
 item_idea: 
 item_co_creator: 

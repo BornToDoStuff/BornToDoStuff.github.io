@@ -22,9 +22,11 @@ tags:
   - Water
   - Ocean
   - Underwater
+  - Breathing
   - Special Casting
   - Deity
   - Divine
+  - Circlet
 commission: true
 commissioner: Kuma
 item_co_creator: 

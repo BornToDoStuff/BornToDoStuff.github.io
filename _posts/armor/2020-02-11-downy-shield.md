@@ -18,7 +18,7 @@ item_role:
 item_damage: 
 tags:
   - Nature
-  - Flight
+  - Flying
   - Movement
   - Bird
 item_idea: 

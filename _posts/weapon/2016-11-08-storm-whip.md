@@ -18,9 +18,8 @@ item_damage:
   - Lightning
 tags:
   - Lightning
-  
   - Blinded
-  
+  - Whip
   - Pull
 item_idea:
 item_co_creator:

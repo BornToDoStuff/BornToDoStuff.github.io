@@ -20,6 +20,10 @@ tags:
   - Unique Character
   - Augmier
   - Gnomish
+  - Charges
+  - At Dawn
+  - Flying
+  - Boots
 item_idea:
 item_co_creator:
 item_updated:

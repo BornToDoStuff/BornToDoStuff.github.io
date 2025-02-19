@@ -17,6 +17,8 @@ item_role: Attack
 item_damage: Slashing
 tags:
   - Thrown
+  - Enlarge
+  - Special Weapon
 item_idea: Chrisu
 item_co_creator:
 item_updated: 2021-02-21

@@ -17,6 +17,7 @@ tags:
   - Life
   - Tradeoff
   - Advantage
+  - Tattoo
 item_goofy: 10
 item_dark: 65
 item_complexity: 20

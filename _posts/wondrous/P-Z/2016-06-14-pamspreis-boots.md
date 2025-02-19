@@ -20,6 +20,8 @@ tags:
   - Mediocre
   - Unique Character
   - Pamsprei
+  - Boots
+  - Difficult Terrain
 item_idea:
 item_co_creator:
 item_updated:

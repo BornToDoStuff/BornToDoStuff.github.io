@@ -23,6 +23,7 @@ item_damage:
 tags:
   - Outline
   - Sight
+  - Ethereal
   - Ethereal Plane
   - Undead
   - Stunned

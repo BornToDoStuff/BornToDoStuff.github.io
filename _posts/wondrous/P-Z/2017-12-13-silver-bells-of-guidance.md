@@ -19,6 +19,7 @@ tags:
   - Jump
   - Dash
   - Noisy
+  - Sound
   - Unique Recharge
 item_idea:
 item_co_creator:

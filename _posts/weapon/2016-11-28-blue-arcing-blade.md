@@ -23,6 +23,7 @@ tags:
   - Curse Purge
   - Cursed
   - Long Rest
+  - Special Casting
 item_idea:
 item_co_creator:
 item_updated: 2018-05-27

@@ -17,6 +17,13 @@ item_role:
 item_damage:
 tags:
   - Control
+  - Special Casting
+  - Bone
+  - Help
+  - Blinded
+  - Movement
+  - Large Area
+  - Intelligence
 item_idea:
 item_co_creator:
 item_updated: 2019-09-03

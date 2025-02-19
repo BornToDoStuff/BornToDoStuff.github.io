@@ -4,6 +4,7 @@ item_id: 260
 category: Potion
 item_subtypes: 
   - Thrown
+  - Consumable
 item_rarity: Rare
 item_attunement: false
 item_requirement: 
@@ -18,8 +19,6 @@ item_role:
 item_damage: 
 tags:
   - Consumable
-  
-  
   - Difficult Terrain
   - Restrained
   - Forest

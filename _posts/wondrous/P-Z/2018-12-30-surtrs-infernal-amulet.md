@@ -22,6 +22,9 @@ tags:
   - Special Casting
   - Deity
   - Divine
+  - Cold
+  - Extreme Cold
+  - Climate
 commission: true
 commissioner: Kuma
 item_co_creator: 

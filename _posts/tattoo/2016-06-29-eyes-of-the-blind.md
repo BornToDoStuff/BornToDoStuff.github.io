@@ -17,6 +17,7 @@ tags:
   - Tradeoff
   - Sight
   - Short Rest
+  - Tattoo
 item_goofy: 5
 item_dark: 55
 item_complexity: 40

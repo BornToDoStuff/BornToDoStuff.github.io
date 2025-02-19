@@ -19,6 +19,7 @@ tags:
   - Elemental
   - Poisoned
   - Paralyzed
+  - Consumable
 item_idea:
 item_co_creator:
 item_updated:

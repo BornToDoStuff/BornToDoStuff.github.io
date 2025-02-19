@@ -18,6 +18,8 @@ item_damage:
 tags:
   - Movement
   - Falling
+  - Jumping
+  - Boots
 item_goofy: 60
 item_dark: 20
 item_complexity: 50

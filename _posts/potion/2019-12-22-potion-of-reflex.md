@@ -20,7 +20,7 @@ tags:
   - Nature
   - Movement
   - Perception
-  
+  - Consumable
   - Reaction
 item_idea: 
 item_co_creator: 

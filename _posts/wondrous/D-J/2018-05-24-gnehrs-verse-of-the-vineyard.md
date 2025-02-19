@@ -22,6 +22,8 @@ tags:
   - Music
   - Unique Character
   - G'nehr
+  - Whip
+  - Nature
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-24

@@ -23,6 +23,7 @@ tags:
   - Special Curse
   - Tradeoff
   - Cursed
+  - Spellcasting Focus
 item_idea:
 item_co_creator:
 item_updated: 2018-03-28

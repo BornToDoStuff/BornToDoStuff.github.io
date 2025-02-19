@@ -14,6 +14,10 @@ item_role:
   - Auxiliary
 item_damage:
 tags:
+  - Tattoo
+  - Large Area
+  - Family
+  - Tradeoff
 item_goofy: 5
 item_dark: 45
 item_complexity: 25

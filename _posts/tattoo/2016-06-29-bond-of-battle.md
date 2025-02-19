@@ -21,6 +21,7 @@ tags:
   - Armor Class
   - Perception
   - Disadvantage
+  - Tattoo
 item_goofy: 10
 item_dark: 45
 item_complexity: 45

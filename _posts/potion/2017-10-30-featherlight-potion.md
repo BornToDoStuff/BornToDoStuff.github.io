@@ -18,6 +18,8 @@ item_damage:
 tags:
  - Falling
  - Jumping
+ - Movement
+ - Consumable
 item_idea:
 item_co_creator:
 item_updated:

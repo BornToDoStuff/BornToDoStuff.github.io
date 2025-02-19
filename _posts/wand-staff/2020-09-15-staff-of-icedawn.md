@@ -27,6 +27,7 @@ tags:
   - Freezing
   - High Altitude
   - Cantrips
+  - Special Casting
 item_idea: 
 item_co_creator: 
 item_updated:

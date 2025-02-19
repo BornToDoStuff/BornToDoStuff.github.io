@@ -17,7 +17,7 @@ item_role:
 item_damage:
 tags:
   - Partner
-  
+  - Ethereal Plane
   - Restrained
 item_idea:
 item_co_creator:

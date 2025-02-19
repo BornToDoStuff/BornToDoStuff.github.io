@@ -20,6 +20,7 @@ tags:
   - Spellcasting
   - Infernal
   - Cursed
+  - Special Casting
 item_idea:
 item_co_creator:
 item_updated:

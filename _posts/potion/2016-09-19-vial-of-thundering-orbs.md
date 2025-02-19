@@ -21,7 +21,8 @@ item_damage:
   - Thunder
 tags:
   - Noisy
-  
+  - Sound
+  - Consumable
 item_idea:
 item_co_creator:
 item_updated: 2017-10-20

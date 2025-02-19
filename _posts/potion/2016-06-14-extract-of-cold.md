@@ -18,8 +18,7 @@ item_damage:
   - Cold
 tags:
   - Elemental
-  
-  
+  - Consumable
   - Temperature
 item_idea:
 item_co_creator:
