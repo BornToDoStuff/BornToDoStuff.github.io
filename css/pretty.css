@@ -77,7 +77,7 @@ magic-item {
   position: relative;
 }
 /*magic-item::after, magic-item.image::before {*/
-magic-item::after {
+/* magic-item::after {
   content: "BornToBrewStuff";
   display: block;
   position: absolute;
@@ -87,7 +87,7 @@ magic-item::after {
   bottom: 10px;
   font-size: 1.5em;
   color: rgba(9, 48, 70,0.1);
-}
+} */
 /* magic-item.image::before {
     top: 205px;
     left: -165px;
@@ -105,13 +105,16 @@ magic-item::after {
   bottom: 10px;
   font-weight: bold;
   font-size: 1.5em;
-  color: rgba(9, 48, 70, 0.1);
+  color: #264658;
+  opacity: .2;
+  -webkit-mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
+  mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
 }
 item-description {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 item-description img {
-  margin-bottom: -25px;
+  margin-bottom: -15px;
 }
 
 item-title {
@@ -124,6 +127,16 @@ item-title {
 
 #related {
   display: none;
+}
+
+#item-wrapper #item-width {
+  width: 100%;
+}
+
+#item-wrapper #item-width item-description::after {
+  content: "";
+  display: block;
+  height: 10px;
 }
 
 #item-wrapper #item-width.image-only > magic-item {
