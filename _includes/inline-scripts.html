@@ -207,8 +207,8 @@
 				var related = $("#related magic-item").sort(function(a, b){
 					return ((parseFloat(b.dataset.related) + parseFloat("0." + b.id.padStart(3,"0"))) - (parseFloat(a.dataset.related) + parseFloat("0." + a.id.padStart(3,"0"))))
 				});
-				var most_related = related.slice(2); //get the last 2 (most relevant)
-				related = related.slice(0,2); //remove those two from the options
+				var most_related = related.slice(0,2); //get the first 2 (most relevant)
+				related = related.slice(2); //remove those two from the options
 				//get 2 random ones from other relevant items
 				related = related.sort(function() { return 0.5 - Math.random(); });
 				most_related.push(related[0]);
@@ -386,20 +386,20 @@
 			//   });
 
 			// const itemWrapper = document.getElementById("item-wrapper");
-			// const copy = itemWrapper.cloneNode(true);
-			var copy = $("#item-wrapper").clone(true, true); //make a copy
+			// const clone = itemWrapper.cloneNode(true);
+			var clone = $("#item-wrapper").clone(true, true); //make a clone
 			//make modifications to it to stabalize it
-			copy.find("#item-menu").remove();
-			copy.find("#related").remove();
-			copy.find(".curse,.notes,.sentience").css({"display": "inline-block"});
-			copy.find(".curse p:first-child strong:first-child,.notes p:first-child strong:first-child,.sentience p:first-child strong:first-child").css({"display": "none"});
+			clone.find("#item-menu").remove();
+			clone.find("#related").remove();
+			clone.find(".curse,.notes,.sentience").css({"display": "inline-block"});
+			clone.find(".curse p:first-child strong:first-child,.notes p:first-child strong:first-child,.sentience p:first-child strong:first-child").css({"display": "none"});
 			// specialBlocks.css({"display": "inline-block"});
 			// specialBlocks.find("p:first-child strong:first-child").css({"display": "none"});
 
 			var original = $("#item-wrapper");
 			original.detach(); //temporarily remove the original
-			//add the copy and then get an image of it after its loaded
-			$("#main-wrapper").append(copy);
+			//add the clone and then get an image of it after its loaded
+			$("#main-wrapper").append(clone);
 
 			htmlToImage.toPng(document.getElementById("item-wrapper"), { style:{ "margin":"0px" } })
 			.then((dataUrl) => {
@@ -407,8 +407,8 @@
 				link.download = slugify($("#item-width item-title a").text()) + ".png";
 				link.href = dataUrl;
 				link.click(function() {
-					//remove the copy and put the original back, within the return function so its dont after the click returns
-					copy.remove();
+					//remove the clone and put the original back, within the return function so its dont after the click returns
+					clone.remove();
 					$("#main-wrapper").append(original);
 				});
 			}); 
