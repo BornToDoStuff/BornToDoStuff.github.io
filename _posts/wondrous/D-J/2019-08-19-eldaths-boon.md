@@ -1,5 +1,7 @@
 ---
 title: Eldath's Boon
+included_in: "Amarune's Almanac: Forests of the Realms"
+
 item_id: 277
 category: Wondrous
 item_subtypes: 

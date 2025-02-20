@@ -1,5 +1,7 @@
 ---
 title: Obsidian Ooze Amulet
+included_in: "Amarune's Almanac: The Underdark"
+
 item_id: 284
 category: Wondrous
 item_subtypes: 

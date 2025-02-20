@@ -1,5 +1,8 @@
 ---
 title: Heirloom Warpick
+alt_title: Breachgnome Warpick
+included_in: "Amarune's Almanac: The Underdark"
+
 item_id: 282
 category: Weapon
 item_subtypes: 

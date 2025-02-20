@@ -1,5 +1,8 @@
 ---
 title: Greater Gauntlets of the Glacier
+alt_title: Gauntlets of the Great Glacier
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 200
 category: Wondrous
 item_subtypes: 

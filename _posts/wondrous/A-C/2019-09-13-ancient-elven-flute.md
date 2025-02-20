@@ -1,5 +1,8 @@
 ---
 title: Ancient Elven Flute
+alt_title: Flute of Turlang
+included_in: "Amarune's Almanac: Forests of the Realms"
+
 item_id: 278
 category: Wondrous
 item_subtypes: 

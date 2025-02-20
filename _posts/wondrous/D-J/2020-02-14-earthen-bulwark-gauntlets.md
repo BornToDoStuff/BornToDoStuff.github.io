@@ -1,5 +1,7 @@
 ---
 title: Earthen Bulwark Gauntlets
+included_in: "Amarune's Almanac: Grasslands of the Realms"
+
 item_id: 298
 category: Wondrous
 item_subtypes: 

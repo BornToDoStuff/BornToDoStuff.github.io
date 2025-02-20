@@ -1,5 +1,7 @@
 ---
 title: Potion of Reflex
+included_in: "Amarune's Almanac: The Underdark"
+
 item_id: 287
 category: Potion
 item_subtypes: 

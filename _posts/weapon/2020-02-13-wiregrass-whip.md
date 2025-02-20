@@ -1,5 +1,7 @@
 ---
 title: Wiregrass Whip
+included_in: "Amarune's Almanac: Grasslands of the Realms"
+
 item_id: 296
 category: Weapon
 item_subtypes: 

@@ -1,5 +1,7 @@
 ---
 title: Piton of the Peaks
+included_in: "Amarune's Almanac: Mountains of the Realms"
+
 item_id: 315
 category: Wondrous
 item_subtypes: 

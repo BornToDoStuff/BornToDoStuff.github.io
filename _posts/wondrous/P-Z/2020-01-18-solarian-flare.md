@@ -1,5 +1,7 @@
 ---
 title: Solarian Flare
+included_in: "Amarune's Almanac: Grasslands of the Realms"
+
 item_id: 290
 category: Wondrous
 item_subtypes: 

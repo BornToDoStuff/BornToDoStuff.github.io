@@ -1,5 +1,7 @@
 ---
 title: Mithral Needle
+included_in: "Amarune's Almanac: The Underdark"
+
 item_id: 286
 category: Weapon
 item_subtypes: 

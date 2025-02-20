@@ -1,5 +1,7 @@
 ---
 title: Vacuum Pack
+included_in: "Amarune's Almanac: Swamps of the Realms"
+
 item_id: 309
 category: Wondrous
 item_subtypes: 

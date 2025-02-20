@@ -1,5 +1,7 @@
 ---
 title: Skull of the Stampede
+included_in: "Amarune's Almanac: Grasslands of the Realms"
+
 item_id: 297
 category: Wondrous
 item_subtypes: 

@@ -1,5 +1,7 @@
 ---
 title: Tessadyle Vest
+included_in: "Amarune's Almanac: The Underdark"
+
 item_id: 283
 category: Wondrous
 item_subtypes: 

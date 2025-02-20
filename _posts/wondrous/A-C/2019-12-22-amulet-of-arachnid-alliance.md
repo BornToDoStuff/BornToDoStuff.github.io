@@ -1,5 +1,7 @@
 ---
 title: Amulet of Arachnid Alliance
+included_in: "Amarune's Almanac: The Underdark"
+
 item_id: 288
 category: Wondrous
 item_subtypes: 

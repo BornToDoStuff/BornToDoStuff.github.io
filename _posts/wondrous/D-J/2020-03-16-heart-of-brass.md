@@ -1,5 +1,7 @@
 ---
 title: Heart of Brass
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 299
 category: Wondrous
 item_subtypes: 

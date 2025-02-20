@@ -1,5 +1,8 @@
 ---
 title: Deathsbane Shield
+alt_title: Shield of Anti-Necrosis
+included_in: "Legendary Hunts: Coastal"
+
 item_id: 231
 category: Armor
 item_subtypes: 

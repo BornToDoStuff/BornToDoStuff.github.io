@@ -1,5 +1,7 @@
 ---
 title: Razorleaf Emerald
+included_in: "Amarune's Almanac: Forests of the Realms"
+
 item_id: 274
 category: Wondrous
 item_subtypes:

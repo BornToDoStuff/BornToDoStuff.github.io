@@ -1,5 +1,8 @@
 ---
 title: Shield of Mighty Timbers
+alt_title: Arakhora's Shield
+included_in: "Amarune's Almanac: Forests of the Realms"
+
 item_id: 276
 category: Armor
 item_subtypes: 

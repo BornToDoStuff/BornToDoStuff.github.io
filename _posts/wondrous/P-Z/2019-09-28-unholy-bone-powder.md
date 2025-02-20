@@ -1,5 +1,7 @@
 ---
 title: Unholy Bone Powder
+included_in: "Legendary Hunts: Coastal"
+
 item_id: 328
 category: Wondrous
 item_subtypes: 

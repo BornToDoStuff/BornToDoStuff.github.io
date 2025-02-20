@@ -1,5 +1,8 @@
 ---
 title: Marsh Machete
+alt_title: Mortick Machete
+included_in: "Amarune's Almanac: Swamps of the Realms"
+
 item_id: 304
 category: Weapon
 item_subtypes: 

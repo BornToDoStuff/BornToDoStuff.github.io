@@ -1,5 +1,7 @@
 ---
 title: Fang of Eternal Frost
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 300
 category: Weapon
 item_subtypes: 

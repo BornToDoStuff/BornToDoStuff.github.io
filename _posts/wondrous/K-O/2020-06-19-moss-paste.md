@@ -1,5 +1,7 @@
 ---
 title: Moss Paste
+included_in: "Amarune's Almanac: Swamps of the Realms"
+
 item_id: 311
 category: Wondrous
 item_subtypes: 

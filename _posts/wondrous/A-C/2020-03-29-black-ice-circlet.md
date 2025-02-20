@@ -1,5 +1,7 @@
 ---
 title: Black Ice Circlet
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 303
 category: Wondrous
 item_subtypes: 

@@ -1,5 +1,8 @@
 ---
 title: G'nehr's Vest of Vines
+alt_title: Vest of Vines
+included_in: "Amarune's Almanac: Swamps of the Realms"
+
 item_id: 220
 category: Armor
 item_subtypes: 

@@ -1,5 +1,7 @@
 ---
 title: Tumulus Bracers
+included_in: "Amarune's Almanac: Grasslands of the Realms"
+
 item_id: 295
 category: Wondrous
 item_subtypes: 

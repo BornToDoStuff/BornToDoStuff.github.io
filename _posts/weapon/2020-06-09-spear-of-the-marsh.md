@@ -1,5 +1,7 @@
 ---
 title: Spear of the Marsh
+included_in: "Amarune's Almanac: Swamps of the Realms"
+
 item_id: 310
 category: Weapon
 item_subtypes: 

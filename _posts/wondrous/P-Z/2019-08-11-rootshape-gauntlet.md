@@ -1,5 +1,7 @@
 ---
 title: Rootshape Gauntlets
+included_in: "Amarune's Almanac: Forests of the Realms"
+
 item_id: 275
 category: Wondrous
 item_subtypes:

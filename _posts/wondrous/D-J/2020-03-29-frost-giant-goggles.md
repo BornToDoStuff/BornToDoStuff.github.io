@@ -1,5 +1,7 @@
 ---
-title: Frost Giant Goggles 
+title: Frost Giant Goggles
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 302
 category: Wondrous
 item_subtypes: 

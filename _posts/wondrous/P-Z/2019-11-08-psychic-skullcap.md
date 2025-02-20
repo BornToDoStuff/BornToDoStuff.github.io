@@ -1,5 +1,8 @@
 ---
 title: Psychic Skullcap
+alt_title: Torglor Skullcap
+included_in: "Amarune's Almanac: The Underdark"
+
 item_id: 285
 category: Wondrous
 item_subtypes: 

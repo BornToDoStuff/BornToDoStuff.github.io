@@ -1,5 +1,8 @@
 ---
 title: Pendant of Blight
+alt_title: Pendant of Nature's Bane
+included_in: "Amarune's Almanac: Grasslands of the Realms"
+
 item_id: 291
 category: Wondrous
 item_subtypes:

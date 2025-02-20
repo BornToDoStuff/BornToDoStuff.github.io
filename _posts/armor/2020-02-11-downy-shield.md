@@ -1,5 +1,8 @@
 ---
 title: Downy Shield
+alt_title: Jaskar's Shield
+included_in: "Amarune's Almanac: Grasslands of the Realms"
+
 item_id: 293
 category: Armor
 item_subtypes: 

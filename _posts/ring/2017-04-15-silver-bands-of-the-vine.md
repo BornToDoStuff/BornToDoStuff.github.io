@@ -1,5 +1,8 @@
 ---
 title: Silver Bands of the Vine
+alt_title: Silver Bands of the Forest
+included_in: "Amarune's Almanac: Forests of the Realms"
+
 item_id: 164
 category: Ring
 item_subtypes:

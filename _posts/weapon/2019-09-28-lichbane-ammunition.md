@@ -1,5 +1,7 @@
 ---
 title: Lichbane Ammunition
+included_in: "Legendary Hunts: Coastal"
+
 item_id: 327
 category: Weapon
 item_subtypes: 

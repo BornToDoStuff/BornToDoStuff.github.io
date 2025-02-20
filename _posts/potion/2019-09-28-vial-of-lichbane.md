@@ -1,5 +1,7 @@
 ---
 title: Vial of Lichbane
+included_in: "Legendary Hunts: Coastal"
+
 item_id: 330
 category: Potion
 item_subtypes: 

@@ -1,5 +1,8 @@
 ---
 title: Spear of the Snow
+alt_title: Spear of Rellavar
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 3
 category: Weapon
 item_subtypes:

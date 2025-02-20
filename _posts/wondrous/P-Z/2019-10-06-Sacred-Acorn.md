@@ -1,5 +1,8 @@
 ---
 title: Sacred Acorn
+alt_title: Sacred Grove Acorn
+included_in: "Amarune's Almanac: Forests of the Realms"
+
 item_id: 280
 category: Wondrous
 item_subtypes: 

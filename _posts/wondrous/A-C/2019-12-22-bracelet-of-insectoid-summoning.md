@@ -1,5 +1,8 @@
 ---
 title: Bracelet of Insectoid Summoning
+alt_title: Maggris' Bracelet of Summoning
+included_in: "Amarune's Almanac: The Underdark"
+
 item_id: 289
 category: Wondrous
 item_subtypes: 

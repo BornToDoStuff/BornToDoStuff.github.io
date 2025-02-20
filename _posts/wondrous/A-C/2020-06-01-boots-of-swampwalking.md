@@ -1,5 +1,7 @@
 ---
 title: Boots of Swampwalking
+included_in: "Amarune's Almanac: Swamps of the Realms"
+
 item_id: 307
 category: Wondrous
 item_subtypes: 

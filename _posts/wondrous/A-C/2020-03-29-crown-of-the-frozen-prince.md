@@ -1,5 +1,8 @@
 ---
 title: Crown of the Frozen Prince
+alt_title: Adbar's Crown
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 301
 category: Wondrous
 item_subtypes: 

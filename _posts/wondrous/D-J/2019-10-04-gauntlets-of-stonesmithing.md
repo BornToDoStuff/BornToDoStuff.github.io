@@ -1,5 +1,6 @@
 ---
 title: Gauntlets of Stonesmithing
+alt_title: Stonemason's Gauntlets
 included_in: "Amarune's Almanac: Mountains of the Realms"
 
 item_id: 251

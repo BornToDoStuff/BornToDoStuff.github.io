@@ -1,5 +1,7 @@
 ---
 title: Unholy Lacquer
+included_in: "Legendary Hunts: Coastal"
+
 item_id: 329
 category: Potion
 item_subtypes: 

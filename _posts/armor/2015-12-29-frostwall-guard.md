@@ -1,5 +1,8 @@
 ---
 title: Frostwall Guard
+alt_title: Shield of Dorn's Deep
+included_in: "Amarune's Almanac: Arctics of the Realms"
+
 item_id: 4
 category: Armor
 item_subtypes:

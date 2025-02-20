@@ -1,5 +1,7 @@
 ---
 title: Bog Goggles
+included_in: "Amarune's Almanac: Swamps of the Realms"
+
 item_id: 305
 category: Wondrous
 item_subtypes: 

@@ -1,5 +1,7 @@
 ---
 title: Eyes of Stormwing
+included_in: "Amarune's Almanac: Grasslands of the Realms"
+
 item_id: 292
 category: Wondrous
 item_subtypes: 

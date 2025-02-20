@@ -11,7 +11,7 @@ item_classes:
   - Rogue
   - Warlock
   - Wizard
-item_school: Conjuratio
+item_school: Conjuration
 item_role:
   - Attack
 item_damage:
