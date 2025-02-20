@@ -31,11 +31,13 @@ layout: default
         {%- assign minSimilarityScore =  2.6 -%}
         {%- assign maxRelatedCounter = 0 -%}
 
+
         {%- for post in site.posts -%}
           {%- assign sameTagCount = 0 -%}
           {%- assign sameSubtypeCount = 0 -%}
-          {%- assign sameRoleCount = 0 -%}
-          {%- assign similarityScore = 1 -%}
+          {%- assign sameRoleCount = -0.1 -%}
+          {%- assign similarityScore = 0.9 -%}
+
 
           {%- for tag in post.tags -%}
             {%- if post.url != page.url -%}
@@ -52,7 +54,7 @@ layout: default
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
-          {%- assign sameSubtypeCount = sameSubtypeCount | at_most: 2  -%}
+          {%- assign sameSubtypeCount = sameSubtypeCount | times: 0.6  -%}
 
           {%- for role in post.item_role -%}
             {%- if post.url != page.url -%}
@@ -63,24 +65,39 @@ layout: default
           {%- endfor -%}
           {%- assign sameRoleCount = sameRoleCount | times: 0.5  -%}
 
-          {%- if sameTagCount >= 1 -%}
+          {%- if sameTagCount > 0 -%}
             {%- if page.category == post.category -%}
               {%- assign similarityScore = similarityScore | plus: 0.5 -%}
+            {%- else -%}
+              {%- assign similarityScore = similarityScore | minus: 0.1 -%}
             {%- endif -%}
+
+            {%- if page.item_school == post.item_school -%}
+              {%- assign similarityScore = similarityScore | plus: 0.5 -%}
+            {%- else -%}
+              {%- assign similarityScore = similarityScore | minus: 0.1 -%}
+            {%- endif -%}
+
             {%- if page.item_curse and post.item_curse -%}
               {%- assign similarityScore = similarityScore | plus: 0.25 -%}
             {%- endif -%}
+
             {%- if page.item_rarity == post.item_rarity -%}
               {%- assign similarityScore = similarityScore | plus: 0.25 -%}
+            {%- endif -%}
+
+            {%- if page.included_in == post.included_in -%}
+              {%- assign similarityScore = similarityScore | plus: 1 -%}
             {%- endif -%}
 
             {%- assign similarityScore = similarityScore | plus: sameRoleCount -%}
             {%- assign similarityScore = similarityScore | plus: sameTagCount -%}
 
-            {%- if sameSubtypeCount >= 1 -%}
+            {%- if sameSubtypeCount > 0 -%}
               {%- assign similarityScore = similarityScore | times: 1.3 -%}
             {%- endif -%}
           {%- endif -%}
+
 
           {%- if similarityScore >= minSimilarityScore -%}
             {%- include magic-item.html related=similarityScore -%}
@@ -89,6 +106,7 @@ layout: default
             {%- if maxRelatedCounter >= maxRelated -%}
               {%- break -%}
             {%- endif -%}
+
           {%- endif -%}
         {%- endfor -%}
       </div>
