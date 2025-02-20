@@ -24,7 +24,7 @@ tags:
   - Underdark
   - Cave
   - Nature
-  
+  - Insect
   - Summoning
 item_idea: 
 item_co_creator: 

@@ -18,6 +18,8 @@ tags:
   - Forest
   - Planar
   - Demiplane
+  - Proficiency
+  - Teleport
 item_idea: 
 item_co_creator: 
 item_updated: 

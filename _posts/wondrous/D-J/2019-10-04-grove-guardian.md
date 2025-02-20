@@ -1,5 +1,8 @@
 ---
 title: Grove Guardian
+alt_title: Guardian of Shiallia
+included_in: "Amarune's Almanac: Forests of the Realms"
+
 item_id: 279
 category: Wondrous
 item_subtypes:

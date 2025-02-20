@@ -3,6 +3,7 @@ title: Augmier's Orb of Armament
 item_id: 53
 category: Wondrous
 item_subtypes:
+  - Orb
 item_rarity: Uncommon
 item_attunement: false
 item_requirement:
@@ -20,6 +21,7 @@ tags:
   - Unique Character
   - Augmier
   - Gnomish
+  - Orb
 item_idea:
 item_co_creator:
 item_updated:

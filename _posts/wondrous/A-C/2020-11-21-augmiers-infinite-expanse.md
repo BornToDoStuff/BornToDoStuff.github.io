@@ -5,7 +5,8 @@ included_in: "Amarune's Almanac: Deserts of the Realms"
 
 item_id: 320
 category: Wondrous
-item_subtypes: Orb
+item_subtypes: 
+  - Orb
 item_rarity: Very Rare
 item_attunement: true
 item_requirement: 
@@ -23,14 +24,12 @@ item_damage: Slashing
 tags:
   - Nature
   - Desert
-  - Water
   - Exhaustion
   - Demiplane
-  - Long Rest
-  - Short Rest
   - Unique Character
   - Augmier
   - Advantage
+  - Orb
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-13

@@ -3,6 +3,7 @@ title: Augmier's Scorching Orb
 item_id: 176
 category: Wondrous
 item_subtypes:
+  - Orb
 item_rarity: Rare
 item_attunement: false
 item_requirement:
@@ -18,6 +19,7 @@ tags:
   - Augmier
   - Bonus Action
   - Spellcasting
+  - Orb
 item_idea:
 item_co_creator:
 item_updated: 2019-09-06

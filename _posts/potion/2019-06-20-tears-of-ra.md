@@ -22,6 +22,7 @@ tags:
   - Summoning
   - Mythology
   - Consumable
+  - Insect
 item_image: "/images/item_art/tears-of-ra.png"
 image_artist: Direquest
 item_idea: Egyptian mythology

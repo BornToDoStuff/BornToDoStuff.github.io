@@ -23,6 +23,7 @@ tags:
   - Bonus Action
   - Spider
   - Cursed
+  - Insect
 item_idea:
 item_co_creator:
 item_updates: [2018-04-08, 2019-07-22, 2019-08-01, 2021-09-07]

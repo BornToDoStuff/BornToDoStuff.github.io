@@ -11,7 +11,7 @@ item_curse: false
 item_classes:
   - Fighter
   - Ranger
-item_school:
+item_school: Unidentifiable
 item_role:
 item_damage:
 tags:
