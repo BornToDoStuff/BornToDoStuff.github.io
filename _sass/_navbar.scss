@@ -136,44 +136,46 @@
 	}
 }
 
-#search-show {
-  background: url('/images/icons/search.svg') no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  border: 0;
-  font-size: 0px;
-  padding: 0px;
-}
-
-#search-results {
-	margin-top: 20px;
-}
-#about, #random, #grid-layout, #table-layout, #search-show, #search-btn {
-  display: block;
-	opacity: 0.45;
-	width: 30px;
-	height: 30px;
-	margin: 15px 0px;
-  cursor: pointer;
-
-  &:hover { opacity: 0.7; }
-
-  @include tiny {
-    width: 24px;
-    height: 24px;
-    margin: 18px 0px;
+#navbar {
+  #search-show {
+    background: url('/images/icons/search.svg') no-repeat;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    border: 0;
+    font-size: 0px;
+    padding: 0px;
   }
-}
-#search-btn:hover { opacity: initial; }
 
-#about { background: url('/images/icons/question-circle.svg') no-repeat; }
-#random { background: url('/images/icons/random.svg') no-repeat; }
-#grid-layout { background: url('/images/icons/th-large.svg') no-repeat; }
-#table-layout { background: url('/images/icons/th-list.svg') no-repeat; }
-#navbar #main-nav #btn-table { //the most specific identifier wins, so unfortunately this must be annoyingly specific
-  display: none;
+  #search-results {
+    margin-top: 20px;
+  }
+  #about, #random, #grid-layout, #table-layout, #search-show, #search-btn {
+    display: block;
+    opacity: 0.45;
+    width: 30px;
+    height: 30px;
+    margin: 15px 0px;
+    cursor: pointer;
+
+    &:hover { opacity: 0.7; }
+
+    @include tiny {
+      width: 24px;
+      height: 24px;
+      margin: 18px 0px;
+    }
+  }
+  #search-btn:hover { opacity: initial; }
+
+  #about { background: url('/images/icons/question-circle.svg') no-repeat; }
+  #random { background: url('/images/icons/random.svg') no-repeat; }
+  #grid-layout { background: url('/images/icons/th-large.svg') no-repeat; }
+  #table-layout { background: url('/images/icons/th-list.svg') no-repeat; }
+  #main-nav #btn-table { //the most specific identifier wins, so unfortunately this must be annoyingly specific
+    display: none;
+  }
 }
 
 #advanced-nav {

@@ -185,7 +185,7 @@
 			//$("#main").remove();
 			//$("#main-wrapper").load(posts[r].url + " #main");
 			history.replaceState(null, posts[r].title, posts[r].url);
-			$("#main-wrapper").load(posts[r].url + " #main-wrapper section", function() {
+			$("#main-wrapper").load(posts[r].url + " #main-wrapper", function() {
 				initItemMenu();
 				checkRelated();
 				$("#related magic-item").each(function(){setItemHeight($(this), false)});
