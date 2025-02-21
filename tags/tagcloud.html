@@ -30,7 +30,7 @@ permalink: /tags/tagcloud/
   const minSize = {{tag_minSize}};
   const maxSize = {{tag_maxSize}};
   const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
-  const spaceScale = d3.scaleLinear([minSize,maxSize],[0.5,3]).clamp(true);
+  const spaceScale = d3.scaleLinear([minSize,maxSize],[0.5,4]).clamp(true);
   const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
 
   const angles = 3;
@@ -64,6 +64,7 @@ permalink: /tags/tagcloud/
     //.spiral("rectangular")
     .spiral("archimedean")
     .font("Roboto")
+    .fontWeight(600)
     .fontSize(d => customScale(d.size))
     .on("end", draw);
 
