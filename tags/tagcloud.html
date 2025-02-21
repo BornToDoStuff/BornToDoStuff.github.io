@@ -23,24 +23,25 @@ permalink: /tags/tagcloud/
 <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
 <script>
 
+  const angles = 3;
+  const angleMin = 0;
+  const angleMax = 90;
+  const maxTagCount = 150;
+  const width = 1000;
+  const height = 800;
+
   const allWords = [
   {%- for tag in tag_names -%}  
     {text: "{{ tag }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}
   ];
-  const wordsArray = allWords.sort((a,b) => b.size - a.size).slice(0,50).reverse(); // get first 50 tags by the most occurences
+  const wordsArray = allWords.sort((a,b) => b.size - a.size).slice(0,maxTagCount).reverse(); // get first 50 tags by the most occurences
   
-  const width = 1000;
-  const height = 800;
   const minSize = wordsArray[0].size;
-  const maxSize = wordsArray[49].size;
+  const maxSize = wordsArray[maxTagCount-1].size;
   const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
   const spaceScale = d3.scaleLinear([minSize,maxSize],[0.75,5]).clamp(true);
   const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
-
-  const angles = 3;
-  const angleMin = 0;
-  const angleMax = 90;
   const customRotation = d3.scaleLinear([0,angles-1],[angleMin,angleMax]);
 
   const svg = d3.select(".page").append("svg")
