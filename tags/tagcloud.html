@@ -39,7 +39,8 @@ permalink: /tags/tagcloud/
   const minSize = 3;
   const maxSize = {{tag_maxSize}};
   const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
-  
+  const colorScale = d3.scaleLinear([minSize,maxSize],["#5c5f6d","#264658"]).clamp(true);
+
   const angles = 3;
   const angleMax = 90;
   const angleMin = 0;
@@ -79,10 +80,11 @@ permalink: /tags/tagcloud/
         .append("a")
           .attr("href", d => "/tags/#" + d.slug)
         .append("text")
-          .style("font-size", d => customScale(d.size) + "pt")
+          .style("font-size", d => d.size + "px")
           .style("font-family", "Impact")
           .attr("text-anchor", "middle")
           .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
+          .attr("fill", colorScale(d.size))
           .text(d => d.text);
   }
 
