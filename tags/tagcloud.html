@@ -38,7 +38,12 @@ permalink: /tags/tagcloud/
   const height = 800;
   const minSize = 3;
   const maxSize = {{tag_maxSize}};
-  const customScale = d3.scaleLog([minSize,maxSize],[10,100]).clamp(true);
+  const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
+  
+  const angles = 3;
+  const angleMax = 90;
+  const angleMin = 0;
+  const customRotation = d3.scaleLinear([0,angles-1],[angleMin,angleMax]);
 
   const allWords = [
   {%- for tag in tag_names -%}  
@@ -60,7 +65,8 @@ permalink: /tags/tagcloud/
     .size([width, height])
     .words(words)
     .padding(5)
-    .rotate(() => Math.floor(Math.random() * 3) * 90)
+    //.rotate(() => Math.floor(Math.random() * 3) * 90)
+    .rotate(() => customRotation(~~(Math.random() * angles)))
     .spiral("rectangular")
     .font("Impact")
     .fontSize(d => customScale(d.size))
