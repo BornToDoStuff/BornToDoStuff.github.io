@@ -84,7 +84,7 @@ permalink: /tags/tagcloud/
           .style("font-family", "Impact")
           .attr("text-anchor", "middle")
           .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
-          .attr("fill", colorScale(d.size))
+          .attr("fill", d => colorScale(d.size))
           .text(d => d.text);
   }
 
