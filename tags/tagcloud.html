@@ -15,7 +15,6 @@ permalink: /tags/tagcloud/
 <item-tags class="compact">
   {%- for tag in tag_names -%}
     {%- if site.tags[tag].size > tag_maxSize -%}{%- assign tag_maxSize = site.tags[tag].size -%}{%- endif -%}
-      <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}} <span>|</span> {{ site.tags[tag].size }}</a></item-tag>
   {%- endfor -%}
   {%- assign tag_avgSize = tag_maxSize | times: 0.5 | ceil -%}
 </item-tags>
@@ -30,7 +29,7 @@ permalink: /tags/tagcloud/
   const minSize = 3;
   const maxSize = {{tag_maxSize}};
   const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
-  const colorScale = d3.scaleLinear([minSize,maxSize],["#5c5f6d","#264658"]).clamp(true);
+  const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
 
   const angles = 3;
   const angleMax = 90;
@@ -59,7 +58,8 @@ permalink: /tags/tagcloud/
     .padding(5)
     //.rotate(() => Math.floor(Math.random() * 3) * 90)
     .rotate(() => customRotation(~~(Math.random() * angles)))
-    .spiral("rectangular")
+    //.spiral("rectangular")
+    .spiral("archimedean")
     .font("Impact")
     .fontSize(d => customScale(d.size))
     .on("end", draw);
