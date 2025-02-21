@@ -34,8 +34,8 @@ permalink: /tags/tagcloud/
   //   { text: "Data", size: 28 }
   // ];
 
-  const width = 800;
-  const height = 800;
+  const width = 1000;
+  const height = 1000;
   const minSize = 3;
   const maxSize = {{tag_maxSize}};
   const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
@@ -62,7 +62,7 @@ permalink: /tags/tagcloud/
     .attr("transform", `translate(${width / 2},${height / 2})`);
 
   const cloud = d3.layout.cloud()
-    .size([width, height])
+    .size([width*0.95, height*0.95])
     .words(words)
     .padding(5)
     //.rotate(() => Math.floor(Math.random() * 3) * 90)
@@ -79,7 +79,7 @@ permalink: /tags/tagcloud/
         .append("a")
           .attr("href", d => "/tags/#" + d.slug)
         .append("text")
-          .style("font-size", d => customScale(d.size) + "px")
+          .style("font-size", d => customScale(d.size) + "pt")
           .style("font-family", "Impact")
           .attr("text-anchor", "middle")
           .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
