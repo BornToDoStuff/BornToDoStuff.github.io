@@ -24,18 +24,9 @@ permalink: /tags/tagcloud/
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
 <script>
-  // const words = [
-  //   { text: "JavaScript", size: 30 },
-  //   { text: "D3", size: 25 },
-  //   { text: "HTML", size: 20 },
-  //   { text: "CSS", size: 18 },
-  //   { text: "Tag Cloud", size: 22 },
-  //   { text: "Visualization", size: 15 },
-  //   { text: "Data", size: 28 }
-  // ];
 
-  const width = 1000;
-  const height = 1000;
+  const width = 800;
+  const height = 600;
   const minSize = 3;
   const maxSize = {{tag_maxSize}};
   const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
