@@ -16,3 +16,60 @@ permalink: /tags/tagcloud/
       <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}} <span>|</span> {{ site.tags[tag].size }}</a></item-tag>
   {%- endfor -%}
 </item-tags>
+
+
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
+<script>
+  // const words = [
+  //   { text: "JavaScript", size: 30 },
+  //   { text: "D3", size: 25 },
+  //   { text: "HTML", size: 20 },
+  //   { text: "CSS", size: 18 },
+  //   { text: "Tag Cloud", size: 22 },
+  //   { text: "Visualization", size: 15 },
+  //   { text: "Data", size: 28 }
+  // ];
+
+  const words = [
+  {%- for tag in tag_names -%}
+    {text: "{{ tag }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
+  {%- endfor -%}
+  ]
+
+  const width = 600;
+  const height = 400;
+
+  const svg = d3.select("body").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .attr("id", "svgTagCloud");
+
+  const g = svg.append("g")
+    .attr("transform", `translate(${width / 2},${height / 2})`);
+
+  const cloud = d3.layout.cloud()
+    .size([width, height])
+    .words(words)
+    .padding(5)
+    .rotate(() => Math.floor(Math.random() * 2) * 90)
+    .font("Impact")
+    .fontSize(d => d.size)
+    .on("end", draw);
+
+  function draw(words) {
+    g.selectAll("text")
+      .data(words)
+      .enter()
+        .append("a")
+          .attr("href", d => "#" + d.slug)
+        .append("text")
+          .style("font-size", d => d.size + "px")
+          .style("font-family", "Impact")
+          .attr("text-anchor", "middle")
+          .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
+          .text(d => d.text);
+  }
+
+  cloud.start();
+</script>
