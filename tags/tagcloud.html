@@ -5,10 +5,13 @@ permalink: /tags/tagcloud/
 ---
 
 {% assign tag_names = "" | split: "|" %}
+{% assign tag_maxSize = 2 %}
 {% for tag in site.tags %}
   {%- assign tag_names = tag_names | push: tag.first -%}
+  {% if site.tags[tag].size > tag_maxSize %}{% assign tag_maxSize = site.tags[tag].size %}{% endif %}
 {% endfor %}
 {% assign tag_names = tag_names | sort %}
+{% assign tag_avgSize = tag_maxSize | times: 0.5 | ceil %}
 
 <h1>{{ page.title }}</h1>
 <item-tags class="compact">
@@ -31,16 +34,21 @@ permalink: /tags/tagcloud/
   //   { text: "Data", size: 28 }
   // ];
 
-  const words = [
-  {%- for tag in tag_names -%}
+  const width = 1200;
+  const height = 800;
+  const minSize = 3;
+  const maxSize = {{tag_maxSize}};
+  const customScale = d3.scaleLog([minSize,maxSize],[10,100]).clamp(true);
+
+  const allWords = [
+  {%- for tag in tag_names -%}  
     {text: "{{ tag }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}
   ]
+  const words = allWords.filter(w => w.size > minSize).sort((a,b) => a.size - b.size)
+  
 
-  const width = 600;
-  const height = 400;
-
-  const svg = d3.select("body").append("svg")
+  const svg = d3.select(".page").append("svg")
     .attr("width", width)
     .attr("height", height)
     .attr("id", "svgTagCloud");
@@ -52,9 +60,10 @@ permalink: /tags/tagcloud/
     .size([width, height])
     .words(words)
     .padding(5)
-    .rotate(() => Math.floor(Math.random() * 2) * 90)
+    .rotate(() => Math.floor(Math.random() * 3) * 90)
+    .spiral("rectangular")
     .font("Impact")
-    .fontSize(d => d.size)
+    .fontSize(d => customScale(d.size))
     .on("end", draw);
 
   function draw(words) {
@@ -62,9 +71,9 @@ permalink: /tags/tagcloud/
       .data(words)
       .enter()
         .append("a")
-          .attr("href", d => "#" + d.slug)
+          .attr("href", d => "/tags/#" + d.slug)
         .append("text")
-          .style("font-size", d => d.size + "px")
+          .style("font-size", d => customScale(d.size) + "px")
           .style("font-family", "Impact")
           .attr("text-anchor", "middle")
           .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
