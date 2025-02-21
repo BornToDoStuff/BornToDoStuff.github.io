@@ -26,7 +26,7 @@ permalink: /tags/tagcloud/
   const angles = 3;
   const angleMin = 0;
   const angleMax = 90;
-  const maxTagCount = 150;
+  const maxTagCount = 120;
   const width = 1000;
   const height = 800;
 
@@ -41,8 +41,12 @@ permalink: /tags/tagcloud/
   const maxSize = wordsArray[maxTagCount-1].size;
   const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
   const spaceScale = d3.scaleLinear([minSize,maxSize],[0.75,5]).clamp(true);
-  const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
   const customRotation = d3.scaleLinear([0,angles-1],[angleMin,angleMax]);
+
+  const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
+  const hueScale = d3.scaleLinear([0,1],["190","210"]).clamp(true);
+  const saturationScale = d3.scaleLinear([minSize,maxSize],["20","55"]).clamp(true);
+  const lightScale = d3.scaleLinear([minSize,maxSize],["60","15"]).clamp(true);
 
   const svg = d3.select(".page").append("svg")
     .attr("width", width)
@@ -74,7 +78,8 @@ permalink: /tags/tagcloud/
         .append("text")
           .style("font-size", d => d.size + "px")
           .attr("text-anchor", "middle")
-          .attr("fill", d => colorScale(d.size))
+          //.attr("fill", d => colorScale(d.size))
+          .attr("fill", d => `hsl(${~~(hueScale(Math.random()))},${saturationScale(d.size)}%,${lightScale(d.size)}%)`)
           .text(d => d.text);
   }
 
