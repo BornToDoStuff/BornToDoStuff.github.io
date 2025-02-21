@@ -8,16 +8,16 @@ permalink: /tags/tagcloud/
 {% assign tag_maxSize = 2 %}
 {% for tag in site.tags %}
   {%- assign tag_names = tag_names | push: tag.first -%}
-  {% if site.tags[tag].size > tag_maxSize %}{% assign tag_maxSize = site.tags[tag].size %}{% endif %}
 {% endfor %}
 {% assign tag_names = tag_names | sort %}
-{% assign tag_avgSize = tag_maxSize | times: 0.5 | ceil %}
 
 <h1>{{ page.title }}</h1>
 <item-tags class="compact">
   {%- for tag in tag_names -%}
+    {%- if site.tags[tag].size > tag_maxSize -%}{%- assign tag_maxSize = site.tags[tag].size -%}{%- endif -%}
       <item-tag><a href="/tags/#{{ tag | slugify }}">{{tag}} <span>|</span> {{ site.tags[tag].size }}</a></item-tag>
   {%- endfor -%}
+  {%- assign tag_avgSize = tag_maxSize | times: 0.5 | ceil -%}
 </item-tags>
 
 
@@ -34,7 +34,7 @@ permalink: /tags/tagcloud/
   //   { text: "Data", size: 28 }
   // ];
 
-  const width = 1200;
+  const width = 800;
   const height = 800;
   const minSize = 3;
   const maxSize = {{tag_maxSize}};
@@ -44,8 +44,8 @@ permalink: /tags/tagcloud/
   {%- for tag in tag_names -%}  
     {text: "{{ tag }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}
-  ]
-  const words = allWords.filter(w => w.size > minSize).sort((a,b) => a.size - b.size)
+  ];
+  const words = allWords.filter(w => w.size > minSize).sort((a,b) => a.size - b.size);
   
 
   const svg = d3.select(".page").append("svg")
