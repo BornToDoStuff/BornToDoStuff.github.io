@@ -29,7 +29,7 @@ permalink: /tags/tagcloud/
   const height = 600;
   const minSize = {{tag_minSize}};
   const maxSize = {{tag_maxSize}};
-  const customScale = d3.scaleLog([minSize,maxSize],[10,100]).clamp(true);
+  const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
   const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
 
   const angles = 3;
@@ -37,12 +37,13 @@ permalink: /tags/tagcloud/
   const angleMin = 0;
   const customRotation = d3.scaleLinear([0,angles-1],[angleMin,angleMax]);
 
-  const allWords = [
+  //const allWords = [
+  const words = [
   {%- for tag in tag_names -%}  
     {text: "{{ tag }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}
   ];
-  const words = allWords.filter(w => w.size > minSize).sort((a,b) => a.size - b.size);
+  //const words = allWords.filter(w => w.size > minSize).sort((a,b) => a.size - b.size);
   
 
   const svg = d3.select(".page").append("svg")
@@ -56,7 +57,7 @@ permalink: /tags/tagcloud/
   const cloud = d3.layout.cloud()
     .size([width*0.95, height*0.95])
     .words(words)
-    .padding(3)
+    .padding(2)
     //.rotate(() => Math.floor(Math.random() * 3) * 90)
     .rotate(() => customRotation(~~(Math.random() * angles)))
     //.spiral("rectangular")
@@ -71,11 +72,11 @@ permalink: /tags/tagcloud/
       .enter()
         .append("a")
           .attr("href", d => "/tags/#" + d.slug)
+          .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
         .append("text")
           .style("font-size", d => d.size + "px")
           .style("font-family", "Impact")
           .attr("text-anchor", "middle")
-          .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
           .attr("fill", d => colorScale(d.size))
           .text(d => d.text);
   }
