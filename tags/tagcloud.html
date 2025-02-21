@@ -5,8 +5,9 @@ permalink: /tags/tagcloud/
 ---
 
 {% assign tag_names = "" | split: "|" %}
-{% assign tag_maxSize = 2 %}
-{% for tag in site.tags %}
+{% assign tag_minSize = 3 %}
+{% assign tag_maxSize = 10 %}
+{% for tag in site.tags | where_exp:"tag", "tag.size > tag_minSize" %}
   {%- assign tag_names = tag_names | push: tag.first -%}
 {% endfor %}
 {% assign tag_names = tag_names | sort %}
@@ -26,9 +27,9 @@ permalink: /tags/tagcloud/
 
   const width = 800;
   const height = 600;
-  const minSize = 3;
+  const minSize = {{tag_minSize}};
   const maxSize = {{tag_maxSize}};
-  const customScale = d3.scaleLinear([minSize,maxSize],[10,100]).clamp(true);
+  const customScale = d3.scaleLog([minSize,maxSize],[10,100]).clamp(true);
   const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
 
   const angles = 3;
@@ -55,7 +56,7 @@ permalink: /tags/tagcloud/
   const cloud = d3.layout.cloud()
     .size([width*0.95, height*0.95])
     .words(words)
-    .padding(5)
+    .padding(3)
     //.rotate(() => Math.floor(Math.random() * 3) * 90)
     .rotate(() => customRotation(~~(Math.random() * angles)))
     //.spiral("rectangular")
