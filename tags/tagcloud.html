@@ -30,7 +30,7 @@ permalink: /tags/tagcloud/
     {text: "{{ tag }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}
   ];
-  const words = allWords.sort((a,b) => b.size - a.size).slice(0,50); // get first 50 tags by the most tags
+  const words = allWords.sort((a,b) => a.size - b.size).slice(0,50); // get first 50 tags by the most occurences
   
   const width = 1000;
   const height = 800;
