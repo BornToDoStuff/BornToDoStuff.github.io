@@ -45,6 +45,7 @@ permalink: /tags/tagcloud/
   const width = Math.max(maxWidth, minDimension);
   const height = Math.max(maxHeight, minDimension);
 
+  const steps = 6;
   const angles = 4;
   const angleMin = -45;
   const angleMax = 90;
@@ -71,7 +72,9 @@ permalink: /tags/tagcloud/
   const rotationScale_all = d3.scaleLinear([0,angles-1],[angleMin,angleMax]); //get allowed rotation angles
   const rotationScale_large = d3.scaleLinear([0,1],[0,45]); //get allowed rotation angles for larger words
   //const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
-  const hueScale = d3.scaleLinear([0,1],["185","215"]);
+
+  const stepScale = d3.scaleLinear([minSize,maxSize],[0,steps-1]); //create distinct steps from the given min and max relevancies
+  const hueScale = d3.scaleLinear([0,steps-1],["185","215"]);
   const saturationScale = d3.scaleLinear([minSize,maxSize],["15","60"]);
   const lightScale = d3.scaleLinear([minSize,maxSize],["60","18"]);
 
@@ -106,7 +109,7 @@ permalink: /tags/tagcloud/
           .style("font-size", d => d.size + "px")
           .attr("text-anchor", "middle")
           //.attr("fill", d => colorScale(d.size))
-          .attr("fill", d => `hsl(${~~(hueScale(Math.random()))},${~~saturationScale(d.count)}%,${~~lightScale(d.count)}%)`)
+          .attr("fill", d => `hsl(${~~(hueScale(Math.random() * steps))},${~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
           .text(d => d.text);
   }
 
