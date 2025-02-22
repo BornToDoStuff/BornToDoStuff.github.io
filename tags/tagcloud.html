@@ -57,17 +57,19 @@ permalink: /tags/tagcloud/
   {%- endfor -%}
   ];
 
-  var wordsArray = allWords.filter(w => w.text.length < 15); //remove tags that are too long and assign to working array
+  var wordsArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
   wordsArray = wordsArray.sort((a,b) => b.count - a.count).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
   shuffleArray(wordsArray); // shuffle array order
   wordsArray = wordsArray.slice(0,maxTagCount).sort((a,b) => b.count - a.count).reverse(); // then reduce to N tags to randomly remove r tags before sorting to correct order
 
   const minSize = parseInt(wordsArray[0].count); //get smallest relevance
   const maxSize = parseInt(wordsArray[wordsArray.length-1].count); //get largest relevance
+  const titleSize = maxSize - Math.sqrt(minSize + maxSize);
 
   const sizeScale = d3.scaleLinear([minSize,maxSize],[12,90]).clamp(true);
   const spaceScale = d3.scaleLinear([minSize,maxSize],[0.5,4]).clamp(true);
-  const rotationScale = d3.scaleLinear([0,angles-1],[angleMin,angleMax]); //get allowed rotation angles
+  const rotationScale_all = d3.scaleLinear([0,angles-1],[angleMin,angleMax]); //get allowed rotation angles
+  const rotationScale_large = d3.scaleLinear([0,1],[0,45]); //get allowed rotation angles for larger words
   //const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
   const hueScale = d3.scaleLinear([0,1],["190","210"]);
   const saturationScale = d3.scaleLinear([minSize,maxSize],["15","60"]);
@@ -86,7 +88,7 @@ permalink: /tags/tagcloud/
     .words(wordsArray)
     .padding(d => spaceScale(d.count))
     //.rotate(() => Math.floor(Math.random() * 3) * 90)
-    .rotate(() => rotationScale(~~(Math.random() * angles)))
+    .rotate(d => d.count > titleSize ? rotationScale_large(~~(Math.random() * angles)) : rotationScale_all(~~(Math.random() * angles)))
     //.spiral("rectangular")
     .font("Roboto")
     .fontWeight(600)
