@@ -8,18 +8,14 @@ permalink: /tags/tagcloud/
 {% assign tag_minSize = 3 %}
 {% assign tag_maxSize = 10 %}
 {% for tag in site.tags %}
-  {%- if tag.size >= tag_minSize -%}
+
+  {{tag | inspect}}
+  {%- if site.tags[tag.first].size >= tag_minSize -%}
     {%- assign tag_names = tag_names | push: tag.first -%}
     {%- if tag.size > tag_maxSize -%}{%- assign tag_maxSize = tag.size -%}{%- endif -%}
   {%- endif -%}
 {% endfor %}
 {% assign tag_names = tag_names | sort %}
-
-<h1>{{ page.title }}</h1>
-<item-tags class="compact">
-
-</item-tags>
-
 
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
