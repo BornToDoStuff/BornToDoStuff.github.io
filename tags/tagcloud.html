@@ -76,8 +76,8 @@ permalink: /tags/tagcloud/
   //create distinct steps from the given min and max relevancies and assign color scales to use a stepped domain
   const stepScale = d3.scaleLinear([minSize,maxSize],[0,steps-1]); 
   const hueScale = d3.scaleLinear([0,steps-1],["185","215"]);
-  const saturationScale = d3.scaleLinear([0,steps-1],["15","60"]);
-  const lightScale = d3.scaleLinear([0,steps-1],["60","18"]);
+  const saturationScale = d3.scaleLinear([0,steps-1],["20","60"]);
+  const lightScale = d3.scaleLinear([0,steps-1],["65","20"]);
 
   const svg = d3.select(".page").append("svg")
     .attr("width", width)
