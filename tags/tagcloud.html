@@ -45,8 +45,8 @@ permalink: /tags/tagcloud/
   {%- endfor -%}
   ];
   var wordsArray = allWords.sort((a,b) => b.size - a.size).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
-  wordsArray = shuffleArray(wordsArray).slice(0,maxTagCount); //shuffle and then reduce to N tags
-  wordsArray = wordsArray.sort((a,b) => b.size - a.size).reverse(); //sort tags to correct order
+  shuffleArray(wordsArray); // shuffle 
+  wordsArray = wordsArray.sort((a,b) => b.size - a.size).slice(0,maxTagCount).reverse(); // and then reduce to N tags then sort tags to correct order
 
   const minSize = wordsArray[0].size;
   const maxSize = wordsArray[maxTagCount-1].size;
