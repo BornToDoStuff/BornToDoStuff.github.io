@@ -16,8 +16,17 @@ permalink: /tags/tagcloud/
 {% endfor %}
 {% assign tag_names = tag_names | sort %}
 
+
+<style>
+  .page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
+
 <script>
   function shuffleArray(array) {
     for (var i = array.length - 1; i >= 0; i--) {
@@ -30,7 +39,7 @@ permalink: /tags/tagcloud/
 
   var container = document.querySelector(".page");
   var cs = getComputedStyle(container);
-  const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1600);
+  const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1000);
   const maxHeight = Math.min(window.innerHeight - 100, maxWidth);
   const minDimension = 520
   const width = Math.max(maxWidth, minDimension);
