@@ -49,12 +49,12 @@ permalink: /tags/tagcloud/
   ];
 
   var wordsArray = allWords.filter(w => w.text.length < 15); //remove tags that are too long and assign to working array
-  wordsArray = wordsArray.sort((a,b) => b.size - a.size).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
+  wordsArray = wordsArray.sort((a,b) => b.count - a.count).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
   shuffleArray(wordsArray); // shuffle array order
-  wordsArray = wordsArray.slice(0,maxTagCount).sort((a,b) => b.size - a.size).reverse(); // then reduce to N tags to randomly remove r tags before sorting to correct order
+  wordsArray = wordsArray.slice(0,maxTagCount).sort((a,b) => b.count - a.count).reverse(); // then reduce to N tags to randomly remove r tags before sorting to correct order
 
-  const minSize = wordsArray[0].count; //get smallest relevance
-  const maxSize = wordsArray[wordsArray.length-1].counnt; //get largest relevance
+  const minSize = parseInt(wordsArray[0].count); //get smallest relevance
+  const maxSize = parseInt(wordsArray[wordsArray.length-1].count); //get largest relevance
 
   const sizeScale = d3.scaleLinear([minSize,maxSize],[12,90]).clamp(true);
   const spaceScale = d3.scaleLinear([minSize,maxSize],[0.5,4]).clamp(true);
@@ -75,7 +75,7 @@ permalink: /tags/tagcloud/
   const d3cloud = d3.layout.cloud()
     .size([width*0.95, height*0.95])
     .words(wordsArray)
-    .padding(d => spaceScale(d.size))
+    .padding(d => spaceScale(d.count))
     //.rotate(() => Math.floor(Math.random() * 3) * 90)
     .rotate(() => rotationScale(~~(Math.random() * angles)))
     //.spiral("rectangular")
