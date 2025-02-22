@@ -34,7 +34,7 @@ permalink: /tags/tagcloud/
   const angles = 3;
   const angleMin = 0;
   const angleMax = 90;
-  const maxTagCount = 120;
+  const maxTagCount = 130;
   const tagRandom = Math.floor(maxTagCount/10);
   const width = 1000;
   const height = 800;
@@ -52,11 +52,11 @@ permalink: /tags/tagcloud/
   const maxSize = wordsArray[maxTagCount-1].size;
   //const customScale = d3.scaleLog([minSize,maxSize],[10,100]).base(5).clamp(true);
   const customScale = d3.scaleLinear([minSize,maxSize],[12,90]).clamp(true);
-  const spaceScale = d3.scaleLinear([minSize,maxSize],[0.75,5]).clamp(true);
+  const spaceScale = d3.scaleLinear([minSize,maxSize],[0.5,4]).clamp(true);
   const customRotation = d3.scaleLinear([0,angles-1],[angleMin,angleMax]);
 
   const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
-  const hueScale = d3.scaleLinear([0,1],["190","220"]).clamp(true);
+  const hueScale = d3.scaleLinear([0,1],["190","210"]).clamp(true);
   const saturationScale = d3.scaleLinear([minSize,maxSize],["15","55"]).clamp(true);
   const lightScale = d3.scaleLinear([minSize,maxSize],["60","15"]).clamp(true);
 
