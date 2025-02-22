@@ -22,11 +22,20 @@ permalink: /tags/tagcloud/
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
 <script>
+  function shuffleArray(array) {
+    for (var i = array.length - 1; i >= 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+  }
 
   const angles = 3;
   const angleMin = 0;
   const angleMax = 90;
   const maxTagCount = 120;
+  const tagRandom = Math.floor(maxTagCount/10);
   const width = 1000;
   const height = 800;
 
@@ -35,12 +44,14 @@ permalink: /tags/tagcloud/
     {text: "{{ tag }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}
   ];
-  const wordsArray = allWords.sort((a,b) => b.size - a.size).slice(0,maxTagCount).reverse(); // get first 50 tags by the most occurences
-  
+  var wordsArray = allWords.sort((a,b) => b.size - a.size).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
+  wordsArray = shuffleArray(wordsArray).slice(0,maxTagCount); //shuffle and then reduce to N tags
+  wordsArray = wordsArray.sort((a,b) => b.size - a.size).reverse(); //sort tags to correct order
+
   const minSize = wordsArray[0].size;
   const maxSize = wordsArray[maxTagCount-1].size;
   //const customScale = d3.scaleLog([minSize,maxSize],[10,100]).base(5).clamp(true);
-  const customScale = d3.scaleLinear([minSize,maxSize],[14,100]).clamp(true);
+  const customScale = d3.scaleLinear([minSize,maxSize],[12,100]).clamp(true);
   const spaceScale = d3.scaleLinear([minSize,maxSize],[0.75,5]).clamp(true);
   const customRotation = d3.scaleLinear([0,angles-1],[angleMin,angleMax]);
 
