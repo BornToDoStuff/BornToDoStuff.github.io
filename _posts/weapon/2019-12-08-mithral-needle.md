@@ -22,8 +22,8 @@ item_damage:
 tags:
   - Underdark
   - Cave
-  - Nature
-item_idea: 
+  - Mithral
+item_idea: Hollow Knight
 item_co_creator: 
 item_updated: 2021-02-26
 last_modified_at: 2021-02-26

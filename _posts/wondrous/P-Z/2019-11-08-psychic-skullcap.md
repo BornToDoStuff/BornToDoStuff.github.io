@@ -21,7 +21,8 @@ item_damage:
 tags:
   - Underdark
   - Cave
-  - Nature
+  - Illithid
+  - Mind Flayer
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-26

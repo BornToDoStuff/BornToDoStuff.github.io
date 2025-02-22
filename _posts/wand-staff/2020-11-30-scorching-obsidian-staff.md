@@ -22,7 +22,6 @@ item_damage:
   - Fire
   - Radiant
 tags:
-  - Nature
   - Desert
   - Sand
   - Terrain

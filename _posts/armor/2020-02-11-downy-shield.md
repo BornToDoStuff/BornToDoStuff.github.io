@@ -20,7 +20,6 @@ item_role:
   - Utility
 item_damage: 
 tags:
-  - Nature
   - Flying
   - Movement
   - Bird

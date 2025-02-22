@@ -17,7 +17,6 @@ item_role:
   - Utility
 item_damage: 
 tags:
-  - Nature
   - Desert
   - Water
   - Liquid

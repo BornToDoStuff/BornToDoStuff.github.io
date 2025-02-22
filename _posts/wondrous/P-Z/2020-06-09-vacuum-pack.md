@@ -5,6 +5,7 @@ included_in: "Amarune's Almanac: Swamps of the Realms"
 item_id: 309
 category: Wondrous
 item_subtypes: 
+  - Container
 item_rarity: Very Rare
 item_attunement: true
 item_requirement: 
@@ -16,10 +17,10 @@ item_role:
   - Utility
 item_damage: 
 tags:
-  - Nature
   - Swamp
   - Marsh
   - Trap
+  - Storage
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-08

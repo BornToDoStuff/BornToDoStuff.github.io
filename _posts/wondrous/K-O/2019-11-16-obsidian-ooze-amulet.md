@@ -22,7 +22,6 @@ item_damage:
 tags:
   - Underdark
   - Cave
-  - Nature
   - Acid
   - Poison
   - Blindsight

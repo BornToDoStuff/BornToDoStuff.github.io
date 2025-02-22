@@ -21,9 +21,11 @@ item_role:
 item_damage: 
   - Bludgeoning
 tags:
-  - Nature
   - Movement
   - Resistance
+  - Psychic
+  - Space
+  - Push
 item_image: "/images/item_art/skull-of-the-stampede.png"
 image_artist: Direquest
 item_idea: 

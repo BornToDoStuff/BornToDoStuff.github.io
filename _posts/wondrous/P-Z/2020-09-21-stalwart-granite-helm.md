@@ -22,7 +22,6 @@ item_role:
 item_damage: 
   - Psychic
 tags:
-  - Nature
   - Mountain
   - Stone
   - Giant

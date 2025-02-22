@@ -19,7 +19,6 @@ item_damage:
 tags:
   - Underdark
   - Cave
-  - Nature
   - Movement
   - Perception
   - Consumable

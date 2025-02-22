@@ -22,7 +22,8 @@ item_damage:
 tags:
   - Underdark
   - Cave
-  - Nature
+  - Critical Hit
+  - Adamantine
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-26

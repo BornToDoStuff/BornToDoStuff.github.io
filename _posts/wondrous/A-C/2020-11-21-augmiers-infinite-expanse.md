@@ -22,7 +22,6 @@ item_role:
   - Utility
 item_damage: Slashing
 tags:
-  - Nature
   - Desert
   - Exhaustion
   - Demiplane

@@ -18,7 +18,6 @@ item_role:
 item_damage: 
   - Radiant
 tags:
-  - Nature
   - Light
   - Oozes
   - Undead

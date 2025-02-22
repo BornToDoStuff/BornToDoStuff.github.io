@@ -23,7 +23,6 @@ item_role:
   - Attack
 item_damage: 
 tags:
-  - Nature
   - Arctic
   - Cold
   - Spellcasting

@@ -19,11 +19,11 @@ item_role:
   - Defense
 item_damage: 
 tags:
-  - Nature
   - Arctic
   - Cold
   - Planar
   - Fire
+  - Ignan
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-02
