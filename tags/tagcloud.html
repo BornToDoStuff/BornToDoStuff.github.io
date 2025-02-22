@@ -88,7 +88,7 @@ permalink: /tags/tagcloud/
     .words(wordsArray)
     .padding(d => spaceScale(d.count))
     //.rotate(() => Math.floor(Math.random() * 3) * 90)
-    .rotate(d => d.count >= titleSize ? rotationScale_large(~~(Math.random())) : rotationScale_all(~~(Math.random() * angles)))
+    .rotate(d => Math.floor(d.count >= titleSize ? rotationScale_large(~~(Math.random() * 2)) : rotationScale_all(~~(Math.random() * angles))))
     //.spiral("rectangular")
     .font("Roboto")
     .fontWeight(600)
@@ -106,7 +106,7 @@ permalink: /tags/tagcloud/
           .style("font-size", d => d.size + "px")
           .attr("text-anchor", "middle")
           //.attr("fill", d => colorScale(d.size))
-          .attr("fill", d => `hsl(${~~(hueScale(Math.random()))},${saturationScale(d.count)}%,${lightScale(d.count)}%)`)
+          .attr("fill", d => `hsl(${~~(hueScale(Math.random()))},${~~saturationScale(d.count)}%,${~~lightScale(d.count)}%)`)
           .text(d => d.text);
   }
 
