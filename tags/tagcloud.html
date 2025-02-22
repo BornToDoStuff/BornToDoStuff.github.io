@@ -33,13 +33,19 @@ permalink: /tags/tagcloud/
     }
   }
 
+  var container = document.querySelector(".page");
+  var cs = getComputedStyle(container);
+  const maxWidth = Math.Min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1600);
+  const maxHeight = Math.Min(window.innerHeight - 100, maxWidth);
+  const minDimension = 520
+  const width = Math.Max(maxWidth, minDimension);
+  const height = Math.Max(maxHeight, minDimension);
+
   const angles = 3;
   const angleMin = 0;
   const angleMax = 90;
   const maxTagCount = 120;
   const tagRandom = Math.floor(maxTagCount/10);
-  const width = 1000;
-  const height = 800;
 
   const allWords = [
   {%- for tag in tag_names -%}  
