@@ -44,7 +44,7 @@ permalink: /tags/tagcloud/
 
   const allWords = [
   {%- for tag in tag_names -%}  
-    {text: "{{ tag }}", count: "{{ site.tags[tag].size }}", size: "{{ site.tags[tag].size }}" slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
+    {text: "{{ tag }}", count: "{{ site.tags[tag].size }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
   {%- endfor -%}
   ];
 
