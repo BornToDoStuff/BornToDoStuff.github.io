@@ -8,11 +8,10 @@ permalink: /tags/tagcloud/
 {% assign tag_minSize = 3 %}
 {% assign tag_maxSize = 10 %}
 {% for tag in site.tags %}
-
-  {{tag | inspect}}
-  {%- if site.tags[tag.first].size >= tag_minSize -%}
+  {% assign tag_size = site.tags[tag.first].size %}
+  {%- if tag_size >= tag_minSize -%}
     {%- assign tag_names = tag_names | push: tag.first -%}
-    {%- if tag.size > tag_maxSize -%}{%- assign tag_maxSize = tag.size -%}{%- endif -%}
+    {%- if tag_size > tag_maxSize -%}{%- assign tag_maxSize = tag_size -%}{%- endif -%}
   {%- endif -%}
 {% endfor %}
 {% assign tag_names = tag_names | sort %}
@@ -31,11 +30,11 @@ permalink: /tags/tagcloud/
 
   var container = document.querySelector(".page");
   var cs = getComputedStyle(container);
-  const maxWidth = Math.Min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1600);
-  const maxHeight = Math.Min(window.innerHeight - 100, maxWidth);
+  const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1600);
+  const maxHeight = Math.min(window.innerHeight - 100, maxWidth);
   const minDimension = 520
-  const width = Math.Max(maxWidth, minDimension);
-  const height = Math.Max(maxHeight, minDimension);
+  const width = Math.max(maxWidth, minDimension);
+  const height = Math.max(maxHeight, minDimension);
 
   const angles = 3;
   const angleMin = 0;
