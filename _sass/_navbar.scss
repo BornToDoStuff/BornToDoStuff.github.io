@@ -188,6 +188,7 @@
   position: relative;
   max-height: 80vh;
   overflow-y: auto;
+  overflow-x: hidden;
   transition: max-height ease 0.3s;
 }
 #advanced-nav.hidden{
