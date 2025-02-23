@@ -141,7 +141,7 @@ permalink: /tags/tagcloud/
       //.spiral("rectangular")
       .font("Roboto")
       .fontWeight(600)
-      .fontSize(d => d.count <= smallSize ? sizeScale(d.minSize) : sizeScale(d.size))
+      .fontSize(d => d.count <= smallSize ? sizeScale(minSize) : sizeScale(d.size))
       .on("end", draw);
 
     function draw(dataArray) {
