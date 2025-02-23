@@ -92,7 +92,7 @@ permalink: /tags/tagcloud/
 
   wordsArray = wordsArray.sort((a,b) => b.count - a.count).slice(0,maxTagCount + tagRandom); // get up to N+r tags by the most occurences where r is randomness
   shuffleArray(wordsArray); // shuffle array order
-  wordsArray = wordsArray.slice(-tagRandom).sort((a,b) => a.count - b.count); // then reduce by r to randomize what tags appear
+  wordsArray = wordsArray.slice(0,-tagRandom).sort((a,b) => a.count - b.count); // then reduce by r to randomize what tags appear
 
   const minSize = parseInt(wordsArray[0].count); //get smallest relevance
   const maxSize = parseInt(wordsArray[wordsArray.length-1].count); //get largest relevance
