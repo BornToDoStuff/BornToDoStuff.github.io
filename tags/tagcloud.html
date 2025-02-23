@@ -93,7 +93,7 @@ permalink: /tags/tagcloud/
     .padding(d => spaceScale(d.count))
     //.rotate(() => Math.floor(Math.random() * 3) * 90)
     .rotate(d => Math.floor(d.count >= titleSize ? rotationScale_large(~~(Math.random() * 2)) : rotationScale_all(~~(Math.random() * angles))))
-    //.spiral("rectangular")
+    .spiral("rectangular")
     .font("Roboto")
     .fontWeight(600)
     .fontSize(d => sizeScale(d.size))
