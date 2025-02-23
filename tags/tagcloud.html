@@ -151,7 +151,7 @@ permalink: /tags/tagcloud/
           .append("a")
             .attr("href", d => "/tags/#" + d.slug)
             .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
-            .attr("class", d.count <= smallSize ? "tag_minor" :"tag_major")
+            .attr("class", d => d.count <= smallSize ? "tag_minor" :"tag_major")
           .append("text")
             .style("font-size", d => d.size + "px")
             .attr("text-anchor", "middle")
