@@ -34,6 +34,7 @@ permalink: /tags/tagcloud/
 <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
 
 <script>
+  
   function shuffleArray(array) {
     for (var i = array.length - 1; i >= 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -67,91 +68,99 @@ permalink: /tags/tagcloud/
     g.setAttribute("transform", `scale(${scale}) translate(${translateX / scale}, ${translateY / scale})`);
   }
 
-  var container = document.querySelector(".page");
-  var cs = getComputedStyle(container);
-  const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1000);
-  const maxHeight = Math.min(window.innerHeight - 125, maxWidth);
-  const minDimension = 520;
-  const width = Math.max(maxWidth, minDimension);
-  const height = Math.max(maxHeight, minDimension);
+  function cloudWhenReady(){
 
-  const steps = 6;
-  // const angles = 4;
-  // const angleMin = -45;
-  const angles = 3;
-  const angleMin = 0;
-  const angleMax = 90;
-  const maxTagCount = 100;
-  const tagRandom = Math.floor(maxTagCount/10);
+    const allWords = [
+    {%- for tag in tag_names -%}  
+      {text: "{{ tag }}", count: "{{ site.tags[tag].size }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
+    {%- endfor -%}
+    ];
 
-  const allWords = [
-  {%- for tag in tag_names -%}  
-    {text: "{{ tag }}", count: "{{ site.tags[tag].size }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
-  {%- endfor -%}
-  ];
+    var wordsArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
+    wordsArray = wordsArray.sort((a,b) => b.count - a.count).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
+    shuffleArray(wordsArray); // shuffle array order
+    wordsArray = wordsArray.slice(0,maxTagCount).sort((a,b) => a.count - b.count) // then reduce to N tags to randomly remove r tags before sorting
 
-  var wordsArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
-  wordsArray = wordsArray.sort((a,b) => b.count - a.count).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
-  shuffleArray(wordsArray); // shuffle array order
-  wordsArray = wordsArray.slice(0,maxTagCount).sort((a,b) => a.count - b.count) // then reduce to N tags to randomly remove r tags before sorting
+    const minSize = parseInt(wordsArray[0].count); //get smallest relevance
+    const maxSize = parseInt(wordsArray[wordsArray.length-1].count); //get largest relevance
+    const titleSize = parseInt(wordsArray[Math.floor(maxTagCount*0.95)].count); //the top 5%
+    const smallSize = parseInt(wordsArray[Math.floor(maxTagCount*0.66)].count); //the bottom 2/3s
 
-  const minSize = parseInt(wordsArray[0].count); //get smallest relevance
-  const maxSize = parseInt(wordsArray[wordsArray.length-1].count); //get largest relevance
-  const titleSize = parseInt(wordsArray[Math.floor(maxTagCount*0.95)].count); //the top 5%
-  const smallSize = parseInt(wordsArray[Math.floor(maxTagCount*0.66)].count); //the bottom 2/3s
+    const steps = 6;
+    const angles = 3; // const angles = 4;
+    const angleMin = 0; // const angleMin = -45;
+    const angleMax = 90;
+    const maxTagCount = 100;
+    const tagRandom = Math.floor(maxTagCount/10);
 
-  //const sizeScale = d3.scalePow([minSize,maxSize],[10,80]).exponent(0.6).clamp(true);
-  const sizeScale = d3.scaleLinear([minSize,maxSize],[10,75]).clamp(true);
-  const spaceScale = d3.scaleLinear([minSize,maxSize],[0.1,2]).clamp(true);
-  const rotationScale_all = d3.scaleLinear([0,angles-1],[angleMin,angleMax]); //get allowed rotation angles
-  const rotationScale_large = d3.scaleLinear([0,1],[0,45]); //get allowed rotation angles for larger words
-  //const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
+    //const sizeScale = d3.scalePow([minSize,maxSize],[10,80]).exponent(0.6).clamp(true);
+    const sizeScale = d3.scaleLinear([minSize,maxSize],[10,75]).clamp(true);
+    const spaceScale = d3.scaleLinear([minSize,maxSize],[0.1,2]).clamp(true);
+    const rotationScale_all = d3.scaleLinear([0,angles-1],[angleMin,angleMax]); //get allowed rotation angles
+    const rotationScale_large = d3.scaleLinear([0,1],[0,45]); //get allowed rotation angles for larger words
+    //const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
 
-  //create distinct steps from the given min and max relevancies and assign color scales to use a stepped domain
-  const stepScale = d3.scaleLinear([minSize,maxSize],[0,steps-1]); 
-  const hueScale = d3.scaleLinear([0,steps-1],["185","215"]);
-  const saturationScale = d3.scalePow([0,steps-1],["30","60"]).exponent(0.5).clamp(true);
-  const lightScale = d3.scalePow([0,steps-1],["60","15"]).exponent(0.5).clamp(true);
-  // const saturationScale = d3.scalePow([0,steps-1],["20","60"]).exponent(0.5);
-  // const lightScale = d3.scalePow([0,steps-1],["60","15"]).exponent(0.5);
-  
+    //create distinct steps from the given min and max relevancies and assign color scales to use a stepped domain
+    const stepScale = d3.scaleLinear([minSize,maxSize],[0,steps-1]); 
+    const hueScale = d3.scaleLinear([0,steps-1],["185","215"]);
+    const saturationScale = d3.scalePow([0,steps-1],["30","60"]).exponent(0.5).clamp(true);
+    const lightScale = d3.scalePow([0,steps-1],["60","15"]).exponent(0.5).clamp(true);
+    // const saturationScale = d3.scalePow([0,steps-1],["20","60"]).exponent(0.5);
+    // const lightScale = d3.scalePow([0,steps-1],["60","15"]).exponent(0.5);
+    
+    var container = document.querySelector(".page");
+    var cs = getComputedStyle(container);
+    const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1000);
+    const maxHeight = Math.min(window.innerHeight - 125, maxWidth);
+    const minDimension = 520;
+    const width = Math.max(maxWidth, minDimension);
+    const height = Math.max(maxHeight, minDimension);
 
-  const svg = d3.select(".page").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .attr("id", "svgTagCloud");
+    const svg = d3.select(".page").append("svg")
+      .attr("width", width)
+      .attr("height", height)
+      .attr("id", "svgTagCloud");
 
-  const g = svg.append("g")
-    //.attr("transform", `translate(${width / 2},${height / 2})`)
-    .attr("id", "gTagCloud");
+    const g = svg.append("g")
+      //.attr("transform", `translate(${width / 2},${height / 2})`)
+      .attr("id", "gTagCloud");
 
-  const d3cloud = d3.layout.cloud()
-    .size([width, height])
-    .words(wordsArray)
-    .padding(d => spaceScale(d.count))
-    .rotate(d => Math.floor(d.count >= titleSize ? rotationScale_large(~~(Math.random() * 2)) : rotationScale_all(~~(Math.random() * angles))))
-    //.spiral("rectangular")
-    .font("Roboto")
-    .fontWeight(600)
-    .fontSize(d => sizeScale(d.size))
-    .on("end", draw);
+    const d3cloud = d3.layout.cloud()
+      .size([width, height])
+      .words(wordsArray)
+      .padding(d => spaceScale(d.count))
+      .rotate(d => Math.floor(d.count >= titleSize ? rotationScale_large(~~(Math.random() * 2)) : rotationScale_all(~~(Math.random() * angles))))
+      //.spiral("rectangular")
+      .font("Roboto")
+      .fontWeight(600)
+      .fontSize(d => sizeScale(d.size))
+      .on("end", draw);
 
-  function draw(dataArray) {
-    g.selectAll("text")
-      .data(dataArray)
-      .enter()
-        .append("a")
-          .attr("href", d => "/tags/#" + d.slug)
-          .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
-        .append("text")
-          .style("font-size", d => d.size + "px")
-          .attr("text-anchor", "middle")
-          //.attr("fill", d => colorScale(d.size))
-          .attr("fill", d => `hsl(${d.count <= smallSize ? 200 : ~~(hueScale(~~(Math.random() * steps)))},${d.count <= smallSize ? 20 : ~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
-          .text(d => d.text);
+    function draw(dataArray) {
+      g.selectAll("text")
+        .data(dataArray)
+        .enter()
+          .append("a")
+            .attr("href", d => "/tags/#" + d.slug)
+            .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
+          .append("text")
+            .style("font-size", d => d.size + "px")
+            .attr("text-anchor", "middle")
+            //.attr("fill", d => colorScale(d.size))
+            .attr("fill", d => `hsl(${d.count <= smallSize ? 200 : ~~(hueScale(~~(Math.random() * steps)))},${d.count <= smallSize ? 20 : ~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
+            .text(d => d.text);
 
-    scaleGtoSVG(svg.attr("id"), g.attr("id"));
+      scaleGtoSVG(svg.attr("id"), g.attr("id"));
+    }
+
+    d3cloud.start();
   }
 
-  d3cloud.start();
+  //document.addEventListener("pjax:success", cloudWhenReady);
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', cloudWhenReady); // Your code to run when the DOM is ready
+  } else {
+    cloudWhenReady(); // The DOM is already loaded, run your code
+  }
+
 </script>
