@@ -53,7 +53,7 @@ permalink: /tags/tagcloud/
     // figure out the scale needed to make them the same size and use the smallest one
     const scaleX = svgWidth / gWidth;
     const scaleY = svgHeight / gHeight;
-    const scale = Math.min(scaleX, scaleY);
+    const scale = Math.min(scaleX, scaleY) * 0.95;
     // using the center of the svg and g element and current coordinates, calculate how much it has to move
     const translateX = (svgWidth / 2) - (gWidth * scale / 2) - gBounds.x * scale;
     const translateY = (svgHeight / 2) - (gHeight * scale / 2) - gBounds.y * scale;
@@ -102,8 +102,8 @@ permalink: /tags/tagcloud/
   //create distinct steps from the given min and max relevancies and assign color scales to use a stepped domain
   const stepScale = d3.scaleLinear([minSize,maxSize],[0,steps-1]); 
   const hueScale = d3.scaleLinear([0,steps-1],["185","215"]);
-  const saturationScale = d3.scalePow([~~(steps/3)-1,steps-1],["20","60"]).exponent(0.5).clamp(true);
-  const lightScale = d3.scalePow([~~(steps/3)-1,steps-1],["60","15"]).exponent(0.5).clamp(true);
+  const saturationScale = d3.scalePow([0,steps-1],["30","60"]).exponent(0.5).clamp(true);
+  const lightScale = d3.scalePow([0,steps-1],["60","15"]).exponent(0.5).clamp(true);
   // const saturationScale = d3.scalePow([0,steps-1],["20","60"]).exponent(0.5);
   // const lightScale = d3.scalePow([0,steps-1],["60","15"]).exponent(0.5);
   
@@ -114,11 +114,11 @@ permalink: /tags/tagcloud/
     .attr("id", "svgTagCloud");
 
   const g = svg.append("g")
-    .attr("transform", `translate(${width / 2},${height / 2})`)
+    //.attr("transform", `translate(${width / 2},${height / 2})`)
     .attr("id", "gTagCloud");
 
   const d3cloud = d3.layout.cloud()
-    .size([width*0.95, height*0.95])
+    .size([width, height])
     .words(wordsArray)
     .padding(d => spaceScale(d.count))
     .rotate(d => Math.floor(d.count >= titleSize ? rotationScale_large(~~(Math.random() * 2)) : rotationScale_all(~~(Math.random() * angles))))
@@ -139,7 +139,7 @@ permalink: /tags/tagcloud/
           .style("font-size", d => d.size + "px")
           .attr("text-anchor", "middle")
           //.attr("fill", d => colorScale(d.size))
-          .attr("fill", d => `hsl(${d.count <= smallSize ? 200 : ~~(hueScale(~~(Math.random() * steps)))},${~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
+          .attr("fill", d => `hsl(${d.count <= smallSize ? 200 : ~~(hueScale(~~(Math.random() * steps)))},${d.count <= smallSize ? 20 : ~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
           .text(d => d.text);
 
     scaleGtoSVG(svg.attr("id"), g.attr("id"));
