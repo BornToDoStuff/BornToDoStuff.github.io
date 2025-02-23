@@ -16,7 +16,7 @@ item_damage:
 tags:
   - Tradeoff
   - Sight
-  - Short Rest
+  - Vision
   - Tattoo
 item_goofy: 5
 item_dark: 55

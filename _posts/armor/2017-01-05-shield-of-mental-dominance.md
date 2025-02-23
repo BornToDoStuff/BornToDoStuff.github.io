@@ -15,10 +15,10 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Short Rest
   - Intelligence
   - Wisdom
   - Spellcasting
+  - Special Casting
   - Prone
   - Contested
 item_image: "/images/item_art/shield-of-mental-dominance.png"

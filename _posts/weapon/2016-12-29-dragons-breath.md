@@ -20,7 +20,6 @@ item_role:
 item_damage:
   - Fire
 tags:
-  - Long Rest
   - Movement
   - Spellcasting
 item_idea:

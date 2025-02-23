@@ -17,7 +17,6 @@ item_role:
 item_damage:
   - Bludgeoning
 tags:
-  - Long Rest
   - Critical
   - Bastion
 item_idea: Bastion

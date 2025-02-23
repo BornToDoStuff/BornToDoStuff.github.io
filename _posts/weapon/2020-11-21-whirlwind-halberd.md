@@ -24,7 +24,6 @@ tags:
   - Nature
   - Desert
   - Sand
-  - Short Rest
   - Breathing
   - Spellcasting
   - Cantrips

@@ -14,8 +14,10 @@ item_role:
   - Utility
 item_damage:
 tags:
-  - Long Rest
+  - Special Casting
   - Spellcasting
+  - Charges
+  - Nature
 item_idea:
 item_co_creator:
 item_updated: 2018-06-07

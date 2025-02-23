@@ -17,7 +17,6 @@ item_role:
 item_damage:
 tags:
   - Beast
-  - Long Rest
   - Frightened
   - Summoning
 item_idea:

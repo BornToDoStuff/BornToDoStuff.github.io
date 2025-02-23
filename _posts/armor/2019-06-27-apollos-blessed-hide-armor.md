@@ -20,7 +20,6 @@ item_damage:
 tags:
   - Spellcasting
   - Mythology
-  - Short Rest
   - Disadvantage
   - Creature Type
 item_idea: Greek mythology

@@ -25,6 +25,7 @@ tags:
   - Armor Class
   - Divine
   - Gold
+  - Stages
 item_idea:
 item_co_creator:
 item_updated:

@@ -26,7 +26,6 @@ tags:
   - Dragon
   - Battlefield Control
   - Spellcasting
-  - Long Rest
 item_idea:
 item_co_creator:
 item_updates: [2019-12-20, 2021-03-02]

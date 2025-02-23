@@ -19,7 +19,6 @@ item_damage:
 tags:
   - Desert
   - Sand
-  - Short Rest
   - Breathing
   - Spellcasting
   - Cantrips

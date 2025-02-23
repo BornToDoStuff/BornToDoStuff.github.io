@@ -20,8 +20,8 @@ tags:
   - Movement
   - Body Modification
   - Druidic
-  - Long Rest
   - Plants
+  - Stages
 item_idea:
 item_co_creator:
 item_updated: 2025-02-18

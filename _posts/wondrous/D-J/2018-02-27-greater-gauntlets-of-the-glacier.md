@@ -23,12 +23,10 @@ item_damage:
   - Cold
 tags:
   - Aura
-  
   - Grapple
   - Movement
   - Resistance
   - Restrained
-  - Short Rest
 item_idea: 
 item_co_creator: 
 item_updated: 

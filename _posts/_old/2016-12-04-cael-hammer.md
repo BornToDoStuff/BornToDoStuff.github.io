@@ -17,8 +17,7 @@ item_role:
 item_damage:
 tags:
   - Stages
-  - Long Rest
-  - Critical
+  - Critical Hit
   - Bastion
 item_idea: Bastion
 item_co_creator:

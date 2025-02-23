@@ -14,10 +14,10 @@ item_school: Abjuration
 item_role:
 item_damage:
 tags:
-  - Short Rest
   - Bonus Action
   - Concentration
   - Intelligence
+  - Psychic
 item_idea:
 item_co_creator:
 item_updated:

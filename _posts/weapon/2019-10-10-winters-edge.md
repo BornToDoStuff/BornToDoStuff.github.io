@@ -20,10 +20,8 @@ item_role:
 item_damage:
   - Cold
 tags:
-  
   - Prone
-  - Long Rest
-  
+  - Extreme Climate
   - Winter
   - Cold
 item_idea:

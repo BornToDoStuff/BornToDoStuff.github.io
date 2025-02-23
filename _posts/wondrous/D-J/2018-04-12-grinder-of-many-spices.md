@@ -21,7 +21,6 @@ tags:
   - Blinded
   - Charmed
   - Reaction
-  - Short Rest
   - Random
   - Many
   - Many Effects

@@ -19,7 +19,6 @@ item_damage:
 tags:
   - Spellcasting
   - Hit Dice
-  - Short Rest
   - Special Curse
   - Tradeoff
   - Cursed

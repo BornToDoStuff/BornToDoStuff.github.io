@@ -21,7 +21,6 @@ item_damage:
 tags:
   - Spellcasting
   - Stone
-  - Long Rest
   - Unique Character
   - Derrahk
   - Special Casting

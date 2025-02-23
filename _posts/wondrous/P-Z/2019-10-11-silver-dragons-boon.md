@@ -18,8 +18,6 @@ item_role:
   - Defense
 item_damage:
 tags:
-  - Long Rest
-  - Short Rest
   - Blindsight
   - Cold
   - Vision

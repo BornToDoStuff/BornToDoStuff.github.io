@@ -22,7 +22,6 @@ tags:
   - Water
   - Curse Purge
   - Cursed
-  - Long Rest
   - Special Casting
 item_idea:
 item_co_creator:

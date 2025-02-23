@@ -17,7 +17,9 @@ item_role:
   - Utility
 item_damage:
 tags:
-  - Long Rest
+  - Destruction
+  - Fragile
+  - Crystal
   - Ice
 item_idea:
 item_co_creator:

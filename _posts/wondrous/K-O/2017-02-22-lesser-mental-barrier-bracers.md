@@ -14,7 +14,6 @@ item_school: Abjuration
 item_role:
 item_damage:
 tags:
-  - Short Rest
   - Bonus Action
   - Concentration
   - Intelligence

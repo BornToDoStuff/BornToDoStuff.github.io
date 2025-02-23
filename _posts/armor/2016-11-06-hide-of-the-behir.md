@@ -21,7 +21,6 @@ tags:
   - Resistance
   - Grapple
   - Concentration
-  - Long Rest
 item_idea: Maladroittheif
 item_co_creator:
 item_updates: [2016-12-18, 2019-02-25, 2019-12-20, 2021-03-02]

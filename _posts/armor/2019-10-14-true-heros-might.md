@@ -22,7 +22,6 @@ tags:
   - Charmed
   - Stunned
   - Prone
-  - Long Rest
 item_idea: 
 item_co_creator: 
 item_updated: 
