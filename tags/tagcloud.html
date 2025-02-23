@@ -36,6 +36,30 @@ permalink: /tags/tagcloud/
         array[j] = temp;
     }
   }
+  function scaleGtoSVG(svgID, gID) {
+    const svg = document.getElementById(svgID);
+    const g = document.getElementById(gID);
+
+    if (!svg || !g) {
+      console.error("SVG or G element not found.");
+      return;
+    }
+    // get widths and heights of svg and g element
+    const svgWidth = svg.clientWidth;
+    const svgHeight = svg.clientHeight;
+    const gBounds = g.getBBox();
+    const gWidth = gBounds.width;
+    const gHeight = gBounds.height;
+    // figure out the scale needed to make them the same size and use the smallest one
+    const scaleX = svgWidth / gWidth;
+    const scaleY = svgHeight / gHeight;
+    const scale = Math.min(scaleX, scaleY);
+    // using the center of the svg and g element and current coordinates, calculate how much it has to move
+    const translateX = (svgWidth / 2) - (gWidth * scale / 2) - gBounds.x * scale;
+    const translateY = (svgHeight / 2) - (gHeight * scale / 2) - gBounds.y * scale;
+    // set the movement and scale
+    g.setAttribute("transform", `scale(${scale}) translate(${translateX / scale}, ${translateY / scale})`);
+  }
 
   var container = document.querySelector(".page");
   var cs = getComputedStyle(container);
@@ -90,7 +114,8 @@ permalink: /tags/tagcloud/
     .attr("id", "svgTagCloud");
 
   const g = svg.append("g")
-    .attr("transform", `translate(${width / 2},${height / 2})`);
+    .attr("transform", `translate(${width / 2},${height / 2})`)
+    .attr("id", "gTagCloud");
 
   const d3cloud = d3.layout.cloud()
     .size([width*0.95, height*0.95])
@@ -116,6 +141,8 @@ permalink: /tags/tagcloud/
           //.attr("fill", d => colorScale(d.size))
           .attr("fill", d => `hsl(${d.count <= smallSize ? 200 : ~~(hueScale(~~(Math.random() * steps)))},${~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
           .text(d => d.text);
+
+    scaleGtoSVG(svg.attr("id"), g.attr("id"));
   }
 
   d3cloud.start();
