@@ -36,7 +36,7 @@ permalink: /tags/tagcloud/
         array[j] = temp;
     }
   }
-  function scaleGtoSVG(svgID, gID) {
+  function scaleGtoSVG(svgID, gID, rescale = true) {
     const svg = document.getElementById(svgID);
     const g = document.getElementById(gID);
 
@@ -53,7 +53,7 @@ permalink: /tags/tagcloud/
     // figure out the scale needed to make them the same size and use the smallest one
     const scaleX = svgWidth / gWidth;
     const scaleY = svgHeight / gHeight;
-    const scale = Math.min(scaleX, scaleY) * 0.95;
+    const scale = rescale ? Math.min(scaleX, scaleY) * 0.95 : 1; //reduce by 5% for margins if rescaling, else, set scale to 1 to not rescale
     // using the center of the svg and g element and current coordinates, calculate how much it has to move
     const translateX = (svgWidth / 2) - (gWidth * scale / 2) - gBounds.x * scale;
     const translateY = (svgHeight / 2) - (gHeight * scale / 2) - gBounds.y * scale;
@@ -93,8 +93,8 @@ permalink: /tags/tagcloud/
   const smallSize = parseInt(wordsArray[Math.floor(maxTagCount*0.66)].count); //the bottom 2/3s
 
   //const sizeScale = d3.scalePow([minSize,maxSize],[10,80]).exponent(0.6).clamp(true);
-  const sizeScale = d3.scaleLinear([minSize,maxSize],[12,80]).clamp(true);
-  const spaceScale = d3.scaleLinear([minSize,maxSize],[0.5,4]).clamp(true);
+  const sizeScale = d3.scaleLinear([minSize,maxSize],[10,75]).clamp(true);
+  const spaceScale = d3.scaleLinear([minSize,maxSize],[0.1,2]).clamp(true);
   const rotationScale_all = d3.scaleLinear([0,angles-1],[angleMin,angleMax]); //get allowed rotation angles
   const rotationScale_large = d3.scaleLinear([0,1],[0,45]); //get allowed rotation angles for larger words
   //const colorScale = d3.scaleLinear([minSize,maxSize],["#989cb3","#264658"]).clamp(true);
