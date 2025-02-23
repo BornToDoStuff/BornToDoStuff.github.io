@@ -80,17 +80,19 @@ permalink: /tags/tagcloud/
   const maxTagCount = 150;
   const tagRandom = Math.floor(maxTagCount/10);
 
-  var workingArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
-  workingArray = workingArray.sort((a,b) => b.count - a.count); 
-  var wordsArray = workingArray.slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
-  workingArray = workingArray.slice(maxTagCount + tagRandom);
+  var wordsArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
+  // workingArray = workingArray.sort((a,b) => b.count - a.count); 
+  // var wordsArray = workingArray.slice(0,maxTagCount + tagRandom); 
+  // workingArray = workingArray.slice(maxTagCount + tagRandom);
+
+  wordsArray = wordsArray.sort((a,b) => b.count - a.count).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
   shuffleArray(wordsArray); // shuffle array order
   wordsArray = wordsArray.slice(0,maxTagCount).sort((a,b) => a.count - b.count); // then reduce to N tags to randomly remove r tags before sorting
 
   const minSize = parseInt(wordsArray[0].count); //get smallest relevance
   const maxSize = parseInt(wordsArray[wordsArray.length-1].count); //get largest relevance
-  const titleSize = parseInt(wordsArray[Math.floor(maxTagCount*0.95)].count); //the top 5%
-  const smallSize = parseInt(wordsArray[Math.floor(maxTagCount*0.66)].count); //the bottom 2/3s
+  const titleSize = parseInt(wordsArray[Math.floor((wordsArray.length-1)*0.95)].count); //the top 5%
+  const smallSize = parseInt(wordsArray[Math.floor((wordsArray.length-1)*0.66)].count); //the bottom 2/3s
 
   function cloudWhenReady(){
     
