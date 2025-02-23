@@ -60,7 +60,7 @@ permalink: /tags/tagcloud/
     // figure out the scale needed to make them the same size and use the smallest one
     const scaleX = svgWidth / gWidth;
     const scaleY = svgHeight / gHeight;
-    const scale = rescale ? Math.min(scaleX, scaleY) * 0.95 : 1; //reduce by 5% for margins if rescaling, else, set scale to 1 to not rescale
+    const scale = rescale ? Math.min(scaleX, scaleY) * 0.95 : 1; //reduce for margins if rescaling, else, set scale to 1 to not rescale
     // using the center of the svg and g element and current coordinates, calculate how much it has to move
     const translateX = (svgWidth / 2) - (gWidth * scale / 2) - gBounds.x * scale;
     const translateY = (svgHeight / 2) - (gHeight * scale / 2) - gBounds.y * scale;
@@ -68,27 +68,29 @@ permalink: /tags/tagcloud/
     g.setAttribute("transform", `scale(${scale}) translate(${translateX / scale}, ${translateY / scale})`);
   }
 
+  const allWords = [
+  {%- for tag in tag_names -%}  
+    {text: "{{ tag }}", count: "{{ site.tags[tag].size }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
+  {%- endfor -%}
+  ];
+
+  const maxTagCount = 100;
+  const tagRandom = Math.floor(maxTagCount/10);
+
+  var workingArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
+  workingArray = workingArray.sort((a,b) => b.count - a.count); 
+  var wordsArray = workingArray.slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
+  workingArray = workingArray.slice(maxTagCount + tagRandom);
+  shuffleArray(wordsArray); // shuffle array order
+  wordsArray = wordsArray.slice(0,maxTagCount).sort((a,b) => a.count - b.count); // then reduce to N tags to randomly remove r tags before sorting
+
+  const minSize = parseInt(wordsArray[0].count); //get smallest relevance
+  const maxSize = parseInt(wordsArray[wordsArray.length-1].count); //get largest relevance
+  const titleSize = parseInt(wordsArray[Math.floor(maxTagCount*0.95)].count); //the top 5%
+  const smallSize = parseInt(wordsArray[Math.floor(maxTagCount*0.66)].count); //the bottom 2/3s
+
   function cloudWhenReady(){
-
-    const allWords = [
-    {%- for tag in tag_names -%}  
-      {text: "{{ tag }}", count: "{{ site.tags[tag].size }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
-    {%- endfor -%}
-    ];
     
-    const maxTagCount = 100;
-    const tagRandom = Math.floor(maxTagCount/10);
-
-    var wordsArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
-    wordsArray = wordsArray.sort((a,b) => b.count - a.count).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
-    shuffleArray(wordsArray); // shuffle array order
-    wordsArray = wordsArray.slice(0,maxTagCount).sort((a,b) => a.count - b.count) // then reduce to N tags to randomly remove r tags before sorting
-
-    const minSize = parseInt(wordsArray[0].count); //get smallest relevance
-    const maxSize = parseInt(wordsArray[wordsArray.length-1].count); //get largest relevance
-    const titleSize = parseInt(wordsArray[Math.floor(maxTagCount*0.95)].count); //the top 5%
-    const smallSize = parseInt(wordsArray[Math.floor(maxTagCount*0.66)].count); //the bottom 2/3s
-
     const steps = 6;
     const angles = 3; // const angles = 4;
     const angleMin = 0; // const angleMin = -45;
@@ -111,9 +113,9 @@ permalink: /tags/tagcloud/
     
     var container = document.querySelector(".page");
     var cs = getComputedStyle(container);
-    const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1000);
+    const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),800);
     const maxHeight = Math.min(window.innerHeight - 125, maxWidth);
-    const minDimension = 520;
+    const minDimension = 500;
     const width = Math.max(maxWidth, minDimension);
     const height = Math.max(maxHeight, minDimension);
 
