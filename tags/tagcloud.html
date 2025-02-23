@@ -156,7 +156,7 @@ permalink: /tags/tagcloud/
             .style("font-size", d => d.size + "px")
             .attr("text-anchor", "middle")
             //.attr("fill", d => colorScale(d.size))
-            .attr("fill", d =>  d.count <= smallSize ? "hsl(200,20%,80%)" : `hsl(${~~(hueScale(~~(Math.random() * steps)))},${~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
+            .attr("fill", d =>  d.count <= smallSize ? "hsl(200,20%,85%)" : `hsl(${~~(hueScale(~~(Math.random() * steps)))},${~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
             .text(d => d.text);
 
       scaleGtoSVG(svg.attr("id"), g.attr("id"));
