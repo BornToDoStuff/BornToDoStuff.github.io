@@ -45,7 +45,7 @@ permalink: /tags/tagcloud/
   const width = Math.max(maxWidth, minDimension);
   const height = Math.max(maxHeight, minDimension);
 
-  const steps = 5;
+  const steps = 6;
   const angles = 4;
   const angleMin = -45;
   const angleMax = 90;
@@ -78,8 +78,8 @@ permalink: /tags/tagcloud/
   //create distinct steps from the given min and max relevancies and assign color scales to use a stepped domain
   const stepScale = d3.scaleLinear([minSize,maxSize],[0,steps-1]); 
   const hueScale = d3.scaleLinear([0,steps-1],["185","215"]);
-  const saturationScale = d3.scalePow([~~(steps/2),steps-1],["20","60"]).exponent(0.5).clamp(true);
-  const lightScale = d3.scalePow([~~(steps/2),steps-1],["60","15"]).exponent(0.5).clamp(true);
+  const saturationScale = d3.scalePow([~~(steps/3)-1,steps-1],["20","60"]).exponent(0.5).clamp(true);
+  const lightScale = d3.scalePow([~~(steps/3)-1,steps-1],["60","15"]).exponent(0.5).clamp(true);
   // const saturationScale = d3.scalePow([0,steps-1],["20","60"]).exponent(0.5);
   // const lightScale = d3.scalePow([0,steps-1],["60","15"]).exponent(0.5);
   
