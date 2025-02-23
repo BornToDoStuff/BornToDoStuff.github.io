@@ -23,11 +23,14 @@ permalink: /tags/tagcloud/
     align-items: center;
     justify-content: center;
   }
-  a:hover > text {
+  a.tag_major:hover > text {
     text-shadow: 0px 0px 1px #5c5f6d;
     fill: #264658;
     transition: all 0.2s 0.1s ease-out, fill 0.5s 0.1s linear;
     transform: scale(1.02);
+  }
+  a.tag_minor {
+    pointer-events: none;
   }
 </style>
 <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -74,7 +77,7 @@ permalink: /tags/tagcloud/
   {%- endfor -%}
   ];
 
-  const maxTagCount = 100;
+  const maxTagCount = 150;
   const tagRandom = Math.floor(maxTagCount/10);
 
   var workingArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
@@ -131,12 +134,12 @@ permalink: /tags/tagcloud/
     const d3cloud = d3.layout.cloud()
       .size([width, height])
       .words(wordsArray)
-      .padding(d => spaceScale(d.count))
+      .padding(d => d.count <= smallSize ? spaceScale(d.minSize) : spaceScale(d.count))
       .rotate(d => Math.floor(d.count >= titleSize ? rotationScale_large(~~(Math.random() * 2)) : rotationScale_all(~~(Math.random() * angles))))
       //.spiral("rectangular")
       .font("Roboto")
       .fontWeight(600)
-      .fontSize(d => sizeScale(d.size))
+      .fontSize(d => d.count <= smallSize ? sizeScale(d.minSize) : sizeScale(d.size))
       .on("end", draw);
 
     function draw(dataArray) {
@@ -146,11 +149,12 @@ permalink: /tags/tagcloud/
           .append("a")
             .attr("href", d => "/tags/#" + d.slug)
             .attr("transform", d => `translate(${d.x},${d.y})rotate(${d.rotate})`)
+            .attr("class", d.count <= smallSize ? "tag_minor" :"tag_major")
           .append("text")
             .style("font-size", d => d.size + "px")
             .attr("text-anchor", "middle")
             //.attr("fill", d => colorScale(d.size))
-            .attr("fill", d => `hsl(${d.count <= smallSize ? 200 : ~~(hueScale(~~(Math.random() * steps)))},${d.count <= smallSize ? 20 : ~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
+            .attr("fill", d =>  d.count <= smallSize ? "hsl(200,20%,80%)" : `hsl(${~~(hueScale(~~(Math.random() * steps)))},${~~saturationScale(~~stepScale(d.count))}%,${~~lightScale(~~stepScale(d.count))}%)`)
             .text(d => d.text);
 
       scaleGtoSVG(svg.attr("id"), g.attr("id"));
