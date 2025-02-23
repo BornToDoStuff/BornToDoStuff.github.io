@@ -34,7 +34,7 @@ permalink: /tags/tagcloud/
 <script src="https://cdn.jsdelivr.net/npm/d3-cloud@1.2.5/build/d3.layout.cloud.min.js"></script>
 
 <script>
-  
+
   function shuffleArray(array) {
     for (var i = array.length - 1; i >= 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -75,6 +75,9 @@ permalink: /tags/tagcloud/
       {text: "{{ tag }}", count: "{{ site.tags[tag].size }}", size: "{{ site.tags[tag].size }}", slug: "{{ tag | slugify }}" }{% unless forloop.last %}, {% endunless %}
     {%- endfor -%}
     ];
+    
+    const maxTagCount = 100;
+    const tagRandom = Math.floor(maxTagCount/10);
 
     var wordsArray = allWords.filter(w => w.text.length < 12 || (w.text.length < 15 && !w.text.includes(" "))); //remove tags that are too long and assign to working array
     wordsArray = wordsArray.sort((a,b) => b.count - a.count).slice(0,maxTagCount + tagRandom); // get first N+r tags by the most occurences where r is randomness
@@ -90,8 +93,6 @@ permalink: /tags/tagcloud/
     const angles = 3; // const angles = 4;
     const angleMin = 0; // const angleMin = -45;
     const angleMax = 90;
-    const maxTagCount = 100;
-    const tagRandom = Math.floor(maxTagCount/10);
 
     //const sizeScale = d3.scalePow([minSize,maxSize],[10,80]).exponent(0.6).clamp(true);
     const sizeScale = d3.scaleLinear([minSize,maxSize],[10,75]).clamp(true);
