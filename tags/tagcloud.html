@@ -123,7 +123,7 @@ permalink: /tags/tagcloud/
     
     var container = document.querySelector(".page");
     var cs = getComputedStyle(container);
-    const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),800);
+    const maxWidth = Math.min(container.offsetWidth - (parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight)),1000);
     const maxHeight = Math.min(window.innerHeight - 125, maxWidth);
     const minDimension = 500;
     const width = Math.max(maxWidth, minDimension);
