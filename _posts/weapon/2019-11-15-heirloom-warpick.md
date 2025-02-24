@@ -22,7 +22,7 @@ item_damage:
 tags:
   - Underdark
   - Cave
-  - Critical Hit
+  - Critical
   - Adamantine
 item_idea: 
 item_co_creator: 

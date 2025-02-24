@@ -15,8 +15,9 @@ item_role:
   - Utility
 item_damage:
 tags:
-  
-  
+  - Silence
+  - Performance
+  - Ethereal
 item_idea:
 item_co_creator:
 item_updated:

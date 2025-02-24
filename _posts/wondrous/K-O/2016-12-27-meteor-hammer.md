@@ -17,7 +17,11 @@ item_role:
 item_damage:
   - Bludgeoning
 tags:
-  
+  - Strength
+  - Special Weapon
+  - Bludgeoning
+  - Reach
+  - Heavy
 item_idea:
 item_co_creator:
 item_updated:

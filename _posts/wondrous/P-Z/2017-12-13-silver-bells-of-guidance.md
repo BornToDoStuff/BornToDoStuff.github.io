@@ -16,7 +16,7 @@ item_damage:
 tags:
   - Help
   - Movement
-  - Jump
+  - Jumping
   - Dash
   - Noisy
   - Sound
