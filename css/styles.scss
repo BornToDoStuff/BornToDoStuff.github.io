@@ -352,36 +352,44 @@ magic-item a {
 
 item-extras {
 	flex: 0 0 auto;
-	display: block;
+	display: flex;
 	position: relative;
-  height: 50px;
-	width: 50px;
-  margin-left: 10px;
-  overflow: hidden;
+  	height: 50px;
+	width: auto;
+  	margin-left: 10px;
+  	overflow: hidden;
 	-webkit-touch-callout: none; /* iOS Safari */
 		-webkit-user-select: none; /* Safari */
 		 -khtml-user-select: none; /* Konqueror HTML */
 			 -moz-user-select: none; /* Old versions of Firefox */
 				-ms-user-select: none; /* Internet Explorer/Edge */
-						user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+					user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 
 	@include mobile {
 		display: none;
 	}
-}
 
-	item-extras > div {
-		width: 100%;
+	& > div {
+		width: 50px;
 		height: 100%;
 		overflow: hidden;
 		position: relative;
 	}
 
-.rarity img {
-	height: 300%;
-	width: auto;
-	position: absolute;
+	.cursed img {
+		height: 100%;
+		width: auto;
+		filter: invert(20%) sepia(18%) saturate(1630%) hue-rotate(158deg) brightness(95%) contrast(82%);
+	}
+
+	.rarity img {
+		height: 300%;
+		width: auto;
+		position: absolute;
+	}
 }
+
+
 
 magic-item.common .rarity img {
 	left: 0%;
