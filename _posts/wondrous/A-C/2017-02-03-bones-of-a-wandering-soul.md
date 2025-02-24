@@ -19,7 +19,7 @@ item_damage:
 tags:
   - Incapacitated
   - Unconscious
-  - Cursed
+  
   - Frightened
   - Speak to Dead
 item_idea:

@@ -17,7 +17,7 @@ item_role:
 item_damage: 
 tags:
   - Regeneration
-  - Cursed
+  
   - Blood
   - Body Modification
 item_idea: 

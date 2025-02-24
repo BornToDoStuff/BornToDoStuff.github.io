@@ -16,7 +16,7 @@ item_damage:
 tags:
   - Angelic
   - Divine
-  - Cursed
+  
   - Religion
   - Resistant
   - Intelligence

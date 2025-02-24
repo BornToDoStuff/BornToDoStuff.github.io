@@ -26,7 +26,7 @@ tags:
   - Ice
   - Spellcasting
   - Special Casting
-  - Cursed
+  
   - Circlet
   - Special Casting
 item_idea: 

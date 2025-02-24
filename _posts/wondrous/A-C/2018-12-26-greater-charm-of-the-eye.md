@@ -19,7 +19,7 @@ item_damage:
 tags:
   - Attack of Opportunity
   - Disadvantage
-  - Cursed
+  
   - Truesight
   - Bonus Action
   - Auto Fail

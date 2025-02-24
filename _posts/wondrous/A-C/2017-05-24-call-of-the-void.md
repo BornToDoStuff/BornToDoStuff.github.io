@@ -19,7 +19,7 @@ item_damage:
 tags:
   - Battlefield Control
   - Planar
-  - Cursed
+  
 item_idea:
 item_co_creator:
 item_updated:

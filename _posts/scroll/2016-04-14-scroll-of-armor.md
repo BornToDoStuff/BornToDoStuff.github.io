@@ -18,7 +18,7 @@ tags:
   - Movement
   - Advantage
   - Mediocre
-  - Cursed
+  
 item_goofy: 70
 item_dark: 25
 item_complexity: 40

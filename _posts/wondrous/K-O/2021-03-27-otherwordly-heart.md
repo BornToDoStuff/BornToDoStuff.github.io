@@ -21,7 +21,7 @@ item_damage:
 tags:
   - Undead
   - Resurrection
-  - Cursed
+  
   - Hit Points
   - Body Modification
 item_idea: 

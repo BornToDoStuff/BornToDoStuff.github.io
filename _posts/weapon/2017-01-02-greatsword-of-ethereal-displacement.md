@@ -24,7 +24,7 @@ tags:
   - Incapacitated
   - Deafened
   - Short Rest
-  - Cursed
+  
   - Ethereal
   - Ethereal Plane
 item_idea:

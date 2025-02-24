@@ -21,7 +21,7 @@ tags:
   - Hit Dice
   - Special Curse
   - Tradeoff
-  - Cursed
+  
   - Spellcasting Focus
 item_idea:
 item_co_creator:

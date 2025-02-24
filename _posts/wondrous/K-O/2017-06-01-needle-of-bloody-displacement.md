@@ -20,7 +20,7 @@ item_damage:
 tags:
   - Bonus Action
   - Teleportation
-  - Cursed
+  
   - Blood
 item_idea:
 item_co_creator:

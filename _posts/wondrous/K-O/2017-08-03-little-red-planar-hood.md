@@ -16,7 +16,7 @@ item_role:
 item_damage:
 tags:
   - Planar
-  - Cursed
+  - Fairytale
 item_idea:
 item_co_creator:
 item_updated:

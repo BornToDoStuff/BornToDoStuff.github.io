@@ -18,7 +18,7 @@ tags:
   - Abberation
   - Fiend
   - Undead
-  - Cursed
+  
 item_idea:
 item_co_creator:
 item_updated: 2019-09-06

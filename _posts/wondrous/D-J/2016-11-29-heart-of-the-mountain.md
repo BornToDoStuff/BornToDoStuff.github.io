@@ -22,7 +22,7 @@ tags:
   - Death
   - Spellcasting
   - Exhaustion
-  - Cursed
+  
   - Vulnerable
   - Thunder
   - Special Casting

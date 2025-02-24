@@ -23,7 +23,7 @@ tags:
   - Exhaustion
   - Climbing
   - Spider
-  - Cursed
+  
   - Movement
   - Extra Appendages
   - Body Modification

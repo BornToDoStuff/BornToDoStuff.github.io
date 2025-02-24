@@ -27,7 +27,7 @@ tags:
   - Stone
   - Tremorsense
   - Sentience
-  - Cursed
+  
   - Concentration
   - Transformation
   - Body Modification

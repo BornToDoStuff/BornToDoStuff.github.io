@@ -27,7 +27,7 @@ tags:
   - Nature
   - Temporary Hit Points
   - Ritual
-  - Cursed
+  
 item_idea:
 item_co_creator:
 item_updates: [2021-02-27,2023-06-14]

@@ -13,7 +13,8 @@ item_role:
 item_damage:
   - Necrotic
 tags:
-  - Cursed
+  - Poisoned
+  - Bond
   - Special Attunement
 item_idea:
 item_co_creator:

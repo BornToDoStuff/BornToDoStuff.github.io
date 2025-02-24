@@ -22,7 +22,7 @@ tags:
   - Spellcasting
   - Bonus Action
   - Spider
-  - Cursed
+  
   - Insect
 item_idea:
 item_co_creator:

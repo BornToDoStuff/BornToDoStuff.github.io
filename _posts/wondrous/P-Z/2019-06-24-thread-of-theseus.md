@@ -6,7 +6,7 @@ item_subtypes:
 item_rarity: Very Rare
 item_attunement: true
 item_requirement:
-item_curse: true
+item_curse: false
 item_classes:
   - All
 item_school: Transmutation
@@ -16,7 +16,7 @@ item_damage:
 tags:
   - Truesight
   - Mythology
-  - Cursed
+  - Ethereal
 item_idea: Greek mythology
 item_co_creator:
 item_updated:

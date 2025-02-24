@@ -16,7 +16,7 @@ item_damage:
   - Necrotic
 tags:
   - Minauros
-  - Cursed
+  
   - Movement
   - Body Modification
   - Tattoo

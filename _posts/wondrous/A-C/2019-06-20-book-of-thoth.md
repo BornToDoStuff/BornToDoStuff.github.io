@@ -21,7 +21,7 @@ tags:
   - Spellcasting
   - Illusions
   - Mythology
-  - Cursed
+  
 item_idea: Egyptian mythology
 item_co_creator:
 item_updated:

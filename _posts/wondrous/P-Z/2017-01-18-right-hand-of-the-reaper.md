@@ -23,7 +23,7 @@ item_damage:
 tags:
   - Sickle
   - Unarmed
-  - Cursed
+  
   - Spellcasting
 item_idea:
 item_co_creator:
