@@ -374,11 +374,14 @@ item-extras {
 		height: 100%;
 		overflow: hidden;
 		position: relative;
+		display:flex;
+		flex-wrap: wrap;
+		align-content: center;
 	}
 
 	.curse img {
-		height: 100%;
-		width: auto;
+		height: 45px;
+		width: 50px;
 		//filter: invert(20%) sepia(18%) saturate(1630%) hue-rotate(158deg) brightness(95%) contrast(82%);
 	}
 

@@ -45,7 +45,7 @@
               <item-tagline>${item.type}${subtype_string}, ${item.rarity.toLowerCase()} ${item.attunement ? `(requires attunement${item.requirement ? ` by ${item.requirement}`: ''})` : '' }</item-tagline>
             </item-title>
             <item-extras aria-hidden="true">
-              ${item.curse ? '<div class="curse"><img src="/images/icons/curse.svg#svgView(transform(scale(1,0.9));viewBox(0,-20,360,360))" title="cursed skull" /></div>' : ''}
+              ${item.curse ? '<div class="curse"><img src="/images/icons/curse.svg#svgView(preserveAspectRatio(none))" title="cursed skull" /></div>' : ''}
         			<div class="rarity"><img src="/images/rarities.svg" title="${item.rarity.toLowerCase()}" /></div>
         		</item-extras>
           </item-head>
