@@ -15,6 +15,7 @@ item_damage:
 tags:
   - Planar
   - Time
+  - Timer
   - Spellcasting Focus
 item_idea: 
 item_co_creator: 

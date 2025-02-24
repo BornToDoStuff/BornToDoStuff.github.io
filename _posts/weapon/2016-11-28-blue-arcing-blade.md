@@ -20,8 +20,8 @@ item_damage:
 tags:
   - Lightning
   - Water
-  - Curse Purge
   - Cursed
+  - Special Curse
   - Special Casting
 item_idea:
 item_co_creator:

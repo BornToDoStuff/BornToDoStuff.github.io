@@ -32,7 +32,7 @@ item_updated:
 last_modified_at:
 ---
 
-These gauntlets are made from a dark marbled stone, finely chiseled. They somehow flex and articulate with no visible joints, and are far too heavy to be practical when you first put them on. When you attune with them you feel them suddenly lighten,  and you are able to move freely once again.  
+These gauntlets are made from a dark marbled stone, finely chiseled. They somehow flex and articulate with no visible joints, and are far too heavy to be practical when you first put them on. When you attune with them you feel them suddenly lighten, and you are able to move freely once again.  
 These gauntlets have 4 charges and regain 1d4 expended charges each day at dawn.  
 While wearing these gauntlets your unarmed strikes deal 1d6 additional bludgeoning damage.
 

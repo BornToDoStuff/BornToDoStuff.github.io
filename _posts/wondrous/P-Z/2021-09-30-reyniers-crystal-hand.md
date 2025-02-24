@@ -18,7 +18,7 @@ item_damage:
 tags:
   - Crystal
   - Shield
-  - Wall
+  - Barrier
   - Blinded
   - Cantrips
   - Unique Character

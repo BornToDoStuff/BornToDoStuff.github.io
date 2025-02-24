@@ -18,7 +18,7 @@ item_role:
 item_damage:
 tags:
   - Critical
-  - Invisibile
+  - Invisibility
   - Stealth
   - Initiative
   - +Bonus

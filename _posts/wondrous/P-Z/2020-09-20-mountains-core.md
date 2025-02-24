@@ -27,9 +27,8 @@ tags:
   - Stone
   - Tremorsense
   - Sentience
-  
   - Concentration
-  - Transformation
+  - Transforming
   - Body Modification
   - Consumable
 item_idea: 

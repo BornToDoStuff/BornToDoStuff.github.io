@@ -17,6 +17,7 @@ item_role:
 item_damage:
 tags:
   - Cursed
+  - Special Curse
   - Movement
   - Body Modification
   - Druidic

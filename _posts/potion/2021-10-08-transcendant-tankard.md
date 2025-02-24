@@ -16,8 +16,8 @@ item_damage:
 tags:
   - Poisoned
   - Stunned
-  - Invisible
-  - Sight
+  - Invisibility
+  - Vision
   - Ethereal Plane
   - Exhaustion
   - Consumable

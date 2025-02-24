@@ -15,7 +15,6 @@ item_role:
 item_damage:
 tags:
   - Tradeoff
-  - Sight
   - Vision
   - Tattoo
 item_goofy: 5

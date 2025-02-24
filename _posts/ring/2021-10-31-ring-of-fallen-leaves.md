@@ -19,7 +19,7 @@ tags:
   - Planar
   - Demiplane
   - Proficiency
-  - Teleport
+  - Teleportation
 item_idea: 
 item_co_creator: 
 item_updated: 

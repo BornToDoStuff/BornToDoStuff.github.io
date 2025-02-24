@@ -23,8 +23,6 @@ item_damage:
   - Bludgeoning
 tags:
   - Nature
-  
-  
   - Restrained
   - Blinded
 item_idea: 

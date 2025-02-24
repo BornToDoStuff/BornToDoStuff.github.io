@@ -21,8 +21,6 @@ tags:
   - Tree
   - Movement
   - Spellcasting
-  - Charges
-  - At Dawn  
 item_idea:
 item_co_creator:
 item_updated:

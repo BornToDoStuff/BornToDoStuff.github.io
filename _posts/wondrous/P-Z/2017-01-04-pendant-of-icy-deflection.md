@@ -18,10 +18,8 @@ item_role:
   - Defense
 item_damage:
 tags:
-  
-  
+  - Barrier
   - Bonus Action
-  
 item_idea:
 item_co_creator:
 item_updated:

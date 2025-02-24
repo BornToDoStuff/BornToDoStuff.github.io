@@ -15,7 +15,9 @@ item_role:
   - Utility
 item_damage:
 tags:
-  - Armor
+  - Deception
+  - Illusions
+  - Mediocre
 item_idea:
 item_co_creator:
 item_updated: 2018-03-28

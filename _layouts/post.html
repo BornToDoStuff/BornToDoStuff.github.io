@@ -79,7 +79,7 @@ layout: default
             {%- endif -%}
 
             {%- if page.item_curse and post.item_curse -%}
-              {%- assign similarityScore = similarityScore | plus: 0.25 -%}
+              {%- assign similarityScore = similarityScore | plus: 0.5 -%}
             {%- endif -%}
 
             {%- if page.item_rarity == post.item_rarity -%}

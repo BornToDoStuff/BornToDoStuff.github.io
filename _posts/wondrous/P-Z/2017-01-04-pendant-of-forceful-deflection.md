@@ -20,8 +20,8 @@ item_damage:
 tags:
   - Bonus Action
   - Constitution
-  - Charges
-  - At Dawn
+  - Barrier
+  - Force
 item_idea:
 item_co_creator:
 item_updated:

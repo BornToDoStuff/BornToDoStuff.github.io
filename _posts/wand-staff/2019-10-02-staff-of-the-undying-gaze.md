@@ -22,7 +22,7 @@ item_damage:
   - Psychic
 tags:
   - Outline
-  - Sight
+  - Vision
   - Ethereal
   - Ethereal Plane
   - Undead

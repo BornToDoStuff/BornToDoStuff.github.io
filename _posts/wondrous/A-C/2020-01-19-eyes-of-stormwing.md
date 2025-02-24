@@ -20,7 +20,7 @@ item_role:
 item_damage: 
 tags:
   - Nature
-  - Sight
+  - Vision
   - Darkvision
   - Perception
 item_idea: 
