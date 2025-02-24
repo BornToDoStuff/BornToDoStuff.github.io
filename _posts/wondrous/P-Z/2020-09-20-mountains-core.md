@@ -31,6 +31,7 @@ tags:
   - Concentration
   - Transformation
   - Body Modification
+  - Consumable
 item_idea: 
 item_co_creator: 
 item_updates: [2021-03-12, 2021-08-19]

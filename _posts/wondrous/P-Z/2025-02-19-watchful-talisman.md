@@ -6,7 +6,7 @@ item_subtypes:
 item_rarity: Very Rare
 item_attunement: false
 item_requirement: 
-item_curse: true
+item_curse: false
 item_classes: 
   - Rogue
   - Warlock
