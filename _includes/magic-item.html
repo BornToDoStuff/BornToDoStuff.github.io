@@ -17,7 +17,7 @@
     </item-title>
     <item-extras aria-hidden="true">
       <div class="rarities"><img src="/images/rarities.svg" title="{{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement){% endif %}" /></div>
-      {% if post.cursed %}<div class="cursed"><img src="/images/icons/skull-1.svg" title="cursed skull" /></div>{% endif %}
+      {% if post.item_curse %}<div class="cursed"><img src="/images/icons/skull-1.svg" title="cursed skull" /></div>{% endif %}
     </item-extras>
   </item-head>
   <item-description>
