@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg height="512px" width="512px"  version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<svg  height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 360 360" xml:space="preserve">
 
-<g id="skull_stroke" style="transform: scale(0.6, 0.54); transform-origin:50% 50%" >
+<g id="skull_stroke" >
 	<clipPath id="inside_clip">
 		<path d="M180,0C97.157,0,30,67.157,30,150v105v0.667h0.016c0.337,13.559,10.867,27.961,23.701,32.239L105,305v30
 			c0,13.75,11.25,25,25,25h100c13.75,0,25-11.25,25-25v-30l51.283-17.094c12.834-4.278,23.364-18.681,23.701-32.239H330V255V150
@@ -19,11 +19,5 @@
 		d="M125,160c24.853,0,45,20.146,45,45s-20.146,45-45,45s-45-20.146-45-45S100.146,160,125,160z"/>
 	<path id="inside_shape" fill="#254658"
 		d="M200,280c0,11.046-8.954,20-20,20 s-20-8.954-20-20s20-40,20-40S200,268.954,200,281z"/>
-</g> 
-<g id="skull_spikes" style="fill: #8aa8b2; transform: rotate(45deg);">
-  <path class="cls-1" d="M 132.548 -121.86 L 132.548 -79.528 L 127.196 -79.528 L 127.196 -127.2 L 175.196 -127.2 L 175.196 -121.86 L 132.548 -121.86 Z" ></path>
-  <path class="cls-1" d="M 132.548 -121.86 L 132.548 -79.528 L 127.196 -79.528 L 127.196 -127.2 L 175.196 -127.2 L 175.196 -121.86 L 132.548 -121.86 Z" style="transform-box: fill-box; transform-origin: 50% 50%; transform: matrix(-1, 0, 0, -1, 206.25, 206.25);"></path>
-  <path class="cls-1" d="M 127.372 127.371 L 127.372 79.094 L 132.692 79.094 L 132.692 121.924 L 175.282 121.924 L 175.282 127.371 L 127.372 127.371 Z" ></path>
-  <path class="cls-1" d="M 127.372 127.371 L 127.372 79.094 L 132.692 79.094 L 132.692 121.924 L 175.282 121.924 L 175.282 127.371 L 127.372 127.371 Z" style="transform-box: fill-box; transform-origin: 50% 50%; transform: matrix(-1, 0, 0, -1, 206.25, -206.25);"></path>
 </g>
 </svg>

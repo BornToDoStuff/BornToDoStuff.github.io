@@ -16,7 +16,7 @@
       <item-tagline>{{ post.category | downcase }}{{ subtype_string }}, {{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement{% if post.item_requirement != null %} {{ post.item_requirement }}{% endif %}){% endif %}</item-tagline>
     </item-title>
     <item-extras aria-hidden="true">
-      {% if post.item_curse %}<div class="curse"><img src="/images/icons/curse.svg#svgView(preserveAspectRatio(none))" title="cursed skull" /></div>{% endif %}
+      {% if post.item_curse %}<div class="curse"><img src="/images/icons/curse.svg" title="cursed skull" /></div>{% endif %}
       <div class="rarity"><img src="/images/rarities.svg" title="{{ post.item_rarity | downcase }}{% if post.item_attunement %} (requires attunement){% endif %}" /></div>
     </item-extras>
   </item-head>
