@@ -24,7 +24,7 @@ item_damage:
 tags:
   - Nature
   - Tremorsense
-  
+  - Barrier
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-28

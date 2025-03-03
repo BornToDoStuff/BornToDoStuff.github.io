@@ -17,6 +17,7 @@ item_damage:
 tags:
   - Planar
   - Water
+  - Barrier
 item_idea:
 item_co_creator:
 item_updated:
