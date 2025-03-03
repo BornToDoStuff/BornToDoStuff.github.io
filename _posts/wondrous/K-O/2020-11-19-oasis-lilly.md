@@ -25,6 +25,7 @@ tags:
   - Location
   - Navigation
   - Compass
+item_image: "/images/item_art/ring-of-druidic-roots.png"
 item_idea: 
 item_co_creator: 
 item_updated: 2021-08-18
