@@ -19,6 +19,7 @@ tags:
   - Eyes
   - Perception
   - Spellcasting
+item_image: "/images/item_art/charm-of-allsight.png"
 item_idea: 
 item_co_creator: 
 item_updated: 
