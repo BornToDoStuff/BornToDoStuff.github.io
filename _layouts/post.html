@@ -117,6 +117,7 @@ layout: default
     <section id="pagination"></section>
   </div>
 </div>
+{% comment %}
 <script>
   let magicheader = document.querySelector("#item-width > magic-item item-head");
   let magicimage  = document.querySelector("#item-width > magic-item item-description img");
@@ -124,3 +125,4 @@ layout: default
     magicheader.insertAdjacentHTML('afterEnd', magicimage.outerHTML);
   }
 </script>
+{% endcomment %}

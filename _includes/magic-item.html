@@ -22,7 +22,9 @@
   </item-head>
   <item-description>
 {%- if post.item_image %}
+  <item-image>
     <img title="{{ post.title }} by {{ post.image_artist }}" src="{{ site.url }}{{ post.item_image }}" style="shape-outside: url('{{ site.url }}{{ post.item_image }}')" />
+  </item-image>
 {% endif -%}
 {%- if page_bool -%}{{ content | markdownify }}{%- else -%}{{ post.content | markdownify }}{%- endif -%}
   </item-description>
