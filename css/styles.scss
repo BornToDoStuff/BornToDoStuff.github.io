@@ -491,29 +491,23 @@ magic-item.artifact.attunement .rarity img {
 
 			item-description {
 				overflow: visible;
+				column-count: 2;
+				orphans: 3;
+				widows: 3;
 
 				img {
 					width: 100%;
+					max-width: 100%;
 					max-height: 520px;
 					object-fit: contain;
 					shape-outside: none!important;
+					float: none;
 				}
 			}
 		}
 
 		#item-width.double {
 			width: 1030px;
-
-			item-description {
-				column-count: 2;
-				orphans: 3;
-				widows: 3;
-
-				img {
-					max-width: 100%;
-					float: none;
-				}
-			}
 		}
 	}
 
