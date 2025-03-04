@@ -493,8 +493,12 @@ magic-item.artifact.attunement .rarity img {
 				overflow: visible;
 
 				img {
+					width: 100%;
 					max-width: 100%;
+					max-height: 520px;
+					object-fit: contain;
 					shape-outside: none!important;
+					float: none;
 				}
 			}
 		}
