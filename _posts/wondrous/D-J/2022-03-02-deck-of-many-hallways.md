@@ -22,6 +22,8 @@ tags:
   - Many
   - Many Effects
   - Consumable
+item_image: "/images/item_art/deck-of-many-hallways.png"
+image_artist: Odd Gob
 item_idea:
 item_co_creator:
 item_updated:

@@ -20,6 +20,7 @@ tags:
   - Perception
   - Spellcasting
 item_image: "/images/item_art/charm-of-allsight.png"
+image_artist: Odd Gob
 item_idea: 
 item_co_creator: 
 item_updated: 
