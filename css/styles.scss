@@ -477,7 +477,7 @@ magic-item.artifact.attunement .rarity img {
 			flex-direction: row-reverse;
 		}
 
-		& > img {
+		& > item-image {
 			max-width: calc(100% - 500px);
 			margin-top: -3em;
 			margin-bottom: -2em;
@@ -520,7 +520,7 @@ magic-item.artifact.attunement .rarity img {
 
 		}
 
-		#item-width magic-item > img {
+		#item-width magic-item > item-image {
 			display: block;
 		}
 	}
