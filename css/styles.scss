@@ -508,6 +508,12 @@ magic-item.artifact.attunement .rarity img {
 
 		#item-width.double {
 			width: 1030px;
+
+			item-description {
+				column-count: 2;
+				orphans: 3;
+				widows: 3;
+			}
 		}
 	}
 
