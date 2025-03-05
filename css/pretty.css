@@ -111,11 +111,11 @@ magic-item::after {
   mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
 }
 item-description {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
-item-description img {
+/* item-description img {
   margin-bottom: -15px;
-}
+} */
 
 item-title {
   font-size: 1.1em;
@@ -132,7 +132,7 @@ item-title {
 #item-wrapper #item-width item-description::after {
   content: "";
   display: block;
-  height: 10px;
+  height: 1.1em;
 }
 
 #item-wrapper #item-width.image-only > magic-item {

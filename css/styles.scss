@@ -202,7 +202,7 @@ item-description {
 	overflow: hidden;
 	height: 100%; //hack to fix item height sizing
 	text-align: justify;
-	padding-top: 2px;
+	padding-top: 5px;
 
 	//minor hack to prevent widowed headers inside of item descriptions
 	h2, h3, h4 {
@@ -211,9 +211,9 @@ item-description {
 
 		&::after {
 			content: "";
-	    pointer-events: none;
-	    display: block;
-	    height: 3em;
+			pointer-events: none;
+			display: block;
+			height: 3em;
 		}
 	}
 
@@ -302,9 +302,18 @@ item-details {
 item-head {
 	width: 100%;
 	display: flex;
-	border-bottom: 2px solid #efefef;
-    border-image-slice: 1;
-    border-image-source: linear-gradient(to right, #dddddd 0%, #dddddd00 75%);
+
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		object-fit: contain;
+		height: 2px;
+		background: linear-gradient(to right, #ddd 0%, #dddddd00 75%);
+	}
 }
 
 // item-image {
@@ -553,21 +562,21 @@ magic-item.artifact.attunement .rarity img {
 
 #item-menu {
 	display: flex;
-  position: relative;
-  top: 0px;
-  left: 0px;
-  flex-direction: column;
-  text-align: center;
-  flex: 0 0 70px;
-	background: $backgroundLight;
-  padding: 10px 0px;
-  box-sizing: border-box;
-  border-radius: 4px;
-  border: 2px solid $bluakDark;
-  border-left: none;
-  border-right: none;
-  font-size: 0.8em;
-  color: gray;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	flex-direction: column;
+	text-align: center;
+	flex: 0 0 70px;
+		background: $backgroundLight;
+	padding: 10px 0px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border: 2px solid $bluakDark;
+	border-left: none;
+	border-right: none;
+	font-size: 0.8em;
+	color: gray;
 	margin-bottom: 15px;
 	margin-right: 15px;
 	order: 0;
