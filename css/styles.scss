@@ -219,10 +219,11 @@ item-description {
 
 	img {
 		max-width: 45%;
-    float: left;
-    max-height: calc(100% - 3em);
-    shape-margin: 1em;
+    	float: left;
+    	max-height: calc(100% - 3em);
+    	shape-margin: 1em;
 		shape-image-threshold: 0.3;
+		margin-bottom: -0.3em;
 	}
 }
 
