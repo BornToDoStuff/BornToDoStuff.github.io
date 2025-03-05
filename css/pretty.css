@@ -110,10 +110,10 @@ magic-item::after {
   -webkit-mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
   mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
 }
-item-description {
+/*item-description {
   margin-bottom: 10px;
 }
-/* item-description img {
+item-description img {
   margin-bottom: -15px;
 } */
 

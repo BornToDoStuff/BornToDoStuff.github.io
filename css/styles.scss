@@ -55,7 +55,7 @@ h2 {
 }
 
 h3 {
-	margin-bottom: -0.3em; //likely effected by widow hack
+	margin-bottom: -0.3em; //potentially effected by widow hack?
 }
 
 h4 {
@@ -81,7 +81,7 @@ code {
 	color: inherit !important;
 }
 
-.disabled, .disabled > a, {
+.disabled, .disabled > a {
 	color: $gray;
 	cursor: default !important;
 }
@@ -175,11 +175,11 @@ magic-item, magic-item + item-details {
 }
 magic-item {
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 	height: 335px;
 	width: $item-width;
 	max-width: 90vw;
-  max-width: calc(100vw - 30px);
+	max-width: calc(100vw - 30px);
 
 	&.tall {
 		height: 510px;
@@ -203,18 +203,20 @@ item-description {
 	height: 100%; //hack to fix item height sizing
 	text-align: justify;
 	padding-top: 5px;
+	position: relative;
 
-	//minor hack to prevent widowed headers inside of item descriptions
 	h2, h3, h4 {
 		page-break-inside: avoid;
-		margin-bottom: -3.3em;
 
-		&::after {
-			content: "";
-			pointer-events: none;
-			display: block;
-			height: 3em;
-		}
+		//minor hack to prevent widowed headers inside of item descriptions
+		// margin-bottom: -3.3em;
+
+		// &::after {
+		// 	content: "";
+		// 	pointer-events: none;
+		// 	display: block;
+		// 	height: 3em;
+		// }
 	}
 
 	img {
@@ -234,18 +236,18 @@ item-details {
 	order: 1;
 
 	.item_tags {
-	  display: flex;
+		display: flex;
 		flex-wrap: wrap;
-	  gap: 5px;
+		gap: 5px;
 		column-span: all;
 		border-top: 1px solid $borderLight;
-    padding-top: 7px;
-    margin-top: 7px;
+		padding-top: 7px;
+		margin-top: 7px;
 
 		.tag {
-	    border: 1px solid $mediumGray;
-	    border-radius: 2px;
-	    padding: 0px 4px;
+			border: 1px solid $mediumGray;
+			border-radius: 2px;
+			padding: 0px 4px;
 		}
 	}
 	.item_cost {
@@ -264,10 +266,10 @@ item-details {
 
 #item-width > magic-item item-details {
 	display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-direction: row-reverse;
-  margin-top: auto;
+	justify-content: space-between;
+	align-items: baseline;
+	flex-direction: row-reverse;
+	margin-top: auto;
 	margin-bottom: -5px;
 	order: 2;
 
@@ -302,6 +304,7 @@ item-details {
 item-head {
 	width: 100%;
 	display: flex;
+	position: relative;
 
 	&::after {
 		content: "";
