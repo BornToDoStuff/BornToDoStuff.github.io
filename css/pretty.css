@@ -132,7 +132,7 @@ item-title {
 #item-wrapper #item-width item-description::after {
   content: "";
   display: block;
-  height: 1.1em;
+  height: 2em;
 }
 
 #item-wrapper #item-width.image-only > magic-item {
