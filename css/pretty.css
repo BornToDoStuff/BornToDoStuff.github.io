@@ -47,7 +47,7 @@ item-details > div {
   padding: 30px;
   background: #495b65 url("/images/hatching_light.png");
   margin-bottom: 50px;
-  max-width: 950px;
+  /*max-width: 950px;*/
   width: -moz-fit-content;
   width: fit-content;
 }
