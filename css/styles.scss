@@ -202,6 +202,7 @@ item-description {
 	overflow: hidden;
 	height: 100%; //hack to fix item height sizing
 	text-align: justify;
+	padding-top: 2px;
 
 	//minor hack to prevent widowed headers inside of item descriptions
 	h2, h3, h4 {
@@ -300,6 +301,9 @@ item-details {
 item-head {
 	width: 100%;
 	display: flex;
+	border-bottom: 2px solid #efefef;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #dddddd 0%, #dddddd00 75%);
 }
 
 // item-image {

@@ -24,6 +24,7 @@ tags:
   - Unique Character
   - Reynier
   - Spellcasting Focus
+item_image: "/images/item_art/reyniers-crystal-hand.png"
 item_idea: 
 item_co_creator: 
 item_updated: 
