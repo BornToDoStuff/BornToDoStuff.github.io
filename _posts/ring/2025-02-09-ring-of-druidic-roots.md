@@ -1,6 +1,6 @@
 ---
 title: Ring of Druidic Roots
-item_id: 360
+item_id: 376
 category: Ring
 item_subtypes:
 item_rarity: Very Rare

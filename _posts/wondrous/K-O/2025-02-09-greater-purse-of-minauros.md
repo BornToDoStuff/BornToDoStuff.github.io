@@ -1,6 +1,6 @@
 ---
 title: Greater Purse of Minauros
-item_id: 361
+item_id: 377
 category: Wondrous
 item_subtypes:
 item_rarity: Very Rare
@@ -16,7 +16,6 @@ item_damage:
   - Necrotic
 tags:
   - Minauros
-  
   - Movement
   - Body Modification
   - Tattoo
