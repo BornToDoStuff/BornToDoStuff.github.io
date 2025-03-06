@@ -1,6 +1,6 @@
 ---
 title: Charm of Allsight
-item_id: 364
+item_id: 373
 category: Wondrous
 item_subtypes: 
   - Consumable

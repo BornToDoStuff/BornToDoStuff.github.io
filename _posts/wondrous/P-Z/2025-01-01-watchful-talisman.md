@@ -1,6 +1,6 @@
 ---
 title: Watchful Talisman
-item_id: 366
+item_id: 375
 category: Wondrous
 item_subtypes: 
 item_rarity: Very Rare

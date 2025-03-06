@@ -1,6 +1,6 @@
 ---
 title: Cloak of Acute Paranoia
-item_id: 363
+item_id: 372
 category: Wondrous
 item_subtypes: 
   - Cloak

@@ -1,6 +1,6 @@
 ---
 title: Staff of Frightful Awareness
-item_id: 362
+item_id: 371
 category: Staff
 item_subtypes: 
 item_rarity: Very Rare

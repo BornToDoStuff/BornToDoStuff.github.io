@@ -1,6 +1,6 @@
 ---
 title: Impossible Tar
-item_id: 365
+item_id: 374
 category: Wondrous
 item_subtypes: 
   - Consumable
