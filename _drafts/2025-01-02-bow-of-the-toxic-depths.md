@@ -6,7 +6,8 @@ included_in: "Legendary Hunts: Coastal"
 item_id: 362
 category: Weapon
 item_subtypes: 
-  - longbow or shortbow
+  - Longbow
+  - Shortbow
 item_rarity: Very Rare
 item_attunement: true
 item_requirement: 

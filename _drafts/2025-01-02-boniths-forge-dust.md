@@ -1,5 +1,8 @@
 ---
 title: Bonith’s Forge Dust
+alt_title: Endraleth's Forge Dust
+included_in: "Legendary Hunts: Coastal"
+
 item_id: 360
 category: Wondrous
 item_subtypes: 
