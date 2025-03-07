@@ -34,6 +34,7 @@ You can attempt to resist it with a Strength check (DC 14), or dodge it with a D
 
 On a failure, or if you are willing, it cinches around your abdomen and the glyphs begin circling your body. While wearing the scroll you have advantage on saves against spells targeting only you. The scroll crumbles to dust after 1 hour or the next time you take Lightning damage.
 
+<!--excerpt-->
 <div class="curse">
 While wearing the scroll you have a 10 foot penalty to your movement and can not take it off until it is destroyed or <magic-spell>Remove Curse</magic-spell> is cast on it.
 </div>

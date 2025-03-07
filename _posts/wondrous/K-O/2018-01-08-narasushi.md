@@ -38,6 +38,7 @@ If you have any number of bells unbound you have disadvantage to stealth checks 
 As an action you can strike this quarterstaff against the ground or against a nearby object, expending a charge as the bells peal. Any creature within 30 feet of you that can hear the bells has disadvantage on their first weapon attack against you on their next turn. Additionally, until the end of your next turn you have advantage on your first melee attack against any affected creature.  
 On a successful melee attack with this quarterstaff against an affected creature you can choose to gain temporary hit points equal to the damage you deal.
 
+<!--excerpt-->
 <div class="curse">
 **Curse.** The first time each bell is unbound you lose 1d6-1 max hit points as you hear its discordant chime. These hit points can not be restored, even by <magic-spell>Greater Restoration</magic-spell>, until you are unattuned. Additionally, you can not unattune to this weapon until all bells have been covered with a strip of cloth and then the spell <magic-spell>Silence</magic-spell> is cast on it.
 </div>

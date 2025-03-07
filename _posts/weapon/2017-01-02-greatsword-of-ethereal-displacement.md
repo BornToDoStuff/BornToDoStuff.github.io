@@ -47,6 +47,7 @@ When this sword is driven into the ground it can serve as a destination sigil fo
 
 Additionally, any creature that has touched the sword within the past 24 hours can take a knee and mentally reach out to the sword as an action. If they are on the same plane as the sword, within 1 mile, and if the sword is still driven into the ground from since they last touched it they are teleported to a random unoccupied space within 10 feet of the sword. Any creature teleported in this manner is Incapacitated for 1 minute as they recover from being forcefully shunted through the Ethereal Plane.
 
+<!--excerpt-->
 <div class="curse">
 **Curse.** After using any feature of this sword you are Deafened for 1 minute almost as if your sense of hearing hasn't returned along with your body after traveling through the Ethereal Plane.
 

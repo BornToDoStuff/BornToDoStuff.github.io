@@ -33,6 +33,7 @@ This weapon has no hilt at all, with a simple flare to keep your hand from slipp
 
 When you make a successful melee attack with this weapon a pale green glow surrounds the target creature for your eyes only. For the next day or until the creature dies you can see them even through walls or when Blinded as long as they are within 250 feet of you. The target creature can not benefit from being Invisible or surrounding darkness against you when outlined in this way.
 
+<!--excerpt-->
 <div class="curse">
 **Curse.** While attuned to this weapon you have disadvantage on any saving throws against Poison damage or being Poisoned. Additionally, any spider can always see you as if you have the same pale green glow around you.
 </div>

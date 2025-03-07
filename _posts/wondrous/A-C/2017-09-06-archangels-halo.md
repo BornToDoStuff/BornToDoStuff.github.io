@@ -41,6 +41,7 @@ If you are not a spellcaster you use your Intelligence modifier as your spellcas
 ### Angelic Properties
 The halo will float above your head even in an antimagic field, despite the rest of its effects being nullified. Additionally, if you are ever separated from the halo you can summon it back to you as a bonus action unless it is blocked by an antimagic field or a ward against magical travel such as <magic-spell>Forbiddance</magic-spell>.
 
+<!--excerpt-->
 <div class="curse">
 **Curse.** If you are ever more than 15 feet from the halo you take 1 psychic damage each minute and head inexplicably aches. If you are on a different plane from the halo you are also Blinded until you are once again on the same plane.
 

@@ -42,6 +42,7 @@ When you wield a Sickle it deals 1d6 slashing damage, has the property Finesse, 
 ### Hand of Repose
 While attuned to this glove you know the cantrip <magic-spell>Mage Hand</magic-spell> if you did not before. Additionally, when you cast <magic-spell>Mage Hand</magic-spell> it is completely invisible to all except you, and appears as a skeletal hand; It can carry up to 20 pounds and has no duration, lasting until you dismiss it as an action or cast <magic-spell>Mage Hand</magic-spell> again.
 
+<!--excerpt-->
 <div class="curse">
 **Curse.** The moment you finish attuning to this glove the arm you are wearing it on is wracked with pain. You take 1d12 Necrotic damage and your vision extends out into the Ethereal plane despite your body remaining in the mortal plane. You hear whispers around you growing ever closer until your senses return to your body and you become aware of how light your arm is.
 

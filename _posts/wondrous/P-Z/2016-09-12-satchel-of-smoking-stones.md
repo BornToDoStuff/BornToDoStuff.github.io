@@ -32,6 +32,7 @@ It has 4 charges and regains all expended charges each day at dawn.
 
 As a bonus action you can expend a charge and pull out a fist sized stone that begins to smoke. At the end of your next turn it will shatter with a low crack that can be heard out to 100 feet. It explodes into shards dealing 1d10 piercing damage to all creatures within 5 feet that are not behind 3/4 or full cover. You can throw one of these smoking stones up to 30 feet.
 
+<!--excerpt-->
 <div class="curse">
 If the satchel is exposed to fire damage a charge is expended and a stone shatters. Additionally, any stone exposed to fire damage immediately shatters.
 </div>

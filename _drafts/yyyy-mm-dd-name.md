@@ -3,8 +3,8 @@ title:
 item_id: 0
 category: Armor Potion Ring Rod Scroll Shield Staff Tattoo Wand Weapon Wondrous
 item_subtypes:
-  - Breastplate
-  - Half Plate
+  - subtype
+  - subtype
 item_rarity: Common Uncommon Rare Very Rare Legendary
 item_attunement: false
 item_requirement:
@@ -59,3 +59,9 @@ last_modified_at:
 ---
 
 content goes here
+
+
+<!--excerpt-->
+<div class="curse">
+**Curse.** 
+</div>

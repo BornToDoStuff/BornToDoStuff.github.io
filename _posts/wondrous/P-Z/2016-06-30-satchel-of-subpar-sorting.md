@@ -8,7 +8,7 @@ item_subtypes:
 item_rarity: Common
 item_attunement: false
 item_requirement:
-item_curse: true
+item_curse: false
 item_classes:
   - Wizard
   - Sorcerer
@@ -19,6 +19,8 @@ item_role:
 item_damage:
 tags:
   - Storage
+  - Mediocre
+  - Dimensions
 item_idea:
 item_co_creator:
 item_updated:

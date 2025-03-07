@@ -41,6 +41,7 @@ Once you have used this feature you can not use it again until your next short r
 ### Angelic Properties
 This pendant will not tarnish and can not be dented or scratched. Additionally, while attuned to it you know the Celestial language and can sense any Celestial creature within 120 feet of you.
 
+<!--excerpt-->
 <div class="curse">
 **Curse.** If you commit a heinous act the pendant will tarnish slightly and the etching of the wings will glow red for the next day. While the pendant is glowing red you have disadvantage on all ability checks and it feels as if your mind is fogged.
 </div>

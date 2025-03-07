@@ -42,6 +42,7 @@ Any creature in the area must make a DC 14 Dexterity saving throw. If you are pr
 ### Angelic Properties
 This sword can not rust or shatter, and you can summon this sword to you as a bonus action if you have a free hand unless it is blocked by an antimagic field or a ward against magical travel such as <magic-spell>Forbiddance</magic-spell>.
 
+<!--excerpt-->
 <div class="curse">
 **Curse.** If you knowingly attack an innocent creature the sword will immediately streak with black, lose all magic ability, and its diamond will shatter. Additionally, you take 1 fire damage as a symbol is branded into your forehead.  
 If you unattune with this sword it will begin floating, before, with a clap like thunder, it soars into the sky and returns to the Upper Planes.

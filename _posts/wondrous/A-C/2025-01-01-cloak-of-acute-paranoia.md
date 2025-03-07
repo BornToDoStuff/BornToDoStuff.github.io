@@ -30,6 +30,7 @@ This cloak is made from a deep purple hide so unique you can only assume comes f
 While wearing the cloak you always know the location of all creatures within 15 feet of you if they would be visible to you. This effect applies even while unconscious, and when a creature enters this radius for the first time if you are sleeping you can make a DC 10 Constitution check to attempt to wake up.  
 Additionally, you have advantage on Wisdom(Insight) checks to check if a creature is lying to you, though you only know if they are or not, not what they might be lying about.
 
+<!--excerpt-->
 <div class="curse"> 
 **Curse.** Each night there is a 5% chance you perceive a creature moving near you but if you wake up nothing is there. Additionally, you have disadvantage on saving throws against being Frightened, and automatically fail saving throws against Fear Ray from Beholders, Death Tyrants, and Spectators.
 </div>

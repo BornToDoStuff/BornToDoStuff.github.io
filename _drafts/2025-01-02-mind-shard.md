@@ -25,5 +25,6 @@ This vial contains a single large fragment of gray brain tissue, carefully prese
 After this mind-bending moment you gain proficiency with any combination of up to 6 skills, tools, or languages. If you have the Spellcasting feature you can choose to replace any number of these proficiencies with spells instead.
 
 <!--excerpt-->  
-<div class="curse">**Curse.** For each item you chose to learn or gain proficiency in you lose a valuable memory, of the DM’s choice. This can not be reversed except by a <magic-spell>Wish</magic-spell> spell or deity. Additionally, there is the shadowy creature that lurks in your dreams from this night onward.  
+<div class="curse">
+**Curse.** For each item you chose to learn or gain proficiency in you lose a valuable memory, of the DM’s choice. This can not be reversed except by a <magic-spell>Wish</magic-spell> spell or deity. Additionally, there is the shadowy creature that lurks in your dreams from this night onward.  
 </div>
