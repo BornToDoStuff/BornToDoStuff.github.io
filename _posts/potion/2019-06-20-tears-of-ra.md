@@ -24,7 +24,7 @@ tags:
   - Consumable
   - Insect
 item_image: "/images/item_art/tears-of-ra.png"
-image_artist: Direquest
+image_artist: Anthony Grasso
 item_idea: Egyptian mythology
 item_co_creator:
 item_updated:

@@ -22,7 +22,7 @@ tags:
   - Prone
   - Contested
 item_image: "/images/item_art/shield-of-mental-dominance.png"
-image_artist: Direquest
+image_artist: Anthony Grasso
 item_idea:
 item_co_creator:
 item_updates: [2019-01-23, 2021-09-07]

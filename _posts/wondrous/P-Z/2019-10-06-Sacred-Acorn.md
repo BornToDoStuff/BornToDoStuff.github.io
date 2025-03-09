@@ -28,7 +28,7 @@ tags:
   - Consumable
   - Acorn
 item_image: "/images/item_art/sacred-acorn.png"
-image_artist: Direquest
+image_artist: Anthony Grasso
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-21

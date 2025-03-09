@@ -21,7 +21,7 @@ tags:
   - Aura
   - Advantage
 item_image: "/images/item_art/hearthstone.png"
-image_artist: Direquest
+image_artist: Anthony Grasso
 item_idea:
 item_co_creator:
 item_co_creator: 2019-02-26

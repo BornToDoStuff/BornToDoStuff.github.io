@@ -24,7 +24,7 @@ tags:
   - Visibility
   - Underwater
 item_image: "/images/item_art/bog-goggles.png"
-image_artist: Odd Gob
+image_artist: Anthony Grasso
 item_idea: 
 item_co_creator: 
 item_updated: 2021-03-08

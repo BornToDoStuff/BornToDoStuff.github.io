@@ -26,7 +26,7 @@ tags:
   - Hiding
   - Consumable
 item_image: "/images/item_art/moss-paste.png"
-image_artist: Direquest
+image_artist: Anthony Grasso
 item_idea: 
 item_co_creator: 
 item_updates: [2021-03-08, 2021-04-28]

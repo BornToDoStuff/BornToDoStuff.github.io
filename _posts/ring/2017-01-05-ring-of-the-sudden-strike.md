@@ -22,7 +22,7 @@ tags:
   - Advantage
   
 item_image: "/images/item_art/ring-of-the-sudden-strike.png"
-image_artist: Direquest
+image_artist: Anthony Grasso
 item_idea:
 item_co_creator:
 item_updated:

@@ -24,7 +24,7 @@ tags:
   - Myconid
   - Light
 item_image: "/images/item_art/sporelight.png"
-image_artist: Direquest
+image_artist: Anthony Grasso
 item_idea: 
 item_co_creator: 
 item_updated: 2021-02-26

@@ -24,7 +24,7 @@ tags:
   - Plants
   - Stages
 item_image: "/images/item_art/ring-of-druidic-roots.png"
-image_artist: Odd Gob
+image_artist: Anthony Grasso
 item_idea:
 item_co_creator:
 item_updated: 2025-02-18
