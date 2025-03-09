@@ -342,13 +342,17 @@ permalink: /items/create/
 		<option>Mixed</option>
 	</datalist>
 
-	<!-- this is a hack to sort tags by tag count using the limited liquid string sort and splitting on # -->
+	<!-- 
+		this is a hack to sort tags by tag count using the limited liquid string sort and splitting on # 
+	 	notes from https://joshuahanna.com/coding/tags-organized-by-count-size/
+		and https://stackoverflow.com/questions/24700749/how-do-you-sort-site-tags-by-post-count-in-jekyll#answer-24744306
+	-->
 	{% capture site_tags %}
 		{% for tag in site.tags %}
 			{{ tag[1].size | minus: 10000 }}#{{ tag[0] }}#{{ tag[1].size }}{% unless forloop.last %},{% endunless %}
 		{% endfor %}
 	{% endcapture %}
-	{% assign tagsBySize = tags | split: "," | sort %}
+	{% assign tagsBySize = site_tags | split: "," | sort %}
 
 	<datalist id="list-tags">
 		{% for tag in tagsBySize %}
