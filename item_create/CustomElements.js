@@ -38,7 +38,7 @@ class CurseBlot extends Block {
 	}
 }
 CurseBlot.blotName = "curse";
-CurseBlot.tagName = "section";
+CurseBlot.tagName = "div";
 
 //register custom tags as items Quill that can use
 Quill.register(SpellBlot); 
