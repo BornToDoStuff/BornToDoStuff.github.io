@@ -24,7 +24,7 @@ permalink: /items/table/
         {%- assign cat_names = "" | split: "|"   -%}
         {%- for cat in site.categories -%} {%- assign cat_names = cat_names | push: cat.first -%} {%- endfor -%}
         {%- assign cat_names = cat_names | sort -%}
-        {%- assign rarities_names = "Mediocre, Common, Uncommon, Rare, Very Rare, Legendary" | split: ", " -%}
+        {%- assign rarities_names = "Common, Uncommon, Rare, Very Rare, Legendary, Artifact" | split: ", " -%}
 
         <input id="search" type="search" class="search" placeholder="Search All..." data-column="all" style="width:80%;box-shadow: none !important;background: white; border:1px solid rgba(0,0,0,0.2)" /><input type="button" class="reset" value="Reset Search" style="width: 20%;border: 1px solid rgba(0,0,0,0.2);min-height: 37px;" />
 

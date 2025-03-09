@@ -355,10 +355,7 @@ permalink: /items/create/
 	{% assign tagsBySize = site_tags | split: "," | sort %}
 
 	<datalist id="list-tags">
-		{% for tag in tagsBySize %}
-			{% assign tagArray = tag | split: "#" %}
-			<option data-value="{{ tagArray[1] }}">{{ tagArray[1] }} - {{ tagArray[2] }}</option>
-		{% endfor %}
+		{%- for tag in tagsBySize -%}{%- assign tagArray = tag | split: "#" -%}<option data-value="{{ tagArray[1] }}">{{ tagArray[1] }} - {{ tagArray[2] }}</option>{%- endfor -%}
 	</datalist>
 
 	<script>
