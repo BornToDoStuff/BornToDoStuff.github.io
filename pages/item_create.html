@@ -241,13 +241,11 @@ permalink: /items/create/
 								<label class="control-label col-sm-3">Tags</label>
 								<div class="col-sm-9">
 									<div class="col-sm-12">
-										<input id="item-tags-add" type="text" class="form-control col-sm-9" list="list-tags" placeholder="additonal keywords" />
-										<div class="col-sm-3">
-											<button class="btn btn-primary">Add</button>
-										</div>
-									</div>
-									<div class="col-sm-12">
 										<input id="item-tags" type="text" class="form-control" placeholder="additonal keywords" />
+									</div>
+									<label class="control-label col-sm-4">Tag Search</label>
+									<div class="col-sm-8">
+										<input id="item-tags-search" type="text" class="form-control col-sm-9" list="list-tags" placeholder="tag search" />
 									</div>
 								</div>
 							</div>
@@ -344,10 +342,18 @@ permalink: /items/create/
 		<option>Mixed</option>
 	</datalist>
 
-	<datalist id="list-tags">
+	<!-- this is a hack to sort tags by tag count using the limited liquid string sort and splitting on # -->
+	{% capture site_tags %}
 		{% for tag in site.tags %}
-			{% assign tag_size = site.tags[tag.first].size %}
-			<option data-value="{{tag.first}}">{{tag.first}} - {{tag_size}}</option>
+			{{ tag[1].size | minus: 10000 }}#{{ tag[0] }}#{{ tag[1].size }}{% unless forloop.last %},{% endunless %}
+		{% endfor %}
+	{% endcapture %}
+	{% assign tagsBySize = tags | split: "," | sort %}
+
+	<datalist id="list-tags">
+		{% for tag in tagsBySize %}
+			{% assign tagArray = tag | split: "#" %}
+			<option data-value="{{ tagArray[1] }}">{{ tagArray[1] }} - {{ tagArray[2] }}</option>
 		{% endfor %}
 	</datalist>
 
