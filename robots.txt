@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /data/
+Disallow: /page/
+Disallow: /sort/
+Disallow: /tags/
+Disallow: /art/
+Disallow: /stats/
+Disallow: /items/create/
+Disallow: /items/table/
+Disallow: /items/advanced/
+
+Sitemap: https://items.borntodostuff.com/sitemap.xml

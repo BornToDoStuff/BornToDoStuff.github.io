@@ -1,50 +1,12 @@
 {% if site.google_analytics %}
 	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
 	<script>
-		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-		ga('create', '{{ site.google_analytics }}', 'auto');
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
-		ga('require', 'eventTracker'); //code added in markup that uses this
-		ga('require', 'maxScrollTracker', {
-		  hitFilter: function(model) {
-		    var scrollPercentage = model.get('eventLabel');
-		    if (scrollPercentage > 50) {
-		      // Sets the nonInteractive field to `false` for the current hit.
-		      model.set('nonInteraction', false, true);
-	    	}
-		  },
-			maxScrollMetricIndex: 1
-		});
-		ga('require', 'mediaQueryTracker', {
-		  definitions: [
-		    {
-		      name: 'Breakpoint',
-		      dimensionIndex: 1,
-		      items: [
-      			{name: 'mobile', media: 'all'},
-						{name: 'tablet', media: '(min-width: 768px)'},
-						{name: 'medium', media: '(min-width: 1230px)'},
-		        {name: 'large', media: '(min-width: 1795px)'},
-		        {name: 'huge', media: '(min-width: 2360px)'}
-		      ]
-		    }
-			]
-		});
-		ga('require', 'urlChangeTracker', {
-		  shouldTrackUrlChange: function(newPath, oldPath) {
-				// Strips the query string from the path values.
-		    newPath = newPath.split('?')[0];
-		    oldPath = oldPath.split('?')[0];
-		    return newPath != oldPath;
-		  },
-			fieldsObj: {
-		    dimension1: 'virtual'  // differentiates between virtual and page load tracks
-	  }
-	});
-
-		ga('send', 'pageview');
+		gtag('config', 'G-Z8TK915VZQ');
 	</script>
-	<script async src='https://www.google-analytics.com/analytics.js'></script>
-	<script async src="/js/autotrack.js"></script> <!-- https://github.com/googleanalytics/autotrack -->
 	<!-- End Google Analytics -->
 {% endif %}
