@@ -12,8 +12,9 @@ item_attunement: false
 item_requirement: 
 item_curse: false
 item_classes: 
-item_school: 
-item_role: 
+  - All
+item_school: Transmutation
+item_role: Auxilary
 item_damage: 
 tags:
   - Unique Character

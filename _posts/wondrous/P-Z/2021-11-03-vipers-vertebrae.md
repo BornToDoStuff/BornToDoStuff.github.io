@@ -20,7 +20,7 @@ tags:
   - Snake
   - Polymorph
   - Size
-  - Shapeshifter
+  - Shapeshifting
   - Bone
   - Movement
   - Intimidation

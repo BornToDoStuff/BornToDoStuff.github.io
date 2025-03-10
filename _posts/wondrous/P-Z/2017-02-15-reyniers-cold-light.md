@@ -18,7 +18,7 @@ item_damage:
 tags:
   - Light
   - Oozes
-  - Shapeshifter
+  - Shapeshifting
 item_idea:
 item_co_creator:
 item_updated:

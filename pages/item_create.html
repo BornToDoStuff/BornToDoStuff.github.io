@@ -41,7 +41,7 @@ permalink: /items/create/
 					<div class="form-group">
 						<label for="item-id" class="control-label col-sm-3">ID</label>
 						<div class="col-sm-2">
-							<input id="item-id" type="number" class="form-control" value="{{site.posts.first.item_id}}"  />
+							<input id="item-id" type="number" class="form-control" value="{{ site.posts.first.item_id | plus: 1 }}"  />
 						</div>
 						<label for="item-type" class="control-label col-sm-2">Type</label>
 						<div class="col-sm-5">

@@ -19,22 +19,22 @@ if (customElements.get("item-name"))
 	console.log("item-name tag added");
 
 let Inline = Quill.import('blots/inline');
-let Block = Quill.import('blots/block');
+let Container = Quill.import('blots/container');
 
 class SpellBlot extends Inline { }
 SpellBlot.blotName = 'spell';
 SpellBlot.tagName = 'magic-spell';
 
-class CurseBlot extends Block {
+class CurseBlot extends Container {
 	static create(id){
 		let node = super.create();
-		node.setAttribute("id", id);
+		node.setAttribute("class", id);
 
 		return node;
 	}
 
 	static formats(node){
-		node.getAttribute("id");
+		node.getAttribute("class");
 	}
 }
 CurseBlot.blotName = "curse";
