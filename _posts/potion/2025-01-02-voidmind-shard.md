@@ -1,20 +1,23 @@
 ---
-title: Mind Shard
+title: Voidmind Shard
 alt_title: Endraleth's Mind Shard
 included_in: "Legendary Hunts: Coastal"
 
 item_id: 361
 category: Potion
 item_subtypes: 
+  - Consumable
 item_rarity: Very Rare
 item_attunement: false
 item_requirement: 
 item_curse: true
 item_classes: 
-item_school: 
-item_role: 
+  - All
+item_school: Necromancy
+item_role: Auxilary
 item_damage: 
 tags:
+  - Proficiency
 item_idea: 
 item_co_creator: 
 item_updated: 
