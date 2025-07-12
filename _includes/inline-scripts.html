@@ -145,7 +145,7 @@
 				$("#btnCopy-item").on("click", copyItem);
 				$("#btnCopy-link").on("click", copyLink);
 				$("#btnPrettyControls").on("click", function() {
-					$('head').append("<link rel='stylesheet' href='/css/pretty.css?version=2.1.8' type='text/css' />");
+					$('head').append("<link rel='stylesheet' href='/css/pretty.css?version=2.1.9' type='text/css' />");
 					return false;
 				});
 			}
@@ -158,19 +158,23 @@
 
 				// const itemWrapper = document.getElementById("item-wrapper");
 				// const clone = itemWrapper.cloneNode(true);
-				var clone = $("#item-wrapper").clone(true, true); //make a clone
+				
+				//var clone = $("#item-wrapper").clone(true, true); //make a clone
 				//make modifications to it to stabalize it
-				clone.find("#item-menu").remove();
-				clone.find("#related").remove();
-				//clone.find(".curse,.notes,.sentience").css({"display": "inline-block"});
-				clone.find(".curse p:first-child strong:first-child,.notes p:first-child strong:first-child,.sentience p:first-child strong:first-child").css({"display": "none"});
-				// specialBlocks.css({"display": "inline-block"});
-				// specialBlocks.find("p:first-child strong:first-child").css({"display": "none"});
+				//clone.find("#item-menu").remove();
+				//clone.find("#related").remove();
+					//clone.find(".curse,.notes,.sentience").css({"display": "inline-block"});
+				//clone.find(".curse p:first-child strong:first-child,.notes p:first-child strong:first-child,.sentience p:first-child strong:first-child").css({"display": "none"});
+					// specialBlocks.css({"display": "inline-block"});
+					// specialBlocks.find("p:first-child strong:first-child").css({"display": "none"});
 
 				var original = $("#item-wrapper");
-				original.detach(); //temporarily remove the original
+					original.find("#item-menu").remove();
+					original.find("#related").remove();
+					original.find(".curse p:first-child strong:first-child,.notes p:first-child strong:first-child,.sentience p:first-child strong:first-child").css({"display": "none"});
+				//original.detach(); //temporarily remove the original
 				//add the clone and then get an image of it after its loaded
-				$("#main-wrapper").append(clone);
+				//$("#main-wrapper").append(clone);
 
 				htmlToImage.toPng(document.getElementById("item-wrapper"), { style:{ "margin":"0px" } })
 				.then((dataUrl) => {
@@ -179,8 +183,8 @@
 					link.href = dataUrl;
 					link.click(function() {
 						//remove the clone and put the original back, within the return function so its dont after the click returns
-						clone.remove();
-						$("#main-wrapper").append(original);
+						//clone.remove();
+						//$("#main-wrapper").append(original);
 					});
 				}); 
 

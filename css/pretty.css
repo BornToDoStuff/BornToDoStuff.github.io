@@ -74,7 +74,6 @@ magic-item.image + item-details {
 
 magic-item {
   /* min-height: 550px!important; */
-  padding: 25px;
   margin: 0px;
   position: relative;
 }
@@ -119,9 +118,9 @@ item-description img {
   margin-bottom: -15px;
 } */
 
-item-title {
+/* item-title {
   font-size: 1.1em;
-}
+} */
 
 #item-menu {
   display: none;
