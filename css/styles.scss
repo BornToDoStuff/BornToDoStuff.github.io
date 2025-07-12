@@ -12,7 +12,9 @@ html {
 }
 
 body {
+	background: $bluakDark;
 	background: $backgroundMedium;
+	background-size: 300px;
 	font-size: 1.6rem;
 	font-family: $roboto;
 	color: $darkGray;
@@ -64,9 +66,14 @@ h4 {
 }
 
 #{$a-tags} {
-	color: $blueDark;
+	color: $blueDarker;
 	text-decoration: none;
 	// transition-delay: 0.05s;
+}
+a {
+	&:hover {
+		color:$blueDark;
+	}
 }
 
 code {
@@ -176,6 +183,7 @@ magic-item, magic-item + item-details {
 	border: 2px solid $bluakDark;
 	border-left: none;
 	border-right: none;
+	filter: drop-shadow(0px 0px 2px $transp_lightGray);
 }
 magic-item {
 	display: flex;
@@ -550,16 +558,17 @@ magic-item.artifact.attunement .rarity img {
 	flex-wrap: wrap;
 	margin-top: 40px;
 	padding-top: 18px;
-	border-top: 2px solid #a5bbc3;
+	border-top: 2px solid $blueLight;
 	border-radius: 6px;
 
 	&::before {
 		content: "Related Items";
-    display: block;
-    position: absolute;
-    top: -30px;
-    color: #a5bbc3;
-    font-size: 1.4em;
+		display: block;
+		position: absolute;
+		top: -30px;
+		color: $blueLight;
+		font-size: 2em;
+		font-family: $philo;
 	}
 
 	@include mobile {
@@ -575,7 +584,7 @@ magic-item.artifact.attunement .rarity img {
 	flex-direction: column;
 	text-align: center;
 	flex: 0 0 70px;
-		background: $backgroundLight;
+	background: $backgroundLight;
 	padding: 10px 0px;
 	box-sizing: border-box;
 	border-radius: 4px;
@@ -587,6 +596,7 @@ magic-item.artifact.attunement .rarity img {
 	margin-bottom: 15px;
 	margin-right: 15px;
 	order: 0;
+	filter: drop-shadow(0px 0px 2px $transp_lightGray);
 
 	@include single { margin-left: -85px; }
 	@include mobile {
@@ -618,7 +628,7 @@ magic-item.artifact.attunement .rarity img {
 	left: 0;
 	right: 0;
 	z-index: 101;
-  background: url(hatching_med.png) rgba(0,0,0,0.7);
+	background: url(hatching_med.png) rgba(0,0,0,0.7);
 }
 
 item-description {
@@ -693,7 +703,7 @@ a.read-more {
 }
 
 	a.read-more:hover .dot {
-		background: rgba(98, 157, 167, 0.7);
+		background: $transp_darkerBlue;
 	}
 
 .read-more .expander {
@@ -705,7 +715,7 @@ span.dot {
 	display: inline-block;
 	height: 15px;
 	width: 15px;
-	background: rgba(98, 157, 167, 0.5);
+	background: $transp_darkBlue;
 	transition: background 0.2s;
 	border-radius: 2px;
 	transform: rotate(45deg);
@@ -760,7 +770,7 @@ span.dot {
 	opacity: 0;
 	text-decoration: none;
 	transition: background .2s ease;
-	filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.5));
+	filter: drop-shadow(0px 0px 2px $transp_lightGray);
 
 	@include mobile {
 		bottom: 20px;
@@ -770,6 +780,7 @@ span.dot {
 }
 	#return-to-top:hover {
 		background: $bluakDark;
+		filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.1));
 	}
 
 input:focus {
@@ -1025,9 +1036,9 @@ thead .tablesorter-headerAsc {
 
 #main.table, #search-results.table {
 	background: $backgroundLight;
-  padding: 5px 10px;
-  box-sizing: border-box;
-  border-radius: 8px;
+	padding: 5px 10px;
+	box-sizing: border-box;
+	border-radius: 8px;
 
 	@include single {
 		max-width: $col-single;

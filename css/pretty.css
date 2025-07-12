@@ -45,7 +45,8 @@ item-details > div {
 
 #item-wrapper {
   padding: 30px;
-  background: #495b65 url("/images/hatching_light.png");
+  background: #405359 url("/images/hatching_light.png");
+  background-size: 300px;
   margin-bottom: 50px;
   /*max-width: 950px;*/
   width: -moz-fit-content;
@@ -106,7 +107,7 @@ magic-item::after {
   bottom: 10px;
   font-weight: bold;
   font-size: 1.5em;
-  color: #264658;
+  color: #264c58;
   opacity: .15;
   -webkit-mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
   mask-image: linear-gradient(0deg, rgba(1, 1, 1, 0.2) 10%, #010101 80%);
