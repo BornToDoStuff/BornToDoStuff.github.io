@@ -56,7 +56,7 @@ magic-item + item-details {
   display: block;
   position: absolute;
   margin: 0px;
-  bottom: 32px;
+  bottom: 0px;
   column-count: 1;
   background: none;
   border: none;
@@ -64,6 +64,7 @@ magic-item + item-details {
   padding: 0px 25px 8px 25px;
   font-size: 0.9em;
   line-height: 1.2em;
+  z-index:1;
 }
 magic-item.image + item-details {
   width: 550px;
