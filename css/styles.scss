@@ -612,7 +612,7 @@ magic-item.artifact.attunement .rarity img {
 
 	a {
 		margin: 1px 5px;
-		transition: 0.2s ease 0.1s;
+		transition: 0.1s ease;
     	border-radius: 10px;
 
 		&:hover {
@@ -626,6 +626,7 @@ magic-item.artifact.attunement .rarity img {
 		&:active {
 			opacity:0.8;
 			background: $transp_darkBlue;
+			transition: 0s ease;
 		}
 
 		img {
@@ -634,6 +635,7 @@ magic-item.artifact.attunement .rarity img {
 			display: block;
 			margin: auto;
 			padding: 5px 0px;
+			transition: 0.2s ease;
 
 			@include mobile { 
 				width: 50px; 
