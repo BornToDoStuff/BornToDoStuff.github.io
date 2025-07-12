@@ -708,6 +708,7 @@ a.read-more {
 
 	a.read-more:hover .dot {
 		background: $transp_darkerBlue;
+		margin: 0 10px;
 	}
 
 .read-more .expander {
@@ -719,11 +720,12 @@ span.dot {
 	display: inline-block;
 	height: 15px;
 	width: 15px;
-	background: $transp_darkBlue;
+	background: $transp_medBlue;
 	transition: background 0.2s;
 	border-radius: 2px;
 	transform: rotate(45deg);
 	margin: 0px 7px;
+	transition: all 0.3s ease 0.1s;
 }
 
 .read-more {
@@ -774,7 +776,7 @@ span.dot {
 	opacity: 0;
 	text-decoration: none;
 	transition: background .2s ease;
-	filter: drop-shadow(0px 0px 2px $transp_lightGray);
+	filter: drop-shadow(0px 0px 2px $transp_gray);
 
 	@include mobile {
 		bottom: 20px;
@@ -784,7 +786,6 @@ span.dot {
 }
 	#return-to-top:hover {
 		background: $bluakDark;
-		filter: drop-shadow(0px 0px 2px rgba(255,255,255,0.1));
 	}
 
 input:focus {

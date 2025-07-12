@@ -23,7 +23,8 @@ $mediumGray: #9a9a9a;
 $lightGray: #eee;
 $white: #fff;
 
-$transp_lightGray: rgba(0, 0, 0, 0.3);
+$transp_lightGray: rgba(0, 0, 0, 0.25);
+$transp_gray: rgba(0, 0, 0, 0.5);
 $transp_lightBlue: rgba(93, 164, 171, 0.1);
 $transp_medBlue: rgba(93, 164, 171, 0.3);
 $transp_darkBlue: rgba(93, 164, 171, 0.5);
@@ -32,7 +33,7 @@ $transp_darkerBlue: rgba(93, 164, 171, 0.7);
 $boxshadow: 1px 1px 3px rgba(0,0,0,0.2);
 
 //backgrounds
-$backgroundMedium: repeat 0px/300px url(/images/hatching_light.png),linear-gradient(90deg, #3C4D53 0%, #405359 15%, #405359 85%, #3C4D53 100%);
+$backgroundMedium: repeat 0px/300px url(/images/hatching_light.png),linear-gradient(90deg, #39494f 0%, #405359 15%, #405359 85%, #39494f 100%);
 $backgroundLight: $white url("/images/subtle_grunge_white.jpg");
 
 // Font stacks
