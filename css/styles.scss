@@ -12,9 +12,8 @@ html {
 }
 
 body {
-	background: $bluakDark;
+	background: #405359;
 	background: $backgroundMedium;
-	background-size: 300px;
 	font-size: 1.6rem;
 	font-family: $roboto;
 	color: $darkGray;
@@ -297,7 +296,7 @@ item-details {
 	.item_id {
 		display: inline-block;
 		position: relative;
-		color: $bluakDark;
+		color: $blueDarker;
 		bottom: -0.15em;
 		opacity: .2;
 		font-weight: bold;
@@ -521,7 +520,7 @@ magic-item.artifact.attunement .rarity img {
 			item-description {
 				overflow: visible;
 				column-count: 2;
-				orphans: 3;
+				orphans: 2;
 				widows: 3;
 
 				img {
@@ -540,7 +539,7 @@ magic-item.artifact.attunement .rarity img {
 
 			item-description {
 				column-count: 2;
-				orphans: 3;
+				orphans: 2;
 				widows: 3;
 			}
 		}
@@ -610,16 +609,21 @@ magic-item.artifact.attunement .rarity img {
 		margin-left: 0px;
 		order: 2;
 	}
-}
-	#item-menu img {
+
+	img {
 		width: 30px;
-    opacity: 0.4;
-    display: block;
-    margin: auto;
+		opacity: 0.4;
+		display: block;
+		margin: auto;
 		padding: 5px 0px;
 
 		@include mobile { margin-left: 10px; }
 	}
+
+	a:hover img {
+		opacity: 0.7;
+	}
+}
 
 #modal-background {
 	position: fixed;
