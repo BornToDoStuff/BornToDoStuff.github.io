@@ -28,7 +28,7 @@ item_updated:
 last_modified_at: 
 ---
 
-This crown is not only made of gold, but encrusted in yellow sapphires, and it glistens with every movement.  
+This crown is the same hue as solid gold, though slightly translucent and doesnt weigh as much as you might expect it to. It is encrusted in yellow gemstones and glistens with every movement.
 It has 10 charges and regains 1d6 + 4 charges each day at dawn. If you expend the last charge, roll a d20. On a 1, a swarm of bees appears, and consumes and destroys the crown before dispersing.
 
 While wearing the crown, as an action you can expend a number of charges to create one of the following effects.    
