@@ -41,7 +41,7 @@ A creature with no heart automatically succeeds this saving throw.
 If you are killed while attuned with this heart you are brought back to life at the next dawn as if by the spell <magic-spell>Resurrection</magic-spell>, even if you are undead. Your body forms around this heart as if it is your own. After being resurrected in this way you can not die to an injury to, or failure of, your heart, though the rest of your mortality is unchanged.
 
 <!--excerpt-->
-<div class="curse">    
-**Curse. **Each time you use the feature Mortal’s Fragility if you have a heart and are not undead you must also make the saving throw against taking necrotic damage, though your hit point maximum is not reduced.  
+<div class="curse">
+**Curse.** Each time you use the feature Mortal’s Fragility if you have a heart and are not undead you must also make the saving throw against taking necrotic damage, though your hit point maximum is not reduced.  
 Additionally, if you are resurrected by the Immortal’s Resistance feature you are now considered undead and have the Sunlight Sensitivity feature: while in sunlight, you have disadvantage on attack rolls, as well as on Wisdom (Perception) checks that rely on sight.  
 </div>
