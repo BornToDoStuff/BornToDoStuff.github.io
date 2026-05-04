@@ -19,6 +19,7 @@ item_damage:
 tags:
   - Extra Appendages
   - Strength
+  - + Bonus
 item_idea: 
 item_co_creator: 
 item_updated: 

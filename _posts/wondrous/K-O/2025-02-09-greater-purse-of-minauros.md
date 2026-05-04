@@ -19,6 +19,7 @@ tags:
   - Movement
   - Body Modification
   - Tattoo
+  - Teleportation
 item_idea:
 item_co_creator:
 item_updated: 2025-02-09

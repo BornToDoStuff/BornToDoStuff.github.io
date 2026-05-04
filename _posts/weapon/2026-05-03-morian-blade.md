@@ -30,10 +30,10 @@ last_modified_at:
 
 The silvered blade is polished to a mirror finish, and does not tarnish. The pommel is squared off rather than rounded though just as plain as the hilt and guard. It was made to fly in the face of magic and all of its pomp and glamour and its design reflects that.
 
-#### Morian Silver
+### Morian Silver
 Magic can not destroy this sword and it is uniquely reactive to spells. If you are proficient with this weapon, while holding it if you are hit by a spell, or touch a spell with this sword, you innately know its name. Additionally, if you fail a saving throw from a spell for the next minute have advantage on any saving throws against that spell so long as you continue to hold the sword.
 
-#### Magic Eater
+### Magic Eater
 If a creature that can cast magic spells is hit by this blade it does an additional die of Force damage. Additionally, any creature knocked unconscious by this weapon can not cast spells or use magic features until their next long rest.
 
 <!--excerpt-->  
