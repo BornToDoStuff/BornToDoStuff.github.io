@@ -1,6 +1,6 @@
 ---
 title: Queen's Golden Crown
-item_id: 380
+item_id: 381
 category: Wondrous
 item_subtypes: 
 item_rarity: Very Rare

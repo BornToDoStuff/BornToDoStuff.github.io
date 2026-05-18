@@ -1,6 +1,6 @@
 ---
 title: Derrahk's Lesser Portable Door
-item_id: 382
+item_id: 383
 category: Wondrous
 item_subtypes: 
 item_rarity: Common

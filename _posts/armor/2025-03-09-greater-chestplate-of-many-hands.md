@@ -1,6 +1,6 @@
 ---
 title: Greater Chestplate of Many Hands
-item_id: 379
+item_id: 380
 category: Armor
 item_subtypes: 
   - Plate
