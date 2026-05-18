@@ -14,9 +14,11 @@ item_role:
   - Utility
 item_damage: 
 tags:
-  - Unique Character
-  - Dimensions
   - Movement
+  - Unique Character
+  - Derrahk
+  - Dimensions
+  - Stone
 item_idea: 
 item_co_creator: 
 item_updated: 

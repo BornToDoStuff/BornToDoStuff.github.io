@@ -24,7 +24,7 @@ tags:
   - Force
 item_idea: Wistoria; Wand and Sword
 item_co_creator: 
-item_updated: 
+item_updated: [2026-06-17]
 last_modified_at: 
 ---
 
