@@ -1,5 +1,5 @@
 ---
-title: Derrahks Lesser Portable Door
+title: Derrahk's Lesser Portable Door
 item_id: 383
 category: Wondrous
 item_subtypes: 
@@ -15,7 +15,7 @@ item_role:
 item_damage: 
 tags:
   - Movement
-  - UniqueCharacter
+  - Unique Character
   - Derrahk
   - Dimensions
   - Stone

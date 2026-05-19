@@ -24,8 +24,8 @@ tags:
   - Force
 item_idea: Wistoria; Wand and Sword
 item_co_creator: 
-item_updated: [2026-06-17]
-last_modified_at: 2026-06-17
+item_updated: [2026-05-17]
+last_modified_at: 2026-05-17
 ---
 
 The silvered blade's cutting edge is polished to a mirror finish, and does not tarnish. The pommel is just as plain as the hilt and guard, and uniquely squared off rather than rounded. It was made to fly in the face of magic and all of its pomp and glamour and its design reflects that.
