@@ -1,5 +1,5 @@
 ---
-title: Morian Blade
+title: Morian Blade Test Copy
 item_id: 382
 category: Weapon
 item_subtypes: 
