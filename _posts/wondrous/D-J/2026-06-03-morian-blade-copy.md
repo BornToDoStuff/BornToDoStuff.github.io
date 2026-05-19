@@ -3,10 +3,10 @@ title: Morian Blade Test Copy
 item_id: 383
 category: Wondrous
 item_subtypes: 
-item_rarity: Rare
+item_rarity: Common
 item_attunement: false
 item_requirement: 
-item_curse: true
+item_curse: false
 item_classes: 
   - All
 item_school: Transmutation
