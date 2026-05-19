@@ -15,7 +15,7 @@ item_role:
 item_damage: 
 tags:
   - Movement
-  - Unique Character
+  - UniqueCharacter
   - Derrahk
   - Dimensions
   - Stone
